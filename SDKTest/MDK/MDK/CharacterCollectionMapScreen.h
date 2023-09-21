@@ -19,7 +19,7 @@ class UAthenaCollectionScreenMapCharacter : public UAthenaCollectionScreenMapBas
 	static inline constexpr uint64_t __MDKClassSize = 1728;
 
 public:
-	CMember(UCollectionScreenServiceVisualData*)       SharedServiceVisualData                                     ___ OFFSET(get<T>, {0x6B8, 8, 0, 0})
+	CMember(UCollectionScreenServiceVisualData*)       SharedServiceVisualData                                     OFFSET(get<T>, {0x6B8, 8, 0, 0})
 };
 
 /// Class /Script/CharacterCollectionMapScreen.CollectionNPCServiceInfoOverlay
@@ -30,8 +30,8 @@ class UCollectionNPCServiceInfoOverlay : public UAthenaCollectionScreenInfoOverl
 	static inline constexpr uint64_t __MDKClassSize = 1224;
 
 public:
-	CMember(UCollectionNPCServiceContainer*)           Services                                                    ___ OFFSET(get<T>, {0x4B0, 8, 0, 0})
-	CMember(UImage*)                                   Image_ServiceIcon                                           ___ OFFSET(get<T>, {0x4B8, 8, 0, 0})
-	CMember(UCollectionScreenServiceVisualData*)       SharedServiceVisualData                                     ___ OFFSET(get<T>, {0x4C0, 8, 0, 0})
+	CMember(UCollectionNPCServiceContainer*)           Services                                                    OFFSET(get<T>, {0x4B0, 8, 0, 0})
+	CMember(UImage*)                                   Image_ServiceIcon                                           OFFSET(get<T>, {0x4B8, 8, 0, 0})
+	CMember(UCollectionScreenServiceVisualData*)       SharedServiceVisualData                                     OFFSET(get<T>, {0x4C0, 8, 0, 0})
 };
 

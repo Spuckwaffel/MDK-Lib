@@ -17,12 +17,12 @@ class UCreativeSentryAnimInstance : public UFortDefenderAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	DMember(float)                                     RotateAimAnimationPitch                                     ___ OFFSET(get<float>, {0x590, 4, 0, 0})
-	DMember(float)                                     CounterRotateAimAnimationPitch                              ___ OFFSET(get<float>, {0x594, 4, 0, 0})
-	DMember(bool)                                      bIsRelaxedLevel1OrNotTargeting                              ___ OFFSET(get<bool>, {0x598, 1, 0, 0})
-	DMember(float)                                     RightHandIKAlpha                                            ___ OFFSET(get<float>, {0x59C, 4, 0, 0})
-	DMember(float)                                     OneMinusLeftHandFK                                          ___ OFFSET(get<float>, {0x5A0, 4, 0, 0})
-	DMember(float)                                     LeftHandIKAlpha                                             ___ OFFSET(get<float>, {0x5A4, 4, 0, 0})
-	DMember(float)                                     RetargetHandIKBonesToFKPositionWeight                       ___ OFFSET(get<float>, {0x5A8, 4, 0, 0})
+	DMember(float)                                     RotateAimAnimationPitch                                     OFFSET(get<float>, {0x590, 4, 0, 0})
+	DMember(float)                                     CounterRotateAimAnimationPitch                              OFFSET(get<float>, {0x594, 4, 0, 0})
+	DMember(bool)                                      bIsRelaxedLevel1OrNotTargeting                              OFFSET(get<bool>, {0x598, 1, 0, 0})
+	DMember(float)                                     RightHandIKAlpha                                            OFFSET(get<float>, {0x59C, 4, 0, 0})
+	DMember(float)                                     OneMinusLeftHandFK                                          OFFSET(get<float>, {0x5A0, 4, 0, 0})
+	DMember(float)                                     LeftHandIKAlpha                                             OFFSET(get<float>, {0x5A4, 4, 0, 0})
+	DMember(float)                                     RetargetHandIKBonesToFKPositionWeight                       OFFSET(get<float>, {0x5A8, 4, 0, 0})
 };
 

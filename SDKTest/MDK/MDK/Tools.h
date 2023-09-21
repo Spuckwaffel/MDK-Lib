@@ -16,9 +16,20 @@ class ASunDirectionandColorSet_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(USceneComponent*)                          Scene                                                       ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow                                                       ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FLinearColor)                              SunLightColor                                               ___ OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	SMember(FLinearColor)                              SunLightColor                                               OFFSET(get<T>, {0x2A8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Game/Tools/Turntable_2/SunDirectionandColorSet.SunDirectionandColorSet_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Tools/Turntable_2/SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Tools/Turntable_2/SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveTick
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Tools/Turntable_2/SunDirectionandColorSet.SunDirectionandColorSet_C.ExecuteUbergraph_SunDirectionandColorSet
+	// void ExecuteUbergraph_SunDirectionandColorSet(int32_t EntryPoint);                                                       // [0x1ebf994] Final                

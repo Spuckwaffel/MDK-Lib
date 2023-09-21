@@ -26,7 +26,7 @@ class UNaniteDisplacedMeshComponent : public UStaticMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
-	CMember(UNaniteDisplacedMesh*)                     DisplacedMesh                                               ___ OFFSET(get<T>, {0x620, 8, 0, 0})
+	CMember(UNaniteDisplacedMesh*)                     DisplacedMesh                                               OFFSET(get<T>, {0x620, 8, 0, 0})
 };
 
 /// Struct /Script/NaniteDisplacedMesh.NaniteDisplacedMeshDisplacementMap
@@ -37,9 +37,9 @@ class FNaniteDisplacedMeshDisplacementMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UTexture2D*)                               Texture                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     Magnitude                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Center                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	CMember(UTexture2D*)                               Texture                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Center                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/NaniteDisplacedMesh.NaniteDisplacedMeshParams

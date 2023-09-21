@@ -1,27 +1,13 @@
+// ReSharper disable CppCStyleCast
 #pragma once
 #include <unordered_map>
+#include "Memory.h"
 
 
 class MDKHandler;
 class MDKBase;
 struct TargetData;
 
-inline void readMemory(uint64_t src, uint64_t dst, size_t size)
-{
-	puts("read call");
-	memcpy((void*)dst, (void*)src, size);
-}
-inline void readMemory(uint64_t src, void* dst, size_t size)
-{
-	puts("read call");
-	memcpy(dst, (void*)src, size);
-}
-
-inline void writeMemory(uint64_t src, uint64_t dst, size_t size)
-{
-	puts("write call");
-	memcpy((void*)dst, (void*)src, size);
-}
 
 struct MemberInfo
 {
@@ -71,7 +57,6 @@ class MDKBase
 
 	bool valid = false;
 
-	void updateTS();
 
 public:
 	MDKBase();
@@ -91,8 +76,13 @@ public:
 		{
 			//we have to do some converting because compiler doesnt know which types are bits and which arent
 			//in theory only chars and bools can be this but whatever
-			//also dont use any form of cast here, they all somehow fail so ugly c style casting
-			res = T(((char)(res) >> b.bitField & 1) == 1);
+			//compiler crying so hard we have to use memcpy but no worries in assembly it will be erased and just a cast :troll:
+
+			char cres;
+			memcpy(&cres, &res, 1);
+
+			cres = ((cres >> b.bitField & 1) == 1);
+			memcpy(&res, &cres, 1);
 		}
 			
 			
@@ -115,6 +105,8 @@ public:
 		return res;
 	}
 
+
+	operator bool() const { return block.blockPointer != nullptr; }
 };
 
 #define Member(x,...)  template<typename T>\
@@ -162,16 +154,16 @@ class MDKHandler
 			if(base.lastCacheTS > currentFrameTS)
 			{
 				//keep old data and only read additional bytes
-				readMemory(base.basePointer + base.block.blockSize, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.blockSize, T::__MDKClassSize - base.block.blockSize);
+				Memory::read(base.basePointer + base.block.blockSize, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.blockSize, T::__MDKClassSize - base.block.blockSize);
 				base.block.blockSize = T::__MDKClassSize;
-				base.updateTS();
+				base.lastCacheTS = currentFrameTS;
 				return;
 			}
 		}
 		if(base.lastCacheTS < currentFrameTS)
 		{
-			readMemory(base.basePointer, base.block.blockPointer, T::__MDKClassSize);
-			base.updateTS();
+			Memory::read(base.basePointer, reinterpret_cast<uint64_t>(base.block.blockPointer), T::__MDKClassSize);
+			base.lastCacheTS = currentFrameTS;
 		}
 		//we cant really do any memory checks, sure we could make for uworld classes some valid vtable bytes but for other stuff that isnt inherited not really
 	}
@@ -190,6 +182,10 @@ public:
 
 	static void newFrame();
 
+	/// \brief initializes a new memory block for the given class/struct at the pointer and manages all the memory for you
+	/// \tparam T type
+	/// \param gamePointer pointer to the class/struct
+	/// \return the class with data upon success
 	template< typename T>
 	static T get(void* gamePointer)
 	{
@@ -217,6 +213,15 @@ public:
 		return castTo<T>(b);
 	}
 
+	/// \brief initializes a new memory block for the given class/struct at the pointer and manages all the memory for you
+	/// \tparam T type
+	/// \param gamePointer pointer to the class/struct
+	/// \return the class with data upon success
+	template< typename T>
+	static T get(DWORD64 gamePointer)
+	{
+		return get<T>((void*)gamePointer);
+	}
 	template <typename classInstance, typename x>
 	static void write(const classInstance& instance, x (classInstance::* memberFunction)(MemberInfo*) const, x value)
 	{
@@ -239,7 +244,7 @@ public:
 			//change to our cooked bitfield
 			addr = reinterpret_cast<uint64_t>(&c);
 		}
-		writeMemory(addr, instance.basePointer + b.offset, sizeof(x));
+		Memory::write(addr, instance.basePointer + b.offset, sizeof(x));
 		//make a shadow copy so the current frame sees the change too
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}

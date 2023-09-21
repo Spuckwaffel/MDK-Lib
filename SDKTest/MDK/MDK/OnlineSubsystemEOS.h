@@ -38,23 +38,23 @@ class UEOSSettings : public URuntimeOptionsBase
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   CacheDir                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   DefaultArtifactName                                         ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(int32_t)                                   TickBudgetInMilliseconds                                    ___ OFFSET(get<int32_t>, {0x58, 4, 0, 0})
-	DMember(bool)                                      bEnableOverlay                                              ___ OFFSET(get<bool>, {0x5C, 1, 0, 0})
-	DMember(bool)                                      bEnableSocialOverlay                                        ___ OFFSET(get<bool>, {0x5D, 1, 0, 0})
-	DMember(bool)                                      bEnableEditorOverlay                                        ___ OFFSET(get<bool>, {0x5E, 1, 0, 0})
-	DMember(bool)                                      bShouldEnforceBeingLaunchedByEGS                            ___ OFFSET(get<bool>, {0x5F, 1, 0, 0})
-	CMember(TArray<FString>)                           TitleStorageTags                                            ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	DMember(int32_t)                                   TitleStorageReadChunkLength                                 ___ OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	CMember(TArray<FArtifactSettings>)                 Artifacts                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FString>)                           AuthScopeFlags                                              ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	DMember(bool)                                      bUseEAS                                                     ___ OFFSET(get<bool>, {0x98, 1, 0, 0})
-	DMember(bool)                                      bUseEOSConnect                                              ___ OFFSET(get<bool>, {0x99, 1, 0, 0})
-	DMember(bool)                                      bMirrorStatsToEOS                                           ___ OFFSET(get<bool>, {0x9A, 1, 0, 0})
-	DMember(bool)                                      bMirrorAchievementsToEOS                                    ___ OFFSET(get<bool>, {0x9B, 1, 0, 0})
-	DMember(bool)                                      bUseEOSSessions                                             ___ OFFSET(get<bool>, {0x9C, 1, 0, 0})
-	DMember(bool)                                      bMirrorPresenceToEAS                                        ___ OFFSET(get<bool>, {0x9D, 1, 0, 0})
+	SMember(FString)                                   CacheDir                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultArtifactName                                         OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(int32_t)                                   TickBudgetInMilliseconds                                    OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	DMember(bool)                                      bEnableOverlay                                              OFFSET(get<bool>, {0x5C, 1, 0, 0})
+	DMember(bool)                                      bEnableSocialOverlay                                        OFFSET(get<bool>, {0x5D, 1, 0, 0})
+	DMember(bool)                                      bEnableEditorOverlay                                        OFFSET(get<bool>, {0x5E, 1, 0, 0})
+	DMember(bool)                                      bShouldEnforceBeingLaunchedByEGS                            OFFSET(get<bool>, {0x5F, 1, 0, 0})
+	CMember(TArray<FString>)                           TitleStorageTags                                            OFFSET(get<T>, {0x60, 16, 0, 0})
+	DMember(int32_t)                                   TitleStorageReadChunkLength                                 OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	CMember(TArray<FArtifactSettings>)                 Artifacts                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FString>)                           AuthScopeFlags                                              OFFSET(get<T>, {0x88, 16, 0, 0})
+	DMember(bool)                                      bUseEAS                                                     OFFSET(get<bool>, {0x98, 1, 0, 0})
+	DMember(bool)                                      bUseEOSConnect                                              OFFSET(get<bool>, {0x99, 1, 0, 0})
+	DMember(bool)                                      bMirrorStatsToEOS                                           OFFSET(get<bool>, {0x9A, 1, 0, 0})
+	DMember(bool)                                      bMirrorAchievementsToEOS                                    OFFSET(get<bool>, {0x9B, 1, 0, 0})
+	DMember(bool)                                      bUseEOSSessions                                             OFFSET(get<bool>, {0x9C, 1, 0, 0})
+	DMember(bool)                                      bMirrorPresenceToEAS                                        OFFSET(get<bool>, {0x9D, 1, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemEOS.ArtifactSettings
@@ -65,12 +65,12 @@ class FArtifactSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   ArtifactName                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ClientId                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ClientSecret                                                ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   ProductId                                                   ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   SandboxId                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   DeploymentId                                                ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   ClientEncryptionKey                                         ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   ArtifactName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ClientId                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ClientSecret                                                OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ProductId                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   SandboxId                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   DeploymentId                                                OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   ClientEncryptionKey                                         OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 

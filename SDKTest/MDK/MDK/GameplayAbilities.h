@@ -30,42 +30,42 @@ class UGameplayEffect : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 2664;
 
 public:
-	CMember(EGameplayEffectDurationType)               DurationPolicy                                              ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FGameplayEffectModifierMagnitude)          DurationMagnitude                                           ___ OFFSET(get<T>, {0x38, 472, 0, 0})
-	SMember(FScalableFloat)                            Period                                                      ___ OFFSET(get<T>, {0x210, 40, 0, 0})
-	DMember(bool)                                      bExecutePeriodicEffectOnApplication                         ___ OFFSET(get<bool>, {0x238, 1, 0, 0})
-	CMember(EGameplayEffectPeriodInhibitionRemovedPolicy) PeriodicInhibitionPolicy                                 ___ OFFSET(get<T>, {0x239, 1, 0, 0})
-	CMember(TArray<FGameplayModifierInfo>)             Modifiers                                                   ___ OFFSET(get<T>, {0x240, 16, 0, 0})
-	CMember(TArray<FGameplayEffectExecutionDefinition>) Executions                                                 ___ OFFSET(get<T>, {0x250, 16, 0, 0})
-	SMember(FScalableFloat)                            ChanceToApplyToTarget                                       ___ OFFSET(get<T>, {0x260, 40, 0, 0})
-	CMember(TArray<UClass*>)                           ApplicationRequirements                                     ___ OFFSET(get<T>, {0x288, 16, 0, 0})
-	CMember(TArray<FConditionalGameplayEffect>)        ConditionalGameplayEffects                                  ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	CMember(TArray<UClass*>)                           OverflowEffects                                             ___ OFFSET(get<T>, {0x2A8, 16, 0, 0})
-	DMember(bool)                                      bDenyOverflowApplication                                    ___ OFFSET(get<bool>, {0x2B8, 1, 0, 0})
-	DMember(bool)                                      bClearStackOnOverflow                                       ___ OFFSET(get<bool>, {0x2B9, 1, 0, 0})
-	CMember(TArray<UClass*>)                           PrematureExpirationEffectClasses                            ___ OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	CMember(TArray<UClass*>)                           RoutineExpirationEffectClasses                              ___ OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	DMember(bool)                                      bRequireModifierSuccessToTriggerCues                        ___ OFFSET(get<bool>, {0x2E0, 1, 0, 0})
-	DMember(bool)                                      bSuppressStackingCues                                       ___ OFFSET(get<bool>, {0x2E1, 1, 0, 0})
-	CMember(TArray<FGameplayEffectCue>)                GameplayCues                                                ___ OFFSET(get<T>, {0x2E8, 16, 0, 0})
-	CMember(UGameplayEffectUIData*)                    UIData                                                      ___ OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(FInheritedTagContainer)                    InheritableGameplayEffectTags                               ___ OFFSET(get<T>, {0x300, 96, 0, 0})
-	SMember(FInheritedTagContainer)                    InheritableOwnedTagsContainer                               ___ OFFSET(get<T>, {0x360, 96, 0, 0})
-	SMember(FInheritedTagContainer)                    InheritableBlockedAbilityTagsContainer                      ___ OFFSET(get<T>, {0x3C0, 96, 0, 0})
-	SMember(FGameplayTagRequirements)                  OngoingTagRequirements                                      ___ OFFSET(get<T>, {0x420, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  ApplicationTagRequirements                                  ___ OFFSET(get<T>, {0x4A8, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  RemovalTagRequirements                                      ___ OFFSET(get<T>, {0x530, 136, 0, 0})
-	SMember(FInheritedTagContainer)                    RemoveGameplayEffectsWithTags                               ___ OFFSET(get<T>, {0x5B8, 96, 0, 0})
-	SMember(FGameplayTagRequirements)                  GrantedApplicationImmunityTags                              ___ OFFSET(get<T>, {0x618, 136, 0, 0})
-	SMember(FGameplayEffectQuery)                      GrantedApplicationImmunityQuery                             ___ OFFSET(get<T>, {0x6A0, 408, 0, 0})
-	SMember(FGameplayEffectQuery)                      RemoveGameplayEffectQuery                                   ___ OFFSET(get<T>, {0x840, 408, 0, 0})
-	CMember(EGameplayEffectStackingType)               StackingType                                                ___ OFFSET(get<T>, {0x9D9, 1, 0, 0})
-	DMember(int32_t)                                   StackLimitCount                                             ___ OFFSET(get<int32_t>, {0x9DC, 4, 0, 0})
-	CMember(EGameplayEffectStackingDurationPolicy)     StackDurationRefreshPolicy                                  ___ OFFSET(get<T>, {0x9E0, 1, 0, 0})
-	CMember(EGameplayEffectStackingPeriodPolicy)       StackPeriodResetPolicy                                      ___ OFFSET(get<T>, {0x9E1, 1, 0, 0})
-	CMember(EGameplayEffectStackingExpirationPolicy)   StackExpirationPolicy                                       ___ OFFSET(get<T>, {0x9E2, 1, 0, 0})
-	CMember(TArray<FGameplayAbilitySpecDef>)           GrantedAbilities                                            ___ OFFSET(get<T>, {0x9E8, 16, 0, 0})
-	CMember(TArray<UGameplayEffectComponent*>)         GEComponents                                                ___ OFFSET(get<T>, {0xA58, 16, 0, 0})
+	CMember(EGameplayEffectDurationType)               DurationPolicy                                              OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FGameplayEffectModifierMagnitude)          DurationMagnitude                                           OFFSET(get<T>, {0x38, 472, 0, 0})
+	SMember(FScalableFloat)                            Period                                                      OFFSET(get<T>, {0x210, 40, 0, 0})
+	DMember(bool)                                      bExecutePeriodicEffectOnApplication                         OFFSET(get<bool>, {0x238, 1, 0, 0})
+	CMember(EGameplayEffectPeriodInhibitionRemovedPolicy) PeriodicInhibitionPolicy                                 OFFSET(get<T>, {0x239, 1, 0, 0})
+	CMember(TArray<FGameplayModifierInfo>)             Modifiers                                                   OFFSET(get<T>, {0x240, 16, 0, 0})
+	CMember(TArray<FGameplayEffectExecutionDefinition>) Executions                                                 OFFSET(get<T>, {0x250, 16, 0, 0})
+	SMember(FScalableFloat)                            ChanceToApplyToTarget                                       OFFSET(get<T>, {0x260, 40, 0, 0})
+	CMember(TArray<UClass*>)                           ApplicationRequirements                                     OFFSET(get<T>, {0x288, 16, 0, 0})
+	CMember(TArray<FConditionalGameplayEffect>)        ConditionalGameplayEffects                                  OFFSET(get<T>, {0x298, 16, 0, 0})
+	CMember(TArray<UClass*>)                           OverflowEffects                                             OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	DMember(bool)                                      bDenyOverflowApplication                                    OFFSET(get<bool>, {0x2B8, 1, 0, 0})
+	DMember(bool)                                      bClearStackOnOverflow                                       OFFSET(get<bool>, {0x2B9, 1, 0, 0})
+	CMember(TArray<UClass*>)                           PrematureExpirationEffectClasses                            OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	CMember(TArray<UClass*>)                           RoutineExpirationEffectClasses                              OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	DMember(bool)                                      bRequireModifierSuccessToTriggerCues                        OFFSET(get<bool>, {0x2E0, 1, 0, 0})
+	DMember(bool)                                      bSuppressStackingCues                                       OFFSET(get<bool>, {0x2E1, 1, 0, 0})
+	CMember(TArray<FGameplayEffectCue>)                GameplayCues                                                OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	CMember(UGameplayEffectUIData*)                    UIData                                                      OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableGameplayEffectTags                               OFFSET(get<T>, {0x300, 96, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableOwnedTagsContainer                               OFFSET(get<T>, {0x360, 96, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableBlockedAbilityTagsContainer                      OFFSET(get<T>, {0x3C0, 96, 0, 0})
+	SMember(FGameplayTagRequirements)                  OngoingTagRequirements                                      OFFSET(get<T>, {0x420, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  ApplicationTagRequirements                                  OFFSET(get<T>, {0x4A8, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  RemovalTagRequirements                                      OFFSET(get<T>, {0x530, 136, 0, 0})
+	SMember(FInheritedTagContainer)                    RemoveGameplayEffectsWithTags                               OFFSET(get<T>, {0x5B8, 96, 0, 0})
+	SMember(FGameplayTagRequirements)                  GrantedApplicationImmunityTags                              OFFSET(get<T>, {0x618, 136, 0, 0})
+	SMember(FGameplayEffectQuery)                      GrantedApplicationImmunityQuery                             OFFSET(get<T>, {0x6A0, 408, 0, 0})
+	SMember(FGameplayEffectQuery)                      RemoveGameplayEffectQuery                                   OFFSET(get<T>, {0x840, 408, 0, 0})
+	CMember(EGameplayEffectStackingType)               StackingType                                                OFFSET(get<T>, {0x9D9, 1, 0, 0})
+	DMember(int32_t)                                   StackLimitCount                                             OFFSET(get<int32_t>, {0x9DC, 4, 0, 0})
+	CMember(EGameplayEffectStackingDurationPolicy)     StackDurationRefreshPolicy                                  OFFSET(get<T>, {0x9E0, 1, 0, 0})
+	CMember(EGameplayEffectStackingPeriodPolicy)       StackPeriodResetPolicy                                      OFFSET(get<T>, {0x9E1, 1, 0, 0})
+	CMember(EGameplayEffectStackingExpirationPolicy)   StackExpirationPolicy                                       OFFSET(get<T>, {0x9E2, 1, 0, 0})
+	CMember(TArray<FGameplayAbilitySpecDef>)           GrantedAbilities                                            OFFSET(get<T>, {0x9E8, 16, 0, 0})
+	CMember(TArray<UGameplayEffectComponent*>)         GEComponents                                                OFFSET(get<T>, {0xA58, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayEffectComponent
@@ -86,7 +86,7 @@ class UAbilitiesGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FGameplayAbilitySpecConfig>)        GrantAbilityConfigs                                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameplayAbilitySpecConfig>)        GrantAbilityConfigs                                         OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AdditionalEffectsGameplayEffectComponent
@@ -97,11 +97,11 @@ class UAdditionalEffectsGameplayEffectComponent : public UGameplayEffectComponen
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      bOnApplicationCopyDataFromOriginalSpec                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	CMember(TArray<FConditionalGameplayEffect>)        OnApplicationGameplayEffects                                ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<UClass*>)                           OnCompleteAlways                                            ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<UClass*>)                           OnCompleteNormal                                            ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<UClass*>)                           OnCompletePrematurely                                       ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	DMember(bool)                                      bOnApplicationCopyDataFromOriginalSpec                      OFFSET(get<bool>, {0x28, 1, 0, 0})
+	CMember(TArray<FConditionalGameplayEffect>)        OnApplicationGameplayEffects                                OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<UClass*>)                           OnCompleteAlways                                            OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UClass*>)                           OnCompleteNormal                                            OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<UClass*>)                           OnCompletePrematurely                                       OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AssetTagsGameplayEffectComponent
@@ -112,7 +112,7 @@ class UAssetTagsGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FInheritedTagContainer)                    InheritableAssetTags                                        ___ OFFSET(get<T>, {0x28, 96, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableAssetTags                                        OFFSET(get<T>, {0x28, 96, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.BlockAbilityTagsGameplayEffectComponent
@@ -123,7 +123,7 @@ class UBlockAbilityTagsGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FInheritedTagContainer)                    InheritableBlockedAbilityTagsContainer                      ___ OFFSET(get<T>, {0x28, 96, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableBlockedAbilityTagsContainer                      OFFSET(get<T>, {0x28, 96, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.ChanceToApplyGameplayEffectComponent
@@ -134,7 +134,7 @@ class UChanceToApplyGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FScalableFloat)                            ChanceToApplyToTarget                                       ___ OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            ChanceToApplyToTarget                                       OFFSET(get<T>, {0x28, 40, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.CustomCanApplyGameplayEffectComponent
@@ -145,7 +145,7 @@ class UCustomCanApplyGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UClass*>)                           ApplicationRequirements                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ApplicationRequirements                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayEffectUIData
@@ -166,7 +166,7 @@ class UGameplayEffectUIData_TextOnly : public UGameplayEffectUIData
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FText)                                     Description                                                 ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.ImmunityGameplayEffectComponent
@@ -177,7 +177,7 @@ class UImmunityGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FGameplayEffectQuery>)              ImmunityQueries                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameplayEffectQuery>)              ImmunityQueries                                             OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.RemoveOtherGameplayEffectComponent
@@ -188,7 +188,7 @@ class URemoveOtherGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FGameplayEffectQuery>)              RemoveGameplayEffectQueries                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameplayEffectQuery>)              RemoveGameplayEffectQueries                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.TargetTagRequirementsGameplayEffectComponent
@@ -199,9 +199,9 @@ class UTargetTagRequirementsGameplayEffectComponent : public UGameplayEffectComp
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FGameplayTagRequirements)                  ApplicationTagRequirements                                  ___ OFFSET(get<T>, {0x28, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  OngoingTagRequirements                                      ___ OFFSET(get<T>, {0xB0, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  RemovalTagRequirements                                      ___ OFFSET(get<T>, {0x138, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  ApplicationTagRequirements                                  OFFSET(get<T>, {0x28, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  OngoingTagRequirements                                      OFFSET(get<T>, {0xB0, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  RemovalTagRequirements                                      OFFSET(get<T>, {0x138, 136, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.TargetTagsGameplayEffectComponent
@@ -212,7 +212,7 @@ class UTargetTagsGameplayEffectComponent : public UGameplayEffectComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FInheritedTagContainer)                    InheritableGrantedTagsContainer                             ___ OFFSET(get<T>, {0x28, 96, 0, 0})
+	SMember(FInheritedTagContainer)                    InheritableGrantedTagsContainer                             OFFSET(get<T>, {0x28, 96, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilityAsync
@@ -233,9 +233,16 @@ class UAbilityAsync_WaitAttributeChanged : public UAbilityAsync
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Changed                                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Changed                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitAttributeChanged.WaitForAttributeChanged
+	// UAbilityAsync_WaitAttributeChanged* WaitForAttributeChanged(AActor* TargetActor, FGameplayAttribute Attribute, bool OnlyTriggerOnce); // [0x6892984] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitAttributeChanged.AsyncWaitAttributeChangedDelegate__DelegateSignature
+	// void AsyncWaitAttributeChangedDelegate__DelegateSignature(FGameplayAttribute Attribute, float NewValue, float OldValue); // [0x1ebf994] MulticastDelegate|Public|Delegate 
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied
 /// Size: 0x0150 (0x000038 - 0x000188)
 class UAbilityAsync_WaitGameplayEffectApplied : public UAbilityAsync
@@ -244,9 +251,16 @@ class UAbilityAsync_WaitGameplayEffectApplied : public UAbilityAsync
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnApplied                                                   ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied.WaitGameplayEffectAppliedToActor
+	// UAbilityAsync_WaitGameplayEffectApplied* WaitGameplayEffectAppliedToActor(AActor* TargetActor, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, bool ListenForPeriodicEffect); // [0x6892c8c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied.OnAppliedDelegate__DelegateSignature
+	// void OnAppliedDelegate__DelegateSignature(AActor* Source, FGameplayEffectSpecHandle SpecHandle, FActiveGameplayEffectHandle ActiveHandle); // [0x1ebf994] MulticastDelegate|Public|Delegate 
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayEvent
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UAbilityAsync_WaitGameplayEvent : public UAbilityAsync
@@ -255,9 +269,16 @@ class UAbilityAsync_WaitGameplayEvent : public UAbilityAsync
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FMulticastInlineDelegate)                  EventReceived                                               ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  EventReceived                                               OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEvent.WaitGameplayEventToActor
+	// UAbilityAsync_WaitGameplayEvent* WaitGameplayEventToActor(AActor* TargetActor, FGameplayTag EventTag, bool OnlyTriggerOnce, bool OnlyMatchExact); // [0x264d4dc] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEvent.EventReceivedDelegate__DelegateSignature
+	// void EventReceivedDelegate__DelegateSignature(FGameplayEventData Payload);                                               // [0x1ebf994] MulticastDelegate|Public|Delegate 
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTag
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UAbilityAsync_WaitGameplayTag : public UAbilityAsync
@@ -276,9 +297,14 @@ class UAbilityAsync_WaitGameplayTagAdded : public UAbilityAsync_WaitGameplayTag
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Added                                                       ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Added                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagAdded.WaitGameplayTagAddToActor
+	// UAbilityAsync_WaitGameplayTagAdded* WaitGameplayTagAddToActor(AActor* TargetActor, FGameplayTag tag, bool OnlyTriggerOnce); // [0x264da30] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved
 /// Size: 0x0010 (0x000050 - 0x000060)
 class UAbilityAsync_WaitGameplayTagRemoved : public UAbilityAsync_WaitGameplayTag
@@ -287,9 +313,14 @@ class UAbilityAsync_WaitGameplayTagRemoved : public UAbilityAsync_WaitGameplayTa
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Removed                                                     ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Removed                                                     OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved.WaitGameplayTagRemoveFromActor
+	// UAbilityAsync_WaitGameplayTagRemoved* WaitGameplayTagRemoveFromActor(AActor* TargetActor, FGameplayTag tag, bool OnlyTriggerOnce); // [0x264d7a8] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagQuery
 /// Size: 0x00D0 (0x000038 - 0x000108)
 class UAbilityAsync_WaitGameplayTagQuery : public UAbilityAsync
@@ -298,9 +329,14 @@ class UAbilityAsync_WaitGameplayTagQuery : public UAbilityAsync
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Triggered                                                   ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Triggered                                                   OFFSET(get<T>, {0xF8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagQuery.WaitGameplayTagQueryOnActor
+	// UAbilityAsync_WaitGameplayTagQuery* WaitGameplayTagQueryOnActor(AActor* TargetActor, FGameplayTagQuery TagQuery, EWaitGameplayTagQueryTriggerCondition TriggerCondition, bool bOnlyTriggerOnce); // [0x264d198] Final|Native|Static|Protected|BlueprintCallable 
 /// Class /Script/GameplayAbilities.GameplayAbility
 /// Size: 0x0390 (0x000028 - 0x0003B8)
 class UGameplayAbility : public UObject
@@ -309,38 +345,153 @@ class UGameplayAbility : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 952;
 
 public:
-	SMember(FGameplayTagContainer)                     AbilityTags                                                 ___ OFFSET(get<T>, {0xA8, 32, 0, 0})
-	DMember(bool)                                      bReplicateInputDirectly                                     ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
-	DMember(bool)                                      RemoteInstanceEnded                                         ___ OFFSET(get<bool>, {0xC9, 1, 0, 0})
-	CMember(TEnumAsByte<EGameplayAbilityReplicationPolicy>) ReplicationPolicy                                      ___ OFFSET(get<T>, {0xCE, 1, 0, 0})
-	CMember(TEnumAsByte<EGameplayAbilityInstancingPolicy>) InstancingPolicy                                        ___ OFFSET(get<T>, {0xCF, 1, 0, 0})
-	DMember(bool)                                      bServerRespectsRemoteAbilityCancellation                    ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	DMember(bool)                                      bRetriggerInstancedAbility                                  ___ OFFSET(get<bool>, {0xD1, 1, 0, 0})
-	SMember(FGameplayAbilityActivationInfo)            CurrentActivationInfo                                       ___ OFFSET(get<T>, {0xD8, 32, 0, 0})
-	SMember(FGameplayEventData)                        CurrentEventData                                            ___ OFFSET(get<T>, {0xF8, 176, 0, 0})
-	CMember(TEnumAsByte<EGameplayAbilityNetExecutionPolicy>) NetExecutionPolicy                                    ___ OFFSET(get<T>, {0x1A8, 1, 0, 0})
-	CMember(TEnumAsByte<EGameplayAbilityNetSecurityPolicy>) NetSecurityPolicy                                      ___ OFFSET(get<T>, {0x1A9, 1, 0, 0})
-	CMember(UClass*)                                   CostGameplayEffectClass                                     ___ OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	CMember(TArray<FAbilityTriggerData>)               AbilityTriggers                                             ___ OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	CMember(UClass*)                                   CooldownGameplayEffectClass                                 ___ OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     CancelAbilitiesWithTag                                      ___ OFFSET(get<T>, {0x1D0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockAbilitiesWithTag                                       ___ OFFSET(get<T>, {0x1F0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivationOwnedTags                                         ___ OFFSET(get<T>, {0x210, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivationRequiredTags                                      ___ OFFSET(get<T>, {0x230, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivationBlockedTags                                       ___ OFFSET(get<T>, {0x250, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SourceRequiredTags                                          ___ OFFSET(get<T>, {0x270, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SourceBlockedTags                                           ___ OFFSET(get<T>, {0x290, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetRequiredTags                                          ___ OFFSET(get<T>, {0x2B0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetBlockedTags                                           ___ OFFSET(get<T>, {0x2D0, 32, 0, 0})
-	CMember(TArray<UGameplayTask*>)                    ActiveTasks                                                 ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(UAnimMontage*)                             CurrentMontage                                              ___ OFFSET(get<T>, {0x330, 8, 0, 0})
-	DMember(bool)                                      bIsActive                                                   ___ OFFSET(get<bool>, {0x398, 1, 0, 0})
-	DMember(bool)                                      bIsAbilityEnding                                            ___ OFFSET(get<bool>, {0x399, 1, 0, 0})
-	DMember(bool)                                      bIsCancelable                                               ___ OFFSET(get<bool>, {0x39A, 1, 0, 0})
-	DMember(bool)                                      bIsBlockingOtherAbilities                                   ___ OFFSET(get<bool>, {0x39B, 1, 0, 0})
-	DMember(bool)                                      bMarkPendingKillOnAbilityEnd                                ___ OFFSET(get<bool>, {0x3B0, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     AbilityTags                                                 OFFSET(get<T>, {0xA8, 32, 0, 0})
+	DMember(bool)                                      bReplicateInputDirectly                                     OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	DMember(bool)                                      RemoteInstanceEnded                                         OFFSET(get<bool>, {0xC9, 1, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityReplicationPolicy>) ReplicationPolicy                                      OFFSET(get<T>, {0xCE, 1, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityInstancingPolicy>) InstancingPolicy                                        OFFSET(get<T>, {0xCF, 1, 0, 0})
+	DMember(bool)                                      bServerRespectsRemoteAbilityCancellation                    OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	DMember(bool)                                      bRetriggerInstancedAbility                                  OFFSET(get<bool>, {0xD1, 1, 0, 0})
+	SMember(FGameplayAbilityActivationInfo)            CurrentActivationInfo                                       OFFSET(get<T>, {0xD8, 32, 0, 0})
+	SMember(FGameplayEventData)                        CurrentEventData                                            OFFSET(get<T>, {0xF8, 176, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityNetExecutionPolicy>) NetExecutionPolicy                                    OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityNetSecurityPolicy>) NetSecurityPolicy                                      OFFSET(get<T>, {0x1A9, 1, 0, 0})
+	CMember(UClass*)                                   CostGameplayEffectClass                                     OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	CMember(TArray<FAbilityTriggerData>)               AbilityTriggers                                             OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	CMember(UClass*)                                   CooldownGameplayEffectClass                                 OFFSET(get<T>, {0x1C8, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     CancelAbilitiesWithTag                                      OFFSET(get<T>, {0x1D0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockAbilitiesWithTag                                       OFFSET(get<T>, {0x1F0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivationOwnedTags                                         OFFSET(get<T>, {0x210, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivationRequiredTags                                      OFFSET(get<T>, {0x230, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivationBlockedTags                                       OFFSET(get<T>, {0x250, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SourceRequiredTags                                          OFFSET(get<T>, {0x270, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SourceBlockedTags                                           OFFSET(get<T>, {0x290, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetRequiredTags                                          OFFSET(get<T>, {0x2B0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetBlockedTags                                           OFFSET(get<T>, {0x2D0, 32, 0, 0})
+	CMember(TArray<UGameplayTask*>)                    ActiveTasks                                                 OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(UAnimMontage*)                             CurrentMontage                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	DMember(bool)                                      bIsActive                                                   OFFSET(get<bool>, {0x398, 1, 0, 0})
+	DMember(bool)                                      bIsAbilityEnding                                            OFFSET(get<bool>, {0x399, 1, 0, 0})
+	DMember(bool)                                      bIsCancelable                                               OFFSET(get<bool>, {0x39A, 1, 0, 0})
+	DMember(bool)                                      bIsBlockingOtherAbilities                                   OFFSET(get<bool>, {0x39B, 1, 0, 0})
+	DMember(bool)                                      bMarkPendingKillOnAbilityEnd                                OFFSET(get<bool>, {0x3B0, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayAbility.SetShouldBlockOtherAbilities
+	// void SetShouldBlockOtherAbilities(bool bShouldBlockAbilities);                                                           // [0x6892900] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.SetCanBeCanceled
+	// void SetCanBeCanceled(bool bCanBeCanceled);                                                                              // [0x689287c] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.SendGameplayEvent
+	// void SendGameplayEvent(FGameplayTag EventTag, FGameplayEventData Payload);                                               // [0x68925b0] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.RemoveGrantedByEffect
+	// void RemoveGrantedByEffect();                                                                                            // [0x5ae21c8] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.MontageStop
+	// void MontageStop(float OverrideBlendOutTime);                                                                            // [0x6891cc8] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.MontageSetNextSectionName
+	// void MontageSetNextSectionName(FName FromSectionName, FName ToSectionName);                                              // [0x6891be8] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.MontageJumpToSection
+	// void MontageJumpToSection(FName SectionName);                                                                            // [0x6891b48] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerSkeletalMeshComponent
+	// FGameplayAbilityTargetingLocationInfo MakeTargetLocationInfoFromOwnerSkeletalMeshComponent(FName SocketName);            // [0x6891a5c] Final|Native|Protected|BlueprintCallable|BlueprintPure 
+	// Function /Script/GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerActor
+	// FGameplayAbilityTargetingLocationInfo MakeTargetLocationInfoFromOwnerActor();                                            // [0x68919c4] Final|Native|Protected|BlueprintCallable|BlueprintPure 
+	// Function /Script/GameplayAbilities.GameplayAbility.MakeOutgoingGameplayEffectSpec
+	// FGameplayEffectSpecHandle MakeOutgoingGameplayEffectSpec(UClass* GameplayEffectClass, float Level);                      // [0x68918e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ShouldAbilityRespondToEvent
+	// bool K2_ShouldAbilityRespondToEvent(FGameplayAbilityActorInfo ActorInfo, FGameplayEventData Payload);                    // [0x1ebf994] Event|Protected|BlueprintEvent|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_RemoveGameplayCue
+	// void K2_RemoveGameplayCue(FGameplayTag GameplayCueTag);                                                                  // [0x6891790] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_HasAuthority
+	// bool K2_HasAuthority();                                                                                                  // [0x6891774] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCueWithParams
+	// void K2_ExecuteGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters& GameplayCueParameters);        // [0x6891598] Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCue
+	// void K2_ExecuteGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context);                           // [0x6891254] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_EndAbilityLocally
+	// void K2_EndAbilityLocally();                                                                                             // [0x5ae1df8] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_EndAbility
+	// void K2_EndAbility();                                                                                                    // [0x689123c] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CommitExecute
+	// void K2_CommitExecute();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CommitAbilityCost
+	// bool K2_CommitAbilityCost(bool BroadcastCommitEvent);                                                                    // [0x68911a4] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CommitAbilityCooldown
+	// bool K2_CommitAbilityCooldown(bool BroadcastCommitEvent, bool ForceCooldown);                                            // [0x68910c8] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CommitAbility
+	// bool K2_CommitAbility();                                                                                                 // [0x59604c8] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CheckAbilityCost
+	// bool K2_CheckAbilityCost();                                                                                              // [0x68910a0] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CheckAbilityCooldown
+	// bool K2_CheckAbilityCooldown();                                                                                          // [0x6891078] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CancelAbility
+	// void K2_CancelAbility();                                                                                                 // [0x6891028] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_CanActivateAbility
+	// bool K2_CanActivateAbility(FGameplayAbilityActorInfo ActorInfo, FGameplayAbilitySpecHandle Handle, FGameplayTagContainer& RelevantTags); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToTarget
+	// TArray<FActiveGameplayEffectHandle> K2_ApplyGameplayEffectSpecToTarget(FGameplayEffectSpecHandle EffectSpecHandle, FGameplayAbilityTargetDataHandle TargetData); // [0x6890ca4] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToOwner
+	// FActiveGameplayEffectHandle K2_ApplyGameplayEffectSpecToOwner(FGameplayEffectSpecHandle EffectSpecHandle);               // [0x6890a90] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_AddGameplayCueWithParams
+	// void K2_AddGameplayCueWithParams(FGameplayTag GameplayCueTag, FGameplayCueParameters& GameplayCueParameter, bool bRemoveOnAbilityEnd); // [0x68907b0] Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_AddGameplayCue
+	// void K2_AddGameplayCue(FGameplayTag GameplayCueTag, FGameplayEffectContextHandle Context, bool bRemoveOnAbilityEnd);     // [0x6890354] Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbility.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbility.IsLocallyControlled
+	// bool IsLocallyControlled();                                                                                              // [0x6890330] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.InvalidateClientPredictionKey
+	// void InvalidateClientPredictionKey();                                                                                    // [0x68902cc] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetSourceObject_BP
+	// UObject* GetSourceObject_BP(FGameplayAbilitySpecHandle Handle, FGameplayAbilityActorInfo& ActorInfo);                    // [0x6890104] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetOwningComponentFromActorInfo
+	// USkeletalMeshComponent* GetOwningComponentFromActorInfo();                                                               // [0x68900cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetOwningActorFromActorInfo
+	// AActor* GetOwningActorFromActorInfo();                                                                                   // [0x68900a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetGrantedByEffectContext
+	// FGameplayEffectContextHandle GetGrantedByEffectContext();                                                                // [0x689006c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetCurrentSourceObject
+	// UObject* GetCurrentSourceObject();                                                                                       // [0x689002c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetCurrentMontage
+	// UAnimMontage* GetCurrentMontage();                                                                                       // [0x6890014] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetCooldownTimeRemaining
+	// float GetCooldownTimeRemaining();                                                                                        // [0x688ffd8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetContextFromOwner
+	// FGameplayEffectContextHandle GetContextFromOwner(FGameplayAbilityTargetDataHandle OptionalTargetData);                   // [0x688fe20] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetAvatarActorFromActorInfo
+	// AActor* GetAvatarActorFromActorInfo();                                                                                   // [0x688fdfc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetActorInfo
+	// FGameplayAbilityActorInfo GetActorInfo();                                                                                // [0x688fdc8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetAbilitySystemComponentFromActorInfo
+	// UAbilitySystemComponent* GetAbilitySystemComponentFromActorInfo();                                                       // [0x688fda4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetAbilityLevel_BP
+	// int32_t GetAbilityLevel_BP(FGameplayAbilitySpecHandle Handle, FGameplayAbilityActorInfo& ActorInfo);                     // [0x688fbcc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.GetAbilityLevel
+	// int32_t GetAbilityLevel();                                                                                               // [0x688fba8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayAbility.EndTaskByInstanceName
+	// void EndTaskByInstanceName(FName InstanceName);                                                                          // [0x688fa94] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.EndAbilityState
+	// void EndAbilityState(FName OptionalStateNameToEnd);                                                                      // [0x688fa14] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.ConfirmTaskByInstanceName
+	// void ConfirmTaskByInstanceName(FName InstanceName, bool bEndTask);                                                       // [0x688f6c0] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.CancelTaskByInstanceName
+	// void CancelTaskByInstanceName(FName InstanceName);                                                                       // [0x688f640] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithHandle
+	// void BP_RemoveGameplayEffectFromOwnerWithHandle(FActiveGameplayEffectHandle Handle, int32_t StacksToRemove);             // [0x688f3c8] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithGrantedTags
+	// void BP_RemoveGameplayEffectFromOwnerWithGrantedTags(FGameplayTagContainer WithGrantedTags, int32_t StacksToRemove);     // [0x688f120] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithAssetTags
+	// void BP_RemoveGameplayEffectFromOwnerWithAssetTags(FGameplayTagContainer WithAssetTags, int32_t StacksToRemove);         // [0x688ee78] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToTarget
+	// TArray<FActiveGameplayEffectHandle> BP_ApplyGameplayEffectToTarget(FGameplayAbilityTargetDataHandle TargetData, UClass* GameplayEffectClass, int32_t GameplayEffectLevel, int32_t Stacks); // [0x688e960] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner
+	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectToOwner(UClass* GameplayEffectClass, int32_t GameplayEffectLevel, int32_t Stacks); // [0x688e85c] Final|Native|Protected|BlueprintCallable 
 /// Class /Script/GameplayAbilities.GameplayAbilitySet
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UGameplayAbilitySet : public UDataAsset
@@ -349,7 +500,7 @@ class UGameplayAbilitySet : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FGameplayAbilityBindInfo>)          Abilities                                                   ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FGameplayAbilityBindInfo>)          Abilities                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor
@@ -360,19 +511,26 @@ class AGameplayAbilityTargetActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	DMember(bool)                                      ShouldProduceTargetDataOnServer                             ___ OFFSET(get<bool>, {0x290, 1, 0, 0})
-	SMember(FGameplayAbilityTargetingLocationInfo)     StartLocation                                               ___ OFFSET(get<T>, {0x2A0, 160, 0, 0})
-	CMember(APlayerController*)                        PrimaryPC                                                   ___ OFFSET(get<T>, {0x370, 8, 0, 0})
-	CMember(UGameplayAbility*)                         OwningAbility                                               ___ OFFSET(get<T>, {0x378, 8, 0, 0})
-	DMember(bool)                                      bDestroyOnConfirmation                                      ___ OFFSET(get<bool>, {0x380, 1, 0, 0})
-	CMember(AActor*)                                   SourceActor                                                 ___ OFFSET(get<T>, {0x388, 8, 0, 0})
-	SMember(FWorldReticleParameters)                   ReticleParams                                               ___ OFFSET(get<T>, {0x390, 24, 0, 0})
-	CMember(UClass*)                                   ReticleClass                                                ___ OFFSET(get<T>, {0x3A8, 8, 0, 0})
-	SMember(FGameplayTargetDataFilterHandle)           Filter                                                      ___ OFFSET(get<T>, {0x3B0, 16, 0, 0})
-	DMember(bool)                                      bDebug                                                      ___ OFFSET(get<bool>, {0x3C0, 1, 0, 0})
-	CMember(UAbilitySystemComponent*)                  GenericDelegateBoundASC                                     ___ OFFSET(get<T>, {0x3D8, 8, 0, 0})
+	DMember(bool)                                      ShouldProduceTargetDataOnServer                             OFFSET(get<bool>, {0x290, 1, 0, 0})
+	SMember(FGameplayAbilityTargetingLocationInfo)     StartLocation                                               OFFSET(get<T>, {0x2A0, 160, 0, 0})
+	CMember(APlayerController*)                        PrimaryPC                                                   OFFSET(get<T>, {0x370, 8, 0, 0})
+	CMember(UGameplayAbility*)                         OwningAbility                                               OFFSET(get<T>, {0x378, 8, 0, 0})
+	DMember(bool)                                      bDestroyOnConfirmation                                      OFFSET(get<bool>, {0x380, 1, 0, 0})
+	CMember(AActor*)                                   SourceActor                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
+	SMember(FWorldReticleParameters)                   ReticleParams                                               OFFSET(get<T>, {0x390, 24, 0, 0})
+	CMember(UClass*)                                   ReticleClass                                                OFFSET(get<T>, {0x3A8, 8, 0, 0})
+	SMember(FGameplayTargetDataFilterHandle)           Filter                                                      OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	DMember(bool)                                      bDebug                                                      OFFSET(get<bool>, {0x3C0, 1, 0, 0})
+	CMember(UAbilitySystemComponent*)                  GenericDelegateBoundASC                                     OFFSET(get<T>, {0x3D8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayAbilityTargetActor.ConfirmTargeting
+	// void ConfirmTargeting();                                                                                                 // [0x2bea0f4] Native|Public        
+	// Function /Script/GameplayAbilities.GameplayAbilityTargetActor.CancelTargeting
+	// void CancelTargeting();                                                                                                  // [0xfcc560] Native|Public        
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_Trace
 /// Size: 0x0020 (0x0003E0 - 0x000400)
 class AGameplayAbilityTargetActor_Trace : public AGameplayAbilityTargetActor
@@ -381,9 +539,9 @@ class AGameplayAbilityTargetActor_Trace : public AGameplayAbilityTargetActor
 	static inline constexpr uint64_t __MDKClassSize = 1024;
 
 public:
-	DMember(float)                                     MaxRange                                                    ___ OFFSET(get<float>, {0x3E0, 4, 0, 0})
-	SMember(FCollisionProfileName)                     TraceProfile                                                ___ OFFSET(get<T>, {0x3E4, 4, 0, 0})
-	DMember(bool)                                      bTraceAffectsAimPitch                                       ___ OFFSET(get<bool>, {0x3E8, 1, 0, 0})
+	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0x3E0, 4, 0, 0})
+	SMember(FCollisionProfileName)                     TraceProfile                                                OFFSET(get<T>, {0x3E4, 4, 0, 0})
+	DMember(bool)                                      bTraceAffectsAimPitch                                       OFFSET(get<bool>, {0x3E8, 1, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_GroundTrace
@@ -394,8 +552,8 @@ class AGameplayAbilityTargetActor_GroundTrace : public AGameplayAbilityTargetAct
 	static inline constexpr uint64_t __MDKClassSize = 1056;
 
 public:
-	DMember(float)                                     CollisionRadius                                             ___ OFFSET(get<float>, {0x3F8, 4, 0, 0})
-	DMember(float)                                     CollisionHeight                                             ___ OFFSET(get<float>, {0x3FC, 4, 0, 0})
+	DMember(float)                                     CollisionRadius                                             OFFSET(get<float>, {0x3F8, 4, 0, 0})
+	DMember(float)                                     CollisionHeight                                             OFFSET(get<float>, {0x3FC, 4, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement
@@ -406,8 +564,8 @@ class AGameplayAbilityTargetActor_ActorPlacement : public AGameplayAbilityTarget
 	static inline constexpr uint64_t __MDKClassSize = 1072;
 
 public:
-	CMember(UClass*)                                   PlacedActorClass                                            ___ OFFSET(get<T>, {0x418, 8, 0, 0})
-	CMember(UMaterialInterface*)                       PlacedActorMaterial                                         ___ OFFSET(get<T>, {0x420, 8, 0, 0})
+	CMember(UClass*)                                   PlacedActorClass                                            OFFSET(get<T>, {0x418, 8, 0, 0})
+	CMember(UMaterialInterface*)                       PlacedActorMaterial                                         OFFSET(get<T>, {0x420, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_Radius
@@ -418,7 +576,7 @@ class AGameplayAbilityTargetActor_Radius : public AGameplayAbilityTargetActor
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x3E0, 4, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x3E0, 4, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace
@@ -439,15 +597,30 @@ class AGameplayAbilityWorldReticle : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FWorldReticleParameters)                   Parameters                                                  ___ OFFSET(get<T>, {0x290, 24, 0, 0})
-	DMember(bool)                                      bFaceOwnerFlat                                              ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-	DMember(bool)                                      bSnapToTargetedActor                                        ___ OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-	DMember(bool)                                      bIsTargetValid                                              ___ OFFSET(get<bool>, {0x2AA, 1, 0, 0})
-	DMember(bool)                                      bIsTargetAnActor                                            ___ OFFSET(get<bool>, {0x2AB, 1, 0, 0})
-	CMember(APlayerController*)                        PrimaryPC                                                   ___ OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(AGameplayAbilityTargetActor*)              TargetingActor                                              ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	SMember(FWorldReticleParameters)                   Parameters                                                  OFFSET(get<T>, {0x290, 24, 0, 0})
+	DMember(bool)                                      bFaceOwnerFlat                                              OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	DMember(bool)                                      bSnapToTargetedActor                                        OFFSET(get<bool>, {0x2A9, 1, 0, 0})
+	DMember(bool)                                      bIsTargetValid                                              OFFSET(get<bool>, {0x2AA, 1, 0, 0})
+	DMember(bool)                                      bIsTargetAnActor                                            OFFSET(get<bool>, {0x2AB, 1, 0, 0})
+	CMember(APlayerController*)                        PrimaryPC                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(AGameplayAbilityTargetActor*)              TargetingActor                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamVector
+	// void SetReticleMaterialParamVector(FName ParamName, FVector Value);                                                      // [0x1ebf994] Event|Public|HasDefaults|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamFloat
+	// void SetReticleMaterialParamFloat(FName ParamName, float Value);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.OnValidTargetChanged
+	// void OnValidTargetChanged(bool bNewValue);                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.OnTargetingAnActor
+	// void OnTargetingAnActor(bool bNewValue);                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.OnParametersInitialized
+	// void OnParametersInitialized();                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource
+	// void FaceTowardSource(bool bFaceIn2D);                                                                                   // [0x688fb14] Final|Native|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization
 /// Size: 0x0018 (0x0002C0 - 0x0002D8)
 class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityWorldReticle
@@ -456,8 +629,8 @@ class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityW
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	CMember(UCapsuleComponent*)                        CollisionComponent                                          ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(TArray<UActorComponent*>)                  VisualizationComponents                                     ___ OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	CMember(UCapsuleComponent*)                        CollisionComponent                                          OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(TArray<UActorComponent*>)                  VisualizationComponents                                     OFFSET(get<T>, {0x2C8, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbility_CharacterJump
@@ -478,11 +651,11 @@ class UGameplayAbility_Montage : public UGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 1000;
 
 public:
-	CMember(UAnimMontage*)                             MontageToPlay                                               ___ OFFSET(get<T>, {0x3B8, 8, 0, 0})
-	DMember(float)                                     PlayRate                                                    ___ OFFSET(get<float>, {0x3C0, 4, 0, 0})
-	SMember(FName)                                     SectionName                                                 ___ OFFSET(get<T>, {0x3C4, 4, 0, 0})
-	CMember(TArray<UClass*>)                           GameplayEffectClassesWhileAnimating                         ___ OFFSET(get<T>, {0x3C8, 16, 0, 0})
-	CMember(TArray<UGameplayEffect*>)                  GameplayEffectsWhileAnimating                               ___ OFFSET(get<T>, {0x3D8, 16, 0, 0})
+	CMember(UAnimMontage*)                             MontageToPlay                                               OFFSET(get<T>, {0x3B8, 8, 0, 0})
+	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x3C0, 4, 0, 0})
+	SMember(FName)                                     SectionName                                                 OFFSET(get<T>, {0x3C4, 4, 0, 0})
+	CMember(TArray<UClass*>)                           GameplayEffectClassesWhileAnimating                         OFFSET(get<T>, {0x3C8, 16, 0, 0})
+	CMember(TArray<UGameplayEffect*>)                  GameplayEffectsWhileAnimating                               OFFSET(get<T>, {0x3D8, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilityTask
@@ -493,8 +666,8 @@ class UAbilityTask : public UGameplayTask
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(UGameplayAbility*)                         Ability                                                     ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  AbilitySystemComponent                                      ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UGameplayAbility*)                         Ability                                                     OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  AbilitySystemComponent                                      OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotion_Base
@@ -505,11 +678,11 @@ class UAbilityTask_ApplyRootMotion_Base : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FName)                                     ForceName                                                   ___ OFFSET(get<T>, {0x78, 4, 0, 0})
-	CMember(ERootMotionFinishVelocityMode)             FinishVelocityMode                                          ___ OFFSET(get<T>, {0x7C, 1, 0, 0})
-	SMember(FVector)                                   FinishSetVelocity                                           ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	DMember(float)                                     FinishClampVelocity                                         ___ OFFSET(get<float>, {0x98, 4, 0, 0})
-	CMember(UCharacterMovementComponent*)              MovementComponent                                           ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FName)                                     ForceName                                                   OFFSET(get<T>, {0x78, 4, 0, 0})
+	CMember(ERootMotionFinishVelocityMode)             FinishVelocityMode                                          OFFSET(get<T>, {0x7C, 1, 0, 0})
+	SMember(FVector)                                   FinishSetVelocity                                           OFFSET(get<T>, {0x80, 24, 0, 0})
+	DMember(float)                                     FinishClampVelocity                                         OFFSET(get<float>, {0x98, 4, 0, 0})
+	CMember(UCharacterMovementComponent*)              MovementComponent                                           OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionConstantForce
@@ -520,15 +693,20 @@ class UAbilityTask_ApplyRootMotionConstantForce : public UAbilityTask_ApplyRootM
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FVector)                                   WorldDirection                                              ___ OFFSET(get<T>, {0xC8, 24, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xE4, 4, 0, 0})
-	DMember(bool)                                      bIsAdditive                                                 ___ OFFSET(get<bool>, {0xE8, 1, 0, 0})
-	CMember(UCurveFloat*)                              StrengthOverTime                                            ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
-	DMember(bool)                                      bEnableGravity                                              ___ OFFSET(get<bool>, {0xF8, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FVector)                                   WorldDirection                                              OFFSET(get<T>, {0xC8, 24, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0xE0, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xE4, 4, 0, 0})
+	DMember(bool)                                      bIsAdditive                                                 OFFSET(get<bool>, {0xE8, 1, 0, 0})
+	CMember(UCurveFloat*)                              StrengthOverTime                                            OFFSET(get<T>, {0xF0, 8, 0, 0})
+	DMember(bool)                                      bEnableGravity                                              OFFSET(get<bool>, {0xF8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionConstantForce.ApplyRootMotionConstantForce
+	// UAbilityTask_ApplyRootMotionConstantForce* ApplyRootMotionConstantForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector WorldDirection, float Strength, float Duration, bool bIsAdditive, UCurveFloat* StrengthOverTime, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bEnableGravity); // [0x6889114] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce
 /// Size: 0x0068 (0x0000B8 - 0x000120)
 class UAbilityTask_ApplyRootMotionJumpForce : public UAbilityTask_ApplyRootMotion_Base
@@ -537,18 +715,27 @@ class UAbilityTask_ApplyRootMotionJumpForce : public UAbilityTask_ApplyRootMotio
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLanded                                                    ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	DMember(float)                                     Distance                                                    ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
-	DMember(float)                                     Height                                                      ___ OFFSET(get<float>, {0xF4, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xF8, 4, 0, 0})
-	DMember(float)                                     MinimumLandedTriggerTime                                    ___ OFFSET(get<float>, {0xFC, 4, 0, 0})
-	DMember(bool)                                      bFinishOnLanded                                             ___ OFFSET(get<bool>, {0x100, 1, 0, 0})
-	CMember(UCurveVector*)                             PathOffsetCurve                                             ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(UCurveFloat*)                              TimeMappingCurve                                            ___ OFFSET(get<T>, {0x110, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLanded                                                    OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0xD8, 24, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0xF0, 4, 0, 0})
+	DMember(float)                                     Height                                                      OFFSET(get<float>, {0xF4, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xF8, 4, 0, 0})
+	DMember(float)                                     MinimumLandedTriggerTime                                    OFFSET(get<float>, {0xFC, 4, 0, 0})
+	DMember(bool)                                      bFinishOnLanded                                             OFFSET(get<bool>, {0x100, 1, 0, 0})
+	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(UCurveFloat*)                              TimeMappingCurve                                            OFFSET(get<T>, {0x110, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce.OnLandedCallback
+	// void OnLandedCallback(FHitResult& Hit);                                                                                  // [0x6892284] Final|Native|Public|HasOutParms 
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce.Finish
+	// void Finish();                                                                                                           // [0x688fb94] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce.ApplyRootMotionJumpForce
+	// UAbilityTask_ApplyRootMotionJumpForce* ApplyRootMotionJumpForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FRotator Rotation, float Distance, float Height, float Duration, float MinimumLandedTriggerTime, bool bFinishOnLanded, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve); // [0x6889bc0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce
 /// Size: 0x00A0 (0x0000B8 - 0x000158)
 class UAbilityTask_ApplyRootMotionMoveToActorForce : public UAbilityTask_ApplyRootMotion_Base
@@ -557,23 +744,34 @@ class UAbilityTask_ApplyRootMotionMoveToActorForce : public UAbilityTask_ApplyRo
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinished                                                  ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FVector)                                   StartLocation                                               ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0xE8, 24, 0, 0})
-	CMember(AActor*)                                   TargetActor                                                 ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FVector)                                   TargetLocationOffset                                        ___ OFFSET(get<T>, {0x108, 24, 0, 0})
-	CMember(ERootMotionMoveToActorTargetOffsetType)    OffsetAlignment                                             ___ OFFSET(get<T>, {0x120, 1, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x124, 4, 0, 0})
-	DMember(bool)                                      bDisableDestinationReachedInterrupt                         ___ OFFSET(get<bool>, {0x128, 1, 0, 0})
-	DMember(bool)                                      bSetNewMovementMode                                         ___ OFFSET(get<bool>, {0x129, 1, 0, 0})
-	CMember(TEnumAsByte<EMovementMode>)                NewMovementMode                                             ___ OFFSET(get<T>, {0x12A, 1, 0, 0})
-	DMember(bool)                                      bRestrictSpeedToExpected                                    ___ OFFSET(get<bool>, {0x12B, 1, 0, 0})
-	CMember(UCurveVector*)                             PathOffsetCurve                                             ___ OFFSET(get<T>, {0x130, 8, 0, 0})
-	CMember(UCurveFloat*)                              TimeMappingCurve                                            ___ OFFSET(get<T>, {0x138, 8, 0, 0})
-	CMember(UCurveFloat*)                              TargetLerpSpeedHorizontalCurve                              ___ OFFSET(get<T>, {0x140, 8, 0, 0})
-	CMember(UCurveFloat*)                              TargetLerpSpeedVerticalCurve                                ___ OFFSET(get<T>, {0x148, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FVector)                                   StartLocation                                               OFFSET(get<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0xE8, 24, 0, 0})
+	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x100, 8, 0, 0})
+	SMember(FVector)                                   TargetLocationOffset                                        OFFSET(get<T>, {0x108, 24, 0, 0})
+	CMember(ERootMotionMoveToActorTargetOffsetType)    OffsetAlignment                                             OFFSET(get<T>, {0x120, 1, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x124, 4, 0, 0})
+	DMember(bool)                                      bDisableDestinationReachedInterrupt                         OFFSET(get<bool>, {0x128, 1, 0, 0})
+	DMember(bool)                                      bSetNewMovementMode                                         OFFSET(get<bool>, {0x129, 1, 0, 0})
+	CMember(TEnumAsByte<EMovementMode>)                NewMovementMode                                             OFFSET(get<T>, {0x12A, 1, 0, 0})
+	DMember(bool)                                      bRestrictSpeedToExpected                                    OFFSET(get<bool>, {0x12B, 1, 0, 0})
+	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x130, 8, 0, 0})
+	CMember(UCurveFloat*)                              TimeMappingCurve                                            OFFSET(get<T>, {0x138, 8, 0, 0})
+	CMember(UCurveFloat*)                              TargetLerpSpeedHorizontalCurve                              OFFSET(get<T>, {0x140, 8, 0, 0})
+	CMember(UCurveFloat*)                              TargetLerpSpeedVerticalCurve                                OFFSET(get<T>, {0x148, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.OnTargetActorSwapped
+	// void OnTargetActorSwapped(AActor* OriginalTarget, AActor* NewTarget);                                                    // [0x68924e4] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.OnRep_TargetLocation
+	// void OnRep_TargetLocation();                                                                                             // [0x68924ac] Final|Native|Protected 
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.ApplyRootMotionMoveToTargetDataActorForce
+	// UAbilityTask_ApplyRootMotionMoveToActorForce* ApplyRootMotionMoveToTargetDataActorForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FGameplayAbilityTargetDataHandle TargetDataHandle, int32_t TargetDataIndex, int32_t TargetActorIndex, FVector TargetLocationOffset, ERootMotionMoveToActorTargetOffsetType OffsetAlignment, float Duration, UCurveFloat* TargetLerpSpeedHorizontal, UCurveFloat* TargetLerpSpeedVertical, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bDisableDestinationReachedInterrupt); // [0x688c370] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.ApplyRootMotionMoveToActorForce
+	// UAbilityTask_ApplyRootMotionMoveToActorForce* ApplyRootMotionMoveToActorForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, AActor* TargetActor, FVector TargetLocationOffset, ERootMotionMoveToActorTargetOffsetType OffsetAlignment, float Duration, UCurveFloat* TargetLerpSpeedHorizontal, UCurveFloat* TargetLerpSpeedVertical, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bDisableDestinationReachedInterrupt); // [0x688a88c] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce
 /// Size: 0x0068 (0x0000B8 - 0x000120)
 class UAbilityTask_ApplyRootMotionMoveToForce : public UAbilityTask_ApplyRootMotion_Base
@@ -582,17 +780,22 @@ class UAbilityTask_ApplyRootMotionMoveToForce : public UAbilityTask_ApplyRootMot
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTimedOut                                                  ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTimedOutAndDestinationReached                             ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FVector)                                   StartLocation                                               ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x108, 4, 0, 0})
-	DMember(bool)                                      bSetNewMovementMode                                         ___ OFFSET(get<bool>, {0x10C, 1, 0, 0})
-	CMember(TEnumAsByte<EMovementMode>)                NewMovementMode                                             ___ OFFSET(get<T>, {0x10D, 1, 0, 0})
-	DMember(bool)                                      bRestrictSpeedToExpected                                    ___ OFFSET(get<bool>, {0x10E, 1, 0, 0})
-	CMember(UCurveVector*)                             PathOffsetCurve                                             ___ OFFSET(get<T>, {0x110, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTimedOut                                                  OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTimedOutAndDestinationReached                             OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FVector)                                   StartLocation                                               OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0xF0, 24, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x108, 4, 0, 0})
+	DMember(bool)                                      bSetNewMovementMode                                         OFFSET(get<bool>, {0x10C, 1, 0, 0})
+	CMember(TEnumAsByte<EMovementMode>)                NewMovementMode                                             OFFSET(get<T>, {0x10D, 1, 0, 0})
+	DMember(bool)                                      bRestrictSpeedToExpected                                    OFFSET(get<bool>, {0x10E, 1, 0, 0})
+	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x110, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce.ApplyRootMotionMoveToForce
+	// UAbilityTask_ApplyRootMotionMoveToForce* ApplyRootMotionMoveToForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector TargetLocation, float Duration, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish); // [0x688b8c8] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce
 /// Size: 0x0070 (0x0000B8 - 0x000128)
 class UAbilityTask_ApplyRootMotionRadialForce : public UAbilityTask_ApplyRootMotion_Base
@@ -601,21 +804,26 @@ class UAbilityTask_ApplyRootMotionRadialForce : public UAbilityTask_ApplyRootMot
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0xC8, 24, 0, 0})
-	CMember(AActor*)                                   LocationActor                                               ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xEC, 4, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
-	DMember(bool)                                      bIsPush                                                     ___ OFFSET(get<bool>, {0xF4, 1, 0, 0})
-	DMember(bool)                                      bIsAdditive                                                 ___ OFFSET(get<bool>, {0xF5, 1, 0, 0})
-	DMember(bool)                                      bNoZForce                                                   ___ OFFSET(get<bool>, {0xF6, 1, 0, 0})
-	CMember(UCurveFloat*)                              StrengthDistanceFalloff                                     ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	CMember(UCurveFloat*)                              StrengthOverTime                                            ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	DMember(bool)                                      bUseFixedWorldDirection                                     ___ OFFSET(get<bool>, {0x108, 1, 0, 0})
-	SMember(FRotator)                                  FixedWorldDirection                                         ___ OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0xC8, 24, 0, 0})
+	CMember(AActor*)                                   LocationActor                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0xE8, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xEC, 4, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xF0, 4, 0, 0})
+	DMember(bool)                                      bIsPush                                                     OFFSET(get<bool>, {0xF4, 1, 0, 0})
+	DMember(bool)                                      bIsAdditive                                                 OFFSET(get<bool>, {0xF5, 1, 0, 0})
+	DMember(bool)                                      bNoZForce                                                   OFFSET(get<bool>, {0xF6, 1, 0, 0})
+	CMember(UCurveFloat*)                              StrengthDistanceFalloff                                     OFFSET(get<T>, {0xF8, 8, 0, 0})
+	CMember(UCurveFloat*)                              StrengthOverTime                                            OFFSET(get<T>, {0x100, 8, 0, 0})
+	DMember(bool)                                      bUseFixedWorldDirection                                     OFFSET(get<bool>, {0x108, 1, 0, 0})
+	SMember(FRotator)                                  FixedWorldDirection                                         OFFSET(get<T>, {0x110, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce.ApplyRootMotionRadialForce
+	// UAbilityTask_ApplyRootMotionRadialForce* ApplyRootMotionRadialForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, AActor* LocationActor, float Strength, float Duration, float Radius, bool bIsPush, bool bIsAdditive, bool bNoZForce, UCurveFloat* StrengthDistanceFalloff, UCurveFloat* StrengthOverTime, bool bUseFixedWorldDirection, FRotator FixedWorldDirection, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish); // [0x688d720] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_MoveToLocation
 /// Size: 0x0068 (0x000078 - 0x0000E0)
 class UAbilityTask_MoveToLocation : public UAbilityTask
@@ -624,14 +832,19 @@ class UAbilityTask_MoveToLocation : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTargetLocationReached                                     ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FVector)                                   StartLocation                                               ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
-	DMember(float)                                     DurationOfMovement                                          ___ OFFSET(get<float>, {0xC0, 4, 0, 0})
-	CMember(UCurveFloat*)                              LerpCurve                                                   ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(UCurveVector*)                             LerpCurveVector                                             ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetLocationReached                                     OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FVector)                                   StartLocation                                               OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0xA8, 24, 0, 0})
+	DMember(float)                                     DurationOfMovement                                          OFFSET(get<float>, {0xC0, 4, 0, 0})
+	CMember(UCurveFloat*)                              LerpCurve                                                   OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(UCurveVector*)                             LerpCurveVector                                             OFFSET(get<T>, {0xD8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_MoveToLocation.MoveToLocation
+	// UAbilityTask_MoveToLocation* MoveToLocation(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, float Duration, UCurveFloat* OptionalInterpolationCurve, UCurveVector* OptionalVectorInterpolationCurve); // [0x6891d48] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_NetworkSyncPoint
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_NetworkSyncPoint : public UAbilityTask
@@ -640,9 +853,16 @@ class UAbilityTask_NetworkSyncPoint : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSync                                                      ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSync                                                      OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_NetworkSyncPoint.WaitNetSync
+	// UAbilityTask_NetworkSyncPoint* WaitNetSync(UGameplayAbility* OwningAbility, EAbilityTaskNetSyncType SyncType);           // [0x689343c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_NetworkSyncPoint.OnSignalCallback
+	// void OnSignalCallback();                                                                                                 // [0x68924d0] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait
 /// Size: 0x0088 (0x000078 - 0x000100)
 class UAbilityTask_PlayMontageAndWait : public UAbilityTask
@@ -651,19 +871,32 @@ class UAbilityTask_PlayMontageAndWait : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCompleted                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnBlendOut                                                  ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInterrupted                                               ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCancelled                                                 ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	CMember(UAnimMontage*)                             MontageToPlay                                               ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	DMember(float)                                     Rate                                                        ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
-	SMember(FName)                                     StartSection                                                ___ OFFSET(get<T>, {0xEC, 4, 0, 0})
-	DMember(float)                                     AnimRootMotionTranslationScale                              ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
-	DMember(float)                                     StartTimeSeconds                                            ___ OFFSET(get<float>, {0xF4, 4, 0, 0})
-	DMember(bool)                                      bStopWhenAbilityEnds                                        ___ OFFSET(get<bool>, {0xF8, 1, 0, 0})
-	DMember(bool)                                      bAllowInterruptAfterBlendOut                                ___ OFFSET(get<bool>, {0xF9, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCompleted                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnBlendOut                                                  OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInterrupted                                               OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCancelled                                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(UAnimMontage*)                             MontageToPlay                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
+	DMember(float)                                     Rate                                                        OFFSET(get<float>, {0xE8, 4, 0, 0})
+	SMember(FName)                                     StartSection                                                OFFSET(get<T>, {0xEC, 4, 0, 0})
+	DMember(float)                                     AnimRootMotionTranslationScale                              OFFSET(get<float>, {0xF0, 4, 0, 0})
+	DMember(float)                                     StartTimeSeconds                                            OFFSET(get<float>, {0xF4, 4, 0, 0})
+	DMember(bool)                                      bStopWhenAbilityEnds                                        OFFSET(get<bool>, {0xF8, 1, 0, 0})
+	DMember(bool)                                      bAllowInterruptAfterBlendOut                                OFFSET(get<bool>, {0xF9, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageInterrupted
+	// void OnMontageInterrupted();                                                                                             // [0x6892270] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageEnded
+	// void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);                                                           // [0x68923e4] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x689231c] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.OnGameplayAbilityCancelled
+	// void OnGameplayAbilityCancelled();                                                                                       // [0x6892270] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
+	// UAbilityTask_PlayMontageAndWait* CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* MontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float AnimRootMotionTranslationScale, float StartTimeSeconds, bool bAllowInterruptAfterBlendOut); // [0x688f784] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_Repeat
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_Repeat : public UAbilityTask
@@ -672,10 +905,15 @@ class UAbilityTask_Repeat : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPerformAction                                             ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinished                                                  ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerformAction                                             OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_Repeat.RepeatAction
+	// UAbilityTask_Repeat* RepeatAction(UGameplayAbility* OwningAbility, float TimeBetweenActions, int32_t TotalActionCount);  // [0x68e16e0] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_SpawnActor
 /// Size: 0x0048 (0x000078 - 0x0000C0)
 class UAbilityTask_SpawnActor : public UAbilityTask
@@ -684,10 +922,19 @@ class UAbilityTask_SpawnActor : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Success                                                     ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Success                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_SpawnActor.SpawnActor
+	// UAbilityTask_SpawnActor* SpawnActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, UClass* Class); // [0x68e54d0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_SpawnActor.FinishSpawningActor
+	// void FinishSpawningActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, AActor* SpawnedActor); // [0x68d7710] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_SpawnActor.BeginSpawningActor
+	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, UClass* Class, AActor*& SpawnedActor); // [0x68d1da4] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_StartAbilityState
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_StartAbilityState : public UAbilityTask
@@ -696,10 +943,15 @@ class UAbilityTask_StartAbilityState : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStateEnded                                                ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStateInterrupted                                          ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStateEnded                                                OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStateInterrupted                                          OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_StartAbilityState.StartAbilityState
+	// UAbilityTask_StartAbilityState* StartAbilityState(UGameplayAbility* OwningAbility, FName StateName, bool bEndCurrentState); // [0x68e57c4] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_VisualizeTargeting
 /// Size: 0x0028 (0x000078 - 0x0000A0)
 class UAbilityTask_VisualizeTargeting : public UAbilityTask
@@ -708,9 +960,20 @@ class UAbilityTask_VisualizeTargeting : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  TimeElapsed                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TimeElapsed                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor
+	// UAbilityTask_VisualizeTargeting* VisualizeTargetingUsingActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* TargetActor, FName TaskInstanceName, float Duration); // [0x68e6e78] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting
+	// UAbilityTask_VisualizeTargeting* VisualizeTargeting(UGameplayAbility* OwningAbility, UClass* Class, FName TaskInstanceName, float Duration); // [0x68e6d40] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor
+	// void FinishSpawningActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* SpawnedActor);                    // [0x68d7a08] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
+	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, UClass* Class, AGameplayAbilityTargetActor*& SpawnedActor);     // [0x68d20ec] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate
 /// Size: 0x00F8 (0x000078 - 0x000170)
 class UAbilityTask_WaitAbilityActivate : public UAbilityTask
@@ -719,9 +982,20 @@ class UAbilityTask_WaitAbilityActivate : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActivate                                                  ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActivate                                                  OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivateWithTagRequirements
+	// UAbilityTask_WaitAbilityActivate* WaitForAbilityActivateWithTagRequirements(UGameplayAbility* OwningAbility, FGameplayTagRequirements TagRequirements, bool IncludeTriggeredAbilities, bool TriggerOnce); // [0x68e7794] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate_Query
+	// UAbilityTask_WaitAbilityActivate* WaitForAbilityActivate_Query(UGameplayAbility* OwningAbility, FGameplayTagQuery Query, bool IncludeTriggeredAbilities, bool TriggerOnce); // [0x68e7bfc] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate
+	// UAbilityTask_WaitAbilityActivate* WaitForAbilityActivate(UGameplayAbility* OwningAbility, FGameplayTag WithTag, FGameplayTag WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce); // [0x68e72c0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate.OnAbilityActivate
+	// void OnAbilityActivate(UGameplayAbility* ActivatedAbility);                                                              // [0x68dff90] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAbilityCommit : public UAbilityTask
@@ -730,9 +1004,18 @@ class UAbilityTask_WaitAbilityCommit : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCommit                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCommit                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit_Query
+	// UAbilityTask_WaitAbilityCommit* WaitForAbilityCommit_Query(UGameplayAbility* OwningAbility, FGameplayTagQuery Query, bool TriggerOnce); // [0x68e83cc] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit
+	// UAbilityTask_WaitAbilityCommit* WaitForAbilityCommit(UGameplayAbility* OwningAbility, FGameplayTag WithTag, FGameplayTag WithoutTage, bool TriggerOnce); // [0x68e8008] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit
+	// void OnAbilityCommit(UGameplayAbility* ActivatedAbility);                                                                // [0x68e0010] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChange
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAttributeChange : public UAbilityTask
@@ -741,10 +1024,17 @@ class UAbilityTask_WaitAttributeChange : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnChange                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChangeWithComparison
+	// UAbilityTask_WaitAttributeChange* WaitForAttributeChangeWithComparison(UGameplayAbility* OwningAbility, FGameplayAttribute InAttribute, FGameplayTag InWithTag, FGameplayTag InWithoutTag, TEnumAsByte<EWaitAttributeChangeComparison> InComparisonType, float InComparisonValue, bool TriggerOnce, AActor* OptionalExternalOwner); // [0x68e9b74] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChange
+	// UAbilityTask_WaitAttributeChange* WaitForAttributeChange(UGameplayAbility* OwningAbility, FGameplayAttribute Attribute, FGameplayTag WithSrcTag, FGameplayTag WithoutSrcTag, bool TriggerOnce, AActor* OptionalExternalOwner); // [0x68e86c0] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold
 /// Size: 0x00C0 (0x000078 - 0x000138)
 class UAbilityTask_WaitAttributeChangeRatioThreshold : public UAbilityTask
@@ -753,10 +1043,15 @@ class UAbilityTask_WaitAttributeChangeRatioThreshold : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnChange                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               ___ OFFSET(get<T>, {0x130, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x130, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold.WaitForAttributeChangeRatioThreshold
+	// UAbilityTask_WaitAttributeChangeRatioThreshold* WaitForAttributeChangeRatioThreshold(UGameplayAbility* OwningAbility, FGameplayAttribute AttributeNumerator, FGameplayAttribute AttributeDenominator, TEnumAsByte<EWaitAttributeChangeComparison> ComparisonType, float ComparisonValue, bool bTriggerOnce, AActor* OptionalExternalOwner); // [0x68e8d0c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAttributeChangeThreshold : public UAbilityTask
@@ -765,10 +1060,15 @@ class UAbilityTask_WaitAttributeChangeThreshold : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnChange                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold.WaitForAttributeChangeThreshold
+	// UAbilityTask_WaitAttributeChangeThreshold* WaitForAttributeChangeThreshold(UGameplayAbility* OwningAbility, FGameplayAttribute Attribute, TEnumAsByte<EWaitAttributeChangeComparison> ComparisonType, float ComparisonValue, bool bTriggerOnce, AActor* OptionalExternalOwner); // [0x68e951c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitCancel
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_WaitCancel : public UAbilityTask
@@ -777,9 +1077,18 @@ class UAbilityTask_WaitCancel : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCancel                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCancel                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitCancel.WaitCancel
+	// UAbilityTask_WaitCancel* WaitCancel(UGameplayAbility* OwningAbility);                                                    // [0x68e6fb0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitCancel.OnLocalCancelCallback
+	// void OnLocalCancelCallback();                                                                                            // [0x68e0bf0] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_WaitCancel.OnCancelCallback
+	// void OnCancelCallback();                                                                                                 // [0x68e02c0] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitConfirm
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitConfirm : public UAbilityTask
@@ -788,9 +1097,16 @@ class UAbilityTask_WaitConfirm : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirm.WaitConfirm
+	// UAbilityTask_WaitConfirm* WaitConfirm(UGameplayAbility* OwningAbility);                                                  // [0x68e7070] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback
+	// void OnConfirmCallback(UGameplayAbility* InAbility);                                                                     // [0x68e02e8] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel
 /// Size: 0x0028 (0x000078 - 0x0000A0)
 class UAbilityTask_WaitConfirmCancel : public UAbilityTask
@@ -799,10 +1115,23 @@ class UAbilityTask_WaitConfirmCancel : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCancel                                                    ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCancel                                                    OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.WaitConfirmCancel
+	// UAbilityTask_WaitConfirmCancel* WaitConfirmCancel(UGameplayAbility* OwningAbility);                                      // [0x68e7130] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalConfirmCallback
+	// void OnLocalConfirmCallback();                                                                                           // [0x68e0c18] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.OnLocalCancelCallback
+	// void OnLocalCancelCallback();                                                                                            // [0x68e0c04] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.OnConfirmCallback
+	// void OnConfirmCallback();                                                                                                // [0x68e0368] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.OnCancelCallback
+	// void OnCancelCallback();                                                                                                 // [0x68e02d4] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitDelay
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_WaitDelay : public UAbilityTask
@@ -811,9 +1140,14 @@ class UAbilityTask_WaitDelay : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitDelay.WaitDelay
+	// UAbilityTask_WaitDelay* WaitDelay(UGameplayAbility* OwningAbility, float Time);                                          // [0x68e71f0] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied
 /// Size: 0x01C8 (0x000078 - 0x000240)
 class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
@@ -822,9 +1156,14 @@ class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               ___ OFFSET(get<T>, {0x230, 8, 0, 0})
+	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x230, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied.OnApplyGameplayEffectCallback
+	// void OnApplyGameplayEffectCallback(UAbilitySystemComponent* Target, FGameplayEffectSpec& SpecApplied, FActiveGameplayEffectHandle ActiveHandle); // [0x68e0090] Final|Native|Public|HasOutParms 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self
 /// Size: 0x0020 (0x000240 - 0x000260)
 class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGameplayEffectApplied
@@ -833,9 +1172,16 @@ class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGame
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnApplied                                                   ___ OFFSET(get<T>, {0x240, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x240, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self.WaitGameplayEffectAppliedToSelf_Query
+	// UAbilityTask_WaitGameplayEffectApplied_Self* WaitGameplayEffectAppliedToSelf_Query(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68eb0b0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self.WaitGameplayEffectAppliedToSelf
+	// UAbilityTask_WaitGameplayEffectApplied_Self* WaitGameplayEffectAppliedToSelf(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68ea7d8] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target
 /// Size: 0x0020 (0x000240 - 0x000260)
 class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGameplayEffectApplied
@@ -844,9 +1190,16 @@ class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGa
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnApplied                                                   ___ OFFSET(get<T>, {0x240, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x240, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target.WaitGameplayEffectAppliedToTarget_Query
+	// UAbilityTask_WaitGameplayEffectApplied_Target* WaitGameplayEffectAppliedToTarget_Query(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68ec214] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target.WaitGameplayEffectAppliedToTarget
+	// UAbilityTask_WaitGameplayEffectApplied_Target* WaitGameplayEffectAppliedToTarget(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle TargetFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffects); // [0x68eb93c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectBlockedImmunity
 /// Size: 0x0138 (0x000078 - 0x0001B0)
 class UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask
@@ -855,10 +1208,15 @@ class UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FMulticastInlineDelegate)                  bLocked                                                     ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               ___ OFFSET(get<T>, {0x1A0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  bLocked                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x1A0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectBlockedImmunity.WaitGameplayEffectBlockedByImmunity
+	// UAbilityTask_WaitGameplayEffectBlockedImmunity* WaitGameplayEffectBlockedByImmunity(UGameplayAbility* OwningAbility, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, AActor* OptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ecaa0] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved
 /// Size: 0x0040 (0x000078 - 0x0000B8)
 class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
@@ -867,10 +1225,17 @@ class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRemoved                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoved                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.WaitForGameplayEffectRemoved
+	// UAbilityTask_WaitGameplayEffectRemoved* WaitForGameplayEffectRemoved(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle); // [0x68ea3f8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.OnGameplayEffectRemoved
+	// void OnGameplayEffectRemoved(FGameplayEffectRemovalInfo& InGameplayEffectRemovalInfo);                                   // [0x68e037c] Final|Native|Public|HasOutParms 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_WaitGameplayEffectStackChange : public UAbilityTask
@@ -879,10 +1244,17 @@ class UAbilityTask_WaitGameplayEffectStackChange : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnChange                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange.WaitForGameplayEffectStackChange
+	// UAbilityTask_WaitGameplayEffectStackChange* WaitForGameplayEffectStackChange(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle); // [0x68ea588] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange.OnGameplayEffectStackChange
+	// void OnGameplayEffectStackChange(FActiveGameplayEffectHandle Handle, int32_t NewCount, int32_t OldCount);                // [0x68e04a4] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEvent
 /// Size: 0x0030 (0x000078 - 0x0000A8)
 class UAbilityTask_WaitGameplayEvent : public UAbilityTask
@@ -891,10 +1263,15 @@ class UAbilityTask_WaitGameplayEvent : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  EventReceived                                               ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      ___ OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  EventReceived                                               OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x90, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEvent.WaitGameplayEvent
+	// UAbilityTask_WaitGameplayEvent* WaitGameplayEvent(UGameplayAbility* OwningAbility, FGameplayTag EventTag, AActor* OptionalExternalTarget, bool OnlyTriggerOnce, bool OnlyMatchExact); // [0x68ed07c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTag
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitGameplayTag : public UAbilityTask
@@ -903,9 +1280,14 @@ class UAbilityTask_WaitGameplayTag : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      ___ OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTag.GameplayTagCallback
+	// void GameplayTagCallback(FGameplayTag tag, int32_t NewCount);                                                            // [0x68d7ff0] Native|Public        
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagAdded
 /// Size: 0x0010 (0x000098 - 0x0000A8)
 class UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag
@@ -914,9 +1296,14 @@ class UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Added                                                       ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Added                                                       OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagAdded.WaitGameplayTagAdd
+	// UAbilityTask_WaitGameplayTagAdded* WaitGameplayTagAdd(UGameplayAbility* OwningAbility, FGameplayTag tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ed550] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagRemoved
 /// Size: 0x0010 (0x000098 - 0x0000A8)
 class UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag
@@ -925,9 +1312,14 @@ class UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Removed                                                     ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Removed                                                     OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagRemoved.WaitGameplayTagRemove
+	// UAbilityTask_WaitGameplayTagRemoved* WaitGameplayTagRemove(UGameplayAbility* OwningAbility, FGameplayTag tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ede34] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagQuery
 /// Size: 0x00E0 (0x000078 - 0x000158)
 class UAbilityTask_WaitGameplayTagQuery : public UAbilityTask
@@ -936,10 +1328,17 @@ class UAbilityTask_WaitGameplayTagQuery : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Triggered                                                   ___ OFFSET(get<T>, {0x138, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      ___ OFFSET(get<T>, {0x148, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Triggered                                                   OFFSET(get<T>, {0x138, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x148, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagQuery.WaitGameplayTagQuery
+	// UAbilityTask_WaitGameplayTagQuery* WaitGameplayTagQuery(UGameplayAbility* OwningAbility, FGameplayTagQuery TagQuery, AActor* InOptionalExternalTarget, EWaitGameplayTagQueryTriggerCondition TriggerCondition, bool bOnlyTriggerOnce); // [0x68ed914] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagQuery.UpdateTargetTags
+	// void UpdateTargetTags(FGameplayTag tag, int32_t NewCount);                                                               // [0x68e6acc] Final|Native|Protected 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitInputPress
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitInputPress : public UAbilityTask
@@ -948,9 +1347,16 @@ class UAbilityTask_WaitInputPress : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPress                                                     ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPress                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitInputPress.WaitInputPress
+	// UAbilityTask_WaitInputPress* WaitInputPress(UGameplayAbility* OwningAbility, bool bTestAlreadyPressed);                  // [0x68ee1f8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitInputPress.OnPressCallback
+	// void OnPressCallback();                                                                                                  // [0x68e0d74] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitInputRelease
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitInputRelease : public UAbilityTask
@@ -959,9 +1365,16 @@ class UAbilityTask_WaitInputRelease : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRelease                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRelease                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitInputRelease.WaitInputRelease
+	// UAbilityTask_WaitInputRelease* WaitInputRelease(UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);             // [0x68ee300] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitInputRelease.OnReleaseCallback
+	// void OnReleaseCallback();                                                                                                // [0x68e0d88] Final|Native|Public  
 /// Class /Script/GameplayAbilities.AbilityTask_WaitMovementModeChange
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitMovementModeChange : public UAbilityTask
@@ -970,9 +1383,16 @@ class UAbilityTask_WaitMovementModeChange : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnChange                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitMovementModeChange.OnMovementModeChange
+	// void OnMovementModeChange(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode);  // [0x68e0c2c] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilityTask_WaitMovementModeChange.CreateWaitMovementModeChange
+	// UAbilityTask_WaitMovementModeChange* CreateWaitMovementModeChange(UGameplayAbility* OwningAbility, TEnumAsByte<EMovementMode> NewMode); // [0x68d3a1c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitOverlap
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAbilityTask_WaitOverlap : public UAbilityTask
@@ -981,9 +1401,16 @@ class UAbilityTask_WaitOverlap : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnOverlap                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverlap                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitOverlap.WaitForOverlap
+	// UAbilityTask_WaitOverlap* WaitForOverlap(UGameplayAbility* OwningAbility);                                               // [0x68ea718] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitOverlap.OnHitCallback
+	// void OnHitCallback(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, FHitResult& Hit); // [0x68e0828] Final|Native|Public|HasOutParms|HasDefaults 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitTargetData
 /// Size: 0x0040 (0x000078 - 0x0000B8)
 class UAbilityTask_WaitTargetData : public UAbilityTask
@@ -992,12 +1419,31 @@ class UAbilityTask_WaitTargetData : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FMulticastInlineDelegate)                  ValidData                                                   ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  Cancelled                                                   ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	CMember(UClass*)                                   TargetClass                                                 ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(AGameplayAbilityTargetActor*)              TargetActor                                                 ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ValidData                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Cancelled                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
+	CMember(UClass*)                                   TargetClass                                                 OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(AGameplayAbilityTargetActor*)              TargetActor                                                 OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetDataUsingActor
+	// UAbilityTask_WaitTargetData* WaitTargetDataUsingActor(UGameplayAbility* OwningAbility, FName TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, AGameplayAbilityTargetActor* TargetActor); // [0x68ee55c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.WaitTargetData
+	// UAbilityTask_WaitTargetData* WaitTargetData(UGameplayAbility* OwningAbility, FName TaskInstanceName, TEnumAsByte<EGameplayTargetingConfirmation> ConfirmationType, UClass* Class); // [0x68ee408] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCancelledCallback
+	// void OnTargetDataReplicatedCancelledCallback();                                                                          // [0x1c67f28] Native|Public        
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCallback
+	// void OnTargetDataReplicatedCallback(FGameplayAbilityTargetDataHandle& Data, FGameplayTag ActivationTag);                 // [0x68e0ff0] Native|Public|HasOutParms 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReadyCallback
+	// void OnTargetDataReadyCallback(FGameplayAbilityTargetDataHandle& Data);                                                  // [0x68e0f28] Native|Public|HasOutParms 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataCancelledCallback
+	// void OnTargetDataCancelledCallback(FGameplayAbilityTargetDataHandle& Data);                                              // [0x68e0e60] Native|Public|HasOutParms 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.FinishSpawningActor
+	// void FinishSpawningActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* SpawnedActor);                    // [0x68d7b54] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.BeginSpawningActor
+	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, UClass* Class, AGameplayAbilityTargetActor*& SpawnedActor);     // [0x68d21f4] Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilityTask_WaitVelocityChange
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_WaitVelocityChange : public UAbilityTask
@@ -1006,10 +1452,15 @@ class UAbilityTask_WaitVelocityChange : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnVelocityChage                                             ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UMovementComponent*)                       CachedMovementComponent                                     ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVelocityChage                                             OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UMovementComponent*)                       CachedMovementComponent                                     OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilityTask_WaitVelocityChange.CreateWaitVelocityChange
+	// UAbilityTask_WaitVelocityChange* CreateWaitVelocityChange(UGameplayAbility* OwningAbility, FVector Direction, float MinimumMagnitude); // [0x68d3b20] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/GameplayAbilities.AbilitySystemBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAbilitySystemBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -1028,35 +1479,222 @@ class UAbilitySystemComponent : public UGameplayTasksComponent
 	static inline constexpr uint64_t __MDKClassSize = 4680;
 
 public:
-	CMember(TArray<FAttributeDefaults>)                DefaultStartingData                                         ___ OFFSET(get<T>, {0x128, 16, 0, 0})
-	SMember(FName)                                     AffectedAnimInstanceTag                                     ___ OFFSET(get<T>, {0x138, 4, 0, 0})
-	DMember(float)                                     OutgoingDuration                                            ___ OFFSET(get<float>, {0x2E8, 4, 0, 0})
-	DMember(float)                                     IncomingDuration                                            ___ OFFSET(get<float>, {0x2EC, 4, 0, 0})
-	CMember(TArray<FString>)                           ClientDebugStrings                                          ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(TArray<FString>)                           ServerDebugStrings                                          ___ OFFSET(get<T>, {0x320, 16, 0, 0})
-	DMember(bool)                                      UserAbilityActivationInhibited                              ___ OFFSET(get<bool>, {0x390, 1, 0, 0})
-	DMember(bool)                                      ReplicationProxyEnabled                                     ___ OFFSET(get<bool>, {0x391, 1, 0, 0})
-	DMember(bool)                                      bSuppressGrantAbility                                       ___ OFFSET(get<bool>, {0x392, 1, 0, 0})
-	DMember(bool)                                      bSuppressGameplayCues                                       ___ OFFSET(get<bool>, {0x393, 1, 0, 0})
-	CMember(TArray<AGameplayAbilityTargetActor*>)      SpawnedTargetActors                                         ___ OFFSET(get<T>, {0x398, 16, 0, 0})
-	CMember(AActor*)                                   OwnerActor                                                  ___ OFFSET(get<T>, {0x3D0, 8, 0, 0})
-	CMember(AActor*)                                   AvatarActor                                                 ___ OFFSET(get<T>, {0x3D8, 8, 0, 0})
-	SMember(FGameplayAbilitySpecContainer)             ActivatableAbilities                                        ___ OFFSET(get<T>, {0x3F0, 288, 0, 0})
-	CMember(TArray<UGameplayAbility*>)                 AllReplicatedInstancedAbilities                             ___ OFFSET(get<T>, {0x540, 16, 0, 0})
-	SMember(FGameplayAbilityRepAnimMontage)            RepAnimMontageInfo                                          ___ OFFSET(get<T>, {0x780, 56, 0, 0})
-	DMember(bool)                                      bCachedIsNetSimulated                                       ___ OFFSET(get<bool>, {0x7B8, 1, 0, 0})
-	DMember(bool)                                      bPendingMontageRep                                          ___ OFFSET(get<bool>, {0x7B9, 1, 0, 0})
-	SMember(FGameplayAbilityLocalAnimMontage)          LocalAnimMontageInfo                                        ___ OFFSET(get<T>, {0x7C0, 48, 0, 0})
-	SMember(FActiveGameplayEffectsContainer)           ActiveGameplayEffects                                       ___ OFFSET(get<T>, {0x890, 760, 0, 0})
-	SMember(FActiveGameplayCueContainer)               ActiveGameplayCues                                          ___ OFFSET(get<T>, {0xB88, 296, 0, 0})
-	SMember(FActiveGameplayCueContainer)               MinimalReplicationGameplayCues                              ___ OFFSET(get<T>, {0xCB0, 296, 0, 0})
-	CMember(TArray<char>)                              BlockedAbilityBindings                                      ___ OFFSET(get<T>, {0xF00, 16, 0, 0})
-	SMember(FMinimalReplicationTagCountMap)            MinimalReplicationTags                                      ___ OFFSET(get<T>, {0x1038, 96, 0, 0})
-	CMember(TArray<UAttributeSet*>)                    SpawnedAttributes                                           ___ OFFSET(get<T>, {0x1098, 16, 0, 0})
-	SMember(FMinimalReplicationTagCountMap)            ReplicatedLooseTags                                         ___ OFFSET(get<T>, {0x10B8, 96, 0, 0})
-	SMember(FReplicatedPredictionKeyMap)               ReplicatedPredictionKeyMap                                  ___ OFFSET(get<T>, {0x1120, 280, 0, 0})
+	CMember(TArray<FAttributeDefaults>)                DefaultStartingData                                         OFFSET(get<T>, {0x128, 16, 0, 0})
+	SMember(FName)                                     AffectedAnimInstanceTag                                     OFFSET(get<T>, {0x138, 4, 0, 0})
+	DMember(float)                                     OutgoingDuration                                            OFFSET(get<float>, {0x2E8, 4, 0, 0})
+	DMember(float)                                     IncomingDuration                                            OFFSET(get<float>, {0x2EC, 4, 0, 0})
+	CMember(TArray<FString>)                           ClientDebugStrings                                          OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(TArray<FString>)                           ServerDebugStrings                                          OFFSET(get<T>, {0x320, 16, 0, 0})
+	DMember(bool)                                      UserAbilityActivationInhibited                              OFFSET(get<bool>, {0x390, 1, 0, 0})
+	DMember(bool)                                      ReplicationProxyEnabled                                     OFFSET(get<bool>, {0x391, 1, 0, 0})
+	DMember(bool)                                      bSuppressGrantAbility                                       OFFSET(get<bool>, {0x392, 1, 0, 0})
+	DMember(bool)                                      bSuppressGameplayCues                                       OFFSET(get<bool>, {0x393, 1, 0, 0})
+	CMember(TArray<AGameplayAbilityTargetActor*>)      SpawnedTargetActors                                         OFFSET(get<T>, {0x398, 16, 0, 0})
+	CMember(AActor*)                                   OwnerActor                                                  OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	CMember(AActor*)                                   AvatarActor                                                 OFFSET(get<T>, {0x3D8, 8, 0, 0})
+	SMember(FGameplayAbilitySpecContainer)             ActivatableAbilities                                        OFFSET(get<T>, {0x3F0, 288, 0, 0})
+	CMember(TArray<UGameplayAbility*>)                 AllReplicatedInstancedAbilities                             OFFSET(get<T>, {0x540, 16, 0, 0})
+	SMember(FGameplayAbilityRepAnimMontage)            RepAnimMontageInfo                                          OFFSET(get<T>, {0x780, 56, 0, 0})
+	DMember(bool)                                      bCachedIsNetSimulated                                       OFFSET(get<bool>, {0x7B8, 1, 0, 0})
+	DMember(bool)                                      bPendingMontageRep                                          OFFSET(get<bool>, {0x7B9, 1, 0, 0})
+	SMember(FGameplayAbilityLocalAnimMontage)          LocalAnimMontageInfo                                        OFFSET(get<T>, {0x7C0, 48, 0, 0})
+	SMember(FActiveGameplayEffectsContainer)           ActiveGameplayEffects                                       OFFSET(get<T>, {0x890, 760, 0, 0})
+	SMember(FActiveGameplayCueContainer)               ActiveGameplayCues                                          OFFSET(get<T>, {0xB88, 296, 0, 0})
+	SMember(FActiveGameplayCueContainer)               MinimalReplicationGameplayCues                              OFFSET(get<T>, {0xCB0, 296, 0, 0})
+	CMember(TArray<char>)                              BlockedAbilityBindings                                      OFFSET(get<T>, {0xF00, 16, 0, 0})
+	SMember(FMinimalReplicationTagCountMap)            MinimalReplicationTags                                      OFFSET(get<T>, {0x1038, 96, 0, 0})
+	CMember(TArray<UAttributeSet*>)                    SpawnedAttributes                                           OFFSET(get<T>, {0x1098, 16, 0, 0})
+	SMember(FMinimalReplicationTagCountMap)            ReplicatedLooseTags                                         OFFSET(get<T>, {0x10B8, 96, 0, 0})
+	SMember(FReplicatedPredictionKeyMap)               ReplicatedPredictionKeyMap                                  OFFSET(get<T>, {0x1120, 280, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.UpdateActiveGameplayEffectSetByCallerMagnitudes
+	// void UpdateActiveGameplayEffectSetByCallerMagnitudes(FActiveGameplayEffectHandle ActiveHandle, TMap<FGameplayTag, float>& NewSetByCallerValues); // [0x68e68a4] BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.UpdateActiveGameplayEffectSetByCallerMagnitude
+	// void UpdateActiveGameplayEffectSetByCallerMagnitude(FActiveGameplayEffectHandle ActiveHandle, FGameplayTag SetByCallerTag, float NewValue); // [0x68e651c] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.TryActivateAbilityByClass
+	// bool TryActivateAbilityByClass(UClass* InAbilityToActivate, bool bAllowRemoteActivation);                                // [0x68e6458] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.TryActivateAbility
+	// bool TryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate, bool bAllowRemoteActivation);                      // [0x68e61d4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.TryActivateAbilitiesByTag
+	// bool TryActivateAbilitiesByTag(FGameplayTagContainer& GameplayTagContainer, bool bAllowRemoteActivation);                // [0x68e6054] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.TargetConfirm
+	// void TargetConfirm();                                                                                                    // [0x16445bc] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.TargetCancel
+	// void TargetCancel();                                                                                                     // [0x68e58fc] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.SetUserAbilityActivationInhibited
+	// void SetUserAbilityActivationInhibited(bool NewInhibit);                                                                 // [0x68e544c] Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.SetActiveGameplayEffectLevelUsingQuery
+	// void SetActiveGameplayEffectLevelUsingQuery(FGameplayEffectQuery Query, int32_t NewLevel);                               // [0x68e48ec] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.SetActiveGameplayEffectLevel
+	// void SetActiveGameplayEffectLevel(FActiveGameplayEffectHandle ActiveHandle, int32_t NewLevel);                           // [0x68e466c] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbilityWithEventData
+	// void ServerTryActivateAbilityWithEventData(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData); // [0x68e40e4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbility
+	// void ServerTryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate, bool InputPressed, FPredictionKey PredictionKey); // [0x68e3cec] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetDataCancelled
+	// void ServerSetReplicatedTargetDataCancelled(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey); // [0x68e38bc] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetData
+	// void ServerSetReplicatedTargetData(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FGameplayAbilityTargetDataHandle ReplicatedTargetDataHandle, FGameplayTag ApplicationTag, FPredictionKey CurrentPredictionKey); // [0x68e3228] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEventWithPayload
+	// void ServerSetReplicatedEventWithPayload(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload); // [0x68e2c74] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEvent
+	// void ServerSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey); // [0x68e2804] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetInputReleased
+	// void ServerSetInputReleased(FGameplayAbilitySpecHandle AbilityHandle);                                                   // [0x68e2688] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerSetInputPressed
+	// void ServerSetInputPressed(FGameplayAbilitySpecHandle AbilityHandle);                                                    // [0x68e250c] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerPrintDebug_RequestWithStrings
+	// void ServerPrintDebug_RequestWithStrings(TArray<FString> Strings);                                                       // [0x68e2458] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerPrintDebug_Request
+	// void ServerPrintDebug_Request();                                                                                         // [0x68e240c] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerEndAbility
+	// void ServerEndAbility(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo, FPredictionKey PredictionKey); // [0x68e1fe8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageSetPlayRate
+	// void ServerCurrentMontageSetPlayRate(UAnimMontage* ClientAnimMontage, float InPlayRate);                                 // [0x68e1efc] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageSetNextSectionName
+	// void ServerCurrentMontageSetNextSectionName(UAnimMontage* ClientAnimMontage, float ClientPosition, FName SectionName, FName NextSectionName); // [0x68e1d88] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerCurrentMontageJumpToSectionName
+	// void ServerCurrentMontageJumpToSectionName(UAnimMontage* ClientAnimMontage, FName SectionName);                          // [0x68e1c9c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerCancelAbility
+	// void ServerCancelAbility(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);     // [0x68e19cc] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ServerAbilityRPCBatch
+	// void ServerAbilityRPCBatch(FServerAbilityRPCBatch BatchInfo);                                                            // [0x68e17d8] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffectBySourceEffect
+	// void RemoveActiveGameplayEffectBySourceEffect(UClass* GameplayEffect, UAbilitySystemComponent* InstigatorAbilitySystemComponent, int32_t StacksToRemove); // [0x68e15e4] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveGameplayEffect
+	// bool RemoveActiveGameplayEffect(FActiveGameplayEffectHandle Handle, int32_t StacksToRemove);                             // [0x1ac92fc] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithTags
+	// int32_t RemoveActiveEffectsWithTags(FGameplayTagContainer Tags);                                                         // [0x31000d0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithSourceTags
+	// int32_t RemoveActiveEffectsWithSourceTags(FGameplayTagContainer Tags);                                                   // [0x68e1458] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithGrantedTags
+	// int32_t RemoveActiveEffectsWithGrantedTags(FGameplayTagContainer Tags);                                                  // [0x2d0f990] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.RemoveActiveEffectsWithAppliedTags
+	// int32_t RemoveActiveEffectsWithAppliedTags(FGameplayTagContainer Tags);                                                  // [0x68e12cc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ReleaseInputID
+	// void ReleaseInputID(int32_t InputID);                                                                                    // [0x68e1248] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.PressInputID
+	// void PressInputID(int32_t InputID);                                                                                      // [0x68e11c4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnSpawnedAttributesEndPlayed
+	// void OnSpawnedAttributesEndPlayed(AActor* InActor, TEnumAsByte<EEndPlayReason> EndPlayReason);                           // [0x68e0d9c] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_SpawnedAttributes
+	// void OnRep_SpawnedAttributes(TArray<UAttributeSet*>& PreviousSpawnedAttributes);                                         // [0x19f9b24] Final|Native|Private|HasOutParms 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_ServerDebugString
+	// void OnRep_ServerDebugString();                                                                                          // [0x5c44714] Native|Public        
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_ReplicatedAnimMontage
+	// void OnRep_ReplicatedAnimMontage();                                                                                      // [0x5ae6edc] Native|Protected     
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_OwningActor
+	// void OnRep_OwningActor();                                                                                                // [0x29fb974] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_ClientDebugString
+	// void OnRep_ClientDebugString();                                                                                          // [0x5c8a940] Native|Public        
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnRep_ActivateAbilities
+	// void OnRep_ActivateAbilities();                                                                                          // [0x24ddb6c] Native|Protected     
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnOwnerActorDestroyed
+	// void OnOwnerActorDestroyed(AActor* InActor);                                                                             // [0x2b61418] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.OnAvatarActorDestroyed
+	// void OnAvatarActorDestroyed(AActor* InActor);                                                                            // [0x29918b0] Final|Native|Public  
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesExecuted_WithParams
+	// void NetMulticast_InvokeGameplayCuesExecuted_WithParams(FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters); // [0x68df73c] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesExecuted
+	// void NetMulticast_InvokeGameplayCuesExecuted(FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext); // [0x68df274] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
+	// void NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(FGameplayTagContainer GameplayCueTags, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters); // [0x68dee48] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_WithParams
+	// void NetMulticast_InvokeGameplayCueExecuted_WithParams(FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters); // [0x277ef68] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_FromSpec
+	// void NetMulticast_InvokeGameplayCueExecuted_FromSpec(FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey);      // [0x299f1e8] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted
+	// void NetMulticast_InvokeGameplayCueExecuted(FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext); // [0x68de9c8] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
+	// void NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters GameplayCueParameters); // [0x68de5c4] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec
+	// void NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(FGameplayEffectSpecForRPC Spec, FPredictionKey PredictionKey); // [0x68de2fc] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded_WithParams
+	// void NetMulticast_InvokeGameplayCueAdded_WithParams(FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayCueParameters Parameters); // [0x2bdadb8] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded
+	// void NetMulticast_InvokeGameplayCueAdded(FGameplayTag GameplayCueTag, FPredictionKey PredictionKey, FGameplayEffectContextHandle EffectContext); // [0x68dde7c] Net|Native|Event|NetMulticast|Public 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.MakeOutgoingSpec
+	// FGameplayEffectSpecHandle MakeOutgoingSpec(UClass* GameplayEffectClass, float Level, FGameplayEffectContextHandle Context); // [0x2844448] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.MakeEffectContext
+	// FGameplayEffectContextHandle MakeEffectContext();                                                                        // [0x68dda00] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.K2_InitStats
+	// void K2_InitStats(UClass* Attributes, UDataTable* DataTable);                                                            // [0x68dd93c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.K2_GiveAbilityAndActivateOnce
+	// FGameplayAbilitySpecHandle K2_GiveAbilityAndActivateOnce(UClass* AbilityClass, int32_t Level, int32_t InputID);          // [0x68dd838] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.K2_GiveAbility
+	// FGameplayAbilitySpecHandle K2_GiveAbility(UClass* AbilityClass, int32_t Level, int32_t InputID);                         // [0x68dd734] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.IsGameplayCueActive
+	// bool IsGameplayCueActive(FGameplayTag GameplayCueTag);                                                                   // [0x68dd0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.InputConfirm
+	// void InputConfirm();                                                                                                     // [0x16446d8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.InputCancel
+	// void InputCancel();                                                                                                      // [0x287ebe4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetUserAbilityActivationInhibited
+	// bool GetUserAbilityActivationInhibited();                                                                                // [0x68dcf58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetGameplayTagCount
+	// int32_t GetGameplayTagCount(FGameplayTag GameplayTag);                                                                   // [0x68dbed8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetGameplayEffectMagnitude
+	// float GetGameplayEffectMagnitude(FActiveGameplayEffectHandle Handle, FGameplayAttribute Attribute);                      // [0x68dbb28] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetGameplayEffectCount_IfLoaded
+	// int32_t GetGameplayEffectCount_IfLoaded(TWeakObjectPtr<UClass*> SoftSourceGameplayEffect, UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck); // [0x68db8e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetGameplayEffectCount
+	// int32_t GetGameplayEffectCount(UClass* SourceGameplayEffect, UAbilitySystemComponent* OptionalInstigatorFilterComponent, bool bEnforceOnGoingCheck); // [0x68db7e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetGameplayAttributeValue
+	// float GetGameplayAttributeValue(FGameplayAttribute Attribute, bool& bFound);                                             // [0x68dae44] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetAttributeSet
+	// UAttributeSet* GetAttributeSet(UClass* AttributeSetClass);                                                               // [0x68d9788] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetAllAttributes
+	// void GetAllAttributes(TArray<FGameplayAttribute>& OutAttributes);                                                        // [0x68d94b4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetAllAbilities
+	// void GetAllAbilities(TArray<FGameplayAbilitySpecHandle>& OutAbilityHandles);                                             // [0x68d933c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetActiveEffectsWithAllTags
+	// TArray<FActiveGameplayEffectHandle> GetActiveEffectsWithAllTags(FGameplayTagContainer Tags);                             // [0x2156638] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.GetActiveEffects
+	// TArray<FActiveGameplayEffectHandle> GetActiveEffects(FGameplayEffectQuery& Query);                                       // [0x68d826c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.FindAllAbilitiesWithTags
+	// void FindAllAbilitiesWithTags(TArray<FGameplayAbilitySpecHandle>& OutAbilityHandles, FGameplayTagContainer Tags, bool bExactMatch); // [0x68d7410] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.FindAllAbilitiesWithInputID
+	// void FindAllAbilitiesWithInputID(TArray<FGameplayAbilitySpecHandle>& OutAbilityHandles, int32_t InputID);                // [0x68d7258] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.FindAllAbilitiesMatchingQuery
+	// void FindAllAbilitiesMatchingQuery(TArray<FGameplayAbilitySpecHandle>& OutAbilityHandles, FGameplayTagQuery Query);      // [0x68d7058] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientTryActivateAbility
+	// void ClientTryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate);                                             // [0x68d3634] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientSetReplicatedEvent
+	// void ClientSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey); // [0x68d3360] Net|NetReliableNative|Event|Public|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientPrintDebug_Response
+	// void ClientPrintDebug_Response(TArray<FString> Strings, int32_t GameFlags);                                              // [0x68d328c] Net|NetReliableNative|Event|Public|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientEndAbility
+	// void ClientEndAbility(FGameplayAbilitySpecHandle AbilityToEnd, FGameplayAbilityActivationInfo ActivationInfo);           // [0x68d2fec] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientCancelAbility
+	// void ClientCancelAbility(FGameplayAbilitySpecHandle AbilityToCancel, FGameplayAbilityActivationInfo ActivationInfo);     // [0x68d2d4c] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceedWithEventData
+	// void ClientActivateAbilitySucceedWithEventData(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey, FGameplayEventData TriggerEventData); // [0x68d2948] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceed
+	// void ClientActivateAbilitySucceed(FGameplayAbilitySpecHandle AbilityToActivate, FPredictionKey PredictionKey);           // [0x68d26a0] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClientActivateAbilityFailed
+	// void ClientActivateAbilityFailed(FGameplayAbilitySpecHandle AbilityToActivate, int16_t PredictionKey);                   // [0x68d2420] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClearAllAbilitiesWithInputID
+	// void ClearAllAbilitiesWithInputID(int32_t InputID);                                                                      // [0x68d23a0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClearAllAbilities
+	// void ClearAllAbilities();                                                                                                // [0x68d238c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.ClearAbility
+	// void ClearAbility(FGameplayAbilitySpecHandle& Handle);                                                                   // [0x68d2300] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToTarget
+	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectToTarget(UClass* GameplayEffectClass, UAbilitySystemComponent* Target, float Level, FGameplayEffectContextHandle Context); // [0x1f6555c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectToSelf
+	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectToSelf(UClass* GameplayEffectClass, float Level, FGameplayEffectContextHandle EffectContext); // [0x1f65d90] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToTarget
+	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToTarget(FGameplayEffectSpecHandle& SpecHandle, UAbilitySystemComponent* Target); // [0x68d1b68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.BP_ApplyGameplayEffectSpecToSelf
+	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectSpecToSelf(FGameplayEffectSpecHandle& SpecHandle);                     // [0x2844728] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.AbilityConfirmOrCancel__DelegateSignature
+	// void AbilityConfirmOrCancel__DelegateSignature();                                                                        // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/GameplayAbilities.AbilitySystemComponent.AbilityAbilityKey__DelegateSignature
+	// void AbilityAbilityKey__DelegateSignature(int32_t InputID);                                                              // [0x1ebf994] MulticastDelegate|Public|Delegate 
 /// Class /Script/GameplayAbilities.AbilitySystemDebugHUDExtension
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAbilitySystemDebugHUDExtension : public UObject
@@ -1105,41 +1743,41 @@ class UAbilitySystemGlobals : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FSoftClassPath)                            AbilitySystemGlobalsClassName                               ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	DMember(bool)                                      bUseDebugTargetFromHud                                      ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailIsDeadTag                                       ___ OFFSET(get<T>, {0x6C, 4, 0, 0})
-	SMember(FName)                                     ActivateFailIsDeadName                                      ___ OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailCooldownTag                                     ___ OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     ActivateFailCooldownName                                    ___ OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailCostTag                                         ___ OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     ActivateFailCostName                                        ___ OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailTagsBlockedTag                                  ___ OFFSET(get<T>, {0x84, 4, 0, 0})
-	SMember(FName)                                     ActivateFailTagsBlockedName                                 ___ OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailTagsMissingTag                                  ___ OFFSET(get<T>, {0x8C, 4, 0, 0})
-	SMember(FName)                                     ActivateFailTagsMissingName                                 ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FGameplayTag)                              ActivateFailNetworkingTag                                   ___ OFFSET(get<T>, {0x94, 4, 0, 0})
-	SMember(FName)                                     ActivateFailNetworkingName                                  ___ OFFSET(get<T>, {0x98, 4, 0, 0})
-	DMember(int32_t)                                   MinimalReplicationTagCountBits                              ___ OFFSET(get<int32_t>, {0x9C, 4, 0, 0})
-	SMember(FNetSerializeScriptStructCache)            TargetDataStructCache                                       ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FNetSerializeScriptStructCache)            EffectContextStructCache                                    ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	DMember(bool)                                      bAllowGameplayModEvaluationChannels                         ___ OFFSET(get<bool>, {0xC0, 1, 0, 0})
-	CMember(EGameplayModEvaluationChannel)             DefaultGameplayModEvaluationChannel                         ___ OFFSET(get<T>, {0xC1, 1, 0, 0})
-	SMember(FName)                                     GameplayModEvaluationChannelAliases                         ___ OFFSET(get<T>, {0xC4, 40, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalCurveTableName                                        ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	CMember(UCurveTable*)                              GlobalCurveTable                                            ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalAttributeMetaDataTableName                            ___ OFFSET(get<T>, {0x110, 24, 0, 0})
-	CMember(UDataTable*)                               GlobalAttributeMetaDataTable                                ___ OFFSET(get<T>, {0x128, 8, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalAttributeSetDefaultsTableName                         ___ OFFSET(get<T>, {0x130, 24, 0, 0})
-	CMember(TArray<FSoftObjectPath>)                   GlobalAttributeSetDefaultsTableNames                        ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	CMember(TArray<UCurveTable*>)                      GlobalAttributeDefaultsTables                               ___ OFFSET(get<T>, {0x158, 16, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalGameplayCueManagerClass                               ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalGameplayCueManagerName                                ___ OFFSET(get<T>, {0x180, 24, 0, 0})
-	CMember(TArray<FString>)                           GameplayCueNotifyPaths                                      ___ OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(FSoftObjectPath)                           GameplayTagResponseTableName                                ___ OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	CMember(UGameplayTagReponseTable*)                 GameplayTagResponseTable                                    ___ OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	DMember(bool)                                      PredictTargetGameplayEffects                                ___ OFFSET(get<bool>, {0x1C9, 1, 0, 0})
-	DMember(bool)                                      ReplicateActivationOwnedTags                                ___ OFFSET(get<bool>, {0x1CA, 1, 0, 0})
-	CMember(UGameplayCueManager*)                      GlobalGameplayCueManager                                    ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	SMember(FSoftClassPath)                            AbilitySystemGlobalsClassName                               OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(bool)                                      bUseDebugTargetFromHud                                      OFFSET(get<bool>, {0x68, 1, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailIsDeadTag                                       OFFSET(get<T>, {0x6C, 4, 0, 0})
+	SMember(FName)                                     ActivateFailIsDeadName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailCooldownTag                                     OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ActivateFailCooldownName                                    OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailCostTag                                         OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     ActivateFailCostName                                        OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailTagsBlockedTag                                  OFFSET(get<T>, {0x84, 4, 0, 0})
+	SMember(FName)                                     ActivateFailTagsBlockedName                                 OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailTagsMissingTag                                  OFFSET(get<T>, {0x8C, 4, 0, 0})
+	SMember(FName)                                     ActivateFailTagsMissingName                                 OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivateFailNetworkingTag                                   OFFSET(get<T>, {0x94, 4, 0, 0})
+	SMember(FName)                                     ActivateFailNetworkingName                                  OFFSET(get<T>, {0x98, 4, 0, 0})
+	DMember(int32_t)                                   MinimalReplicationTagCountBits                              OFFSET(get<int32_t>, {0x9C, 4, 0, 0})
+	SMember(FNetSerializeScriptStructCache)            TargetDataStructCache                                       OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FNetSerializeScriptStructCache)            EffectContextStructCache                                    OFFSET(get<T>, {0xB0, 16, 0, 0})
+	DMember(bool)                                      bAllowGameplayModEvaluationChannels                         OFFSET(get<bool>, {0xC0, 1, 0, 0})
+	CMember(EGameplayModEvaluationChannel)             DefaultGameplayModEvaluationChannel                         OFFSET(get<T>, {0xC1, 1, 0, 0})
+	SMember(FName)                                     GameplayModEvaluationChannelAliases                         OFFSET(get<T>, {0xC4, 40, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalCurveTableName                                        OFFSET(get<T>, {0xF0, 24, 0, 0})
+	CMember(UCurveTable*)                              GlobalCurveTable                                            OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalAttributeMetaDataTableName                            OFFSET(get<T>, {0x110, 24, 0, 0})
+	CMember(UDataTable*)                               GlobalAttributeMetaDataTable                                OFFSET(get<T>, {0x128, 8, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalAttributeSetDefaultsTableName                         OFFSET(get<T>, {0x130, 24, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   GlobalAttributeSetDefaultsTableNames                        OFFSET(get<T>, {0x148, 16, 0, 0})
+	CMember(TArray<UCurveTable*>)                      GlobalAttributeDefaultsTables                               OFFSET(get<T>, {0x158, 16, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalGameplayCueManagerClass                               OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalGameplayCueManagerName                                OFFSET(get<T>, {0x180, 24, 0, 0})
+	CMember(TArray<FString>)                           GameplayCueNotifyPaths                                      OFFSET(get<T>, {0x198, 16, 0, 0})
+	SMember(FSoftObjectPath)                           GameplayTagResponseTableName                                OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	CMember(UGameplayTagReponseTable*)                 GameplayTagResponseTable                                    OFFSET(get<T>, {0x1C0, 8, 0, 0})
+	DMember(bool)                                      PredictTargetGameplayEffects                                OFFSET(get<bool>, {0x1C9, 1, 0, 0})
+	DMember(bool)                                      ReplicateActivationOwnedTags                                OFFSET(get<bool>, {0x1CA, 1, 0, 0})
+	CMember(UGameplayCueManager*)                      GlobalGameplayCueManager                                    OFFSET(get<T>, {0x1D0, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilitySystemInterface
@@ -1180,22 +1818,22 @@ class UAbilitySystemTestAttributeSet : public UAttributeSet
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(float)                                     MaxHealth                                                   ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     Health                                                      ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Mana                                                        ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     MaxMana                                                     ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Damage                                                      ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     SpellDamage                                                 ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     PhysicalDamage                                              ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     CritChance                                                  ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     CritMultiplier                                              ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     ArmorDamageReduction                                        ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     DodgeChance                                                 ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     LifeSteal                                                   ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(float)                                     StackingAttribute1                                          ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     StackingAttribute2                                          ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     NoStackAttribute                                            ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     MaxHealth                                                   OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     Health                                                      OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Mana                                                        OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     MaxMana                                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Damage                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     SpellDamage                                                 OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     PhysicalDamage                                              OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     CritChance                                                  OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     CritMultiplier                                              OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     ArmorDamageReduction                                        OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     DodgeChance                                                 OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     LifeSteal                                                   OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(float)                                     StackingAttribute1                                          OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     StackingAttribute2                                          OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     NoStackAttribute                                            OFFSET(get<float>, {0x6C, 4, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AbilitySystemTestPawn
@@ -1206,7 +1844,7 @@ class AAbilitySystemTestPawn : public ADefaultPawn
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	CMember(UAbilitySystemComponent*)                  AbilitySystemComponent                                      ___ OFFSET(get<T>, {0x358, 8, 0, 0})
+	CMember(UAbilitySystemComponent*)                  AbilitySystemComponent                                      OFFSET(get<T>, {0x358, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AnimNotify_GameplayCue
@@ -1217,7 +1855,7 @@ class UAnimNotify_GameplayCue : public UAnimNotify
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayCueTag)                           GameplayCue                                                 ___ OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FGameplayCueTag)                           GameplayCue                                                 OFFSET(get<T>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.AnimNotify_GameplayCueState
@@ -1228,7 +1866,7 @@ class UAnimNotify_GameplayCueState : public UAnimNotifyState
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGameplayCueTag)                           GameplayCue                                                 ___ OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FGameplayCueTag)                           GameplayCue                                                 OFFSET(get<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayAbilityBlueprint
@@ -1269,13 +1907,13 @@ class UGameplayCueManager : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FGameplayCueObjectLibrary)                 RuntimeGameplayCueObjectLibrary                             ___ OFFSET(get<T>, {0x48, 80, 0, 0})
-	SMember(FGameplayCueObjectLibrary)                 EditorGameplayCueObjectLibrary                              ___ OFFSET(get<T>, {0x98, 80, 0, 0})
-	CMember(TArray<UClass*>)                           LoadedGameplayCueNotifyClasses                              ___ OFFSET(get<T>, {0x260, 16, 0, 0})
-	CMember(TArray<UClass*>)                           GameplayCueClassesForPreallocation                          ___ OFFSET(get<T>, {0x270, 16, 0, 0})
-	CMember(TArray<FGameplayCuePendingExecute>)        PendingExecuteCues                                          ___ OFFSET(get<T>, {0x280, 16, 0, 0})
-	DMember(int32_t)                                   GameplayCueSendContextCount                                 ___ OFFSET(get<int32_t>, {0x290, 4, 0, 0})
-	CMember(TArray<FPreallocationInfo>)                PreallocationInfoList_Internal                              ___ OFFSET(get<T>, {0x298, 16, 0, 0})
+	SMember(FGameplayCueObjectLibrary)                 RuntimeGameplayCueObjectLibrary                             OFFSET(get<T>, {0x48, 80, 0, 0})
+	SMember(FGameplayCueObjectLibrary)                 EditorGameplayCueObjectLibrary                              OFFSET(get<T>, {0x98, 80, 0, 0})
+	CMember(TArray<UClass*>)                           LoadedGameplayCueNotifyClasses                              OFFSET(get<T>, {0x260, 16, 0, 0})
+	CMember(TArray<UClass*>)                           GameplayCueClassesForPreallocation                          OFFSET(get<T>, {0x270, 16, 0, 0})
+	CMember(TArray<FGameplayCuePendingExecute>)        PendingExecuteCues                                          OFFSET(get<T>, {0x280, 16, 0, 0})
+	DMember(int32_t)                                   GameplayCueSendContextCount                                 OFFSET(get<int32_t>, {0x290, 4, 0, 0})
+	CMember(TArray<FPreallocationInfo>)                PreallocationInfoList_Internal                              OFFSET(get<T>, {0x298, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Actor
@@ -1286,21 +1924,38 @@ class AGameplayCueNotify_Actor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	DMember(bool)                                      bAutoDestroyOnRemove                                        ___ OFFSET(get<bool>, {0x290, 1, 0, 0})
-	DMember(float)                                     AutoDestroyDelay                                            ___ OFFSET(get<float>, {0x294, 4, 0, 0})
-	DMember(bool)                                      WarnIfTimelineIsStillRunning                                ___ OFFSET(get<bool>, {0x298, 1, 0, 0})
-	DMember(bool)                                      WarnIfLatentActionIsStillRunning                            ___ OFFSET(get<bool>, {0x299, 1, 0, 0})
-	SMember(FGameplayTag)                              GameplayCueTag                                              ___ OFFSET(get<T>, {0x29C, 4, 0, 0})
-	SMember(FName)                                     GameplayCueName                                             ___ OFFSET(get<T>, {0x2A0, 4, 0, 0})
-	DMember(bool)                                      bAutoAttachToOwner                                          ___ OFFSET(get<bool>, {0x2A4, 1, 0, 0})
-	DMember(bool)                                      IsOverride                                                  ___ OFFSET(get<bool>, {0x2A5, 1, 0, 0})
-	DMember(bool)                                      bUniqueInstancePerInstigator                                ___ OFFSET(get<bool>, {0x2A6, 1, 0, 0})
-	DMember(bool)                                      bUniqueInstancePerSourceObject                              ___ OFFSET(get<bool>, {0x2A7, 1, 0, 0})
-	DMember(bool)                                      bAllowMultipleOnActiveEvents                                ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-	DMember(bool)                                      bAllowMultipleWhileActiveEvents                             ___ OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-	DMember(int32_t)                                   NumPreallocatedInstances                                    ___ OFFSET(get<int32_t>, {0x2AC, 4, 0, 0})
+	DMember(bool)                                      bAutoDestroyOnRemove                                        OFFSET(get<bool>, {0x290, 1, 0, 0})
+	DMember(float)                                     AutoDestroyDelay                                            OFFSET(get<float>, {0x294, 4, 0, 0})
+	DMember(bool)                                      WarnIfTimelineIsStillRunning                                OFFSET(get<bool>, {0x298, 1, 0, 0})
+	DMember(bool)                                      WarnIfLatentActionIsStillRunning                            OFFSET(get<bool>, {0x299, 1, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0x29C, 4, 0, 0})
+	SMember(FName)                                     GameplayCueName                                             OFFSET(get<T>, {0x2A0, 4, 0, 0})
+	DMember(bool)                                      bAutoAttachToOwner                                          OFFSET(get<bool>, {0x2A4, 1, 0, 0})
+	DMember(bool)                                      IsOverride                                                  OFFSET(get<bool>, {0x2A5, 1, 0, 0})
+	DMember(bool)                                      bUniqueInstancePerInstigator                                OFFSET(get<bool>, {0x2A6, 1, 0, 0})
+	DMember(bool)                                      bUniqueInstancePerSourceObject                              OFFSET(get<bool>, {0x2A7, 1, 0, 0})
+	DMember(bool)                                      bAllowMultipleOnActiveEvents                                OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	DMember(bool)                                      bAllowMultipleWhileActiveEvents                             OFFSET(get<bool>, {0x2A9, 1, 0, 0})
+	DMember(int32_t)                                   NumPreallocatedInstances                                    OFFSET(get<int32_t>, {0x2AC, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.WhileActive
+	// bool WhileActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                  // [0x17ae66c] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.OnRemove
+	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x17ae558] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.OnOwnerDestroyed
+	// void OnOwnerDestroyed(AActor* DestroyedActor);                                                                           // [0x2aef6f8] Native|Public        
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.OnExecute
+	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x2753164] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.OnActive
+	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x17ae780] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.K2_HandleGameplayCue
+	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.K2_EndGameplayCue
+	// void K2_EndGameplayCue();                                                                                                // [0x1d5de88] Native|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Static
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UGameplayCueNotify_Static : public UObject
@@ -1309,11 +1964,24 @@ class UGameplayCueNotify_Static : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGameplayTag)                              GameplayCueTag                                              ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     GameplayCueName                                             ___ OFFSET(get<T>, {0x2C, 4, 0, 0})
-	DMember(bool)                                      IsOverride                                                  ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     GameplayCueName                                             OFFSET(get<T>, {0x2C, 4, 0, 0})
+	DMember(bool)                                      IsOverride                                                  OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.WhileActive
+	// bool WhileActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                  // [0x2af3754] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.OnRemove
+	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x2b508b0] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.OnExecute
+	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x17ae194] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.OnActive
+	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x2ad13c4] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue
+	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent|Const 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Burst
 /// Size: 0x0310 (0x000038 - 0x000348)
 class UGameplayCueNotify_Burst : public UGameplayCueNotify_Static
@@ -1322,11 +1990,16 @@ class UGameplayCueNotify_Burst : public UGameplayCueNotify_Static
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       ___ OFFSET(get<T>, {0x38, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        ___ OFFSET(get<T>, {0x70, 64, 0, 0})
-	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                ___ OFFSET(get<T>, {0xB0, 664, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       OFFSET(get<T>, {0x38, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        OFFSET(get<T>, {0x70, 64, 0, 0})
+	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                OFFSET(get<T>, {0xB0, 664, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Burst.OnBurst
+	// void OnBurst(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_BurstLatent
 /// Size: 0x0368 (0x0002F8 - 0x000660)
 class AGameplayCueNotify_BurstLatent : public AGameplayCueNotify_Actor
@@ -1335,12 +2008,17 @@ class AGameplayCueNotify_BurstLatent : public AGameplayCueNotify_Actor
 	static inline constexpr uint64_t __MDKClassSize = 1632;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       ___ OFFSET(get<T>, {0x2F8, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        ___ OFFSET(get<T>, {0x330, 64, 0, 0})
-	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                ___ OFFSET(get<T>, {0x370, 664, 0, 0})
-	SMember(FGameplayCueNotify_SpawnResult)            BurstSpawnResults                                           ___ OFFSET(get<T>, {0x608, 88, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       OFFSET(get<T>, {0x2F8, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        OFFSET(get<T>, {0x330, 64, 0, 0})
+	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                OFFSET(get<T>, {0x370, 664, 0, 0})
+	SMember(FGameplayCueNotify_SpawnResult)            BurstSpawnResults                                           OFFSET(get<T>, {0x608, 88, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayCueNotify_BurstLatent.OnBurst
+	// void OnBurst(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_HitImpact
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UGameplayCueNotify_HitImpact : public UGameplayCueNotify_Static
@@ -1349,8 +2027,8 @@ class UGameplayCueNotify_HitImpact : public UGameplayCueNotify_Static
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(USoundBase*)                               sound                                                       ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(UParticleSystem*)                          ParticleSystem                                              ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(USoundBase*)                               sound                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UParticleSystem*)                          ParticleSystem                                              OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Looping
@@ -1361,18 +2039,29 @@ class AGameplayCueNotify_Looping : public AGameplayCueNotify_Actor
 	static inline constexpr uint64_t __MDKClassSize = 3728;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       ___ OFFSET(get<T>, {0x2F8, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        ___ OFFSET(get<T>, {0x330, 64, 0, 0})
-	SMember(FGameplayCueNotify_BurstEffects)           ApplicationEffects                                          ___ OFFSET(get<T>, {0x370, 664, 0, 0})
-	SMember(FGameplayCueNotify_SpawnResult)            ApplicationSpawnResults                                     ___ OFFSET(get<T>, {0x608, 88, 0, 0})
-	SMember(FGameplayCueNotify_LoopingEffects)         LoopingEffects                                              ___ OFFSET(get<T>, {0x660, 496, 0, 0})
-	SMember(FGameplayCueNotify_SpawnResult)            LoopingSpawnResults                                         ___ OFFSET(get<T>, {0x850, 88, 0, 0})
-	SMember(FGameplayCueNotify_BurstEffects)           RecurringEffects                                            ___ OFFSET(get<T>, {0x8A8, 664, 0, 0})
-	SMember(FGameplayCueNotify_SpawnResult)            RecurringSpawnResults                                       ___ OFFSET(get<T>, {0xB40, 88, 0, 0})
-	SMember(FGameplayCueNotify_BurstEffects)           RemovalEffects                                              ___ OFFSET(get<T>, {0xB98, 664, 0, 0})
-	SMember(FGameplayCueNotify_SpawnResult)            RemovalSpawnResults                                         ___ OFFSET(get<T>, {0xE30, 88, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       OFFSET(get<T>, {0x2F8, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        OFFSET(get<T>, {0x330, 64, 0, 0})
+	SMember(FGameplayCueNotify_BurstEffects)           ApplicationEffects                                          OFFSET(get<T>, {0x370, 664, 0, 0})
+	SMember(FGameplayCueNotify_SpawnResult)            ApplicationSpawnResults                                     OFFSET(get<T>, {0x608, 88, 0, 0})
+	SMember(FGameplayCueNotify_LoopingEffects)         LoopingEffects                                              OFFSET(get<T>, {0x660, 496, 0, 0})
+	SMember(FGameplayCueNotify_SpawnResult)            LoopingSpawnResults                                         OFFSET(get<T>, {0x850, 88, 0, 0})
+	SMember(FGameplayCueNotify_BurstEffects)           RecurringEffects                                            OFFSET(get<T>, {0x8A8, 664, 0, 0})
+	SMember(FGameplayCueNotify_SpawnResult)            RecurringSpawnResults                                       OFFSET(get<T>, {0xB40, 88, 0, 0})
+	SMember(FGameplayCueNotify_BurstEffects)           RemovalEffects                                              OFFSET(get<T>, {0xB98, 664, 0, 0})
+	SMember(FGameplayCueNotify_SpawnResult)            RemovalSpawnResults                                         OFFSET(get<T>, {0xE30, 88, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Looping.OnRemoval
+	// void OnRemoval(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Looping.OnRecurring
+	// void OnRecurring(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);      // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Looping.OnLoopingStart
+	// void OnLoopingStart(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayAbilities.GameplayCueNotify_Looping.OnApplication
+	// void OnApplication(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);    // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 /// Class /Script/GameplayAbilities.GameplayCueSet
 /// Size: 0x0060 (0x000030 - 0x000090)
 class UGameplayCueSet : public UDataAsset
@@ -1381,7 +2070,7 @@ class UGameplayCueSet : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TArray<FGameplayCueNotifyData>)            GameplayCueData                                             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FGameplayCueNotifyData>)            GameplayCueData                                             OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayCueTranslator
@@ -1412,7 +2101,7 @@ class UGameplayEffectCalculation : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FGameplayEffectAttributeCaptureDefinition>) RelevantAttributesToCapture                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameplayEffectAttributeCaptureDefinition>) RelevantAttributesToCapture                         OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.GameplayEffectCustomApplicationRequirement
@@ -1433,9 +2122,14 @@ class UGameplayEffectExecutionCalculation : public UGameplayEffectCalculation
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bRequiresPassedInTags                                       ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bRequiresPassedInTags                                       OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayEffectExecutionCalculation.Execute
+	// void Execute(FGameplayEffectCustomExecutionParameters& ExecutionParams, FGameplayEffectCustomExecutionOutput& OutExecutionOutput); // [0x691ce20] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
 /// Class /Script/GameplayAbilities.GameplayModMagnitudeCalculation
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UGameplayModMagnitudeCalculation : public UGameplayEffectCalculation
@@ -1444,9 +2138,32 @@ class UGameplayModMagnitudeCalculation : public UGameplayEffectCalculation
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bAllowNonNetAuthorityDependencyRegistration                 ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bAllowNonNetAuthorityDependencyRegistration                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.K2_GetCapturedAttributeMagnitude
+	// float K2_GetCapturedAttributeMagnitude(FGameplayEffectSpec& EffectSpec, FGameplayAttribute Attribute, FGameplayTagContainer& SourceTags, FGameplayTagContainer& TargetTags); // [0x691d788] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetTargetSpecTags
+	// FGameplayTagContainer GetTargetSpecTags(FGameplayEffectSpec& EffectSpec);                                                // [0x691d6bc] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetTargetAggregatedTags
+	// FGameplayTagContainer GetTargetAggregatedTags(FGameplayEffectSpec& EffectSpec);                                          // [0x691d58c] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetTargetActorTags
+	// FGameplayTagContainer GetTargetActorTags(FGameplayEffectSpec& EffectSpec);                                               // [0x691d4c0] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetSourceSpecTags
+	// FGameplayTagContainer GetSourceSpecTags(FGameplayEffectSpec& EffectSpec);                                                // [0x691d3f4] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetSourceAggregatedTags
+	// FGameplayTagContainer GetSourceAggregatedTags(FGameplayEffectSpec& EffectSpec);                                          // [0x691d2c4] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetSourceActorTags
+	// FGameplayTagContainer GetSourceActorTags(FGameplayEffectSpec& EffectSpec);                                               // [0x691d1fc] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetSetByCallerMagnitudeByTag
+	// float GetSetByCallerMagnitudeByTag(FGameplayEffectSpec& EffectSpec, FGameplayTag& tag);                                  // [0x691d0e0] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.GetSetByCallerMagnitudeByName
+	// float GetSetByCallerMagnitudeByName(FGameplayEffectSpec& EffectSpec, FName& MagnitudeName);                              // [0x691cf54] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.CalculateBaseMagnitude
+	// float CalculateBaseMagnitude(FGameplayEffectSpec& Spec);                                                                 // [0x691cb20] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
 /// Class /Script/GameplayAbilities.GameplayTagReponseTable
 /// Size: 0x0200 (0x000030 - 0x000230)
 class UGameplayTagReponseTable : public UDataAsset
@@ -1455,9 +2172,14 @@ class UGameplayTagReponseTable : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	CMember(TArray<FGameplayTagResponseTableEntry>)    Entries                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FGameplayTagResponseTableEntry>)    Entries                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.GameplayTagReponseTable.TagResponseEvent
+	// void TagResponseEvent(FGameplayTag tag, int32_t NewCount, UAbilitySystemComponent* ASC, int32_t idx);                    // [0x691db0c] Final|Native|Protected 
 /// Class /Script/GameplayAbilities.MovieSceneGameplayCueTriggerSection
 /// Size: 0x00F8 (0x000108 - 0x000200)
 class UMovieSceneGameplayCueTriggerSection : public UMovieSceneHookSection
@@ -1466,7 +2188,7 @@ class UMovieSceneGameplayCueTriggerSection : public UMovieSceneHookSection
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FMovieSceneGameplayCueChannel)             Channel                                                     ___ OFFSET(get<T>, {0x108, 248, 0, 0})
+	SMember(FMovieSceneGameplayCueChannel)             Channel                                                     OFFSET(get<T>, {0x108, 248, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.MovieSceneGameplayCueSection
@@ -1477,7 +2199,7 @@ class UMovieSceneGameplayCueSection : public UMovieSceneHookSection
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMovieSceneGameplayCueKey)                 Cue                                                         ___ OFFSET(get<T>, {0x108, 136, 0, 0})
+	SMember(FMovieSceneGameplayCueKey)                 Cue                                                         OFFSET(get<T>, {0x108, 136, 0, 0})
 };
 
 /// Class /Script/GameplayAbilities.MovieSceneGameplayCueTrack
@@ -1488,9 +2210,14 @@ class UMovieSceneGameplayCueTrack : public UMovieSceneNameableTrack
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(TArray<UMovieSceneSection*>)               Sections                                                    ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayAbilities.MovieSceneGameplayCueTrack.SetSequencerTrackHandler
+	// void SetSequencerTrackHandler(FDelegateProperty InGameplayCueTrackHandler);                                              // [0x691da8c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayAbilities.TickableAttributeSetInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTickableAttributeSetInterface : public UInterface
@@ -1509,13 +2236,13 @@ class FActiveGameplayEffect : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 872;
 
 public:
-	SMember(FGameplayEffectSpec)                       Spec                                                        ___ OFFSET(get<T>, {0x18, 664, 0, 0})
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x2B0, 24, 0, 0})
-	CMember(TArray<FGameplayAbilitySpecHandle>)        GrantedAbilityHandles                                       ___ OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	DMember(float)                                     StartServerWorldTime                                        ___ OFFSET(get<float>, {0x2D8, 4, 0, 0})
-	DMember(float)                                     CachedStartServerWorldTime                                  ___ OFFSET(get<float>, {0x2DC, 4, 0, 0})
-	DMember(float)                                     StartWorldTime                                              ___ OFFSET(get<float>, {0x2E0, 4, 0, 0})
-	DMember(bool)                                      bIsInhibited                                                ___ OFFSET(get<bool>, {0x2E4, 1, 0, 0})
+	SMember(FGameplayEffectSpec)                       Spec                                                        OFFSET(get<T>, {0x18, 664, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x2B0, 24, 0, 0})
+	CMember(TArray<FGameplayAbilitySpecHandle>)        GrantedAbilityHandles                                       OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	DMember(float)                                     StartServerWorldTime                                        OFFSET(get<float>, {0x2D8, 4, 0, 0})
+	DMember(float)                                     CachedStartServerWorldTime                                  OFFSET(get<float>, {0x2DC, 4, 0, 0})
+	DMember(float)                                     StartWorldTime                                              OFFSET(get<float>, {0x2E0, 4, 0, 0})
+	DMember(bool)                                      bIsInhibited                                                OFFSET(get<bool>, {0x2E4, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilitySpecHandle
@@ -1526,7 +2253,7 @@ class FGameplayAbilitySpecHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   Handle                                                      ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Handle                                                      OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.PredictionKey
@@ -1537,11 +2264,11 @@ class FPredictionKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UPackageMap*)                              PredictiveConnection                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(int16_t)                                   Current                                                     ___ OFFSET(get<int16_t>, {0x8, 2, 0, 0})
-	DMember(int16_t)                                   base                                                        ___ OFFSET(get<int16_t>, {0xA, 2, 0, 0})
-	DMember(bool)                                      bIsStale                                                    ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	DMember(bool)                                      bIsServerInitiated                                          ___ OFFSET(get<bool>, {0xD, 1, 0, 0})
+	CMember(UPackageMap*)                              PredictiveConnection                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(int16_t)                                   Current                                                     OFFSET(get<int16_t>, {0x8, 2, 0, 0})
+	DMember(int16_t)                                   base                                                        OFFSET(get<int16_t>, {0xA, 2, 0, 0})
+	DMember(bool)                                      bIsStale                                                    OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(bool)                                      bIsServerInitiated                                          OFFSET(get<bool>, {0xD, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectSpec
@@ -1552,24 +2279,24 @@ class FGameplayEffectSpec : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UGameplayEffect*)                          Def                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FGameplayEffectModifiedAttribute>)  ModifiedAttributes                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FGameplayEffectAttributeCaptureSpecContainer) CapturedRelevantAttributes                               ___ OFFSET(get<T>, {0x18, 40, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     Period                                                      ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     ChanceToApplyToTarget                                       ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FTagContainerAggregator)                   CapturedSourceTags                                          ___ OFFSET(get<T>, {0x60, 136, 0, 0})
-	SMember(FTagContainerAggregator)                   CapturedTargetTags                                          ___ OFFSET(get<T>, {0xE8, 136, 0, 0})
-	SMember(FGameplayTagContainer)                     DynamicGrantedTags                                          ___ OFFSET(get<T>, {0x170, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     DynamicAssetTags                                            ___ OFFSET(get<T>, {0x190, 32, 0, 0})
-	CMember(TArray<FModifierSpec>)                     Modifiers                                                   ___ OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	DMember(int32_t)                                   StackCount                                                  ___ OFFSET(get<int32_t>, {0x1C0, 4, 0, 0})
-	DMember(bool)                                      bCompletedSourceAttributeCapture                            ___ OFFSET(get<bool>, {0x1C4, 1, 1, 0})
-	DMember(bool)                                      bCompletedTargetAttributeCapture                            ___ OFFSET(get<bool>, {0x1C4, 1, 1, 1})
-	DMember(bool)                                      bDurationLocked                                             ___ OFFSET(get<bool>, {0x1C4, 1, 1, 2})
-	CMember(TArray<FGameplayAbilitySpecDef>)           GrantedAbilitySpecs                                         ___ OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               ___ OFFSET(get<T>, {0x278, 24, 0, 0})
-	DMember(float)                                     Level                                                       ___ OFFSET(get<float>, {0x290, 4, 0, 0})
+	CMember(UGameplayEffect*)                          Def                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FGameplayEffectModifiedAttribute>)  ModifiedAttributes                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayEffectAttributeCaptureSpecContainer) CapturedRelevantAttributes                               OFFSET(get<T>, {0x18, 40, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     Period                                                      OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     ChanceToApplyToTarget                                       OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FTagContainerAggregator)                   CapturedSourceTags                                          OFFSET(get<T>, {0x60, 136, 0, 0})
+	SMember(FTagContainerAggregator)                   CapturedTargetTags                                          OFFSET(get<T>, {0xE8, 136, 0, 0})
+	SMember(FGameplayTagContainer)                     DynamicGrantedTags                                          OFFSET(get<T>, {0x170, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DynamicAssetTags                                            OFFSET(get<T>, {0x190, 32, 0, 0})
+	CMember(TArray<FModifierSpec>)                     Modifiers                                                   OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	DMember(int32_t)                                   StackCount                                                  OFFSET(get<int32_t>, {0x1C0, 4, 0, 0})
+	DMember(bool)                                      bCompletedSourceAttributeCapture                            OFFSET(get<bool>, {0x1C4, 1, 1, 0})
+	DMember(bool)                                      bCompletedTargetAttributeCapture                            OFFSET(get<bool>, {0x1C4, 1, 1, 1})
+	DMember(bool)                                      bDurationLocked                                             OFFSET(get<bool>, {0x1C4, 1, 1, 2})
+	CMember(TArray<FGameplayAbilitySpecDef>)           GrantedAbilitySpecs                                         OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x278, 24, 0, 0})
+	DMember(float)                                     Level                                                       OFFSET(get<float>, {0x290, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectContextHandle
@@ -1590,12 +2317,12 @@ class FGameplayAbilitySpecDef : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(UClass*)                                   Ability                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FScalableFloat)                            LevelScalableFloat                                          ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	DMember(int32_t)                                   InputID                                                     ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	CMember(EGameplayEffectGrantedAbilityRemovePolicy) RemovalPolicy                                               ___ OFFSET(get<T>, {0x34, 1, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FGameplayAbilitySpecHandle)                AssignedHandle                                              ___ OFFSET(get<T>, {0x90, 4, 0, 0})
+	CMember(UClass*)                                   Ability                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FScalableFloat)                            LevelScalableFloat                                          OFFSET(get<T>, {0x8, 40, 0, 0})
+	DMember(int32_t)                                   InputID                                                     OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	CMember(EGameplayEffectGrantedAbilityRemovePolicy) RemovalPolicy                                               OFFSET(get<T>, {0x34, 1, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                AssignedHandle                                              OFFSET(get<T>, {0x90, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ScalableFloat
@@ -1606,9 +2333,9 @@ class FScalableFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FCurveTableRowHandle)                      Curve                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FDataRegistryType)                         RegistryType                                                ___ OFFSET(get<T>, {0x18, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FCurveTableRowHandle)                      Curve                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FDataRegistryType)                         RegistryType                                                OFFSET(get<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ModifierSpec
@@ -1619,7 +2346,7 @@ class FModifierSpec : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(float)                                     EvaluatedMagnitude                                          ___ OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     EvaluatedMagnitude                                          OFFSET(get<float>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.TagContainerAggregator
@@ -1630,9 +2357,9 @@ class FTagContainerAggregator : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTagContainer)                     CapturedActorTags                                           ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     CapturedSpecTags                                            ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ScopedTags                                                  ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     CapturedActorTags                                           OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     CapturedSpecTags                                            OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ScopedTags                                                  OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectAttributeCaptureSpecContainer
@@ -1643,9 +2370,9 @@ class FGameplayEffectAttributeCaptureSpecContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FGameplayEffectAttributeCaptureSpec>) SourceAttributes                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FGameplayEffectAttributeCaptureSpec>) TargetAttributes                                          ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bHasNonSnapshottedAttributes                                ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(TArray<FGameplayEffectAttributeCaptureSpec>) SourceAttributes                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayEffectAttributeCaptureSpec>) TargetAttributes                                          OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bHasNonSnapshottedAttributes                                OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectAttributeCaptureSpec
@@ -1656,7 +2383,7 @@ class FGameplayEffectAttributeCaptureSpec : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayEffectAttributeCaptureDefinition) BackingDefinition                                           ___ OFFSET(get<T>, {0x0, 64, 0, 0})
+	SMember(FGameplayEffectAttributeCaptureDefinition) BackingDefinition                                           OFFSET(get<T>, {0x0, 64, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectAttributeCaptureDefinition
@@ -1667,9 +2394,9 @@ class FGameplayEffectAttributeCaptureDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayAttribute)                        AttributeToCapture                                          ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	CMember(EGameplayEffectAttributeCaptureSource)     AttributeSource                                             ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bSnapshot                                                   ___ OFFSET(get<bool>, {0x39, 1, 0, 0})
+	SMember(FGameplayAttribute)                        AttributeToCapture                                          OFFSET(get<T>, {0x0, 56, 0, 0})
+	CMember(EGameplayEffectAttributeCaptureSource)     AttributeSource                                             OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bSnapshot                                                   OFFSET(get<bool>, {0x39, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAttribute
@@ -1680,8 +2407,8 @@ class FGameplayAttribute : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   AttributeName                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(UStruct*)                                  AttributeOwner                                              ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FString)                                   AttributeName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(UStruct*)                                  AttributeOwner                                              OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectModifiedAttribute
@@ -1692,8 +2419,8 @@ class FGameplayEffectModifiedAttribute : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayAttribute)                        Attribute                                                   ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	DMember(float)                                     TotalMagnitude                                              ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x0, 56, 0, 0})
+	DMember(float)                                     TotalMagnitude                                              OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ActiveGameplayEffectHandle
@@ -1704,8 +2431,8 @@ class FActiveGameplayEffectHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   Handle                                                      ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bPassedFiltersAndWasExecuted                                ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(int32_t)                                   Handle                                                      OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bPassedFiltersAndWasExecuted                                OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectSpecHandle
@@ -1726,23 +2453,23 @@ class FGameplayCueParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	DMember(float)                                     NormalizedMagnitude                                         ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     RawMagnitude                                                ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FGameplayTag)                              MatchedTagName                                              ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FGameplayTag)                              OriginalTag                                                 ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     AggregatedSourceTags                                        ___ OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     AggregatedTargetTags                                        ___ OFFSET(get<T>, {0x48, 32, 0, 0})
-	SMember(FVector_NetQuantize10)                     Location                                                    ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	SMember(FVector_NetQuantizeNormal)                 Normal                                                      ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   Instigator                                                  ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   EffectCauser                                                ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	CMember(TWeakObjectPtr<UPhysicalMaterial*>)        PhysicalMaterial                                            ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	DMember(int32_t)                                   GameplayEffectLevel                                         ___ OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
-	DMember(int32_t)                                   AbilityLevel                                                ___ OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
-	CMember(TWeakObjectPtr<USceneComponent*>)          TargetAttachComponent                                       ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	DMember(bool)                                      bReplicateLocationWhenUsingMinimalRepProxy                  ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	DMember(float)                                     NormalizedMagnitude                                         OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     RawMagnitude                                                OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FGameplayTag)                              MatchedTagName                                              OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              OriginalTag                                                 OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     AggregatedSourceTags                                        OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AggregatedTargetTags                                        OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FVector_NetQuantize10)                     Location                                                    OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector_NetQuantizeNormal)                 Normal                                                      OFFSET(get<T>, {0x80, 24, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Instigator                                                  OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   EffectCauser                                                OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(TWeakObjectPtr<UPhysicalMaterial*>)        PhysicalMaterial                                            OFFSET(get<T>, {0xB0, 8, 0, 0})
+	DMember(int32_t)                                   GameplayEffectLevel                                         OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
+	DMember(int32_t)                                   AbilityLevel                                                OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
+	CMember(TWeakObjectPtr<USceneComponent*>)          TargetAttachComponent                                       OFFSET(get<T>, {0xC0, 8, 0, 0})
+	DMember(bool)                                      bReplicateLocationWhenUsingMinimalRepProxy                  OFFSET(get<bool>, {0xC8, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectRemovalInfo
@@ -1753,9 +2480,9 @@ class FGameplayEffectRemovalInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bPrematureRemoval                                           ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   StackCount                                                  ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bPrematureRemoval                                           OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   StackCount                                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEventData
@@ -1766,16 +2493,16 @@ class FGameplayEventData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FGameplayTag)                              EventTag                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(AActor*)                                   Instigator                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(AActor*)                                   Target                                                      ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(UObject*)                                  OptionalObject                                              ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(UObject*)                                  OptionalObject2                                             ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FGameplayEffectContextHandle)              ContextHandle                                               ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     InstigatorTags                                              ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetTags                                                  ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	DMember(float)                                     EventMagnitude                                              ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	SMember(FGameplayAbilityTargetDataHandle)          TargetData                                                  ___ OFFSET(get<T>, {0x88, 40, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(AActor*)                                   Instigator                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(AActor*)                                   Target                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UObject*)                                  OptionalObject                                              OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(UObject*)                                  OptionalObject2                                             OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FGameplayEffectContextHandle)              ContextHandle                                               OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     InstigatorTags                                              OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetTags                                                  OFFSET(get<T>, {0x60, 32, 0, 0})
+	DMember(float)                                     EventMagnitude                                              OFFSET(get<float>, {0x80, 4, 0, 0})
+	SMember(FGameplayAbilityTargetDataHandle)          TargetData                                                  OFFSET(get<T>, {0x88, 40, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetDataHandle
@@ -1796,9 +2523,9 @@ class FGameplayTagRequirements : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTagContainer)                     RequireTags                                                 ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     IgnoreTags                                                  ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQuery                                                    ___ OFFSET(get<T>, {0x40, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     RequireTags                                                 OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     IgnoreTags                                                  OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x40, 72, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTargetDataFilterHandle
@@ -1819,9 +2546,9 @@ class FGameplayAbilityActivationInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TEnumAsByte<EGameplayAbilityActivationMode>) ActivationMode                                            ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bCanBeEndedByOtherInstance                                  ___ OFFSET(get<bool>, {0x1, 1, 1, 0})
-	SMember(FPredictionKey)                            PredictionKeyWhenActivated                                  ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityActivationMode>) ActivationMode                                            OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bCanBeEndedByOtherInstance                                  OFFSET(get<bool>, {0x1, 1, 1, 0})
+	SMember(FPredictionKey)                            PredictionKeyWhenActivated                                  OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectQuery
@@ -1832,14 +2559,14 @@ class FGameplayEffectQuery : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 408;
 
 public:
-	SMember(FDelegateProperty)                         CustomMatchDelegate_BP                                      ___ OFFSET(get<T>, {0x10, 12, 0, 0})
-	SMember(FGameplayTagQuery)                         OwningTagQuery                                              ___ OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         EffectTagQuery                                              ___ OFFSET(get<T>, {0x68, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         SourceTagQuery                                              ___ OFFSET(get<T>, {0xB0, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         SourceAggregateTagQuery                                     ___ OFFSET(get<T>, {0xF8, 72, 0, 0})
-	SMember(FGameplayAttribute)                        ModifyingAttribute                                          ___ OFFSET(get<T>, {0x140, 56, 0, 0})
-	CMember(UObject*)                                  EffectSource                                                ___ OFFSET(get<T>, {0x178, 8, 0, 0})
-	CMember(UClass*)                                   EffectDefinition                                            ___ OFFSET(get<T>, {0x180, 8, 0, 0})
+	SMember(FDelegateProperty)                         CustomMatchDelegate_BP                                      OFFSET(get<T>, {0x10, 12, 0, 0})
+	SMember(FGameplayTagQuery)                         OwningTagQuery                                              OFFSET(get<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         EffectTagQuery                                              OFFSET(get<T>, {0x68, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         SourceTagQuery                                              OFFSET(get<T>, {0xB0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         SourceAggregateTagQuery                                     OFFSET(get<T>, {0xF8, 72, 0, 0})
+	SMember(FGameplayAttribute)                        ModifyingAttribute                                          OFFSET(get<T>, {0x140, 56, 0, 0})
+	CMember(UObject*)                                  EffectSource                                                OFFSET(get<T>, {0x178, 8, 0, 0})
+	CMember(UClass*)                                   EffectDefinition                                            OFFSET(get<T>, {0x180, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectSpecForRPC
@@ -1850,13 +2577,13 @@ class FGameplayEffectSpecForRPC : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(UGameplayEffect*)                          Def                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FGameplayEffectModifiedAttribute>)  ModifiedAttributes                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     AggregatedSourceTags                                        ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     AggregatedTargetTags                                        ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	DMember(float)                                     Level                                                       ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     AbilityLevel                                                ___ OFFSET(get<float>, {0x74, 4, 0, 0})
+	CMember(UGameplayEffect*)                          Def                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FGameplayEffectModifiedAttribute>)  ModifiedAttributes                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     AggregatedSourceTags                                        OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AggregatedTargetTags                                        OFFSET(get<T>, {0x50, 32, 0, 0})
+	DMember(float)                                     Level                                                       OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     AbilityLevel                                                OFFSET(get<float>, {0x74, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ServerAbilityRPCBatch
@@ -1867,12 +2594,12 @@ class FServerAbilityRPCBatch : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayAbilitySpecHandle)                AbilitySpecHandle                                           ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FGameplayAbilityTargetDataHandle)          TargetData                                                  ___ OFFSET(get<T>, {0x20, 40, 0, 0})
-	DMember(bool)                                      InputPressed                                                ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      Ended                                                       ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
-	DMember(bool)                                      Started                                                     ___ OFFSET(get<bool>, {0x4A, 1, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                AbilitySpecHandle                                           OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FGameplayAbilityTargetDataHandle)          TargetData                                                  OFFSET(get<T>, {0x20, 40, 0, 0})
+	DMember(bool)                                      InputPressed                                                OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(bool)                                      Ended                                                       OFFSET(get<bool>, {0x49, 1, 0, 0})
+	DMember(bool)                                      Started                                                     OFFSET(get<bool>, {0x4A, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ReplicatedPredictionKeyMap
@@ -1883,7 +2610,7 @@ class FReplicatedPredictionKeyMap : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(TArray<FReplicatedPredictionKeyItem>)      PredictionKeys                                              ___ OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(TArray<FReplicatedPredictionKeyItem>)      PredictionKeys                                              OFFSET(get<T>, {0x108, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ReplicatedPredictionKeyItem
@@ -1894,7 +2621,7 @@ class FReplicatedPredictionKeyItem : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MinimalReplicationTagCountMap
@@ -1905,7 +2632,7 @@ class FMinimalReplicationTagCountMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(UAbilitySystemComponent*)                  Owner                                                       ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UAbilitySystemComponent*)                  Owner                                                       OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ActiveGameplayCueContainer
@@ -1916,8 +2643,8 @@ class FActiveGameplayCueContainer : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	CMember(TArray<FActiveGameplayCue>)                GameplayCues                                                ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  Owner                                                       ___ OFFSET(get<T>, {0x120, 8, 0, 0})
+	CMember(TArray<FActiveGameplayCue>)                GameplayCues                                                OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  Owner                                                       OFFSET(get<T>, {0x120, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ActiveGameplayCue
@@ -1928,10 +2655,10 @@ class FActiveGameplayCue : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FGameplayTag)                              GameplayCueTag                                              ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FGameplayCueParameters)                    Parameters                                                  ___ OFFSET(get<T>, {0x28, 208, 0, 0})
-	DMember(bool)                                      bPredictivelyRemoved                                        ___ OFFSET(get<bool>, {0xF8, 1, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FGameplayCueParameters)                    Parameters                                                  OFFSET(get<T>, {0x28, 208, 0, 0})
+	DMember(bool)                                      bPredictivelyRemoved                                        OFFSET(get<bool>, {0xF8, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ActiveGameplayEffectsContainer
@@ -1942,7 +2669,7 @@ class FActiveGameplayEffectsContainer : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	CMember(TArray<FActiveGameplayEffect>)             GameplayEffects_Internal                                    ___ OFFSET(get<T>, {0x130, 16, 0, 0})
+	CMember(TArray<FActiveGameplayEffect>)             GameplayEffects_Internal                                    OFFSET(get<T>, {0x130, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityLocalAnimMontage
@@ -1953,10 +2680,10 @@ class FGameplayAbilityLocalAnimMontage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UAnimMontage*)                             AnimMontage                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(char)                                      PlayInstanceId                                              ___ OFFSET(get<char>, {0x8, 1, 0, 0})
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	CMember(TWeakObjectPtr<UGameplayAbility*>)         AnimatingAbility                                            ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UAnimMontage*)                             AnimMontage                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(char)                                      PlayInstanceId                                              OFFSET(get<char>, {0x8, 1, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x10, 24, 0, 0})
+	CMember(TWeakObjectPtr<UGameplayAbility*>)         AnimatingAbility                                            OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityRepAnimMontage
@@ -1967,18 +2694,18 @@ class FGameplayAbilityRepAnimMontage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UAnimMontage*)                             AnimMontage                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     PlayRate                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Position                                                    ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     BlendTime                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(char)                                      NextSectionID                                               ___ OFFSET(get<char>, {0x14, 1, 0, 0})
-	DMember(char)                                      PlayInstanceId                                              ___ OFFSET(get<char>, {0x15, 1, 0, 0})
-	DMember(bool)                                      bRepPosition                                                ___ OFFSET(get<bool>, {0x16, 1, 1, 0})
-	DMember(bool)                                      IsStopped                                                   ___ OFFSET(get<bool>, {0x16, 1, 1, 1})
-	DMember(bool)                                      SkipPositionCorrection                                      ___ OFFSET(get<bool>, {0x16, 1, 1, 2})
-	DMember(bool)                                      bSkipPlayRate                                               ___ OFFSET(get<bool>, {0x16, 1, 1, 3})
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(char)                                      SectionIdToPlay                                             ___ OFFSET(get<char>, {0x30, 1, 0, 0})
+	CMember(UAnimMontage*)                             AnimMontage                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Position                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     BlendTime                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(char)                                      NextSectionID                                               OFFSET(get<char>, {0x14, 1, 0, 0})
+	DMember(char)                                      PlayInstanceId                                              OFFSET(get<char>, {0x15, 1, 0, 0})
+	DMember(bool)                                      bRepPosition                                                OFFSET(get<bool>, {0x16, 1, 1, 0})
+	DMember(bool)                                      IsStopped                                                   OFFSET(get<bool>, {0x16, 1, 1, 1})
+	DMember(bool)                                      SkipPositionCorrection                                      OFFSET(get<bool>, {0x16, 1, 1, 2})
+	DMember(bool)                                      bSkipPlayRate                                               OFFSET(get<bool>, {0x16, 1, 1, 3})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(char)                                      SectionIdToPlay                                             OFFSET(get<char>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilitySpecContainer
@@ -1989,8 +2716,8 @@ class FGameplayAbilitySpecContainer : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FGameplayAbilitySpec>)              Items                                                       ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UAbilitySystemComponent*)                  Owner                                                       ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FGameplayAbilitySpec>)              Items                                                       OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UAbilitySystemComponent*)                  Owner                                                       OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilitySpec
@@ -2001,21 +2728,21 @@ class FGameplayAbilitySpec : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FGameplayAbilitySpecHandle)                Handle                                                      ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	CMember(UGameplayAbility*)                         Ability                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(int32_t)                                   Level                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   InputID                                                     ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(char)                                      ActiveCount                                                 ___ OFFSET(get<char>, {0x28, 1, 0, 0})
-	DMember(bool)                                      InputPressed                                                ___ OFFSET(get<bool>, {0x29, 1, 1, 0})
-	DMember(bool)                                      RemoveAfterActivation                                       ___ OFFSET(get<bool>, {0x29, 1, 1, 1})
-	DMember(bool)                                      PendingRemove                                               ___ OFFSET(get<bool>, {0x29, 1, 1, 2})
-	DMember(bool)                                      bActivateOnce                                               ___ OFFSET(get<bool>, {0x29, 1, 1, 3})
-	SMember(FGameplayAbilityActivationInfo)            ActivationInfo                                              ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     DynamicAbilityTags                                          ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	CMember(TArray<UGameplayAbility*>)                 NonReplicatedInstances                                      ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<UGameplayAbility*>)                 ReplicatedInstances                                         ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GameplayEffectHandle                                        ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                Handle                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(UGameplayAbility*)                         Ability                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   Level                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   InputID                                                     OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(char)                                      ActiveCount                                                 OFFSET(get<char>, {0x28, 1, 0, 0})
+	DMember(bool)                                      InputPressed                                                OFFSET(get<bool>, {0x29, 1, 1, 0})
+	DMember(bool)                                      RemoveAfterActivation                                       OFFSET(get<bool>, {0x29, 1, 1, 1})
+	DMember(bool)                                      PendingRemove                                               OFFSET(get<bool>, {0x29, 1, 1, 2})
+	DMember(bool)                                      bActivateOnce                                               OFFSET(get<bool>, {0x29, 1, 1, 3})
+	SMember(FGameplayAbilityActivationInfo)            ActivationInfo                                              OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DynamicAbilityTags                                          OFFSET(get<T>, {0x60, 32, 0, 0})
+	CMember(TArray<UGameplayAbility*>)                 NonReplicatedInstances                                      OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<UGameplayAbility*>)                 ReplicatedInstances                                         OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GameplayEffectHandle                                        OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AttributeDefaults
@@ -2026,8 +2753,8 @@ class FAttributeDefaults : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UClass*)                                   Attributes                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UDataTable*)                               DefaultStartingTable                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UClass*)                                   Attributes                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UDataTable*)                               DefaultStartingTable                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueTag
@@ -2038,7 +2765,7 @@ class FGameplayCueTag : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FGameplayTag)                              GameplayCueTag                                              ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilitySpecConfig
@@ -2049,10 +2776,10 @@ class FGameplayAbilitySpecConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UClass*)                                   Ability                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FScalableFloat)                            LevelScalableFloat                                          ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	DMember(int32_t)                                   InputID                                                     ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	CMember(EGameplayEffectGrantedAbilityRemovePolicy) RemovalPolicy                                               ___ OFFSET(get<T>, {0x34, 1, 0, 0})
+	CMember(UClass*)                                   Ability                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FScalableFloat)                            LevelScalableFloat                                          OFFSET(get<T>, {0x8, 40, 0, 0})
+	DMember(int32_t)                                   InputID                                                     OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	CMember(EGameplayEffectGrantedAbilityRemovePolicy) RemovalPolicy                                               OFFSET(get<T>, {0x34, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetingLocationInfoNetSerializerConfig
@@ -2073,11 +2800,11 @@ class FGameplayCuePendingExecute : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	SMember(FPredictionKey)                            PredictionKey                                               ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	CMember(EGameplayCuePayloadType)                   PayloadType                                                 ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(UAbilitySystemComponent*)                  OwningComponent                                             ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FGameplayEffectSpecForRPC)                 FromSpec                                                    ___ OFFSET(get<T>, {0x40, 120, 0, 0})
-	SMember(FGameplayCueParameters)                    CueParameters                                               ___ OFFSET(get<T>, {0xB8, 208, 0, 0})
+	SMember(FPredictionKey)                            PredictionKey                                               OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(EGameplayCuePayloadType)                   PayloadType                                                 OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(UAbilitySystemComponent*)                  OwningComponent                                             OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FGameplayEffectSpecForRPC)                 FromSpec                                                    OFFSET(get<T>, {0x40, 120, 0, 0})
+	SMember(FGameplayCueParameters)                    CueParameters                                               OFFSET(get<T>, {0xB8, 208, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotifyActorArray
@@ -2088,7 +2815,7 @@ class FGameplayCueNotifyActorArray : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<AGameplayCueNotify_Actor*>)         Actors                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<AGameplayCueNotify_Actor*>)         Actors                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.PreallocationInfo
@@ -2099,8 +2826,8 @@ class FPreallocationInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TMap<UClass*, FGameplayCueNotifyActorArray>) PreallocatedInstances                                     ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	CMember(TArray<UClass*>)                           ClassesNeedingPreallocation                                 ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TMap<UClass*, FGameplayCueNotifyActorArray>) PreallocatedInstances                                     OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TArray<UClass*>)                           ClassesNeedingPreallocation                                 OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MinimalGameplayCueReplicationProxyForNetSerializer
@@ -2111,8 +2838,8 @@ class FMinimalGameplayCueReplicationProxyForNetSerializer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FGameplayTag>)                      Tags                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FVector_NetQuantize>)               Locations                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FGameplayTag>)                      Tags                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVector_NetQuantize>)               Locations                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MinimalReplicationTagCountMapForNetSerializer
@@ -2123,7 +2850,7 @@ class FMinimalReplicationTagCountMapForNetSerializer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FGameplayTag>)                      Tags                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayTag>)                      Tags                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AbilityTriggerData
@@ -2134,8 +2861,8 @@ class FAbilityTriggerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGameplayTag)                              TriggerTag                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TEnumAsByte<EGameplayAbilityTriggerSource>) TriggerSource                                              ___ OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FGameplayTag)                              TriggerTag                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityTriggerSource>) TriggerSource                                              OFFSET(get<T>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityBindInfo
@@ -2146,8 +2873,8 @@ class FGameplayAbilityBindInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TEnumAsByte<EGameplayAbilityInputBinds>)   Command                                                     ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(UClass*)                                   GameplayAbilityClass                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityInputBinds>)   Command                                                     OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(UClass*)                                   GameplayAbilityClass                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTargetDataFilter
@@ -2158,10 +2885,10 @@ class FGameplayTargetDataFilter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(AActor*)                                   SelfActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UClass*)                                   RequiredActorClass                                          ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(TEnumAsByte<ETargetDataFilterSelf>)        SelfFilter                                                  ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bReverseFilter                                              ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
+	CMember(AActor*)                                   SelfActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UClass*)                                   RequiredActorClass                                          OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(TEnumAsByte<ETargetDataFilterSelf>)        SelfFilter                                                  OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bReverseFilter                                              OFFSET(get<bool>, {0x19, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.WorldReticleParameters
@@ -2172,7 +2899,7 @@ class FWorldReticleParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   AOEScale                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   AOEScale                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.NetSerializeScriptStructCache
@@ -2183,7 +2910,7 @@ class FNetSerializeScriptStructCache : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UScriptStruct*>)                    ScriptStructs                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UScriptStruct*>)                    ScriptStructs                                               OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAttributeData
@@ -2194,8 +2921,8 @@ class FGameplayAttributeData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     BaseValue                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     CurrentValue                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     BaseValue                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     CurrentValue                                                OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AttributeMetaData
@@ -2206,11 +2933,11 @@ class FAttributeMetaData : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     BaseValue                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinValue                                                    ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     MaxValue                                                    ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FString)                                   DerivedAttributeInfo                                        ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bCanStack                                                   ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     BaseValue                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinValue                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
+	SMember(FString)                                   DerivedAttributeInfo                                        OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bCanStack                                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetData
@@ -2231,12 +2958,12 @@ class FGameplayAbilityTargetingLocationInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(TEnumAsByte<EGameplayAbilityTargetingLocationType>) LocationType                                       ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FTransform)                                LiteralTransform                                            ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	CMember(AActor*)                                   SourceActor                                                 ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	CMember(UMeshComponent*)                           SourceComponent                                             ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	CMember(UGameplayAbility*)                         SourceAbility                                               ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FName)                                     SourceSocketName                                            ___ OFFSET(get<T>, {0x98, 4, 0, 0})
+	CMember(TEnumAsByte<EGameplayAbilityTargetingLocationType>) LocationType                                       OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FTransform)                                LiteralTransform                                            OFFSET(get<T>, {0x20, 96, 0, 0})
+	CMember(AActor*)                                   SourceActor                                                 OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(UMeshComponent*)                           SourceComponent                                             OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(UGameplayAbility*)                         SourceAbility                                               OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FName)                                     SourceSocketName                                            OFFSET(get<T>, {0x98, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetData_LocationInfo
@@ -2247,8 +2974,8 @@ class FGameplayAbilityTargetData_LocationInfo : public FGameplayAbilityTargetDat
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FGameplayAbilityTargetingLocationInfo)     SourceLocation                                              ___ OFFSET(get<T>, {0x10, 160, 0, 0})
-	SMember(FGameplayAbilityTargetingLocationInfo)     TargetLocation                                              ___ OFFSET(get<T>, {0xB0, 160, 0, 0})
+	SMember(FGameplayAbilityTargetingLocationInfo)     SourceLocation                                              OFFSET(get<T>, {0x10, 160, 0, 0})
+	SMember(FGameplayAbilityTargetingLocationInfo)     TargetLocation                                              OFFSET(get<T>, {0xB0, 160, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetData_ActorArray
@@ -2259,8 +2986,8 @@ class FGameplayAbilityTargetData_ActorArray : public FGameplayAbilityTargetData
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FGameplayAbilityTargetingLocationInfo)     SourceLocation                                              ___ OFFSET(get<T>, {0x10, 160, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    TargetActorArray                                            ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FGameplayAbilityTargetingLocationInfo)     SourceLocation                                              OFFSET(get<T>, {0x10, 160, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    TargetActorArray                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityTargetData_SingleTargetHit
@@ -2271,8 +2998,8 @@ class FGameplayAbilityTargetData_SingleTargetHit : public FGameplayAbilityTarget
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FHitResult)                                HitResult                                                   ___ OFFSET(get<T>, {0x8, 224, 0, 0})
-	DMember(bool)                                      bHitReplaced                                                ___ OFFSET(get<bool>, {0xE8, 1, 0, 0})
+	SMember(FHitResult)                                HitResult                                                   OFFSET(get<T>, {0x8, 224, 0, 0})
+	DMember(bool)                                      bHitReplaced                                                OFFSET(get<bool>, {0xE8, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityActorInfo
@@ -2283,14 +3010,14 @@ class FGameplayAbilityActorInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   OwnerActor                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   AvatarActor                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(TWeakObjectPtr<APlayerController*>)        PlayerController                                            ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  AbilitySystemComponent                                      ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SkeletalMeshComponent                                       ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TWeakObjectPtr<UAnimInstance*>)            AnimInstance                                                ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TWeakObjectPtr<UMovementComponent*>)       MovementComponent                                           ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FName)                                     AffectedAnimInstanceTag                                     ___ OFFSET(get<T>, {0x40, 4, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   OwnerActor                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   AvatarActor                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(TWeakObjectPtr<APlayerController*>)        PlayerController                                            OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  AbilitySystemComponent                                      OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SkeletalMeshComponent                                       OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TWeakObjectPtr<UAnimInstance*>)            AnimInstance                                                OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TWeakObjectPtr<UMovementComponent*>)       MovementComponent                                           OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FName)                                     AffectedAnimInstanceTag                                     OFFSET(get<T>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AbilityEndedData
@@ -2301,10 +3028,10 @@ class FAbilityEndedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UGameplayAbility*)                         AbilityThatEnded                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayAbilitySpecHandle)                AbilitySpecHandle                                           ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bReplicateEndAbility                                        ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	DMember(bool)                                      bWasCancelled                                               ___ OFFSET(get<bool>, {0xD, 1, 0, 0})
+	CMember(UGameplayAbility*)                         AbilityThatEnded                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                AbilitySpecHandle                                           OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bReplicateEndAbility                                        OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(bool)                                      bWasCancelled                                               OFFSET(get<bool>, {0xD, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AbilityTaskDebugMessage
@@ -2315,8 +3042,8 @@ class FAbilityTaskDebugMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UGameplayTask*)                            FromTask                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FString)                                   Message                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(UGameplayTask*)                            FromTask                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FString)                                   Message                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilitySpecHandleAndPredictionKey
@@ -2327,8 +3054,8 @@ class FGameplayAbilitySpecHandleAndPredictionKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGameplayAbilitySpecHandle)                AbilityHandle                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   PredictionKeyAtCreation                                     ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                AbilityHandle                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   PredictionKeyAtCreation                                     OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MinimalGameplayCueReplicationProxy
@@ -2339,7 +3066,7 @@ class FMinimalGameplayCueReplicationProxy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	CMember(UAbilitySystemComponent*)                  Owner                                                       ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UAbilitySystemComponent*)                  Owner                                                       OFFSET(get<T>, {0x2C0, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueObjectLibrary
@@ -2350,14 +3077,14 @@ class FGameplayCueObjectLibrary : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FString>)                           Paths                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(UObjectLibrary*)                           ActorObjectLibrary                                          ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(UObjectLibrary*)                           StaticObjectLibrary                                         ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(UGameplayCueSet*)                          CueSet                                                      ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(bool)                                      bShouldSyncScan                                             ___ OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	DMember(bool)                                      bShouldAsyncLoad                                            ___ OFFSET(get<bool>, {0x4D, 1, 0, 0})
-	DMember(bool)                                      bShouldSyncLoad                                             ___ OFFSET(get<bool>, {0x4E, 1, 0, 0})
-	DMember(bool)                                      bHasBeenInitialized                                         ___ OFFSET(get<bool>, {0x4F, 1, 0, 0})
+	CMember(TArray<FString>)                           Paths                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(UObjectLibrary*)                           ActorObjectLibrary                                          OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UObjectLibrary*)                           StaticObjectLibrary                                         OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UGameplayCueSet*)                          CueSet                                                      OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(bool)                                      bShouldSyncScan                                             OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	DMember(bool)                                      bShouldAsyncLoad                                            OFFSET(get<bool>, {0x4D, 1, 0, 0})
+	DMember(bool)                                      bShouldSyncLoad                                             OFFSET(get<bool>, {0x4E, 1, 0, 0})
+	DMember(bool)                                      bHasBeenInitialized                                         OFFSET(get<bool>, {0x4F, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_SpawnCondition
@@ -2368,11 +3095,11 @@ class FGameplayCueNotify_SpawnCondition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(EGameplayCueNotify_LocallyControlledSource) LocallyControlledSource                                    ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EGameplayCueNotify_LocallyControlledPolicy) LocallyControlledPolicy                                    ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	DMember(float)                                     ChanceToPlay                                                ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       AllowedSurfaceTypes                                         ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       RejectedSurfaceTypes                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(EGameplayCueNotify_LocallyControlledSource) LocallyControlledSource                                    OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EGameplayCueNotify_LocallyControlledPolicy) LocallyControlledPolicy                                    OFFSET(get<T>, {0x1, 1, 0, 0})
+	DMember(float)                                     ChanceToPlay                                                OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       AllowedSurfaceTypes                                         OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       RejectedSurfaceTypes                                        OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_PlacementInfo
@@ -2383,13 +3110,13 @@ class FGameplayCueNotify_PlacementInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     SocketName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EGameplayCueNotify_AttachPolicy)           AttachPolicy                                                ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	CMember(EAttachmentRule)                           AttachmentRule                                              ___ OFFSET(get<T>, {0x5, 1, 0, 0})
-	DMember(bool)                                      bOverrideRotation                                           ___ OFFSET(get<bool>, {0x8, 1, 1, 0})
-	DMember(bool)                                      bOverrideScale                                              ___ OFFSET(get<bool>, {0x8, 1, 1, 1})
-	SMember(FRotator)                                  RotationOverride                                            ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   ScaleOverride                                               ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EGameplayCueNotify_AttachPolicy)           AttachPolicy                                                OFFSET(get<T>, {0x4, 1, 0, 0})
+	CMember(EAttachmentRule)                           AttachmentRule                                              OFFSET(get<T>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bOverrideRotation                                           OFFSET(get<bool>, {0x8, 1, 1, 0})
+	DMember(bool)                                      bOverrideScale                                              OFFSET(get<bool>, {0x8, 1, 1, 1})
+	SMember(FRotator)                                  RotationOverride                                            OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   ScaleOverride                                               OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_SpawnResult
@@ -2400,13 +3127,13 @@ class FGameplayCueNotify_SpawnResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TArray<UFXSystemComponent*>)               FxSystemComponents                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<UAudioComponent*>)                  AudioComponents                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<UCameraShakeBase*>)                 CameraShakes                                                ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<TScriptInterface>)                  CameraLensEffects                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(UForceFeedbackComponent*)                  ForceFeedbackComponent                                      ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	CMember(APlayerController*)                        ForceFeedbackTargetPC                                       ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	CMember(UDecalComponent*)                          DecalComponent                                              ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(TArray<UFXSystemComponent*>)               FxSystemComponents                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UAudioComponent*>)                  AudioComponents                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<UCameraShakeBase*>)                 CameraShakes                                                OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<TScriptInterface>)                  CameraLensEffects                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UForceFeedbackComponent*)                  ForceFeedbackComponent                                      OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(APlayerController*)                        ForceFeedbackTargetPC                                       OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(UDecalComponent*)                          DecalComponent                                              OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_ParticleInfo
@@ -2417,12 +3144,12 @@ class FGameplayCueNotify_ParticleInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(UNiagaraSystem*)                           NiagaraSystem                                               ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x80, 1, 1, 0})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x80, 1, 1, 1})
-	DMember(bool)                                      bCastShadow                                                 ___ OFFSET(get<bool>, {0x80, 1, 1, 2})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(UNiagaraSystem*)                           NiagaraSystem                                               OFFSET(get<T>, {0x78, 8, 0, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x80, 1, 1, 0})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x80, 1, 1, 1})
+	DMember(bool)                                      bCastShadow                                                 OFFSET(get<bool>, {0x80, 1, 1, 2})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_SoundParameterInterfaceInfo
@@ -2433,7 +3160,7 @@ class FGameplayCueNotify_SoundParameterInterfaceInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     StopTriggerName                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     StopTriggerName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_SoundInfo
@@ -2444,16 +3171,16 @@ class FGameplayCueNotify_SoundInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(USoundBase*)                               sound                                                       ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(USoundBase*)                               SoundCue                                                    ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	DMember(float)                                     LoopingFadeOutDuration                                      ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	DMember(float)                                     LoopingFadeVolumeLevel                                      ___ OFFSET(get<float>, {0x8C, 4, 0, 0})
-	SMember(FGameplayCueNotify_SoundParameterInterfaceInfo) SoundParameterInterfaceInfo                            ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x94, 1, 1, 0})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x94, 1, 1, 1})
-	DMember(bool)                                      bUseSoundParameterInterface                                 ___ OFFSET(get<bool>, {0x94, 1, 1, 2})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(USoundBase*)                               sound                                                       OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(USoundBase*)                               SoundCue                                                    OFFSET(get<T>, {0x80, 8, 0, 0})
+	DMember(float)                                     LoopingFadeOutDuration                                      OFFSET(get<float>, {0x88, 4, 0, 0})
+	DMember(float)                                     LoopingFadeVolumeLevel                                      OFFSET(get<float>, {0x8C, 4, 0, 0})
+	SMember(FGameplayCueNotify_SoundParameterInterfaceInfo) SoundParameterInterfaceInfo                            OFFSET(get<T>, {0x90, 4, 0, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x94, 1, 1, 0})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x94, 1, 1, 1})
+	DMember(bool)                                      bUseSoundParameterInterface                                 OFFSET(get<bool>, {0x94, 1, 1, 2})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_CameraShakeInfo
@@ -2464,17 +3191,17 @@ class FGameplayCueNotify_CameraShakeInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(UClass*)                                   CameraShake                                                 ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	DMember(float)                                     ShakeScale                                                  ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	CMember(EGameplayCueNotify_EffectPlaySpace)        Playspace                                                   ___ OFFSET(get<T>, {0x84, 1, 0, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x88, 1, 1, 0})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x88, 1, 1, 1})
-	DMember(bool)                                      bPlayInWorld                                                ___ OFFSET(get<bool>, {0x88, 1, 1, 2})
-	DMember(float)                                     WorldInnerRadius                                            ___ OFFSET(get<float>, {0x8C, 4, 0, 0})
-	DMember(float)                                     WorldOuterRadius                                            ___ OFFSET(get<float>, {0x90, 4, 0, 0})
-	DMember(float)                                     WorldFalloffExponent                                        ___ OFFSET(get<float>, {0x94, 4, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(UClass*)                                   CameraShake                                                 OFFSET(get<T>, {0x78, 8, 0, 0})
+	DMember(float)                                     ShakeScale                                                  OFFSET(get<float>, {0x80, 4, 0, 0})
+	CMember(EGameplayCueNotify_EffectPlaySpace)        Playspace                                                   OFFSET(get<T>, {0x84, 1, 0, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x88, 1, 1, 0})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x88, 1, 1, 1})
+	DMember(bool)                                      bPlayInWorld                                                OFFSET(get<bool>, {0x88, 1, 1, 2})
+	DMember(float)                                     WorldInnerRadius                                            OFFSET(get<float>, {0x8C, 4, 0, 0})
+	DMember(float)                                     WorldOuterRadius                                            OFFSET(get<float>, {0x90, 4, 0, 0})
+	DMember(float)                                     WorldFalloffExponent                                        OFFSET(get<float>, {0x94, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_CameraLensEffectInfo
@@ -2485,14 +3212,14 @@ class FGameplayCueNotify_CameraLensEffectInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(UClass*)                                   CameraLensEffect                                            ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x80, 1, 1, 0})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x80, 1, 1, 1})
-	DMember(bool)                                      bPlayInWorld                                                ___ OFFSET(get<bool>, {0x80, 1, 1, 2})
-	DMember(float)                                     WorldInnerRadius                                            ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	DMember(float)                                     WorldOuterRadius                                            ___ OFFSET(get<float>, {0x88, 4, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(UClass*)                                   CameraLensEffect                                            OFFSET(get<T>, {0x78, 8, 0, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x80, 1, 1, 0})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x80, 1, 1, 1})
+	DMember(bool)                                      bPlayInWorld                                                OFFSET(get<bool>, {0x80, 1, 1, 2})
+	DMember(float)                                     WorldInnerRadius                                            OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(float)                                     WorldOuterRadius                                            OFFSET(get<float>, {0x88, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_ForceFeedbackInfo
@@ -2503,16 +3230,16 @@ class FGameplayCueNotify_ForceFeedbackInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(UForceFeedbackEffect*)                     ForceFeedbackEffect                                         ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FName)                                     ForceFeedbackTag                                            ___ OFFSET(get<T>, {0x80, 4, 0, 0})
-	DMember(bool)                                      bIsLooping                                                  ___ OFFSET(get<bool>, {0x84, 1, 1, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x84, 1, 1, 1})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x84, 1, 1, 2})
-	DMember(bool)                                      bPlayInWorld                                                ___ OFFSET(get<bool>, {0x84, 1, 1, 3})
-	DMember(float)                                     WorldIntensity                                              ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	CMember(UForceFeedbackAttenuation*)                WorldAttenuation                                            ___ OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(UForceFeedbackEffect*)                     ForceFeedbackEffect                                         OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FName)                                     ForceFeedbackTag                                            OFFSET(get<T>, {0x80, 4, 0, 0})
+	DMember(bool)                                      bIsLooping                                                  OFFSET(get<bool>, {0x84, 1, 1, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x84, 1, 1, 1})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x84, 1, 1, 2})
+	DMember(bool)                                      bPlayInWorld                                                OFFSET(get<bool>, {0x84, 1, 1, 3})
+	DMember(float)                                     WorldIntensity                                              OFFSET(get<float>, {0x88, 4, 0, 0})
+	CMember(UForceFeedbackAttenuation*)                WorldAttenuation                                            OFFSET(get<T>, {0x90, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_InputDevicePropertyInfo
@@ -2523,7 +3250,7 @@ class FGameplayCueNotify_InputDevicePropertyInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UClass*>)                           DeviceProperties                                            ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UClass*>)                           DeviceProperties                                            OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_DecalInfo
@@ -2534,15 +3261,15 @@ class FGameplayCueNotify_DecalInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       ___ OFFSET(get<T>, {0x38, 64, 0, 0})
-	CMember(UMaterialInterface*)                       DecalMaterial                                               ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FVector)                                   DecalSize                                                   ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	DMember(bool)                                      bOverrideSpawnCondition                                     ___ OFFSET(get<bool>, {0x98, 1, 1, 0})
-	DMember(bool)                                      bOverridePlacementInfo                                      ___ OFFSET(get<bool>, {0x98, 1, 1, 1})
-	DMember(bool)                                      bOverrideFadeOut                                            ___ OFFSET(get<bool>, {0x98, 1, 1, 2})
-	DMember(float)                                     FadeOutStartDelay                                           ___ OFFSET(get<float>, {0x9C, 4, 0, 0})
-	DMember(float)                                     FadeOutDuration                                             ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
+	SMember(FGameplayCueNotify_SpawnCondition)         SpawnConditionOverride                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FGameplayCueNotify_PlacementInfo)          PlacementInfoOverride                                       OFFSET(get<T>, {0x38, 64, 0, 0})
+	CMember(UMaterialInterface*)                       DecalMaterial                                               OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FVector)                                   DecalSize                                                   OFFSET(get<T>, {0x80, 24, 0, 0})
+	DMember(bool)                                      bOverrideSpawnCondition                                     OFFSET(get<bool>, {0x98, 1, 1, 0})
+	DMember(bool)                                      bOverridePlacementInfo                                      OFFSET(get<bool>, {0x98, 1, 1, 1})
+	DMember(bool)                                      bOverrideFadeOut                                            OFFSET(get<bool>, {0x98, 1, 1, 2})
+	DMember(float)                                     FadeOutStartDelay                                           OFFSET(get<float>, {0x9C, 4, 0, 0})
+	DMember(float)                                     FadeOutDuration                                             OFFSET(get<float>, {0xA0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_BurstEffects
@@ -2553,13 +3280,13 @@ class FGameplayCueNotify_BurstEffects : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(TArray<FGameplayCueNotify_ParticleInfo>)   BurstParticles                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FGameplayCueNotify_SoundInfo>)      BurstSounds                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGameplayCueNotify_CameraShakeInfo)        BurstCameraShake                                            ___ OFFSET(get<T>, {0x20, 152, 0, 0})
-	SMember(FGameplayCueNotify_CameraLensEffectInfo)   BurstCameraLensEffect                                       ___ OFFSET(get<T>, {0xB8, 144, 0, 0})
-	SMember(FGameplayCueNotify_ForceFeedbackInfo)      BurstForceFeedback                                          ___ OFFSET(get<T>, {0x148, 152, 0, 0})
-	SMember(FGameplayCueNotify_InputDevicePropertyInfo) BurstDevicePropertyEffect                                  ___ OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	SMember(FGameplayCueNotify_DecalInfo)              BurstDecal                                                  ___ OFFSET(get<T>, {0x1F0, 168, 0, 0})
+	CMember(TArray<FGameplayCueNotify_ParticleInfo>)   BurstParticles                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayCueNotify_SoundInfo>)      BurstSounds                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGameplayCueNotify_CameraShakeInfo)        BurstCameraShake                                            OFFSET(get<T>, {0x20, 152, 0, 0})
+	SMember(FGameplayCueNotify_CameraLensEffectInfo)   BurstCameraLensEffect                                       OFFSET(get<T>, {0xB8, 144, 0, 0})
+	SMember(FGameplayCueNotify_ForceFeedbackInfo)      BurstForceFeedback                                          OFFSET(get<T>, {0x148, 152, 0, 0})
+	SMember(FGameplayCueNotify_InputDevicePropertyInfo) BurstDevicePropertyEffect                                  OFFSET(get<T>, {0x1E0, 16, 0, 0})
+	SMember(FGameplayCueNotify_DecalInfo)              BurstDecal                                                  OFFSET(get<T>, {0x1F0, 168, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotify_LoopingEffects
@@ -2570,12 +3297,12 @@ class FGameplayCueNotify_LoopingEffects : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	CMember(TArray<FGameplayCueNotify_ParticleInfo>)   LoopingParticles                                            ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FGameplayCueNotify_SoundInfo>)      LoopingSounds                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGameplayCueNotify_CameraShakeInfo)        LoopingCameraShake                                          ___ OFFSET(get<T>, {0x20, 152, 0, 0})
-	SMember(FGameplayCueNotify_CameraLensEffectInfo)   LoopingCameraLensEffect                                     ___ OFFSET(get<T>, {0xB8, 144, 0, 0})
-	SMember(FGameplayCueNotify_ForceFeedbackInfo)      LoopingForceFeedback                                        ___ OFFSET(get<T>, {0x148, 152, 0, 0})
-	SMember(FGameplayCueNotify_InputDevicePropertyInfo) LoopingInputDevicePropertyEffect                           ___ OFFSET(get<T>, {0x1E0, 16, 0, 0})
+	CMember(TArray<FGameplayCueNotify_ParticleInfo>)   LoopingParticles                                            OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayCueNotify_SoundInfo>)      LoopingSounds                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGameplayCueNotify_CameraShakeInfo)        LoopingCameraShake                                          OFFSET(get<T>, {0x20, 152, 0, 0})
+	SMember(FGameplayCueNotify_CameraLensEffectInfo)   LoopingCameraLensEffect                                     OFFSET(get<T>, {0xB8, 144, 0, 0})
+	SMember(FGameplayCueNotify_ForceFeedbackInfo)      LoopingForceFeedback                                        OFFSET(get<T>, {0x148, 152, 0, 0})
+	SMember(FGameplayCueNotify_InputDevicePropertyInfo) LoopingInputDevicePropertyEffect                           OFFSET(get<T>, {0x1E0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueNotifyData
@@ -2586,9 +3313,9 @@ class FGameplayCueNotifyData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              GameplayCueTag                                              ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FSoftObjectPath)                           GameplayCueNotifyObj                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(UClass*)                                   LoadedGameplayCueClass                                      ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FSoftObjectPath)                           GameplayCueNotifyObj                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(UClass*)                                   LoadedGameplayCueClass                                      OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueTranslatorNodeIndex
@@ -2599,7 +3326,7 @@ class FGameplayCueTranslatorNodeIndex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueTranslationLink
@@ -2610,7 +3337,7 @@ class FGameplayCueTranslationLink : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UGameplayCueTranslator*)                   RulesCDO                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UGameplayCueTranslator*)                   RulesCDO                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueTranslatorNode
@@ -2621,10 +3348,10 @@ class FGameplayCueTranslatorNode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<FGameplayCueTranslationLink>)       Links                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGameplayCueTranslatorNodeIndex)           CachedIndex                                                 ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FGameplayTag)                              CachedGameplayTag                                           ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FName)                                     CachedGameplayTagName                                       ___ OFFSET(get<T>, {0x18, 4, 0, 0})
+	CMember(TArray<FGameplayCueTranslationLink>)       Links                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGameplayCueTranslatorNodeIndex)           CachedIndex                                                 OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FGameplayTag)                              CachedGameplayTag                                           OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     CachedGameplayTagName                                       OFFSET(get<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayCueTranslationManager
@@ -2635,9 +3362,9 @@ class FGameplayCueTranslationManager : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TArray<FGameplayCueTranslatorNode>)        TranslationLUT                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FName, FGameplayCueTranslatorNodeIndex>) TranslationNameToIndexMap                                ___ OFFSET(get<T>, {0x10, 80, 0, 0})
-	CMember(UGameplayTagsManager*)                     TagManager                                                  ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(TArray<FGameplayCueTranslatorNode>)        TranslationLUT                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FName, FGameplayCueTranslatorNodeIndex>) TranslationNameToIndexMap                                OFFSET(get<T>, {0x10, 80, 0, 0})
+	CMember(UGameplayTagsManager*)                     TagManager                                                  OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.AttributeBasedFloat
@@ -2648,15 +3375,15 @@ class FAttributeBasedFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FScalableFloat)                            Coefficient                                                 ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            PreMultiplyAdditiveValue                                    ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FScalableFloat)                            PostMultiplyAdditiveValue                                   ___ OFFSET(get<T>, {0x50, 40, 0, 0})
-	SMember(FGameplayEffectAttributeCaptureDefinition) BackingAttribute                                            ___ OFFSET(get<T>, {0x78, 64, 0, 0})
-	SMember(FCurveTableRowHandle)                      AttributeCurve                                              ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	CMember(EAttributeBasedFloatCalculationType)       AttributeCalculationType                                    ___ OFFSET(get<T>, {0xC8, 1, 0, 0})
-	CMember(EGameplayModEvaluationChannel)             FinalChannel                                                ___ OFFSET(get<T>, {0xC9, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     SourceTagFilter                                             ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetTagFilter                                             ___ OFFSET(get<T>, {0xF0, 32, 0, 0})
+	SMember(FScalableFloat)                            Coefficient                                                 OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            PreMultiplyAdditiveValue                                    OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            PostMultiplyAdditiveValue                                   OFFSET(get<T>, {0x50, 40, 0, 0})
+	SMember(FGameplayEffectAttributeCaptureDefinition) BackingAttribute                                            OFFSET(get<T>, {0x78, 64, 0, 0})
+	SMember(FCurveTableRowHandle)                      AttributeCurve                                              OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(EAttributeBasedFloatCalculationType)       AttributeCalculationType                                    OFFSET(get<T>, {0xC8, 1, 0, 0})
+	CMember(EGameplayModEvaluationChannel)             FinalChannel                                                OFFSET(get<T>, {0xC9, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     SourceTagFilter                                             OFFSET(get<T>, {0xD0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetTagFilter                                             OFFSET(get<T>, {0xF0, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.CustomCalculationBasedFloat
@@ -2667,11 +3394,11 @@ class FCustomCalculationBasedFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(UClass*)                                   CalculationClassMagnitude                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FScalableFloat)                            Coefficient                                                 ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FScalableFloat)                            PreMultiplyAdditiveValue                                    ___ OFFSET(get<T>, {0x30, 40, 0, 0})
-	SMember(FScalableFloat)                            PostMultiplyAdditiveValue                                   ___ OFFSET(get<T>, {0x58, 40, 0, 0})
-	SMember(FCurveTableRowHandle)                      FinalLookupCurve                                            ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(UClass*)                                   CalculationClassMagnitude                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FScalableFloat)                            Coefficient                                                 OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FScalableFloat)                            PreMultiplyAdditiveValue                                    OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FScalableFloat)                            PostMultiplyAdditiveValue                                   OFFSET(get<T>, {0x58, 40, 0, 0})
+	SMember(FCurveTableRowHandle)                      FinalLookupCurve                                            OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.SetByCallerFloat
@@ -2682,8 +3409,8 @@ class FSetByCallerFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     DataName                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              DataTag                                                     ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     DataName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              DataTag                                                     OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectModifierMagnitude
@@ -2694,11 +3421,11 @@ class FGameplayEffectModifierMagnitude : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	CMember(EGameplayEffectMagnitudeCalculation)       MagnitudeCalculationType                                    ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FScalableFloat)                            ScalableFloatMagnitude                                      ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FAttributeBasedFloat)                      AttributeBasedMagnitude                                     ___ OFFSET(get<T>, {0x30, 272, 0, 0})
-	SMember(FCustomCalculationBasedFloat)              CustomMagnitude                                             ___ OFFSET(get<T>, {0x140, 144, 0, 0})
-	SMember(FSetByCallerFloat)                         SetByCallerMagnitude                                        ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(EGameplayEffectMagnitudeCalculation)       MagnitudeCalculationType                                    OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FScalableFloat)                            ScalableFloatMagnitude                                      OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FAttributeBasedFloat)                      AttributeBasedMagnitude                                     OFFSET(get<T>, {0x30, 272, 0, 0})
+	SMember(FCustomCalculationBasedFloat)              CustomMagnitude                                             OFFSET(get<T>, {0x140, 144, 0, 0})
+	SMember(FSetByCallerFloat)                         SetByCallerMagnitude                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectExecutionScopedModifierInfo
@@ -2709,14 +3436,14 @@ class FGameplayEffectExecutionScopedModifierInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FGameplayEffectAttributeCaptureDefinition) CapturedAttribute                                           ___ OFFSET(get<T>, {0x0, 64, 0, 0})
-	SMember(FGameplayTag)                              TransientAggregatorIdentifier                               ___ OFFSET(get<T>, {0x40, 4, 0, 0})
-	CMember(EGameplayEffectScopedModifierAggregatorType) AggregatorType                                            ___ OFFSET(get<T>, {0x44, 1, 0, 0})
-	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  ___ OFFSET(get<T>, {0x45, 1, 0, 0})
-	SMember(FGameplayEffectModifierMagnitude)          ModifierMagnitude                                           ___ OFFSET(get<T>, {0x48, 472, 0, 0})
-	SMember(FGameplayModEvaluationChannelSettings)     EvaluationChannelSettings                                   ___ OFFSET(get<T>, {0x220, 1, 0, 0})
-	SMember(FGameplayTagRequirements)                  SourceTags                                                  ___ OFFSET(get<T>, {0x228, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  TargetTags                                                  ___ OFFSET(get<T>, {0x2B0, 136, 0, 0})
+	SMember(FGameplayEffectAttributeCaptureDefinition) CapturedAttribute                                           OFFSET(get<T>, {0x0, 64, 0, 0})
+	SMember(FGameplayTag)                              TransientAggregatorIdentifier                               OFFSET(get<T>, {0x40, 4, 0, 0})
+	CMember(EGameplayEffectScopedModifierAggregatorType) AggregatorType                                            OFFSET(get<T>, {0x44, 1, 0, 0})
+	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  OFFSET(get<T>, {0x45, 1, 0, 0})
+	SMember(FGameplayEffectModifierMagnitude)          ModifierMagnitude                                           OFFSET(get<T>, {0x48, 472, 0, 0})
+	SMember(FGameplayModEvaluationChannelSettings)     EvaluationChannelSettings                                   OFFSET(get<T>, {0x220, 1, 0, 0})
+	SMember(FGameplayTagRequirements)                  SourceTags                                                  OFFSET(get<T>, {0x228, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  TargetTags                                                  OFFSET(get<T>, {0x2B0, 136, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayModEvaluationChannelSettings
@@ -2727,7 +3454,7 @@ class FGameplayModEvaluationChannelSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	CMember(EGameplayModEvaluationChannel)             Channel                                                     ___ OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EGameplayModEvaluationChannel)             Channel                                                     OFFSET(get<T>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ConditionalGameplayEffect
@@ -2738,8 +3465,8 @@ class FConditionalGameplayEffect : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UClass*)                                   EffectClass                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     RequiredSourceTags                                          ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(UClass*)                                   EffectClass                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     RequiredSourceTags                                          OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectExecutionDefinition
@@ -2750,10 +3477,10 @@ class FGameplayEffectExecutionDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(UClass*)                                   CalculationClass                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     PassedInTags                                                ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	CMember(TArray<FGameplayEffectExecutionScopedModifierInfo>) CalculationModifiers                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FConditionalGameplayEffect>)        ConditionalGameplayEffects                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(UClass*)                                   CalculationClass                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     PassedInTags                                                OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(TArray<FGameplayEffectExecutionScopedModifierInfo>) CalculationModifiers                               OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FConditionalGameplayEffect>)        ConditionalGameplayEffects                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayModifierInfo
@@ -2764,12 +3491,12 @@ class FGameplayModifierInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FGameplayAttribute)                        Attribute                                                   ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FGameplayEffectModifierMagnitude)          ModifierMagnitude                                           ___ OFFSET(get<T>, {0x40, 472, 0, 0})
-	SMember(FGameplayModEvaluationChannelSettings)     EvaluationChannelSettings                                   ___ OFFSET(get<T>, {0x218, 1, 0, 0})
-	SMember(FGameplayTagRequirements)                  SourceTags                                                  ___ OFFSET(get<T>, {0x220, 136, 0, 0})
-	SMember(FGameplayTagRequirements)                  TargetTags                                                  ___ OFFSET(get<T>, {0x2A8, 136, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x0, 56, 0, 0})
+	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FGameplayEffectModifierMagnitude)          ModifierMagnitude                                           OFFSET(get<T>, {0x40, 472, 0, 0})
+	SMember(FGameplayModEvaluationChannelSettings)     EvaluationChannelSettings                                   OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(FGameplayTagRequirements)                  SourceTags                                                  OFFSET(get<T>, {0x220, 136, 0, 0})
+	SMember(FGameplayTagRequirements)                  TargetTags                                                  OFFSET(get<T>, {0x2A8, 136, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectCue
@@ -2780,10 +3507,10 @@ class FGameplayEffectCue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGameplayAttribute)                        MagnitudeAttribute                                          ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	DMember(float)                                     MinLevel                                                    ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     MaxLevel                                                    ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayCueTags                                             ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FGameplayAttribute)                        MagnitudeAttribute                                          OFFSET(get<T>, {0x0, 56, 0, 0})
+	DMember(float)                                     MinLevel                                                    OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     MaxLevel                                                    OFFSET(get<float>, {0x3C, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayCueTags                                             OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.InheritedTagContainer
@@ -2794,9 +3521,9 @@ class FInheritedTagContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGameplayTagContainer)                     CombinedTags                                                ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     Added                                                       ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     Removed                                                     ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     CombinedTags                                                OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Added                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Removed                                                     OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.ActiveGameplayEffectQuery
@@ -2837,10 +3564,10 @@ class FGameplayEffectCustomExecutionOutput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FGameplayModifierEvaluatedData>)    OutputModifiers                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bTriggerConditionalGameplayEffects                          ___ OFFSET(get<bool>, {0x10, 1, 1, 0})
-	DMember(bool)                                      bHandledStackCountManually                                  ___ OFFSET(get<bool>, {0x10, 1, 1, 1})
-	DMember(bool)                                      bHandledGameplayCuesManually                                ___ OFFSET(get<bool>, {0x10, 1, 1, 2})
+	CMember(TArray<FGameplayModifierEvaluatedData>)    OutputModifiers                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bTriggerConditionalGameplayEffects                          OFFSET(get<bool>, {0x10, 1, 1, 0})
+	DMember(bool)                                      bHandledStackCountManually                                  OFFSET(get<bool>, {0x10, 1, 1, 1})
+	DMember(bool)                                      bHandledGameplayCuesManually                                OFFSET(get<bool>, {0x10, 1, 1, 2})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayModifierEvaluatedData
@@ -2851,11 +3578,11 @@ class FGameplayModifierEvaluatedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayAttribute)                        Attribute                                                   ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(float)                                     Magnitude                                                   ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               Handle                                                      ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(bool)                                      IsValid                                                     ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x0, 56, 0, 0})
+	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0x3C, 4, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               Handle                                                      OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(bool)                                      IsValid                                                     OFFSET(get<bool>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayEffectContext
@@ -2866,19 +3593,19 @@ class FGameplayEffectContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Instigator                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   EffectCauser                                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(TWeakObjectPtr<UGameplayAbility*>)         AbilityCDO                                                  ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(TWeakObjectPtr<UGameplayAbility*>)         AbilityInstanceNotReplicated                                ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(int32_t)                                   AbilityLevel                                                ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                ___ OFFSET(get<T>, {0x2C, 8, 0, 0})
-	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  InstigatorAbilitySystemComponent                            ___ OFFSET(get<T>, {0x34, 8, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    Actors                                                      ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FVector)                                   WorldOrigin                                                 ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	DMember(bool)                                      bHasWorldOrigin                                             ___ OFFSET(get<bool>, {0x78, 1, 1, 0})
-	DMember(bool)                                      bReplicateSourceObject                                      ___ OFFSET(get<bool>, {0x78, 1, 1, 1})
-	DMember(bool)                                      bReplicateInstigator                                        ___ OFFSET(get<bool>, {0x78, 1, 1, 2})
-	DMember(bool)                                      bReplicateEffectCauser                                      ___ OFFSET(get<bool>, {0x78, 1, 1, 3})
+	CMember(TWeakObjectPtr<AActor*>)                   Instigator                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   EffectCauser                                                OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(TWeakObjectPtr<UGameplayAbility*>)         AbilityCDO                                                  OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(TWeakObjectPtr<UGameplayAbility*>)         AbilityInstanceNotReplicated                                OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(int32_t)                                   AbilityLevel                                                OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SourceObject                                                OFFSET(get<T>, {0x2C, 8, 0, 0})
+	CMember(TWeakObjectPtr<UAbilitySystemComponent*>)  InstigatorAbilitySystemComponent                            OFFSET(get<T>, {0x34, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    Actors                                                      OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FVector)                                   WorldOrigin                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
+	DMember(bool)                                      bHasWorldOrigin                                             OFFSET(get<bool>, {0x78, 1, 1, 0})
+	DMember(bool)                                      bReplicateSourceObject                                      OFFSET(get<bool>, {0x78, 1, 1, 1})
+	DMember(bool)                                      bReplicateInstigator                                        OFFSET(get<bool>, {0x78, 1, 1, 2})
+	DMember(bool)                                      bReplicateEffectCauser                                      OFFSET(get<bool>, {0x78, 1, 1, 3})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTagBlueprintPropertyMapping
@@ -2889,9 +3616,9 @@ class FGameplayTagBlueprintPropertyMapping : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTag)                              TagToMap                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FGuid)                                     PropertyGuid                                                ___ OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FGameplayTag)                              TagToMap                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGuid)                                     PropertyGuid                                                OFFSET(get<T>, {0x2C, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTagBlueprintPropertyMap
@@ -2902,7 +3629,7 @@ class FGameplayTagBlueprintPropertyMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FGameplayTagBlueprintPropertyMapping>) PropertyMappings                                         ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FGameplayTagBlueprintPropertyMapping>) PropertyMappings                                         OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTagReponsePair
@@ -2913,10 +3640,10 @@ class FGameplayTagReponsePair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UClass*)                                   ResponseGameplayEffect                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<UClass*>)                           ResponseGameplayEffects                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   SoftCountCap                                                ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UClass*)                                   ResponseGameplayEffect                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<UClass*>)                           ResponseGameplayEffects                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   SoftCountCap                                                OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayTagResponseTableEntry
@@ -2927,8 +3654,8 @@ class FGameplayTagResponseTableEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagReponsePair)                   Positive                                                    ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FGameplayTagReponsePair)                   Negative                                                    ___ OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FGameplayTagReponsePair)                   Positive                                                    OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FGameplayTagReponsePair)                   Negative                                                    OFFSET(get<T>, {0x28, 40, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MovieSceneGameplayCueKey
@@ -2939,17 +3666,17 @@ class FMovieSceneGameplayCueKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayCueTag)                           Cue                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FName)                                     AttachSocketName                                            ___ OFFSET(get<T>, {0x38, 4, 0, 0})
-	DMember(float)                                     NormalizedMagnitude                                         ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	SMember(FMovieSceneObjectBindingID)                Instigator                                                  ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FMovieSceneObjectBindingID)                EffectCauser                                                ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            ___ OFFSET(get<T>, {0x70, 8, 0, 0})
-	DMember(int32_t)                                   GameplayEffectLevel                                         ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(int32_t)                                   AbilityLevel                                                ___ OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
-	DMember(bool)                                      bAttachToBinding                                            ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
+	SMember(FGameplayCueTag)                           Cue                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x38, 4, 0, 0})
+	DMember(float)                                     NormalizedMagnitude                                         OFFSET(get<float>, {0x3C, 4, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                Instigator                                                  OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                EffectCauser                                                OFFSET(get<T>, {0x58, 24, 0, 0})
+	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            OFFSET(get<T>, {0x70, 8, 0, 0})
+	DMember(int32_t)                                   GameplayEffectLevel                                         OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	DMember(int32_t)                                   AbilityLevel                                                OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
+	DMember(bool)                                      bAttachToBinding                                            OFFSET(get<bool>, {0x80, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.MovieSceneGameplayCueChannel
@@ -2960,8 +3687,8 @@ class FMovieSceneGameplayCueChannel : public FMovieSceneChannel
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<FMovieSceneGameplayCueKey>)         KeyValues                                                   ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FMovieSceneGameplayCueKey>)         KeyValues                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayAbilities.GameplayAbilityRepAnimMontageNetSerializerConfig

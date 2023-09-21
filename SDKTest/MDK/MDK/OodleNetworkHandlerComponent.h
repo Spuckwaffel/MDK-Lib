@@ -16,14 +16,14 @@ class UOodleNetworkTrainerCommandlet : public UCommandlet
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(bool)                                      bCompressionTest                                            ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
-	DMember(bool)                                      bWriteV5Dictionaries                                        ___ OFFSET(get<bool>, {0x81, 1, 0, 0})
-	DMember(int32_t)                                   HashTableSize                                               ___ OFFSET(get<int32_t>, {0x84, 4, 0, 0})
-	DMember(int32_t)                                   DictionarySize                                              ___ OFFSET(get<int32_t>, {0x88, 4, 0, 0})
-	DMember(int32_t)                                   DictionaryTrials                                            ___ OFFSET(get<int32_t>, {0x8C, 4, 0, 0})
-	DMember(int32_t)                                   TrialRandomness                                             ___ OFFSET(get<int32_t>, {0x90, 4, 0, 0})
-	DMember(int32_t)                                   TrialGenerations                                            ___ OFFSET(get<int32_t>, {0x94, 4, 0, 0})
-	DMember(bool)                                      bNoTrials                                                   ___ OFFSET(get<bool>, {0x98, 1, 0, 0})
+	DMember(bool)                                      bCompressionTest                                            OFFSET(get<bool>, {0x80, 1, 0, 0})
+	DMember(bool)                                      bWriteV5Dictionaries                                        OFFSET(get<bool>, {0x81, 1, 0, 0})
+	DMember(int32_t)                                   HashTableSize                                               OFFSET(get<int32_t>, {0x84, 4, 0, 0})
+	DMember(int32_t)                                   DictionarySize                                              OFFSET(get<int32_t>, {0x88, 4, 0, 0})
+	DMember(int32_t)                                   DictionaryTrials                                            OFFSET(get<int32_t>, {0x8C, 4, 0, 0})
+	DMember(int32_t)                                   TrialRandomness                                             OFFSET(get<int32_t>, {0x90, 4, 0, 0})
+	DMember(int32_t)                                   TrialGenerations                                            OFFSET(get<int32_t>, {0x94, 4, 0, 0})
+	DMember(bool)                                      bNoTrials                                                   OFFSET(get<bool>, {0x98, 1, 0, 0})
 };
 
 /// Enum /Script/OodleNetworkHandlerComponent.EOodleNetworkEnableMode

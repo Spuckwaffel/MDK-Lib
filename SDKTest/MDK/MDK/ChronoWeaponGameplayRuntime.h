@@ -16,9 +16,9 @@ class UAnimInstance_ChronoPanRifle : public UAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	DMember(bool)                                      bIsFiring                                                   ___ OFFSET(get<bool>, {0x348, 1, 0, 0})
-	DMember(bool)                                      bIsReloading                                                ___ OFFSET(get<bool>, {0x349, 1, 0, 0})
-	DMember(float)                                     MagRotationValue                                            ___ OFFSET(get<float>, {0x34C, 4, 0, 0})
-	SMember(FName)                                     ResetMagRotationCurveName                                   ___ OFFSET(get<T>, {0x350, 4, 0, 0})
+	DMember(bool)                                      bIsFiring                                                   OFFSET(get<bool>, {0x348, 1, 0, 0})
+	DMember(bool)                                      bIsReloading                                                OFFSET(get<bool>, {0x349, 1, 0, 0})
+	DMember(float)                                     MagRotationValue                                            OFFSET(get<float>, {0x34C, 4, 0, 0})
+	SMember(FName)                                     ResetMagRotationCurveName                                   OFFSET(get<T>, {0x350, 4, 0, 0})
 };
 

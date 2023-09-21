@@ -16,7 +16,7 @@ class UDeltaFileSaveHandlerTestContext : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UDeltaFileSaveHandler*)                    SaveHandler                                                 ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UDeltaFileSaveHandler*)                    SaveHandler                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/DeltaFileSystem.DeltaFile
@@ -67,9 +67,9 @@ class UDeltaFileSubsystem : public UEngineSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(TMap<UWorld*, FDeltaTrackingHandles>)      WorldToTrackingHandles                                      ___ OFFSET(get<T>, {0x30, 80, 0, 0})
-	CMember(TMap<FName, UObject*>)                     DeltaFiles                                                  ___ OFFSET(get<T>, {0x80, 80, 0, 0})
-	SMember(FSoftClassPath)                            DefaultDeltaFileClass                                       ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
+	CMember(TMap<UWorld*, FDeltaTrackingHandles>)      WorldToTrackingHandles                                      OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<FName, UObject*>)                     DeltaFiles                                                  OFFSET(get<T>, {0x80, 80, 0, 0})
+	SMember(FSoftClassPath)                            DefaultDeltaFileClass                                       OFFSET(get<T>, {0xD0, 24, 0, 0})
 };
 
 /// Class /Script/DeltaFileSystem.MapDelta
@@ -80,10 +80,10 @@ class UMapDelta : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   PackageToApplyTo                                            ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TMap<FGuid, FAddAction>)                   AddActions                                                  ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	CMember(TArray<FUpdateAction>)                     UpdateActions                                               ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TMap<FGuid, FDeleteAction>)                DeleteActions                                               ___ OFFSET(get<T>, {0xA0, 80, 0, 0})
+	SMember(FString)                                   PackageToApplyTo                                            OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TMap<FGuid, FAddAction>)                   AddActions                                                  OFFSET(get<T>, {0x40, 80, 0, 0})
+	CMember(TArray<FUpdateAction>)                     UpdateActions                                               OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TMap<FGuid, FDeleteAction>)                DeleteActions                                               OFFSET(get<T>, {0xA0, 80, 0, 0})
 };
 
 /// Class /Script/DeltaFileSystem.MapDeltaApplier
@@ -104,9 +104,9 @@ class FDeltaAction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     ActorGUID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 CommitTime                                                  ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(uint32_t)                                  DataHash                                                    ___ OFFSET(get<uint32_t>, {0x18, 4, 0, 0})
+	SMember(FGuid)                                     ActorGUID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 CommitTime                                                  OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(uint32_t)                                  DataHash                                                    OFFSET(get<uint32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/DeltaFileSystem.AddAction
@@ -117,9 +117,9 @@ class FAddAction : public FDeltaAction
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FString)                                   JsonStringObjectForPropertyData                             ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x50, 96, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FString)                                   JsonStringObjectForPropertyData                             OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/DeltaFileSystem.UpdateAction
@@ -130,7 +130,7 @@ class FUpdateAction : public FDeltaAction
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   JsonStringObjectForPropertyData                             ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   JsonStringObjectForPropertyData                             OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/DeltaFileSystem.DeleteAction
@@ -141,8 +141,8 @@ class FDeleteAction : public FDeltaAction
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FString)                                   ActorName                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FString)                                   ActorName                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/DeltaFileSystem.DeltaTrackingHandles

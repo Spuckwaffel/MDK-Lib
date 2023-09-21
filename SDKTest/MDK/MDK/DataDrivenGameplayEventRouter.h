@@ -36,9 +36,9 @@ class FGameplayEventDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UScriptStruct*)                            EventType                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(bool)                                      bIsStateful                                                 ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	CMember(EGameplayEventNetPolicy)                   NetPolicy                                                   ___ OFFSET(get<T>, {0x9, 1, 0, 0})
+	CMember(UScriptStruct*)                            EventType                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bIsStateful                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(EGameplayEventNetPolicy)                   NetPolicy                                                   OFFSET(get<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventDescriptor
@@ -59,9 +59,9 @@ class FGameplayEventSubscription : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FMemberReference)                          EventDescriptor                                             ___ OFFSET(get<T>, {0x20, 48, 0, 0})
-	SMember(FGameplayEventListenerHandle)              EventHandle                                                 ___ OFFSET(get<T>, {0x50, 28, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FMemberReference)                          EventDescriptor                                             OFFSET(get<T>, {0x20, 48, 0, 0})
+	SMember(FGameplayEventListenerHandle)              EventHandle                                                 OFFSET(get<T>, {0x50, 28, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunction
@@ -72,8 +72,8 @@ class FGameplayEventHandlerFunction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMemberReference)                          EventHandlerFunction                                        ___ OFFSET(get<T>, {0x0, 48, 0, 0})
-	CMember(TMap<FName, FString>)                      EventHandlerFunctionDefaultValues                           ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	SMember(FMemberReference)                          EventHandlerFunction                                        OFFSET(get<T>, {0x0, 48, 0, 0})
+	CMember(TMap<FName, FString>)                      EventHandlerFunctionDefaultValues                           OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunctions
@@ -84,9 +84,9 @@ class FGameplayEventHandlerFunctions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FGameplayEventHandlerFunction)             OnEventReceived                                             ___ OFFSET(get<T>, {0x0, 128, 0, 0})
-	SMember(FGameplayEventHandlerFunction)             OnStatefulEventApplied                                      ___ OFFSET(get<T>, {0x80, 128, 0, 0})
-	SMember(FGameplayEventHandlerFunction)             OnStatefulEventCleared                                      ___ OFFSET(get<T>, {0x100, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnEventReceived                                             OFFSET(get<T>, {0x0, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventApplied                                      OFFSET(get<T>, {0x80, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventCleared                                      OFFSET(get<T>, {0x100, 128, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventFunction
@@ -97,7 +97,7 @@ class FGameplayEventFunction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FGameplayEventSubscription>)        EventSubscriptions                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FGameplayEventSubscription>)        EventSubscriptions                                          OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/DataDrivenGameplayEventRouter.EGameplayEventNetPolicy

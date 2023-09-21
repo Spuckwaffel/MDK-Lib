@@ -25,6 +25,6 @@ class FFieldNotificationId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     FieldName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FieldName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 

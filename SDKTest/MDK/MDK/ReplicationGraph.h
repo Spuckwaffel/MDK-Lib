@@ -16,12 +16,12 @@ class UReplicationGraph : public UReplicationDriver
 	static inline constexpr uint64_t __MDKClassSize = 1392;
 
 public:
-	CMember(UClass*)                                   ReplicationConnectionManagerClass                           ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UNetDriver*)                               NetDriver                                                   ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TArray<UNetReplicationGraphConnection*>)   Connections                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<UNetReplicationGraphConnection*>)   PendingConnections                                          ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<UReplicationGraphNode*>)            GlobalGraphNodes                                            ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TArray<UReplicationGraphNode*>)            PrepareForReplicationNodes                                  ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(UClass*)                                   ReplicationConnectionManagerClass                           OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UNetDriver*)                               NetDriver                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TArray<UNetReplicationGraphConnection*>)   Connections                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<UNetReplicationGraphConnection*>)   PendingConnections                                          OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<UReplicationGraphNode*>)            GlobalGraphNodes                                            OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TArray<UReplicationGraphNode*>)            PrepareForReplicationNodes                                  OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.BasicReplicationGraph
@@ -32,10 +32,10 @@ class UBasicReplicationGraph : public UReplicationGraph
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	CMember(UReplicationGraphNode_GridSpatialization2D*) GridNode                                                  ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(UReplicationGraphNode_ActorList*)          AlwaysRelevantNode                                          ___ OFFSET(get<T>, {0x570, 8, 0, 0})
-	CMember(TArray<FConnectionAlwaysRelevantNodePair>) AlwaysRelevantForConnectionList                             ___ OFFSET(get<T>, {0x578, 16, 0, 0})
-	CMember(TArray<AActor*>)                           ActorsWithoutNetConnection                                  ___ OFFSET(get<T>, {0x588, 16, 0, 0})
+	CMember(UReplicationGraphNode_GridSpatialization2D*) GridNode                                                  OFFSET(get<T>, {0x568, 8, 0, 0})
+	CMember(UReplicationGraphNode_ActorList*)          AlwaysRelevantNode                                          OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(TArray<FConnectionAlwaysRelevantNodePair>) AlwaysRelevantForConnectionList                             OFFSET(get<T>, {0x578, 16, 0, 0})
+	CMember(TArray<AActor*>)                           ActorsWithoutNetConnection                                  OFFSET(get<T>, {0x588, 16, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphNode
@@ -46,7 +46,7 @@ class UReplicationGraphNode : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<UReplicationGraphNode*>)            AllChildNodes                                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UReplicationGraphNode*>)            AllChildNodes                                               OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphNode_ActorList
@@ -107,8 +107,8 @@ class UReplicationGraphNode_GridCell : public UReplicationGraphNode_ActorList
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(UReplicationGraphNode*)                    DynamicNode                                                 ___ OFFSET(get<T>, {0x110, 8, 0, 0})
-	CMember(UReplicationGraphNode_DormancyNode*)       DormancyNode                                                ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(UReplicationGraphNode*)                    DynamicNode                                                 OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(UReplicationGraphNode_DormancyNode*)       DormancyNode                                                OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphNode_GridSpatialization2D
@@ -129,7 +129,7 @@ class UReplicationGraphNode_AlwaysRelevant : public UReplicationGraphNode
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(UReplicationGraphNode*)                    ChildNode                                                   ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UReplicationGraphNode*)                    ChildNode                                                   OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphNode_AlwaysRelevant_ForConnection
@@ -140,7 +140,7 @@ class UReplicationGraphNode_AlwaysRelevant_ForConnection : public UReplicationGr
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	CMember(TArray<FAlwaysRelevantActorInfo>)          PastRelevantActors                                          ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<FAlwaysRelevantActorInfo>)          PastRelevantActors                                          OFFSET(get<T>, {0xE0, 16, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphNode_TearOff_ForConnection
@@ -151,7 +151,7 @@ class UReplicationGraphNode_TearOff_ForConnection : public UReplicationGraphNode
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<FTearOffActorInfo>)                 TearOffActors                                               ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FTearOffActorInfo>)                 TearOffActors                                               OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.NetReplicationGraphConnection
@@ -162,11 +162,11 @@ class UNetReplicationGraphConnection : public UReplicationConnectionDriver
 	static inline constexpr uint64_t __MDKClassSize = 888;
 
 public:
-	CMember(UNetConnection*)                           NetConnection                                               ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TWeakObjectPtr<AReplicationGraphDebugActor*>) DebugActor                                               ___ OFFSET(get<T>, {0x174, 8, 0, 0})
-	CMember(TArray<FLastLocationGatherInfo>)           LastGatherLocations                                         ___ OFFSET(get<T>, {0x180, 16, 0, 0})
-	CMember(TArray<UReplicationGraphNode*>)            ConnectionGraphNodes                                        ___ OFFSET(get<T>, {0x240, 16, 0, 0})
-	CMember(UReplicationGraphNode_TearOff_ForConnection*) TearOffNode                                              ___ OFFSET(get<T>, {0x250, 8, 0, 0})
+	CMember(UNetConnection*)                           NetConnection                                               OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TWeakObjectPtr<AReplicationGraphDebugActor*>) DebugActor                                               OFFSET(get<T>, {0x174, 8, 0, 0})
+	CMember(TArray<FLastLocationGatherInfo>)           LastGatherLocations                                         OFFSET(get<T>, {0x180, 16, 0, 0})
+	CMember(TArray<UReplicationGraphNode*>)            ConnectionGraphNodes                                        OFFSET(get<T>, {0x240, 16, 0, 0})
+	CMember(UReplicationGraphNode_TearOff_ForConnection*) TearOffNode                                              OFFSET(get<T>, {0x250, 8, 0, 0})
 };
 
 /// Class /Script/ReplicationGraph.ReplicationGraphDebugActor
@@ -177,10 +177,31 @@ class AReplicationGraphDebugActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	CMember(UReplicationGraph*)                        ReplicationGraph                                            ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UNetReplicationGraphConnection*)           ConnectionManager                                           ___ OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UReplicationGraph*)                        ReplicationGraph                                            OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UNetReplicationGraphConnection*)           ConnectionManager                                           OFFSET(get<T>, {0x298, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging
+	// void ServerStopDebugging();                                                                                              // [0x2154680] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging
+	// void ServerStartDebugging();                                                                                             // [0x6efe7b0] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass
+	// void ServerSetPeriodFrameForClass(UClass* Class, int32_t PeriodFrame);                                                   // [0x6efe6e8] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass
+	// void ServerSetCullDistanceForClass(UClass* Class, float CullDistance);                                                   // [0x6efe620] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint
+	// void ServerSetConditionalActorBreakpoint(AActor* Actor);                                                                 // [0x5de4cfc] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerPrintCullDistances
+	// void ServerPrintCullDistances();                                                                                         // [0xfcccd4] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo
+	// void ServerPrintAllActorInfo(FString Str);                                                                               // [0x6efdf70] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo
+	// void ServerCellInfo();                                                                                                   // [0x2c813d4] Net|NetReliableNative|Event|Public|NetServer 
+	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo
+	// void ClientCellInfo(FVector CellLocation, FVector CellExtent, TArray<AActor*> Actors);                                   // [0x6efdb9c] Net|NetReliableNative|Event|Public|HasDefaults|NetClient 
 /// Struct /Script/ReplicationGraph.ConnectionAlwaysRelevantNodePair
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FConnectionAlwaysRelevantNodePair : public MDKStruct
@@ -189,8 +210,8 @@ class FConnectionAlwaysRelevantNodePair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UNetConnection*)                           NetConnection                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UReplicationGraphNode_AlwaysRelevant_ForConnection*) Node                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UNetConnection*)                           NetConnection                                               OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UReplicationGraphNode_AlwaysRelevant_ForConnection*) Node                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/ReplicationGraph.AlwaysRelevantActorInfo
@@ -201,9 +222,9 @@ class FAlwaysRelevantActorInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UNetConnection*)                           Connection                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(AActor*)                                   LastViewer                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(AActor*)                                   LastViewTarget                                              ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UNetConnection*)                           Connection                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(AActor*)                                   LastViewer                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(AActor*)                                   LastViewTarget                                              OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/ReplicationGraph.TearOffActorInfo
@@ -214,7 +235,7 @@ class FTearOffActorInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(AActor*)                                   Actor                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/ReplicationGraph.LastLocationGatherInfo
@@ -225,9 +246,9 @@ class FLastLocationGatherInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UNetConnection*)                           Connection                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   LastLocation                                                ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   LastOutOfRangeLocationCheck                                 ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(UNetConnection*)                           Connection                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FVector)                                   LastLocation                                                OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   LastOutOfRangeLocationCheck                                 OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ReplicationGraph.ClassReplicationInfo
@@ -238,13 +259,13 @@ class FClassReplicationInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(float)                                     DistancePriorityScale                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     StarvationPriorityScale                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     AccumulatedNetPriorityBias                                  ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(uint16_t)                                  ReplicationPeriodFrame                                      ___ OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
-	DMember(uint16_t)                                  FastPath_ReplicationPeriodFrame                             ___ OFFSET(get<uint16_t>, {0xE, 2, 0, 0})
-	DMember(uint16_t)                                  ActorChannelFrameTimeout                                    ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(float)                                     CullDistance                                                ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     CullDistanceSquared                                         ___ OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     DistancePriorityScale                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     StarvationPriorityScale                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     AccumulatedNetPriorityBias                                  OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(uint16_t)                                  ReplicationPeriodFrame                                      OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
+	DMember(uint16_t)                                  FastPath_ReplicationPeriodFrame                             OFFSET(get<uint16_t>, {0xE, 2, 0, 0})
+	DMember(uint16_t)                                  ActorChannelFrameTimeout                                    OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(float)                                     CullDistance                                                OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     CullDistanceSquared                                         OFFSET(get<float>, {0x68, 4, 0, 0})
 };
 

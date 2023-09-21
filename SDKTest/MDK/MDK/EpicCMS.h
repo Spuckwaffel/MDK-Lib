@@ -14,9 +14,9 @@ class FDownloadCacheEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   FilePath                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   SourceUrl                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FDateTime)                                 LastAccessTime                                              ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   SourceUrl                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDateTime)                                 LastAccessTime                                              OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicCMS.DownloadCache
@@ -27,7 +27,7 @@ class FDownloadCache : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	CMember(TMap<FString, FDownloadCacheEntry>)        Cache                                                       ___ OFFSET(get<T>, {0x8, 80, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(TMap<FString, FDownloadCacheEntry>)        Cache                                                       OFFSET(get<T>, {0x8, 80, 0, 0})
 };
 

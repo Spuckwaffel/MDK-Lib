@@ -27,7 +27,7 @@ class UGameplayTagTableManager : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TArray<FManagedGameplayTagDataTableItem>)  Tables                                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FManagedGameplayTagDataTableItem>)  Tables                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.TagTableManagerHelper
@@ -48,15 +48,15 @@ class FGameplayStatMetadataTableRow : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   BackendName                                                 ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	CMember(TArray<EEpicLeaderboardTimeWindow>)        Windows                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(EEpicLeaderboardUpdateFunction)            Metric                                                      ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	CMember(EEpicLeaderboardDataType)                  DataType                                                    ___ OFFSET(get<T>, {0x41, 1, 0, 0})
-	DMember(bool)                                      bPublish                                                    ___ OFFSET(get<bool>, {0x42, 1, 0, 0})
-	DMember(int32_t)                                   WeeklyRefreshInterval                                       ___ OFFSET(get<int32_t>, {0x44, 4, 0, 0})
-	DMember(bool)                                      bExportToBackEnd                                            ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bShowInFrontEnd                                             ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
+	SMember(FString)                                   BackendName                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<EEpicLeaderboardTimeWindow>)        Windows                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(EEpicLeaderboardUpdateFunction)            Metric                                                      OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(EEpicLeaderboardDataType)                  DataType                                                    OFFSET(get<T>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bPublish                                                    OFFSET(get<bool>, {0x42, 1, 0, 0})
+	DMember(int32_t)                                   WeeklyRefreshInterval                                       OFFSET(get<int32_t>, {0x44, 4, 0, 0})
+	DMember(bool)                                      bExportToBackEnd                                            OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(bool)                                      bShowInFrontEnd                                             OFFSET(get<bool>, {0x49, 1, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.GameplayStatTag
@@ -67,7 +67,7 @@ class FGameplayStatTag : public FGameplayTag
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.ManagedGameplayTagDataTableItem
@@ -78,8 +78,8 @@ class FManagedGameplayTagDataTableItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              RootTag                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UDataTable*)                               DataTable                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              RootTag                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UDataTable*)                               DataTable                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardDataType

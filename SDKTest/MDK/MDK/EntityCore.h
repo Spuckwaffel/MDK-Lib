@@ -76,7 +76,7 @@ class UEntity : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(ULevel*)                                   Level                                                       ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(ULevel*)                                   Level                                                       OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/EntityCore.EntityCoreSubsystem
@@ -87,9 +87,9 @@ class UEntityCoreSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(TMap<uint32_t, FEntityComponentContainer>) ComponentMap                                                ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	CMember(TArray<UEntityComponent*>)                 ComponentArray                                              ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	CMember(TMap<uint32_t, UEntity*>)                  Entities                                                    ___ OFFSET(get<T>, {0xF8, 80, 0, 0})
+	CMember(TMap<uint32_t, FEntityComponentContainer>) ComponentMap                                                OFFSET(get<T>, {0x40, 80, 0, 0})
+	CMember(TArray<UEntityComponent*>)                 ComponentArray                                              OFFSET(get<T>, {0xE8, 16, 0, 0})
+	CMember(TMap<uint32_t, UEntity*>)                  Entities                                                    OFFSET(get<T>, {0xF8, 80, 0, 0})
 };
 
 /// Class /Script/EntityCore.EntityEnableableComponent
@@ -100,10 +100,15 @@ class UEntityEnableableComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(bool)                                      IsEnabled                                                   ___ OFFSET(get<bool>, {0x58, 1, 1, 0})
-	DMember(bool)                                      LastIsEnabled                                               ___ OFFSET(get<bool>, {0x58, 1, 1, 1})
+	DMember(bool)                                      IsEnabled                                                   OFFSET(get<bool>, {0x58, 1, 1, 0})
+	DMember(bool)                                      LastIsEnabled                                               OFFSET(get<bool>, {0x58, 1, 1, 1})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityCore.EntityEnableableComponent.OnRep_Enabled
+	// void OnRep_Enabled();                                                                                                    // [0x66cac78] Final|Native|Private 
 /// Class /Script/EntityCore.EntityTickableComponent
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UEntityTickableComponent : public UEntityEnableableComponent
@@ -142,7 +147,7 @@ class FEntityPositionComponentData : public FComponentData
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   WorldPosition                                               ___ OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   WorldPosition                                               OFFSET(get<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityRotationComponentData
@@ -153,7 +158,7 @@ class FEntityRotationComponentData : public FComponentData
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRotator)                                  WorldRotation                                               ___ OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  WorldRotation                                               OFFSET(get<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityScaleComponentData
@@ -164,7 +169,7 @@ class FEntityScaleComponentData : public FComponentData
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   WorldScale3D                                                ___ OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   WorldScale3D                                                OFFSET(get<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityCoreSystemRelativePositionComponentData
@@ -185,7 +190,7 @@ class FEntityComponentContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UEntityComponent*>)                 Array                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UEntityComponent*>)                 Array                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityTickFunction

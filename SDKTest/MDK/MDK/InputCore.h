@@ -25,7 +25,7 @@ class FKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     KeyName                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     KeyName                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Enum /Script/InputCore.ETouchIndex

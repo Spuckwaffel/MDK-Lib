@@ -15,9 +15,9 @@ class UWmfMediaSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      AllowNonStandardCodecs                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      LowLatency                                                  ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(bool)                                      NativeAudioOut                                              ___ OFFSET(get<bool>, {0x2A, 1, 0, 0})
-	DMember(bool)                                      HardwareAcceleratedVideoDecoding                            ___ OFFSET(get<bool>, {0x2B, 1, 0, 0})
+	DMember(bool)                                      AllowNonStandardCodecs                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      LowLatency                                                  OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      NativeAudioOut                                              OFFSET(get<bool>, {0x2A, 1, 0, 0})
+	DMember(bool)                                      HardwareAcceleratedVideoDecoding                            OFFSET(get<bool>, {0x2B, 1, 0, 0})
 };
 

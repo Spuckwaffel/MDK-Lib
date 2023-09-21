@@ -15,9 +15,9 @@ class URejoinCheck : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	CMember(ERejoinStatus)                             LastKnownStatus                                             ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bRejoinAfterCheck                                           ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(bool)                                      bAttemptingRejoin                                           ___ OFFSET(get<bool>, {0x2A, 1, 0, 0})
+	CMember(ERejoinStatus)                             LastKnownStatus                                             OFFSET(get<T>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bRejoinAfterCheck                                           OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      bAttemptingRejoin                                           OFFSET(get<bool>, {0x2A, 1, 0, 0})
 };
 
 /// Enum /Script/Rejoin.ERejoinStatus

@@ -17,7 +17,7 @@ class UStateTreeSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(bool)                                      bAutoStartDebuggerTracesOnNonEditorTargets                  ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bAutoStartDebuggerTracesOnNonEditorTargets                  OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Class /Script/StateTreeModule.StateTreeNodeBlueprintBase
@@ -28,9 +28,16 @@ class UStateTreeNodeBlueprintBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UObject*)                                  CachedOwner                                                 ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UObject*)                                  CachedOwner                                                 OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/StateTreeModule.StateTreeNodeBlueprintBase.SendEvent
+	// void SendEvent(FStateTreeEvent& Event);                                                                                  // [0x64b9328] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
+	// void RequestTransition(FStateTreeStateLink& TargetState, EStateTreeTransitionPriority Priority);                         // [0x64b9188] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/StateTreeModule.StateTreeConditionBlueprintBase
 /// Size: 0x0008 (0x000040 - 0x000048)
 class UStateTreeConditionBlueprintBase : public UStateTreeNodeBlueprintBase
@@ -59,12 +66,29 @@ class UStateTreeTaskBlueprintBase : public UStateTreeNodeBlueprintBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(bool)                                      bShouldStateChangeOnReselect                                ___ OFFSET(get<bool>, {0x41, 1, 1, 0})
-	DMember(bool)                                      bShouldCallTickOnlyOnEvents                                 ___ OFFSET(get<bool>, {0x41, 1, 1, 2})
-	DMember(bool)                                      bShouldCopyBoundPropertiesOnTick                            ___ OFFSET(get<bool>, {0x41, 1, 1, 3})
-	DMember(bool)                                      bShouldCopyBoundPropertiesOnExitState                       ___ OFFSET(get<bool>, {0x41, 1, 1, 4})
+	DMember(bool)                                      bShouldStateChangeOnReselect                                OFFSET(get<bool>, {0x41, 1, 1, 0})
+	DMember(bool)                                      bShouldCallTickOnlyOnEvents                                 OFFSET(get<bool>, {0x41, 1, 1, 2})
+	DMember(bool)                                      bShouldCopyBoundPropertiesOnTick                            OFFSET(get<bool>, {0x41, 1, 1, 3})
+	DMember(bool)                                      bShouldCopyBoundPropertiesOnExitState                       OFFSET(get<bool>, {0x41, 1, 1, 4})
 };
 
+
+
+	/// Functions
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveTick
+	// EStateTreeRunStatus ReceiveTick(float DeltaTime);                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveStateCompleted
+	// void ReceiveStateCompleted(EStateTreeRunStatus CompletionStatus, FStateTreeActiveStates CompletedActiveStates);          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentTick
+	// void ReceiveLatentTick(float DeltaTime);                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentEnterState
+	// void ReceiveLatentEnterState(FStateTreeTransitionResult& TRANSITION);                                                    // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveExitState
+	// void ReceiveExitState(FStateTreeTransitionResult& TRANSITION);                                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveEnterState
+	// EStateTreeRunStatus ReceiveEnterState(FStateTreeTransitionResult& TRANSITION);                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.FinishTask
+	// void FinishTask(bool bSucceeded);                                                                                        // [0x64b910c] Final|Native|Protected|BlueprintCallable 
 /// Class /Script/StateTreeModule.StateTree
 /// Size: 0x0150 (0x000030 - 0x000180)
 class UStateTree : public UDataAsset
@@ -73,28 +97,28 @@ class UStateTree : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(uint32_t)                                  LastCompiledEditorDataHash                                  ___ OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
-	CMember(UStateTreeSchema*)                         Schema                                                      ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(TArray<FCompactStateTreeState>)            States                                                      ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FCompactStateTransition>)           Transitions                                                 ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FInstancedStructContainer)                 Nodes                                                       ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FStateTreeInstanceData)                    DefaultInstanceData                                         ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FStateTreeInstanceData)                    SharedInstanceData                                          ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FStateTreeExternalDataDesc>)        ContextDataDescs                                            ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FStateTreePropertyBindings)                PropertyBindings                                            ___ OFFSET(get<T>, {0xB8, 88, 0, 0})
-	CMember(TArray<FStateTreeStateIdToHandle>)         IDToStateMappings                                           ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	CMember(TArray<FStateTreeNodeIdToIndex>)           IDToNodeMappings                                            ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TArray<FStateTreeTransitionIdToIndex>)     IDToTransitionMappings                                      ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FInstancedPropertyBag)                     Parameters                                                  ___ OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FStateTreeIndex8)                          ParametersDataViewIndex                                     ___ OFFSET(get<T>, {0x150, 1, 0, 0})
-	DMember(uint16_t)                                  EvaluatorsBegin                                             ___ OFFSET(get<uint16_t>, {0x152, 2, 0, 0})
-	DMember(uint16_t)                                  EvaluatorsNum                                               ___ OFFSET(get<uint16_t>, {0x154, 2, 0, 0})
-	DMember(uint16_t)                                  GlobalTasksBegin                                            ___ OFFSET(get<uint16_t>, {0x156, 2, 0, 0})
-	DMember(uint16_t)                                  GlobalTasksNum                                              ___ OFFSET(get<uint16_t>, {0x158, 2, 0, 0})
-	DMember(bool)                                      bHasGlobalTransitionTasks                                   ___ OFFSET(get<bool>, {0x15A, 1, 0, 0})
-	CMember(TArray<FStateTreeExternalDataDesc>)        ExternalDataDescs                                           ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(int32_t)                                   ExternalDataBaseIndex                                       ___ OFFSET(get<int32_t>, {0x170, 4, 0, 0})
-	DMember(int32_t)                                   NumDataViews                                                ___ OFFSET(get<int32_t>, {0x174, 4, 0, 0})
+	DMember(uint32_t)                                  LastCompiledEditorDataHash                                  OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
+	CMember(UStateTreeSchema*)                         Schema                                                      OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TArray<FCompactStateTreeState>)            States                                                      OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FCompactStateTransition>)           Transitions                                                 OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FInstancedStructContainer)                 Nodes                                                       OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FStateTreeInstanceData)                    DefaultInstanceData                                         OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FStateTreeInstanceData)                    SharedInstanceData                                          OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FStateTreeExternalDataDesc>)        ContextDataDescs                                            OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FStateTreePropertyBindings)                PropertyBindings                                            OFFSET(get<T>, {0xB8, 88, 0, 0})
+	CMember(TArray<FStateTreeStateIdToHandle>)         IDToStateMappings                                           OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(TArray<FStateTreeNodeIdToIndex>)           IDToNodeMappings                                            OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(TArray<FStateTreeTransitionIdToIndex>)     IDToTransitionMappings                                      OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FInstancedPropertyBag)                     Parameters                                                  OFFSET(get<T>, {0x140, 16, 0, 0})
+	SMember(FStateTreeIndex8)                          ParametersDataViewIndex                                     OFFSET(get<T>, {0x150, 1, 0, 0})
+	DMember(uint16_t)                                  EvaluatorsBegin                                             OFFSET(get<uint16_t>, {0x152, 2, 0, 0})
+	DMember(uint16_t)                                  EvaluatorsNum                                               OFFSET(get<uint16_t>, {0x154, 2, 0, 0})
+	DMember(uint16_t)                                  GlobalTasksBegin                                            OFFSET(get<uint16_t>, {0x156, 2, 0, 0})
+	DMember(uint16_t)                                  GlobalTasksNum                                              OFFSET(get<uint16_t>, {0x158, 2, 0, 0})
+	DMember(bool)                                      bHasGlobalTransitionTasks                                   OFFSET(get<bool>, {0x15A, 1, 0, 0})
+	CMember(TArray<FStateTreeExternalDataDesc>)        ExternalDataDescs                                           OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(int32_t)                                   ExternalDataBaseIndex                                       OFFSET(get<int32_t>, {0x170, 4, 0, 0})
+	DMember(int32_t)                                   NumDataViews                                                OFFSET(get<int32_t>, {0x174, 4, 0, 0})
 };
 
 /// Class /Script/StateTreeModule.StateTreeSchema
@@ -115,8 +139,8 @@ class FStateTreeAnyEnum : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(uint32_t)                                  Value                                                       ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	CMember(UEnum*)                                    Enum                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(uint32_t)                                  Value                                                       OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	CMember(UEnum*)                                    Enum                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeExternalDataHandle
@@ -127,7 +151,7 @@ class FStateTreeExternalDataHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	SMember(FStateTreeIndex16)                         DataViewIndex                                               ___ OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         DataViewIndex                                               OFFSET(get<T>, {0x0, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeIndex16
@@ -138,7 +162,7 @@ class FStateTreeIndex16 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(uint16_t)                                  Value                                                       ___ OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  Value                                                       OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeExternalDataDesc
@@ -149,10 +173,10 @@ class FStateTreeExternalDataDesc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UStruct*)                                  Struct                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FStateTreeExternalDataHandle)              Handle                                                      ___ OFFSET(get<T>, {0xC, 2, 0, 0})
-	CMember(EStateTreeExternalDataRequirement)         Requirement                                                 ___ OFFSET(get<T>, {0xE, 1, 0, 0})
+	CMember(UStruct*)                                  Struct                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FStateTreeExternalDataHandle)              Handle                                                      OFFSET(get<T>, {0xC, 2, 0, 0})
+	CMember(EStateTreeExternalDataRequirement)         Requirement                                                 OFFSET(get<T>, {0xE, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeTransitionRequest
@@ -163,9 +187,9 @@ class FStateTreeTransitionRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
 public:
-	SMember(FStateTreeStateHandle)                     SourceState                                                 ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FStateTreeStateHandle)                     TargetState                                                 ___ OFFSET(get<T>, {0x2, 2, 0, 0})
-	CMember(EStateTreeTransitionPriority)              Priority                                                    ___ OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FStateTreeStateHandle)                     SourceState                                                 OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FStateTreeStateHandle)                     TargetState                                                 OFFSET(get<T>, {0x2, 2, 0, 0})
+	CMember(EStateTreeTransitionPriority)              Priority                                                    OFFSET(get<T>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeStateHandle
@@ -176,7 +200,7 @@ class FStateTreeStateHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(uint16_t)                                  Index                                                       ___ OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  Index                                                       OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeActiveStates
@@ -187,8 +211,8 @@ class FStateTreeActiveStates : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
 public:
-	SMember(FStateTreeStateHandle)                     States                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(char)                                      NumStates                                                   ___ OFFSET(get<char>, {0x10, 1, 0, 0})
+	SMember(FStateTreeStateHandle)                     States                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(char)                                      NumStates                                                   OFFSET(get<char>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeTransitionSource
@@ -209,14 +233,14 @@ class FStateTreeTransitionResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 46;
 
 public:
-	SMember(FStateTreeActiveStates)                    CurrentActiveStates                                         ___ OFFSET(get<T>, {0x0, 18, 0, 0})
-	CMember(EStateTreeRunStatus)                       CurrentRunStatus                                            ___ OFFSET(get<T>, {0x12, 1, 0, 0})
-	SMember(FStateTreeStateHandle)                     SourceState                                                 ___ OFFSET(get<T>, {0x14, 2, 0, 0})
-	SMember(FStateTreeStateHandle)                     TargetState                                                 ___ OFFSET(get<T>, {0x16, 2, 0, 0})
-	SMember(FStateTreeActiveStates)                    NextActiveStates                                            ___ OFFSET(get<T>, {0x18, 18, 0, 0})
-	SMember(FStateTreeStateHandle)                     CurrentState                                                ___ OFFSET(get<T>, {0x2A, 2, 0, 0})
-	CMember(EStateTreeStateChangeType)                 ChangeType                                                  ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	CMember(EStateTreeTransitionPriority)              Priority                                                    ___ OFFSET(get<T>, {0x2D, 1, 0, 0})
+	SMember(FStateTreeActiveStates)                    CurrentActiveStates                                         OFFSET(get<T>, {0x0, 18, 0, 0})
+	CMember(EStateTreeRunStatus)                       CurrentRunStatus                                            OFFSET(get<T>, {0x12, 1, 0, 0})
+	SMember(FStateTreeStateHandle)                     SourceState                                                 OFFSET(get<T>, {0x14, 2, 0, 0})
+	SMember(FStateTreeStateHandle)                     TargetState                                                 OFFSET(get<T>, {0x16, 2, 0, 0})
+	SMember(FStateTreeActiveStates)                    NextActiveStates                                            OFFSET(get<T>, {0x18, 18, 0, 0})
+	SMember(FStateTreeStateHandle)                     CurrentState                                                OFFSET(get<T>, {0x2A, 2, 0, 0})
+	CMember(EStateTreeStateChangeType)                 ChangeType                                                  OFFSET(get<T>, {0x2C, 1, 0, 0})
+	CMember(EStateTreeTransitionPriority)              Priority                                                    OFFSET(get<T>, {0x2D, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeExecutionState
@@ -237,7 +261,7 @@ class FStateTreeIndex8 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(char)                                      Value                                                       ___ OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      Value                                                       OFFSET(get<char>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeNodeBase
@@ -248,11 +272,11 @@ class FStateTreeNodeBase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FStateTreeIndex16)                         BindingsBatch                                               ___ OFFSET(get<T>, {0xC, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         DataViewIndex                                               ___ OFFSET(get<T>, {0xE, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         InstanceIndex                                               ___ OFFSET(get<T>, {0x10, 2, 0, 0})
-	DMember(bool)                                      bInstanceIsObject                                           ___ OFFSET(get<bool>, {0x12, 1, 1, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FStateTreeIndex16)                         BindingsBatch                                               OFFSET(get<T>, {0xC, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         DataViewIndex                                               OFFSET(get<T>, {0xE, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         InstanceIndex                                               OFFSET(get<T>, {0x10, 2, 0, 0})
+	DMember(bool)                                      bInstanceIsObject                                           OFFSET(get<bool>, {0x12, 1, 1, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeConditionBase
@@ -263,9 +287,9 @@ class FStateTreeConditionBase : public FStateTreeNodeBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(EStateTreeConditionOperand)                Operand                                                     ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	DMember(int8_t)                                    DeltaIndent                                                 ___ OFFSET(get<int8_t>, {0x19, 1, 0, 0})
-	CMember(EStateTreeConditionEvaluationMode)         EvaluationMode                                              ___ OFFSET(get<T>, {0x1A, 1, 0, 0})
+	CMember(EStateTreeConditionOperand)                Operand                                                     OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(int8_t)                                    DeltaIndent                                                 OFFSET(get<int8_t>, {0x19, 1, 0, 0})
+	CMember(EStateTreeConditionEvaluationMode)         EvaluationMode                                              OFFSET(get<T>, {0x1A, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeBlueprintConditionWrapper
@@ -276,7 +300,7 @@ class FStateTreeBlueprintConditionWrapper : public FStateTreeConditionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UClass*)                                   ConditionClass                                              ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(UClass*)                                   ConditionClass                                              OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeEvaluatorBase
@@ -297,7 +321,7 @@ class FStateTreeBlueprintEvaluatorWrapper : public FStateTreeEvaluatorBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(UClass*)                                   EvaluatorClass                                              ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(UClass*)                                   EvaluatorClass                                              OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeTaskBase
@@ -308,7 +332,7 @@ class FStateTreeTaskBase : public FStateTreeNodeBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bTaskEnabled                                                ___ OFFSET(get<bool>, {0x18, 1, 1, 6})
+	DMember(bool)                                      bTaskEnabled                                                OFFSET(get<bool>, {0x18, 1, 1, 6})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeBlueprintTaskWrapper
@@ -319,7 +343,7 @@ class FStateTreeBlueprintTaskWrapper : public FStateTreeTaskBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UClass*)                                   TaskClass                                                   ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(UClass*)                                   TaskClass                                                   OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareIntConditionInstanceData
@@ -330,8 +354,8 @@ class FStateTreeCompareIntConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   Left                                                        ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Right                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Left                                                        OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Right                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeConditionCommonBase
@@ -352,8 +376,8 @@ class FStateTreeCompareIntCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(EGenericAICheck)                           Operator                                                    ___ OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(EGenericAICheck)                           Operator                                                    OFFSET(get<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareFloatConditionInstanceData
@@ -364,8 +388,8 @@ class FStateTreeCompareFloatConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(double)                                    Left                                                        ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Right                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Left                                                        OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Right                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareFloatCondition
@@ -376,8 +400,8 @@ class FStateTreeCompareFloatCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(EGenericAICheck)                           Operator                                                    ___ OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(EGenericAICheck)                           Operator                                                    OFFSET(get<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareBoolConditionInstanceData
@@ -388,8 +412,8 @@ class FStateTreeCompareBoolConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(bool)                                      bLeft                                                       ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bRight                                                      ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bLeft                                                       OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bRight                                                      OFFSET(get<bool>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareBoolCondition
@@ -400,7 +424,7 @@ class FStateTreeCompareBoolCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareEnumConditionInstanceData
@@ -411,8 +435,8 @@ class FStateTreeCompareEnumConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FStateTreeAnyEnum)                         Left                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FStateTreeAnyEnum)                         Right                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FStateTreeAnyEnum)                         Left                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeAnyEnum)                         Right                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareEnumCondition
@@ -423,7 +447,7 @@ class FStateTreeCompareEnumCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareDistanceConditionInstanceData
@@ -434,9 +458,9 @@ class FStateTreeCompareDistanceConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Source                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(double)                                    Distance                                                    ___ OFFSET(get<double>, {0x30, 8, 0, 0})
+	SMember(FVector)                                   Source                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(double)                                    Distance                                                    OFFSET(get<double>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeCompareDistanceCondition
@@ -447,8 +471,8 @@ class FStateTreeCompareDistanceCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(EGenericAICheck)                           Operator                                                    ___ OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(EGenericAICheck)                           Operator                                                    OFFSET(get<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeRandomConditionInstanceData
@@ -459,7 +483,7 @@ class FStateTreeRandomConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(float)                                     Threshold                                                   ___ OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Threshold                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeRandomCondition
@@ -480,8 +504,8 @@ class FGameplayTagMatchConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     TagContainer                                                ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TagContainer                                                OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.GameplayTagMatchCondition
@@ -492,8 +516,8 @@ class FGameplayTagMatchCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bExactMatch                                                 ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bExactMatch                                                 OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.GameplayTagContainerMatchConditionInstanceData
@@ -504,8 +528,8 @@ class FGameplayTagContainerMatchConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayTagContainer)                     TagContainer                                                ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     OtherContainer                                              ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagContainer                                                OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     OtherContainer                                              OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.GameplayTagContainerMatchCondition
@@ -516,9 +540,9 @@ class FGameplayTagContainerMatchCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(EGameplayContainerMatchType)               MatchType                                                   ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bExactMatch                                                 ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
+	CMember(EGameplayContainerMatchType)               MatchType                                                   OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bExactMatch                                                 OFFSET(get<bool>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x22, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.GameplayTagQueryConditionInstanceData
@@ -529,7 +553,7 @@ class FGameplayTagQueryConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGameplayTagContainer)                     TagContainer                                                ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagContainer                                                OFFSET(get<T>, {0x0, 32, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.GameplayTagQueryCondition
@@ -540,8 +564,8 @@ class FGameplayTagQueryCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    ___ OFFSET(get<T>, {0x20, 72, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x20, 72, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectIsValidConditionInstanceData
@@ -552,7 +576,7 @@ class FStateTreeObjectIsValidConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UObject*)                                  Object                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectIsValidCondition
@@ -563,7 +587,7 @@ class FStateTreeObjectIsValidCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectEqualsConditionInstanceData
@@ -574,8 +598,8 @@ class FStateTreeObjectEqualsConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UObject*)                                  Left                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UObject*)                                  Right                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UObject*)                                  Left                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UObject*)                                  Right                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectEqualsCondition
@@ -586,7 +610,7 @@ class FStateTreeObjectEqualsCondition : public FStateTreeConditionCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectIsChildOfClassConditionInstanceData
@@ -597,8 +621,8 @@ class FStateTreeObjectIsChildOfClassConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UObject*)                                  Object                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UClass*)                                   Class                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeObjectIsChildOfClassCondition
@@ -609,7 +633,7 @@ class FStateTreeObjectIsChildOfClassCondition : public FStateTreeConditionCommon
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeEvaluatorCommonBase
@@ -630,9 +654,9 @@ class FStateTreeEvent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FInstancedStruct)                          Payload                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     Origin                                                      ___ OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FInstancedStruct)                          Payload                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Origin                                                      OFFSET(get<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeEventQueue
@@ -643,7 +667,7 @@ class FStateTreeEventQueue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FStateTreeEvent>)                   Events                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FStateTreeEvent>)                   Events                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeInstanceStorage
@@ -654,10 +678,10 @@ class FStateTreeInstanceStorage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FInstancedStructContainer)                 InstanceStructs                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<UObject*>)                          InstanceObjects                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FStateTreeEventQueue)                      EventQueue                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FStateTreeTransitionRequest>)       TransitionRequests                                          ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FInstancedStructContainer)                 InstanceStructs                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UObject*>)                          InstanceObjects                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FStateTreeEventQueue)                      EventQueue                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FStateTreeTransitionRequest>)       TransitionRequests                                          OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeInstanceData
@@ -668,7 +692,7 @@ class FStateTreeInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FInstancedStruct)                          InstanceStorage                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStruct)                          InstanceStorage                                             OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeBindableStructDesc
@@ -679,9 +703,9 @@ class FStateTreeBindableStructDesc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UStruct*)                                  Struct                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(EStateTreeBindableStructSource)            DataSource                                                  ___ OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(UStruct*)                                  Struct                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(EStateTreeBindableStructSource)            DataSource                                                  OFFSET(get<T>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyPathSegment
@@ -692,9 +716,9 @@ class FStateTreePropertyPathSegment : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   ArrayIndex                                                  ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	CMember(UStruct*)                                  InstanceStruct                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   ArrayIndex                                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(UStruct*)                                  InstanceStruct                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyPath
@@ -705,7 +729,7 @@ class FStateTreePropertyPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FStateTreePropertyPathSegment>)     Segments                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FStateTreePropertyPathSegment>)     Segments                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeEditorPropertyPath
@@ -716,8 +740,8 @@ class FStateTreeEditorPropertyPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     StructID                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FString>)                           Path                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     StructID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           Path                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyPathBinding
@@ -728,9 +752,9 @@ class FStateTreePropertyPathBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FStateTreePropertyPath)                    SourcePropertyPath                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FStateTreePropertyPath)                    TargetPropertyPath                                          ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FStateTreeIndex16)                         CompiledSourceStructIndex                                   ___ OFFSET(get<T>, {0x20, 2, 0, 0})
+	SMember(FStateTreePropertyPath)                    SourcePropertyPath                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreePropertyPath)                    TargetPropertyPath                                          OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FStateTreeIndex16)                         CompiledSourceStructIndex                                   OFFSET(get<T>, {0x20, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertySegment
@@ -741,10 +765,10 @@ class FStateTreePropertySegment : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FStateTreeIndex16)                         ArrayIndex                                                  ___ OFFSET(get<T>, {0x4, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         NextIndex                                                   ___ OFFSET(get<T>, {0x6, 2, 0, 0})
-	CMember(EStateTreePropertyAccessType)              Type                                                        ___ OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FStateTreeIndex16)                         ArrayIndex                                                  OFFSET(get<T>, {0x4, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         NextIndex                                                   OFFSET(get<T>, {0x6, 2, 0, 0})
+	CMember(EStateTreePropertyAccessType)              Type                                                        OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyBinding
@@ -755,10 +779,10 @@ class FStateTreePropertyBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FStateTreePropertySegment)                 SourcePath                                                  ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FStateTreePropertySegment)                 TargetPath                                                  ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FStateTreeIndex16)                         SourceStructIndex                                           ___ OFFSET(get<T>, {0x18, 2, 0, 0})
-	CMember(EStateTreePropertyCopyType)                CopyType                                                    ___ OFFSET(get<T>, {0x1A, 1, 0, 0})
+	SMember(FStateTreePropertySegment)                 SourcePath                                                  OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FStateTreePropertySegment)                 TargetPath                                                  OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FStateTreeIndex16)                         SourceStructIndex                                           OFFSET(get<T>, {0x18, 2, 0, 0})
+	CMember(EStateTreePropertyCopyType)                CopyType                                                    OFFSET(get<T>, {0x1A, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyIndirection
@@ -769,11 +793,11 @@ class FStateTreePropertyIndirection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FStateTreeIndex16)                         ArrayIndex                                                  ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	DMember(uint16_t)                                  Offset                                                      ___ OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         NextIndex                                                   ___ OFFSET(get<T>, {0x4, 2, 0, 0})
-	CMember(EStateTreePropertyAccessType)              Type                                                        ___ OFFSET(get<T>, {0x6, 1, 0, 0})
-	CMember(UStruct*)                                  InstanceStruct                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FStateTreeIndex16)                         ArrayIndex                                                  OFFSET(get<T>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  Offset                                                      OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         NextIndex                                                   OFFSET(get<T>, {0x4, 2, 0, 0})
+	CMember(EStateTreePropertyAccessType)              Type                                                        OFFSET(get<T>, {0x6, 1, 0, 0})
+	CMember(UStruct*)                                  InstanceStruct                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyCopy
@@ -784,11 +808,11 @@ class FStateTreePropertyCopy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FStateTreePropertyIndirection)             SourceIndirection                                           ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FStateTreePropertyIndirection)             TargetIndirection                                           ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(int32_t)                                   CopySize                                                    ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	SMember(FStateTreeIndex16)                         SourceStructIndex                                           ___ OFFSET(get<T>, {0x44, 2, 0, 0})
-	CMember(EStateTreePropertyCopyType)                Type                                                        ___ OFFSET(get<T>, {0x46, 1, 0, 0})
+	SMember(FStateTreePropertyIndirection)             SourceIndirection                                           OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FStateTreePropertyIndirection)             TargetIndirection                                           OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(int32_t)                                   CopySize                                                    OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	SMember(FStateTreeIndex16)                         SourceStructIndex                                           OFFSET(get<T>, {0x44, 2, 0, 0})
+	CMember(EStateTreePropertyCopyType)                Type                                                        OFFSET(get<T>, {0x46, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyCopyBatch
@@ -799,9 +823,9 @@ class FStateTreePropertyCopyBatch : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FStateTreeBindableStructDesc)              TargetStruct                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(uint16_t)                                  BindingsBegin                                               ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(uint16_t)                                  BindingsEnd                                                 ___ OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
+	SMember(FStateTreeBindableStructDesc)              TargetStruct                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(uint16_t)                                  BindingsBegin                                               OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(uint16_t)                                  BindingsEnd                                                 OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreePropertyBindings
@@ -812,11 +836,11 @@ class FStateTreePropertyBindings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TArray<FStateTreeBindableStructDesc>)      SourceStructs                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FStateTreePropertyCopyBatch>)       CopyBatches                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FStateTreePropertyPathBinding>)     PropertyPathBindings                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FStateTreePropertyCopy>)            PropertyCopies                                              ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FStateTreePropertyIndirection>)     PropertyIndirections                                        ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FStateTreeBindableStructDesc>)      SourceStructs                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FStateTreePropertyCopyBatch>)       CopyBatches                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FStateTreePropertyPathBinding>)     PropertyPathBindings                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FStateTreePropertyCopy>)            PropertyCopies                                              OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FStateTreePropertyIndirection>)     PropertyIndirections                                        OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeReference
@@ -827,8 +851,8 @@ class FStateTreeReference : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UStateTree*)                               StateTree                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FInstancedPropertyBag)                     Parameters                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(UStateTree*)                               StateTree                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FInstancedPropertyBag)                     Parameters                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeTaskCommonBase
@@ -849,8 +873,8 @@ class FStateTreeRandomTimeDuration : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(uint16_t)                                  Duration                                                    ___ OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
-	DMember(uint16_t)                                  RandomVariance                                              ___ OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
+	DMember(uint16_t)                                  Duration                                                    OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  RandomVariance                                              OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.CompactStateTransition
@@ -861,14 +885,14 @@ class FCompactStateTransition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              EventTag                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(uint16_t)                                  ConditionsBegin                                             ___ OFFSET(get<uint16_t>, {0x4, 2, 0, 0})
-	SMember(FStateTreeStateHandle)                     State                                                       ___ OFFSET(get<T>, {0x6, 2, 0, 0})
-	SMember(FStateTreeRandomTimeDuration)              Delay                                                       ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(EStateTreeTransitionTrigger)               Trigger                                                     ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	CMember(EStateTreeTransitionPriority)              Priority                                                    ___ OFFSET(get<T>, {0xD, 1, 0, 0})
-	DMember(char)                                      ConditionsNum                                               ___ OFFSET(get<char>, {0xE, 1, 0, 0})
-	DMember(bool)                                      bTransitionEnabled                                          ___ OFFSET(get<bool>, {0xF, 1, 1, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(uint16_t)                                  ConditionsBegin                                             OFFSET(get<uint16_t>, {0x4, 2, 0, 0})
+	SMember(FStateTreeStateHandle)                     State                                                       OFFSET(get<T>, {0x6, 2, 0, 0})
+	SMember(FStateTreeRandomTimeDuration)              Delay                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(EStateTreeTransitionTrigger)               Trigger                                                     OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(EStateTreeTransitionPriority)              Priority                                                    OFFSET(get<T>, {0xD, 1, 0, 0})
+	DMember(char)                                      ConditionsNum                                               OFFSET(get<char>, {0xE, 1, 0, 0})
+	DMember(bool)                                      bTransitionEnabled                                          OFFSET(get<bool>, {0xF, 1, 1, 0})
 };
 
 /// Struct /Script/StateTreeModule.CompactStateTreeState
@@ -879,25 +903,25 @@ class FCompactStateTreeState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FStateTreeStateHandle)                     LinkedState                                                 ___ OFFSET(get<T>, {0x4, 2, 0, 0})
-	SMember(FStateTreeStateHandle)                     Parent                                                      ___ OFFSET(get<T>, {0x6, 2, 0, 0})
-	DMember(uint16_t)                                  ChildrenBegin                                               ___ OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
-	DMember(uint16_t)                                  ChildrenEnd                                                 ___ OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
-	DMember(uint16_t)                                  EnterConditionsBegin                                        ___ OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
-	DMember(uint16_t)                                  TransitionsBegin                                            ___ OFFSET(get<uint16_t>, {0xE, 2, 0, 0})
-	DMember(uint16_t)                                  TasksBegin                                                  ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         ParameterInstanceIndex                                      ___ OFFSET(get<T>, {0x12, 2, 0, 0})
-	SMember(FStateTreeIndex16)                         ParameterDataViewIndex                                      ___ OFFSET(get<T>, {0x14, 2, 0, 0})
-	DMember(char)                                      EnterConditionsNum                                          ___ OFFSET(get<char>, {0x16, 1, 0, 0})
-	DMember(char)                                      TransitionsNum                                              ___ OFFSET(get<char>, {0x17, 1, 0, 0})
-	DMember(char)                                      TasksNum                                                    ___ OFFSET(get<char>, {0x18, 1, 0, 0})
-	DMember(char)                                      TaskInstanceStructNum                                       ___ OFFSET(get<char>, {0x19, 1, 0, 0})
-	DMember(char)                                      TaskInstanceObjectNum                                       ___ OFFSET(get<char>, {0x1A, 1, 0, 0})
-	CMember(EStateTreeStateType)                       Type                                                        ___ OFFSET(get<T>, {0x1B, 1, 0, 0})
-	CMember(EStateTreeStateSelectionBehavior)          SelectionBehavior                                           ___ OFFSET(get<T>, {0x1C, 1, 0, 0})
-	DMember(bool)                                      bHasTransitionTasks                                         ___ OFFSET(get<bool>, {0x1D, 1, 1, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1D, 1, 1, 1})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FStateTreeStateHandle)                     LinkedState                                                 OFFSET(get<T>, {0x4, 2, 0, 0})
+	SMember(FStateTreeStateHandle)                     Parent                                                      OFFSET(get<T>, {0x6, 2, 0, 0})
+	DMember(uint16_t)                                  ChildrenBegin                                               OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
+	DMember(uint16_t)                                  ChildrenEnd                                                 OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
+	DMember(uint16_t)                                  EnterConditionsBegin                                        OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
+	DMember(uint16_t)                                  TransitionsBegin                                            OFFSET(get<uint16_t>, {0xE, 2, 0, 0})
+	DMember(uint16_t)                                  TasksBegin                                                  OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         ParameterInstanceIndex                                      OFFSET(get<T>, {0x12, 2, 0, 0})
+	SMember(FStateTreeIndex16)                         ParameterDataViewIndex                                      OFFSET(get<T>, {0x14, 2, 0, 0})
+	DMember(char)                                      EnterConditionsNum                                          OFFSET(get<char>, {0x16, 1, 0, 0})
+	DMember(char)                                      TransitionsNum                                              OFFSET(get<char>, {0x17, 1, 0, 0})
+	DMember(char)                                      TasksNum                                                    OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(char)                                      TaskInstanceStructNum                                       OFFSET(get<char>, {0x19, 1, 0, 0})
+	DMember(char)                                      TaskInstanceObjectNum                                       OFFSET(get<char>, {0x1A, 1, 0, 0})
+	CMember(EStateTreeStateType)                       Type                                                        OFFSET(get<T>, {0x1B, 1, 0, 0})
+	CMember(EStateTreeStateSelectionBehavior)          SelectionBehavior                                           OFFSET(get<T>, {0x1C, 1, 0, 0})
+	DMember(bool)                                      bHasTransitionTasks                                         OFFSET(get<bool>, {0x1D, 1, 1, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1D, 1, 1, 1})
 };
 
 /// Struct /Script/StateTreeModule.CompactStateTreeParameters
@@ -908,8 +932,8 @@ class FCompactStateTreeParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FStateTreeIndex16)                         BindingsBatch                                               ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FInstancedPropertyBag)                     Parameters                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FStateTreeIndex16)                         BindingsBatch                                               OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FInstancedPropertyBag)                     Parameters                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeStateIdToHandle
@@ -920,8 +944,8 @@ class FStateTreeStateIdToHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FStateTreeStateHandle)                     Handle                                                      ___ OFFSET(get<T>, {0x10, 2, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeStateHandle)                     Handle                                                      OFFSET(get<T>, {0x10, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeNodeIdToIndex
@@ -932,8 +956,8 @@ class FStateTreeNodeIdToIndex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FStateTreeIndex16)                         Index                                                       ___ OFFSET(get<T>, {0x10, 2, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeIndex16)                         Index                                                       OFFSET(get<T>, {0x10, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeTransitionIdToIndex
@@ -944,8 +968,8 @@ class FStateTreeTransitionIdToIndex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FStateTreeIndex16)                         Index                                                       ___ OFFSET(get<T>, {0x10, 2, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeIndex16)                         Index                                                       OFFSET(get<T>, {0x10, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeStructRef
@@ -966,7 +990,7 @@ class FStateTreeStateLink : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	SMember(FStateTreeStateHandle)                     StateHandle                                                 ___ OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FStateTreeStateHandle)                     StateHandle                                                 OFFSET(get<T>, {0x0, 2, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeDebugTextTaskInstanceData
@@ -977,7 +1001,7 @@ class FStateTreeDebugTextTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(AActor*)                                   ReferenceActor                                              ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(AActor*)                                   ReferenceActor                                              OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeDebugTextTask
@@ -988,11 +1012,11 @@ class FStateTreeDebugTextTask : public FStateTreeTaskCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   Text                                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FColor)                                    TextColor                                                   ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	DMember(float)                                     FontScale                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FVector)                                   Offset                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
+	SMember(FString)                                   Text                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FColor)                                    TextColor                                                   OFFSET(get<T>, {0x30, 4, 0, 0})
+	DMember(float)                                     FontScale                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x50, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeDelayTaskInstanceData
@@ -1003,9 +1027,9 @@ class FStateTreeDelayTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     RandomDeviation                                             ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bRunForever                                                 ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     RandomDeviation                                             OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bRunForever                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/StateTreeModule.StateTreeDelayTask

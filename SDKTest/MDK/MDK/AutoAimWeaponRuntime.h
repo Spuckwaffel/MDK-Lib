@@ -28,18 +28,29 @@ class UAutoAimWeaponPawnComponent : public UFortPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	SMember(FGameplayTagContainer)                     UseSingleLocationTargetingPawnTags                          ___ OFFSET(get<T>, {0xA8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     LowPriorityTargetPawnTags                                   ___ OFFSET(get<T>, {0xC8, 32, 0, 0})
-	CMember(TArray<FAutoAimWeaponBoneSegmentData>)     MultiSocketTargetingBoneSegmentDatas                        ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FScalableFloat)                            LockOnTimeReticleCenter                                     ___ OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FScalableFloat)                            LockOnTimeReticleEdge                                       ___ OFFSET(get<T>, {0x120, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxLockOns                                                  ___ OFFSET(get<T>, {0x148, 40, 0, 0})
-	DMember(float)                                     ProgressTowardNextLockOn                                    ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(int32_t)                                   CurrentLockOnCount                                          ___ OFFSET(get<int32_t>, {0x174, 4, 0, 0})
-	DMember(float)                                     TargetToReticleDistanceNormalized                           ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	CMember(TWeakObjectPtr<AFortPawn*>)                LockOnTarget                                                ___ OFFSET(get<T>, {0x17C, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     UseSingleLocationTargetingPawnTags                          OFFSET(get<T>, {0xA8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     LowPriorityTargetPawnTags                                   OFFSET(get<T>, {0xC8, 32, 0, 0})
+	CMember(TArray<FAutoAimWeaponBoneSegmentData>)     MultiSocketTargetingBoneSegmentDatas                        OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FScalableFloat)                            LockOnTimeReticleCenter                                     OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            LockOnTimeReticleEdge                                       OFFSET(get<T>, {0x120, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxLockOns                                                  OFFSET(get<T>, {0x148, 40, 0, 0})
+	DMember(float)                                     ProgressTowardNextLockOn                                    OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(int32_t)                                   CurrentLockOnCount                                          OFFSET(get<int32_t>, {0x174, 4, 0, 0})
+	DMember(float)                                     TargetToReticleDistanceNormalized                           OFFSET(get<float>, {0x178, 4, 0, 0})
+	CMember(TWeakObjectPtr<AFortPawn*>)                LockOnTarget                                                OFFSET(get<T>, {0x17C, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetTargetToReticleDistanceNormalized
+	// float GetTargetToReticleDistanceNormalized();                                                                            // [0x58f3444] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetLockOnTargetLocation
+	// bool GetLockOnTargetLocation(FVector& OutLockTargetLocation);                                                            // [0x9db35f8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetLockOnProgress
+	// float GetLockOnProgress();                                                                                               // [0x9db35d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetCurrentLockOnCount
+	// int32_t GetCurrentLockOnCount();                                                                                         // [0x9db35b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/AutoAimWeaponRuntime.AutoAimWeaponBoneSegmentData
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FAutoAimWeaponBoneSegmentData : public MDKStruct
@@ -48,8 +59,8 @@ class FAutoAimWeaponBoneSegmentData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     BoneName1                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     BoneName2                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(float)                                     BoneCollisionCapsuleRadiusAproximation                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FName)                                     BoneName1                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BoneName2                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(float)                                     BoneCollisionCapsuleRadiusAproximation                      OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 

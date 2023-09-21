@@ -17,19 +17,64 @@ class UGameplayState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTag)                              StateId                                                     ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     StateRuntimeTags                                            ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(bool)                                      bEvaluateTransition                                         ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bReplicates                                                 ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
-	DMember(bool)                                      bStateBegun                                                 ___ OFFSET(get<bool>, {0x52, 1, 0, 0})
-	DMember(bool)                                      bStateEnded                                                 ___ OFFSET(get<bool>, {0x53, 1, 0, 0})
-	DMember(float)                                     InitializationServerTime                                    ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	CMember(UGameplayStateMachine*)                    CachedGameplayStateMachine                                  ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(UGameplayStateMachineManager*)             CachedStateMachineManager                                   ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	CMember(UGameplayState*)                           Hack_StateToDelayProcess                                    ___ OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FGameplayTag)                              StateId                                                     OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     StateRuntimeTags                                            OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      bEvaluateTransition                                         OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bReplicates                                                 OFFSET(get<bool>, {0x51, 1, 0, 0})
+	DMember(bool)                                      bStateBegun                                                 OFFSET(get<bool>, {0x52, 1, 0, 0})
+	DMember(bool)                                      bStateEnded                                                 OFFSET(get<bool>, {0x53, 1, 0, 0})
+	DMember(float)                                     InitializationServerTime                                    OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0x58, 4, 0, 0})
+	CMember(UGameplayStateMachine*)                    CachedGameplayStateMachine                                  OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UGameplayStateMachineManager*)             CachedStateMachineManager                                   OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UGameplayState*)                           Hack_StateToDelayProcess                                    OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayStateMachine.GameplayState.UpdateStateEventServer
+	// void UpdateStateEventServer(float DeltaTime);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.UpdateStateEventClient
+	// void UpdateStateEventClient(float DeltaTime);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.UpdateStateEvent
+	// void UpdateStateEvent(float DeltaTime);                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.RemoveStateRuntimeTag
+	// void RemoveStateRuntimeTag(FGameplayTag& RemovedTag);                                                                    // [0x9ba5d20] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayStateMachine.GameplayState.MarkStateToEvaluateTransitions
+	// void MarkStateToEvaluateTransitions();                                                                                   // [0x9ba5cf8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayStateMachine.GameplayState.InitializeStateEventServer
+	// void InitializeStateEventServer(FGameplayTag& PrevStateId);                                                              // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.InitializeStateEventClient
+	// void InitializeStateEventClient(FGameplayTag& PrevStateId);                                                              // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.InitializeStateEvent
+	// void InitializeStateEvent(FGameplayTag& PrevStateId);                                                                    // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.HasStateRuntimeTag
+	// bool HasStateRuntimeTag(FGameplayTag& QueryTag);                                                                         // [0x9ba5c20] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayStateMachine.GameplayState.HasAuthority
+	// bool HasAuthority();                                                                                                     // [0x9ba5bfc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayState.GetStateRuntimeTags
+	// FGameplayTagContainer GetStateRuntimeTags();                                                                             // [0x8db388c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayState.GetStateId
+	// FGameplayTag GetStateId();                                                                                               // [0x5ffe568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayState.GetOwningActor
+	// AActor* GetOwningActor();                                                                                                // [0x9ba5bd8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayState.GetGameplayStateMachine
+	// UGameplayStateMachine* GetGameplayStateMachine();                                                                        // [0x8cc6fb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayState.EndStateEventServer
+	// void EndStateEventServer(FGameplayTag& NextStateId);                                                                     // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.EndStateEventClient
+	// void EndStateEventClient(FGameplayTag& NextStateId);                                                                     // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.EndStateEvent
+	// void EndStateEvent(FGameplayTag& NextStateId);                                                                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.BeginStateEventServer
+	// void BeginStateEventServer(FGameplayTag& PrevStateId);                                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.BeginStateEventClient
+	// void BeginStateEventClient(FGameplayTag& PrevStateId);                                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.BeginStateEvent
+	// void BeginStateEvent(FGameplayTag& PrevStateId);                                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/GameplayStateMachine.GameplayState.AddStateRuntimeTag
+	// void AddStateRuntimeTag(FGameplayTag& AddedTag);                                                                         // [0x9ba5ae4] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameplayStateMachine.GameplayStateMachine
 /// Size: 0x0050 (0x000078 - 0x0000C8)
 class UGameplayStateMachine : public UGameplayState
@@ -38,12 +83,27 @@ class UGameplayStateMachine : public UGameplayState
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FGameplayTag)                              StateMachineId                                              ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	CMember(TArray<FGameplayStateSettings>)            GameplayStateSettings                                       ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FGameplayTag)                              InitialGameplayStateId                                      ___ OFFSET(get<T>, {0xC0, 4, 0, 0})
+	SMember(FGameplayTag)                              StateMachineId                                              OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     OFFSET(get<T>, {0x98, 24, 0, 0})
+	CMember(TArray<FGameplayStateSettings>)            GameplayStateSettings                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FGameplayTag)                              InitialGameplayStateId                                      OFFSET(get<T>, {0xC0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.SetState
+	// void SetState(FGameplayTag& InStateId, float InBeginStateDelay);                                                         // [0x9ba5db0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.OnRep_ActiveGameplayStateData
+	// void OnRep_ActiveGameplayStateData();                                                                                    // [0x9ba5d0c] Final|Native|Private 
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.GetStateMachineId
+	// FGameplayTag GetStateMachineId();                                                                                        // [0x8c2fd90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.GetActiveStateObject
+	// UGameplayState* GetActiveStateObject();                                                                                  // [0x6d49fdc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.GetActiveStateId
+	// FGameplayTag GetActiveStateId();                                                                                         // [0x9ba5bb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayStateMachine.GameplayStateMachine.EvaluateStateTransition
+	// void EvaluateStateTransition();                                                                                          // [0x34def90] Native|Event|Protected|BlueprintEvent 
 /// Class /Script/GameplayStateMachine.GameplayStateMachineManager
 /// Size: 0x0120 (0x0000A0 - 0x0001C0)
 class UGameplayStateMachineManager : public UActorComponent
@@ -52,7 +112,7 @@ class UGameplayStateMachineManager : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FGameplayStateMachineArray)                StateMachineList                                            ___ OFFSET(get<T>, {0xA0, 288, 0, 0})
+	SMember(FGameplayStateMachineArray)                StateMachineList                                            OFFSET(get<T>, {0xA0, 288, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateTransition
@@ -63,9 +123,9 @@ class FGameplayStateTransition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     TransitionConditionTags                                     ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTag)                              TransitionStateTag                                          ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TransitionConditionTags                                     OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTag)                              TransitionStateTag                                          OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateSettings
@@ -76,9 +136,9 @@ class FGameplayStateSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(UClass*)                                   StateClass                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              StateId                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(TArray<FGameplayStateTransition>)          StateTransitions                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(UClass*)                                   StateClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              StateId                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TArray<FGameplayStateTransition>)          StateTransitions                                            OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.ActiveGameplayStateData
@@ -89,10 +149,10 @@ class FActiveGameplayStateData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UGameplayState*)                           GameplayState                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              PreviousStateId                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     InitializationTime                                          ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(UGameplayState*)                           GameplayState                                               OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              PreviousStateId                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     InitializationTime                                          OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateMachineItem
@@ -103,9 +163,9 @@ class FGameplayStateMachineItem : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(UGameplayStateMachine*)                    StateMachine                                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     InitializationTime                                          ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
+	CMember(UGameplayStateMachine*)                    StateMachine                                                OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     InitializationTime                                          OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateMachineArray
@@ -116,7 +176,7 @@ class FGameplayStateMachineArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(UGameplayStateMachineManager*)             StateMachineManager                                         ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(TArray<FGameplayStateMachineItem>)         StateMachineItems                                           ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UGameplayStateMachineManager*)             StateMachineManager                                         OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TArray<FGameplayStateMachineItem>)         StateMachineItems                                           OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 

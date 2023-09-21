@@ -17,7 +17,7 @@ class UMotoSynthPreset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FMotoSynthRuntimeSettings)                 Settings                                                    ___ OFFSET(get<T>, {0x28, 312, 0, 0})
+	SMember(FMotoSynthRuntimeSettings)                 Settings                                                    OFFSET(get<T>, {0x28, 312, 0, 0})
 };
 
 /// Class /Script/MotoSynth.MotoSynthSource
@@ -28,13 +28,13 @@ class UMotoSynthSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	DMember(bool)                                      bConvertTo8Bit                                              ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(float)                                     DownSampleFactor                                            ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    ___ OFFSET(get<T>, {0x30, 136, 0, 0})
-	CMember(TArray<float>)                             SourceData                                                  ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	CMember(TArray<int16_t>)                           SourceDataPCM                                               ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	DMember(int32_t)                                   SourceSampleRate                                            ___ OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
-	CMember(TArray<FGrainTableEntry>)                  GrainTable                                                  ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
+	DMember(bool)                                      bConvertTo8Bit                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     DownSampleFactor                                            OFFSET(get<float>, {0x2C, 4, 0, 0})
+	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    OFFSET(get<T>, {0x30, 136, 0, 0})
+	CMember(TArray<float>)                             SourceData                                                  OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(TArray<int16_t>)                           SourceDataPCM                                               OFFSET(get<T>, {0xC8, 16, 0, 0})
+	DMember(int32_t)                                   SourceSampleRate                                            OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
+	CMember(TArray<FGrainTableEntry>)                  GrainTable                                                  OFFSET(get<T>, {0xE0, 16, 0, 0})
 };
 
 /// Class /Script/MotoSynth.SynthComponentMoto
@@ -45,10 +45,21 @@ class USynthComponentMoto : public USynthComponent
 	static inline constexpr uint64_t __MDKClassSize = 2720;
 
 public:
-	CMember(UMotoSynthPreset*)                         MotoSynthPreset                                             ___ OFFSET(get<T>, {0x900, 8, 0, 0})
-	DMember(float)                                     RPM                                                         ___ OFFSET(get<float>, {0x908, 4, 0, 0})
+	CMember(UMotoSynthPreset*)                         MotoSynthPreset                                             OFFSET(get<T>, {0x900, 8, 0, 0})
+	DMember(float)                                     RPM                                                         OFFSET(get<float>, {0x908, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MotoSynth.SynthComponentMoto.SetSettings
+	// void SetSettings(FMotoSynthRuntimeSettings& InSettings);                                                                 // [0x981c4a4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MotoSynth.SynthComponentMoto.SetRPM
+	// void SetRPM(float InRPM, float InTimeSec);                                                                               // [0x981c3e0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MotoSynth.SynthComponentMoto.IsEnabled
+	// bool IsEnabled();                                                                                                        // [0x981c3c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MotoSynth.SynthComponentMoto.GetRPMRange
+	// void GetRPMRange(float& OutMinRPM, float& OutMaxRPM);                                                                    // [0x981c2ec] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Struct /Script/MotoSynth.MotoSynthRuntimeSettings
 /// Size: 0x0138 (0x000000 - 0x000138)
 class FMotoSynthRuntimeSettings : public MDKStruct
@@ -57,41 +68,41 @@ class FMotoSynthRuntimeSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	DMember(bool)                                      bSynthToneEnabled                                           ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector2D)                                 SynthToneVolumeRange                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneFilterFrequencyRange                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bSynthToneEnvelopeEnabled                                   ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FVector2D)                                 SynthToneAttackTimeMsecRange                                ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneAttackCurveRange                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneDecayTimeMsecRange                                 ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneDecayCurveRange                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	DMember(int32_t)                                   SynthOctaveShift                                            ___ OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	DMember(bool)                                      bNoiseEnabled                                               ___ OFFSET(get<bool>, {0x74, 1, 0, 0})
-	SMember(FVector2D)                                 NoiseVolumeRange                                            ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	DMember(bool)                                      bNoiseEnvelopeEnabled                                       ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
-	SMember(FVector2D)                                 NoiseLPFRange                                               ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseAttackTimeMsecRange                                    ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseAttackCurveRange                                       ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseDecayTimeMsecRange                                     ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseDecayCurveRange                                        ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	DMember(bool)                                      bGranularEngineEnabled                                      ___ OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	DMember(float)                                     GranularEngineVolume                                        ___ OFFSET(get<float>, {0xE4, 4, 0, 0})
-	DMember(float)                                     GranularEnginePitchScale                                    ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
-	DMember(int32_t)                                   NumSamplesToCrossfadeBetweenGrains                          ___ OFFSET(get<int32_t>, {0xEC, 4, 0, 0})
-	DMember(int32_t)                                   NumGrainTableEntriesPerGrain                                ___ OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
-	DMember(int32_t)                                   GrainTableRandomOffsetForConstantRPMs                       ___ OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
-	DMember(int32_t)                                   GrainCrossfadeSamplesForConstantRPMs                        ___ OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
-	CMember(UMotoSynthSource*)                         AccelerationSource                                          ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(UMotoSynthSource*)                         DecelerationSource                                          ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	DMember(bool)                                      bStereoWidenerEnabled                                       ___ OFFSET(get<bool>, {0x110, 1, 0, 0})
-	DMember(float)                                     StereoDelayMsec                                             ___ OFFSET(get<float>, {0x114, 4, 0, 0})
-	DMember(float)                                     StereoFeedback                                              ___ OFFSET(get<float>, {0x118, 4, 0, 0})
-	DMember(float)                                     StereoWidenerWetlevel                                       ___ OFFSET(get<float>, {0x11C, 4, 0, 0})
-	DMember(float)                                     StereoWidenerDryLevel                                       ___ OFFSET(get<float>, {0x120, 4, 0, 0})
-	DMember(float)                                     StereoWidenerDelayRatio                                     ___ OFFSET(get<float>, {0x124, 4, 0, 0})
-	DMember(bool)                                      bStereoWidenerFilterEnabled                                 ___ OFFSET(get<bool>, {0x128, 1, 0, 0})
-	DMember(float)                                     StereoWidenerFilterFrequency                                ___ OFFSET(get<float>, {0x12C, 4, 0, 0})
-	DMember(float)                                     StereoWidenerFilterQ                                        ___ OFFSET(get<float>, {0x130, 4, 0, 0})
+	DMember(bool)                                      bSynthToneEnabled                                           OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector2D)                                 SynthToneVolumeRange                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneFilterFrequencyRange                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bSynthToneEnvelopeEnabled                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FVector2D)                                 SynthToneAttackTimeMsecRange                                OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneAttackCurveRange                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneDecayTimeMsecRange                                 OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneDecayCurveRange                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	DMember(int32_t)                                   SynthOctaveShift                                            OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	DMember(bool)                                      bNoiseEnabled                                               OFFSET(get<bool>, {0x74, 1, 0, 0})
+	SMember(FVector2D)                                 NoiseVolumeRange                                            OFFSET(get<T>, {0x78, 16, 0, 0})
+	DMember(bool)                                      bNoiseEnvelopeEnabled                                       OFFSET(get<bool>, {0x88, 1, 0, 0})
+	SMember(FVector2D)                                 NoiseLPFRange                                               OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseAttackTimeMsecRange                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseAttackCurveRange                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseDecayTimeMsecRange                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseDecayCurveRange                                        OFFSET(get<T>, {0xD0, 16, 0, 0})
+	DMember(bool)                                      bGranularEngineEnabled                                      OFFSET(get<bool>, {0xE0, 1, 0, 0})
+	DMember(float)                                     GranularEngineVolume                                        OFFSET(get<float>, {0xE4, 4, 0, 0})
+	DMember(float)                                     GranularEnginePitchScale                                    OFFSET(get<float>, {0xE8, 4, 0, 0})
+	DMember(int32_t)                                   NumSamplesToCrossfadeBetweenGrains                          OFFSET(get<int32_t>, {0xEC, 4, 0, 0})
+	DMember(int32_t)                                   NumGrainTableEntriesPerGrain                                OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
+	DMember(int32_t)                                   GrainTableRandomOffsetForConstantRPMs                       OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
+	DMember(int32_t)                                   GrainCrossfadeSamplesForConstantRPMs                        OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
+	CMember(UMotoSynthSource*)                         AccelerationSource                                          OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(UMotoSynthSource*)                         DecelerationSource                                          OFFSET(get<T>, {0x108, 8, 0, 0})
+	DMember(bool)                                      bStereoWidenerEnabled                                       OFFSET(get<bool>, {0x110, 1, 0, 0})
+	DMember(float)                                     StereoDelayMsec                                             OFFSET(get<float>, {0x114, 4, 0, 0})
+	DMember(float)                                     StereoFeedback                                              OFFSET(get<float>, {0x118, 4, 0, 0})
+	DMember(float)                                     StereoWidenerWetlevel                                       OFFSET(get<float>, {0x11C, 4, 0, 0})
+	DMember(float)                                     StereoWidenerDryLevel                                       OFFSET(get<float>, {0x120, 4, 0, 0})
+	DMember(float)                                     StereoWidenerDelayRatio                                     OFFSET(get<float>, {0x124, 4, 0, 0})
+	DMember(bool)                                      bStereoWidenerFilterEnabled                                 OFFSET(get<bool>, {0x128, 1, 0, 0})
+	DMember(float)                                     StereoWidenerFilterFrequency                                OFFSET(get<float>, {0x12C, 4, 0, 0})
+	DMember(float)                                     StereoWidenerFilterQ                                        OFFSET(get<float>, {0x130, 4, 0, 0})
 };
 
 /// Struct /Script/MotoSynth.GrainTableEntry
@@ -102,7 +113,7 @@ class FGrainTableEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   SampleIndex                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(float)                                     RPM                                                         ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   SampleIndex                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(float)                                     RPM                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 

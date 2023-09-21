@@ -17,13 +17,22 @@ class UAmbientAudioComponent : public UAudioGameplayComponent
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(UAmbientAudioDataAsset*)                   AmbientAsset                                                ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	DMember(int32_t)                                   Priority                                                    ___ OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
-	DMember(float)                                     CrossfadeTime                                               ___ OFFSET(get<float>, {0xBC, 4, 0, 0})
-	SMember(FGuid)                                     AmbientGuid                                                 ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FName)                                     DisplayName                                                 ___ OFFSET(get<T>, {0xD0, 4, 0, 0})
+	CMember(UAmbientAudioDataAsset*)                   AmbientAsset                                                OFFSET(get<T>, {0xB0, 8, 0, 0})
+	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
+	DMember(float)                                     CrossfadeTime                                               OFFSET(get<float>, {0xBC, 4, 0, 0})
+	SMember(FGuid)                                     AmbientGuid                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0xD0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AmbientAudio.AmbientAudioComponent.SetPriority
+	// void SetPriority(int32_t InPriority);                                                                                    // [0x713b860] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioComponent.SetCrossfadeTime
+	// void SetCrossfadeTime(float InCrossfadeTime);                                                                            // [0x713b7cc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioComponent.SetAmbientAsset
+	// void SetAmbientAsset(UAmbientAudioDataAsset* InAmbientAsset);                                                            // [0x713b73c] Final|Native|Public|BlueprintCallable 
 /// Class /Script/AmbientAudio.AmbientAudioDataAsset
 /// Size: 0x0028 (0x000030 - 0x000058)
 class UAmbientAudioDataAsset : public UDataAsset
@@ -32,9 +41,9 @@ class UAmbientAudioDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TArray<FAmbientAudioLoop>)                 LoopingSounds                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FAmbientAudioOneShot>)              OneShotSounds                                               ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	DMember(float)                                     TagCrossfadeTime                                            ___ OFFSET(get<float>, {0x50, 4, 0, 0})
+	CMember(TArray<FAmbientAudioLoop>)                 LoopingSounds                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FAmbientAudioOneShot>)              OneShotSounds                                               OFFSET(get<T>, {0x40, 16, 0, 0})
+	DMember(float)                                     TagCrossfadeTime                                            OFFSET(get<float>, {0x50, 4, 0, 0})
 };
 
 /// Class /Script/AmbientAudio.AmbientAudioSubsystem
@@ -45,12 +54,25 @@ class UAmbientAudioSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 600;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTagChanged                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEntryChanged                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<UAmbientAudioComponent*>)           AmbientComponents                                           ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(AAmbientAudioParameterActor*)              ParameterActor                                              ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTagChanged                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEntryChanged                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<UAmbientAudioComponent*>)           AmbientComponents                                           OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(AAmbientAudioParameterActor*)              ParameterActor                                              OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AmbientAudio.AmbientAudioSubsystem.RemoveGameplayTag
+	// void RemoveGameplayTag(FGameplayTag GameplayTag);                                                                        // [0x2d14410] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioSubsystem.RemoveAmbientEntry
+	// void RemoveAmbientEntry(FName AmbientName, float CrossfadeOverride);                                                     // [0x2d03614] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioSubsystem.GetAudioParameterComponent
+	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x347633c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioSubsystem.AddGameplayTag
+	// void AddGameplayTag(FGameplayTag GameplayTag);                                                                           // [0x713b5e8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AmbientAudio.AmbientAudioSubsystem.AddAmbientEntry
+	// void AddAmbientEntry(FName AmbientName, UAmbientAudioDataAsset* Asset, int32_t Priority, float CrossfadeTime);           // [0x27a7bd8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/AmbientAudio.AmbientAudioParameterActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AAmbientAudioParameterActor : public AActor
@@ -59,7 +81,7 @@ class AAmbientAudioParameterActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UAudioParameterComponent*)                 Parameters                                                  ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UAudioParameterComponent*)                 Parameters                                                  OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Struct /Script/AmbientAudio.AmbientAudioBase
@@ -70,9 +92,9 @@ class FAmbientAudioBase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(TWeakObjectPtr<USoundBase*>)               sound                                                       ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         Requirements                                                ___ OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FAudioGameplayRequirements)                PlaybackRequirements                                        ___ OFFSET(get<T>, {0x68, 80, 0, 0})
+	CMember(TWeakObjectPtr<USoundBase*>)               sound                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         Requirements                                                OFFSET(get<T>, {0x20, 72, 0, 0})
+	SMember(FAudioGameplayRequirements)                PlaybackRequirements                                        OFFSET(get<T>, {0x68, 80, 0, 0})
 };
 
 /// Struct /Script/AmbientAudio.AmbientAudioLoop
@@ -93,8 +115,8 @@ class FAmbientAudioOneShot : public FAmbientAudioBase
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FVector2D)                                 RetriggerTimeRange                                          ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FVector2D)                                 TriggerDistanceRange                                        ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FVector2D)                                 RetriggerTimeRange                                          OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FVector2D)                                 TriggerDistanceRange                                        OFFSET(get<T>, {0xC8, 16, 0, 0})
 };
 
 /// Enum /Script/AmbientAudio.EAmbientAudioEntryActionType

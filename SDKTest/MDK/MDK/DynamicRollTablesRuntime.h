@@ -18,12 +18,17 @@ class UFortControllerComponent_DynamicRollPlayerComponent : public UFortControll
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	CMember(UClass*)                                   AssociatedManagerClass                                      ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FScalableFloat)                            Enabled                                                     ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	CMember(UFortGamestateComponent_DynamicRollTableManager*) TableManager                                         ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
-	SMember(FRandomStream)                             SeededRNG                                                   ___ OFFSET(get<T>, {0x144, 8, 0, 0})
+	CMember(UClass*)                                   AssociatedManagerClass                                      OFFSET(get<T>, {0xA8, 8, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xB0, 40, 0, 0})
+	CMember(UFortGamestateComponent_DynamicRollTableManager*) TableManager                                         OFFSET(get<T>, {0xD8, 8, 0, 0})
+	SMember(FRandomStream)                             SeededRNG                                                   OFFSET(get<T>, {0x144, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/DynamicRollTablesRuntime.FortControllerComponent_DynamicRollPlayerComponent.AuthorityRollChoices
+	// TArray<FFortDynamicRollResult> AuthorityRollChoices(int32_t NumChoices, TArray<UFortItemDefinition*>& IgnoreItems);      // [0x9918b0c] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/DynamicRollTablesRuntime.FortGamestateComponent_DynamicRollTableManager
 /// Size: 0x0238 (0x0000A0 - 0x0002D8)
 class UFortGamestateComponent_DynamicRollTableManager : public UFortGameStateComponent
@@ -32,11 +37,16 @@ class UFortGamestateComponent_DynamicRollTableManager : public UFortGameStateCom
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FDataRegistryType)                         DataRegistryType_BaseWeights                                ___ OFFSET(get<T>, {0xD0, 4, 0, 0})
-	SMember(FDataRegistryType)                         DataRegistryType_WeightModifiers                            ___ OFFSET(get<T>, {0xD4, 4, 0, 0})
-	SMember(FScalableFloat)                            Enabled                                                     ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FDataRegistryType)                         DataRegistryType_BaseWeights                                OFFSET(get<T>, {0xD0, 4, 0, 0})
+	SMember(FDataRegistryType)                         DataRegistryType_WeightModifiers                            OFFSET(get<T>, {0xD4, 4, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xD8, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/DynamicRollTablesRuntime.FortGamestateComponent_DynamicRollTableManager.HandlePlaylistDataReady
+	// void HandlePlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x3400eec] Final|Native|Private|HasOutParms 
 /// Struct /Script/DynamicRollTablesRuntime.FortDynamicRollResult
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FFortDynamicRollResult : public MDKStruct
@@ -45,7 +55,7 @@ class FFortDynamicRollResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UFortItemDefinition*)                      Item                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UFortItemDefinition*)                      Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/DynamicRollTablesRuntime.FortDynamicRollBaseWeightTableRow
@@ -56,12 +66,12 @@ class FFortDynamicRollBaseWeightTableRow : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UFortItemDefinition*)                      ItemDefinition                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     BaseWeight                                                  ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	CMember(TArray<FGameplayTag>)                      ModTags                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bOwningItemZerosWeight                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(float)                                     MaxModifiedWeight                                           ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     MinModifiedWeight                                           ___ OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(UFortItemDefinition*)                      ItemDefinition                                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     BaseWeight                                                  OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(TArray<FGameplayTag>)                      ModTags                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bOwningItemZerosWeight                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     MaxModifiedWeight                                           OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     MinModifiedWeight                                           OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/DynamicRollTablesRuntime.FortDynamicRollWeightModifierTableRow
@@ -72,10 +82,10 @@ class FFortDynamicRollWeightModifierTableRow : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              ActivatingPlayerTag                                         ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FGameplayTag)                              TargetModTag                                                ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	CMember(ERollModifierOperation)                    WeightModifierOperation                                     ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	DMember(float)                                     WeightModificationValue                                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FGameplayTag)                              ActivatingPlayerTag                                         OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              TargetModTag                                                OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(ERollModifierOperation)                    WeightModifierOperation                                     OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(float)                                     WeightModificationValue                                     OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/DynamicRollTablesRuntime.DynamicRollModifiersActivatedByPlayerTagContainer

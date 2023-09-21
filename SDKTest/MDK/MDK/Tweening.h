@@ -16,11 +16,11 @@ class UTweenSplineInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TWeakObjectPtr<USplineComponent*>)         Spline                                                      ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(ETweenSplineAlignmentOption)               Alignment                                                   ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	DMember(bool)                                      bIgnorePitch                                                ___ OFFSET(get<bool>, {0x31, 1, 0, 0})
-	DMember(bool)                                      bIgnoreYaw                                                  ___ OFFSET(get<bool>, {0x32, 1, 0, 0})
-	DMember(bool)                                      bIgnoreRoll                                                 ___ OFFSET(get<bool>, {0x33, 1, 0, 0})
+	CMember(TWeakObjectPtr<USplineComponent*>)         Spline                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(ETweenSplineAlignmentOption)               Alignment                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bIgnorePitch                                                OFFSET(get<bool>, {0x31, 1, 0, 0})
+	DMember(bool)                                      bIgnoreYaw                                                  OFFSET(get<bool>, {0x32, 1, 0, 0})
+	DMember(bool)                                      bIgnoreRoll                                                 OFFSET(get<bool>, {0x33, 1, 0, 0})
 };
 
 /// Class /Script/Tweening.ActorTweening
@@ -41,7 +41,7 @@ class UTweenMaterialParameterInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/Tweening.MaterialTweening
@@ -62,9 +62,34 @@ class UTweenManager : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(TMap<int32_t, UObject*>)                   TweenContexts                                               ___ OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(TMap<int32_t, UObject*>)                   TweenContexts                                               OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Tweening.TweenManager.StopTweens
+	// void StopTweens(TArray<int32_t> InTweenIds);                                                                             // [0xa254884] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.StopTween
+	// bool StopTween(int32_t InTweenId);                                                                                       // [0xa2547f8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.SetTweenTiming
+	// bool SetTweenTiming(int32_t InTweenId, float InDuration, float InDelayAtBeginning, float InDelayAtEnd);                  // [0xa2546a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Tweening.TweenManager.ResetTweens
+	// void ResetTweens(TArray<int32_t> InTweenIds, ETweenResetDestination InDestination);                                      // [0xa254594] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.ResetTween
+	// bool ResetTween(int32_t InTweenId, ETweenResetDestination InDestination);                                                // [0xa2544d4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.PlayTweenWithLooping
+	// bool PlayTweenWithLooping(int32_t InTweenId, ETweenLoopType InLoopType, int32_t InLoopCount, ETweenPlayDirection InPlayDirection); // [0xa254288] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.PlayTweens
+	// void PlayTweens(TArray<int32_t> InTweenIds, ETweenPlayDirection InPlayDirection);                                        // [0xa2543c4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.PlayTween
+	// bool PlayTween(int32_t InTweenId, ETweenPlayDirection InPlayDirection);                                                  // [0xa2541c8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.KillTweens
+	// void KillTweens(TArray<int32_t> InTweenIds);                                                                             // [0xa25406c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.KillTween
+	// bool KillTween(int32_t InTweenId);                                                                                       // [0xa253fe0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenManager.HasTween
+	// bool HasTween(int32_t InTweenId);                                                                                        // [0xa253f54] Final|Native|Public|BlueprintCallable|BlueprintPure 
 /// Class /Script/Tweening.TweenSequence
 /// Size: 0x0068 (0x000028 - 0x000090)
 class UTweenSequence : public UObject
@@ -73,11 +98,26 @@ class UTweenSequence : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TArray<FTweenSequenceEntry>)               SequenceEntries                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(UTweenManager*)                            TweenManager                                                ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(TArray<FTimerHandle>)                      TimerHandles                                                ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FTweenSequenceEntry>)               SequenceEntries                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(UTweenManager*)                            TweenManager                                                OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TArray<FTimerHandle>)                      TimerHandles                                                OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Tweening.TweenSequence.Stop
+	// void Stop();                                                                                                             // [0xa2547e4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenSequence.Play
+	// void Play(ETweenPlayDirection InPlayDirection);                                                                          // [0xa254148] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Tweening.TweenSequence.BP_JoinTween
+	// void BP_JoinTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24d25c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/Tweening.TweenSequence.BP_JoinSequence
+	// void BP_JoinSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24cf90] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/Tweening.TweenSequence.BP_AppendTween
+	// void BP_AppendTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24c148] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/Tweening.TweenSequence.BP_AppendSequence
+	// void BP_AppendSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24be7c] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/Tweening.WidgetTweening
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UWidgetTweening : public UBlueprintFunctionLibrary
@@ -96,8 +136,8 @@ class FTweenOptionalFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalVector2D
@@ -108,8 +148,8 @@ class FTweenOptionalVector2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector2D)                                 Value                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FVector2D)                                 Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalVector
@@ -120,8 +160,8 @@ class FTweenOptionalVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalVector4
@@ -132,8 +172,8 @@ class FTweenOptionalVector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector4)                                  Value                                                       ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FVector4)                                  Value                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalLinearColor
@@ -144,8 +184,8 @@ class FTweenOptionalLinearColor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FLinearColor)                              Value                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalRotator
@@ -156,8 +196,8 @@ class FTweenOptionalRotator : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRotator)                                  Value                                                       ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(bool)                                      bUseSpecificValue                                           ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenDelayOptions
@@ -168,9 +208,9 @@ class FTweenDelayOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     DelayAtBeginning                                            ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     DelayAtEnd                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	CMember(ETweenInitializationPoint)                 InitializationPoint                                         ___ OFFSET(get<T>, {0x8, 1, 0, 0})
+	DMember(float)                                     DelayAtBeginning                                            OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     DelayAtEnd                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(ETweenInitializationPoint)                 InitializationPoint                                         OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenLoopOptions
@@ -181,8 +221,8 @@ class FTweenLoopOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(ETweenLoopType)                            LoopType                                                    ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   LoopCount                                                   ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(ETweenLoopType)                            LoopType                                                    OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   LoopCount                                                   OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenSequenceEntry
@@ -193,7 +233,7 @@ class FTweenSequenceEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(UTweenSequence*)                           EntrySequence                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UTweenSequence*)                           EntrySequence                                               OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Enum /Script/Tweening.ETweenSplineAlignmentOption

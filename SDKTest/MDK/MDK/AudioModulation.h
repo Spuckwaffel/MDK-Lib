@@ -29,7 +29,7 @@ class UAudioModulationSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FSoftObjectPath>)                   Parameters                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   Parameters                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/AudioModulation.AudioModulationStatics
@@ -60,7 +60,7 @@ class USoundModulationGeneratorADEnvelope : public USoundModulationGenerator
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FSoundModulationADEnvelopeParams)          Params                                                      ___ OFFSET(get<T>, {0x30, 20, 0, 0})
+	SMember(FSoundModulationADEnvelopeParams)          Params                                                      OFFSET(get<T>, {0x30, 20, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationGeneratorEnvelopeFollower
@@ -71,7 +71,7 @@ class USoundModulationGeneratorEnvelopeFollower : public USoundModulationGenerat
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FEnvelopeFollowerGeneratorParams)          Params                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FEnvelopeFollowerGeneratorParams)          Params                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationGeneratorLFO
@@ -82,7 +82,7 @@ class USoundModulationGeneratorLFO : public USoundModulationGenerator
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoundModulationLFOParams)                 Params                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FSoundModulationLFOParams)                 Params                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundControlBus
@@ -93,10 +93,10 @@ class USoundControlBus : public USoundModulatorBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(bool)                                      bBypass                                                     ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   Address                                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<USoundModulationGenerator*>)        Generators                                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(USoundModulationParameter*)                Parameter                                                   ___ OFFSET(get<T>, {0x58, 8, 0, 0})
+	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FString)                                   Address                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<USoundModulationGenerator*>)        Generators                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(USoundModulationParameter*)                Parameter                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundControlBusMix
@@ -107,10 +107,25 @@ class USoundControlBusMix : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(uint32_t)                                  ProfileIndex                                                ___ OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
-	CMember(TArray<FSoundControlBusMixStage>)          MixStages                                                   ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(uint32_t)                                  ProfileIndex                                                OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
+	CMember(TArray<FSoundControlBusMixStage>)          MixStages                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioModulation.SoundControlBusMix.SoloMix
+	// void SoloMix();                                                                                                          // [0x7211d08] Final|Native|Protected 
+	// Function /Script/AudioModulation.SoundControlBusMix.SaveMixToProfile
+	// void SaveMixToProfile();                                                                                                 // [0x7211cf0] Final|Native|Protected 
+	// Function /Script/AudioModulation.SoundControlBusMix.LoadMixFromProfile
+	// void LoadMixFromProfile();                                                                                               // [0x7211bc4] Final|Native|Protected 
+	// Function /Script/AudioModulation.SoundControlBusMix.DeactivateMix
+	// void DeactivateMix();                                                                                                    // [0x7211700] Final|Native|Protected 
+	// Function /Script/AudioModulation.SoundControlBusMix.DeactivateAllMixes
+	// void DeactivateAllMixes();                                                                                               // [0x7211460] Final|Native|Protected 
+	// Function /Script/AudioModulation.SoundControlBusMix.ActivateMix
+	// void ActivateMix();                                                                                                      // [0x721079c] Final|Native|Protected 
 /// Class /Script/AudioModulation.SoundModulationParameter
 /// Size: 0x0010 (0x000028 - 0x000038)
 class USoundModulationParameter : public UObject
@@ -119,7 +134,7 @@ class USoundModulationParameter : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSoundModulationParameterSettings)         Settings                                                    ___ OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FSoundModulationParameterSettings)         Settings                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameterScaled
@@ -130,8 +145,8 @@ class USoundModulationParameterScaled : public USoundModulationParameter
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     UnitMin                                                     ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     UnitMax                                                     ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     UnitMin                                                     OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     UnitMax                                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameterFrequencyBase
@@ -152,8 +167,8 @@ class USoundModulationParameterFrequency : public USoundModulationParameterFrequ
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     UnitMin                                                     ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     UnitMax                                                     ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     UnitMin                                                     OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     UnitMax                                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameterFilterFrequency
@@ -194,7 +209,7 @@ class USoundModulationParameterBipolar : public USoundModulationParameter
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     UnitRange                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     UnitRange                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameterVolume
@@ -205,7 +220,7 @@ class USoundModulationParameterVolume : public USoundModulationParameter
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     MinVolume                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     MinVolume                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationPatch
@@ -216,7 +231,7 @@ class USoundModulationPatch : public USoundModulatorBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoundControlModulationPatch)              PatchSettings                                               ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FSoundControlModulationPatch)              PatchSettings                                               OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationADEnvelopeParams
@@ -227,12 +242,12 @@ class FSoundModulationADEnvelopeParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(float)                                     AttackTime                                                  ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     DecayTime                                                   ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     AttackCurve                                                 ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     DecayCurve                                                  ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bLooping                                                    ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bBypass                                                     ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(float)                                     AttackTime                                                  OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     DecayTime                                                   OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     AttackCurve                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     DecayCurve                                                  OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bLooping                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x11, 1, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.EnvelopeFollowerGeneratorParams
@@ -243,12 +258,12 @@ class FEnvelopeFollowerGeneratorParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bBypass                                                     ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	CMember(UAudioBus*)                                AudioBus                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     Gain                                                        ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     AttackTime                                                  ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     ReleaseTime                                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x1, 1, 0, 0})
+	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     Gain                                                        OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     AttackTime                                                  OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     ReleaseTime                                                 OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationLFOParams
@@ -259,15 +274,15 @@ class FSoundModulationLFOParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(ESoundModulationLFOShape)                  Shape                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(float)                                     ExponentialFactor                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Width                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Amplitude                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Frequency                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Offset                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Phase                                                       ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bLooping                                                    ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	DMember(bool)                                      bBypass                                                     ___ OFFSET(get<bool>, {0x1D, 1, 0, 0})
+	CMember(ESoundModulationLFOShape)                  Shape                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(float)                                     ExponentialFactor                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Amplitude                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Frequency                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Offset                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Phase                                                       OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bLooping                                                    OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x1D, 1, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundControlBusMixStage
@@ -278,8 +293,8 @@ class FSoundControlBusMixStage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(USoundControlBus*)                         Bus                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSoundModulationMixValue)                  Value                                                       ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(USoundControlBus*)                         Bus                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FSoundModulationMixValue)                  Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationMixValue
@@ -290,9 +305,9 @@ class FSoundModulationMixValue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     TargetValue                                                 ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     AttackTime                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     ReleaseTime                                                 ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     TargetValue                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     AttackTime                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     ReleaseTime                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationParameterSettings
@@ -303,7 +318,7 @@ class FSoundModulationParameterSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(float)                                     ValueNormalized                                             ___ OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     ValueNormalized                                             OFFSET(get<float>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationTransform
@@ -324,9 +339,9 @@ class FSoundControlModulationInput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	DMember(bool)                                      bSampleAndHold                                              ___ OFFSET(get<bool>, {0x0, 1, 1, 0})
-	SMember(FSoundModulationTransform)                 Transform                                                   ___ OFFSET(get<T>, {0x8, 184, 0, 0})
-	CMember(USoundControlBus*)                         Bus                                                         ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
+	DMember(bool)                                      bSampleAndHold                                              OFFSET(get<bool>, {0x0, 1, 1, 0})
+	SMember(FSoundModulationTransform)                 Transform                                                   OFFSET(get<T>, {0x8, 184, 0, 0})
+	CMember(USoundControlBus*)                         Bus                                                         OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundControlModulationPatch
@@ -337,9 +352,9 @@ class FSoundControlModulationPatch : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bBypass                                                     ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(USoundModulationParameter*)                OutputParameter                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<FSoundControlModulationInput>)      Inputs                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(USoundModulationParameter*)                OutputParameter                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FSoundControlModulationInput>)      Inputs                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Enum /Script/AudioModulation.ESoundModulationLFOShape

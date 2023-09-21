@@ -17,12 +17,12 @@ class USubtitleDisplayOptions : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FSlateFontInfo)                            Font                                                        ___ OFFSET(get<T>, {0x30, 88, 0, 0})
-	DMember(int32_t)                                   DisplayTextSizes                                            ___ OFFSET(get<int32_t>, {0x88, 20, 0, 0})
-	SMember(FLinearColor)                              DisplayTextColors                                           ___ OFFSET(get<T>, {0x9C, 32, 0, 0})
-	DMember(float)                                     DisplayBorderSize                                           ___ OFFSET(get<float>, {0xBC, 12, 0, 0})
-	DMember(float)                                     DisplayBackgroundOpacity                                    ___ OFFSET(get<float>, {0xC8, 20, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             ___ OFFSET(get<T>, {0xE0, 192, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x30, 88, 0, 0})
+	DMember(int32_t)                                   DisplayTextSizes                                            OFFSET(get<int32_t>, {0x88, 20, 0, 0})
+	SMember(FLinearColor)                              DisplayTextColors                                           OFFSET(get<T>, {0x9C, 32, 0, 0})
+	DMember(float)                                     DisplayBorderSize                                           OFFSET(get<float>, {0xBC, 12, 0, 0})
+	DMember(float)                                     DisplayBackgroundOpacity                                    OFFSET(get<float>, {0xC8, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0xE0, 192, 0, 0})
 };
 
 /// Class /Script/SubtitlesWidgets.SubtitleDisplay
@@ -33,15 +33,20 @@ class USubtitleDisplay : public UWidget
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	SMember(FSubtitleFormat)                           Format                                                      ___ OFFSET(get<T>, {0x178, 4, 0, 0})
-	CMember(USubtitleDisplayOptions*)                  Options                                                     ___ OFFSET(get<T>, {0x180, 8, 0, 0})
-	DMember(float)                                     WrapTextAt                                                  ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(bool)                                      bPreviewMode                                                ___ OFFSET(get<bool>, {0x18C, 1, 0, 0})
-	SMember(FText)                                     PreviewText                                                 ___ OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FTextBlockStyle)                           GeneratedStyle                                              ___ OFFSET(get<T>, {0x1B0, 784, 0, 0})
-	SMember(FSlateBrush)                               GeneratedBackgroundBorder                                   ___ OFFSET(get<T>, {0x4C0, 192, 0, 0})
+	SMember(FSubtitleFormat)                           Format                                                      OFFSET(get<T>, {0x178, 4, 0, 0})
+	CMember(USubtitleDisplayOptions*)                  Options                                                     OFFSET(get<T>, {0x180, 8, 0, 0})
+	DMember(float)                                     WrapTextAt                                                  OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(bool)                                      bPreviewMode                                                OFFSET(get<bool>, {0x18C, 1, 0, 0})
+	SMember(FText)                                     PreviewText                                                 OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FTextBlockStyle)                           GeneratedStyle                                              OFFSET(get<T>, {0x1B0, 784, 0, 0})
+	SMember(FSlateBrush)                               GeneratedBackgroundBorder                                   OFFSET(get<T>, {0x4C0, 192, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SubtitlesWidgets.SubtitleDisplay.HasSubtitles
+	// bool HasSubtitles();                                                                                                     // [0x713dedc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SubtitlesWidgets.SubtitleDisplayNative
 /// Size: 0x03F8 (0x000028 - 0x000420)
 class USubtitleDisplayNative : public UObject
@@ -50,9 +55,9 @@ class USubtitleDisplayNative : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 1056;
 
 public:
-	CMember(USubtitleDisplayOptions*)                  Options                                                     ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FTextBlockStyle)                           GeneratedStyle                                              ___ OFFSET(get<T>, {0x40, 784, 0, 0})
-	SMember(FSlateBrush)                               GeneratedBackgroundBorder                                   ___ OFFSET(get<T>, {0x350, 192, 0, 0})
+	CMember(USubtitleDisplayOptions*)                  Options                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FTextBlockStyle)                           GeneratedStyle                                              OFFSET(get<T>, {0x40, 784, 0, 0})
+	SMember(FSlateBrush)                               GeneratedBackgroundBorder                                   OFFSET(get<T>, {0x350, 192, 0, 0})
 };
 
 /// Class /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer
@@ -63,9 +68,20 @@ class UFortMediaSubtitlesPlayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UOverlays*)                                SourceSubtitles                                             ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UOverlays*)                                SourceSubtitles                                             OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer.Stop
+	// void Stop();                                                                                                             // [0x713dfbc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer.SetSubtitles
+	// void SetSubtitles(UOverlays* Subtitles);                                                                                 // [0x713df40] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer.Play
+	// void Play();                                                                                                             // [0x713df2c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer.BindToMediaPlayer
+	// void BindToMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                     // [0x713dde8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/SubtitlesWidgets.SubtitleDisplaySubsystem
 /// Size: 0x0020 (0x000030 - 0x000050)
 class USubtitleDisplaySubsystem : public UGameInstanceSubsystem
@@ -74,7 +90,7 @@ class USubtitleDisplaySubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSubtitleFormat)                           SubtitleFormat                                              ___ OFFSET(get<T>, {0x48, 4, 0, 0})
+	SMember(FSubtitleFormat)                           SubtitleFormat                                              OFFSET(get<T>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/SubtitlesWidgets.SubtitleFormat
@@ -85,10 +101,10 @@ class FSubtitleFormat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	CMember(ESubtitleDisplayTextSize)                  SubtitleTextSize                                            ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(ESubtitleDisplayTextColor)                 SubtitleTextColor                                           ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	CMember(ESubtitleDisplayTextBorder)                SubtitleTextBorder                                          ___ OFFSET(get<T>, {0x2, 1, 0, 0})
-	CMember(ESubtitleDisplayBackgroundOpacity)         SubtitleBackgroundOpacity                                   ___ OFFSET(get<T>, {0x3, 1, 0, 0})
+	CMember(ESubtitleDisplayTextSize)                  SubtitleTextSize                                            OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(ESubtitleDisplayTextColor)                 SubtitleTextColor                                           OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(ESubtitleDisplayTextBorder)                SubtitleTextBorder                                          OFFSET(get<T>, {0x2, 1, 0, 0})
+	CMember(ESubtitleDisplayBackgroundOpacity)         SubtitleBackgroundOpacity                                   OFFSET(get<T>, {0x3, 1, 0, 0})
 };
 
 /// Enum /Script/SubtitlesWidgets.ESubtitleDisplayTextSize

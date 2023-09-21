@@ -16,6 +16,6 @@ class UGameFeatureAction_AddAttributeDefaults : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FSoftObjectPath>)                   AttribDefaultTableNames                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   AttribDefaultTableNames                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 

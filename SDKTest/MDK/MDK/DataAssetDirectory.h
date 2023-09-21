@@ -25,7 +25,7 @@ class UDataAssetDirectorySimpleObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   IntProperty                                                 ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestPODAsset
@@ -36,14 +36,14 @@ class UDataAssetDirectoryTestPODAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FString)                                   AssetName                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(EDataAssetDirectoryTestEnum)               EnumProperty                                                ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(int32_t)                                   IntProperty                                                 ___ OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-	DMember(float)                                     FloatProperty                                               ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(bool)                                      BoolProperty                                                ___ OFFSET(get<bool>, {0x44, 1, 0, 0})
-	SMember(FString)                                   StringProperty                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FName)                                     NameProperty                                                ___ OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FText)                                     TextProperty                                                ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FString)                                   AssetName                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(EDataAssetDirectoryTestEnum)               EnumProperty                                                OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
+	DMember(float)                                     FloatProperty                                               OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(bool)                                      BoolProperty                                                OFFSET(get<bool>, {0x44, 1, 0, 0})
+	SMember(FString)                                   StringProperty                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FName)                                     NameProperty                                                OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FText)                                     TextProperty                                                OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestStructAsset
@@ -54,7 +54,7 @@ class UDataAssetDirectoryTestStructAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FDataAssetDirectoryTestPODStruct)          TestStruct                                                  ___ OFFSET(get<T>, {0x28, 64, 0, 0})
+	SMember(FDataAssetDirectoryTestPODStruct)          TestStruct                                                  OFFSET(get<T>, {0x28, 64, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestArrayAsset
@@ -65,8 +65,8 @@ class UDataAssetDirectoryTestArrayAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<int32_t>)                           IntArray                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FDataAssetDirectoryTestSimpleStruct>) SimpleStructArray                                         ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<int32_t>)                           IntArray                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FDataAssetDirectoryTestSimpleStruct>) SimpleStructArray                                         OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestObjectAsset
@@ -77,7 +77,7 @@ class UDataAssetDirectoryTestObjectAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UDataAssetDirectorySimpleObject*)          SimpleObject                                                ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UDataAssetDirectorySimpleObject*)          SimpleObject                                                OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestMapAsset
@@ -88,10 +88,10 @@ class UDataAssetDirectoryTestMapAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	CMember(TMap<FString, int32_t>)                    StringIntMap                                                ___ OFFSET(get<T>, {0x28, 80, 0, 0})
-	CMember(TMap<FString, int32_t>)                    ShrinkStringIntMap                                          ___ OFFSET(get<T>, {0x78, 80, 0, 0})
-	CMember(TMap<FString, int32_t>)                    GrowStringIntMap                                            ___ OFFSET(get<T>, {0xC8, 80, 0, 0})
-	CMember(TMap<int32_t, FDataAssetDirectoryTestSimpleStruct>) IntStructMap                                       ___ OFFSET(get<T>, {0x118, 80, 0, 0})
+	CMember(TMap<FString, int32_t>)                    StringIntMap                                                OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FString, int32_t>)                    ShrinkStringIntMap                                          OFFSET(get<T>, {0x78, 80, 0, 0})
+	CMember(TMap<FString, int32_t>)                    GrowStringIntMap                                            OFFSET(get<T>, {0xC8, 80, 0, 0})
+	CMember(TMap<int32_t, FDataAssetDirectoryTestSimpleStruct>) IntStructMap                                       OFFSET(get<T>, {0x118, 80, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryManager
@@ -102,12 +102,12 @@ class UDataAssetDirectoryManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	CMember(TArray<UObject*>)                          PatchedAssets                                               ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	SMember(FDateTime)                                 LastUpdateCheck                                             ___ OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	DMember(uint32_t)                                  UpdateCheckLimitSeconds                                     ___ OFFSET(get<uint32_t>, {0x1B8, 4, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1BC, 1, 0, 0})
-	DMember(bool)                                      bFailOnError                                                ___ OFFSET(get<bool>, {0x1BD, 1, 0, 0})
-	DMember(bool)                                      bAnalyticsEnabled                                           ___ OFFSET(get<bool>, {0x1BE, 1, 0, 0})
+	CMember(TArray<UObject*>)                          PatchedAssets                                               OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	DMember(uint32_t)                                  UpdateCheckLimitSeconds                                     OFFSET(get<uint32_t>, {0x1B8, 4, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1BC, 1, 0, 0})
+	DMember(bool)                                      bFailOnError                                                OFFSET(get<bool>, {0x1BD, 1, 0, 0})
+	DMember(bool)                                      bAnalyticsEnabled                                           OFFSET(get<bool>, {0x1BE, 1, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryPatcher
@@ -128,13 +128,13 @@ class FDataAssetDirectoryTestPODStruct : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(EDataAssetDirectoryTestEnum)               EnumProperty                                                ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   IntProperty                                                 ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(float)                                     FloatProperty                                               ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      BoolProperty                                                ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FString)                                   StringProperty                                              ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     NameProperty                                                ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FText)                                     TextProperty                                                ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(EDataAssetDirectoryTestEnum)               EnumProperty                                                OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(float)                                     FloatProperty                                               OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      BoolProperty                                                OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FString)                                   StringProperty                                              OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     NameProperty                                                OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FText)                                     TextProperty                                                OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/DataAssetDirectory.DataAssetDirectoryTestSimpleStruct
@@ -145,7 +145,7 @@ class FDataAssetDirectoryTestSimpleStruct : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   IntProperty                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Enum /Script/DataAssetDirectory.EDataAssetDirectoryTestEnum

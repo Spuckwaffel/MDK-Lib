@@ -17,8 +17,13 @@ class AFortQuestLivingWorldVolume : public AFortAthenaLivingWorldVolume
 	static inline constexpr uint64_t __MDKClassSize = 1552;
 
 public:
-	SMember(FGameplayTagContainer)                     NoPlayerNeedsQuestFilterTags                                ___ OFFSET(get<T>, {0x5C0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     PlayerNeedsQuestFilterTags                                  ___ OFFSET(get<T>, {0x5E0, 32, 0, 0})
-	CMember(UFortQuestItemDefinition*)                 RequiredQuest                                               ___ OFFSET(get<T>, {0x600, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     NoPlayerNeedsQuestFilterTags                                OFFSET(get<T>, {0x5C0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlayerNeedsQuestFilterTags                                  OFFSET(get<T>, {0x5E0, 32, 0, 0})
+	CMember(UFortQuestItemDefinition*)                 RequiredQuest                                               OFFSET(get<T>, {0x600, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/STW_LagerRuntime.FortQuestLivingWorldVolume.HandlePIEQuestsUpdated
+	// void HandlePIEQuestsUpdated();                                                                                           // [0x2d79908] Final|Native|Protected 

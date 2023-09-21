@@ -16,7 +16,7 @@ class UDualShockExternalEndpointSettings : public UAudioEndpointSettingsBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   ControllerIndex                                             ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   ControllerIndex                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/WinDualShock.DualShockSoundfieldEndpointSettings
@@ -27,7 +27,7 @@ class UDualShockSoundfieldEndpointSettings : public USoundfieldEndpointSettingsB
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   ControllerIndex                                             ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   ControllerIndex                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/WinDualShock.DualShockSpatializationSettings
@@ -38,8 +38,8 @@ class UDualShockSpatializationSettings : public USoundfieldEncodingSettingsBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(float)                                     Spread                                                      ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   Priority                                                    ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	DMember(bool)                                      PassThrough                                                 ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Spread                                                      OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(bool)                                      PassThrough                                                 OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 

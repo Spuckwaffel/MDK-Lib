@@ -14,10 +14,10 @@ class FPlatformRuntimeAudioCompressionOverrides : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bOverrideCompressionTimes                                   ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     DurationThreshold                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   MaxNumRandomBranches                                        ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   SoundCueQualityIndex                                        ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bOverrideCompressionTimes                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     DurationThreshold                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MaxNumRandomBranches                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   SoundCueQualityIndex                                        OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Enum /Script/AudioPlatformConfiguration.ESoundwaveSampleRateSettings

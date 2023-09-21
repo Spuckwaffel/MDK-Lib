@@ -16,7 +16,7 @@ class UChooserParameterBool_ContextProperty : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumnBool
@@ -27,8 +27,8 @@ class UChooserColumnBool : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TScriptInterface<Class>)                   InputValue                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<bool>)                              RowValues                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   InputValue                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<bool>)                              RowValues                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.HasContextClass
@@ -49,7 +49,7 @@ class UChooserParameterEnum_ContextProperty : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumnEnum
@@ -60,8 +60,8 @@ class UChooserColumnEnum : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TScriptInterface<Class>)                   InputValue                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FChooserEnumRowData>)               RowValues                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   InputValue                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FChooserEnumRowData>)               RowValues                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserParameterFloat_ContextProperty
@@ -72,7 +72,7 @@ class UChooserParameterFloat_ContextProperty : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumnFloatRange
@@ -83,8 +83,8 @@ class UChooserColumnFloatRange : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TScriptInterface<Class>)                   InputValue                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FChooserFloatRangeRowData>)         RowValues                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   InputValue                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FChooserFloatRangeRowData>)         RowValues                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserParameterGameplayTag_ContextProperty
@@ -95,7 +95,7 @@ class UChooserParameterGameplayTag_ContextProperty : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumnGameplayTag
@@ -106,9 +106,9 @@ class UChooserColumnGameplayTag : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TScriptInterface<Class>)                   InputValue                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(EGameplayContainerMatchType)               TagMatchType                                                ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	CMember(TArray<FGameplayTagContainer>)             RowValues                                                   ___ OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   InputValue                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(EGameplayContainerMatchType)               TagMatchType                                                OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(TArray<FGameplayTagContainer>)             RowValues                                                   OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumn
@@ -179,7 +179,7 @@ class UObjectChooser_Asset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UObject*)                                  Asset                                                       ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UObject*)                                  Asset                                                       OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserTable
@@ -190,11 +190,11 @@ class UChooserTable : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<FInstancedStruct>)                  ResultsStructs                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  ColumnsStructs                                              ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  ContextData                                                 ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(UClass*)                                   OutputObjectType                                            ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(EObjectChooserResultType)                  ResultType                                                  ___ OFFSET(get<T>, {0x80, 4, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  ResultsStructs                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  ColumnsStructs                                              OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  ContextData                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(UClass*)                                   OutputObjectType                                            OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(EObjectChooserResultType)                  ResultType                                                  OFFSET(get<T>, {0x80, 4, 0, 0})
 };
 
 /// Class /Script/Chooser.ObjectChooser_EvaluateChooser
@@ -205,7 +205,7 @@ class UObjectChooser_EvaluateChooser : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UChooserTable*)                            Chooser                                                     ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UChooserTable*)                            Chooser                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/Chooser.ChooserColumnMenuContext
@@ -256,8 +256,8 @@ class FBoolContextProperty : public FChooserParameterBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FChooserPropertyBinding)                   Binding                                                     ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserPropertyBinding
@@ -268,8 +268,8 @@ class FChooserPropertyBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   ContextIndex                                                ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   ContextIndex                                                OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserColumnBase
@@ -290,8 +290,8 @@ class FBoolColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<EBoolColumnCellValue>)              RowValuesWithAny                                            ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<EBoolColumnCellValue>)              RowValuesWithAny                                            OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserEnumPropertyBinding
@@ -332,7 +332,7 @@ class FContextObjectTypeBase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	CMember(EContextObjectDirection)                   Direction                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EContextObjectDirection)                   Direction                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/Chooser.ContextObjectTypeClass
@@ -343,7 +343,7 @@ class FContextObjectTypeClass : public FContextObjectTypeBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UClass*)                                   Class                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Chooser.ContextObjectTypeStruct
@@ -354,7 +354,7 @@ class FContextObjectTypeStruct : public FContextObjectTypeBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UScriptStruct*)                            Struct                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UScriptStruct*)                            Struct                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserParameterEnumBase
@@ -375,8 +375,8 @@ class FEnumContextProperty : public FChooserParameterEnumBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FChooserEnumPropertyBinding)               Binding                                                     ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FChooserEnumPropertyBinding)               Binding                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserEnumRowData
@@ -387,8 +387,8 @@ class FChooserEnumRowData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(bool)                                      CompareNotEqual                                             ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(char)                                      Value                                                       ___ OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(bool)                                      CompareNotEqual                                             OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(char)                                      Value                                                       OFFSET(get<char>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/Chooser.EnumColumn
@@ -399,8 +399,8 @@ class FEnumColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FChooserEnumRowData>)               RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FChooserEnumRowData>)               RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserParameterFloatBase
@@ -421,8 +421,8 @@ class FFloatContextProperty : public FChooserParameterFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FChooserPropertyBinding)                   Binding                                                     ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserFloatRangeRowData
@@ -433,8 +433,8 @@ class FChooserFloatRangeRowData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     min                                                         ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     max                                                         ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     min                                                         OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     max                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Chooser.FloatRangeColumn
@@ -445,8 +445,8 @@ class FFloatRangeColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FChooserFloatRangeRowData>)         RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FChooserFloatRangeRowData>)         RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserParameterGameplayTagBase
@@ -467,8 +467,8 @@ class FGameplayTagContextProperty : public FChooserParameterGameplayTagBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FName>)                             PropertyBindingChain                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FChooserPropertyBinding)                   Binding                                                     ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FName>)                             PropertyBindingChain                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.GameplayTagColumn
@@ -479,9 +479,9 @@ class FGameplayTagColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(EGameplayContainerMatchType)               TagMatchType                                                ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	CMember(TArray<FGameplayTagContainer>)             RowValues                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(EGameplayContainerMatchType)               TagMatchType                                                OFFSET(get<T>, {0x18, 1, 0, 0})
+	CMember(TArray<FGameplayTagContainer>)             RowValues                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserParameterObjectBase
@@ -562,7 +562,7 @@ class FAssetChooser : public FObjectChooserBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UObject*)                                  Asset                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UObject*)                                  Asset                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Chooser.ClassChooser
@@ -573,7 +573,7 @@ class FClassChooser : public FObjectChooserBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UClass*)                                   Class                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Chooser.ObjectContextProperty
@@ -584,7 +584,7 @@ class FObjectContextProperty : public FChooserParameterObjectBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FChooserObjectPropertyBinding)             Binding                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FChooserObjectPropertyBinding)             Binding                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserObjectRowData
@@ -595,8 +595,8 @@ class FChooserObjectRowData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(EObjectColumnCellValueComparison)          Comparison                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  Value                                                       ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(EObjectColumnCellValueComparison)          Comparison                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/Chooser.ObjectColumn
@@ -607,8 +607,8 @@ class FObjectColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FChooserObjectRowData>)             RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FChooserObjectRowData>)             RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.OutputBoolColumn
@@ -619,8 +619,8 @@ class FOutputBoolColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<bool>)                              RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<bool>)                              RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.ChooserOutputEnumRowData
@@ -631,7 +631,7 @@ class FChooserOutputEnumRowData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(char)                                      Value                                                       ___ OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      Value                                                       OFFSET(get<char>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/Chooser.OutputEnumColumn
@@ -642,8 +642,8 @@ class FOutputEnumColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FChooserOutputEnumRowData>)         RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FChooserOutputEnumRowData>)         RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.OutputFloatColumn
@@ -654,8 +654,8 @@ class FOutputFloatColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<double>)                            RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<double>)                            RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.StructContextProperty
@@ -666,7 +666,7 @@ class FStructContextProperty : public FChooserParameterStructBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FChooserStructPropertyBinding)             Binding                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FChooserStructPropertyBinding)             Binding                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.OutputStructColumn
@@ -677,8 +677,8 @@ class FOutputStructColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  RowValues                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  RowValues                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.RandomizeContextProperty
@@ -689,7 +689,7 @@ class FRandomizeContextProperty : public FChooserParameterRandomizeBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FChooserPropertyBinding)                   Binding                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Chooser.RandomizeColumn
@@ -700,9 +700,9 @@ class FRandomizeColumn : public FChooserColumnBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FInstancedStruct)                          InputValue                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(float)                                     RepeatProbabilityMultiplier                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	CMember(TArray<float>)                             RowValues                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FInstancedStruct)                          InputValue                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     RepeatProbabilityMultiplier                                 OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(TArray<float>)                             RowValues                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/Chooser.EvaluateChooser
@@ -713,7 +713,7 @@ class FEvaluateChooser : public FObjectChooserBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UChooserTable*)                            Chooser                                                     ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UChooserTable*)                            Chooser                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Enum /Script/Chooser.EBoolColumnCellValue

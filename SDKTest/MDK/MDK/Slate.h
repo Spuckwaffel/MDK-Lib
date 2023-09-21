@@ -26,7 +26,7 @@ class USlateSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bExplicitCanvasChildZOrder                                  ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bExplicitCanvasChildZOrder                                  OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/Slate.ButtonWidgetStyle
@@ -37,7 +37,7 @@ class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FButtonStyle)                              ButtonStyle                                                 ___ OFFSET(get<T>, {0x30, 944, 0, 0})
+	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(get<T>, {0x30, 944, 0, 0})
 };
 
 /// Class /Script/Slate.CheckBoxWidgetStyle
@@ -48,7 +48,7 @@ class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 2624;
 
 public:
-	SMember(FCheckBoxStyle)                            CheckBoxStyle                                               ___ OFFSET(get<T>, {0x30, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            CheckBoxStyle                                               OFFSET(get<T>, {0x30, 2576, 0, 0})
 };
 
 /// Class /Script/Slate.ComboBoxWidgetStyle
@@ -59,7 +59,7 @@ class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
-	SMember(FComboBoxStyle)                            ComboBoxStyle                                               ___ OFFSET(get<T>, {0x30, 1536, 0, 0})
+	SMember(FComboBoxStyle)                            ComboBoxStyle                                               OFFSET(get<T>, {0x30, 1536, 0, 0})
 };
 
 /// Class /Script/Slate.ComboButtonWidgetStyle
@@ -70,7 +70,7 @@ class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
-	SMember(FComboButtonStyle)                         ComboButtonStyle                                            ___ OFFSET(get<T>, {0x30, 1440, 0, 0})
+	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(get<T>, {0x30, 1440, 0, 0})
 };
 
 /// Class /Script/Slate.EditableTextBoxWidgetStyle
@@ -81,7 +81,7 @@ class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 3504;
 
 public:
-	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        ___ OFFSET(get<T>, {0x30, 3456, 0, 0})
+	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        OFFSET(get<T>, {0x30, 3456, 0, 0})
 };
 
 /// Class /Script/Slate.EditableTextWidgetStyle
@@ -92,7 +92,7 @@ class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FEditableTextStyle)                        EditableTextStyle                                           ___ OFFSET(get<T>, {0x30, 704, 0, 0})
+	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(get<T>, {0x30, 704, 0, 0})
 };
 
 /// Class /Script/Slate.ProgressWidgetStyle
@@ -103,7 +103,7 @@ class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FProgressBarStyle)                         ProgressBarStyle                                            ___ OFFSET(get<T>, {0x30, 608, 0, 0})
+	SMember(FProgressBarStyle)                         ProgressBarStyle                                            OFFSET(get<T>, {0x30, 608, 0, 0})
 };
 
 /// Class /Script/Slate.ScrollBarWidgetStyle
@@ -114,7 +114,7 @@ class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1808;
 
 public:
-	SMember(FScrollBarStyle)                           ScrollBarStyle                                              ___ OFFSET(get<T>, {0x30, 1760, 0, 0})
+	SMember(FScrollBarStyle)                           ScrollBarStyle                                              OFFSET(get<T>, {0x30, 1760, 0, 0})
 };
 
 /// Class /Script/Slate.ScrollBoxWidgetStyle
@@ -125,7 +125,7 @@ class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FScrollBoxStyle)                           ScrollBoxStyle                                              ___ OFFSET(get<T>, {0x30, 816, 0, 0})
+	SMember(FScrollBoxStyle)                           ScrollBoxStyle                                              OFFSET(get<T>, {0x30, 816, 0, 0})
 };
 
 /// Class /Script/Slate.SpinBoxWidgetStyle
@@ -136,7 +136,7 @@ class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1472;
 
 public:
-	SMember(FSpinBoxStyle)                             SpinBoxStyle                                                ___ OFFSET(get<T>, {0x30, 1424, 0, 0})
+	SMember(FSpinBoxStyle)                             SpinBoxStyle                                                OFFSET(get<T>, {0x30, 1424, 0, 0})
 };
 
 /// Class /Script/Slate.TextBlockWidgetStyle
@@ -147,7 +147,7 @@ class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	SMember(FTextBlockStyle)                           TextBlockStyle                                              ___ OFFSET(get<T>, {0x30, 784, 0, 0})
+	SMember(FTextBlockStyle)                           TextBlockStyle                                              OFFSET(get<T>, {0x30, 784, 0, 0})
 };
 
 /// Struct /Script/Slate.VirtualKeyboardOptions
@@ -158,7 +158,7 @@ class FVirtualKeyboardOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bEnableAutocorrect                                          ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bEnableAutocorrect                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/Slate.InputChord
@@ -169,11 +169,11 @@ class FInputChord : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FKey)                                      Key                                                         ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(bool)                                      bShift                                                      ___ OFFSET(get<bool>, {0x18, 1, 1, 0})
-	DMember(bool)                                      bCtrl                                                       ___ OFFSET(get<bool>, {0x18, 1, 1, 1})
-	DMember(bool)                                      bAlt                                                        ___ OFFSET(get<bool>, {0x18, 1, 1, 2})
-	DMember(bool)                                      bCmd                                                        ___ OFFSET(get<bool>, {0x18, 1, 1, 3})
+	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bShift                                                      OFFSET(get<bool>, {0x18, 1, 1, 0})
+	DMember(bool)                                      bCtrl                                                       OFFSET(get<bool>, {0x18, 1, 1, 1})
+	DMember(bool)                                      bAlt                                                        OFFSET(get<bool>, {0x18, 1, 1, 2})
+	DMember(bool)                                      bCmd                                                        OFFSET(get<bool>, {0x18, 1, 1, 3})
 };
 
 /// Struct /Script/Slate.Anchors
@@ -184,8 +184,8 @@ class FAnchors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector2D)                                 Minimum                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 Maximum                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 Minimum                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 Maximum                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Slate.CharRange
@@ -196,8 +196,8 @@ class FCharRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(uint16_t)                                  First                                                       ___ OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
-	DMember(uint16_t)                                  Last                                                        ___ OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
+	DMember(uint16_t)                                  First                                                       OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  Last                                                        OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
 };
 
 /// Struct /Script/Slate.CharRangeList
@@ -208,7 +208,7 @@ class FCharRangeList : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FCharRange>)                        Ranges                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FCharRange>)                        Ranges                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuEntry
@@ -219,7 +219,7 @@ class FCustomizedToolMenuEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	CMember(ECustomizedToolMenuVisibility)             Visibility                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(ECustomizedToolMenuVisibility)             Visibility                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuSection
@@ -230,7 +230,7 @@ class FCustomizedToolMenuSection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	CMember(ECustomizedToolMenuVisibility)             Visibility                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(ECustomizedToolMenuVisibility)             Visibility                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/Slate.CustomizedToolMenuNameArray
@@ -241,7 +241,7 @@ class FCustomizedToolMenuNameArray : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FName>)                             Names                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FName>)                             Names                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Slate.CustomizedToolMenu
@@ -252,12 +252,12 @@ class FCustomizedToolMenu : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TMap<FName, FCustomizedToolMenuEntry>)     Entries                                                     ___ OFFSET(get<T>, {0x8, 80, 0, 0})
-	CMember(TMap<FName, FCustomizedToolMenuSection>)   Sections                                                    ___ OFFSET(get<T>, {0x58, 80, 0, 0})
-	CMember(TMap<FName, FCustomizedToolMenuNameArray>) EntryOrder                                                  ___ OFFSET(get<T>, {0xA8, 80, 0, 0})
-	CMember(TArray<FName>)                             SectionOrder                                                ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
-	CMember(TArray<FName>)                             SuppressExtenders                                           ___ OFFSET(get<T>, {0x108, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TMap<FName, FCustomizedToolMenuEntry>)     Entries                                                     OFFSET(get<T>, {0x8, 80, 0, 0})
+	CMember(TMap<FName, FCustomizedToolMenuSection>)   Sections                                                    OFFSET(get<T>, {0x58, 80, 0, 0})
+	CMember(TMap<FName, FCustomizedToolMenuNameArray>) EntryOrder                                                  OFFSET(get<T>, {0xA8, 80, 0, 0})
+	CMember(TArray<FName>)                             SectionOrder                                                OFFSET(get<T>, {0xF8, 16, 0, 0})
+	CMember(TArray<FName>)                             SuppressExtenders                                           OFFSET(get<T>, {0x108, 16, 0, 0})
 };
 
 /// Enum /Script/Slate.EVirtualKeyboardTrigger

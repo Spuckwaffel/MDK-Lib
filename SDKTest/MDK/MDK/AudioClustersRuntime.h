@@ -16,7 +16,7 @@ class UAudioClusterConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UAudioClusterBehavior*)                    Behavior                                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UAudioClusterBehavior*)                    Behavior                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/AudioClustersRuntime.AudioClusterConfigMap
@@ -27,7 +27,7 @@ class UAudioClusterConfigMap : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<FGameplayTag, UAudioClusterConfig*>)  TagConfigMap                                                ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FGameplayTag, UAudioClusterConfig*>)  TagConfigMap                                                OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Script/AudioClustersRuntime.AudioClusterBehavior
@@ -58,8 +58,8 @@ class FAudioClusterActorInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/AudioClustersRuntime.AudioClusterOneShotInfo
@@ -70,9 +70,9 @@ class FAudioClusterOneShotInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     LifetimeSeconds                                             ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     TimeRemainingSeconds                                        ___ OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     LifetimeSeconds                                             OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     TimeRemainingSeconds                                        OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 

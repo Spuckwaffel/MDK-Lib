@@ -14,9 +14,9 @@ class FGfeSDKCreateInputParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   AppName                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<EGfeSDKScope>)                      RequiredScopes                                              ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      PollForCallbacks                                            ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FString)                                   AppName                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<EGfeSDKScope>)                      RequiredScopes                                              OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      PollForCallbacks                                            OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKCreateResponse
@@ -27,10 +27,10 @@ class FGfeSDKCreateResponse : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	DMember(uint16_t)                                  VersionMajor                                                ___ OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
-	DMember(uint16_t)                                  VersionMinor                                                ___ OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
-	SMember(FString)                                   NVIDIAGfeVersion                                            ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TMap<EGfeSDKScope, EGfeSDKPermission>)     ScopePermissions                                            ___ OFFSET(get<T>, {0x18, 80, 0, 0})
+	DMember(uint16_t)                                  VersionMajor                                                OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  VersionMinor                                                OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
+	SMember(FString)                                   NVIDIAGfeVersion                                            OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TMap<EGfeSDKScope, EGfeSDKPermission>)     ScopePermissions                                            OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightDefinition
@@ -41,11 +41,11 @@ class FGfeSDKHighlightDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      UserDefaultInterest                                         ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	CMember(EGfeSDKHighlightType)                      HighlightTags                                               ___ OFFSET(get<T>, {0x11, 1, 0, 0})
-	CMember(EGfeSDKHighlightSignificance)              Significance                                                ___ OFFSET(get<T>, {0x12, 1, 0, 0})
-	CMember(TMap<FString, FString>)                    NameTranslationTable                                        ___ OFFSET(get<T>, {0x18, 80, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      UserDefaultInterest                                         OFFSET(get<bool>, {0x10, 1, 0, 0})
+	CMember(EGfeSDKHighlightType)                      HighlightTags                                               OFFSET(get<T>, {0x11, 1, 0, 0})
+	CMember(EGfeSDKHighlightSignificance)              Significance                                                OFFSET(get<T>, {0x12, 1, 0, 0})
+	CMember(TMap<FString, FString>)                    NameTranslationTable                                        OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightConfigParams
@@ -56,8 +56,8 @@ class FGfeSDKHighlightConfigParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FGfeSDKHighlightDefinition>)        HighlightDefinitions                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DefaultLocale                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FGfeSDKHighlightDefinition>)        HighlightDefinitions                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DefaultLocale                                               OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKRequestPermissionsParams
@@ -68,7 +68,7 @@ class FGfeSDKRequestPermissionsParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<EGfeSDKScope>)                      Scopes                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<EGfeSDKScope>)                      Scopes                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKPermissionsChangedData
@@ -79,7 +79,7 @@ class FGfeSDKPermissionsChangedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<EGfeSDKScope, EGfeSDKPermission>)     ScopePermissions                                            ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<EGfeSDKScope, EGfeSDKPermission>)     ScopePermissions                                            OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightOpenGroupParams
@@ -90,8 +90,8 @@ class FGfeSDKHighlightOpenGroupParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   GroupId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    GroupDescriptionTranslationTable                            ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    GroupDescriptionTranslationTable                            OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightCloseGroupParams
@@ -102,8 +102,8 @@ class FGfeSDKHighlightCloseGroupParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   GroupId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      DestroyHighlights                                           ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      DestroyHighlights                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightScreenshotParams
@@ -114,8 +114,8 @@ class FGfeSDKHighlightScreenshotParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   GroupId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   HighlightId                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   HighlightId                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightVideoParams
@@ -126,10 +126,10 @@ class FGfeSDKHighlightVideoParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   GroupId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   HighlightId                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   StartDelta                                                  ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   EndDelta                                                    ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   HighlightId                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   StartDelta                                                  OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   EndDelta                                                    OFFSET(get<int32_t>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightGroupView
@@ -140,9 +140,9 @@ class FGfeSDKHighlightGroupView : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   GroupId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EGfeSDKHighlightType)                      TagsFilter                                                  ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	CMember(EGfeSDKHighlightSignificance)              SignificanceFilter                                          ___ OFFSET(get<T>, {0x11, 1, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EGfeSDKHighlightType)                      TagsFilter                                                  OFFSET(get<T>, {0x10, 1, 0, 0})
+	CMember(EGfeSDKHighlightSignificance)              SignificanceFilter                                          OFFSET(get<T>, {0x11, 1, 0, 0})
 };
 
 /// Struct /Script/NVIDIAGfeSDK.GfeSDKHighlightSummaryParams
@@ -153,7 +153,7 @@ class FGfeSDKHighlightSummaryParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FGfeSDKHighlightGroupView>)         GroupViews                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGfeSDKHighlightGroupView>)         GroupViews                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/NVIDIAGfeSDK.EGfeSDKReturnCode

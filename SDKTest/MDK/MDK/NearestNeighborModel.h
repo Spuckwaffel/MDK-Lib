@@ -28,11 +28,16 @@ class UNearestNeighborNetworkLayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(int32_t)                                   NumInputs                                                   ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   NumOutputs                                                  ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	CMember(TArray<FNearestNeighborNetworkParameter>)  Parameters                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(int32_t)                                   NumInputs                                                   OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   NumOutputs                                                  OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	CMember(TArray<FNearestNeighborNetworkParameter>)  Parameters                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/NearestNeighborModel.NearestNeighborNetworkLayer.AddParameter
+	// void AddParameter(TArray<float>& Values, TArray<int32_t>& Shape);                                                        // [0x9cd4f00] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/NearestNeighborModel.NearestNeighborNetworkLayer_Gemm_Prelu
 /// Size: 0x0000 (0x000040 - 0x000040)
 class UNearestNeighborNetworkLayer_Gemm_Prelu : public UNearestNeighborNetworkLayer
@@ -61,9 +66,16 @@ class UNearestNeighborOptimizedNetwork : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UNearestNeighborNetworkLayer*>)     Layers                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UNearestNeighborNetworkLayer*>)     Layers                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/NearestNeighborModel.NearestNeighborOptimizedNetwork.Empty
+	// void Empty();                                                                                                            // [0x128ea78] Native|Public|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborOptimizedNetwork.AddLayer
+	// UNearestNeighborNetworkLayer* AddLayer(int32_t LayerType);                                                               // [0x9cd4e2c] Final|Native|Public|BlueprintCallable 
 /// Class /Script/NearestNeighborModel.NearestNeighborOptimizedNetworkInstance
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UNearestNeighborOptimizedNetworkInstance : public UObject
@@ -72,7 +84,7 @@ class UNearestNeighborOptimizedNetworkInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(UNearestNeighborOptimizedNetwork*)         Network                                                     ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UNearestNeighborOptimizedNetwork*)         Network                                                     OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
 /// Class /Script/NearestNeighborModel.NearestNeighborOptimizedNetworkLoader
@@ -93,17 +105,50 @@ class UNearestNeighborModel : public UMLDeformerMorphModel
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	DMember(bool)                                      bUseInputMultipliers                                        ___ OFFSET(get<bool>, {0x188, 1, 0, 0})
-	CMember(TArray<FVector3f>)                         InputMultipliers                                            ___ OFFSET(get<T>, {0x190, 16, 0, 0})
-	CMember(TArray<FClothPartData>)                    ClothPartData                                               ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	CMember(TArray<float>)                             InputsMin                                                   ___ OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	CMember(TArray<float>)                             InputsMax                                                   ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	DMember(float)                                     DecayFactor                                                 ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     NearestNeighborOffsetWeight                                 ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	CMember(UNearestNeighborOptimizedNetwork*)         OptimizedNetwork                                            ___ OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	DMember(bool)                                      bUseOptimizedNetwork                                        ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	DMember(bool)                                      bUseInputMultipliers                                        OFFSET(get<bool>, {0x188, 1, 0, 0})
+	CMember(TArray<FVector3f>)                         InputMultipliers                                            OFFSET(get<T>, {0x190, 16, 0, 0})
+	CMember(TArray<FClothPartData>)                    ClothPartData                                               OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	CMember(TArray<float>)                             InputsMin                                                   OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	CMember(TArray<float>)                             InputsMax                                                   OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	DMember(float)                                     DecayFactor                                                 OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     NearestNeighborOffsetWeight                                 OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	CMember(UNearestNeighborOptimizedNetwork*)         OptimizedNetwork                                            OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	DMember(bool)                                      bUseOptimizedNetwork                                        OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.VertexMean
+	// TArray<float> VertexMean(int32_t PartId);                                                                                // [0x9cd5ae0] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.SetVertexMean
+	// void SetVertexMean(int32_t PartId, TArray<float>& VertexMean);                                                           // [0x9cd59e8] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.SetPCABasis
+	// void SetPCABasis(int32_t PartId, TArray<float>& PCABasis);                                                               // [0x9cd58f0] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.SetNumNeighbors
+	// void SetNumNeighbors(int32_t PartId, int32_t InNumNeighbors);                                                            // [0x9cd5824] Final|Native|Private|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.SetNeighborOffsets
+	// void SetNeighborOffsets(int32_t PartId, TArray<float>& NeighborOffsets);                                                 // [0x9cd572c] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.SetNeighborCoeffs
+	// void SetNeighborCoeffs(int32_t PartId, TArray<float>& NeighborCoeffs);                                                   // [0x9cd5634] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.PCABasis
+	// TArray<float> PCABasis(int32_t PartId);                                                                                  // [0x9cd5594] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.NeighborOffsets
+	// TArray<float> NeighborOffsets(int32_t PartId);                                                                           // [0x9cd54f4] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.NeighborCoeffs
+	// TArray<float> NeighborCoeffs(int32_t PartId);                                                                            // [0x9cd5454] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.GetPCACoeffStart
+	// int32_t GetPCACoeffStart(int32_t PartId);                                                                                // [0x9cd5324] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.GetPCACoeffNum
+	// int32_t GetPCACoeffNum(int32_t PartId);                                                                                  // [0x9cd528c] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.GetPartNumVerts
+	// int32_t GetPartNumVerts(int32_t PartId);                                                                                 // [0x9cd53bc] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.GetNumParts
+	// int32_t GetNumParts();                                                                                                   // [0x597e60c] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.GetNumNeighbors
+	// int32_t GetNumNeighbors(int32_t PartId);                                                                                 // [0x9cd51f4] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/NearestNeighborModel.NearestNeighborModel.ClipInputs
+	// TArray<float> ClipInputs(TArray<float>& Input);                                                                          // [0x9cd5014] Final|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/NearestNeighborModel.NearestNeighborModelInputInfo
 /// Size: 0x0010 (0x000068 - 0x000078)
 class UNearestNeighborModelInputInfo : public UMLDeformerMorphModelInputInfo
@@ -112,7 +157,7 @@ class UNearestNeighborModelInputInfo : public UMLDeformerMorphModelInputInfo
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TArray<FQuat>)                             RefBoneRotations                                            ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FQuat>)                             RefBoneRotations                                            OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Class /Script/NearestNeighborModel.NearestNeighborModelInstance
@@ -123,9 +168,14 @@ class UNearestNeighborModelInstance : public UMLDeformerMorphModelInstance
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	CMember(UNearestNeighborOptimizedNetworkInstance*) OptimizedNetworkInstance                                    ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(UNearestNeighborOptimizedNetworkInstance*) OptimizedNetworkInstance                                    OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/NearestNeighborModel.NearestNeighborModelInstance.Eval
+	// TArray<float> Eval(TArray<float>& InputData);                                                                            // [0x9cd512c] Final|Native|Private|HasOutParms|BlueprintCallable 
 /// Class /Script/NearestNeighborModel.OptimusSkeletonWithQuatsDataInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UOptimusSkeletonWithQuatsDataInterface : public UOptimusComputeDataInterface
@@ -144,7 +194,7 @@ class UOptimusSkeletonWithQuatsDataProvider : public UComputeDataProvider
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(USkinnedMeshComponent*)                    SkinnedMesh                                                 ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(USkinnedMeshComponent*)                    SkinnedMesh                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/NearestNeighborModel.NearestNeighborNetworkParameter
@@ -155,8 +205,8 @@ class FNearestNeighborNetworkParameter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<float>)                             Values                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<int32_t>)                           Shape                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<float>)                             Values                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Shape                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/NearestNeighborModel.SkeletonCachePair
@@ -167,8 +217,8 @@ class FSkeletonCachePair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UAnimSequence*)                            Skeletons                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UGeometryCache*)                           Cache                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UAnimSequence*)                            Skeletons                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UGeometryCache*)                           Cache                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/NearestNeighborModel.ClothPartEditorData
@@ -179,9 +229,9 @@ class FClothPartEditorData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int32_t)                                   PCACoeffNum                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   VertexMapPath                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   MeshIndex                                                   ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   PCACoeffNum                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	SMember(FString)                                   VertexMapPath                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   MeshIndex                                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/NearestNeighborModel.ClothPartData
@@ -192,15 +242,15 @@ class FClothPartData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(int32_t)                                   PCACoeffNum                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  PCACoeffStart                                               ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint32_t)                                  NumVertices                                                 ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
-	DMember(uint32_t)                                  NumNeighbors                                                ___ OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
-	CMember(TArray<uint32_t>)                          VertexMap                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<float>)                             PCABasis                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<float>)                             VertexMean                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<float>)                             NeighborCoeffs                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<float>)                             NeighborOffsets                                             ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(int32_t)                                   PCACoeffNum                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  PCACoeffStart                                               OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  NumVertices                                                 OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  NumNeighbors                                                OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
+	CMember(TArray<uint32_t>)                          VertexMap                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<float>)                             PCABasis                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<float>)                             VertexMean                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<float>)                             NeighborCoeffs                                              OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<float>)                             NeighborOffsets                                             OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Enum /Script/NearestNeighborModel.ENearestNeighborNetworkLayerType

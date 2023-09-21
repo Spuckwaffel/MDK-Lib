@@ -18,7 +18,7 @@ class UChaosCacheCollection : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UChaosCache*>)                      Caches                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UChaosCache*>)                      Caches                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ChaosCaching.ChaosCacheManager
@@ -29,13 +29,34 @@ class AChaosCacheManager : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	CMember(UChaosCacheCollection*)                    CacheCollection                                             ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(ECacheMode)                                CacheMode                                                   ___ OFFSET(get<T>, {0x298, 1, 0, 0})
-	CMember(EStartMode)                                StartMode                                                   ___ OFFSET(get<T>, {0x299, 1, 0, 0})
-	DMember(float)                                     StartTime                                                   ___ OFFSET(get<float>, {0x29C, 4, 0, 0})
-	CMember(TArray<FObservedComponent>)                ObservedComponents                                          ___ OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	CMember(UChaosCacheCollection*)                    CacheCollection                                             OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(ECacheMode)                                CacheMode                                                   OFFSET(get<T>, {0x298, 1, 0, 0})
+	CMember(EStartMode)                                StartMode                                                   OFFSET(get<T>, {0x299, 1, 0, 0})
+	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x29C, 4, 0, 0})
+	CMember(TArray<FObservedComponent>)                ObservedComponents                                          OFFSET(get<T>, {0x2A8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerComponentByCache
+	// void TriggerComponentByCache(FName InCacheName);                                                                         // [0xa432ca4] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerComponent
+	// void TriggerComponent(UPrimitiveComponent* InComponent);                                                                 // [0xa432c24] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerAll
+	// void TriggerAll();                                                                                                       // [0xa432ba0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.SetStartTime
+	// void SetStartTime(float InStartTime);                                                                                    // [0xa432b20] Final|RequiredAPI|Native|Public 
+	// Function /Script/ChaosCaching.ChaosCacheManager.SetCacheCollection
+	// void SetCacheCollection(UChaosCacheCollection* InCacheCollection);                                                       // [0xa432aa0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.ResetSingleTransform
+	// void ResetSingleTransform(int32_t InIndex);                                                                              // [0xa4329d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.ResetAllComponentTransforms
+	// void ResetAllComponentTransforms();                                                                                      // [0xa4329c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.EnablePlaybackByCache
+	// void EnablePlaybackByCache(FName InCacheName, bool bEnable);                                                             // [0xa4328dc] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// Function /Script/ChaosCaching.ChaosCacheManager.EnablePlayback
+	// void EnablePlayback(int32_t Index, bool bEnable);                                                                        // [0xa43280c] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 /// Class /Script/ChaosCaching.ChaosCachePlayer
 /// Size: 0x0000 (0x000340 - 0x000340)
 class AChaosCachePlayer : public AChaosCacheManager
@@ -54,22 +75,22 @@ class UChaosCache : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	DMember(float)                                     RecordedDuration                                            ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(uint32_t)                                  NumRecordedFrames                                           ___ OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
-	CMember(TArray<int32_t>)                           TrackToParticle                                             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FPerParticleCacheData>)             ParticleTracks                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ChannelCurveToParticle                                      ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TMap<FName, FRichCurves>)                  ChannelsTracks                                              ___ OFFSET(get<T>, {0x60, 80, 0, 0})
-	CMember(TMap<FName, FCompressedRichCurves>)        CompressedChannelsTracks                                    ___ OFFSET(get<T>, {0xB0, 80, 0, 0})
-	CMember(TMap<FName, FRichCurve>)                   CurveData                                                   ___ OFFSET(get<T>, {0x100, 80, 0, 0})
-	CMember(TMap<FName, FParticleTransformTrack>)      NamedTransformTracks                                        ___ OFFSET(get<T>, {0x150, 80, 0, 0})
-	DMember(bool)                                      bCompressChannels                                           ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	DMember(float)                                     ChannelsCompressionErrorThreshold                           ___ OFFSET(get<float>, {0x1A4, 4, 0, 0})
-	DMember(float)                                     ChannelsCompressionSampleRate                               ___ OFFSET(get<float>, {0x1A8, 4, 0, 0})
-	CMember(TMap<FName, FCacheEventTrack>)             EventTracks                                                 ___ OFFSET(get<T>, {0x1B0, 80, 0, 0})
-	SMember(FCacheSpawnableTemplate)                   Spawnable                                                   ___ OFFSET(get<T>, {0x200, 208, 0, 0})
-	SMember(FGuid)                                     AdapterGuid                                                 ___ OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
+	DMember(float)                                     RecordedDuration                                            OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(uint32_t)                                  NumRecordedFrames                                           OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
+	CMember(TArray<int32_t>)                           TrackToParticle                                             OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FPerParticleCacheData>)             ParticleTracks                                              OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ChannelCurveToParticle                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TMap<FName, FRichCurves>)                  ChannelsTracks                                              OFFSET(get<T>, {0x60, 80, 0, 0})
+	CMember(TMap<FName, FCompressedRichCurves>)        CompressedChannelsTracks                                    OFFSET(get<T>, {0xB0, 80, 0, 0})
+	CMember(TMap<FName, FRichCurve>)                   CurveData                                                   OFFSET(get<T>, {0x100, 80, 0, 0})
+	CMember(TMap<FName, FParticleTransformTrack>)      NamedTransformTracks                                        OFFSET(get<T>, {0x150, 80, 0, 0})
+	DMember(bool)                                      bCompressChannels                                           OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	DMember(float)                                     ChannelsCompressionErrorThreshold                           OFFSET(get<float>, {0x1A4, 4, 0, 0})
+	DMember(float)                                     ChannelsCompressionSampleRate                               OFFSET(get<float>, {0x1A8, 4, 0, 0})
+	CMember(TMap<FName, FCacheEventTrack>)             EventTracks                                                 OFFSET(get<T>, {0x1B0, 80, 0, 0})
+	SMember(FCacheSpawnableTemplate)                   Spawnable                                                   OFFSET(get<T>, {0x200, 208, 0, 0})
+	SMember(FGuid)                                     AdapterGuid                                                 OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
 };
 
 /// Class /Script/ChaosCaching.MovieSceneChaosCacheSection
@@ -80,7 +101,7 @@ class UMovieSceneChaosCacheSection : public UMovieSceneBaseCacheSection
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMovieSceneChaosCacheParams)               Params                                                      ___ OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FMovieSceneChaosCacheParams)               Params                                                      OFFSET(get<T>, {0xF8, 40, 0, 0})
 };
 
 /// Class /Script/ChaosCaching.MovieSceneChaosCacheTrack
@@ -91,7 +112,7 @@ class UMovieSceneChaosCacheTrack : public UMovieSceneNameableTrack
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TArray<UMovieSceneSection*>)               AnimationSections                                           ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               AnimationSections                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.CacheEventBase
@@ -112,8 +133,8 @@ class FEnableStateEvent : public FCacheEventBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bEnable                                                     ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bEnable                                                     OFFSET(get<bool>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.BreakingEvent
@@ -124,13 +145,13 @@ class FBreakingEvent : public FCacheEventBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FVector)                                   BoundingBoxMin                                              ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   BoundingBoxMax                                              ___ OFFSET(get<T>, {0x78, 24, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FVector)                                   BoundingBoxMin                                              OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   BoundingBoxMax                                              OFFSET(get<T>, {0x78, 24, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.CollisionEvent
@@ -141,18 +162,18 @@ class FCollisionEvent : public FCacheEventBase
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedImpulse                                          ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Velocity1                                                   ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   Velocity2                                                   ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	SMember(FVector)                                   DeltaVelocity1                                              ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   DeltaVelocity2                                              ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity1                                            ___ OFFSET(get<T>, {0xB0, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity2                                            ___ OFFSET(get<T>, {0xC8, 24, 0, 0})
-	DMember(float)                                     Mass1                                                       ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
-	DMember(float)                                     Mass2                                                       ___ OFFSET(get<float>, {0xE4, 4, 0, 0})
-	DMember(float)                                     PenetrationDepth                                            ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Velocity1                                                   OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Velocity2                                                   OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   DeltaVelocity1                                              OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   DeltaVelocity2                                              OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity1                                            OFFSET(get<T>, {0xB0, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity2                                            OFFSET(get<T>, {0xC8, 24, 0, 0})
+	DMember(float)                                     Mass1                                                       OFFSET(get<float>, {0xE0, 4, 0, 0})
+	DMember(float)                                     Mass2                                                       OFFSET(get<float>, {0xE4, 4, 0, 0})
+	DMember(float)                                     PenetrationDepth                                            OFFSET(get<float>, {0xE8, 4, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.TrailingEvent
@@ -163,12 +184,12 @@ class FTrailingEvent : public FCacheEventBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   BoundingBoxMin                                              ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   BoundingBoxMax                                              ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   BoundingBoxMin                                              OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   BoundingBoxMax                                              OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.CacheEventTrack
@@ -179,9 +200,9 @@ class FCacheEventTrack : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UScriptStruct*)                            Struct                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<float>)                             TimeStamps                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UScriptStruct*)                            Struct                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<float>)                             TimeStamps                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.ObservedComponent
@@ -192,11 +213,11 @@ class FObservedComponent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FName)                                     CacheName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FComponentReference)                       ComponentRef                                                ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FSoftComponentReference)                   SoftComponentRef                                            ___ OFFSET(get<T>, {0x30, 64, 0, 0})
-	DMember(bool)                                      bIsSimulating                                               ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(bool)                                      bPlaybackEnabled                                            ___ OFFSET(get<bool>, {0x71, 1, 0, 0})
+	SMember(FName)                                     CacheName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FComponentReference)                       ComponentRef                                                OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FSoftComponentReference)                   SoftComponentRef                                            OFFSET(get<T>, {0x30, 64, 0, 0})
+	DMember(bool)                                      bIsSimulating                                               OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bPlaybackEnabled                                            OFFSET(get<bool>, {0x71, 1, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.ParticleTransformTrack
@@ -207,10 +228,10 @@ class FParticleTransformTrack : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FRawAnimSequenceTrack)                     RawTransformTrack                                           ___ OFFSET(get<T>, {0x0, 48, 0, 0})
-	DMember(float)                                     BeginOffset                                                 ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bDeactivateOnEnd                                            ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	CMember(TArray<float>)                             KeyTimestamps                                               ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FRawAnimSequenceTrack)                     RawTransformTrack                                           OFFSET(get<T>, {0x0, 48, 0, 0})
+	DMember(float)                                     BeginOffset                                                 OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bDeactivateOnEnd                                            OFFSET(get<bool>, {0x34, 1, 0, 0})
+	CMember(TArray<float>)                             KeyTimestamps                                               OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.PerParticleCacheData
@@ -221,8 +242,8 @@ class FPerParticleCacheData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FParticleTransformTrack)                   TransformData                                               ___ OFFSET(get<T>, {0x0, 72, 0, 0})
-	CMember(TMap<FName, FRichCurve>)                   CurveData                                                   ___ OFFSET(get<T>, {0x48, 80, 0, 0})
+	SMember(FParticleTransformTrack)                   TransformData                                               OFFSET(get<T>, {0x0, 72, 0, 0})
+	CMember(TMap<FName, FRichCurve>)                   CurveData                                                   OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.CacheSpawnableTemplate
@@ -233,9 +254,9 @@ class FCacheSpawnableTemplate : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(UObject*)                                  DuplicatedTemplate                                          ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                ComponentTransform                                          ___ OFFSET(get<T>, {0x70, 96, 0, 0})
+	CMember(UObject*)                                  DuplicatedTemplate                                          OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                ComponentTransform                                          OFFSET(get<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.RichCurves
@@ -246,7 +267,7 @@ class FRichCurves : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRichCurve>)                        RichCurves                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRichCurve>)                        RichCurves                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.CompressedRichCurves
@@ -257,7 +278,7 @@ class FCompressedRichCurves : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FCompressedRichCurve>)              CompressedRichCurves                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FCompressedRichCurve>)              CompressedRichCurves                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.MovieSceneChaosCacheParams
@@ -268,7 +289,7 @@ class FMovieSceneChaosCacheParams : public FMovieSceneBaseCacheParams
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UChaosCacheCollection*)                    CacheCollection                                             ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(UChaosCacheCollection*)                    CacheCollection                                             OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.MovieSceneChaosCacheSectionTemplateParameters
@@ -279,7 +300,7 @@ class FMovieSceneChaosCacheSectionTemplateParameters : public FMovieSceneBaseCac
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FMovieSceneChaosCacheParams)               ChaosCacheParams                                            ___ OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FMovieSceneChaosCacheParams)               ChaosCacheParams                                            OFFSET(get<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.MovieSceneChaosCacheSectionTemplate
@@ -290,7 +311,7 @@ class FMovieSceneChaosCacheSectionTemplate : public FMovieSceneEvalTemplate
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMovieSceneChaosCacheSectionTemplateParameters) Params                                                 ___ OFFSET(get<T>, {0x20, 48, 0, 0})
+	SMember(FMovieSceneChaosCacheSectionTemplateParameters) Params                                                 OFFSET(get<T>, {0x20, 48, 0, 0})
 };
 
 /// Enum /Script/ChaosCaching.ECacheMode

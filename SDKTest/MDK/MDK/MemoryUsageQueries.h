@@ -15,8 +15,8 @@ class UMemoryUsageQueriesConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<FCollectionInfo>)                   Collections                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    SavingsPresets                                              ___ OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(TArray<FCollectionInfo>)                   Collections                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    SavingsPresets                                              OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
 /// Struct /Script/MemoryUsageQueries.CollectionInfo
@@ -27,9 +27,9 @@ class FCollectionInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FString>)                           Includes                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FString>)                           Excludes                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(float)                                     BudgetMB                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           Includes                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FString>)                           Excludes                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(float)                                     BudgetMB                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 

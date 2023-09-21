@@ -16,11 +16,11 @@ class UDataflowSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FLinearColor)                              ArrayPinTypeColor                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FLinearColor)                              ManagedArrayCollectionPinTypeColor                          ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FLinearColor)                              BoxPinTypeColor                                             ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FLinearColor)                              SpherePinTypeColor                                          ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TMap<FName, FNodeColors>)                  NodeColorsMap                                               ___ OFFSET(get<T>, {0x70, 80, 0, 0})
+	SMember(FLinearColor)                              ArrayPinTypeColor                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FLinearColor)                              ManagedArrayCollectionPinTypeColor                          OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FLinearColor)                              BoxPinTypeColor                                             OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FLinearColor)                              SpherePinTypeColor                                          OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TMap<FName, FNodeColors>)                  NodeColorsMap                                               OFFSET(get<T>, {0x70, 80, 0, 0})
 };
 
 /// Struct /Script/DataflowCore.DataflowConnection
@@ -61,7 +61,7 @@ class FDataflowNode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	DMember(bool)                                      bActive                                                     ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	DMember(bool)                                      bActive                                                     OFFSET(get<bool>, {0xC8, 1, 0, 0})
 };
 
 /// Struct /Script/DataflowCore.DataflowOverrideNode
@@ -72,9 +72,9 @@ class FDataflowOverrideNode : public FDataflowNode
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FName)                                     Key                                                         ___ OFFSET(get<T>, {0xE8, 4, 0, 0})
-	SMember(FString)                                   Default                                                     ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	DMember(bool)                                      IsOverriden                                                 ___ OFFSET(get<bool>, {0x100, 1, 0, 0})
+	SMember(FName)                                     Key                                                         OFFSET(get<T>, {0xE8, 4, 0, 0})
+	SMember(FString)                                   Default                                                     OFFSET(get<T>, {0xF0, 16, 0, 0})
+	DMember(bool)                                      IsOverriden                                                 OFFSET(get<bool>, {0x100, 1, 0, 0})
 };
 
 /// Struct /Script/DataflowCore.DataflowSelection
@@ -125,8 +125,8 @@ class FNodeColors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FLinearColor)                              NodeTitleColor                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLinearColor)                              NodeBodyTintColor                                           ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              NodeTitleColor                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              NodeBodyTintColor                                           OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/DataflowCore.DataflowTerminalNode

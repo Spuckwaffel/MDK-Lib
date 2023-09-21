@@ -86,9 +86,9 @@ class FActorInitStateChangedParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(AActor*)                                   OwningActor                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     FeatureName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(UObject*)                                  Implementer                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FGameplayTag)                              FeatureState                                                ___ OFFSET(get<T>, {0x18, 4, 0, 0})
+	CMember(AActor*)                                   OwningActor                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     FeatureName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(UObject*)                                  Implementer                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FGameplayTag)                              FeatureState                                                OFFSET(get<T>, {0x18, 4, 0, 0})
 };
 

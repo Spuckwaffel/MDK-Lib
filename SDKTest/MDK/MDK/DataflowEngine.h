@@ -26,7 +26,7 @@ class UDataflowEdNode : public UEdGraphNode
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	DMember(bool)                                      bRenderInAssetEditor                                        ___ OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	DMember(bool)                                      bRenderInAssetEditor                                        OFFSET(get<bool>, {0xB8, 1, 0, 0})
 };
 
 /// Class /Script/DataflowEngine.Dataflow
@@ -37,9 +37,9 @@ class UDataflow : public UEdGraph
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	DMember(bool)                                      bActive                                                     ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
-	CMember(TArray<UObject*>)                          Targets                                                     ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(UMaterial*)                                Material                                                    ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	DMember(bool)                                      bActive                                                     OFFSET(get<bool>, {0x88, 1, 0, 0})
+	CMember(TArray<UObject*>)                          Targets                                                     OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(UMaterial*)                                Material                                                    OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Struct /Script/DataflowEngine.StringValuePair
@@ -50,7 +50,7 @@ class FStringValuePair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Key                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 

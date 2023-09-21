@@ -17,11 +17,24 @@ class UModalDialogVariant : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1032;
 
 public:
-	CMember(UWidgetAnimation*)                         BoundAnim_Open                                              ___ OFFSET(get<T>, {0x3E8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         BoundAnim_Response                                          ___ OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnResponseAnimationFinished                                 ___ OFFSET(get<T>, {0x3F8, 16, 0, 0})
+	CMember(UWidgetAnimation*)                         BoundAnim_Open                                              OFFSET(get<T>, {0x3E8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         BoundAnim_Response                                          OFFSET(get<T>, {0x3F0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnResponseAnimationFinished                                 OFFSET(get<T>, {0x3F8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.OnResponseAnimationFinished__DelegateSignature
+	// void OnResponseAnimationFinished__DelegateSignature();                                                                   // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.HasResponseAnimation
+	// bool HasResponseAnimation();                                                                                             // [0x9ac6308] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.HandleResponseAnimationFinished
+	// void HandleResponseAnimationFinished();                                                                                  // [0x9ac62f4] Final|Native|Private 
+	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.AttemptToPlayResponseAnimation
+	// void AttemptToPlayResponseAnimation();                                                                                   // [0x9ac62b4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.AttemptToPlayOpenAnimation
+	// void AttemptToPlayOpenAnimation();                                                                                       // [0x9ac6274] Final|Native|Public|BlueprintCallable 
 /// Enum /Script/CRD_ModalDialogRuntime.ECreativeModalBackActionBoundButtonOption
 /// Size: 0x09
 enum ECreativeModalBackActionBoundButtonOption : uint8_t

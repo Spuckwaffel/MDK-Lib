@@ -35,7 +35,7 @@ class FVkPersistenceVersion : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

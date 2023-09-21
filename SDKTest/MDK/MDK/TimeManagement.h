@@ -26,7 +26,7 @@ class UGenlockedCustomTimeStep : public UFixedFrameRateCustomTimeStep
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bAutoDetectFormat                                           ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bAutoDetectFormat                                           OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/TimeManagement.GenlockedFixedRateCustomTimeStep
@@ -37,9 +37,9 @@ class UGenlockedFixedRateCustomTimeStep : public UGenlockedCustomTimeStep
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FFrameRate)                                FrameRate                                                   ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(bool)                                      bShouldBlock                                                ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bForceSingleFrameDeltaTime                                  ___ OFFSET(get<bool>, {0x39, 1, 0, 0})
+	SMember(FFrameRate)                                FrameRate                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(bool)                                      bShouldBlock                                                OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bForceSingleFrameDeltaTime                                  OFFSET(get<bool>, {0x39, 1, 0, 0})
 };
 
 /// Class /Script/TimeManagement.GenlockedTimecodeProvider
@@ -50,7 +50,7 @@ class UGenlockedTimecodeProvider : public UTimecodeProvider
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(bool)                                      bUseGenlockToCount                                          ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bUseGenlockToCount                                          OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Class /Script/TimeManagement.TimeManagementBlueprintLibrary
@@ -71,8 +71,8 @@ class UTimeSynchronizationSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bUseForSynchronization                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(int32_t)                                   FrameOffset                                                 ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(bool)                                      bUseForSynchronization                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(int32_t)                                   FrameOffset                                                 OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 };
 
 /// Struct /Script/TimeManagement.TimedDataChannelSampleTime
@@ -93,8 +93,8 @@ class FTimedDataInputEvaluationData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     DistanceToNewestSampleSeconds                               ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     DistanceToOldestSampleSeconds                               ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     DistanceToNewestSampleSeconds                               OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     DistanceToOldestSampleSeconds                               OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Enum /Script/TimeManagement.EFrameNumberDisplayFormats

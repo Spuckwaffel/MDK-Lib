@@ -26,11 +26,11 @@ class FEpicMediaImageDataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   URL                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   FullUrl                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   Width                                                       ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   Height                                                      ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(float)                                     AspectRatio                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FString)                                   URL                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   FullUrl                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   Width                                                       OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   Height                                                      OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(float)                                     AspectRatio                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaAudioOnlyPeriodDataExt
@@ -41,10 +41,10 @@ class FEpicMediaAudioOnlyPeriodDataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bColorSet                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(double)                                    StartFrame                                                  ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    EndFrame                                                    ___ OFFSET(get<double>, {0x20, 8, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bColorSet                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(double)                                    StartFrame                                                  OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    EndFrame                                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaVolumeChangeDataExt
@@ -55,9 +55,9 @@ class FEpicMediaVolumeChangeDataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(double)                                    Frame                                                       ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Level                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Lerp                                                        ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Frame                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Level                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Lerp                                                        OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaPlaylistExt
@@ -68,18 +68,18 @@ class FEpicMediaPlaylistExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   Language                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Type                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   URL                                                         ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   RelUrl                                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   Data                                                        ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	DMember(double)                                    Duration                                                    ___ OFFSET(get<double>, {0x50, 8, 0, 0})
-	DMember(double)                                    FPS                                                         ___ OFFSET(get<double>, {0x58, 8, 0, 0})
-	CMember(TArray<FEpicMediaImageDataExt>)            Images                                                      ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<FEpicMediaAudioOnlyPeriodDataExt>)  AudioOnlyPeriods                                            ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FEpicMediaVolumeChangeDataExt>)     VolumeChanges                                               ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(double)                                    SkipBoundaryTime                                            ___ OFFSET(get<double>, {0x90, 8, 0, 0})
-	DMember(double)                                    PreEndEventTime                                             ___ OFFSET(get<double>, {0x98, 8, 0, 0})
+	SMember(FString)                                   Language                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Type                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   URL                                                         OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   RelUrl                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Data                                                        OFFSET(get<T>, {0x40, 16, 0, 0})
+	DMember(double)                                    Duration                                                    OFFSET(get<double>, {0x50, 8, 0, 0})
+	DMember(double)                                    FPS                                                         OFFSET(get<double>, {0x58, 8, 0, 0})
+	CMember(TArray<FEpicMediaImageDataExt>)            Images                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FEpicMediaAudioOnlyPeriodDataExt>)  AudioOnlyPeriods                                            OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FEpicMediaVolumeChangeDataExt>)     VolumeChanges                                               OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(double)                                    SkipBoundaryTime                                            OFFSET(get<double>, {0x90, 8, 0, 0})
+	DMember(double)                                    PreEndEventTime                                             OFFSET(get<double>, {0x98, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaRegionLockExt
@@ -90,12 +90,12 @@ class FEpicMediaRegionLockExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	DMember(bool)                                      AllowOnError                                                ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FString)                                   Type                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FString>)                           AllowList                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FString>)                           DenyList                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    Limits                                                      ___ OFFSET(get<T>, {0x38, 80, 0, 0})
-	SMember(FString)                                   ContentId                                                   ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	DMember(bool)                                      AllowOnError                                                OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FString)                                   Type                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FString>)                           AllowList                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FString>)                           DenyList                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    Limits                                                      OFFSET(get<T>, {0x38, 80, 0, 0})
+	SMember(FString)                                   ContentId                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaAudioMetadataTrackIndicesExt
@@ -106,7 +106,7 @@ class FEpicMediaAudioMetadataTrackIndicesExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<int32_t>)                           Indices                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Indices                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaAudioMetadataTrackExt
@@ -117,7 +117,7 @@ class FEpicMediaAudioMetadataTrackExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<FString, FEpicMediaAudioMetadataTrackIndicesExt>) TrackData                                       ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FString, FEpicMediaAudioMetadataTrackIndicesExt>) TrackData                                       OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaAudioMetadataDataExt
@@ -128,14 +128,14 @@ class FEpicMediaAudioMetadataDataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FString)                                   ShortName                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   SongID                                                      ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FString)                                   Title                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Artist                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   Album                                                       ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   Genre                                                       ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(int32_t)                                   Year                                                        ___ OFFSET(get<int32_t>, {0x58, 4, 0, 0})
-	CMember(TMap<FString, int32_t>)                    Difficulty                                                  ___ OFFSET(get<T>, {0x60, 80, 0, 0})
+	SMember(FString)                                   ShortName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   SongID                                                      OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Artist                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Album                                                       OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   Genre                                                       OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(int32_t)                                   Year                                                        OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	CMember(TMap<FString, int32_t>)                    Difficulty                                                  OFFSET(get<T>, {0x60, 80, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaAudioMetadataExt
@@ -146,11 +146,11 @@ class FEpicMediaAudioMetadataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	CMember(TMap<FString, FEpicMediaAudioMetadataTrackIndicesExt>) Tracks                                          ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	CMember(TArray<float>)                             Pans                                                        ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<float>)                             Volumes                                                     ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<char>)                              Midi                                                        ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FEpicMediaAudioMetadataDataExt)            MetadataData                                                ___ OFFSET(get<T>, {0x80, 176, 0, 0})
+	CMember(TMap<FString, FEpicMediaAudioMetadataTrackIndicesExt>) Tracks                                          OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TArray<float>)                             Pans                                                        OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<float>)                             Volumes                                                     OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<char>)                              Midi                                                        OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FEpicMediaAudioMetadataDataExt)            MetadataData                                                OFFSET(get<T>, {0x80, 176, 0, 0})
 };
 
 /// Struct /Script/EpicMediaUtilities.EpicMediaMetadataExt
@@ -161,22 +161,22 @@ class FEpicMediaMetadataExt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	CMember(TArray<FEpicMediaPlaylistExt>)             Playlists                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FEpicMediaPlaylistExt>)             StateStreamPlaylists                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FEpicMediaPlaylistExt>)             SelectedPlaylists                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   Type                                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   Envelope                                                    ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   Limits                                                      ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   Subtitles                                                   ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FString)                                   UserContentProtection                                       ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	DMember(bool)                                      Sharelock                                                   ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
-	DMember(bool)                                      AudioOnly                                                   ___ OFFSET(get<bool>, {0x81, 1, 0, 0})
-	DMember(float)                                     AspectRatio                                                 ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	DMember(bool)                                      PartySync                                                   ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
-	DMember(bool)                                      Live                                                        ___ OFFSET(get<bool>, {0x89, 1, 0, 0})
-	SMember(FString)                                   DenyHTTPCode                                                ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FEpicMediaRegionLockExt)                   RegionLockData                                              ___ OFFSET(get<T>, {0xA0, 168, 0, 0})
-	SMember(FEpicMediaAudioMetadataExt)                AudioMetadata                                               ___ OFFSET(get<T>, {0x148, 304, 0, 0})
-	DMember(bool)                                      bQuicksilverEP                                              ___ OFFSET(get<bool>, {0x278, 1, 0, 0})
+	CMember(TArray<FEpicMediaPlaylistExt>)             Playlists                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FEpicMediaPlaylistExt>)             StateStreamPlaylists                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FEpicMediaPlaylistExt>)             SelectedPlaylists                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Type                                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Envelope                                                    OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   Limits                                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   Subtitles                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   UserContentProtection                                       OFFSET(get<T>, {0x70, 16, 0, 0})
+	DMember(bool)                                      Sharelock                                                   OFFSET(get<bool>, {0x80, 1, 0, 0})
+	DMember(bool)                                      AudioOnly                                                   OFFSET(get<bool>, {0x81, 1, 0, 0})
+	DMember(float)                                     AspectRatio                                                 OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(bool)                                      PartySync                                                   OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(bool)                                      Live                                                        OFFSET(get<bool>, {0x89, 1, 0, 0})
+	SMember(FString)                                   DenyHTTPCode                                                OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FEpicMediaRegionLockExt)                   RegionLockData                                              OFFSET(get<T>, {0xA0, 168, 0, 0})
+	SMember(FEpicMediaAudioMetadataExt)                AudioMetadata                                               OFFSET(get<T>, {0x148, 304, 0, 0})
+	DMember(bool)                                      bQuicksilverEP                                              OFFSET(get<bool>, {0x278, 1, 0, 0})
 };
 

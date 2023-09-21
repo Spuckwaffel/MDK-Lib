@@ -26,7 +26,14 @@ class ACRDPlayerTrackerMarker : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	CMember(UClass*)                                   WidgetClass                                                 ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UActorComponent*)                          PlayerTrackerUIActorComponent                               ___ OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UClass*)                                   WidgetClass                                                 OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UActorComponent*)                          PlayerTrackerUIActorComponent                               OFFSET(get<T>, {0x298, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRDPlayerTracker.CRDPlayerTrackerMarker.DestroyPlayerTrackerWidget
+	// bool DestroyPlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay);                          // [0x9adb470] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRDPlayerTracker.CRDPlayerTrackerMarker.CreatePlayerTrackerWidget
+	// UUserWidget* CreatePlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay, AFortPlayerStateAthena* AssociatedPSA); // [0x9adb2a4] Final|Native|Public|BlueprintCallable 

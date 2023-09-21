@@ -21,9 +21,9 @@ class UFortStoreSelectionData : public UFortGameFeatureData
 	static inline constexpr uint64_t __MDKClassSize = 1256;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   StoreSelectionScreenClass                                   ___ OFFSET(get<T>, {0x498, 32, 0, 0})
-	SMember(FText)                                     RegularStoreSelectedText                                    ___ OFFSET(get<T>, {0x4B8, 24, 0, 0})
-	SMember(FText)                                     NonRegularStoreSelectedText                                 ___ OFFSET(get<T>, {0x4D0, 24, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   StoreSelectionScreenClass                                   OFFSET(get<T>, {0x498, 32, 0, 0})
+	SMember(FText)                                     RegularStoreSelectedText                                    OFFSET(get<T>, {0x4B8, 24, 0, 0})
+	SMember(FText)                                     NonRegularStoreSelectedText                                 OFFSET(get<T>, {0x4D0, 24, 0, 0})
 };
 
 /// Class /Script/StoreSelectionUI.FortStoreSelectionOptionEntry
@@ -34,10 +34,10 @@ class UFortStoreSelectionOptionEntry : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5344;
 
 public:
-	CMember(UFortLazyImage*)                           Image_Icon                                                  ___ OFFSET(get<T>, {0x14C0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Description                                            ___ OFFSET(get<T>, {0x14C8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Price                                                  ___ OFFSET(get<T>, {0x14D0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     RichText_Label                                              ___ OFFSET(get<T>, {0x14D8, 8, 0, 0})
+	CMember(UFortLazyImage*)                           Image_Icon                                                  OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Description                                            OFFSET(get<T>, {0x14C8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Price                                                  OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     RichText_Label                                              OFFSET(get<T>, {0x14D8, 8, 0, 0})
 };
 
 /// Class /Script/StoreSelectionUI.FortStoreSelectionScreen
@@ -48,19 +48,19 @@ class UFortStoreSelectionScreen : public UCommonActivatablePanelLegacy
 	static inline constexpr uint64_t __MDKClassSize = 2264;
 
 public:
-	CMember(UCommonButtonGroupLegacy*)                 EntryBoxButtonGroup                                         ___ OFFSET(get<T>, {0x528, 8, 0, 0})
-	CMember(UFortRealMoneyOffer*)                      StoreOffer                                                  ___ OFFSET(get<T>, {0x530, 8, 0, 0})
-	CMember(UCommonLoadGuard*)                         StoreOfferLoadGuard                                         ___ OFFSET(get<T>, {0x538, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Header                                                 ___ OFFSET(get<T>, {0x540, 8, 0, 0})
-	CMember(UDynamicEntryBox*)                         DynamicEntryBox_Options                                     ___ OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UCommonButtonLegacy*)                      Button_Continue                                             ___ OFFSET(get<T>, {0x550, 8, 0, 0})
-	CMember(UCommonButtonLegacy*)                      Button_Cancel                                               ___ OFFSET(get<T>, {0x558, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     RichText_InitiallySelectedHint                              ___ OFFSET(get<T>, {0x560, 8, 0, 0})
-	CMember(TScriptInterface<Class>)                   PurchaseChoiceOwner                                         ___ OFFSET(get<T>, {0x568, 16, 0, 0})
-	CMember(TArray<FItemData>)                         StoreOptions                                                ___ OFFSET(get<T>, {0x578, 16, 0, 0})
-	CMember(TWeakObjectPtr<UFortMtxOfferData*>)        SoftDisplayAsset                                            ___ OFFSET(get<T>, {0x588, 32, 0, 0})
-	SMember(FItemData)                                 ItemData                                                    ___ OFFSET(get<T>, {0x5A8, 768, 0, 0})
-	SMember(FText)                                     OptionalLabels                                              ___ OFFSET(get<T>, {0x8A8, 48, 0, 0})
+	CMember(UCommonButtonGroupLegacy*)                 EntryBoxButtonGroup                                         OFFSET(get<T>, {0x528, 8, 0, 0})
+	CMember(UFortRealMoneyOffer*)                      StoreOffer                                                  OFFSET(get<T>, {0x530, 8, 0, 0})
+	CMember(UCommonLoadGuard*)                         StoreOfferLoadGuard                                         OFFSET(get<T>, {0x538, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Header                                                 OFFSET(get<T>, {0x540, 8, 0, 0})
+	CMember(UDynamicEntryBox*)                         DynamicEntryBox_Options                                     OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UCommonButtonLegacy*)                      Button_Continue                                             OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UCommonButtonLegacy*)                      Button_Cancel                                               OFFSET(get<T>, {0x558, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     RichText_InitiallySelectedHint                              OFFSET(get<T>, {0x560, 8, 0, 0})
+	CMember(TScriptInterface<Class>)                   PurchaseChoiceOwner                                         OFFSET(get<T>, {0x568, 16, 0, 0})
+	CMember(TArray<FItemData>)                         StoreOptions                                                OFFSET(get<T>, {0x578, 16, 0, 0})
+	CMember(TWeakObjectPtr<UFortMtxOfferData*>)        SoftDisplayAsset                                            OFFSET(get<T>, {0x588, 32, 0, 0})
+	SMember(FItemData)                                 ItemData                                                    OFFSET(get<T>, {0x5A8, 768, 0, 0})
+	SMember(FText)                                     OptionalLabels                                              OFFSET(get<T>, {0x8A8, 48, 0, 0})
 };
 
 /// Struct /Script/StoreSelectionUI.ItemData
@@ -71,8 +71,8 @@ class FItemData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TWeakObjectPtr<UTexture2D*>)               Icon                                                        ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FText)                                     Name                                                        ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TWeakObjectPtr<UTexture2D*>)               Icon                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FText)                                     Name                                                        OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Enum /Script/StoreSelectionUI.EOptionalLabel

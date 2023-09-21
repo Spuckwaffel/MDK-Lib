@@ -17,11 +17,20 @@ class UAsyncAction_RegisterGameplayMessageReceiver : public UBlueprintAsyncActio
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMessageReceived                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HandleSavedState                                            ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HandleStateCleared                                          ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMessageReceived                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HandleSavedState                                            OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HandleStateCleared                                          OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.Unregister
+	// void Unregister();                                                                                                       // [0xd30dac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.RegisterGameplayMessageReceiver
+	// UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(UObject* WorldContextObject, FEventMessageTag Channel, UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, AActor* ActorContext); // [0x210dc3c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.GetPayload
+	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x340a2e4] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameplayMessages.GameplayMessageReplicator
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AGameplayMessageReplicator : public AActor
@@ -40,9 +49,18 @@ class UGameplayMessageRouter : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(AGameplayMessageReplicator*)               MessageReplicator                                           ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(AGameplayMessageReplicator*)               MessageReplicator                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayMessages.GameplayMessageRouter.K2_BroadcastMessage
+	// void K2_BroadcastMessage(FEventMessageTag Channel, int32_t& Message, bool bSaveToChannel, AActor* ActorContext);         // [0x3409db0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayMessages.GameplayMessageRouter.HasValidSavedMessage
+	// bool HasValidSavedMessage(FEventMessageTag Channel);                                                                     // [0x6365ccc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GameplayMessages.GameplayMessageRouter.ClearSavedMessage
+	// void ClearSavedMessage(FEventMessageTag Channel);                                                                        // [0x2ef72a8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/GameplayMessages.BlueprintEventMessageTagLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UBlueprintEventMessageTagLibrary : public UBlueprintFunctionLibrary
@@ -71,7 +89,7 @@ class FReplicatedMessageData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UScriptStruct*)                            StructType                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UScriptStruct*)                            StructType                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayMessages.ReplicatedMessage
@@ -92,9 +110,9 @@ class FGameplayMessageReceiverHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TWeakObjectPtr<UGameplayMessageRouter*>)   Subsystem                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FEventMessageTag)                          Channel                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   ID                                                          ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	CMember(TWeakObjectPtr<UGameplayMessageRouter*>)   Subsystem                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FEventMessageTag)                          Channel                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   ID                                                          OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayMessages.GameplayMessageReceiverData

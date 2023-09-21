@@ -29,8 +29,8 @@ class USocialChatChannelTab : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5328;
 
 public:
-	CMember(USocialChatChannel*)                       ChatChannel                                                 ___ OFFSET(get<T>, {0x14C0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         CommonText_ChannelName                                      ___ OFFSET(get<T>, {0x14C8, 8, 0, 0})
+	CMember(USocialChatChannel*)                       ChatChannel                                                 OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         CommonText_ChannelName                                      OFFSET(get<T>, {0x14C8, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialChatContainer
@@ -41,17 +41,32 @@ class USocialChatContainer : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	CMember(USocialChatManager*)                       ChatManager                                                 ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(TArray<USocialChatChannel*>)               JoinedChannels                                              ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	CMember(USocialChatChannel*)                       ActiveChannel                                               ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(UCommonButtonGroupLegacy*)                 TabButtonGroup                                              ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(USocialChatMessageList*)                   ChatList_Messages                                           ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(USocialChatEditableText*)                  ChatEditableText_MessageEntry                               ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_SendMessage                                          ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(UDynamicEntryBox*)                         EntryBox_JoinedChannels                                     ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UScrollBox*)                               ScrollBox_Channels                                          ___ OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(USocialChatManager*)                       ChatManager                                                 OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(TArray<USocialChatChannel*>)               JoinedChannels                                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	CMember(USocialChatChannel*)                       ActiveChannel                                               OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UCommonButtonGroupLegacy*)                 TabButtonGroup                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(USocialChatMessageList*)                   ChatList_Messages                                           OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(USocialChatEditableText*)                  ChatEditableText_MessageEntry                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_SendMessage                                          OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(UDynamicEntryBox*)                         EntryBox_JoinedChannels                                     OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UScrollBox*)                               ScrollBox_Channels                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialChatContainer.SendCurrentMessage
+	// void SendCurrentMessage();                                                                                               // [0x712f394] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SocialUMG.SocialChatContainer.OnChatOpenChanged
+	// void OnChatOpenChanged(bool bShouldBeOpen);                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SocialUMG.SocialChatContainer.HandleRightTabPressed
+	// void HandleRightTabPressed();                                                                                            // [0x712f30c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SocialUMG.SocialChatContainer.HandleLeftTabPressed
+	// void HandleLeftTabPressed();                                                                                             // [0x712f1f0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SocialUMG.SocialChatContainer.FocusEditableText
+	// void FocusEditableText();                                                                                                // [0x712f140] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SocialUMG.SocialChatContainer.DynamicHandleMessageTextCommitted
+	// void DynamicHandleMessageTextCommitted(FText& MessageText, TEnumAsByte<ETextCommit> CommitMethod);                       // [0x712f004] Final|Native|Private|HasOutParms 
 /// Class /Script/SocialUMG.SocialChatMessageEntry
 /// Size: 0x0160 (0x0002A8 - 0x000408)
 class USocialChatMessageEntry : public UUserWidget
@@ -60,11 +75,18 @@ class USocialChatMessageEntry : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 1032;
 
 public:
-	SMember(FSocialChatMessageEntryStyle)              DefaultStyle                                                ___ OFFSET(get<T>, {0x2C0, 312, 0, 0})
-	CMember(UCommonRichTextBlock*)                     RichText_Message                                            ___ OFFSET(get<T>, {0x3F8, 8, 0, 0})
-	CMember(UButton*)                                  Button_MessageButton                                        ___ OFFSET(get<T>, {0x400, 8, 0, 0})
+	SMember(FSocialChatMessageEntryStyle)              DefaultStyle                                                OFFSET(get<T>, {0x2C0, 312, 0, 0})
+	CMember(UCommonRichTextBlock*)                     RichText_Message                                            OFFSET(get<T>, {0x3F8, 8, 0, 0})
+	CMember(UButton*)                                  Button_MessageButton                                        OFFSET(get<T>, {0x400, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialChatMessageEntry.OnMessageSet
+	// void OnMessageSet();                                                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SocialUMG.SocialChatMessageEntry.CanInteract
+	// bool CanInteract();                                                                                                      // [0x2cdffe0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SocialUMG.SocialChatMessageList
 /// Size: 0x0118 (0x000298 - 0x0003B0)
 class USocialChatMessageList : public UListViewBase
@@ -73,8 +95,8 @@ class USocialChatMessageList : public UListViewBase
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	DMember(bool)                                      bIsFocusable                                                ___ OFFSET(get<bool>, {0x380, 1, 0, 0})
-	CMember(USocialChatChannel*)                       ActiveChannel                                               ___ OFFSET(get<T>, {0x388, 8, 0, 0})
+	DMember(bool)                                      bIsFocusable                                                OFFSET(get<bool>, {0x380, 1, 0, 0})
+	CMember(USocialChatChannel*)                       ActiveChannel                                               OFFSET(get<T>, {0x388, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialGroupListEntry
@@ -85,12 +107,17 @@ class USocialGroupListEntry : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5360;
 
 public:
-	CMember(UClass*)                                   ActionMenuClass                                             ___ OFFSET(get<T>, {0x14C8, 8, 0, 0})
-	CMember(USocialGroupChannel*)                      SocialGroup                                                 ___ OFFSET(get<T>, {0x14D0, 8, 0, 0})
-	CMember(UTextBlock*)                               Text_GroupName                                              ___ OFFSET(get<T>, {0x14D8, 8, 0, 0})
-	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          ___ OFFSET(get<T>, {0x14E0, 8, 0, 0})
+	CMember(UClass*)                                   ActionMenuClass                                             OFFSET(get<T>, {0x14C8, 8, 0, 0})
+	CMember(USocialGroupChannel*)                      SocialGroup                                                 OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	CMember(UTextBlock*)                               Text_GroupName                                              OFFSET(get<T>, {0x14D8, 8, 0, 0})
+	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialGroupListEntry.HandleGetMenuContent
+	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x712f1a8] Final|Native|Protected 
 /// Class /Script/SocialUMG.SocialGroupTreeView
 /// Size: 0x0020 (0x000C30 - 0x000C50)
 class USocialGroupTreeView : public UTreeView
@@ -99,10 +126,10 @@ class USocialGroupTreeView : public UTreeView
 	static inline constexpr uint64_t __MDKClassSize = 3152;
 
 public:
-	CMember(UClass*)                                   GroupEntryWidgetClass                                       ___ OFFSET(get<T>, {0xC28, 8, 0, 0})
-	CMember(UClass*)                                   UserEntryWidgetClass                                        ___ OFFSET(get<T>, {0xC30, 8, 0, 0})
-	CMember(UClass*)                                   ActionMenuClass                                             ___ OFFSET(get<T>, {0xC38, 8, 0, 0})
-	CMember(USocialInteractionMenu*)                   ActionMenu                                                  ___ OFFSET(get<T>, {0xC40, 8, 0, 0})
+	CMember(UClass*)                                   GroupEntryWidgetClass                                       OFFSET(get<T>, {0xC28, 8, 0, 0})
+	CMember(UClass*)                                   UserEntryWidgetClass                                        OFFSET(get<T>, {0xC30, 8, 0, 0})
+	CMember(UClass*)                                   ActionMenuClass                                             OFFSET(get<T>, {0xC38, 8, 0, 0})
+	CMember(USocialInteractionMenu*)                   ActionMenu                                                  OFFSET(get<T>, {0xC40, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialInteractionButton
@@ -113,12 +140,21 @@ class USocialInteractionButton : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5488;
 
 public:
-	SMember(FLinearColor)                              DefaultIndicatorColor                                       ___ OFFSET(get<T>, {0x14C0, 16, 0, 0})
-	SMember(FLinearColor)                              AlertingIndicatorColor                                      ___ OFFSET(get<T>, {0x14D0, 16, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_InteractionName                                        ___ OFFSET(get<T>, {0x1560, 8, 0, 0})
-	CMember(UBorder*)                                  Border_InteractionIndicator                                 ___ OFFSET(get<T>, {0x1568, 8, 0, 0})
+	SMember(FLinearColor)                              DefaultIndicatorColor                                       OFFSET(get<T>, {0x14C0, 16, 0, 0})
+	SMember(FLinearColor)                              AlertingIndicatorColor                                      OFFSET(get<T>, {0x14D0, 16, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x1560, 8, 0, 0})
+	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x1568, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialInteractionButton.OnInteractionSet
+	// void OnInteractionSet();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SocialUMG.SocialInteractionButton.IsPlatformOnlyFriend
+	// bool IsPlatformOnlyFriend();                                                                                             // [0x712f320] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SocialUMG.SocialInteractionButton.GetInteractionName
+	// FName GetInteractionName();                                                                                              // [0x712f174] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SocialUMG.SocialActionMenu
 /// Size: 0x0040 (0x0003E8 - 0x000428)
 class USocialActionMenu : public UCommonActivatableWidget
@@ -137,15 +173,22 @@ class USocialInteractionMenu : public USocialActionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1168;
 
 public:
-	CMember(UDynamicEntryBox*)                         EntryBox_PositiveInteractions                               ___ OFFSET(get<T>, {0x458, 8, 0, 0})
-	CMember(UDynamicEntryBox*)                         EntryBox_NegativeInteractions                               ___ OFFSET(get<T>, {0x460, 8, 0, 0})
-	CMember(USpacer*)                                  Spacer_InteractionSeparator                                 ___ OFFSET(get<T>, {0x468, 8, 0, 0})
-	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_Confirmation                                       ___ OFFSET(get<T>, {0x470, 8, 0, 0})
-	CMember(UTextBlock*)                               Text_ConfirmationLabel                                      ___ OFFSET(get<T>, {0x478, 8, 0, 0})
-	CMember(UCommonButtonLegacy*)                      Button_Confirm                                              ___ OFFSET(get<T>, {0x480, 8, 0, 0})
-	CMember(UCommonButtonLegacy*)                      Button_Decline                                              ___ OFFSET(get<T>, {0x488, 8, 0, 0})
+	CMember(UDynamicEntryBox*)                         EntryBox_PositiveInteractions                               OFFSET(get<T>, {0x458, 8, 0, 0})
+	CMember(UDynamicEntryBox*)                         EntryBox_NegativeInteractions                               OFFSET(get<T>, {0x460, 8, 0, 0})
+	CMember(USpacer*)                                  Spacer_InteractionSeparator                                 OFFSET(get<T>, {0x468, 8, 0, 0})
+	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_Confirmation                                       OFFSET(get<T>, {0x470, 8, 0, 0})
+	CMember(UTextBlock*)                               Text_ConfirmationLabel                                      OFFSET(get<T>, {0x478, 8, 0, 0})
+	CMember(UCommonButtonLegacy*)                      Button_Confirm                                              OFFSET(get<T>, {0x480, 8, 0, 0})
+	CMember(UCommonButtonLegacy*)                      Button_Decline                                              OFFSET(get<T>, {0x488, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialInteractionMenu.OnToggleConfirmation
+	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SocialUMG.SocialInteractionMenu.GetFirstEntryToCenter
+	// UWidget* GetFirstEntryToCenter();                                                                                        // [0x712f154] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SocialUMG.SocialNameTextBlock
 /// Size: 0x0020 (0x000870 - 0x000890)
 class USocialNameTextBlock : public UCommonRichTextBlock
@@ -154,14 +197,14 @@ class USocialNameTextBlock : public UCommonRichTextBlock
 	static inline constexpr uint64_t __MDKClassSize = 2192;
 
 public:
-	CMember(USocialUser*)                              SocialUser                                                  ___ OFFSET(get<T>, {0x868, 8, 0, 0})
-	DMember(float)                                     MinDesiredSize                                              ___ OFFSET(get<float>, {0x870, 4, 0, 0})
-	DMember(float)                                     MaxDesiredSize                                              ___ OFFSET(get<float>, {0x874, 4, 0, 0})
-	DMember(bool)                                      bShowSecondName                                             ___ OFFSET(get<bool>, {0x878, 1, 0, 0})
-	CMember(EPlatformIconDisplayRule)                  PlatformIconDisplayRule                                     ___ OFFSET(get<T>, {0x879, 1, 0, 0})
-	DMember(bool)                                      bWrapToNextLine                                             ___ OFFSET(get<bool>, {0x87A, 1, 0, 0})
-	SMember(FColor)                                    SecondNameColor                                             ___ OFFSET(get<T>, {0x87C, 4, 0, 0})
-	DMember(int32_t)                                   SecondNameFontSize                                          ___ OFFSET(get<int32_t>, {0x880, 4, 0, 0})
+	CMember(USocialUser*)                              SocialUser                                                  OFFSET(get<T>, {0x868, 8, 0, 0})
+	DMember(float)                                     MinDesiredSize                                              OFFSET(get<float>, {0x870, 4, 0, 0})
+	DMember(float)                                     MaxDesiredSize                                              OFFSET(get<float>, {0x874, 4, 0, 0})
+	DMember(bool)                                      bShowSecondName                                             OFFSET(get<bool>, {0x878, 1, 0, 0})
+	CMember(EPlatformIconDisplayRule)                  PlatformIconDisplayRule                                     OFFSET(get<T>, {0x879, 1, 0, 0})
+	DMember(bool)                                      bWrapToNextLine                                             OFFSET(get<bool>, {0x87A, 1, 0, 0})
+	SMember(FColor)                                    SecondNameColor                                             OFFSET(get<T>, {0x87C, 4, 0, 0})
+	DMember(int32_t)                                   SecondNameFontSize                                          OFFSET(get<int32_t>, {0x880, 4, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialListEntryBase
@@ -182,10 +225,17 @@ class USocialListInteractableEntryBase : public USocialListEntryBase
 	static inline constexpr uint64_t __MDKClassSize = 5360;
 
 public:
-	CMember(UClass*)                                   ActionMenuClass                                             ___ OFFSET(get<T>, {0x14D8, 8, 0, 0})
-	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          ___ OFFSET(get<T>, {0x14E0, 8, 0, 0})
+	CMember(UClass*)                                   ActionMenuClass                                             OFFSET(get<T>, {0x14D8, 8, 0, 0})
+	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SocialUMG.SocialListInteractableEntryBase.HandleMenuOpenChanged
+	// void HandleMenuOpenChanged(bool bIsMenuOpen);                                                                            // [0x712f288] Final|Native|Private 
+	// Function /Script/SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
+	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x712f1cc] Final|Native|Protected 
 /// Class /Script/SocialUMG.SocialListUserEntryBase
 /// Size: 0x0020 (0x0014F0 - 0x001510)
 class USocialListUserEntryBase : public USocialListInteractableEntryBase
@@ -194,10 +244,10 @@ class USocialListUserEntryBase : public USocialListInteractableEntryBase
 	static inline constexpr uint64_t __MDKClassSize = 5392;
 
 public:
-	CMember(USocialNameTextBlock*)                     Text_SocialName                                             ___ OFFSET(get<T>, {0x14F0, 8, 0, 0})
-	CMember(USocialNameTextBlock*)                     Text_SocialName_Hover                                       ___ OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_RichPresence                                           ___ OFFSET(get<T>, {0x1500, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_RichPresence_Hover                                     ___ OFFSET(get<T>, {0x1508, 8, 0, 0})
+	CMember(USocialNameTextBlock*)                     Text_SocialName                                             OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	CMember(USocialNameTextBlock*)                     Text_SocialName_Hover                                       OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_RichPresence                                           OFFSET(get<T>, {0x1500, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_RichPresence_Hover                                     OFFSET(get<T>, {0x1508, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialUserListHeaderEntry
@@ -208,8 +258,8 @@ class USocialUserListHeaderEntry : public USocialListEntryBase
 	static inline constexpr uint64_t __MDKClassSize = 5360;
 
 public:
-	CMember(UTextBlock*)                               Text_ListName                                               ___ OFFSET(get<T>, {0x14D8, 8, 0, 0})
-	CMember(UTextBlock*)                               Text_NumEntries                                             ___ OFFSET(get<T>, {0x14E0, 8, 0, 0})
+	CMember(UTextBlock*)                               Text_ListName                                               OFFSET(get<T>, {0x14D8, 8, 0, 0})
+	CMember(UTextBlock*)                               Text_NumEntries                                             OFFSET(get<T>, {0x14E0, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialUserListViewBase
@@ -220,7 +270,7 @@ class USocialUserListViewBase : public UListViewBase
 	static inline constexpr uint64_t __MDKClassSize = 936;
 
 public:
-	DMember(float)                                     EntrySpacing                                                ___ OFFSET(get<float>, {0x3A0, 4, 0, 0})
+	DMember(float)                                     EntrySpacing                                                OFFSET(get<float>, {0x3A0, 4, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialUserListView
@@ -231,8 +281,8 @@ class USocialUserListView : public USocialUserListViewBase
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	CMember(USocialActionMenu*)                        ActiveActionMenu                                            ___ OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	CMember(TMap<UClass*, USocialActionMenu*>)         CachedActionMenuPool                                        ___ OFFSET(get<T>, {0x3F8, 80, 0, 0})
+	CMember(USocialActionMenu*)                        ActiveActionMenu                                            OFFSET(get<T>, {0x3F0, 8, 0, 0})
+	CMember(TMap<UClass*, USocialActionMenu*>)         CachedActionMenuPool                                        OFFSET(get<T>, {0x3F8, 80, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialUserTreeView
@@ -243,8 +293,8 @@ class USocialUserTreeView : public USocialUserListView
 	static inline constexpr uint64_t __MDKClassSize = 1256;
 
 public:
-	CMember(UClass*)                                   UserEntryWidgetClass                                        ___ OFFSET(get<T>, {0x4B8, 8, 0, 0})
-	CMember(UClass*)                                   InviteEntryWidgetClass                                      ___ OFFSET(get<T>, {0x4C0, 8, 0, 0})
+	CMember(UClass*)                                   UserEntryWidgetClass                                        OFFSET(get<T>, {0x4B8, 8, 0, 0})
+	CMember(UClass*)                                   InviteEntryWidgetClass                                      OFFSET(get<T>, {0x4C0, 8, 0, 0})
 };
 
 /// Class /Script/SocialUMG.SocialChatEditableText
@@ -255,8 +305,8 @@ class USocialChatEditableText : public UWidget
 	static inline constexpr uint64_t __MDKClassSize = 1968;
 
 public:
-	SMember(FEditableTextStyle)                        EditableTextStyle                                           ___ OFFSET(get<T>, {0x1A0, 704, 0, 0})
-	SMember(FTextBlockStyle)                           AutoCompleteStyle                                           ___ OFFSET(get<T>, {0x460, 784, 0, 0})
+	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(get<T>, {0x1A0, 704, 0, 0})
+	SMember(FTextBlockStyle)                           AutoCompleteStyle                                           OFFSET(get<T>, {0x460, 784, 0, 0})
 };
 
 /// Struct /Script/SocialUMG.SocialChatMessageEntryTextStyle
@@ -267,8 +317,8 @@ class FSocialChatMessageEntryTextStyle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FSlateFontInfo)                            FontInfo                                                    ___ OFFSET(get<T>, {0x0, 88, 0, 0})
-	SMember(FLinearColor)                              ColorAndOpacity                                             ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FSlateFontInfo)                            FontInfo                                                    OFFSET(get<T>, {0x0, 88, 0, 0})
+	SMember(FLinearColor)                              ColorAndOpacity                                             OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/SocialUMG.SocialChatMessageEntryStyle
@@ -279,8 +329,8 @@ class FSocialChatMessageEntryStyle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FSocialChatMessageEntryTextStyle)          SenderNameStyle                                             ___ OFFSET(get<T>, {0x0, 104, 0, 0})
-	SMember(FSocialChatMessageEntryTextStyle)          ChannelNameStyle                                            ___ OFFSET(get<T>, {0x68, 104, 0, 0})
-	SMember(FSocialChatMessageEntryTextStyle)          MessageTextStyle                                            ___ OFFSET(get<T>, {0xD0, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          SenderNameStyle                                             OFFSET(get<T>, {0x0, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          ChannelNameStyle                                            OFFSET(get<T>, {0x68, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          MessageTextStyle                                            OFFSET(get<T>, {0xD0, 104, 0, 0})
 };
 

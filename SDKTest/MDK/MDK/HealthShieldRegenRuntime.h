@@ -26,10 +26,10 @@ class FFortHealthShieldRegen_ShieldDelegateContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FDelegateProperty)                         OnShieldChanged                                             ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnShieldedDamage                                            ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnShieldDestroyed                                           ___ OFFSET(get<T>, {0x18, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnDamageReceived                                            ___ OFFSET(get<T>, {0x24, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnShieldChanged                                             OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnShieldedDamage                                            OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnShieldDestroyed                                           OFFSET(get<T>, {0x18, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnDamageReceived                                            OFFSET(get<T>, {0x24, 12, 0, 0})
 };
 
 /// Struct /Script/HealthShieldRegenRuntime.FortHealthShieldRegen_HealthDelegateContainer
@@ -40,7 +40,7 @@ class FFortHealthShieldRegen_HealthDelegateContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FDelegateProperty)                         OnHealthChanged                                             ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnDamageReceived                                            ___ OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnHealthChanged                                             OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnDamageReceived                                            OFFSET(get<T>, {0xC, 12, 0, 0})
 };
 

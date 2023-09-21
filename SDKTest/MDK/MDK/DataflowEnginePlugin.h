@@ -16,7 +16,7 @@ class ADataflowActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UDataflowComponent*)                       DataflowComponent                                           ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UDataflowComponent*)                       DataflowComponent                                           OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Class /Script/DataflowEnginePlugin.DataflowComponent

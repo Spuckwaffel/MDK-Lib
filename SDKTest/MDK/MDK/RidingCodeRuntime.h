@@ -19,96 +19,109 @@ class UFortVehicleLayerAnimInstance_Riding : public UFortVehicleOccupantAnimInst
 	static inline constexpr uint64_t __MDKClassSize = 2768;
 
 public:
-	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       ___ OFFSET(get<T>, {0x810, 20, 0, 0})
-	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      ___ OFFSET(get<T>, {0x824, 20, 0, 0})
-	DMember(float)                                     InTime                                                      ___ OFFSET(get<float>, {0x838, 4, 0, 0})
-	DMember(float)                                     OutTime                                                     ___ OFFSET(get<float>, {0x83C, 4, 0, 0})
-	DMember(float)                                     BodyYawOffset                                               ___ OFFSET(get<float>, {0x840, 4, 0, 0})
-	SMember(FRotator)                                  BodyCounterRotation                                         ___ OFFSET(get<T>, {0x848, 24, 0, 0})
-	DMember(float)                                     BodyCounterRotationAlpha                                    ___ OFFSET(get<float>, {0x860, 4, 0, 0})
-	DMember(bool)                                      bIsReloading                                                ___ OFFSET(get<bool>, {0x864, 1, 0, 0})
-	DMember(bool)                                      bIsTargeting                                                ___ OFFSET(get<bool>, {0x865, 1, 0, 0})
-	DMember(bool)                                      bIsFiring                                                   ___ OFFSET(get<bool>, {0x866, 1, 0, 0})
-	DMember(bool)                                      bIsUsingConsumable                                          ___ OFFSET(get<bool>, {0x867, 1, 0, 0})
-	DMember(bool)                                      bIsInAction                                                 ___ OFFSET(get<bool>, {0x868, 1, 0, 0})
-	DMember(bool)                                      bIsThrowConsumable                                          ___ OFFSET(get<bool>, {0x869, 1, 0, 0})
-	DMember(bool)                                      bIsTargetingOrThrowingConsumable                            ___ OFFSET(get<bool>, {0x86A, 1, 0, 0})
-	DMember(bool)                                      bIsTurningInPlace                                           ___ OFFSET(get<bool>, {0x86B, 1, 0, 0})
-	DMember(bool)                                      bIsRidingSprinting                                          ___ OFFSET(get<bool>, {0x86C, 1, 0, 0})
-	DMember(bool)                                      bIsRidingPetting                                            ___ OFFSET(get<bool>, {0x86D, 1, 0, 0})
-	DMember(float)                                     TurnInPlaceRotationSpeed                                    ___ OFFSET(get<float>, {0x870, 4, 0, 0})
-	DMember(float)                                     TurnInPlaceAngleDelta                                       ___ OFFSET(get<float>, {0x874, 4, 0, 0})
-	DMember(bool)                                      bIsRidingMovingBackward                                     ___ OFFSET(get<bool>, {0x878, 1, 0, 0})
-	DMember(bool)                                      bIsSlopeSliding                                             ___ OFFSET(get<bool>, {0x879, 1, 0, 0})
-	DMember(float)                                     SlopeSlidingPitch                                           ___ OFFSET(get<float>, {0x87C, 4, 0, 0})
-	DMember(float)                                     SlopeSlidingRoll                                            ___ OFFSET(get<float>, {0x880, 4, 0, 0})
-	DMember(float)                                     RiderReferentialRidableYaw                                  ___ OFFSET(get<float>, {0x884, 4, 0, 0})
-	DMember(float)                                     AimYawDegreesCoverage                                       ___ OFFSET(get<float>, {0x888, 4, 0, 0})
-	DMember(float)                                     SmoothedAimYaw                                              ___ OFFSET(get<float>, {0x88C, 4, 0, 0})
-	DMember(bool)                                      bJustEntered                                                ___ OFFSET(get<bool>, {0x890, 1, 0, 0})
-	DMember(bool)                                      bIsRidableMoving                                            ___ OFFSET(get<bool>, {0x891, 1, 0, 0})
-	DMember(bool)                                      bIsRideMode                                                 ___ OFFSET(get<bool>, {0x892, 1, 0, 0})
-	DMember(float)                                     RidableVelocity                                             ___ OFFSET(get<float>, {0x894, 4, 0, 0})
-	DMember(float)                                     BodyYaw                                                     ___ OFFSET(get<float>, {0x898, 4, 0, 0})
-	DMember(float)                                     BoostPlayRate                                               ___ OFFSET(get<float>, {0x89C, 4, 0, 0})
-	DMember(float)                                     RidingMovePlayRate                                          ___ OFFSET(get<float>, {0x8A0, 4, 0, 0})
-	DMember(float)                                     FalseBlendTime                                              ___ OFFSET(get<float>, {0x8A4, 4, 0, 0})
-	DMember(float)                                     CombatToRideYaw                                             ___ OFFSET(get<float>, {0x8A8, 4, 0, 0})
-	DMember(float)                                     InPlaceYaw                                                  ___ OFFSET(get<float>, {0x8AC, 4, 0, 0})
-	DMember(float)                                     HeadAOAlpha                                                 ___ OFFSET(get<float>, {0x8B0, 4, 0, 0})
-	SMember(FRotator)                                  MeleeTwistRot                                               ___ OFFSET(get<T>, {0x8B8, 24, 0, 0})
-	DMember(bool)                                      bIsDualWield                                                ___ OFFSET(get<bool>, {0x8D0, 1, 0, 0})
-	DMember(bool)                                      bIsOneHandedDualWield                                       ___ OFFSET(get<bool>, {0x8D1, 1, 0, 0})
-	DMember(bool)                                      bIsTwoHandedSword                                           ___ OFFSET(get<bool>, {0x8D2, 1, 0, 0})
-	DMember(bool)                                      bShouldAdjustBodyTwistForMelee                              ___ OFFSET(get<bool>, {0x8D3, 1, 0, 0})
-	SMember(FVector)                                   PlayerOffset                                                ___ OFFSET(get<T>, {0x8D8, 24, 0, 0})
-	DMember(float)                                     NoiseAlpha                                                  ___ OFFSET(get<float>, {0x8F0, 4, 0, 0})
-	DMember(bool)                                      bIsLobsterBlockActive                                       ___ OFFSET(get<bool>, {0x8F4, 1, 0, 0})
-	DMember(float)                                     SlopePitch                                                  ___ OFFSET(get<float>, {0x8F8, 4, 0, 0})
-	DMember(float)                                     RiderHeightAdjustmentSpringConstant                         ___ OFFSET(get<float>, {0x8FC, 4, 0, 0})
-	DMember(float)                                     MinSlopePitchForRiderHeightAdjustment                       ___ OFFSET(get<float>, {0x900, 4, 0, 0})
-	DMember(float)                                     MaxSlopePitchForRiderHeightAdjustment                       ___ OFFSET(get<float>, {0x904, 4, 0, 0})
-	DMember(float)                                     RiderHeightAdjustmentForMinSlopePitch                       ___ OFFSET(get<float>, {0x908, 4, 0, 0})
-	DMember(float)                                     RiderHeightAdjustmentForMaxSlopePitch                       ___ OFFSET(get<float>, {0x90C, 4, 0, 0})
-	DMember(float)                                     PettingRotAlpha                                             ___ OFFSET(get<float>, {0x910, 4, 0, 0})
-	SMember(FRotator)                                  PettingRot                                                  ___ OFFSET(get<T>, {0x918, 24, 0, 0})
-	DMember(float)                                     PettingPitchFactor                                          ___ OFFSET(get<float>, {0x930, 4, 0, 0})
-	DMember(float)                                     PettingRollFactor                                           ___ OFFSET(get<float>, {0x934, 4, 0, 0})
-	SMember(FVector)                                   HandAttachLeft                                              ___ OFFSET(get<T>, {0x938, 24, 0, 0})
-	SMember(FVector)                                   HandAttachRight                                             ___ OFFSET(get<T>, {0x950, 24, 0, 0})
-	DMember(float)                                     HandAttachAlpha                                             ___ OFFSET(get<float>, {0x968, 4, 0, 0})
-	CMember(ERidingFootPhase)                          FootPhase                                                   ___ OFFSET(get<T>, {0x96C, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_FeetInAir                                      ___ OFFSET(get<bool>, {0x96D, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_FrontFeetPlanted                               ___ OFFSET(get<bool>, {0x96E, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_BackFeetPlanted                                ___ OFFSET(get<bool>, {0x96F, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_LeftBackFeetForward                            ___ OFFSET(get<bool>, {0x970, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_RightBackFeetForward                           ___ OFFSET(get<bool>, {0x971, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_LeftPlantedRightPass                           ___ OFFSET(get<bool>, {0x972, 1, 0, 0})
-	DMember(bool)                                      bIsFootPhase_RightPlantedLeftPass                           ___ OFFSET(get<bool>, {0x973, 1, 0, 0})
-	DMember(float)                                     TurnInPlaceModulatedSpeed                                   ___ OFFSET(get<float>, {0x974, 4, 0, 0})
-	DMember(bool)                                      bIsTurnInPlaceAngleDeltaPositive                            ___ OFFSET(get<bool>, {0x978, 1, 0, 0})
-	DMember(float)                                     SlopeRoll                                                   ___ OFFSET(get<float>, {0x97C, 4, 0, 0})
-	DMember(float)                                     MovingVelocityLowerBound                                    ___ OFFSET(get<float>, {0x980, 4, 0, 0})
-	DMember(float)                                     JustEnteredDelayTimeSec                                     ___ OFFSET(get<float>, {0x984, 4, 0, 0})
-	DMember(float)                                     FalseBlendTime_Moving                                       ___ OFFSET(get<float>, {0x988, 4, 0, 0})
-	DMember(float)                                     FalseBlendTime_NotMoving                                    ___ OFFSET(get<float>, {0x98C, 4, 0, 0})
-	SMember(FVector)                                   PlayerOffsetMale                                            ___ OFFSET(get<T>, {0x990, 24, 0, 0})
-	SMember(FVector)                                   PlayerOffsetFemale                                          ___ OFFSET(get<T>, {0x9A8, 24, 0, 0})
-	SMember(FSoftObjectPath)                           ScytheMontage                                               ___ OFFSET(get<T>, {0x9C0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           BRSwordMontage                                              ___ OFFSET(get<T>, {0x9D8, 24, 0, 0})
-	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     MeleeDualWieldCoreAnimation                                 ___ OFFSET(get<T>, {0x9F0, 1, 0, 0})
-	SMember(FVector)                                   SlopePitchTraceStart                                        ___ OFFSET(get<T>, {0x9F8, 24, 0, 0})
-	SMember(FVector)                                   SlopePitchTraceEnd                                          ___ OFFSET(get<T>, {0xA10, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationLeftMale                                  ___ OFFSET(get<T>, {0xA28, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationRightMale                                 ___ OFFSET(get<T>, {0xA40, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationLeftFemale                                ___ OFFSET(get<T>, {0xA58, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationRightFemale                               ___ OFFSET(get<T>, {0xA70, 24, 0, 0})
-	SMember(FName)                                     PlayerHandAttachLeft                                        ___ OFFSET(get<T>, {0xA88, 4, 0, 0})
-	SMember(FName)                                     PlayerHandAttachRight                                       ___ OFFSET(get<T>, {0xA8C, 4, 0, 0})
-	SMember(FName)                                     DisableHandAttachCurveName                                  ___ OFFSET(get<T>, {0xA90, 4, 0, 0})
-	SMember(FName)                                     AllowRidingNoiseAdditiveCurveName                           ___ OFFSET(get<T>, {0xA94, 4, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       OFFSET(get<T>, {0x810, 20, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      OFFSET(get<T>, {0x824, 20, 0, 0})
+	DMember(float)                                     InTime                                                      OFFSET(get<float>, {0x838, 4, 0, 0})
+	DMember(float)                                     OutTime                                                     OFFSET(get<float>, {0x83C, 4, 0, 0})
+	DMember(float)                                     BodyYawOffset                                               OFFSET(get<float>, {0x840, 4, 0, 0})
+	SMember(FRotator)                                  BodyCounterRotation                                         OFFSET(get<T>, {0x848, 24, 0, 0})
+	DMember(float)                                     BodyCounterRotationAlpha                                    OFFSET(get<float>, {0x860, 4, 0, 0})
+	DMember(bool)                                      bIsReloading                                                OFFSET(get<bool>, {0x864, 1, 0, 0})
+	DMember(bool)                                      bIsTargeting                                                OFFSET(get<bool>, {0x865, 1, 0, 0})
+	DMember(bool)                                      bIsFiring                                                   OFFSET(get<bool>, {0x866, 1, 0, 0})
+	DMember(bool)                                      bIsUsingConsumable                                          OFFSET(get<bool>, {0x867, 1, 0, 0})
+	DMember(bool)                                      bIsInAction                                                 OFFSET(get<bool>, {0x868, 1, 0, 0})
+	DMember(bool)                                      bIsThrowConsumable                                          OFFSET(get<bool>, {0x869, 1, 0, 0})
+	DMember(bool)                                      bIsTargetingOrThrowingConsumable                            OFFSET(get<bool>, {0x86A, 1, 0, 0})
+	DMember(bool)                                      bIsTurningInPlace                                           OFFSET(get<bool>, {0x86B, 1, 0, 0})
+	DMember(bool)                                      bIsRidingSprinting                                          OFFSET(get<bool>, {0x86C, 1, 0, 0})
+	DMember(bool)                                      bIsRidingPetting                                            OFFSET(get<bool>, {0x86D, 1, 0, 0})
+	DMember(float)                                     TurnInPlaceRotationSpeed                                    OFFSET(get<float>, {0x870, 4, 0, 0})
+	DMember(float)                                     TurnInPlaceAngleDelta                                       OFFSET(get<float>, {0x874, 4, 0, 0})
+	DMember(bool)                                      bIsRidingMovingBackward                                     OFFSET(get<bool>, {0x878, 1, 0, 0})
+	DMember(bool)                                      bIsSlopeSliding                                             OFFSET(get<bool>, {0x879, 1, 0, 0})
+	DMember(float)                                     SlopeSlidingPitch                                           OFFSET(get<float>, {0x87C, 4, 0, 0})
+	DMember(float)                                     SlopeSlidingRoll                                            OFFSET(get<float>, {0x880, 4, 0, 0})
+	DMember(float)                                     RiderReferentialRidableYaw                                  OFFSET(get<float>, {0x884, 4, 0, 0})
+	DMember(float)                                     AimYawDegreesCoverage                                       OFFSET(get<float>, {0x888, 4, 0, 0})
+	DMember(float)                                     SmoothedAimYaw                                              OFFSET(get<float>, {0x88C, 4, 0, 0})
+	DMember(bool)                                      bJustEntered                                                OFFSET(get<bool>, {0x890, 1, 0, 0})
+	DMember(bool)                                      bIsRidableMoving                                            OFFSET(get<bool>, {0x891, 1, 0, 0})
+	DMember(bool)                                      bIsRideMode                                                 OFFSET(get<bool>, {0x892, 1, 0, 0})
+	DMember(float)                                     RidableVelocity                                             OFFSET(get<float>, {0x894, 4, 0, 0})
+	DMember(float)                                     BodyYaw                                                     OFFSET(get<float>, {0x898, 4, 0, 0})
+	DMember(float)                                     BoostPlayRate                                               OFFSET(get<float>, {0x89C, 4, 0, 0})
+	DMember(float)                                     RidingMovePlayRate                                          OFFSET(get<float>, {0x8A0, 4, 0, 0})
+	DMember(float)                                     FalseBlendTime                                              OFFSET(get<float>, {0x8A4, 4, 0, 0})
+	DMember(float)                                     CombatToRideYaw                                             OFFSET(get<float>, {0x8A8, 4, 0, 0})
+	DMember(float)                                     InPlaceYaw                                                  OFFSET(get<float>, {0x8AC, 4, 0, 0})
+	DMember(float)                                     HeadAOAlpha                                                 OFFSET(get<float>, {0x8B0, 4, 0, 0})
+	SMember(FRotator)                                  MeleeTwistRot                                               OFFSET(get<T>, {0x8B8, 24, 0, 0})
+	DMember(bool)                                      bIsDualWield                                                OFFSET(get<bool>, {0x8D0, 1, 0, 0})
+	DMember(bool)                                      bIsOneHandedDualWield                                       OFFSET(get<bool>, {0x8D1, 1, 0, 0})
+	DMember(bool)                                      bIsTwoHandedSword                                           OFFSET(get<bool>, {0x8D2, 1, 0, 0})
+	DMember(bool)                                      bShouldAdjustBodyTwistForMelee                              OFFSET(get<bool>, {0x8D3, 1, 0, 0})
+	SMember(FVector)                                   PlayerOffset                                                OFFSET(get<T>, {0x8D8, 24, 0, 0})
+	DMember(float)                                     NoiseAlpha                                                  OFFSET(get<float>, {0x8F0, 4, 0, 0})
+	DMember(bool)                                      bIsLobsterBlockActive                                       OFFSET(get<bool>, {0x8F4, 1, 0, 0})
+	DMember(float)                                     SlopePitch                                                  OFFSET(get<float>, {0x8F8, 4, 0, 0})
+	DMember(float)                                     RiderHeightAdjustmentSpringConstant                         OFFSET(get<float>, {0x8FC, 4, 0, 0})
+	DMember(float)                                     MinSlopePitchForRiderHeightAdjustment                       OFFSET(get<float>, {0x900, 4, 0, 0})
+	DMember(float)                                     MaxSlopePitchForRiderHeightAdjustment                       OFFSET(get<float>, {0x904, 4, 0, 0})
+	DMember(float)                                     RiderHeightAdjustmentForMinSlopePitch                       OFFSET(get<float>, {0x908, 4, 0, 0})
+	DMember(float)                                     RiderHeightAdjustmentForMaxSlopePitch                       OFFSET(get<float>, {0x90C, 4, 0, 0})
+	DMember(float)                                     PettingRotAlpha                                             OFFSET(get<float>, {0x910, 4, 0, 0})
+	SMember(FRotator)                                  PettingRot                                                  OFFSET(get<T>, {0x918, 24, 0, 0})
+	DMember(float)                                     PettingPitchFactor                                          OFFSET(get<float>, {0x930, 4, 0, 0})
+	DMember(float)                                     PettingRollFactor                                           OFFSET(get<float>, {0x934, 4, 0, 0})
+	SMember(FVector)                                   HandAttachLeft                                              OFFSET(get<T>, {0x938, 24, 0, 0})
+	SMember(FVector)                                   HandAttachRight                                             OFFSET(get<T>, {0x950, 24, 0, 0})
+	DMember(float)                                     HandAttachAlpha                                             OFFSET(get<float>, {0x968, 4, 0, 0})
+	CMember(ERidingFootPhase)                          FootPhase                                                   OFFSET(get<T>, {0x96C, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_FeetInAir                                      OFFSET(get<bool>, {0x96D, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_FrontFeetPlanted                               OFFSET(get<bool>, {0x96E, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_BackFeetPlanted                                OFFSET(get<bool>, {0x96F, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_LeftBackFeetForward                            OFFSET(get<bool>, {0x970, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_RightBackFeetForward                           OFFSET(get<bool>, {0x971, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_LeftPlantedRightPass                           OFFSET(get<bool>, {0x972, 1, 0, 0})
+	DMember(bool)                                      bIsFootPhase_RightPlantedLeftPass                           OFFSET(get<bool>, {0x973, 1, 0, 0})
+	DMember(float)                                     TurnInPlaceModulatedSpeed                                   OFFSET(get<float>, {0x974, 4, 0, 0})
+	DMember(bool)                                      bIsTurnInPlaceAngleDeltaPositive                            OFFSET(get<bool>, {0x978, 1, 0, 0})
+	DMember(float)                                     SlopeRoll                                                   OFFSET(get<float>, {0x97C, 4, 0, 0})
+	DMember(float)                                     MovingVelocityLowerBound                                    OFFSET(get<float>, {0x980, 4, 0, 0})
+	DMember(float)                                     JustEnteredDelayTimeSec                                     OFFSET(get<float>, {0x984, 4, 0, 0})
+	DMember(float)                                     FalseBlendTime_Moving                                       OFFSET(get<float>, {0x988, 4, 0, 0})
+	DMember(float)                                     FalseBlendTime_NotMoving                                    OFFSET(get<float>, {0x98C, 4, 0, 0})
+	SMember(FVector)                                   PlayerOffsetMale                                            OFFSET(get<T>, {0x990, 24, 0, 0})
+	SMember(FVector)                                   PlayerOffsetFemale                                          OFFSET(get<T>, {0x9A8, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ScytheMontage                                               OFFSET(get<T>, {0x9C0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           BRSwordMontage                                              OFFSET(get<T>, {0x9D8, 24, 0, 0})
+	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     MeleeDualWieldCoreAnimation                                 OFFSET(get<T>, {0x9F0, 1, 0, 0})
+	SMember(FVector)                                   SlopePitchTraceStart                                        OFFSET(get<T>, {0x9F8, 24, 0, 0})
+	SMember(FVector)                                   SlopePitchTraceEnd                                          OFFSET(get<T>, {0xA10, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationLeftMale                                  OFFSET(get<T>, {0xA28, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationRightMale                                 OFFSET(get<T>, {0xA40, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationLeftFemale                                OFFSET(get<T>, {0xA58, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationRightFemale                               OFFSET(get<T>, {0xA70, 24, 0, 0})
+	SMember(FName)                                     PlayerHandAttachLeft                                        OFFSET(get<T>, {0xA88, 4, 0, 0})
+	SMember(FName)                                     PlayerHandAttachRight                                       OFFSET(get<T>, {0xA8C, 4, 0, 0})
+	SMember(FName)                                     DisableHandAttachCurveName                                  OFFSET(get<T>, {0xA90, 4, 0, 0})
+	SMember(FName)                                     AllowRidingNoiseAdditiveCurveName                           OFFSET(get<T>, {0xA94, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.UpdateSlopePitchForRiding
+	// void UpdateSlopePitchForRiding();                                                                                        // [0x5ae1b54] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.UpdateBoostPlayRate
+	// void UpdateBoostPlayRate();                                                                                              // [0x5ae1ab8] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.SetFootPhase
+	// void SetFootPhase(ERidingFootPhase InFootPhase);                                                                         // [0x9883ea8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.PlaceHandIKTargets
+	// void PlaceHandIKTargets();                                                                                               // [0x5ae76ac] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.BlueprintCollectRidableAnimBPData
+	// void BlueprintCollectRidableAnimBPData(UAnimInstance* RidableAnimInstance);                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Class /Script/RidingCodeRuntime.RidingCheatManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class URidingCheatManager : public UChildCheatManager
@@ -127,46 +140,81 @@ class URidableComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRiderStartedRiding                                        ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRiderStoppedRiding                                        ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	CMember(UClass*)                                   RiderAnimLayerOverlayClass                                  ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FName)                                     AttachSocket                                                ___ OFFSET(get<T>, {0xD0, 4, 0, 0})
-	SMember(FVector)                                   AttachLocationOffset                                        ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FRotator)                                  AttachRotationOffset                                        ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FName)                                     ClientAttachGuideSocket                                     ___ OFFSET(get<T>, {0x108, 4, 0, 0})
-	SMember(FVector)                                   ClientAttachGuideLocationOffset                             ___ OFFSET(get<T>, {0x110, 24, 0, 0})
-	SMember(FName)                                     RidablePropAttachSocket                                     ___ OFFSET(get<T>, {0x128, 4, 0, 0})
-	SMember(FVector)                                   RidablePropAttachLocationOffset                             ___ OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FRotator)                                  RidablePropAttachRotationOffset                             ___ OFFSET(get<T>, {0x148, 24, 0, 0})
-	DMember(float)                                     RidablePropAttachScale                                      ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(float)                                     RidablePropAttachRiderVerticalBuffer                        ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FRidingAttachmentBoundsOverride)           RiderPropAttachBoundsOverride                               ___ OFFSET(get<T>, {0x168, 56, 0, 0})
-	DMember(bool)                                      bOverrideNoiseGeneration                                    ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FFortPlayerPawnAthenaMovementNoiseOverride) RiderMovementNoiseOverride                                 ___ OFFSET(get<T>, {0x1A4, 12, 0, 0})
-	CMember(UClass*)                                   CameraModeClassOverride                                     ___ OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	CMember(UClass*)                                   SprintCameraModeClassOverride                               ___ OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(FScalableFloat)                            UseTargetingAdditionalViewTargetSpaceViewOffsetOverride     ___ OFFSET(get<T>, {0x1C0, 40, 0, 0})
-	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffsetOverride        ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	SMember(FVector)                                   WeaponTargetingSourceOffsetModifier                         ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FGameplayTag)                              RidableTag                                                  ___ OFFSET(get<T>, {0x210, 4, 0, 0})
-	SMember(FGameplayTag)                              EnergyDepletedTag                                           ___ OFFSET(get<T>, {0x214, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       PlaylistTagBlacklistRowHandle                               ___ OFFSET(get<T>, {0x218, 16, 0, 0})
-	CMember(URiderComponent*)                          ActiveRider                                                 ___ OFFSET(get<T>, {0x228, 8, 0, 0})
-	CMember(URiderComponent*)                          LastRider                                                   ___ OFFSET(get<T>, {0x230, 8, 0, 0})
-	CMember(USceneComponent*)                          RidableProp                                                 ___ OFFSET(get<T>, {0x238, 8, 0, 0})
-	DMember(float)                                     OriginalCapsuleRadius                                       ___ OFFSET(get<float>, {0x240, 4, 0, 0})
-	DMember(float)                                     OriginalCapsuleHalfHeight                                   ___ OFFSET(get<float>, {0x244, 4, 0, 0})
-	DMember(float)                                     RidingCapsuleRadius                                         ___ OFFSET(get<float>, {0x248, 4, 0, 0})
-	DMember(float)                                     RidingCapsuleHalfHeight                                     ___ OFFSET(get<float>, {0x24C, 4, 0, 0})
-	DMember(bool)                                      bOriginalClientPositionSmoothingThrottlingSetting           ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
-	SMember(FScalableFloat)                            MaxHalfAimingAngle                                          ___ OFFSET(get<T>, {0x258, 40, 0, 0})
-	CMember(TArray<FPrimaryFireAnimMontageAnimCoreTypeOverride>) PrimaryFireMontageAnimCoreTypeOverrides           ___ OFFSET(get<T>, {0x280, 16, 0, 0})
-	CMember(TArray<FPrimaryFireAnimMontageTagOverride>) PrimaryFireMontageTagOverrides                             ___ OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FRidingPettingData)                        PettingData                                                 ___ OFFSET(get<T>, {0x2A0, 272, 0, 0})
-	SMember(FTimerHandle)                              RestoreCollisionHandle                                      ___ OFFSET(get<T>, {0x3B0, 8, 0, 0})
-	DMember(bool)                                      bIsSprinting                                                ___ OFFSET(get<bool>, {0x3C8, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRiderStartedRiding                                        OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRiderStoppedRiding                                        OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(UClass*)                                   RiderAnimLayerOverlayClass                                  OFFSET(get<T>, {0xC8, 8, 0, 0})
+	SMember(FName)                                     AttachSocket                                                OFFSET(get<T>, {0xD0, 4, 0, 0})
+	SMember(FVector)                                   AttachLocationOffset                                        OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FRotator)                                  AttachRotationOffset                                        OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FName)                                     ClientAttachGuideSocket                                     OFFSET(get<T>, {0x108, 4, 0, 0})
+	SMember(FVector)                                   ClientAttachGuideLocationOffset                             OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FName)                                     RidablePropAttachSocket                                     OFFSET(get<T>, {0x128, 4, 0, 0})
+	SMember(FVector)                                   RidablePropAttachLocationOffset                             OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FRotator)                                  RidablePropAttachRotationOffset                             OFFSET(get<T>, {0x148, 24, 0, 0})
+	DMember(float)                                     RidablePropAttachScale                                      OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(float)                                     RidablePropAttachRiderVerticalBuffer                        OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FRidingAttachmentBoundsOverride)           RiderPropAttachBoundsOverride                               OFFSET(get<T>, {0x168, 56, 0, 0})
+	DMember(bool)                                      bOverrideNoiseGeneration                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FFortPlayerPawnAthenaMovementNoiseOverride) RiderMovementNoiseOverride                                 OFFSET(get<T>, {0x1A4, 12, 0, 0})
+	CMember(UClass*)                                   CameraModeClassOverride                                     OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	CMember(UClass*)                                   SprintCameraModeClassOverride                               OFFSET(get<T>, {0x1B8, 8, 0, 0})
+	SMember(FScalableFloat)                            UseTargetingAdditionalViewTargetSpaceViewOffsetOverride     OFFSET(get<T>, {0x1C0, 40, 0, 0})
+	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffsetOverride        OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	SMember(FVector)                                   WeaponTargetingSourceOffsetModifier                         OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	SMember(FGameplayTag)                              RidableTag                                                  OFFSET(get<T>, {0x210, 4, 0, 0})
+	SMember(FGameplayTag)                              EnergyDepletedTag                                           OFFSET(get<T>, {0x214, 4, 0, 0})
+	SMember(FDataTableRowHandle)                       PlaylistTagBlacklistRowHandle                               OFFSET(get<T>, {0x218, 16, 0, 0})
+	CMember(URiderComponent*)                          ActiveRider                                                 OFFSET(get<T>, {0x228, 8, 0, 0})
+	CMember(URiderComponent*)                          LastRider                                                   OFFSET(get<T>, {0x230, 8, 0, 0})
+	CMember(USceneComponent*)                          RidableProp                                                 OFFSET(get<T>, {0x238, 8, 0, 0})
+	DMember(float)                                     OriginalCapsuleRadius                                       OFFSET(get<float>, {0x240, 4, 0, 0})
+	DMember(float)                                     OriginalCapsuleHalfHeight                                   OFFSET(get<float>, {0x244, 4, 0, 0})
+	DMember(float)                                     RidingCapsuleRadius                                         OFFSET(get<float>, {0x248, 4, 0, 0})
+	DMember(float)                                     RidingCapsuleHalfHeight                                     OFFSET(get<float>, {0x24C, 4, 0, 0})
+	DMember(bool)                                      bOriginalClientPositionSmoothingThrottlingSetting           OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FScalableFloat)                            MaxHalfAimingAngle                                          OFFSET(get<T>, {0x258, 40, 0, 0})
+	CMember(TArray<FPrimaryFireAnimMontageAnimCoreTypeOverride>) PrimaryFireMontageAnimCoreTypeOverrides           OFFSET(get<T>, {0x280, 16, 0, 0})
+	CMember(TArray<FPrimaryFireAnimMontageTagOverride>) PrimaryFireMontageTagOverrides                             OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FRidingPettingData)                        PettingData                                                 OFFSET(get<T>, {0x2A0, 272, 0, 0})
+	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(get<T>, {0x3B0, 8, 0, 0})
+	DMember(bool)                                      bIsSprinting                                                OFFSET(get<bool>, {0x3C8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.RidableComponent.ShouldCameraFocusOnRidable
+	// bool ShouldCameraFocusOnRidable(URiderComponent* Rider);                                                                 // [0x9883f28] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.OnRep_ActiveRider
+	// void OnRep_ActiveRider();                                                                                                // [0x301bb64] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RidableComponent.IsSprinting
+	// bool IsSprinting();                                                                                                      // [0x988370c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.IsFlying
+	// bool IsFlying();                                                                                                         // [0x82245fc] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.IsBeingRidden
+	// bool IsBeingRidden();                                                                                                    // [0x9883674] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.HandleRiderStoppedRiding
+	// void HandleRiderStoppedRiding(URiderComponent* Rider);                                                                   // [0x5e361a4] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RidableComponent.HandleRiderStartedRiding
+	// void HandleRiderStartedRiding(URiderComponent* Rider);                                                                   // [0x250d3ac] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RidableComponent.HandleRiderEndPlay
+	// void HandleRiderEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                       // [0x345b6d4] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RidableComponent.GetRidingEmoteCapsuleSize
+	// void GetRidingEmoteCapsuleSize(URiderComponent* Rider, float OriginalRadius, float OriginalHalfHeight, float& OutRadius, float& OutHalfHeight); // [0x9882488] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.GetRidingCapsuleSize
+	// void GetRidingCapsuleSize(URiderComponent* Rider, float OriginalRadius, float OriginalHalfHeight, float& OutRadius, float& OutHalfHeight); // [0x98822ec] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.GetRidingAttachComponent
+	// USceneComponent* GetRidingAttachComponent();                                                                             // [0x28e8b28] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.GetPettingData
+	// FRidingPettingData GetPettingData();                                                                                     // [0x25fe86c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.CheatSetStaminaPercent
+	// void CheatSetStaminaPercent(float StaminaPercent);                                                                       // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RidableComponent.CanRiderPlayEmote
+	// bool CanRiderPlayEmote(URiderComponent* Rider);                                                                          // [0x835f55c] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.CanBeRiddenBP
+	// bool CanBeRiddenBP(URiderComponent* Rider);                                                                              // [0x9881e5c] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RidableComponent.CanBePet
+	// bool CanBePet(URiderComponent* Rider);                                                                                   // [0x7c82d1c] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 /// Class /Script/RidingCodeRuntime.ControllableRidableComponent
 /// Size: 0x02D0 (0x0003E0 - 0x0006B0)
 class UControllableRidableComponent : public URidableComponent
@@ -175,22 +223,55 @@ class UControllableRidableComponent : public URidableComponent
 	static inline constexpr uint64_t __MDKClassSize = 1712;
 
 public:
-	DMember(bool)                                      bUseGravityJump                                             ___ OFFSET(get<bool>, {0x3E0, 1, 0, 0})
-	DMember(bool)                                      bIsControllable                                             ___ OFFSET(get<bool>, {0x3E1, 1, 0, 0})
-	DMember(bool)                                      bHasAbility                                                 ___ OFFSET(get<bool>, {0x3E2, 1, 0, 0})
-	SMember(FText)                                     AbilityDisplayText                                          ___ OFFSET(get<T>, {0x3E8, 24, 0, 0})
-	DMember(bool)                                      bCanJump                                                    ___ OFFSET(get<bool>, {0x400, 1, 0, 0})
-	DMember(bool)                                      bAlwaysMoveForward                                          ___ OFFSET(get<bool>, {0x401, 1, 0, 0})
-	DMember(float)                                     ForwardMoveSpeedMultiplier                                  ___ OFFSET(get<float>, {0x404, 4, 0, 0})
-	DMember(float)                                     BackwardMoveSpeedMultiplier                                 ___ OFFSET(get<float>, {0x408, 4, 0, 0})
-	DMember(float)                                     SidewaysMoveRotationOffset                                  ___ OFFSET(get<float>, {0x40C, 4, 0, 0})
-	CMember(TEnumAsByte<EFortMovementUrgency>)         MovementUrgency                                             ___ OFFSET(get<T>, {0x410, 1, 0, 0})
-	DMember(bool)                                      bIsBeingControlled                                          ___ OFFSET(get<bool>, {0x411, 1, 0, 0})
-	SMember(FRidableControlParams)                     RidableControlParams                                        ___ OFFSET(get<T>, {0x430, 520, 0, 0})
-	SMember(FScalableFloat)                            JumpUpwardGravityScale                                      ___ OFFSET(get<T>, {0x660, 40, 0, 0})
-	SMember(FScalableFloat)                            JumpDownwardGravityScale                                    ___ OFFSET(get<T>, {0x688, 40, 0, 0})
+	DMember(bool)                                      bUseGravityJump                                             OFFSET(get<bool>, {0x3E0, 1, 0, 0})
+	DMember(bool)                                      bIsControllable                                             OFFSET(get<bool>, {0x3E1, 1, 0, 0})
+	DMember(bool)                                      bHasAbility                                                 OFFSET(get<bool>, {0x3E2, 1, 0, 0})
+	SMember(FText)                                     AbilityDisplayText                                          OFFSET(get<T>, {0x3E8, 24, 0, 0})
+	DMember(bool)                                      bCanJump                                                    OFFSET(get<bool>, {0x400, 1, 0, 0})
+	DMember(bool)                                      bAlwaysMoveForward                                          OFFSET(get<bool>, {0x401, 1, 0, 0})
+	DMember(float)                                     ForwardMoveSpeedMultiplier                                  OFFSET(get<float>, {0x404, 4, 0, 0})
+	DMember(float)                                     BackwardMoveSpeedMultiplier                                 OFFSET(get<float>, {0x408, 4, 0, 0})
+	DMember(float)                                     SidewaysMoveRotationOffset                                  OFFSET(get<float>, {0x40C, 4, 0, 0})
+	CMember(TEnumAsByte<EFortMovementUrgency>)         MovementUrgency                                             OFFSET(get<T>, {0x410, 1, 0, 0})
+	DMember(bool)                                      bIsBeingControlled                                          OFFSET(get<bool>, {0x411, 1, 0, 0})
+	SMember(FRidableControlParams)                     RidableControlParams                                        OFFSET(get<T>, {0x430, 520, 0, 0})
+	SMember(FScalableFloat)                            JumpUpwardGravityScale                                      OFFSET(get<T>, {0x660, 40, 0, 0})
+	SMember(FScalableFloat)                            JumpDownwardGravityScale                                    OFFSET(get<T>, {0x688, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.ServerDoJumpExit
+	// void ServerDoJumpExit();                                                                                                 // [0x1e0f404] Net|NetReliableNative|Event|Protected|NetServer|BlueprintCallable 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.OnRep_IsBeingControlled
+	// void OnRep_IsBeingControlled();                                                                                          // [0x1fcff90] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.OnCapsuleBeginOverlap
+	// void OnCapsuleBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x98837d8] Final|Native|Protected|HasOutParms 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.IsSprintToggleable
+	// bool IsSprintToggleable();                                                                                               // [0x9883690] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleJumpStopped
+	// void HandleJumpStopped();                                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleJumpStarted
+	// void HandleJumpStarted();                                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleJumpHeld
+	// void HandleJumpHeld();                                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleCancelSprint
+	// void HandleCancelSprint(bool bAbilityInputHeld, bool bForceCancel);                                                      // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleAbilityStopped
+	// void HandleAbilityStopped();                                                                                             // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleAbilityStarted
+	// void HandleAbilityStarted();                                                                                             // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.HandleAbilityHeld
+	// void HandleAbilityHeld();                                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.GetAbilityDisplayText
+	// FText GetAbilityDisplayText();                                                                                           // [0x98822a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.CanStartSprinting
+	// bool CanStartSprinting();                                                                                                // [0x9881ef0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.CancelBuildBar
+	// void CancelBuildBar();                                                                                                   // [0x9881f14] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.CanBeControlled
+	// bool CanBeControlled(URiderComponent* Rider);                                                                            // [0x9881dc8] Native|Event|Public|BlueprintEvent|Const 
 /// Class /Script/RidingCodeRuntime.RiderComponent
 /// Size: 0x05C8 (0x0000A8 - 0x000670)
 class URiderComponent : public UFortPawnOverrideComponent
@@ -199,65 +280,118 @@ class URiderComponent : public UFortPawnOverrideComponent
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStartedRiding                                             ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStoppedRiding                                             ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	CMember(UClass*)                                   RidingCameraModeClass                                       ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(UClass*)                                   RidingSprintCameraModeClass                                 ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
-	DMember(float)                                     RidingCameraModeBlendTime                                   ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
-	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffset                ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	CMember(UClass*)                                   RiderPropClass                                              ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	CMember(UClass*)                                   RidablePropClass                                            ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FVector)                                   RiderPropAttachLocationOffset                               ___ OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FRotator)                                  RiderPropAttachRotationOffset                               ___ OFFSET(get<T>, {0x120, 24, 0, 0})
-	DMember(float)                                     RiderPropAttachScale                                        ___ OFFSET(get<float>, {0x138, 4, 0, 0})
-	SMember(FName)                                     RiderPropAttachSocket                                       ___ OFFSET(get<T>, {0x13C, 4, 0, 0})
-	DMember(bool)                                      bUseClientAttachGuideSocket                                 ___ OFFSET(get<bool>, {0x140, 1, 0, 0})
-	SMember(FVector)                                   RiderPropAttachSoftBounds                                   ___ OFFSET(get<T>, {0x148, 24, 0, 0})
-	DMember(float)                                     RiderPropAttachSoftBoundsScalar                             ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FVector)                                   RiderPropAttachHardBounds                                   ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	DMember(float)                                     RiderPropAttachSoftBoundsTargetingScalar                    ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	DMember(float)                                     RiderPropAttachHardBoundsTargetingScalar                    ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	DMember(float)                                     RiderPropAttachVerticalBufferTargetingScalar                ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(float)                                     RidingExitHoldTime                                          ___ OFFSET(get<float>, {0x18C, 4, 0, 0})
-	SMember(FScalableFloat)                            TimeBeforeReenteringRiding                                  ___ OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FGameplayTag)                              RidingExitStartedEventTag                                   ___ OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FGameplayTag)                              RidingExitStoppedEventTag                                   ___ OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	CMember(UFortInputMappingContext*)                 RidingInputContext                                          ___ OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	CMember(UInputAction*)                             RidingExit                                                  ___ OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	CMember(UInputAction*)                             GamepadRidingExit                                           ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	CMember(UFXSystemAsset*)                           ConnectorFXAsset                                            ___ OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FName)                                     ConnectorPropSourceMeshParameterName                        ___ OFFSET(get<T>, {0x1E0, 4, 0, 0})
-	SMember(FName)                                     ConnectorPropTargetMeshParameterName                        ___ OFFSET(get<T>, {0x1E4, 4, 0, 0})
-	DMember(float)                                     SimulatedSmoothedRotationSpeed                              ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     ExcludedEmoteTags                                           ___ OFFSET(get<T>, {0x1F0, 32, 0, 0})
-	CMember(URidableComponent*)                        ActiveRidable                                               ___ OFFSET(get<T>, {0x218, 8, 0, 0})
-	CMember(URidableComponent*)                        LastRidable                                                 ___ OFFSET(get<T>, {0x220, 8, 0, 0})
-	CMember(USceneComponent*)                          RiderProp                                                   ___ OFFSET(get<T>, {0x228, 8, 0, 0})
-	CMember(UFXSystemComponent*)                       ConnectorProp                                               ___ OFFSET(get<T>, {0x230, 8, 0, 0})
-	SMember(FVector)                                   PropAttachSeparation                                        ___ OFFSET(get<T>, {0x238, 24, 0, 0})
-	SMember(FVector)                                   AdditionalAttachOffset                                      ___ OFFSET(get<T>, {0x250, 24, 0, 0})
-	SMember(FVector)                                   SoftBoundsAttachmentOffset                                  ___ OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FVector)                                   HardBoundsAttachmentOffset                                  ___ OFFSET(get<T>, {0x280, 24, 0, 0})
-	SMember(FDataTableRowHandle)                       PlaylistTagDenylistRowHandle                                ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	CMember(UFortInputComponent*)                      RiderInputComponent                                         ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     PendingFailedEmoteErrorTags                                 ___ OFFSET(get<T>, {0x2B0, 32, 0, 0})
-	SMember(FRiderDismountLaunchVelocity)              ExitLaunchVelocity                                          ___ OFFSET(get<T>, {0x2D0, 168, 0, 0})
-	SMember(FRiderDismountLaunchVelocity)              JumpExitLaunchVelocity                                      ___ OFFSET(get<T>, {0x378, 168, 0, 0})
-	SMember(FRidingAnalyticsData_Stopped)              ActiveAnaltyicsData                                         ___ OFFSET(get<T>, {0x428, 128, 0, 0})
-	SMember(FVector)                                   RidableLocationLastFrame                                    ___ OFFSET(get<T>, {0x4A8, 24, 0, 0})
-	SMember(FTimerHandle)                              RestoreCollisionHandle                                      ___ OFFSET(get<T>, {0x4C8, 8, 0, 0})
-	SMember(FRidableControlRuntimeData)                RidableControlRuntimeData                                   ___ OFFSET(get<T>, {0x4D0, 64, 0, 0})
-	DMember(bool)                                      bIsSprintingReplay                                          ___ OFFSET(get<bool>, {0x510, 1, 1, 0})
-	CMember(TWeakObjectPtr<AFortPlayerController*>)    ClampedController                                           ___ OFFSET(get<T>, {0x514, 8, 0, 0})
-	DMember(bool)                                      bIsPetting                                                  ___ OFFSET(get<bool>, {0x51C, 1, 0, 0})
-	SMember(FScalableFloat)                            RidingCapsuleHalfHeight                                     ___ OFFSET(get<T>, {0x520, 40, 0, 0})
-	SMember(FScalableFloat)                            RidingCapsuleRadius                                         ___ OFFSET(get<T>, {0x548, 40, 0, 0})
-	SMember(FCollisionProfileName)                     CollisionProfileName                                        ___ OFFSET(get<T>, {0x580, 4, 0, 0})
-	SMember(FScalableFloat)                            TraceRadius                                                 ___ OFFSET(get<T>, {0x588, 40, 0, 0})
-	SMember(FScalableFloat)                            TraceLength                                                 ___ OFFSET(get<T>, {0x5B0, 40, 0, 0})
-	DMember(bool)                                      bPreventExitRidingFromInput                                 ___ OFFSET(get<bool>, {0x5D8, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartedRiding                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStoppedRiding                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(UClass*)                                   RidingCameraModeClass                                       OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(UClass*)                                   RidingSprintCameraModeClass                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
+	DMember(float)                                     RidingCameraModeBlendTime                                   OFFSET(get<float>, {0xE0, 4, 0, 0})
+	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffset                OFFSET(get<T>, {0xE8, 16, 0, 0})
+	CMember(UClass*)                                   RiderPropClass                                              OFFSET(get<T>, {0xF8, 8, 0, 0})
+	CMember(UClass*)                                   RidablePropClass                                            OFFSET(get<T>, {0x100, 8, 0, 0})
+	SMember(FVector)                                   RiderPropAttachLocationOffset                               OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FRotator)                                  RiderPropAttachRotationOffset                               OFFSET(get<T>, {0x120, 24, 0, 0})
+	DMember(float)                                     RiderPropAttachScale                                        OFFSET(get<float>, {0x138, 4, 0, 0})
+	SMember(FName)                                     RiderPropAttachSocket                                       OFFSET(get<T>, {0x13C, 4, 0, 0})
+	DMember(bool)                                      bUseClientAttachGuideSocket                                 OFFSET(get<bool>, {0x140, 1, 0, 0})
+	SMember(FVector)                                   RiderPropAttachSoftBounds                                   OFFSET(get<T>, {0x148, 24, 0, 0})
+	DMember(float)                                     RiderPropAttachSoftBoundsScalar                             OFFSET(get<float>, {0x160, 4, 0, 0})
+	SMember(FVector)                                   RiderPropAttachHardBounds                                   OFFSET(get<T>, {0x168, 24, 0, 0})
+	DMember(float)                                     RiderPropAttachSoftBoundsTargetingScalar                    OFFSET(get<float>, {0x180, 4, 0, 0})
+	DMember(float)                                     RiderPropAttachHardBoundsTargetingScalar                    OFFSET(get<float>, {0x184, 4, 0, 0})
+	DMember(float)                                     RiderPropAttachVerticalBufferTargetingScalar                OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(float)                                     RidingExitHoldTime                                          OFFSET(get<float>, {0x18C, 4, 0, 0})
+	SMember(FScalableFloat)                            TimeBeforeReenteringRiding                                  OFFSET(get<T>, {0x190, 40, 0, 0})
+	SMember(FGameplayTag)                              RidingExitStartedEventTag                                   OFFSET(get<T>, {0x1B8, 4, 0, 0})
+	SMember(FGameplayTag)                              RidingExitStoppedEventTag                                   OFFSET(get<T>, {0x1BC, 4, 0, 0})
+	CMember(UFortInputMappingContext*)                 RidingInputContext                                          OFFSET(get<T>, {0x1C0, 8, 0, 0})
+	CMember(UInputAction*)                             RidingExit                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
+	CMember(UInputAction*)                             GamepadRidingExit                                           OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(UFXSystemAsset*)                           ConnectorFXAsset                                            OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	SMember(FName)                                     ConnectorPropSourceMeshParameterName                        OFFSET(get<T>, {0x1E0, 4, 0, 0})
+	SMember(FName)                                     ConnectorPropTargetMeshParameterName                        OFFSET(get<T>, {0x1E4, 4, 0, 0})
+	DMember(float)                                     SimulatedSmoothedRotationSpeed                              OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     ExcludedEmoteTags                                           OFFSET(get<T>, {0x1F0, 32, 0, 0})
+	CMember(URidableComponent*)                        ActiveRidable                                               OFFSET(get<T>, {0x218, 8, 0, 0})
+	CMember(URidableComponent*)                        LastRidable                                                 OFFSET(get<T>, {0x220, 8, 0, 0})
+	CMember(USceneComponent*)                          RiderProp                                                   OFFSET(get<T>, {0x228, 8, 0, 0})
+	CMember(UFXSystemComponent*)                       ConnectorProp                                               OFFSET(get<T>, {0x230, 8, 0, 0})
+	SMember(FVector)                                   PropAttachSeparation                                        OFFSET(get<T>, {0x238, 24, 0, 0})
+	SMember(FVector)                                   AdditionalAttachOffset                                      OFFSET(get<T>, {0x250, 24, 0, 0})
+	SMember(FVector)                                   SoftBoundsAttachmentOffset                                  OFFSET(get<T>, {0x268, 24, 0, 0})
+	SMember(FVector)                                   HardBoundsAttachmentOffset                                  OFFSET(get<T>, {0x280, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       PlaylistTagDenylistRowHandle                                OFFSET(get<T>, {0x298, 16, 0, 0})
+	CMember(UFortInputComponent*)                      RiderInputComponent                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     PendingFailedEmoteErrorTags                                 OFFSET(get<T>, {0x2B0, 32, 0, 0})
+	SMember(FRiderDismountLaunchVelocity)              ExitLaunchVelocity                                          OFFSET(get<T>, {0x2D0, 168, 0, 0})
+	SMember(FRiderDismountLaunchVelocity)              JumpExitLaunchVelocity                                      OFFSET(get<T>, {0x378, 168, 0, 0})
+	SMember(FRidingAnalyticsData_Stopped)              ActiveAnaltyicsData                                         OFFSET(get<T>, {0x428, 128, 0, 0})
+	SMember(FVector)                                   RidableLocationLastFrame                                    OFFSET(get<T>, {0x4A8, 24, 0, 0})
+	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(get<T>, {0x4C8, 8, 0, 0})
+	SMember(FRidableControlRuntimeData)                RidableControlRuntimeData                                   OFFSET(get<T>, {0x4D0, 64, 0, 0})
+	DMember(bool)                                      bIsSprintingReplay                                          OFFSET(get<bool>, {0x510, 1, 1, 0})
+	CMember(TWeakObjectPtr<AFortPlayerController*>)    ClampedController                                           OFFSET(get<T>, {0x514, 8, 0, 0})
+	DMember(bool)                                      bIsPetting                                                  OFFSET(get<bool>, {0x51C, 1, 0, 0})
+	SMember(FScalableFloat)                            RidingCapsuleHalfHeight                                     OFFSET(get<T>, {0x520, 40, 0, 0})
+	SMember(FScalableFloat)                            RidingCapsuleRadius                                         OFFSET(get<T>, {0x548, 40, 0, 0})
+	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(get<T>, {0x580, 4, 0, 0})
+	SMember(FScalableFloat)                            TraceRadius                                                 OFFSET(get<T>, {0x588, 40, 0, 0})
+	SMember(FScalableFloat)                            TraceLength                                                 OFFSET(get<T>, {0x5B0, 40, 0, 0})
+	DMember(bool)                                      bPreventExitRidingFromInput                                 OFFSET(get<bool>, {0x5D8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.RiderComponent.StopRidingActor
+	// bool StopRidingActor(bool bLaunchRider, bool bFindDismountLocation, bool bIsJumpExit);                                   // [0x9884050] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/RidingCodeRuntime.RiderComponent.StartRidingActor
+	// bool StartRidingActor(AActor* TargetActor);                                                                              // [0x9883fbc] BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/RidingCodeRuntime.RiderComponent.ServerRidingExit
+	// void ServerRidingExit();                                                                                                 // [0x9883b64] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/RidingCodeRuntime.RiderComponent.OnRep_RidableControlRuntimeUpdated
+	// void OnRep_RidableControlRuntimeUpdated();                                                                               // [0x2cf6bfc] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.OnRep_IsSprintingReplay
+	// void OnRep_IsSprintingReplay();                                                                                          // [0x9883ad0] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.OnRep_ActiveRidable
+	// void OnRep_ActiveRidable();                                                                                              // [0x2e56c58] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.OnMovementModeChanged
+	// void OnMovementModeChanged(ACharacter* InCharacter, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x98839c0] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.IsRidingActor
+	// bool IsRidingActor();                                                                                                    // [0x82245fc] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleStoppedRiding
+	// void HandleStoppedRiding(URidableComponent* Ridable);                                                                    // [0x2682bb8] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleStartedRiding
+	// void HandleStartedRiding(URidableComponent* Ridable);                                                                    // [0x2774be8] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRidingExitReleased
+	// void HandleRidingExitReleased();                                                                                         // [0x9883638] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRidingExitPressed
+	// void HandleRidingExitPressed();                                                                                          // [0x9883624] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRiderTakenDamage
+	// void HandleRiderTakenDamage(AActor* DamageOnOwnerPawnDamageddActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x98830b0] Final|Native|Protected|HasDefaults 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRiderDidDamage
+	// void HandleRiderDidDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* HitComponent, FName BoneName, FVector Momentum); // [0x9882b64] Final|Native|Protected|HasDefaults 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRidableMovementModeChanged
+	// void HandleRidableMovementModeChanged(ACharacter* InCharacter, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x9882a68] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleRidableFound
+	// void HandleRidableFound(FHitResult& HitResult);                                                                          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandlePawnTeleported
+	// void HandlePawnTeleported(AFortPawn* TeleportedPawn);                                                                    // [0x98829d4] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandlePawnDiedWhileRiding
+	// void HandlePawnDiedWhileRiding(AFortPawn* DeadPawn);                                                                     // [0x9882954] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleOnWeaponEquipped
+	// void HandleOnWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                            // [0x988288c] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleGamepadRidingExitReleased
+	// void HandleGamepadRidingExitReleased();                                                                                  // [0x9882878] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleDeferredExitVelocity
+	// void HandleDeferredExitVelocity(FVector ExitVelocity);                                                                   // [0x98826fc] Final|Native|Protected|HasDefaults 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleDBNOWhileRiding
+	// void HandleDBNOWhileRiding();                                                                                            // [0x98826e8] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.HandleActorEndPlayWhileRiding
+	// void HandleActorEndPlayWhileRiding(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                            // [0x9882624] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.RiderComponent.ClientNotifyEmoteFailure
+	// void ClientNotifyEmoteFailure(FGameplayTagContainer ErrorTags);                                                          // [0x9881f9c] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/RidingCodeRuntime.RiderComponent.ClientHandleFinishedCharacterCustomization
+	// void ClientHandleFinishedCharacterCustomization(AFortPlayerPawn* PlayerPawn);                                            // [0x250c954] Final|Native|Protected 
 /// Class /Script/RidingCodeRuntime.ControllingRiderComponent
 /// Size: 0x0058 (0x000670 - 0x0006C8)
 class UControllingRiderComponent : public URiderComponent
@@ -266,20 +400,67 @@ class UControllingRiderComponent : public URiderComponent
 	static inline constexpr uint64_t __MDKClassSize = 1736;
 
 public:
-	CMember(UFortInputMappingContext*)                 ControllingRidingInputContext                               ___ OFFSET(get<T>, {0x670, 8, 0, 0})
-	CMember(UInputAction*)                             RidingAbility                                               ___ OFFSET(get<T>, {0x678, 8, 0, 0})
-	CMember(UInputAction*)                             GamepadRidingAbility                                        ___ OFFSET(get<T>, {0x680, 8, 0, 0})
-	DMember(bool)                                      bCanControlRidable                                          ___ OFFSET(get<bool>, {0x688, 1, 0, 0})
-	DMember(bool)                                      bIsControllingRidable                                       ___ OFFSET(get<bool>, {0x689, 1, 0, 0})
-	CMember(ERidingControlInputStyle)                  ControlInputStyle                                           ___ OFFSET(get<T>, {0x68A, 1, 0, 0})
-	SMember(FRidingControlInputState)                  ReplicatedControlInputState                                 ___ OFFSET(get<T>, {0x698, 12, 0, 0})
-	SMember(FRidingControlInputStateReliable)          ReplicatedControlInputStateReliable                         ___ OFFSET(get<T>, {0x6A4, 1, 0, 0})
-	SMember(FRidingControlInputStateUnreliable)        ReplicatedControlInputStateUnreliable                       ___ OFFSET(get<T>, {0x6A5, 2, 0, 0})
-	CMember(UFortInputComponent*)                      ControllingRiderInputComponent                              ___ OFFSET(get<T>, {0x6A8, 8, 0, 0})
-	DMember(float)                                     AutoRunDoubleTapTimestamp                                   ___ OFFSET(get<float>, {0x6C0, 4, 0, 0})
-	DMember(bool)                                      bCanBePet                                                   ___ OFFSET(get<bool>, {0x6C4, 1, 0, 0})
+	CMember(UFortInputMappingContext*)                 ControllingRidingInputContext                               OFFSET(get<T>, {0x670, 8, 0, 0})
+	CMember(UInputAction*)                             RidingAbility                                               OFFSET(get<T>, {0x678, 8, 0, 0})
+	CMember(UInputAction*)                             GamepadRidingAbility                                        OFFSET(get<T>, {0x680, 8, 0, 0})
+	DMember(bool)                                      bCanControlRidable                                          OFFSET(get<bool>, {0x688, 1, 0, 0})
+	DMember(bool)                                      bIsControllingRidable                                       OFFSET(get<bool>, {0x689, 1, 0, 0})
+	CMember(ERidingControlInputStyle)                  ControlInputStyle                                           OFFSET(get<T>, {0x68A, 1, 0, 0})
+	SMember(FRidingControlInputState)                  ReplicatedControlInputState                                 OFFSET(get<T>, {0x698, 12, 0, 0})
+	SMember(FRidingControlInputStateReliable)          ReplicatedControlInputStateReliable                         OFFSET(get<T>, {0x6A4, 1, 0, 0})
+	SMember(FRidingControlInputStateUnreliable)        ReplicatedControlInputStateUnreliable                       OFFSET(get<T>, {0x6A5, 2, 0, 0})
+	CMember(UFortInputComponent*)                      ControllingRiderInputComponent                              OFFSET(get<T>, {0x6A8, 8, 0, 0})
+	DMember(float)                                     AutoRunDoubleTapTimestamp                                   OFFSET(get<float>, {0x6C0, 4, 0, 0})
+	DMember(bool)                                      bCanBePet                                                   OFFSET(get<bool>, {0x6C4, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.UpdateFromInput
+	// void UpdateFromInput(float DeltaTime, FRidingControlInputState& InputState);                                             // [0x9884164] Native|Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ServerUpdateControlInputStateUnreliable
+	// void ServerUpdateControlInputStateUnreliable(FRidingControlInputStateUnreliable InputState);                             // [0x9883d2c] Net|Native|Event|Protected|NetServer|NetValidate 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ServerUpdateControlInputStateReliable
+	// void ServerUpdateControlInputStateReliable(FRidingControlInputStateReliable InputState);                                 // [0x9883bb0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ServerCancelPetting
+	// void ServerCancelPetting();                                                                                              // [0x6646598] Net|NetReliableNative|Event|Protected|NetServer 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ReloadPressed
+	// void ReloadPressed();                                                                                                    // [0x9883b50] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.OnSprintCanceled
+	// void OnSprintCanceled();                                                                                                 // [0x6646580] Net|NetReliableNative|Event|Protected|NetServer 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.OnRep_IsControllingRidable
+	// void OnRep_IsControllingRidable();                                                                                       // [0x303273c] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.OnRep_ControlInputUnreliable
+	// void OnRep_ControlInputUnreliable();                                                                                     // [0x2e4f24c] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.OnRep_ControlInputReliable
+	// void OnRep_ControlInputReliable();                                                                                       // [0x3583ea4] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.IsTryingToMove
+	// bool IsTryingToMove(float Tolerance);                                                                                    // [0x9883724] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleSpotActorOrPettingAbilityReleased
+	// void HandleSpotActorOrPettingAbilityReleased();                                                                          // [0x9883660] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleSpotActorOrPettingAbilityPressed
+	// void HandleSpotActorOrPettingAbilityPressed();                                                                           // [0x988364c] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleRidingAbilityReleased
+	// void HandleRidingAbilityReleased();                                                                                      // [0x9883610] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleRidingAbilityPressed
+	// void HandleRidingAbilityPressed();                                                                                       // [0x98835fc] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleRequestPettingStop
+	// void HandleRequestPettingStop();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleRequestPettingStart
+	// void HandleRequestPettingStart();                                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandlePettingAbilityPressed
+	// void HandlePettingAbilityPressed();                                                                                      // [0x9882a54] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.HandleGamepadRidingAbilityPressed
+	// void HandleGamepadRidingAbilityPressed();                                                                                // [0x9882864] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.GetControlInputState
+	// FRidingControlInputState GetControlInputState();                                                                         // [0x98822c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ControllingActor_OnMoveRight
+	// void ControllingActor_OnMoveRight(float Val);                                                                            // [0x9882224] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ControllingActor_OnMoveForward
+	// void ControllingActor_OnMoveForward(float Val);                                                                          // [0x98821a4] Final|Native|Protected 
+	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ControllingActor_OnJumpInput
+	// void ControllingActor_OnJumpInput(bool bPressed);                                                                        // [0x9882124] Final|Native|Protected 
 /// Class /Script/RidingCodeRuntime.FortCameraMode_Riding
 /// Size: 0x0020 (0x001B50 - 0x001B70)
 class UFortCameraMode_Riding : public UFortCameraMode_ThirdPerson
@@ -288,7 +469,7 @@ class UFortCameraMode_Riding : public UFortCameraMode_ThirdPerson
 	static inline constexpr uint64_t __MDKClassSize = 7024;
 
 public:
-	SMember(FVector)                                   OriginOffset                                                ___ OFFSET(get<T>, {0x1B50, 24, 0, 0})
+	SMember(FVector)                                   OriginOffset                                                OFFSET(get<T>, {0x1B50, 24, 0, 0})
 };
 
 /// Class /Script/RidingCodeRuntime.RidingGameStateMutator
@@ -319,9 +500,14 @@ class UFortAthenaPettingWildlifeTelemetryData : public UFortAthenaAITelemetryDat
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   PetCount                                                    ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   PetCount                                                    OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RidingCodeRuntime.FortAthenaPettingWildlifeTelemetryData.OnPetted
+	// void OnPetted();                                                                                                         // [0x9883abc] Final|Native|Public|BlueprintCallable 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputStateReliable
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FRidingControlInputStateReliable : public MDKStruct
@@ -330,9 +516,9 @@ class FRidingControlInputStateReliable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bIsJumping                                                  ___ OFFSET(get<bool>, {0x0, 1, 1, 0})
-	DMember(bool)                                      bIsUsingAbility                                             ___ OFFSET(get<bool>, {0x0, 1, 1, 1})
-	DMember(bool)                                      bIsPetting                                                  ___ OFFSET(get<bool>, {0x0, 1, 1, 2})
+	DMember(bool)                                      bIsJumping                                                  OFFSET(get<bool>, {0x0, 1, 1, 0})
+	DMember(bool)                                      bIsUsingAbility                                             OFFSET(get<bool>, {0x0, 1, 1, 1})
+	DMember(bool)                                      bIsPetting                                                  OFFSET(get<bool>, {0x0, 1, 1, 2})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputStateUnreliable
@@ -343,8 +529,8 @@ class FRidingControlInputStateUnreliable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(char)                                      RightAlphaQuantized                                         ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	DMember(char)                                      ForwardAlphaQuantized                                       ___ OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(char)                                      RightAlphaQuantized                                         OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      ForwardAlphaQuantized                                       OFFSET(get<char>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputState
@@ -355,11 +541,11 @@ class FRidingControlInputState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     RightAlpha                                                  ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     ForwardAlpha                                                ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bIsJumping                                                  ___ OFFSET(get<bool>, {0x8, 1, 1, 0})
-	DMember(bool)                                      bIsUsingAbility                                             ___ OFFSET(get<bool>, {0x8, 1, 1, 2})
-	DMember(bool)                                      bIsPetting                                                  ___ OFFSET(get<bool>, {0x8, 1, 1, 4})
+	DMember(float)                                     RightAlpha                                                  OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     ForwardAlpha                                                OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bIsJumping                                                  OFFSET(get<bool>, {0x8, 1, 1, 0})
+	DMember(bool)                                      bIsUsingAbility                                             OFFSET(get<bool>, {0x8, 1, 1, 2})
+	DMember(bool)                                      bIsPetting                                                  OFFSET(get<bool>, {0x8, 1, 1, 4})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingPlaylistBlacklistTableRow
@@ -370,7 +556,7 @@ class FRidingPlaylistBlacklistTableRow : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     PlaylistTags                                                ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlaylistTags                                                OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.PrimaryFireAnimMontageAnimCoreTypeOverride
@@ -381,8 +567,8 @@ class FPrimaryFireAnimMontageAnimCoreTypeOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     CoreTypeToOverride                                          ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       ___ OFFSET(get<T>, {0x8, 88, 0, 0})
+	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     CoreTypeToOverride                                          OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(get<T>, {0x8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.PrimaryFireAnimMontageTagOverride
@@ -393,8 +579,8 @@ class FPrimaryFireAnimMontageTagOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGameplayTag)                              TagOverride                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       ___ OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FGameplayTag)                              TagOverride                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(get<T>, {0x8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingAttachmentBoundsOverride
@@ -405,9 +591,9 @@ class FRidingAttachmentBoundsOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(bool)                                      bUseOverride                                                ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   AttachSoftBounds                                            ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   AttachHardBounds                                            ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      bUseOverride                                                OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   AttachSoftBounds                                            OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   AttachHardBounds                                            OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingPettingData
@@ -418,10 +604,10 @@ class FRidingPettingData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	DMember(bool)                                      bIsPettableCreature                                         ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RiderMalePettingMontageInfo                                 ___ OFFSET(get<T>, {0x8, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RiderFemalePettingMontageInfo                               ___ OFFSET(get<T>, {0x60, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RidablePettingMontageInfo                                   ___ OFFSET(get<T>, {0xB8, 88, 0, 0})
+	DMember(bool)                                      bIsPettableCreature                                         OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RiderMalePettingMontageInfo                                 OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RiderFemalePettingMontageInfo                               OFFSET(get<T>, {0x60, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RidablePettingMontageInfo                                   OFFSET(get<T>, {0xB8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RiderDismountLaunchVelocity
@@ -432,11 +618,11 @@ class FRiderDismountLaunchVelocity : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FScalableFloat)                            DismountVelocityMultiplier                                  ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseForwardVelocity                         ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseRightVelocity                           ___ OFFSET(get<T>, {0x50, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseUpVelocity                              ___ OFFSET(get<T>, {0x78, 40, 0, 0})
-	DMember(bool)                                      bApplyDismountVelocityMultiplierToZVelocity                 ___ OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityMultiplier                                  OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseForwardVelocity                         OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseRightVelocity                           OFFSET(get<T>, {0x50, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseUpVelocity                              OFFSET(get<T>, {0x78, 40, 0, 0})
+	DMember(bool)                                      bApplyDismountVelocityMultiplierToZVelocity                 OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingAnalyticsData_Base
@@ -447,8 +633,8 @@ class FRidingAnalyticsData_Base : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TWeakObjectPtr<URiderComponent*>)          Rider                                                       ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	CMember(TWeakObjectPtr<URidableComponent*>)        Ridable                                                     ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	CMember(TWeakObjectPtr<URiderComponent*>)          Rider                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(TWeakObjectPtr<URidableComponent*>)        Ridable                                                     OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingAnalyticsData_Started
@@ -469,20 +655,20 @@ class FRidingAnalyticsData_Stopped : public FRidingAnalyticsData_Base
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(float)                                     TotalRidingTime                                             ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     RiderStartHealth                                            ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     RiderStartShield                                            ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     RiderEndHealth                                              ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     RiderEndShield                                              ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     TotalDistanceTraveled                                       ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(int32_t)                                   JumpUseCount                                                ___ OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   AbilityUseCount                                             ___ OFFSET(get<int32_t>, {0x64, 4, 0, 0})
-	DMember(float)                                     RiderDamageDealt                                            ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     RiderDamageTaken                                            ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	DMember(float)                                     RiderHealingReceived                                        ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     RiderShieldGained                                           ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(bool)                                      bRidableEliminated                                          ___ OFFSET(get<bool>, {0x78, 1, 1, 0})
-	DMember(bool)                                      bRidableExhausted                                           ___ OFFSET(get<bool>, {0x78, 1, 1, 1})
+	DMember(float)                                     TotalRidingTime                                             OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     RiderStartHealth                                            OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     RiderStartShield                                            OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     RiderEndHealth                                              OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     RiderEndShield                                              OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     TotalDistanceTraveled                                       OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(int32_t)                                   JumpUseCount                                                OFFSET(get<int32_t>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   AbilityUseCount                                             OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	DMember(float)                                     RiderDamageDealt                                            OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     RiderDamageTaken                                            OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     RiderHealingReceived                                        OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     RiderShieldGained                                           OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(bool)                                      bRidableEliminated                                          OFFSET(get<bool>, {0x78, 1, 1, 0})
+	DMember(bool)                                      bRidableExhausted                                           OFFSET(get<bool>, {0x78, 1, 1, 1})
 };
 
 /// Enum /Script/RidingCodeRuntime.ERidingControlInputStyle

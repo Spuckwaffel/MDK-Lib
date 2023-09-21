@@ -15,9 +15,9 @@ class UMoviePlayerSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bWaitForMoviesToComplete                                    ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bMoviesAreSkippable                                         ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	CMember(TArray<FString>)                           StartupMovies                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(bool)                                      bWaitForMoviesToComplete                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bMoviesAreSkippable                                         OFFSET(get<bool>, {0x29, 1, 0, 0})
+	CMember(TArray<FString>)                           StartupMovies                                               OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Enum /Script/MoviePlayer.EMoviePlaybackType

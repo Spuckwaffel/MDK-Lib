@@ -28,7 +28,7 @@ class UDNAAsset : public UAssetUserData
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FString)                                   DnaFileName                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   DnaFileName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/RigLogicModule.SkelMeshDNAUtils
@@ -49,9 +49,9 @@ class FCoordinateSystem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
 public:
-	CMember(EDirection)                                XAxis                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EDirection)                                YAxis                                                       ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	CMember(EDirection)                                ZAxis                                                       ___ OFFSET(get<T>, {0x2, 1, 0, 0})
+	CMember(EDirection)                                XAxis                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EDirection)                                YAxis                                                       OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(EDirection)                                ZAxis                                                       OFFSET(get<T>, {0x2, 1, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.MeshBlendShapeChannelMapping
@@ -62,8 +62,8 @@ class FMeshBlendShapeChannelMapping : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   MeshIndex                                                   ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   BlendShapeChannelIndex                                      ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MeshIndex                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   BlendShapeChannelIndex                                      OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.TextureCoordinate
@@ -74,8 +74,8 @@ class FTextureCoordinate : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     U                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     V                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     U                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     V                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.VertexLayout
@@ -86,9 +86,9 @@ class FVertexLayout : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   Position                                                    ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   TextureCoordinate                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Normal                                                      ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Position                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   TextureCoordinate                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Normal                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.AnimNode_RigLogic
@@ -99,8 +99,8 @@ class FAnimNode_RigLogic : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FPoseLink)                                 AnimSequence                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FPoseLink)                                 AnimSequence                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.RigUnit_RigLogic_IntArray
@@ -111,7 +111,7 @@ class FRigUnit_RigLogic_IntArray : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<int32_t>)                           Values                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Values                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.RigUnit_RigLogic_Data
@@ -122,15 +122,15 @@ class FRigUnit_RigLogic_Data : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SkelMeshComponent                                           ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<int32_t>)                           InputCurveIndices                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<int32_t>)                           NeuralNetMaskCurveIndices                                   ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<int32_t>)                           HierarchyBoneIndices                                        ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FRigUnit_RigLogic_IntArray>)        MorphTargetCurveIndices                                     ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<FRigUnit_RigLogic_IntArray>)        BlendShapeIndices                                           ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<FRigUnit_RigLogic_IntArray>)        CurveElementIndicesForAnimMaps                              ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FRigUnit_RigLogic_IntArray>)        RigLogicIndicesForAnimMaps                                  ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(uint32_t)                                  CurrentLOD                                                  ___ OFFSET(get<uint32_t>, {0x90, 4, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SkelMeshComponent                                           OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<int32_t>)                           InputCurveIndices                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<int32_t>)                           NeuralNetMaskCurveIndices                                   OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<int32_t>)                           HierarchyBoneIndices                                        OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FRigUnit_RigLogic_IntArray>)        MorphTargetCurveIndices                                     OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FRigUnit_RigLogic_IntArray>)        BlendShapeIndices                                           OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FRigUnit_RigLogic_IntArray>)        CurveElementIndicesForAnimMaps                              OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FRigUnit_RigLogic_IntArray>)        RigLogicIndicesForAnimMaps                                  OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(uint32_t)                                  CurrentLOD                                                  OFFSET(get<uint32_t>, {0x90, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.RigUnit_RigLogic
@@ -141,8 +141,8 @@ class FRigUnit_RigLogic : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FRigUnit_RigLogic_Data)                    Data                                                        ___ OFFSET(get<T>, {0x160, 152, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1F8, 1, 0, 0})
+	SMember(FRigUnit_RigLogic_Data)                    Data                                                        OFFSET(get<T>, {0x160, 152, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1F8, 1, 0, 0})
 };
 
 /// Enum /Script/RigLogicModule.EArchetype

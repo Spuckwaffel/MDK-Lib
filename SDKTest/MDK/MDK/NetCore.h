@@ -15,7 +15,7 @@ class UNetAnalyticsAggregatorConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FNetAnalyticsDataConfig>)           NetAnalyticsData                                            ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FNetAnalyticsDataConfig>)           NetAnalyticsData                                            OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/NetCore.StatePerObjectConfig
@@ -26,8 +26,8 @@ class UStatePerObjectConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   PerObjectConfigSection                                      ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x60, 1, 0, 0})
+	SMember(FString)                                   PerObjectConfigSection                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
 /// Class /Script/NetCore.EscalationManagerConfig
@@ -38,7 +38,7 @@ class UEscalationManagerConfig : public UStatePerObjectConfig
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<FString>)                           EscalationSeverity                                          ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FString>)                           EscalationSeverity                                          OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Struct /Script/NetCore.FastArraySerializerItem
@@ -49,9 +49,9 @@ class FFastArraySerializerItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   ReplicationID                                               ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   ReplicationKey                                              ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   MostRecentArrayReplicationKey                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   ReplicationID                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   ReplicationKey                                              OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MostRecentArrayReplicationKey                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/NetCore.FastArraySerializer
@@ -62,8 +62,8 @@ class FFastArraySerializer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	DMember(int32_t)                                   ArrayReplicationKey                                         ___ OFFSET(get<int32_t>, {0x54, 4, 0, 0})
-	CMember(EFastArraySerializerDeltaFlags)            DeltaFlags                                                  ___ OFFSET(get<T>, {0x100, 1, 0, 0})
+	DMember(int32_t)                                   ArrayReplicationKey                                         OFFSET(get<int32_t>, {0x54, 4, 0, 0})
+	CMember(EFastArraySerializerDeltaFlags)            DeltaFlags                                                  OFFSET(get<T>, {0x100, 1, 0, 0})
 };
 
 /// Struct /Script/NetCore.NetAnalyticsDataConfig
@@ -74,8 +74,8 @@ class FNetAnalyticsDataConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     DataName                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FName)                                     DataName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/NetCore.StateStruct
@@ -86,7 +86,7 @@ class FStateStruct : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   StateName                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   StateName                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/NetCore.EscalationState
@@ -97,12 +97,12 @@ class FEscalationState : public FStateStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bLogEscalate                                                ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bDormant                                                    ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
-	DMember(int16_t)                                   CooloffTime                                                 ___ OFFSET(get<int16_t>, {0x1A, 2, 0, 0})
-	DMember(int16_t)                                   AutoEscalateTime                                            ___ OFFSET(get<int16_t>, {0x1C, 2, 0, 0})
-	DMember(int8_t)                                    HighestTimePeriod                                           ___ OFFSET(get<int8_t>, {0x1E, 1, 0, 0})
-	CMember(TArray<int8_t>)                            AllTimePeriods                                              ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(bool)                                      bLogEscalate                                                OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bDormant                                                    OFFSET(get<bool>, {0x19, 1, 0, 0})
+	DMember(int16_t)                                   CooloffTime                                                 OFFSET(get<int16_t>, {0x1A, 2, 0, 0})
+	DMember(int16_t)                                   AutoEscalateTime                                            OFFSET(get<int16_t>, {0x1C, 2, 0, 0})
+	DMember(int8_t)                                    HighestTimePeriod                                           OFFSET(get<int8_t>, {0x1E, 1, 0, 0})
+	CMember(TArray<int8_t>)                            AllTimePeriods                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/NetCore.NetFaultState
@@ -113,12 +113,12 @@ class FNetFaultState : public FEscalationState
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bCloseConnection                                            ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(int16_t)                                   EscalateQuotaFaultsPerPeriod                                ___ OFFSET(get<int16_t>, {0x32, 2, 0, 0})
-	DMember(int8_t)                                    EscalateQuotaFaultPercentPerPeriod                          ___ OFFSET(get<int8_t>, {0x34, 1, 0, 0})
-	DMember(int16_t)                                   DescalateQuotaFaultsPerPeriod                               ___ OFFSET(get<int16_t>, {0x36, 2, 0, 0})
-	DMember(int8_t)                                    DescalateQuotaFaultPercentPerPeriod                         ___ OFFSET(get<int8_t>, {0x38, 1, 0, 0})
-	DMember(int8_t)                                    EscalateQuotaTimePeriod                                     ___ OFFSET(get<int8_t>, {0x39, 1, 0, 0})
+	DMember(bool)                                      bCloseConnection                                            OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(int16_t)                                   EscalateQuotaFaultsPerPeriod                                OFFSET(get<int16_t>, {0x32, 2, 0, 0})
+	DMember(int8_t)                                    EscalateQuotaFaultPercentPerPeriod                          OFFSET(get<int8_t>, {0x34, 1, 0, 0})
+	DMember(int16_t)                                   DescalateQuotaFaultsPerPeriod                               OFFSET(get<int16_t>, {0x36, 2, 0, 0})
+	DMember(int8_t)                                    DescalateQuotaFaultPercentPerPeriod                         OFFSET(get<int8_t>, {0x38, 1, 0, 0})
+	DMember(int8_t)                                    EscalateQuotaTimePeriod                                     OFFSET(get<int8_t>, {0x39, 1, 0, 0})
 };
 
 /// Enum /Script/NetCore.ENetworkFailure

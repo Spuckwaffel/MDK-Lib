@@ -17,27 +17,56 @@ class ABuildingGameplayActorSupplyDropRadio : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	DMember(float)                                     MinimumMovingSpeedThresholdSq                               ___ OFFSET(get<float>, {0x978, 4, 0, 0})
-	DMember(float)                                     BalloonClosedGroundedFallSpeed                              ___ OFFSET(get<float>, {0x97C, 4, 0, 0})
-	DMember(bool)                                      bAutoOpen                                                   ___ OFFSET(get<bool>, {0x980, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     ForceOpenActorTags                                          ___ OFFSET(get<T>, {0x988, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         IgnoreMovingCollisionWithActorTagQuery                      ___ OFFSET(get<T>, {0x9A8, 72, 0, 0})
-	DMember(float)                                     InterpRateToBalloonOpenedFallSpeed                          ___ OFFSET(get<float>, {0x9F0, 4, 0, 0})
-	DMember(float)                                     DistanceFromOriginalSpawnLocForBalloonOpen                  ___ OFFSET(get<float>, {0x9F4, 4, 0, 0})
-	CMember(ESupplyDropRadioBalloonState)              BalloonState                                                ___ OFFSET(get<T>, {0x9F8, 1, 0, 0})
-	SMember(FHitResult)                                WaterHitResult                                              ___ OFFSET(get<T>, {0xA00, 224, 0, 0})
-	DMember(bool)                                      bMoving                                                     ___ OFFSET(get<bool>, {0xAE0, 1, 0, 0})
-	DMember(float)                                     FallSpeed                                                   ___ OFFSET(get<float>, {0xAE4, 4, 0, 0})
-	DMember(float)                                     BalloonOpenedFallSpeed                                      ___ OFFSET(get<float>, {0xAE8, 4, 0, 0})
-	DMember(float)                                     GravityMultiplier                                           ___ OFFSET(get<float>, {0xAEC, 4, 0, 0})
-	SMember(FVector)                                   ServerLocation                                              ___ OFFSET(get<T>, {0xAF0, 24, 0, 0})
-	DMember(float)                                     ClientLocationCorrectionMaxDistSqWhenBalloonDisabled        ___ OFFSET(get<float>, {0xB08, 4, 0, 0})
-	DMember(float)                                     ClientLocationCorrectionMaxDistSqWhenBalloonEnabled         ___ OFFSET(get<float>, {0xB0C, 4, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0xB10, 24, 0, 0})
-	SMember(FVector)                                   PreviousFrameVelocity                                       ___ OFFSET(get<T>, {0xB28, 24, 0, 0})
-	SMember(FVector)                                   OriginalServerSpawnLocation                                 ___ OFFSET(get<T>, {0xB40, 24, 0, 0})
+	DMember(float)                                     MinimumMovingSpeedThresholdSq                               OFFSET(get<float>, {0x978, 4, 0, 0})
+	DMember(float)                                     BalloonClosedGroundedFallSpeed                              OFFSET(get<float>, {0x97C, 4, 0, 0})
+	DMember(bool)                                      bAutoOpen                                                   OFFSET(get<bool>, {0x980, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     ForceOpenActorTags                                          OFFSET(get<T>, {0x988, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         IgnoreMovingCollisionWithActorTagQuery                      OFFSET(get<T>, {0x9A8, 72, 0, 0})
+	DMember(float)                                     InterpRateToBalloonOpenedFallSpeed                          OFFSET(get<float>, {0x9F0, 4, 0, 0})
+	DMember(float)                                     DistanceFromOriginalSpawnLocForBalloonOpen                  OFFSET(get<float>, {0x9F4, 4, 0, 0})
+	CMember(ESupplyDropRadioBalloonState)              BalloonState                                                OFFSET(get<T>, {0x9F8, 1, 0, 0})
+	SMember(FHitResult)                                WaterHitResult                                              OFFSET(get<T>, {0xA00, 224, 0, 0})
+	DMember(bool)                                      bMoving                                                     OFFSET(get<bool>, {0xAE0, 1, 0, 0})
+	DMember(float)                                     FallSpeed                                                   OFFSET(get<float>, {0xAE4, 4, 0, 0})
+	DMember(float)                                     BalloonOpenedFallSpeed                                      OFFSET(get<float>, {0xAE8, 4, 0, 0})
+	DMember(float)                                     GravityMultiplier                                           OFFSET(get<float>, {0xAEC, 4, 0, 0})
+	SMember(FVector)                                   ServerLocation                                              OFFSET(get<T>, {0xAF0, 24, 0, 0})
+	DMember(float)                                     ClientLocationCorrectionMaxDistSqWhenBalloonDisabled        OFFSET(get<float>, {0xB08, 4, 0, 0})
+	DMember(float)                                     ClientLocationCorrectionMaxDistSqWhenBalloonEnabled         OFFSET(get<float>, {0xB0C, 4, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0xB10, 24, 0, 0})
+	SMember(FVector)                                   PreviousFrameVelocity                                       OFFSET(get<T>, {0xB28, 24, 0, 0})
+	SMember(FVector)                                   OriginalServerSpawnLocation                                 OFFSET(get<T>, {0xB40, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.UpdateGroundInfo
+	// void UpdateGroundInfo(bool bValidBlock, FHitResult& MovementHitResult);                                                  // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.SetGravityMultiplier
+	// void SetGravityMultiplier(float InGravityMultiplier);                                                                    // [0x5a9cbc4] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.SetBalloonState
+	// void SetBalloonState(ESupplyDropRadioBalloonState InBalloonState);                                                       // [0x7542028] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.OpenSupplyDrop
+	// void OpenSupplyDrop();                                                                                                   // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|BlueprintCallable|BlueprintEvent 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.OnRep_DistanceFromOriginalSpawnLocForBalloonOpen
+	// void OnRep_DistanceFromOriginalSpawnLocForBalloonOpen();                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.OnRep_BalloonState
+	// void OnRep_BalloonState();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.IsMoving
+	// bool IsMoving();                                                                                                         // [0x9a61968] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.IsGrounded
+	// bool IsGrounded();                                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent|Const 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.HandleMoveIgnoredActorEndPlay
+	// void HandleMoveIgnoredActorEndPlay(AActor* EndPlayActor, TEnumAsByte<EEndPlayReason> Reason);                            // [0x9a618a4] Final|Native|Protected 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.GetRootCollisionComponent
+	// UBoxComponent* GetRootCollisionComponent();                                                                              // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.GetHighestAttachParent
+	// AActor* GetHighestAttachParent(AActor* InActor);                                                                         // [0x9a61810] Final|Native|Protected|BlueprintCallable|Const 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.GetGravityZ
+	// float GetGravityZ();                                                                                                     // [0x9a617e8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.GetBalloonState
+	// ESupplyDropRadioBalloonState GetBalloonState();                                                                          // [0x9a617d0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SupplyDropRadioRuntime.FortSupplyDropRadioAttachActorComponent
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UFortSupplyDropRadioAttachActorComponent : public UActorComponent

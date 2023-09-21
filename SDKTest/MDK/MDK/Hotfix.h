@@ -15,12 +15,17 @@ class UOnlineHotfixManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FString)                                   OSSName                                                     ___ OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FString)                                   HotfixManagerClassName                                      ___ OFFSET(get<T>, {0x238, 16, 0, 0})
-	SMember(FString)                                   DebugPrefix                                                 ___ OFFSET(get<T>, {0x248, 16, 0, 0})
-	CMember(TArray<UObject*>)                          AssetsHotfixedFromIniFiles                                  ___ OFFSET(get<T>, {0x258, 16, 0, 0})
+	SMember(FString)                                   OSSName                                                     OFFSET(get<T>, {0x228, 16, 0, 0})
+	SMember(FString)                                   HotfixManagerClassName                                      OFFSET(get<T>, {0x238, 16, 0, 0})
+	SMember(FString)                                   DebugPrefix                                                 OFFSET(get<T>, {0x248, 16, 0, 0})
+	CMember(TArray<UObject*>)                          AssetsHotfixedFromIniFiles                                  OFFSET(get<T>, {0x258, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Hotfix.OnlineHotfixManager.StartHotfixProcess
+	// void StartHotfixProcess();                                                                                               // [0x5ae1e10] Native|Public|BlueprintCallable 
 /// Class /Script/Hotfix.UpdateManager
 /// Size: 0x01D0 (0x000028 - 0x0001F8)
 class UUpdateManager : public UObject
@@ -29,25 +34,25 @@ class UUpdateManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	DMember(float)                                     UpdateCheckStartDelay                                       ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	DMember(float)                                     UpdateCheckCachedResponseDelay                              ___ OFFSET(get<float>, {0x8C, 4, 0, 0})
-	DMember(float)                                     HotfixCheckCompleteDelay                                    ___ OFFSET(get<float>, {0x90, 4, 0, 0})
-	DMember(float)                                     UpdateCheckCompleteDelay                                    ___ OFFSET(get<float>, {0x94, 4, 0, 0})
-	DMember(float)                                     HotfixAvailabilityCheckCompleteDelay                        ___ OFFSET(get<float>, {0x98, 4, 0, 0})
-	DMember(float)                                     UpdateCheckAvailabilityCompleteDelay                        ___ OFFSET(get<float>, {0x9C, 4, 0, 0})
-	DMember(int32_t)                                   AppSuspendedUpdateCheckTimeSeconds                          ___ OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
-	DMember(bool)                                      bPlatformEnvironmentDetected                                ___ OFFSET(get<bool>, {0xB0, 1, 0, 0})
-	DMember(bool)                                      bInitialUpdateFinished                                      ___ OFFSET(get<bool>, {0xB1, 1, 0, 0})
-	DMember(bool)                                      bCheckHotfixAvailabilityOnly                                ___ OFFSET(get<bool>, {0xB2, 1, 0, 0})
-	CMember(EUpdateState)                              CurrentUpdateState                                          ___ OFFSET(get<T>, {0xB3, 1, 0, 0})
-	DMember(int32_t)                                   WorstNumFilesPendingLoadViewed                              ___ OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
-	CMember(EHotfixResult)                             LastHotfixResult                                            ___ OFFSET(get<T>, {0xBC, 1, 0, 0})
-	SMember(FDateTime)                                 LastUpdateCheck                                             ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(EUpdateCompletionStatus)                   LastCompletionResult                                        ___ OFFSET(get<T>, {0xF0, 2, 0, 0})
-	CMember(UEnum*)                                    UpdateStateEnum                                             ___ OFFSET(get<T>, {0x118, 8, 0, 0})
-	CMember(UEnum*)                                    UpdateCompletionEnum                                        ___ OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FUpdateContextDefinition)                  UpdateContextDefinitionUnknown                              ___ OFFSET(get<T>, {0x128, 104, 0, 0})
-	CMember(TArray<FUpdateContextDefinition>)          UpdateContextDefinitions                                    ___ OFFSET(get<T>, {0x190, 16, 0, 0})
+	DMember(float)                                     UpdateCheckStartDelay                                       OFFSET(get<float>, {0x88, 4, 0, 0})
+	DMember(float)                                     UpdateCheckCachedResponseDelay                              OFFSET(get<float>, {0x8C, 4, 0, 0})
+	DMember(float)                                     HotfixCheckCompleteDelay                                    OFFSET(get<float>, {0x90, 4, 0, 0})
+	DMember(float)                                     UpdateCheckCompleteDelay                                    OFFSET(get<float>, {0x94, 4, 0, 0})
+	DMember(float)                                     HotfixAvailabilityCheckCompleteDelay                        OFFSET(get<float>, {0x98, 4, 0, 0})
+	DMember(float)                                     UpdateCheckAvailabilityCompleteDelay                        OFFSET(get<float>, {0x9C, 4, 0, 0})
+	DMember(int32_t)                                   AppSuspendedUpdateCheckTimeSeconds                          OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
+	DMember(bool)                                      bPlatformEnvironmentDetected                                OFFSET(get<bool>, {0xB0, 1, 0, 0})
+	DMember(bool)                                      bInitialUpdateFinished                                      OFFSET(get<bool>, {0xB1, 1, 0, 0})
+	DMember(bool)                                      bCheckHotfixAvailabilityOnly                                OFFSET(get<bool>, {0xB2, 1, 0, 0})
+	CMember(EUpdateState)                              CurrentUpdateState                                          OFFSET(get<T>, {0xB3, 1, 0, 0})
+	DMember(int32_t)                                   WorstNumFilesPendingLoadViewed                              OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
+	CMember(EHotfixResult)                             LastHotfixResult                                            OFFSET(get<T>, {0xBC, 1, 0, 0})
+	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(EUpdateCompletionStatus)                   LastCompletionResult                                        OFFSET(get<T>, {0xF0, 2, 0, 0})
+	CMember(UEnum*)                                    UpdateStateEnum                                             OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(UEnum*)                                    UpdateCompletionEnum                                        OFFSET(get<T>, {0x120, 8, 0, 0})
+	SMember(FUpdateContextDefinition)                  UpdateContextDefinitionUnknown                              OFFSET(get<T>, {0x128, 104, 0, 0})
+	CMember(TArray<FUpdateContextDefinition>)          UpdateContextDefinitions                                    OFFSET(get<T>, {0x190, 16, 0, 0})
 };
 
 /// Struct /Script/Hotfix.UpdateContextDefinition
@@ -58,12 +63,12 @@ class FUpdateContextDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bCheckAvailabilityOnly                                      ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(bool)                                      bPatchCheckEnabled                                          ___ OFFSET(get<bool>, {0x12, 1, 0, 0})
-	DMember(bool)                                      bPlatformEnvironmentDetectionEnabled                        ___ OFFSET(get<bool>, {0x13, 1, 0, 0})
-	CMember(TSet<FString>)                             AdditionalTags                                              ___ OFFSET(get<T>, {0x18, 80, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bCheckAvailabilityOnly                                      OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bPatchCheckEnabled                                          OFFSET(get<bool>, {0x12, 1, 0, 0})
+	DMember(bool)                                      bPlatformEnvironmentDetectionEnabled                        OFFSET(get<bool>, {0x13, 1, 0, 0})
+	CMember(TSet<FString>)                             AdditionalTags                                              OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Enum /Script/Hotfix.EHotfixResult

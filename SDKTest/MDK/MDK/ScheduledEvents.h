@@ -14,9 +14,9 @@ class FEventRecord : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   EventType                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 ActiveUntil                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FDateTime)                                 ActiveSince                                                 ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FString)                                   EventType                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 ActiveUntil                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 ActiveSince                                                 OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/ScheduledEvents.EventChannelState
@@ -27,9 +27,9 @@ class FEventChannelState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FDateTime)                                 ValidFrom                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FEventRecord>)                      ActiveEvents                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        State                                                       ___ OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FDateTime)                                 ValidFrom                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FEventRecord>)                      ActiveEvents                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        State                                                       OFFSET(get<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Script/ScheduledEvents.EventsTimeline
@@ -40,8 +40,8 @@ class FEventsTimeline : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FDateTime)                                 CacheExpire                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FEventChannelState>)                States                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FDateTime)                                 CacheExpire                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FEventChannelState>)                States                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ScheduledEvents.CalendarDownload
@@ -52,8 +52,8 @@ class FCalendarDownload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FDateTime)                                 CurrentTime                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(double)                                    CacheIntervalMins                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	CMember(TMap<FString, FEventsTimeline>)            Channels                                                    ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FDateTime)                                 CurrentTime                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(double)                                    CacheIntervalMins                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	CMember(TMap<FString, FEventsTimeline>)            Channels                                                    OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 

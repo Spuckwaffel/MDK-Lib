@@ -19,11 +19,11 @@ class UClassSelectorLoadoutContainer : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	CMember(UWrapBox*)                                 WrapBox                                                     ___ OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(UClass*)                                   EntryWidgetClass                                            ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(TArray<UAthenaItemElementWidgetBase*>)     EntryWidgets                                                ___ OFFSET(get<T>, {0x2E0, 16, 0, 0})
-	CMember(UFortItemDefinition*)                      PreviewItemDef                                              ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	DMember(int32_t)                                   NumPreviewEntries                                           ___ OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
+	CMember(UWrapBox*)                                 WrapBox                                                     OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(UClass*)                                   EntryWidgetClass                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(TArray<UAthenaItemElementWidgetBase*>)     EntryWidgets                                                OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	CMember(UFortItemDefinition*)                      PreviewItemDef                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	DMember(int32_t)                                   NumPreviewEntries                                           OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTabButtons
@@ -34,18 +34,18 @@ class UClassSelectorTabButtons : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	CMember(UCommonActionWidget*)                      LeftActionWidget                                            ___ OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(UCommonActionWidget*)                      RightActionWidget                                           ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(UScrollBox*)                               TabButtonsScrollBox                                         ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        LeftButton                                                  ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        RightButton                                                 ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       LeftInputAction                                             ___ OFFSET(get<T>, {0x2F8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       RightInputAction                                            ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(TArray<UClassSelectorTeamTile*>)           TabButtons                                                  ___ OFFSET(get<T>, {0x328, 16, 0, 0})
-	CMember(UClass*)                                   TabButtonClass                                              ___ OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(FMargin)                                   TabButtonPadding                                            ___ OFFSET(get<T>, {0x340, 16, 0, 0})
-	CMember(TArray<FText>)                             DesignerPreviewTabNames                                     ___ OFFSET(get<T>, {0x358, 16, 0, 0})
-	DMember(float)                                     ButtonScrollAmount                                          ___ OFFSET(get<float>, {0x368, 4, 0, 0})
+	CMember(UCommonActionWidget*)                      LeftActionWidget                                            OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(UCommonActionWidget*)                      RightActionWidget                                           OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(UScrollBox*)                               TabButtonsScrollBox                                         OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        LeftButton                                                  OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        RightButton                                                 OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	SMember(FDataTableRowHandle)                       LeftInputAction                                             OFFSET(get<T>, {0x2F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RightInputAction                                            OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(TArray<UClassSelectorTeamTile*>)           TabButtons                                                  OFFSET(get<T>, {0x328, 16, 0, 0})
+	CMember(UClass*)                                   TabButtonClass                                              OFFSET(get<T>, {0x338, 8, 0, 0})
+	SMember(FMargin)                                   TabButtonPadding                                            OFFSET(get<T>, {0x340, 16, 0, 0})
+	CMember(TArray<FText>)                             DesignerPreviewTabNames                                     OFFSET(get<T>, {0x358, 16, 0, 0})
+	DMember(float)                                     ButtonScrollAmount                                          OFFSET(get<float>, {0x368, 4, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTeamInfoWidget
@@ -56,9 +56,9 @@ class UClassSelectorTeamInfoWidget : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	CMember(UCommonTextBlock*)                         TeamName                                                    ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         TeamCountText                                               ___ OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         TeamDescription                                             ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         TeamName                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         TeamCountText                                               OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         TeamDescription                                             OFFSET(get<T>, {0x2B8, 8, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassSelectorButton
@@ -69,13 +69,18 @@ class UCreativeClassSelectorButton : public UCommonButtonBase
 	static inline constexpr uint64_t __MDKClassSize = 5296;
 
 public:
-	CMember(UCommonTextBlock*)                         ButtonTextBlock                                             ___ OFFSET(get<T>, {0x1470, 8, 0, 0})
-	CMember(UCommonActionWidget*)                      ActionWidget                                                ___ OFFSET(get<T>, {0x1478, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  ___ OFFSET(get<T>, {0x1480, 24, 0, 0})
-	SMember(FDataTableRowHandle)                       buttonInputAction                                           ___ OFFSET(get<T>, {0x1498, 16, 0, 0})
-	DMember(bool)                                      bAutoCapitalize                                             ___ OFFSET(get<bool>, {0x14A8, 1, 0, 0})
+	CMember(UCommonTextBlock*)                         ButtonTextBlock                                             OFFSET(get<T>, {0x1470, 8, 0, 0})
+	CMember(UCommonActionWidget*)                      ActionWidget                                                OFFSET(get<T>, {0x1478, 8, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x1480, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       buttonInputAction                                           OFFSET(get<T>, {0x1498, 16, 0, 0})
+	DMember(bool)                                      bAutoCapitalize                                             OFFSET(get<bool>, {0x14A8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelectorButton.SetButtonText
+	// void SetButtonText(FText& InText);                                                                                       // [0x9a9b700] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile
 /// Size: 0x00B0 (0x0014B0 - 0x001560)
 class UClassSelectorTeamTile : public UCreativeClassSelectorButton
@@ -84,10 +89,21 @@ class UClassSelectorTeamTile : public UCreativeClassSelectorButton
 	static inline constexpr uint64_t __MDKClassSize = 5472;
 
 public:
-	CMember(UTextBlock*)                               PlayerCount                                                 ___ OFFSET(get<T>, {0x1540, 8, 0, 0})
-	CMember(UCommonLazyImage*)                         TeamIconImage                                               ___ OFFSET(get<T>, {0x1548, 8, 0, 0})
+	CMember(UTextBlock*)                               PlayerCount                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
+	CMember(UCommonLazyImage*)                         TeamIconImage                                               OFFSET(get<T>, {0x1548, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile.OnTeamSet
+	// void OnTeamSet(FMinigameTeam& NewTeamData);                                                                              // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile.OnTeamIconSet
+	// void OnTeamIconSet(FCreativeIconOption& NewTeamIcon);                                                                    // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile.OnTeamColorIndexSet
+	// void OnTeamColorIndexSet(int32_t TeamColorIndex);                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile.OnPlayerCountSet
+	// void OnPlayerCountSet(int32_t NewPlayerCount);                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTeamTiles
 /// Size: 0x0048 (0x0002D0 - 0x000318)
 class UClassSelectorTeamTiles : public UCommonUserWidget
@@ -96,10 +112,10 @@ class UClassSelectorTeamTiles : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	CMember(TArray<UClassSelectorTeamTile*>)           TeamTiles                                                   ___ OFFSET(get<T>, {0x2D8, 16, 0, 0})
-	CMember(UUniformGridPanel*)                        RootPanel                                                   ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(UClass*)                                   EntryClass                                                  ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	DMember(int32_t)                                   DesignerPreviewEntries                                      ___ OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
+	CMember(TArray<UClassSelectorTeamTile*>)           TeamTiles                                                   OFFSET(get<T>, {0x2D8, 16, 0, 0})
+	CMember(UUniformGridPanel*)                        RootPanel                                                   OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(UClass*)                                   EntryClass                                                  OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	DMember(int32_t)                                   DesignerPreviewEntries                                      OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassItemInfo
@@ -110,7 +126,7 @@ class UCreativeClassItemInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMinigameClassSlot)                        ClassSlot                                                   ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	SMember(FMinigameClassSlot)                        ClassSlot                                                   OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassEntry
@@ -121,9 +137,16 @@ class UCreativeClassEntry : public UCreativeClassSelectorButton
 	static inline constexpr uint64_t __MDKClassSize = 5312;
 
 public:
-	CMember(UCreativeClassItemInfo*)                   ItemInfo                                                    ___ OFFSET(get<T>, {0x14B8, 8, 0, 0})
+	CMember(UCreativeClassItemInfo*)                   ItemInfo                                                    OFFSET(get<T>, {0x14B8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassEntry.OnClassEntryDataSet
+	// void OnClassEntryDataSet(bool bIsCurrentClass, bool bIsPendingClass);                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassEntry.OnBrowsingLoadout
+	// void OnBrowsingLoadout(bool bBrowsingLoadout);                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassSelector
 /// Size: 0x0138 (0x0003E8 - 0x000520)
 class UCreativeClassSelector : public UCommonActivatableWidget
@@ -132,41 +155,56 @@ class UCreativeClassSelector : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1312;
 
 public:
-	CMember(UClassSelectorTabButtons*)                 TabButtons_TeamSelection                                    ___ OFFSET(get<T>, {0x3F8, 8, 0, 0})
-	CMember(UCommonListView*)                          ListView_Classes                                            ___ OFFSET(get<T>, {0x400, 8, 0, 0})
-	CMember(TArray<UCreativeClassItemInfo*>)           ClassItemInfos                                              ___ OFFSET(get<T>, {0x408, 16, 0, 0})
-	CMember(UScrollBox*)                               LoadoutScrollBox                                            ___ OFFSET(get<T>, {0x418, 8, 0, 0})
-	CMember(UClassSelectorLoadoutContainer*)           LoadoutContainer_Inventory                                  ___ OFFSET(get<T>, {0x420, 8, 0, 0})
-	CMember(UClassSelectorLoadoutContainer*)           LoadoutContainer_Resources                                  ___ OFFSET(get<T>, {0x428, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_SelectLoadout                                        ___ OFFSET(get<T>, {0x430, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_RandomClass                                          ___ OFFSET(get<T>, {0x438, 8, 0, 0})
-	CMember(UWidgetSwitcher*)                          Switcher_Descriptions                                       ___ OFFSET(get<T>, {0x440, 8, 0, 0})
-	CMember(UPanelWidget*)                             ClassAndTeamDescriptionContainer                            ___ OFFSET(get<T>, {0x448, 8, 0, 0})
-	CMember(UPanelWidget*)                             ItemDescriptionContainer                                    ___ OFFSET(get<T>, {0x450, 8, 0, 0})
-	CMember(UPanelWidget*)                             InventoryPanel                                              ___ OFFSET(get<T>, {0x458, 8, 0, 0})
-	CMember(UPanelWidget*)                             ResourcesPanel                                              ___ OFFSET(get<T>, {0x460, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         ItemRarity                                                  ___ OFFSET(get<T>, {0x468, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         ItemName                                                    ___ OFFSET(get<T>, {0x470, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         ItemDescription                                             ___ OFFSET(get<T>, {0x478, 8, 0, 0})
-	CMember(UPanelWidget*)                             TeamDescriptionContainer                                    ___ OFFSET(get<T>, {0x480, 8, 0, 0})
-	CMember(UClassSelectorTeamInfoWidget*)             TeamInfoWidget_FullView                                     ___ OFFSET(get<T>, {0x488, 8, 0, 0})
-	CMember(UClassSelectorTeamInfoWidget*)             TeamInfoWidget_TeamsOnly                                    ___ OFFSET(get<T>, {0x490, 8, 0, 0})
-	CMember(UWidgetSwitcher*)                          DisplaySwitcher                                             ___ OFFSET(get<T>, {0x498, 8, 0, 0})
-	CMember(UPanelWidget*)                             ClassAndTeamSelectionContainer                              ___ OFFSET(get<T>, {0x4A0, 8, 0, 0})
-	CMember(UPanelWidget*)                             OnlyTeamSelectionContainer                                  ___ OFFSET(get<T>, {0x4A8, 8, 0, 0})
-	CMember(UPanelWidget*)                             InvalidDataContainer                                        ___ OFFSET(get<T>, {0x4B0, 8, 0, 0})
-	CMember(UClassSelectorTeamTiles*)                  TeamTiles                                                   ___ OFFSET(get<T>, {0x4B8, 8, 0, 0})
-	CMember(UClass*)                                   TeamSelectionTabClass                                       ___ OFFSET(get<T>, {0x4C0, 8, 0, 0})
-	DMember(bool)                                      bIsModalVersion                                             ___ OFFSET(get<bool>, {0x4C8, 1, 0, 0})
-	DMember(bool)                                      bEnableModalTimeLimit                                       ___ OFFSET(get<bool>, {0x4C9, 1, 0, 0})
-	DMember(int32_t)                                   ModalTimeLimitInSeconds                                     ___ OFFSET(get<int32_t>, {0x4CC, 4, 0, 0})
-	CMember(EClassSelectorDisplayMode)                 DisplayMode                                                 ___ OFFSET(get<T>, {0x4E0, 1, 0, 0})
-	DMember(bool)                                      bDeferRespawn                                               ___ OFFSET(get<bool>, {0x4E1, 1, 0, 0})
-	SMember(FDataTableRowHandle)                       ReturnToClassSelectionInputAction                           ___ OFFSET(get<T>, {0x4E8, 16, 0, 0})
-	DMember(float)                                     LoadoutScrollPadding                                        ___ OFFSET(get<float>, {0x4F8, 4, 0, 0})
-	CMember(UCreativeClassItemInfo*)                   SelectedClassItemInfo                                       ___ OFFSET(get<T>, {0x518, 8, 0, 0})
+	CMember(UClassSelectorTabButtons*)                 TabButtons_TeamSelection                                    OFFSET(get<T>, {0x3F8, 8, 0, 0})
+	CMember(UCommonListView*)                          ListView_Classes                                            OFFSET(get<T>, {0x400, 8, 0, 0})
+	CMember(TArray<UCreativeClassItemInfo*>)           ClassItemInfos                                              OFFSET(get<T>, {0x408, 16, 0, 0})
+	CMember(UScrollBox*)                               LoadoutScrollBox                                            OFFSET(get<T>, {0x418, 8, 0, 0})
+	CMember(UClassSelectorLoadoutContainer*)           LoadoutContainer_Inventory                                  OFFSET(get<T>, {0x420, 8, 0, 0})
+	CMember(UClassSelectorLoadoutContainer*)           LoadoutContainer_Resources                                  OFFSET(get<T>, {0x428, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_SelectLoadout                                        OFFSET(get<T>, {0x430, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_RandomClass                                          OFFSET(get<T>, {0x438, 8, 0, 0})
+	CMember(UWidgetSwitcher*)                          Switcher_Descriptions                                       OFFSET(get<T>, {0x440, 8, 0, 0})
+	CMember(UPanelWidget*)                             ClassAndTeamDescriptionContainer                            OFFSET(get<T>, {0x448, 8, 0, 0})
+	CMember(UPanelWidget*)                             ItemDescriptionContainer                                    OFFSET(get<T>, {0x450, 8, 0, 0})
+	CMember(UPanelWidget*)                             InventoryPanel                                              OFFSET(get<T>, {0x458, 8, 0, 0})
+	CMember(UPanelWidget*)                             ResourcesPanel                                              OFFSET(get<T>, {0x460, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         ItemRarity                                                  OFFSET(get<T>, {0x468, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         ItemName                                                    OFFSET(get<T>, {0x470, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         ItemDescription                                             OFFSET(get<T>, {0x478, 8, 0, 0})
+	CMember(UPanelWidget*)                             TeamDescriptionContainer                                    OFFSET(get<T>, {0x480, 8, 0, 0})
+	CMember(UClassSelectorTeamInfoWidget*)             TeamInfoWidget_FullView                                     OFFSET(get<T>, {0x488, 8, 0, 0})
+	CMember(UClassSelectorTeamInfoWidget*)             TeamInfoWidget_TeamsOnly                                    OFFSET(get<T>, {0x490, 8, 0, 0})
+	CMember(UWidgetSwitcher*)                          DisplaySwitcher                                             OFFSET(get<T>, {0x498, 8, 0, 0})
+	CMember(UPanelWidget*)                             ClassAndTeamSelectionContainer                              OFFSET(get<T>, {0x4A0, 8, 0, 0})
+	CMember(UPanelWidget*)                             OnlyTeamSelectionContainer                                  OFFSET(get<T>, {0x4A8, 8, 0, 0})
+	CMember(UPanelWidget*)                             InvalidDataContainer                                        OFFSET(get<T>, {0x4B0, 8, 0, 0})
+	CMember(UClassSelectorTeamTiles*)                  TeamTiles                                                   OFFSET(get<T>, {0x4B8, 8, 0, 0})
+	CMember(UClass*)                                   TeamSelectionTabClass                                       OFFSET(get<T>, {0x4C0, 8, 0, 0})
+	DMember(bool)                                      bIsModalVersion                                             OFFSET(get<bool>, {0x4C8, 1, 0, 0})
+	DMember(bool)                                      bEnableModalTimeLimit                                       OFFSET(get<bool>, {0x4C9, 1, 0, 0})
+	DMember(int32_t)                                   ModalTimeLimitInSeconds                                     OFFSET(get<int32_t>, {0x4CC, 4, 0, 0})
+	CMember(EClassSelectorDisplayMode)                 DisplayMode                                                 OFFSET(get<T>, {0x4E0, 1, 0, 0})
+	DMember(bool)                                      bDeferRespawn                                               OFFSET(get<bool>, {0x4E1, 1, 0, 0})
+	SMember(FDataTableRowHandle)                       ReturnToClassSelectionInputAction                           OFFSET(get<T>, {0x4E8, 16, 0, 0})
+	DMember(float)                                     LoadoutScrollPadding                                        OFFSET(get<float>, {0x4F8, 4, 0, 0})
+	CMember(UCreativeClassItemInfo*)                   SelectedClassItemInfo                                       OFFSET(get<T>, {0x518, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.OnTimerCountdown
+	// void OnTimerCountdown(int32_t RemainingTime);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.OnLoadoutCommitted
+	// void OnLoadoutCommitted(FText& NewClassName, FText& NewTeamName, bool bNewLoadout);                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.OnClassSelectorUIPopulated
+	// void OnClassSelectorUIPopulated(bool bHasValidData);                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.OnClassSelectionChanged
+	// void OnClassSelectionChanged(FText& NewClassName, FText& NewClassDescription);                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.HandleMinigameStateChanged
+	// void HandleMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState MinigameState);                              // [0x9a9b640] Final|Native|Protected 
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.GetFirstLoadoutItem
+	// UWidget* GetFirstLoadoutItem();                                                                                          // [0x9a9b604] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassSelectorMapTab
 /// Size: 0x0060 (0x0003E8 - 0x000448)
 class UCreativeClassSelectorMapTab : public UCommonActivatableWidget
@@ -175,10 +213,15 @@ class UCreativeClassSelectorMapTab : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  ___ OFFSET(get<T>, {0x3F8, 72, 0, 0})
-	CMember(UCreativeClassSelector*)                   CreativeClassSelector                                       ___ OFFSET(get<T>, {0x440, 8, 0, 0})
+	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  OFFSET(get<T>, {0x3F8, 72, 0, 0})
+	CMember(UCreativeClassSelector*)                   CreativeClassSelector                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelectorMapTab.SetTabName
+	// void SetTabName(FText& TabName);                                                                                         // [0x9a9b79c] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/CRD_ClassSelectorUI.Mutator_ClassSelectorUI
 /// Size: 0x0000 (0x000338 - 0x000338)
 class AMutator_ClassSelectorUI : public AFortAthenaMutator

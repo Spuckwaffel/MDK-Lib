@@ -14,8 +14,8 @@ class FLocalizableMessageParameterEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Key                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FInstancedStruct)                          Value                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStruct)                          Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/LocalizableMessage.LocalizableMessage
@@ -26,9 +26,9 @@ class FLocalizableMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Key                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DefaultText                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FLocalizableMessageParameterEntry>) Substitutions                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DefaultText                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FLocalizableMessageParameterEntry>) Substitutions                                               OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/LocalizableMessage.LocalizableMessageParameterInt
@@ -39,7 +39,7 @@ class FLocalizableMessageParameterInt : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int64_t)                                   Value                                                       ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Value                                                       OFFSET(get<int64_t>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/LocalizableMessage.LocalizableMessageParameterFloat
@@ -50,7 +50,7 @@ class FLocalizableMessageParameterFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/LocalizableMessage.LocalizableMessageParameterString
@@ -61,7 +61,7 @@ class FLocalizableMessageParameterString : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/LocalizableMessage.LocalizableMessageParameterMessage
@@ -72,6 +72,6 @@ class FLocalizableMessageParameterMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FLocalizableMessage)                       Value                                                       ___ OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FLocalizableMessage)                       Value                                                       OFFSET(get<T>, {0x0, 48, 0, 0})
 };
 

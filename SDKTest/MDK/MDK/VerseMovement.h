@@ -18,8 +18,8 @@ class UNetPhysicsMoveConfig : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FNetPhysicsMoveConfigEntry>)        Entries                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FNetPhysicsMoveLimits)                     Limits                                                      ___ OFFSET(get<T>, {0x40, 128, 0, 0})
+	CMember(TArray<FNetPhysicsMoveConfigEntry>)        Entries                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FNetPhysicsMoveLimits)                     Limits                                                      OFFSET(get<T>, {0x40, 128, 0, 0})
 };
 
 /// Class /Script/VerseMovement.NetPhysicsMoveComponent
@@ -30,9 +30,9 @@ class UNetPhysicsMoveComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(UNetPhysicsMoveConfig*)                    MoveConfig                                                  ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	SMember(FNetPhysicsMoveObject)                     SimOutput                                                   ___ OFFSET(get<T>, {0x100, 1, 0, 0})
-	CMember(APlayerController*)                        CachedPC                                                    ___ OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(UNetPhysicsMoveConfig*)                    MoveConfig                                                  OFFSET(get<T>, {0xF8, 8, 0, 0})
+	SMember(FNetPhysicsMoveObject)                     SimOutput                                                   OFFSET(get<T>, {0x100, 1, 0, 0})
+	CMember(APlayerController*)                        CachedPC                                                    OFFSET(get<T>, {0x108, 8, 0, 0})
 };
 
 /// Class /Script/VerseMovement.VerseMovementComponentBase
@@ -53,11 +53,11 @@ class FNetPhysicsMoveInputTriggerParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bIsAxis                                                     ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(UCurveFloat*)                              AxisToMagnitudeCurve                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      AccumulateAxisInput                                         ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FVector2D)                                 ClampAxis                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bIsAxis                                                     OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(UCurveFloat*)                              AxisToMagnitudeCurve                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      AccumulateAxisInput                                         OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FVector2D)                                 ClampAxis                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMovePhysicsTriggerParams
@@ -68,7 +68,7 @@ class FNetPhysicsMovePhysicsTriggerParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   SpeedInDirection                                            ___ OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   SpeedInDirection                                            OFFSET(get<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveTraceTriggerParams
@@ -79,13 +79,13 @@ class FNetPhysicsMoveTraceTriggerParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Direction                                                   ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	CMember(ENetPhysicsMoveResponseFrame)              Frame                                                       ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	DMember(float)                                     Length                                                      ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            CollisionChannel                                            ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FCollisionResponseContainer)               ResponseParams                                              ___ OFFSET(get<T>, {0x21, 32, 0, 0})
-	DMember(bool)                                      bProportionalToHitDistance                                  ___ OFFSET(get<bool>, {0x41, 1, 0, 0})
-	CMember(UCurveFloat*)                              HitDistanceToMagnitudeCurve                                 ___ OFFSET(get<T>, {0x48, 8, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
+	CMember(ENetPhysicsMoveResponseFrame)              Frame                                                       OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x1C, 4, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            CollisionChannel                                            OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FCollisionResponseContainer)               ResponseParams                                              OFFSET(get<T>, {0x21, 32, 0, 0})
+	DMember(bool)                                      bProportionalToHitDistance                                  OFFSET(get<bool>, {0x41, 1, 0, 0})
+	CMember(UCurveFloat*)                              HitDistanceToMagnitudeCurve                                 OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveTrigger
@@ -96,10 +96,10 @@ class FNetPhysicsMoveTrigger : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(ENetPhysicsMoveTriggerType)                Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FNetPhysicsMoveInputTriggerParams)         InputParams                                                 ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FNetPhysicsMovePhysicsTriggerParams)       PhysicsParams                                               ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FNetPhysicsMoveTraceTriggerParams)         TraceParams                                                 ___ OFFSET(get<T>, {0x48, 80, 0, 0})
+	CMember(ENetPhysicsMoveTriggerType)                Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FNetPhysicsMoveInputTriggerParams)         InputParams                                                 OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FNetPhysicsMovePhysicsTriggerParams)       PhysicsParams                                               OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FNetPhysicsMoveTraceTriggerParams)         TraceParams                                                 OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveResponse
@@ -110,15 +110,15 @@ class FNetPhysicsMoveResponse : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(float)                                     Magnitude                                                   ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	CMember(UCurveFloat*)                              MagnitudeCurve                                              ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(ENetPhysicsMoveResponseType)               Type                                                        ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	CMember(ENetPhysicsMoveResponseFrame)              Frame                                                       ___ OFFSET(get<T>, {0x29, 1, 0, 0})
-	CMember(ENetPhysicsMoveResponseEffect)             Effect                                                      ___ OFFSET(get<T>, {0x2A, 1, 0, 0})
-	CMember(ENetPhysicsMoveResponseModifier)           Modifier                                                    ___ OFFSET(get<T>, {0x2B, 1, 0, 0})
-	SMember(FVector)                                   ClampVector                                                 ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	CMember(ENetPhysicsMoveResponseFrame)              ClampFrame                                                  ___ OFFSET(get<T>, {0x48, 1, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(UCurveFloat*)                              MagnitudeCurve                                              OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(ENetPhysicsMoveResponseType)               Type                                                        OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(ENetPhysicsMoveResponseFrame)              Frame                                                       OFFSET(get<T>, {0x29, 1, 0, 0})
+	CMember(ENetPhysicsMoveResponseEffect)             Effect                                                      OFFSET(get<T>, {0x2A, 1, 0, 0})
+	CMember(ENetPhysicsMoveResponseModifier)           Modifier                                                    OFFSET(get<T>, {0x2B, 1, 0, 0})
+	SMember(FVector)                                   ClampVector                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
+	CMember(ENetPhysicsMoveResponseFrame)              ClampFrame                                                  OFFSET(get<T>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveConfigEntry
@@ -129,9 +129,9 @@ class FNetPhysicsMoveConfigEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FNetPhysicsMoveTrigger>)            Triggers                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FNetPhysicsMoveResponse>)           Responses                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FNetPhysicsMoveTrigger>)            Triggers                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FNetPhysicsMoveResponse>)           Responses                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveLimits
@@ -142,14 +142,14 @@ class FNetPhysicsMoveLimits : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(bool)                                      bClampVelocity                                              ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   MaxVelocity                                                 ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(bool)                                      bClampAngularVelocity                                       ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FVector)                                   MaxAngularVelocity                                          ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	DMember(bool)                                      bClampMaxPosition                                           ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	SMember(FVector)                                   MaxPosition                                                 ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	DMember(bool)                                      bClampMinPosition                                           ___ OFFSET(get<bool>, {0x60, 1, 0, 0})
-	SMember(FVector)                                   MinPosition                                                 ___ OFFSET(get<T>, {0x68, 24, 0, 0})
+	DMember(bool)                                      bClampVelocity                                              OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   MaxVelocity                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bClampAngularVelocity                                       OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FVector)                                   MaxAngularVelocity                                          OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(bool)                                      bClampMaxPosition                                           OFFSET(get<bool>, {0x40, 1, 0, 0})
+	SMember(FVector)                                   MaxPosition                                                 OFFSET(get<T>, {0x48, 24, 0, 0})
+	DMember(bool)                                      bClampMinPosition                                           OFFSET(get<bool>, {0x60, 1, 0, 0})
+	SMember(FVector)                                   MinPosition                                                 OFFSET(get<T>, {0x68, 24, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveInputCmd
@@ -160,9 +160,9 @@ class FNetPhysicsMoveInputCmd : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<float>)                             AxisValues                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<bool>)                              ActionValues                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRotator)                                  ViewRotation                                                ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TArray<float>)                             AxisValues                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<bool>)                              ActionValues                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRotator)                                  ViewRotation                                                OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveObject
@@ -173,7 +173,7 @@ class FNetPhysicsMoveObject : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/VerseMovement.NetPhysicsMoveObjectLocal

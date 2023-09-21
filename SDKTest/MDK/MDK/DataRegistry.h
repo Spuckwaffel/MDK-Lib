@@ -17,9 +17,9 @@ class UDataRegistrySettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FDirectoryPath>)                    DirectoriesToScan                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(bool)                                      bInitializeAllLoadedRegistries                              ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	DMember(bool)                                      bIgnoreMissingCookedAssetRegistryData                       ___ OFFSET(get<bool>, {0x41, 1, 0, 0})
+	CMember(TArray<FDirectoryPath>)                    DirectoriesToScan                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(bool)                                      bInitializeAllLoadedRegistries                              OFFSET(get<bool>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bIgnoreMissingCookedAssetRegistryData                       OFFSET(get<bool>, {0x41, 1, 0, 0})
 };
 
 /// Class /Script/DataRegistry.DataRegistry
@@ -30,13 +30,13 @@ class UDataRegistry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FName)                                     RegistryType                                                ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FDataRegistryIdFormat)                     IdFormat                                                    ___ OFFSET(get<T>, {0x2C, 4, 0, 0})
-	CMember(UScriptStruct*)                            ItemStruct                                                  ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TArray<UDataRegistrySource*>)              DataSources                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<UDataRegistrySource*>)              RuntimeSources                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(float)                                     TimerUpdateFrequency                                        ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FDataRegistryCachePolicy)                  DefaultCachePolicy                                          ___ OFFSET(get<T>, {0x5C, 20, 0, 0})
+	SMember(FName)                                     RegistryType                                                OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FDataRegistryIdFormat)                     IdFormat                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	CMember(UScriptStruct*)                            ItemStruct                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TArray<UDataRegistrySource*>)              DataSources                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<UDataRegistrySource*>)              RuntimeSources                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(float)                                     TimerUpdateFrequency                                        OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FDataRegistryCachePolicy)                  DefaultCachePolicy                                          OFFSET(get<T>, {0x5C, 20, 0, 0})
 };
 
 /// Class /Script/DataRegistry.DataRegistrySource
@@ -47,7 +47,7 @@ class UDataRegistrySource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UDataRegistrySource*)                      ParentSource                                                ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UDataRegistrySource*)                      ParentSource                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/DataRegistry.MetaDataRegistrySource
@@ -58,9 +58,9 @@ class UMetaDataRegistrySource : public UDataRegistrySource
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(EMetaDataRegistrySourceAssetUsage)         AssetUsage                                                  ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FAssetManagerSearchRules)                  SearchRules                                                 ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	CMember(TMap<FName, UDataRegistrySource*>)         RuntimeChildren                                             ___ OFFSET(get<T>, {0x90, 80, 0, 0})
+	CMember(EMetaDataRegistrySourceAssetUsage)         AssetUsage                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FAssetManagerSearchRules)                  SearchRules                                                 OFFSET(get<T>, {0x40, 80, 0, 0})
+	CMember(TMap<FName, UDataRegistrySource*>)         RuntimeChildren                                             OFFSET(get<T>, {0x90, 80, 0, 0})
 };
 
 /// Class /Script/DataRegistry.DataRegistrySource_CurveTable
@@ -71,10 +71,10 @@ class UDataRegistrySource_CurveTable : public UDataRegistrySource
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TWeakObjectPtr<UCurveTable*>)              SourceTable                                                 ___ OFFSET(get<T>, {0x38, 32, 0, 0})
-	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(UCurveTable*)                              CachedTable                                                 ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(UCurveTable*)                              PreloadTable                                                ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(TWeakObjectPtr<UCurveTable*>)              SourceTable                                                 OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(UCurveTable*)                              CachedTable                                                 OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UCurveTable*)                              PreloadTable                                                OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
 /// Class /Script/DataRegistry.MetaDataRegistrySource_CurveTable
@@ -85,8 +85,8 @@ class UMetaDataRegistrySource_CurveTable : public UMetaDataRegistrySource
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(UClass*)                                   CreatedSource                                               ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  ___ OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(UClass*)                                   CreatedSource                                               OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 };
 
 /// Class /Script/DataRegistry.DataRegistrySource_DataTable
@@ -97,10 +97,10 @@ class UDataRegistrySource_DataTable : public UDataRegistrySource
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TWeakObjectPtr<UDataTable*>)               SourceTable                                                 ___ OFFSET(get<T>, {0x38, 32, 0, 0})
-	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(UDataTable*)                               CachedTable                                                 ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(UDataTable*)                               PreloadTable                                                ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(TWeakObjectPtr<UDataTable*>)               SourceTable                                                 OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(UDataTable*)                               CachedTable                                                 OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UDataTable*)                               PreloadTable                                                OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
 /// Class /Script/DataRegistry.MetaDataRegistrySource_DataTable
@@ -111,8 +111,8 @@ class UMetaDataRegistrySource_DataTable : public UMetaDataRegistrySource
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(UClass*)                                   CreatedSource                                               ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  ___ OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(UClass*)                                   CreatedSource                                               OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FDataRegistrySource_DataTableRules)        TableRules                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 };
 
 /// Class /Script/DataRegistry.DataRegistrySubsystem
@@ -143,8 +143,8 @@ class FDataRegistryId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FDataRegistryType)                         RegistryType                                                ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ItemName                                                    ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FDataRegistryType)                         RegistryType                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ItemName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/DataRegistry.DataRegistryType
@@ -155,7 +155,7 @@ class FDataRegistryType : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/DataRegistry.DataRegistrySource_DataTableRules
@@ -166,8 +166,8 @@ class FDataRegistrySource_DataTableRules : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(bool)                                      bPrecacheTable                                              ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     CachedTableKeepSeconds                                      ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bPrecacheTable                                              OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     CachedTableKeepSeconds                                      OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/DataRegistry.DataRegistryIdFormat
@@ -178,7 +178,7 @@ class FDataRegistryIdFormat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FGameplayTag)                              BaseGameplayTag                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              BaseGameplayTag                                             OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/DataRegistry.DataRegistryCachePolicy
@@ -189,12 +189,12 @@ class FDataRegistryCachePolicy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(bool)                                      bCacheIsAlwaysVolatile                                      ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bUseCurveTableCacheVersion                                  ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(int32_t)                                   MinNumberKept                                               ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   MaxNumberKept                                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     ForceKeepSeconds                                            ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     ForceReleaseSeconds                                         ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bCacheIsAlwaysVolatile                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bUseCurveTableCacheVersion                                  OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(int32_t)                                   MinNumberKept                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MaxNumberKept                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     ForceKeepSeconds                                            OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     ForceReleaseSeconds                                         OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/DataRegistry.DataRegistrySourceItemId

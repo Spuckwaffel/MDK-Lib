@@ -18,7 +18,7 @@ class UFortAudioClustersSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<FGameplayTag, double>)                ParameterDefaults                                           ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<FGameplayTag, double>)                ParameterDefaults                                           OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Class /Script/FortAudioClustersRuntime.FortAudioClustersSubsystem
@@ -39,11 +39,16 @@ class UGameFeatureAction_AddAudioCluster : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(TArray<FGameFeatureAudioClusterEntry>)     Clusters                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TMap<FName, FGameplayTag>)                 OverrideTable                                               ___ OFFSET(get<T>, {0x38, 80, 0, 0})
-	SMember(FName)                                     DisabledActorTag                                            ___ OFFSET(get<T>, {0x88, 4, 0, 0})
+	CMember(TArray<FGameFeatureAudioClusterEntry>)     Clusters                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TMap<FName, FGameplayTag>)                 OverrideTable                                               OFFSET(get<T>, {0x38, 80, 0, 0})
+	SMember(FName)                                     DisabledActorTag                                            OFFSET(get<T>, {0x88, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioCluster.HandleRegisteredActorDeath
+	// void HandleRegisteredActorDeath(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x25c4500] Final|Native|Private|HasOutParms|HasDefaults 
 /// Class /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioClusterConfigMaps
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UGameFeatureAction_AddAudioClusterConfigMaps : public UGameFeatureAction
@@ -52,7 +57,7 @@ class UGameFeatureAction_AddAudioClusterConfigMaps : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<TWeakObjectPtr>)                    ConfigMaps                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    ConfigMaps                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/FortAudioClustersRuntime.GameFeatureAudioClusterEntry
@@ -63,7 +68,7 @@ class FGameFeatureAudioClusterEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              ClusterTag                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    ActorClasses                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayTag)                              ClusterTag                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    ActorClasses                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

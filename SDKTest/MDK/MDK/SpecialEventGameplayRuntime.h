@@ -19,11 +19,16 @@ class AFortAthenaMutator_SpecialEventTODM : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 872;
 
 public:
-	CMember(TArray<FSpecialEventTODMPhaseData>)        PhaseDataArray                                              ___ OFFSET(get<T>, {0x338, 16, 0, 0})
-	CMember(ASpecialEventScript*)                      SpecialEventScript                                          ___ OFFSET(get<T>, {0x348, 8, 0, 0})
-	CMember(AFortTimeOfDayManager*)                    SpawnedTODM                                                 ___ OFFSET(get<T>, {0x360, 8, 0, 0})
+	CMember(TArray<FSpecialEventTODMPhaseData>)        PhaseDataArray                                              OFFSET(get<T>, {0x338, 16, 0, 0})
+	CMember(ASpecialEventScript*)                      SpecialEventScript                                          OFFSET(get<T>, {0x348, 8, 0, 0})
+	CMember(AFortTimeOfDayManager*)                    SpawnedTODM                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEventTODM.OnPhaseActivated
+	// void OnPhaseActivated(ASpecialEventScript* InSpecialEventScript, ASpecialEventPhase* InSpecialEventPhase);               // [0x9debfe4] Final|Native|Private 
 /// Class /Script/SpecialEventGameplayRuntime.FortCheatManager_DestroyActorsAndComponents
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UFortCheatManager_DestroyActorsAndComponents : public UFortCheatManager_Coupled
@@ -42,9 +47,22 @@ class AFortAthenaMutator_DestroyActorsAndComponents : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 872;
 
 public:
-	CMember(TArray<FDestroyActorsAndComponentsMutator_ActorDefinition>) ActorDefinitions                           ___ OFFSET(get<T>, {0x338, 16, 0, 0})
+	CMember(TArray<FDestroyActorsAndComponentsMutator_ActorDefinition>) ActorDefinitions                           OFFSET(get<T>, {0x338, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_DestroyActorsAndComponents.SetActorDefinitionsEnabled
+	// void SetActorDefinitionsEnabled(FGameplayTagContainer& InTags, bool bEnabled);                                           // [0x9de9ef8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_DestroyActorsAndComponents.PermanentlyDisableActorDefinitions
+	// void PermanentlyDisableActorDefinitions(FGameplayTagContainer& InTags);                                                  // [0x7637594] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_DestroyActorsAndComponents.OnTrackedActorDestroyed
+	// void OnTrackedActorDestroyed(AActor* DestroyedActor);                                                                    // [0x9dec5dc] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_DestroyActorsAndComponents.OnRep_ActorDefinitions
+	// void OnRep_ActorDefinitions(TArray<FDestroyActorsAndComponentsMutator_ActorDefinition>& OldActorDefinitions);            // [0x9dec2f4] Final|Native|Private|HasOutParms 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_DestroyActorsAndComponents.OnActorSpawned
+	// void OnActorSpawned(AActor* Actor);                                                                                      // [0x9deb970] Final|Native|Private 
 /// Class /Script/SpecialEventGameplayRuntime.FortCheatManager_FakeKillRelevancy
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UFortCheatManager_FakeKillRelevancy : public UFortCheatManager_Coupled
@@ -63,12 +81,29 @@ class UFortControllerComponent_FakeKillRelevancy : public UFortControllerCompone
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FFakeKillRelevancyPlayerDataArray)         PlayerDataArray                                             ___ OFFSET(get<T>, {0xA8, 288, 0, 0})
-	CMember(TMap<AFortPlayerStateAthena*, EFakeKillRelevancyPlayerKillStep>) ClientPlayerStateKillStepMap          ___ OFFSET(get<T>, {0x1C8, 80, 0, 0})
-	DMember(char)                                      ResetCounter                                                ___ OFFSET(get<char>, {0x218, 1, 0, 0})
-	CMember(TArray<AFortPlayerStateAthena*>)           DebugSupergroupPlayerStates                                 ___ OFFSET(get<T>, {0x220, 16, 0, 0})
+	SMember(FFakeKillRelevancyPlayerDataArray)         PlayerDataArray                                             OFFSET(get<T>, {0xA8, 288, 0, 0})
+	CMember(TMap<AFortPlayerStateAthena*, EFakeKillRelevancyPlayerKillStep>) ClientPlayerStateKillStepMap          OFFSET(get<T>, {0x1C8, 80, 0, 0})
+	DMember(char)                                      ResetCounter                                                OFFSET(get<char>, {0x218, 1, 0, 0})
+	CMember(TArray<AFortPlayerStateAthena*>)           DebugSupergroupPlayerStates                                 OFFSET(get<T>, {0x220, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.ResetRelevancy
+	// void ResetRelevancy();                                                                                                   // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.PlayKillEffects
+	// void PlayKillEffects(FFakeKillRelevancyPlayerDataEntry& FakeKillData, float RelevancyDelay);                             // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.OnRep_ResetCounter
+	// void OnRep_ResetCounter();                                                                                               // [0x9dec510] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.OnKillEffectsPlayed
+	// void OnKillEffectsPlayed(AFortPlayerStateAthena* PlayerState);                                                           // [0x9debbf0] Final|BlueprintCosmetic|Native|Protected|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.GetDeathLocation
+	// FVector GetDeathLocation(AFortPlayerStateAthena* PlayerState);                                                           // [0x9deb470] Final|Native|Protected|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.CancelKillEffectsOnServer
+	// void CancelKillEffectsOnServer();                                                                                        // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_FakeKillRelevancy.CancelKillEffectsOnClient
+	// void CancelKillEffectsOnClient(TArray<AFortPlayerStateAthena*>& PlayerStates);                                           // [0x1ebf994] BlueprintCosmetic|Event|Protected|HasOutParms|BlueprintEvent 
 /// Class /Script/SpecialEventGameplayRuntime.FortAthenaMutator_FakeKillRelevancy
 /// Size: 0x0060 (0x000440 - 0x0004A0)
 class AFortAthenaMutator_FakeKillRelevancy : public AFortAthenaMutator_SpecialRelevancy
@@ -77,11 +112,22 @@ class AFortAthenaMutator_FakeKillRelevancy : public AFortAthenaMutator_SpecialRe
 	static inline constexpr uint64_t __MDKClassSize = 1184;
 
 public:
-	CMember(UClass*)                                   FakeKillControllerComponentClass                            ___ OFFSET(get<T>, {0x440, 8, 0, 0})
-	CMember(TArray<FFakeKillRelevancyPhaseData>)       RelevancyPhaseDataArray                                     ___ OFFSET(get<T>, {0x448, 16, 0, 0})
-	DMember(int32_t)                                   PhaseNum                                                    ___ OFFSET(get<int32_t>, {0x458, 4, 0, 0})
+	CMember(UClass*)                                   FakeKillControllerComponentClass                            OFFSET(get<T>, {0x440, 8, 0, 0})
+	CMember(TArray<FFakeKillRelevancyPhaseData>)       RelevancyPhaseDataArray                                     OFFSET(get<T>, {0x448, 16, 0, 0})
+	DMember(int32_t)                                   PhaseNum                                                    OFFSET(get<int32_t>, {0x458, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_FakeKillRelevancy.StartNextKillWave
+	// void StartNextKillWave();                                                                                                // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_FakeKillRelevancy.SetUpKillPhase
+	// void SetUpKillPhase(int32_t MaxPlayersRemaining, FGameplayTag& Reason, int32_t NumWaves, float RelevancyDelay);          // [0x9ded7c8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_FakeKillRelevancy.ResetRelevancy
+	// void ResetRelevancy();                                                                                                   // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_FakeKillRelevancy.EndWave
+	// void EndWave(int32_t EndPhaseNum, int32_t WaveNum);                                                                      // [0x5a0006c] Final|Native|Private 
 /// Class /Script/SpecialEventGameplayRuntime.FortAthenaMutator_LoadGameFeature
 /// Size: 0x0010 (0x000338 - 0x000348)
 class AFortAthenaMutator_LoadGameFeature : public AFortAthenaMutator
@@ -90,9 +136,14 @@ class AFortAthenaMutator_LoadGameFeature : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	SMember(FString)                                   GameFeatureToLoad                                           ___ OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FString)                                   GameFeatureToLoad                                           OFFSET(get<T>, {0x338, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_LoadGameFeature.OnPlaylistDataReady
+	// void OnPlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x9dec0a8] Final|Native|Protected|HasOutParms 
 /// Class /Script/SpecialEventGameplayRuntime.FortAthenaMutator_RemoveGameFeatures
 /// Size: 0x0010 (0x000338 - 0x000348)
 class AFortAthenaMutator_RemoveGameFeatures : public AFortAthenaMutator
@@ -101,9 +152,14 @@ class AFortAthenaMutator_RemoveGameFeatures : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	CMember(TArray<FString>)                           AllowedGameFeatures                                         ___ OFFSET(get<T>, {0x338, 16, 0, 0})
+	CMember(TArray<FString>)                           AllowedGameFeatures                                         OFFSET(get<T>, {0x338, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_RemoveGameFeatures.OnPlaylistDataReady
+	// void OnPlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x9dec1d8] Final|Native|Protected|HasOutParms 
 /// Class /Script/SpecialEventGameplayRuntime.FortCheatManager_SpecialEvent
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UFortCheatManager_SpecialEvent : public UFortCheatManager_Coupled
@@ -122,68 +178,209 @@ class AFortAthenaMutator_SpecialEvent : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 1960;
 
 public:
-	SMember(FMulticastInlineDelegate)                  TeleportAllPlayersFinished                                  ___ OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPawnLoaded                                                ___ OFFSET(get<T>, {0x348, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInitController                                            ___ OFFSET(get<T>, {0x358, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnResumeGame                                                ___ OFFSET(get<T>, {0x368, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpecialClientEvent                                        ___ OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHandleLogout                                              ___ OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnClientInitialLoadingFinished                              ___ OFFSET(get<T>, {0x398, 16, 0, 0})
-	DMember(bool)                                      bPlayersAreInvincible                                       ___ OFFSET(get<bool>, {0x410, 1, 0, 0})
-	DMember(int32_t)                                   MinimumScoreBumpForAutomadeGoal                             ___ OFFSET(get<int32_t>, {0x438, 4, 0, 0})
-	CMember(TArray<float>)                             ScoreBrackets                                               ___ OFFSET(get<T>, {0x440, 16, 0, 0})
-	DMember(bool)                                      bEnforceInfiniteSafeZonePhase                               ___ OFFSET(get<bool>, {0x450, 1, 0, 0})
-	SMember(FName)                                     WarmupIslandPlayerStartTag                                  ___ OFFSET(get<T>, {0x454, 4, 0, 0})
-	DMember(bool)                                      bAllowInventoryOpen                                         ___ OFFSET(get<bool>, {0x458, 1, 0, 0})
-	SMember(FScalableFloat)                            bAllowFullScreenMap                                         ___ OFFSET(get<T>, {0x460, 40, 0, 0})
-	DMember(bool)                                      bShouldClearFrontEndMapMarkers                              ___ OFFSET(get<bool>, {0x488, 1, 0, 0})
-	DMember(bool)                                      bBlockTeamIndicators                                        ___ OFFSET(get<bool>, {0x489, 1, 0, 0})
-	DMember(int32_t)                                   ForceDisplaySquadInfoDuringGamePhases                       ___ OFFSET(get<int32_t>, {0x48C, 4, 0, 0})
-	DMember(bool)                                      bAllowSquadListLocalPlayerInSplitscreen                     ___ OFFSET(get<bool>, {0x490, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     UIToHideDuringSpecialEvent                                  ___ OFFSET(get<T>, {0x498, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     UIToHideWhenInInfiniteWarmup                                ___ OFFSET(get<T>, {0x4B8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ClientEventsThatUnhideHiddenWhileLoadingHUDElements         ___ OFFSET(get<T>, {0x4D8, 32, 0, 0})
-	DMember(bool)                                      bForceGarbageCollectionAfterUnloadOnServer                  ___ OFFSET(get<bool>, {0x4F8, 1, 0, 0})
-	DMember(bool)                                      bForceGarbageCollectionAfterUnloadOnClient                  ___ OFFSET(get<bool>, {0x4F9, 1, 0, 0})
-	DMember(bool)                                      bFullPurgeGC                                                ___ OFFSET(get<bool>, {0x4FA, 1, 0, 0})
-	CMember(AFortAthenaAircraft*)                      EventAircraft                                               ___ OFFSET(get<T>, {0x500, 8, 0, 0})
-	SMember(FAircraftFlightInfo)                       EventAircraftInfo                                           ___ OFFSET(get<T>, {0x508, 72, 0, 0})
-	CMember(UClass*)                                   EventAircraftClass                                          ___ OFFSET(get<T>, {0x550, 8, 0, 0})
-	CMember(ASpecialEventScript*)                      ScriptActor                                                 ___ OFFSET(get<T>, {0x558, 8, 0, 0})
-	DMember(bool)                                      bDisableHUD                                                 ___ OFFSET(get<bool>, {0x560, 1, 0, 0})
-	DMember(char)                                      GameResumed                                                 ___ OFFSET(get<char>, {0x561, 1, 0, 0})
-	SMember(FVector)                                   AdditionalViewpoint                                         ___ OFFSET(get<T>, {0x568, 24, 0, 0})
-	DMember(bool)                                      bParachutesDisabled                                         ___ OFFSET(get<bool>, {0x580, 1, 0, 0})
-	SMember(FString)                                   LastCSVEventName                                            ___ OFFSET(get<T>, {0x588, 16, 0, 0})
-	DMember(bool)                                      bCanStreamBuildingFoundationsIn                             ___ OFFSET(get<bool>, {0x598, 1, 0, 0})
-	DMember(int32_t)                                   AllPlayerTeleportedCount                                    ___ OFFSET(get<int32_t>, {0x59C, 4, 0, 0})
-	SMember(FFortDelayRTMMData)                        DelayPlayersFromReturningToLobbyData                        ___ OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(FName)                                     NamedWeightForContainerLootRoll                             ___ OFFSET(get<T>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     WeightForContainerLootRoll                                  ___ OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	CMember(TArray<FFortSpecialEventEmoteData>)        SpecialEventEmoteData                                       ___ OFFSET(get<T>, {0x5E8, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockedNativeActions                                        ___ OFFSET(get<T>, {0x5F8, 32, 0, 0})
-	CMember(EFortItemType)                             DesiredQuickbarItemTypeAfterRemove                          ___ OFFSET(get<T>, {0x618, 1, 0, 0})
-	CMember(UInputComponent*)                          SpecialEventsInputComponent                                 ___ OFFSET(get<T>, {0x620, 8, 0, 0})
-	DMember(bool)                                      bLockingOnFocalPoint                                        ___ OFFSET(get<bool>, {0x628, 1, 0, 0})
-	CMember(TArray<FFortSpecialEventOverrideParts>)    SpecialEventOverrideParts                                   ___ OFFSET(get<T>, {0x630, 16, 0, 0})
-	SMember(FFortSpecialEventGEData)                   GameplayEffectToApplyOnSwapToDefault                        ___ OFFSET(get<T>, {0x640, 16, 0, 0})
-	CMember(TMap<FUniqueNetIdRepl, int32_t>)           OverridePartsArrayIndexMap                                  ___ OFFSET(get<T>, {0x650, 80, 0, 0})
-	CMember(TArray<FFortSpecialEventGEData>)           GameplayEffectsToApplyOnLogin                               ___ OFFSET(get<T>, {0x6A0, 16, 0, 0})
-	CMember(TArray<FSpecialEventMapData>)              TerrainMapsToUnload                                         ___ OFFSET(get<T>, {0x6B0, 16, 0, 0})
-	CMember(TArray<AFortPlayerControllerAthena*>)      UnhandledPlayerControllers                                  ___ OFFSET(get<T>, {0x6D0, 16, 0, 0})
-	CMember(TArray<FName>)                             HLODActorsToHideNames                                       ___ OFFSET(get<T>, {0x6E0, 16, 0, 0})
-	DMember(bool)                                      bForceAllowCloth                                            ___ OFFSET(get<bool>, {0x6F0, 1, 0, 0})
-	DMember(bool)                                      bManageBackfill                                             ___ OFFSET(get<bool>, {0x6F2, 1, 0, 0})
-	DMember(int32_t)                                   PlayerCountToTriggerBackfill                                ___ OFFSET(get<int32_t>, {0x6F4, 4, 0, 0})
-	DMember(bool)                                      bWaitForPlayerCountToTriggerBackfill                        ___ OFFSET(get<bool>, {0x6F8, 1, 0, 0})
-	DMember(float)                                     UpdateBackfillStatusTime                                    ___ OFFSET(get<float>, {0x6FC, 4, 0, 0})
-	DMember(bool)                                      bServerHasBackfillActive                                    ___ OFFSET(get<bool>, {0x710, 1, 0, 0})
-	DMember(bool)                                      bCanToggleCursorModeInStasis                                ___ OFFSET(get<bool>, {0x711, 1, 0, 0})
-	SMember(FScalableFloat)                            MannequinRecentlyRenderedCheckToleranceValue                ___ OFFSET(get<T>, {0x718, 40, 0, 0})
-	CMember(TArray<ASpecialEventPlayerMannequin*>)     SpecialEventMannequins                                      ___ OFFSET(get<T>, {0x740, 16, 0, 0})
-	CMember(TArray<UClass*>)                           ActorSpawnDelegateClasses                                   ___ OFFSET(get<T>, {0x750, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TeleportAllPlayersFinished                                  OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPawnLoaded                                                OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInitController                                            OFFSET(get<T>, {0x358, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnResumeGame                                                OFFSET(get<T>, {0x368, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpecialClientEvent                                        OFFSET(get<T>, {0x378, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHandleLogout                                              OFFSET(get<T>, {0x388, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnClientInitialLoadingFinished                              OFFSET(get<T>, {0x398, 16, 0, 0})
+	DMember(bool)                                      bPlayersAreInvincible                                       OFFSET(get<bool>, {0x410, 1, 0, 0})
+	DMember(int32_t)                                   MinimumScoreBumpForAutomadeGoal                             OFFSET(get<int32_t>, {0x438, 4, 0, 0})
+	CMember(TArray<float>)                             ScoreBrackets                                               OFFSET(get<T>, {0x440, 16, 0, 0})
+	DMember(bool)                                      bEnforceInfiniteSafeZonePhase                               OFFSET(get<bool>, {0x450, 1, 0, 0})
+	SMember(FName)                                     WarmupIslandPlayerStartTag                                  OFFSET(get<T>, {0x454, 4, 0, 0})
+	DMember(bool)                                      bAllowInventoryOpen                                         OFFSET(get<bool>, {0x458, 1, 0, 0})
+	SMember(FScalableFloat)                            bAllowFullScreenMap                                         OFFSET(get<T>, {0x460, 40, 0, 0})
+	DMember(bool)                                      bShouldClearFrontEndMapMarkers                              OFFSET(get<bool>, {0x488, 1, 0, 0})
+	DMember(bool)                                      bBlockTeamIndicators                                        OFFSET(get<bool>, {0x489, 1, 0, 0})
+	DMember(int32_t)                                   ForceDisplaySquadInfoDuringGamePhases                       OFFSET(get<int32_t>, {0x48C, 4, 0, 0})
+	DMember(bool)                                      bAllowSquadListLocalPlayerInSplitscreen                     OFFSET(get<bool>, {0x490, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     UIToHideDuringSpecialEvent                                  OFFSET(get<T>, {0x498, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     UIToHideWhenInInfiniteWarmup                                OFFSET(get<T>, {0x4B8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ClientEventsThatUnhideHiddenWhileLoadingHUDElements         OFFSET(get<T>, {0x4D8, 32, 0, 0})
+	DMember(bool)                                      bForceGarbageCollectionAfterUnloadOnServer                  OFFSET(get<bool>, {0x4F8, 1, 0, 0})
+	DMember(bool)                                      bForceGarbageCollectionAfterUnloadOnClient                  OFFSET(get<bool>, {0x4F9, 1, 0, 0})
+	DMember(bool)                                      bFullPurgeGC                                                OFFSET(get<bool>, {0x4FA, 1, 0, 0})
+	CMember(AFortAthenaAircraft*)                      EventAircraft                                               OFFSET(get<T>, {0x500, 8, 0, 0})
+	SMember(FAircraftFlightInfo)                       EventAircraftInfo                                           OFFSET(get<T>, {0x508, 72, 0, 0})
+	CMember(UClass*)                                   EventAircraftClass                                          OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(ASpecialEventScript*)                      ScriptActor                                                 OFFSET(get<T>, {0x558, 8, 0, 0})
+	DMember(bool)                                      bDisableHUD                                                 OFFSET(get<bool>, {0x560, 1, 0, 0})
+	DMember(char)                                      GameResumed                                                 OFFSET(get<char>, {0x561, 1, 0, 0})
+	SMember(FVector)                                   AdditionalViewpoint                                         OFFSET(get<T>, {0x568, 24, 0, 0})
+	DMember(bool)                                      bParachutesDisabled                                         OFFSET(get<bool>, {0x580, 1, 0, 0})
+	SMember(FString)                                   LastCSVEventName                                            OFFSET(get<T>, {0x588, 16, 0, 0})
+	DMember(bool)                                      bCanStreamBuildingFoundationsIn                             OFFSET(get<bool>, {0x598, 1, 0, 0})
+	DMember(int32_t)                                   AllPlayerTeleportedCount                                    OFFSET(get<int32_t>, {0x59C, 4, 0, 0})
+	SMember(FFortDelayRTMMData)                        DelayPlayersFromReturningToLobbyData                        OFFSET(get<T>, {0x5A0, 16, 0, 0})
+	SMember(FName)                                     NamedWeightForContainerLootRoll                             OFFSET(get<T>, {0x5B0, 4, 0, 0})
+	DMember(float)                                     WeightForContainerLootRoll                                  OFFSET(get<float>, {0x5B4, 4, 0, 0})
+	CMember(TArray<FFortSpecialEventEmoteData>)        SpecialEventEmoteData                                       OFFSET(get<T>, {0x5E8, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockedNativeActions                                        OFFSET(get<T>, {0x5F8, 32, 0, 0})
+	CMember(EFortItemType)                             DesiredQuickbarItemTypeAfterRemove                          OFFSET(get<T>, {0x618, 1, 0, 0})
+	CMember(UInputComponent*)                          SpecialEventsInputComponent                                 OFFSET(get<T>, {0x620, 8, 0, 0})
+	DMember(bool)                                      bLockingOnFocalPoint                                        OFFSET(get<bool>, {0x628, 1, 0, 0})
+	CMember(TArray<FFortSpecialEventOverrideParts>)    SpecialEventOverrideParts                                   OFFSET(get<T>, {0x630, 16, 0, 0})
+	SMember(FFortSpecialEventGEData)                   GameplayEffectToApplyOnSwapToDefault                        OFFSET(get<T>, {0x640, 16, 0, 0})
+	CMember(TMap<FUniqueNetIdRepl, int32_t>)           OverridePartsArrayIndexMap                                  OFFSET(get<T>, {0x650, 80, 0, 0})
+	CMember(TArray<FFortSpecialEventGEData>)           GameplayEffectsToApplyOnLogin                               OFFSET(get<T>, {0x6A0, 16, 0, 0})
+	CMember(TArray<FSpecialEventMapData>)              TerrainMapsToUnload                                         OFFSET(get<T>, {0x6B0, 16, 0, 0})
+	CMember(TArray<AFortPlayerControllerAthena*>)      UnhandledPlayerControllers                                  OFFSET(get<T>, {0x6D0, 16, 0, 0})
+	CMember(TArray<FName>)                             HLODActorsToHideNames                                       OFFSET(get<T>, {0x6E0, 16, 0, 0})
+	DMember(bool)                                      bForceAllowCloth                                            OFFSET(get<bool>, {0x6F0, 1, 0, 0})
+	DMember(bool)                                      bManageBackfill                                             OFFSET(get<bool>, {0x6F2, 1, 0, 0})
+	DMember(int32_t)                                   PlayerCountToTriggerBackfill                                OFFSET(get<int32_t>, {0x6F4, 4, 0, 0})
+	DMember(bool)                                      bWaitForPlayerCountToTriggerBackfill                        OFFSET(get<bool>, {0x6F8, 1, 0, 0})
+	DMember(float)                                     UpdateBackfillStatusTime                                    OFFSET(get<float>, {0x6FC, 4, 0, 0})
+	DMember(bool)                                      bServerHasBackfillActive                                    OFFSET(get<bool>, {0x710, 1, 0, 0})
+	DMember(bool)                                      bCanToggleCursorModeInStasis                                OFFSET(get<bool>, {0x711, 1, 0, 0})
+	SMember(FScalableFloat)                            MannequinRecentlyRenderedCheckToleranceValue                OFFSET(get<T>, {0x718, 40, 0, 0})
+	CMember(TArray<ASpecialEventPlayerMannequin*>)     SpecialEventMannequins                                      OFFSET(get<T>, {0x740, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ActorSpawnDelegateClasses                                   OFFSET(get<T>, {0x750, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.WarmUpIslandUpdated
+	// void WarmUpIslandUpdated();                                                                                              // [0x9dee264] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.UpdateBackfillStatus
+	// void UpdateBackfillStatus();                                                                                             // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.UnloadTerrainMaps
+	// void UnloadTerrainMaps(FGameplayTag& MapTag);                                                                            // [0x9dee1d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ToggleHUDs
+	// void ToggleHUDs(bool bHide);                                                                                             // [0x9dee158] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ToggleDisableWeapons
+	// void ToggleDisableWeapons(bool bDisableWeapons);                                                                         // [0x9dee070] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ToggleDisableParachutes
+	// void ToggleDisableParachutes(bool bDisable);                                                                             // [0x9dedff0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ToggleAllPlayersInvincibility
+	// void ToggleAllPlayersInvincibility(bool bInvincible);                                                                    // [0x9dedf70] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.TeleportAllPlayers
+	// void TeleportAllPlayers(FGameplayTagContainer EventTags, int32_t TeleportsPerFrame, int32_t SafeZoneIndex);              // [0x9dedbc8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SwapBodyParts
+	// void SwapBodyParts(int32_t ArrayIndex, AFortPlayerController* FortPC);                                                   // [0x9dedb04] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.StartSafeZoneOverrideForEvent
+	// void StartSafeZoneOverrideForEvent(int32_t SafeZoneIndexForEvent);                                                       // [0x9deda84] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ShrinkSafeZone
+	// void ShrinkSafeZone();                                                                                                   // [0x9deda2c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetWeightForContainerLootRoll
+	// void SetWeightForContainerLootRoll(float Weight);                                                                        // [0x9ded9ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetReturnToMainMenuDelay
+	// void SetReturnToMainMenuDelay(float MinDelayReturnToMainMenu, float MaxDelayReturnToMainMenu);                           // [0x9ded704] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetNamedWeightForContainerLootRoll
+	// void SetNamedWeightForContainerLootRoll(FName WeightName);                                                               // [0x9ded608] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetMatchTime
+	// void SetMatchTime(int32_t NewMatchTime);                                                                                 // [0x9ded538] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetLockingOnFocalPoint
+	// void SetLockingOnFocalPoint(bool bInLockingOnFocalPoint);                                                                // [0x9ded470] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetIsSimulatingDamage
+	// void SetIsSimulatingDamage(bool bIsSimulating);                                                                          // [0x9ded3f0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetDestroyVehiclesInStorm
+	// void SetDestroyVehiclesInStorm(bool bDestroyVehiclesInStorm);                                                            // [0x9ded360] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetCanStreamBuildingFoundationsIn
+	// void SetCanStreamBuildingFoundationsIn(bool bEnable);                                                                    // [0x9ded298] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SetAdditionalViewpoint
+	// void SetAdditionalViewpoint(FVector WorldLocation);                                                                      // [0x9decdcc] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.SendToNightNight
+	// void SendToNightNight();                                                                                                 // [0x2d79908] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResumeWinCondition
+	// void ResumeWinCondition();                                                                                               // [0x9decd5c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResetWinConditionProgressToZero
+	// void ResetWinConditionProgressToZero();                                                                                  // [0x9decd48] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResetWinCondition
+	// void ResetWinCondition();                                                                                                // [0x9deccd8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResetSpecialEventAircraft
+	// void ResetSpecialEventAircraft();                                                                                        // [0x9decc9c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResetSafeZoneOverrideAfterEvent
+	// void ResetSafeZoneOverrideAfterEvent(int32_t MinResetSafeZoneIndex, float MinDelayReturnToMainMenu, float MaxDelayReturnToMainMenu); // [0x9decba4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ResetMatchTimeToPrevious
+	// void ResetMatchTimeToPrevious();                                                                                         // [0x9decb50] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.RemoveFromBlockedNativeActions
+	// void RemoveFromBlockedNativeActions(FGameplayTagContainer& Actions);                                                     // [0x7637594] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PushSpecialEventEmoteInputComponent
+	// void PushSpecialEventEmoteInputComponent();                                                                              // [0x9decb3c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PopSpecialEventEmoteInputComponent
+	// void PopSpecialEventEmoteInputComponent();                                                                               // [0x9decb28] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PlacePlayersInAircraft
+	// void PlacePlayersInAircraft();                                                                                           // [0x9decb14] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PauseWinCondition
+	// void PauseWinCondition(bool bLockScores);                                                                                // [0x9deca38] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PauseSupplyDrops
+	// void PauseSupplyDrops(bool bPause);                                                                                      // [0x9dec960] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PauseStormProgression
+	// void PauseStormProgression(bool bPause);                                                                                 // [0x9dec8e0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.PauseStormDamage
+	// void PauseStormDamage(bool bPause);                                                                                      // [0x9dec818] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnWarmUpTeleportComplete
+	// void OnWarmUpTeleportComplete(AFortPlayerPawn* PlayerPawn);                                                              // [0x9dec688] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_TerrainMapsToUnload
+	// void OnRep_TerrainMapsToUnload();                                                                                        // [0x9dec524] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_LastCSVEventName
+	// void OnRep_LastCSVEventName();                                                                                           // [0x9dec4e0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_GameResumed
+	// void OnRep_GameResumed();                                                                                                // [0x9dec4cc] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_DelayPlayersFromReturningToLobbyData
+	// void OnRep_DelayPlayersFromReturningToLobbyData();                                                                       // [0x9dec474] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_bPlayersAreInvincible
+	// void OnRep_bPlayersAreInvincible();                                                                                      // [0x9dec5c8] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_bLockingOnFocalPoint
+	// void OnRep_bLockingOnFocalPoint();                                                                                       // [0x9dec5b4] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_bDisableHUD
+	// void OnRep_bDisableHUD();                                                                                                // [0x9dec5a0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_bCanStreamBuildingFoundationsIn
+	// void OnRep_bCanStreamBuildingFoundationsIn();                                                                            // [0x9dec58c] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_AllPlayerTeleportedCount
+	// void OnRep_AllPlayerTeleportedCount();                                                                                   // [0x5ccc994] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_Aircraft
+	// void OnRep_Aircraft();                                                                                                   // [0x9dec3a0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnRep_AdditionalViewpoint
+	// void OnRep_AdditionalViewpoint();                                                                                        // [0x9dec38c] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnGameViewportActivationChanged
+	// void OnGameViewportActivationChanged(bool bHasFocus);                                                                    // [0x9debb70] Final|Native|Public  
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnAircraftFlightEnded
+	// void OnAircraftFlightEnded(AFortAthenaAircraft* FortAthenaAircraft);                                                     // [0x9debaf0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnAircraftExitedDropZone
+	// void OnAircraftExitedDropZone(AFortAthenaAircraft* FortAthenaAircraft);                                                  // [0x9deba70] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnAircraftEnteredDropZone
+	// void OnAircraftEnteredDropZone(AFortAthenaAircraft* FortAthenaAircraft);                                                 // [0x9deb9f0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnActorSpawned
+	// void OnActorSpawned(AActor* Actor);                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.OnActorPreSpawnInitialization
+	// void OnActorPreSpawnInitialization(AActor* Actor);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.NotifyClientsGameResumed
+	// void NotifyClientsGameResumed();                                                                                         // [0x9deb934] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.NetMulticast_CheatClearSpecialEventGameUserSettings
+	// void NetMulticast_CheatClearSpecialEventGameUserSettings();                                                              // [0x7ab0334] Net|NetReliableNative|Event|NetMulticast|Public 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.JumpToSafeZonePhase
+	// void JumpToSafeZonePhase(FVector PawnSpawnCenterLocation, float PawnSpawnMinDistance, float PawnSpawnMaxDistance);       // [0x9deb5a8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.HandleSpecialEventMannequinDestroyed
+	// void HandleSpecialEventMannequinDestroyed(AActor* MannequinActor);                                                       // [0x9deb528] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.GetScript
+	// ASpecialEventScript* GetScript();                                                                                        // [0x9deb510] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.GetHasInfiniteSafeZonePhase
+	// bool GetHasInfiniteSafeZonePhase();                                                                                      // [0x85df6a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ForceSafeZoneFinalLocation
+	// void ForceSafeZoneFinalLocation(FVector NewFinalLocation, float DefaultAircraftOffsetFromMidLine, float MinDefaultMidlineAngle, float MaxDefaultMidlineAngle); // [0x9deafd4] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.FlushUnhandledPlayerControllers
+	// void FlushUnhandledPlayerControllers();                                                                                  // [0x9deafc0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.CloseParachutes
+	// void CloseParachutes();                                                                                                  // [0x9dea0e0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ClearBlockedNativeActions
+	// void ClearBlockedNativeActions();                                                                                        // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ClearAdditionalViewpoint
+	// void ClearAdditionalViewpoint();                                                                                         // [0x9dea0cc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.ChangeWinCondition
+	// void ChangeWinCondition(float NewGoalScore);                                                                             // [0x9dea04c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.AutobalanceTargetScore
+	// void AutobalanceTargetScore();                                                                                           // [0x9dea038] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.AddToBlockedNativeActions
+	// void AddToBlockedNativeActions(FGameplayTagContainer& Actions, bool bCancelAbilities);                                   // [0x9de9ef8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.AddCSVEvent
+	// void AddCSVEvent(FString CSVEventName, bool bShouldRepToClient);                                                         // [0x9de9158] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortAthenaMutator_SpecialEvent.AddClientCSVEvent
+	// void AddClientCSVEvent(FString CSVEventName);                                                                            // [0x9de9850] Final|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.FortCameraMode_SpecialEventFocalPoint
 /// Size: 0x0000 (0x001B60 - 0x001B60)
 class UFortCameraMode_SpecialEventFocalPoint : public UFortCameraMode_FocalPoint
@@ -194,6 +391,17 @@ class UFortCameraMode_SpecialEventFocalPoint : public UFortCameraMode_FocalPoint
 public:
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortCameraMode_SpecialEventFocalPoint.UpdateCameraBP
+	// void UpdateCameraBP(AActor* ViewTarget, float DeltaTime, FTViewTarget& OutVT);                                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortCameraMode_SpecialEventFocalPoint.SetOverrideTransitionTime
+	// void SetOverrideTransitionTime(float InTransitionTime);                                                                  // [0x9ded684] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCameraMode_SpecialEventFocalPoint.OnBecomeInactiveBP
+	// void OnBecomeInactiveBP(AActor* ViewTarget);                                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.FortCameraMode_SpecialEventFocalPoint.OnBecomeActiveBP
+	// void OnBecomeActiveBP(AActor* ViewTarget);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Class /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent
 /// Size: 0x0880 (0x0000A0 - 0x000920)
 class UFortCharacterMovementMutatorComponent : public UActorComponent
@@ -202,42 +410,61 @@ class UFortCharacterMovementMutatorComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 2336;
 
 public:
-	CMember(ACharacter*)                               CharacterOwner                                              ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(UFortMovementComp_CharacterAthena*)        MovementComponent                                           ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	CMember(UFortMovementComp_CharacterAthena*)        CDOMovementComponent                                        ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMoveToBoxSpeed                                 ___ OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesRelativeVelocityInterpSpeed                    ___ OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesLocationInterpSpeed                            ___ OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesRotationInterpSpeed                            ___ OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMinRelativeX                                   ___ OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeX                                   ___ OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMinRelativeY                                   ___ OFFSET(get<T>, {0x1B8, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeY                                   ___ OFFSET(get<T>, {0x1E0, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMinRelativeZ                                   ___ OFFSET(get<T>, {0x208, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeZ                                   ___ OFFSET(get<T>, {0x230, 40, 0, 0})
-	SMember(FRotator)                                  BuffetBubblesRotationRate                                   ___ OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMaxAcceleration                                ___ OFFSET(get<T>, {0x270, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeSpeed                               ___ OFFSET(get<T>, {0x298, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesRelativeDeceleration                           ___ OFFSET(get<T>, {0x2C0, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesSphereRadius                                   ___ OFFSET(get<T>, {0x2E8, 40, 0, 0})
-	CMember(AActor*)                                   BuffetBubblesFollowActor                                    ___ OFFSET(get<T>, {0x310, 8, 0, 0})
-	SMember(FVector)                                   BuffetBubblesInitialFollowBoxOffsetPercent                  ___ OFFSET(get<T>, {0x318, 24, 0, 0})
-	SMember(FBuffetBubblesReplicatedData)              BuffetBubblesReplicatedData                                 ___ OFFSET(get<T>, {0x410, 128, 0, 0})
-	SMember(FScalableFloat)                            BuffetBubblesIntroSpeed                                     ___ OFFSET(get<T>, {0x710, 40, 0, 0})
-	SMember(FTransform)                                BuffetBubblesIntroTargetTransform                           ___ OFFSET(get<T>, {0x740, 96, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingMaxPitchDegrees                                 ___ OFFSET(get<T>, {0x7A0, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingMaxSpeed                                        ___ OFFSET(get<T>, {0x7C8, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingVelocityDirectionInterpSpeed                    ___ OFFSET(get<T>, {0x7F0, 40, 0, 0})
-	SMember(FRotator)                                  BuffetFlyingRotationRate                                    ___ OFFSET(get<T>, {0x818, 24, 0, 0})
-	DMember(float)                                     BuffetFlyingMaxSpeedOverride                                ___ OFFSET(get<float>, {0x830, 4, 0, 0})
-	DMember(float)                                     BuffetFlyingMaxSpeedInterpSpeed                             ___ OFFSET(get<float>, {0x834, 4, 0, 0})
-	DMember(float)                                     BuffetFlyingVelocityDirectionInterpSpeedOverride            ___ OFFSET(get<float>, {0x83C, 4, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingRicochetSphereSize                              ___ OFFSET(get<T>, {0x840, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingRicochetRotationDuration                        ___ OFFSET(get<T>, {0x868, 40, 0, 0})
-	SMember(FScalableFloat)                            BuffetFlyingRicochetControlRotationInterpSpeed              ___ OFFSET(get<T>, {0x890, 40, 0, 0})
-	SMember(FBuffetFlyingRicochetReplicatedData)       BuffetFlyingRicochetReplicatedData                          ___ OFFSET(get<T>, {0x900, 32, 0, 0})
+	CMember(ACharacter*)                               CharacterOwner                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UFortMovementComp_CharacterAthena*)        MovementComponent                                           OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(UFortMovementComp_CharacterAthena*)        CDOMovementComponent                                        OFFSET(get<T>, {0xB0, 8, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMoveToBoxSpeed                                 OFFSET(get<T>, {0xC8, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesRelativeVelocityInterpSpeed                    OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesLocationInterpSpeed                            OFFSET(get<T>, {0x118, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesRotationInterpSpeed                            OFFSET(get<T>, {0x140, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMinRelativeX                                   OFFSET(get<T>, {0x168, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeX                                   OFFSET(get<T>, {0x190, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMinRelativeY                                   OFFSET(get<T>, {0x1B8, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeY                                   OFFSET(get<T>, {0x1E0, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMinRelativeZ                                   OFFSET(get<T>, {0x208, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeZ                                   OFFSET(get<T>, {0x230, 40, 0, 0})
+	SMember(FRotator)                                  BuffetBubblesRotationRate                                   OFFSET(get<T>, {0x258, 24, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMaxAcceleration                                OFFSET(get<T>, {0x270, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesMaxRelativeSpeed                               OFFSET(get<T>, {0x298, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesRelativeDeceleration                           OFFSET(get<T>, {0x2C0, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesSphereRadius                                   OFFSET(get<T>, {0x2E8, 40, 0, 0})
+	CMember(AActor*)                                   BuffetBubblesFollowActor                                    OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FVector)                                   BuffetBubblesInitialFollowBoxOffsetPercent                  OFFSET(get<T>, {0x318, 24, 0, 0})
+	SMember(FBuffetBubblesReplicatedData)              BuffetBubblesReplicatedData                                 OFFSET(get<T>, {0x410, 128, 0, 0})
+	SMember(FScalableFloat)                            BuffetBubblesIntroSpeed                                     OFFSET(get<T>, {0x710, 40, 0, 0})
+	SMember(FTransform)                                BuffetBubblesIntroTargetTransform                           OFFSET(get<T>, {0x740, 96, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingMaxPitchDegrees                                 OFFSET(get<T>, {0x7A0, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingMaxSpeed                                        OFFSET(get<T>, {0x7C8, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingVelocityDirectionInterpSpeed                    OFFSET(get<T>, {0x7F0, 40, 0, 0})
+	SMember(FRotator)                                  BuffetFlyingRotationRate                                    OFFSET(get<T>, {0x818, 24, 0, 0})
+	DMember(float)                                     BuffetFlyingMaxSpeedOverride                                OFFSET(get<float>, {0x830, 4, 0, 0})
+	DMember(float)                                     BuffetFlyingMaxSpeedInterpSpeed                             OFFSET(get<float>, {0x834, 4, 0, 0})
+	DMember(float)                                     BuffetFlyingVelocityDirectionInterpSpeedOverride            OFFSET(get<float>, {0x83C, 4, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingRicochetSphereSize                              OFFSET(get<T>, {0x840, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingRicochetRotationDuration                        OFFSET(get<T>, {0x868, 40, 0, 0})
+	SMember(FScalableFloat)                            BuffetFlyingRicochetControlRotationInterpSpeed              OFFSET(get<T>, {0x890, 40, 0, 0})
+	SMember(FBuffetFlyingRicochetReplicatedData)       BuffetFlyingRicochetReplicatedData                          OFFSET(get<T>, {0x900, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.SetBuffetBubblesIntroTargetTransform
+	// void SetBuffetBubblesIntroTargetTransform(FTransform& Transform);                                                        // [0x9ded160] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.SetBuffetBubblesInitialFollowBoxOffsetPercent
+	// void SetBuffetBubblesInitialFollowBoxOffsetPercent(FVector BoxOffsetPercent);                                            // [0x9decfbc] Final|Native|Protected|HasDefaults|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.SetBuffetBubblesFollowActor
+	// void SetBuffetBubblesFollowActor(AActor* Actor);                                                                         // [0x9decf34] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.OverrideBuffetFlyingVelocityDirectionInterpSpeed
+	// void OverrideBuffetFlyingVelocityDirectionInterpSpeed(float Value, bool bAsMultiplier);                                  // [0x88a1450] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.OverrideBuffetFlyingMaxSpeed
+	// void OverrideBuffetFlyingMaxSpeed(float Value, bool bAsMultiplier, float InterpSpeed);                                   // [0x9dec734] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.OnRep_BuffetFlyingRicochetReplicatedData
+	// void OnRep_BuffetFlyingRicochetReplicatedData();                                                                         // [0x9dec40c] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.OnRep_BuffetBubblesFollowActor
+	// void OnRep_BuffetBubblesFollowActor();                                                                                   // [0x9dec3f8] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutatorComponent.OnMovementModeChanged
+	// void OnMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x9debc70] Final|Native|Private 
 /// Class /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutator
 /// Size: 0x0008 (0x000338 - 0x000340)
 class AFortCharacterMovementMutator : public AFortAthenaMutator
@@ -246,9 +473,14 @@ class AFortCharacterMovementMutator : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	CMember(UClass*)                                   MovementMutatorComponentClass                               ___ OFFSET(get<T>, {0x338, 8, 0, 0})
+	CMember(UClass*)                                   MovementMutatorComponentClass                               OFFSET(get<T>, {0x338, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortCharacterMovementMutator.OnFortPawnChanged
+	// void OnFortPawnChanged(AFortPawn* NewPawn);                                                                              // [0x56ba1a4] Final|Native|Protected 
 /// Class /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic
 /// Size: 0x0058 (0x0000A8 - 0x000100)
 class UFortControllerComponent_GameplayCinematic : public UFortControllerComponent
@@ -257,11 +489,24 @@ class UFortControllerComponent_GameplayCinematic : public UFortControllerCompone
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FMulticastInlineDelegate)                  BP_OnStartGameplayOutro                                     ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnGameplayIntroFinished                                  ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	DMember(bool)                                      bIsReadyForGameplay                                         ___ OFFSET(get<bool>, {0xF8, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnStartGameplayOutro                                     OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnGameplayIntroFinished                                  OFFSET(get<T>, {0xE8, 16, 0, 0})
+	DMember(bool)                                      bIsReadyForGameplay                                         OFFSET(get<bool>, {0xF8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic.ShowCinematicWidget
+	// void ShowCinematicWidget(FName WidgetName);                                                                              // [0x9e541e8] Final|BlueprintCosmetic|Exec|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic.SetReadyForGameplay
+	// void SetReadyForGameplay(bool bIsReady);                                                                                 // [0x56acda8] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic.ServerOnGameplayIntroFinished
+	// void ServerOnGameplayIntroFinished();                                                                                    // [0x77d3b90] Net|NetReliableNative|Event|Protected|NetServer 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic.OnRep_bIsReadyForGameplay
+	// void OnRep_bIsReadyForGameplay();                                                                                        // [0x9e525b0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_GameplayCinematic.HideHUDElementsForLoadingScreen
+	// void HideHUDElementsForLoadingScreen(bool bHideElements);                                                                // [0x9e51634] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.FortControllerComponent_SpecialEvent
 /// Size: 0x0008 (0x0000A8 - 0x0000B0)
 class UFortControllerComponent_SpecialEvent : public UFortControllerComponent
@@ -270,9 +515,16 @@ class UFortControllerComponent_SpecialEvent : public UFortControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TWeakObjectPtr<AFortAthenaMutator_SpecialEvent*>) SpecialEventMutator                                  ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(TWeakObjectPtr<AFortAthenaMutator_SpecialEvent*>) SpecialEventMutator                                  OFFSET(get<T>, {0xA8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_SpecialEvent.ServerHandleSpecialClientEvent
+	// void ServerHandleSpecialClientEvent(FGameplayTag EventTag, int32_t Count);                                               // [0x9e52e18] Net|NetReliableNative|Event|Protected|NetServer 
+	// Function /Script/SpecialEventGameplayRuntime.FortControllerComponent_SpecialEvent.SendSpecialClientEvent
+	// void SendSpecialClientEvent(FGameplayTag EventTag, int32_t Count);                                                       // [0x9e52ba4] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.FortCustomTickComponent
 /// Size: 0x0100 (0x0000A0 - 0x0001A0)
 class UFortCustomTickComponent : public UActorComponent
@@ -281,13 +533,13 @@ class UFortCustomTickComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	CMember(EFortCustomTickComponentCondition)         Condition                                                   ___ OFFSET(get<T>, {0xA0, 1, 0, 0})
-	SMember(FGameplayTag)                              AuthorityQualitySettingsTag                                 ___ OFFSET(get<T>, {0xA4, 4, 0, 0})
-	SMember(FGameplayTag)                              DefaultClientQualitySettingsTag                             ___ OFFSET(get<T>, {0xA8, 4, 0, 0})
-	CMember(TMap<ECommonPlatformType, FGameplayTag>)   ClientPlatformQualitySettingsTagMap                         ___ OFFSET(get<T>, {0xB0, 80, 0, 0})
-	CMember(TMap<FGameplayTag, FCustomTickComonentQualitySettings>) QualitySettingsMap                             ___ OFFSET(get<T>, {0x100, 80, 0, 0})
-	DMember(float)                                     WasRecentlyRenderedTolerance                                ___ OFFSET(get<float>, {0x150, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCustomTick                                                ___ OFFSET(get<T>, {0x158, 16, 0, 0})
+	CMember(EFortCustomTickComponentCondition)         Condition                                                   OFFSET(get<T>, {0xA0, 1, 0, 0})
+	SMember(FGameplayTag)                              AuthorityQualitySettingsTag                                 OFFSET(get<T>, {0xA4, 4, 0, 0})
+	SMember(FGameplayTag)                              DefaultClientQualitySettingsTag                             OFFSET(get<T>, {0xA8, 4, 0, 0})
+	CMember(TMap<ECommonPlatformType, FGameplayTag>)   ClientPlatformQualitySettingsTagMap                         OFFSET(get<T>, {0xB0, 80, 0, 0})
+	CMember(TMap<FGameplayTag, FCustomTickComonentQualitySettings>) QualitySettingsMap                             OFFSET(get<T>, {0x100, 80, 0, 0})
+	DMember(float)                                     WasRecentlyRenderedTolerance                                OFFSET(get<float>, {0x150, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCustomTick                                                OFFSET(get<T>, {0x158, 16, 0, 0})
 };
 
 /// Class /Script/SpecialEventGameplayRuntime.FortSpecialRelevancyActorSpawner
@@ -308,12 +560,31 @@ class USpecialEventAudioAnalysisBaseComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	DMember(float)                                     CurrentTime                                                 ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	CMember(ULoudnessNRT*)                             LoudnessNRT                                                 ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	CMember(UOnsetNRT*)                                OnsetNRT                                                    ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	CMember(UConstantQNRT*)                            ConstantQNRT                                                ___ OFFSET(get<T>, {0xB8, 8, 0, 0})
+	DMember(float)                                     CurrentTime                                                 OFFSET(get<float>, {0xA0, 4, 0, 0})
+	CMember(ULoudnessNRT*)                             LoudnessNRT                                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(UOnsetNRT*)                                OnsetNRT                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
+	CMember(UConstantQNRT*)                            ConstantQNRT                                                OFFSET(get<T>, {0xB8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.UpdateTime
+	// void UpdateTime(float NewTime);                                                                                          // [0x9d3d2b8] Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.UpdateOnset
+	// void UpdateOnset(float Time);                                                                                            // [0x986e5f4] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.UpdateLoudness
+	// void UpdateLoudness(float Time);                                                                                         // [0x64a9e38] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.UpdateConstantQ
+	// void UpdateConstantQ(float Time);                                                                                        // [0x64a9ebc] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.GetOnsetNRT
+	// UOnsetNRT* GetOnsetNRT();                                                                                                // [0x29f7474] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.GetLoudnessNRT
+	// ULoudnessNRT* GetLoudnessNRT();                                                                                          // [0x597bd64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.GetCurrentNormalizedLoudness
+	// float GetCurrentNormalizedLoudness();                                                                                    // [0x8d808f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioAnalysisBaseComponent.GetConstantQNRT
+	// UConstantQNRT* GetConstantQNRT();                                                                                        // [0x826c3bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventAudioHapticsComponent
 /// Size: 0x0028 (0x0000C0 - 0x0000E8)
 class USpecialEventAudioHapticsComponent : public USpecialEventAudioAnalysisBaseComponent
@@ -322,11 +593,20 @@ class USpecialEventAudioHapticsComponent : public USpecialEventAudioAnalysisBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(TArray<FSpecialEventAudioHapticsAction>)   HapticsActions                                              ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	DMember(bool)                                      bStartHapticsOnBeginPlay                                    ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	DMember(float)                                     IntensityMultiplier                                         ___ OFFSET(get<float>, {0xD4, 4, 0, 0})
+	CMember(TArray<FSpecialEventAudioHapticsAction>)   HapticsActions                                              OFFSET(get<T>, {0xC0, 16, 0, 0})
+	DMember(bool)                                      bStartHapticsOnBeginPlay                                    OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	DMember(float)                                     IntensityMultiplier                                         OFFSET(get<float>, {0xD4, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioHapticsComponent.StopHaptics
+	// void StopHaptics();                                                                                                      // [0x9e5474c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioHapticsComponent.StartHaptics
+	// void StartHaptics();                                                                                                     // [0x9e54738] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventAudioHapticsComponent.AreHapticsActive
+	// bool AreHapticsActive();                                                                                                 // [0x9e4d9a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventCinematicCameraMode
 /// Size: 0x0000 (0x000068 - 0x000068)
 class USpecialEventCinematicCameraMode : public UFortCinematicCamera
@@ -355,34 +635,119 @@ class USpecialEventCursorPawnComponent : public UPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 936;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnDesiredVisibilityChanged                                  ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	DMember(bool)                                      bAllowOnNonOwningClients                                    ___ OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	CMember(APawn*)                                    OwningPawn                                                  ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(AFortPlayerController*)                    OwningController                                            ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCursorModeChanged                                         ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FGameplayTag)                              DefaultCursorModeTag                                        ___ OFFSET(get<T>, {0xF0, 4, 0, 0})
-	DMember(bool)                                      bDefaultCursorModeAutoActivate                              ___ OFFSET(get<bool>, {0xF4, 1, 0, 0})
-	CMember(TMap<FGameplayTag, FSpecialEventCursorMode>) CursorModes                                               ___ OFFSET(get<T>, {0xF8, 80, 0, 0})
-	CMember(TArray<FSpecialEventCursorStackEntry>)     CursorStack                                                 ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FSpecialEventCursorStackEntry)             ReplicatedCursorStackEntry                                  ___ OFFSET(get<T>, {0x158, 12, 0, 0})
-	CMember(UClass*)                                   InputHelperClass                                            ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	DMember(bool)                                      bUseGamepadLookInput                                        ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	DMember(bool)                                      bUseGamepadMoveInput                                        ___ OFFSET(get<bool>, {0x171, 1, 0, 0})
-	DMember(bool)                                      bUseGyroInput                                               ___ OFFSET(get<bool>, {0x172, 1, 0, 0})
-	DMember(bool)                                      bObeyInvertedPitchUserSetting                               ___ OFFSET(get<bool>, {0x173, 1, 0, 0})
-	CMember(UCommonInputSubsystem*)                    CommonInputSubsystem                                        ___ OFFSET(get<T>, {0x178, 8, 0, 0})
-	CMember(USpecialEventInputHelperComponent*)        InputHelperComponent                                        ___ OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnViewportLocationChanged                                   ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(FScalableFloat)                            NonOwningInterpSpeed                                        ___ OFFSET(get<T>, {0x1D0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDeltaToSendWorldLocationToServer                         ___ OFFSET(get<T>, {0x1F8, 40, 0, 0})
-	SMember(FVector)                                   ReplicatedWorldLocation                                     ___ OFFSET(get<T>, {0x228, 24, 0, 0})
-	CMember(TArray<UUserWidget*>)                      Widgets                                                     ___ OFFSET(get<T>, {0x290, 16, 0, 0})
-	DMember(bool)                                      bAdditiveRotationAllowedByDefault                           ___ OFFSET(get<bool>, {0x389, 1, 0, 0})
-	DMember(bool)                                      bZoomAllowedByDefault                                       ___ OFFSET(get<bool>, {0x38B, 1, 0, 0})
-	SMember(FName)                                     ZoomActionName                                              ___ OFFSET(get<T>, {0x38C, 4, 0, 0})
-	CMember(UCameraComponent*)                         AdditiveOffsetCameraComponent                               ___ OFFSET(get<T>, {0x398, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDesiredVisibilityChanged                                  OFFSET(get<T>, {0xA8, 16, 0, 0})
+	DMember(bool)                                      bAllowOnNonOwningClients                                    OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	CMember(APawn*)                                    OwningPawn                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(AFortPlayerController*)                    OwningController                                            OFFSET(get<T>, {0xC8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCursorModeChanged                                         OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FGameplayTag)                              DefaultCursorModeTag                                        OFFSET(get<T>, {0xF0, 4, 0, 0})
+	DMember(bool)                                      bDefaultCursorModeAutoActivate                              OFFSET(get<bool>, {0xF4, 1, 0, 0})
+	CMember(TMap<FGameplayTag, FSpecialEventCursorMode>) CursorModes                                               OFFSET(get<T>, {0xF8, 80, 0, 0})
+	CMember(TArray<FSpecialEventCursorStackEntry>)     CursorStack                                                 OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(FSpecialEventCursorStackEntry)             ReplicatedCursorStackEntry                                  OFFSET(get<T>, {0x158, 12, 0, 0})
+	CMember(UClass*)                                   InputHelperClass                                            OFFSET(get<T>, {0x168, 8, 0, 0})
+	DMember(bool)                                      bUseGamepadLookInput                                        OFFSET(get<bool>, {0x170, 1, 0, 0})
+	DMember(bool)                                      bUseGamepadMoveInput                                        OFFSET(get<bool>, {0x171, 1, 0, 0})
+	DMember(bool)                                      bUseGyroInput                                               OFFSET(get<bool>, {0x172, 1, 0, 0})
+	DMember(bool)                                      bObeyInvertedPitchUserSetting                               OFFSET(get<bool>, {0x173, 1, 0, 0})
+	CMember(UCommonInputSubsystem*)                    CommonInputSubsystem                                        OFFSET(get<T>, {0x178, 8, 0, 0})
+	CMember(USpecialEventInputHelperComponent*)        InputHelperComponent                                        OFFSET(get<T>, {0x180, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnViewportLocationChanged                                   OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	SMember(FScalableFloat)                            NonOwningInterpSpeed                                        OFFSET(get<T>, {0x1D0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDeltaToSendWorldLocationToServer                         OFFSET(get<T>, {0x1F8, 40, 0, 0})
+	SMember(FVector)                                   ReplicatedWorldLocation                                     OFFSET(get<T>, {0x228, 24, 0, 0})
+	CMember(TArray<UUserWidget*>)                      Widgets                                                     OFFSET(get<T>, {0x290, 16, 0, 0})
+	DMember(bool)                                      bAdditiveRotationAllowedByDefault                           OFFSET(get<bool>, {0x389, 1, 0, 0})
+	DMember(bool)                                      bZoomAllowedByDefault                                       OFFSET(get<bool>, {0x38B, 1, 0, 0})
+	SMember(FName)                                     ZoomActionName                                              OFFSET(get<T>, {0x38C, 4, 0, 0})
+	CMember(UCameraComponent*)                         AdditiveOffsetCameraComponent                               OFFSET(get<T>, {0x398, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.SetZoomAllowed
+	// void SetZoomAllowed(bool bInZoomAllowed);                                                                                // [0x9e54168] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.SetAllowOnNonOwningClients
+	// void SetAllowOnNonOwningClients(bool bAllow);                                                                            // [0x9e53268] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.SetAdditiveRotationAllowed
+	// void SetAdditiveRotationAllowed(bool bInAdditiveRotationAllowed);                                                        // [0x9e531e8] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ServerOnWorldLocationChanged
+	// void ServerOnWorldLocationChanged(FVector WorldLocation);                                                                // [0x9e53094] Final|Net|Native|Event|Private|NetServer|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.PushCursor
+	// void PushCursor(FGameplayTag& CursorModeTag, UObject* InstigatingObject, bool bActivate);                                // [0x9e529b8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.PopCursor
+	// void PopCursor(FGameplayTag& CursorModeTag, UObject* InstigatingObject, bool bDeactivateIfStackEmpty);                   // [0x9e527e0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.PopAllCursorsForObject
+	// void PopAllCursorsForObject(UObject* InstigatingObject, bool bDeactivateIfStackEmpty);                                   // [0x9e52718] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnRep_ReplicatedWorldLocation
+	// void OnRep_ReplicatedWorldLocation();                                                                                    // [0x9e52470] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnRep_ReplicatedCursorStackEntry
+	// void OnRep_ReplicatedCursorStackEntry(FSpecialEventCursorStackEntry& OldCursorStackEntry);                               // [0x9e523dc] Final|Native|Private|HasOutParms 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnRep_bAllowOnNonOwningClients
+	// void OnRep_bAllowOnNonOwningClients();                                                                                   // [0x9e5259c] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnLocallyControlledCursorVisibilityChanged
+	// void OnLocallyControlledCursorVisibilityChanged(USpecialEventCursorPawnComponent* CursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0x9e5202c] Final|Native|Private|HasOutParms 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnInputMethodChanged
+	// void OnInputMethodChanged(ECommonInputType InputType);                                                                   // [0x9e51fac] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.OnHUDPostRender
+	// void OnHUDPostRender(AHUD* HUD, UCanvas* Canvas);                                                                        // [0x5fd7ee0] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.MoveInputUpdate
+	// void MoveInputUpdate(FVector& InInputVector);                                                                            // [0x9e51a74] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.LookInputUpdate
+	// void LookInputUpdate(FVector& InInputVector);                                                                            // [0x9e518a0] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.IsZoomAllowed
+	// bool IsZoomAllowed();                                                                                                    // [0x68dcf58] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.IsLocallyControlled
+	// bool IsLocallyControlled();                                                                                              // [0x9e51888] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.IsAdditiveRotationAllowed
+	// bool IsAdditiveRotationAllowed();                                                                                        // [0x9e51870] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.InputPressed
+	// void InputPressed(FName& ActionName, bool bPressed);                                                                     // [0x9e51724] Final|Native|Private|HasOutParms 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GyroInputUpdate
+	// void GyroInputUpdate(FVector& InInputVector);                                                                            // [0x9e514cc] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetWorldLocationAndDirection
+	// bool GetWorldLocationAndDirection(FVector& OutWorldLocation, FVector& OutWorldDirection);                                // [0x9e51314] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetViewportSize
+	// bool GetViewportSize(FVector2D& OutViewportSize);                                                                        // [0x9e51280] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetViewportLocation
+	// bool GetViewportLocation(FVector2D& OutViewportLocation);                                                                // [0x9e511e0] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetViewportCenter
+	// bool GetViewportCenter(FVector2D& OutViewportCenter);                                                                    // [0x9e5111c] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetSpecialEventCursorPawnComponent
+	// USpecialEventCursorPawnComponent* GetSpecialEventCursorPawnComponent(APawn* Pawn, FGameplayTag& CursorModeTag, bool bMustBeActive); // [0x9e507ac] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetNormalizedLocation
+	// FVector2D GetNormalizedLocation();                                                                                       // [0x9e50790] Final|BlueprintCosmetic|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetLocalController
+	// APlayerController* GetLocalController();                                                                                 // [0x9e506ac] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetInputType
+	// ECommonInputType GetInputType();                                                                                         // [0x8652970] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCursorModeTagsForWidget
+	// FGameplayTagContainer GetCursorModeTagsForWidget(UUserWidget* Widget);                                                   // [0x9e4fca0] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCurrentWidget
+	// UUserWidget* GetCurrentWidget();                                                                                         // [0x9e4fc48] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCurrentHitResult
+	// bool GetCurrentHitResult(FHitResult& OutHitResult);                                                                      // [0x9e4fa78] Final|BlueprintCosmetic|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCurrentCursorModeTag
+	// FGameplayTag GetCurrentCursorModeTag();                                                                                  // [0x5a6c2a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCenteredWidgetLocation
+	// FVector2D GetCenteredWidgetLocation(UUserWidget* Widget, FVector2D& ViewportLocation);                                   // [0x9e4f8a8] Final|RequiredAPI|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.GetCameraComponent
+	// UCameraComponent* GetCameraComponent();                                                                                  // [0x9e4f884] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertWorldToViewportLocation
+	// bool ConvertWorldToViewportLocation(FVector2D& OutViewportLocation, FVector& WorldLocation);                             // [0x9e4e5f8] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertWorldToNormalizedLocation
+	// bool ConvertWorldToNormalizedLocation(FVector2D& OutNormalizedLocation, FVector& WorldLocation);                         // [0x9e4e4a8] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertViewportToWorldLocationAndDirection
+	// bool ConvertViewportToWorldLocationAndDirection(FVector& OutWorldLocation, FVector& OutWorldDirection, FVector2D& ViewportLocation); // [0x9e4e2b0] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertViewportToNormalizedLocation
+	// bool ConvertViewportToNormalizedLocation(FVector2D& OutNormalizedLocation, FVector2D& ViewportLocation);                 // [0x9e4e1c0] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertNormalizedToWorldLocationAndDirection
+	// bool ConvertNormalizedToWorldLocationAndDirection(FVector& OutWorldLocation, FVector& OutWorldDirection, FVector2D& NormalizedLocation); // [0x9e4dfc8] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.ConvertNormalizedToViewportLocation
+	// bool ConvertNormalizedToViewportLocation(FVector2D& OutViewportLocation, FVector2D& NormalizedLocation);                 // [0x9e4ded8] Final|BlueprintCosmetic|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorPawnComponent.CanBeVisible
+	// bool CanBeVisible();                                                                                                     // [0x9e4de64] Final|BlueprintCosmetic|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent
 /// Size: 0x0098 (0x0000A0 - 0x000138)
 class USpecialEventCursorWeaponComponent : public UFortWeaponComponent
@@ -391,15 +756,40 @@ class USpecialEventCursorWeaponComponent : public UFortWeaponComponent
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCursorPawnComponentSet                                    ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	CMember(UClass*)                                   CursorPawnComponentClass                                    ___ OFFSET(get<T>, {0xB8, 8, 0, 0})
-	SMember(FGameplayTag)                              CursorModeTag                                               ___ OFFSET(get<T>, {0xC0, 4, 0, 0})
-	DMember(bool)                                      bAlignFXToCursor                                            ___ OFFSET(get<bool>, {0xC4, 1, 0, 0})
-	CMember(AFortWeapon*)                              OwningWeapon                                                ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          Pawn                                                        ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(USpecialEventCursorPawnComponent*)         CursorPawnComponent                                         ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCursorPawnComponentSet                                    OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(UClass*)                                   CursorPawnComponentClass                                    OFFSET(get<T>, {0xB8, 8, 0, 0})
+	SMember(FGameplayTag)                              CursorModeTag                                               OFFSET(get<T>, {0xC0, 4, 0, 0})
+	DMember(bool)                                      bAlignFXToCursor                                            OFFSET(get<bool>, {0xC4, 1, 0, 0})
+	CMember(AFortWeapon*)                              OwningWeapon                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          Pawn                                                        OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(USpecialEventCursorPawnComponent*)         CursorPawnComponent                                         OFFSET(get<T>, {0xD8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnUnEquip
+	// void OnUnEquip(AFortWeapon* Weapon);                                                                                     // [0x9e52698] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnRep_CursorPawnComponent
+	// void OnRep_CursorPawnComponent();                                                                                        // [0x9e52334] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnPlayImpactFX
+	// void OnPlayImpactFX(AFortWeapon* Weapon, FHitResult& HitResult, UFXSystemComponent* FXSystemComponent);                  // [0x9e521a4] Final|Native|Private|HasOutParms 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnGetAimRotOverride
+	// void OnGetAimRotOverride(AFortWeapon* Weapon, EFortAbilityTargetingSource TargetingSource, FRotator& OutOverride, bool& bOutExecutionResult); // [0x9e51e48] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnEquip
+	// void OnEquip(AFortWeapon* Weapon);                                                                                       // [0x9e51dc8] Final|Native|Private 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.OnBeamFired
+	// void OnBeamFired(AFortWeapon* Weapon, bool bUsePersistentBeam, UFXSystemComponent* PSC, FVector& BeamOrigin, FVector& HitLocation); // [0x9e51b5c] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.GetSpecialEventCursorPawnComponentForWeapon
+	// USpecialEventCursorPawnComponent* GetSpecialEventCursorPawnComponentForWeapon(AFortWeapon* Weapon);                      // [0x9e509ac] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.GetSpecialEventCursorPawnComponentForCurrentWeapon
+	// USpecialEventCursorPawnComponent* GetSpecialEventCursorPawnComponentForCurrentWeapon(AFortPlayerPawn* Pawn);             // [0x9e5091c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.GetCursorPawnComponent
+	// USpecialEventCursorPawnComponent* GetCursorPawnComponent();                                                              // [0x82ba034] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.GetCurrentSpecialEventCursorWeaponComponent
+	// USpecialEventCursorWeaponComponent* GetCurrentSpecialEventCursorWeaponComponent(AFortPlayerPawn* Pawn);                  // [0x9e4fbc8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventCursorWeaponComponent.GetCurrentHitResult
+	// bool GetCurrentHitResult(FHitResult& OutHitResult);                                                                      // [0x9e4fb20] Final|BlueprintCosmetic|Native|Public|HasOutParms|BlueprintCallable|Const 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventGameplayGlobals
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USpecialEventGameplayGlobals : public UObject
@@ -428,9 +818,14 @@ class UFortAsyncAction_GameplayCinematicComponentReady : public UBlueprintAsyncA
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnReady                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReady                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAsyncAction_GameplayCinematicComponentReady.FindGameplayCinematicComponentAsync
+	// UFortAsyncAction_GameplayCinematicComponentReady* FindGameplayCinematicComponentAsync(AController* Conroller);           // [0x9e4ec00] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent
 /// Size: 0x0048 (0x0000A0 - 0x0000E8)
 class USpecialEventGameUserSettingsControllerComponent : public UActorComponent
@@ -439,11 +834,32 @@ class USpecialEventGameUserSettingsControllerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnLoaded                                                    ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FString)                                   Version                                                     ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	DMember(float)                                     MinTimeBetweenSaves                                         ___ OFFSET(get<float>, {0xC0, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLoaded                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FString)                                   Version                                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
+	DMember(float)                                     MinTimeBetweenSaves                                         OFFSET(get<float>, {0xC0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SpecialEventGameUserSettings_ToggleDebug
+	// void SpecialEventGameUserSettings_ToggleDebug();                                                                         // [0x2d79908] Final|BlueprintCosmetic|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SpecialEventGameUserSettings_SetData
+	// void SpecialEventGameUserSettings_SetData(FString Data);                                                                 // [0x5ea2948] Final|BlueprintCosmetic|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SpecialEventGameUserSettings_LogData
+	// void SpecialEventGameUserSettings_LogData();                                                                             // [0x2d79908] Final|BlueprintCosmetic|Exec|Native|Public|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SpecialEventGameUserSettings_ClearData
+	// void SpecialEventGameUserSettings_ClearData();                                                                           // [0x9e54680] Final|BlueprintCosmetic|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SetSavingBlocked
+	// void SetSavingBlocked(bool bBlocked);                                                                                    // [0x9e540e8] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.SetData
+	// void SetData(FString Data, bool bAllowSave, bool bSaveNow);                                                              // [0x9e532e8] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.ParseLoadedData
+	// void ParseLoadedData(FString Data);                                                                                      // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.GetSpecialEventGameUserSettingsControllerComponent
+	// USpecialEventGameUserSettingsControllerComponent* GetSpecialEventGameUserSettingsControllerComponent(UObject* WorldContextObject); // [0x9e50a2c] Final|BlueprintCosmetic|Native|Static|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventGameUserSettingsControllerComponent.GetData
+	// void GetData(ESpecialEventGameUserSettingsResult& OutResult, FString& OutData);                                          // [0x9e4fd48] Final|BlueprintCosmetic|Native|Public|HasOutParms|BlueprintCallable|Const 
 /// Class /Script/SpecialEventGameplayRuntime.FortAsyncAction_SpecialEventGameUserSettingsReady
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UFortAsyncAction_SpecialEventGameUserSettingsReady : public UBlueprintAsyncActionBase
@@ -452,9 +868,14 @@ class UFortAsyncAction_SpecialEventGameUserSettingsReady : public UBlueprintAsyn
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnReady                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReady                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.FortAsyncAction_SpecialEventGameUserSettingsReady.SpecialEventGameUserSettingsReadyAsync
+	// UFortAsyncAction_SpecialEventGameUserSettingsReady* SpecialEventGameUserSettingsReadyAsync(UObject* WorldContextObject); // [0x9e5452c] Final|BlueprintCosmetic|Native|Static|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventPhase
 /// Size: 0x00A0 (0x000290 - 0x000330)
 class ASpecialEventPhase : public AInfo
@@ -463,21 +884,44 @@ class ASpecialEventPhase : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FGameplayTag)                              PhaseTag                                                    ___ OFFSET(get<T>, {0x2A8, 4, 0, 0})
-	DMember(bool)                                      bApplyGameplayEffects                                       ___ OFFSET(get<bool>, {0x2AC, 1, 0, 0})
-	CMember(TArray<UClass*>)                           GameplayEffectsToApply                                      ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) ControllerComponentsToApplyInfoList                    ___ OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) PawnComponentsToApplyInfoList                          ___ OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	CMember(UClass*)                                   CameraModifierToApply                                       ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	DMember(bool)                                      bRemoveModifierOnPhaseDeactivation                          ___ OFFSET(get<bool>, {0x2E8, 1, 0, 0})
-	DMember(bool)                                      bRemoveGameplayEffects                                      ___ OFFSET(get<bool>, {0x2E9, 1, 0, 0})
-	CMember(TArray<UClass*>)                           GameplayEffectsToRemove                                     ___ OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) ControllerComponentsToRemoveInfoList                   ___ OFFSET(get<T>, {0x300, 16, 0, 0})
-	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) PawnComponentsToRemoveInfoList                         ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(UCameraModifier*)                          AppliedCameraModifier                                       ___ OFFSET(get<T>, {0x320, 8, 0, 0})
-	CMember(ESpecialEventPhaseState)                   PhaseState                                                  ___ OFFSET(get<T>, {0x328, 1, 0, 0})
+	SMember(FGameplayTag)                              PhaseTag                                                    OFFSET(get<T>, {0x2A8, 4, 0, 0})
+	DMember(bool)                                      bApplyGameplayEffects                                       OFFSET(get<bool>, {0x2AC, 1, 0, 0})
+	CMember(TArray<UClass*>)                           GameplayEffectsToApply                                      OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) ControllerComponentsToApplyInfoList                    OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) PawnComponentsToApplyInfoList                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	CMember(UClass*)                                   CameraModifierToApply                                       OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	DMember(bool)                                      bRemoveModifierOnPhaseDeactivation                          OFFSET(get<bool>, {0x2E8, 1, 0, 0})
+	DMember(bool)                                      bRemoveGameplayEffects                                      OFFSET(get<bool>, {0x2E9, 1, 0, 0})
+	CMember(TArray<UClass*>)                           GameplayEffectsToRemove                                     OFFSET(get<T>, {0x2F0, 16, 0, 0})
+	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) ControllerComponentsToRemoveInfoList                   OFFSET(get<T>, {0x300, 16, 0, 0})
+	CMember(TArray<FSpecialEventPhaseComponentNetModeInfo>) PawnComponentsToRemoveInfoList                         OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(UCameraModifier*)                          AppliedCameraModifier                                       OFFSET(get<T>, {0x320, 8, 0, 0})
+	CMember(ESpecialEventPhaseState)                   PhaseState                                                  OFFSET(get<T>, {0x328, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.SetHUDElementVisibility
+	// void SetHUDElementVisibility(FGameplayTagContainer& HUDElementTags, bool bHideElements);                                 // [0x9e53a0c] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.PrePhaseActivation_Server
+	// void PrePhaseActivation_Server();                                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnRep_PhaseState
+	// void OnRep_PhaseState();                                                                                                 // [0x9e523a0] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnPhaseFinished
+	// void OnPhaseFinished();                                                                                                  // [0x9e52190] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnPhaseDeactivation_Server
+	// void OnPhaseDeactivation_Server();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnPhaseDeactivation_Client
+	// void OnPhaseDeactivation_Client();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnPhaseActivation_Server
+	// void OnPhaseActivation_Server();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.OnPhaseActivation_Client
+	// void OnPhaseActivation_Client();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.GetPhaseTag
+	// FGameplayTag GetPhaseTag();                                                                                              // [0x98907a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPhase.DebugActivatePhase
+	// void DebugActivatePhase();                                                                                               // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventPlayerMannequin
 /// Size: 0x0008 (0x000618 - 0x000620)
 class ASpecialEventPlayerMannequin : public AFortPlayerMannequin
@@ -486,12 +930,21 @@ class ASpecialEventPlayerMannequin : public AFortPlayerMannequin
 	static inline constexpr uint64_t __MDKClassSize = 1568;
 
 public:
-	DMember(bool)                                      bDisableCollisionOnBeginPlay                                ___ OFFSET(get<bool>, {0x618, 1, 1, 0})
-	DMember(bool)                                      bDisableComponentsTickOnServer                              ___ OFFSET(get<bool>, {0x618, 1, 1, 1})
-	DMember(bool)                                      bRegisterWithSpecialEventMutatorOnClient                    ___ OFFSET(get<bool>, {0x618, 1, 1, 2})
-	DMember(bool)                                      bDestroyUnusedSkeletalMeshComponentsOnClientFirstInitialization ___ OFFSET(get<bool>, {0x618, 1, 1, 3})
+	DMember(bool)                                      bDisableCollisionOnBeginPlay                                OFFSET(get<bool>, {0x618, 1, 1, 0})
+	DMember(bool)                                      bDisableComponentsTickOnServer                              OFFSET(get<bool>, {0x618, 1, 1, 1})
+	DMember(bool)                                      bRegisterWithSpecialEventMutatorOnClient                    OFFSET(get<bool>, {0x618, 1, 1, 2})
+	DMember(bool)                                      bDestroyUnusedSkeletalMeshComponentsOnClientFirstInitialization OFFSET(get<bool>, {0x618, 1, 1, 3})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPlayerMannequin.RegisterWithSpecialEventMutator
+	// void RegisterWithSpecialEventMutator();                                                                                  // [0x9e52b90] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPlayerMannequin.HandleOnMutatorAdded
+	// void HandleOnMutatorAdded(AFortGameplayMutator* NewMutator);                                                             // [0x9e515b4] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventPlayerMannequin.DestroyUnusedSkeletalMeshComponents
+	// void DestroyUnusedSkeletalMeshComponents();                                                                              // [0x9e4e8ac] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponent
 /// Size: 0x0028 (0x0000A0 - 0x0000C8)
 class USpecialEventRewindComponent : public UActorComponent
@@ -500,17 +953,24 @@ class USpecialEventRewindComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	DMember(float)                                     MaxRecordingDuration                                        ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	DMember(float)                                     LocalRecordingFPS                                           ___ OFFSET(get<float>, {0xA4, 4, 0, 0})
-	DMember(float)                                     ReplicatedRecordingFPS                                      ___ OFFSET(get<float>, {0xA8, 4, 0, 0})
-	DMember(bool)                                      bAutoStartRecording                                         ___ OFFSET(get<bool>, {0xAC, 1, 0, 0})
-	DMember(float)                                     RewindLerpTime                                              ___ OFFSET(get<float>, {0xB0, 4, 0, 0})
-	DMember(float)                                     DefaultRewindDuration                                       ___ OFFSET(get<float>, {0xB4, 4, 0, 0})
-	DMember(float)                                     DefaultRewindPlaybackSpeed                                  ___ OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FSpecialEventRewindComponentStateData)     StateData                                                   ___ OFFSET(get<T>, {0xBC, 8, 0, 0})
-	DMember(float)                                     ReplicatedRewindDuration                                    ___ OFFSET(get<float>, {0xC4, 4, 0, 0})
+	DMember(float)                                     MaxRecordingDuration                                        OFFSET(get<float>, {0xA0, 4, 0, 0})
+	DMember(float)                                     LocalRecordingFPS                                           OFFSET(get<float>, {0xA4, 4, 0, 0})
+	DMember(float)                                     ReplicatedRecordingFPS                                      OFFSET(get<float>, {0xA8, 4, 0, 0})
+	DMember(bool)                                      bAutoStartRecording                                         OFFSET(get<bool>, {0xAC, 1, 0, 0})
+	DMember(float)                                     RewindLerpTime                                              OFFSET(get<float>, {0xB0, 4, 0, 0})
+	DMember(float)                                     DefaultRewindDuration                                       OFFSET(get<float>, {0xB4, 4, 0, 0})
+	DMember(float)                                     DefaultRewindPlaybackSpeed                                  OFFSET(get<float>, {0xB8, 4, 0, 0})
+	SMember(FSpecialEventRewindComponentStateData)     StateData                                                   OFFSET(get<T>, {0xBC, 8, 0, 0})
+	DMember(float)                                     ReplicatedRewindDuration                                    OFFSET(get<float>, {0xC4, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponent.TryStartRewinding
+	// bool TryStartRewinding(float Duration, float PlaybackSpeed);                                                             // [0x9e547d0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponent.OnRep_StateData
+	// void OnRep_StateData(FSpecialEventRewindComponentStateData& OldStateData);                                               // [0x9e52508] Final|Native|Private|HasOutParms 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponent_PlayerPawn
 /// Size: 0x02C0 (0x0000C8 - 0x000388)
 class USpecialEventRewindComponent_PlayerPawn : public USpecialEventRewindComponent
@@ -519,11 +979,16 @@ class USpecialEventRewindComponent_PlayerPawn : public USpecialEventRewindCompon
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	DMember(bool)                                      bStartServerRecordingOnLastGroundFrame                      ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
-	SMember(FSpecialEventRewindComponentRecording_PlayerPawn) ReplicatedRecording                                  ___ OFFSET(get<T>, {0xF0, 32, 0, 0})
-	SMember(FSpecialEventRewindComponentRecordingFastArray_PlayerPawn) ReplicatedRecordingFastArray                ___ OFFSET(get<T>, {0x228, 280, 0, 0})
+	DMember(bool)                                      bStartServerRecordingOnLastGroundFrame                      OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	SMember(FSpecialEventRewindComponentRecording_PlayerPawn) ReplicatedRecording                                  OFFSET(get<T>, {0xF0, 32, 0, 0})
+	SMember(FSpecialEventRewindComponentRecordingFastArray_PlayerPawn) ReplicatedRecordingFastArray                OFFSET(get<T>, {0x228, 280, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponent_PlayerPawn.OnServerLanded
+	// void OnServerLanded(FHitResult& Hit);                                                                                    // [0x9e52600] Final|Native|Private|HasOutParms 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventScript
 /// Size: 0x0080 (0x000290 - 0x000310)
 class ASpecialEventScript : public AInfo
@@ -532,24 +997,45 @@ class ASpecialEventScript : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSpecialEventPhaseActivated                                ___ OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpecialEventPhaseDeactivated                              ___ OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	CMember(TArray<FPhaseInfo>)                        PhaseInfoArray                                              ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	CMember(ALevelSequenceActor*)                      MasterSequence                                              ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	DMember(float)                                     DropDeadWindowSizeInSeconds                                 ___ OFFSET(get<float>, {0x2C8, 4, 0, 0})
-	DMember(float)                                     DelayAfterConentLoad                                        ___ OFFSET(get<float>, {0x2CC, 4, 0, 0})
-	DMember(float)                                     DelayAfterWarmup                                            ___ OFFSET(get<float>, {0x2D0, 4, 0, 0})
-	DMember(float)                                     ForceReturnToMainMenuTime                                   ___ OFFSET(get<float>, {0x2D4, 4, 0, 0})
-	DMember(float)                                     ForceReturnToMainMenuTimeRandomness                         ___ OFFSET(get<float>, {0x2D8, 4, 0, 0})
-	DMember(float)                                     MinDelayReturnToMainMenu                                    ___ OFFSET(get<float>, {0x2DC, 4, 0, 0})
-	DMember(float)                                     MaxDelayReturnToMainMenu                                    ___ OFFSET(get<float>, {0x2E0, 4, 0, 0})
-	DMember(bool)                                      bPreloadAllLevelsOnServer                                   ___ OFFSET(get<bool>, {0x2E4, 1, 0, 0})
-	DMember(bool)                                      bAllowGarbageCollectionAfterUnload                          ___ OFFSET(get<bool>, {0x2E5, 1, 0, 0})
-	DMember(bool)                                      bFullPurgeGC                                                ___ OFFSET(get<bool>, {0x2E6, 1, 0, 0})
-	DMember(int32_t)                                   ReplicatedActivePhaseIndex                                  ___ OFFSET(get<int32_t>, {0x2E8, 4, 0, 0})
-	CMember(UMeshNetworkComponent*)                    MeshNetworkComponent                                        ___ OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpecialEventPhaseActivated                                OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpecialEventPhaseDeactivated                              OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	CMember(TArray<FPhaseInfo>)                        PhaseInfoArray                                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	CMember(ALevelSequenceActor*)                      MasterSequence                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	DMember(float)                                     DropDeadWindowSizeInSeconds                                 OFFSET(get<float>, {0x2C8, 4, 0, 0})
+	DMember(float)                                     DelayAfterConentLoad                                        OFFSET(get<float>, {0x2CC, 4, 0, 0})
+	DMember(float)                                     DelayAfterWarmup                                            OFFSET(get<float>, {0x2D0, 4, 0, 0})
+	DMember(float)                                     ForceReturnToMainMenuTime                                   OFFSET(get<float>, {0x2D4, 4, 0, 0})
+	DMember(float)                                     ForceReturnToMainMenuTimeRandomness                         OFFSET(get<float>, {0x2D8, 4, 0, 0})
+	DMember(float)                                     MinDelayReturnToMainMenu                                    OFFSET(get<float>, {0x2DC, 4, 0, 0})
+	DMember(float)                                     MaxDelayReturnToMainMenu                                    OFFSET(get<float>, {0x2E0, 4, 0, 0})
+	DMember(bool)                                      bPreloadAllLevelsOnServer                                   OFFSET(get<bool>, {0x2E4, 1, 0, 0})
+	DMember(bool)                                      bAllowGarbageCollectionAfterUnload                          OFFSET(get<bool>, {0x2E5, 1, 0, 0})
+	DMember(bool)                                      bFullPurgeGC                                                OFFSET(get<bool>, {0x2E6, 1, 0, 0})
+	DMember(int32_t)                                   ReplicatedActivePhaseIndex                                  OFFSET(get<int32_t>, {0x2E8, 4, 0, 0})
+	CMember(UMeshNetworkComponent*)                    MeshNetworkComponent                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.UpdateMasterSequence
+	// void UpdateMasterSequence(float Time);                                                                                   // [0x56b9e24] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.StartEventAtIndex
+	// void StartEventAtIndex(int32_t InStartingIndex);                                                                         // [0x9e546b8] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.SetLocalPlayersSignificantForSpecialEventSequence
+	// void SetLocalPlayersSignificantForSpecialEventSequence(bool bIsSignificant);                                             // [0x9e53c74] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.OnRep_ReplicatedActivePhaseIndex
+	// void OnRep_ReplicatedActivePhaseIndex();                                                                                 // [0x9e523c4] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.GetActivePhaseIndex
+	// int32_t GetActivePhaseIndex();                                                                                           // [0x8f1afc4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.BP_OnScriptReady
+	// void BP_OnScriptReady();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.BP_OnScriptFinished
+	// void BP_OnScriptFinished();                                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.AttemptStartNextPhase
+	// void AttemptStartNextPhase(FGameplayTag CurrentPhaseTag);                                                                // [0x9e4dd10] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScript.AttemptFinishPhase
+	// void AttemptFinishPhase(FGameplayTag PhaseTag);                                                                          // [0x9e4dbbc] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor
 /// Size: 0x0030 (0x000290 - 0x0002C0)
 class ASpecialEventScriptMeshActor : public AInfo
@@ -558,13 +1044,30 @@ class ASpecialEventScriptMeshActor : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FDateTime)                                 RootStartTime                                               ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	SMember(FString)                                   CalendarEventName                                           ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	DMember(float)                                     CalenderEventOffsetInSeconds                                ___ OFFSET(get<float>, {0x2A8, 4, 0, 0})
-	DMember(float)                                     EncryptionKeyDeliveryTimeOffset                             ___ OFFSET(get<float>, {0x2AC, 4, 0, 0})
-	CMember(UMeshNetworkComponent*)                    MeshNetworkComponent                                        ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	SMember(FDateTime)                                 RootStartTime                                               OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FString)                                   CalendarEventName                                           OFFSET(get<T>, {0x298, 16, 0, 0})
+	DMember(float)                                     CalenderEventOffsetInSeconds                                OFFSET(get<float>, {0x2A8, 4, 0, 0})
+	DMember(float)                                     EncryptionKeyDeliveryTimeOffset                             OFFSET(get<float>, {0x2AC, 4, 0, 0})
+	CMember(UMeshNetworkComponent*)                    MeshNetworkComponent                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.OnRep_RootStartTime
+	// void OnRep_RootStartTime();                                                                                              // [0x9e52488] Final|Native|Protected 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootStartEvent
+	// void MeshRootStartEvent();                                                                                               // [0x9e51a60] Final|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootStartCalendarTimerOnly
+	// void MeshRootStartCalendarTimerOnly();                                                                                   // [0x9e519d8] Final|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootStartCalendarTimer
+	// void MeshRootStartCalendarTimer();                                                                                       // [0x9e519c4] Final|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootResetEvent
+	// void MeshRootResetEvent();                                                                                               // [0x9e519b0] Final|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootLogCalendarTimer
+	// void MeshRootLogCalendarTimer();                                                                                         // [0x9e5199c] Final|Exec|Native|Public 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventScriptMeshActor.MeshRootClearCalendarTimer
+	// void MeshRootClearCalendarTimer();                                                                                       // [0x9e51988] Final|Exec|Native|Public 
 /// Class /Script/SpecialEventGameplayRuntime.SpecialEventStatComponent
 /// Size: 0x0140 (0x0000A0 - 0x0001E0)
 class USpecialEventStatComponent : public UActorComponent
@@ -573,11 +1076,22 @@ class USpecialEventStatComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnValueChangedDelegate                                      ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TArray<FSpecialEventStatDefinition>)       StatDefinitions                                             ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FSpecialEventStatArray)                    StatFastArray                                               ___ OFFSET(get<T>, {0xC0, 288, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnValueChangedDelegate                                      OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FSpecialEventStatDefinition>)       StatDefinitions                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FSpecialEventStatArray)                    StatFastArray                                               OFFSET(get<T>, {0xC0, 288, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventStatComponent.GetStat
+	// FSpecialEventStatArrayEntry GetStat(bool& bOutValid, FGameplayTag LookupTag);                                            // [0x9e50f68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventStatComponent.GetSpecialEventStat
+	// FSpecialEventStatArrayEntry GetSpecialEventStat(bool& bOutValid, AActor* Actor, FGameplayTag LookupTag);                 // [0x9e50d18] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventStatComponent.AdjustStat
+	// bool AdjustStat(FGameplayTag LookupTag, float Adjustment, bool bLogError);                                               // [0x9e4d60c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialEventStatComponent.AdjustSpecialEventStat
+	// void AdjustSpecialEventStat(AActor* Actor, FGameplayTag LookupTag, float Adjustment);                                    // [0x9e4d364] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/SpecialEventGameplayRuntime.DamageRecordEntry
 /// Size: 0x0120 (0x000028 - 0x000148)
 class UDamageRecordEntry : public UObject
@@ -586,13 +1100,18 @@ class UDamageRecordEntry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	DMember(float)                                     DamageTotal                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     EndReplicationTime                                          ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FGameplayCueParameters)                    GameplayCueParams                                           ___ OFFSET(get<T>, {0x68, 208, 0, 0})
+	DMember(float)                                     DamageTotal                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     EndReplicationTime                                          OFFSET(get<float>, {0x2C, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FGameplayCueParameters)                    GameplayCueParams                                           OFFSET(get<T>, {0x68, 208, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.DamageRecordEntry.OnRep_DamageTotal
+	// void OnRep_DamageTotal();                                                                                                // [0x9e52348] Final|Native|Public  
 /// Class /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent
 /// Size: 0x0068 (0x0000A0 - 0x000108)
 class USpecialRelevancyHealthComponent : public USpecialRelevancyComponentBase
@@ -601,15 +1120,34 @@ class USpecialRelevancyHealthComponent : public USpecialRelevancyComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FScalableFloat)                            RelevancyDeathTimeLength                                    ___ OFFSET(get<T>, {0xA0, 40, 0, 0})
-	DMember(bool)                                      bSetLifespanOnLastRelevancyDeath                            ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
-	DMember(float)                                     OwnerMaxHealthCached                                        ___ OFFSET(get<float>, {0xCC, 4, 0, 0})
-	CMember(TArray<UDamageRecordEntry*>)               ReplicatedDamageRecords                                     ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpecialRelevancyDeath                                     ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpecialRelevancyDamage                                    ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	CMember(AFortAthenaMutator_SpecialRelevancy*)      CachedMutator                                               ___ OFFSET(get<T>, {0x100, 8, 0, 0})
+	SMember(FScalableFloat)                            RelevancyDeathTimeLength                                    OFFSET(get<T>, {0xA0, 40, 0, 0})
+	DMember(bool)                                      bSetLifespanOnLastRelevancyDeath                            OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	DMember(float)                                     OwnerMaxHealthCached                                        OFFSET(get<float>, {0xCC, 4, 0, 0})
+	CMember(TArray<UDamageRecordEntry*>)               ReplicatedDamageRecords                                     OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpecialRelevancyDeath                                     OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpecialRelevancyDamage                                    OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(AFortAthenaMutator_SpecialRelevancy*)      CachedMutator                                               OFFSET(get<T>, {0x100, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.OnKilled
+	// void OnKilled(AFortPlayerState* KillingPlayerState, int32_t RelevancyGroupIndex);                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.OnDamaged
+	// void OnDamaged(AFortPlayerState* DamagingPlayerState, int32_t RelevancyGroupIndex, float DealtDamage, float ActualDealtDamage, float TotalDamage, float DealtDamagePercent, float ActualDealtDamagePercent, float TotalDamagePercent, float MaxHealth, bool bKilled); // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.GetHealthPercentFromRelevancyIndex
+	// float GetHealthPercentFromRelevancyIndex(int32_t Index);                                                                 // [0x9e5061c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.GetHealthPercent
+	// float GetHealthPercent(AActor* RelevancyActor);                                                                          // [0x9e504d4] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.GetHealthFromRelevancyIndex
+	// float GetHealthFromRelevancyIndex(int32_t Index);                                                                        // [0x9e5058c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.GetHealth
+	// float GetHealth(AActor* RelevancyActor);                                                                                 // [0x9e504d4] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.ClientGetHealthPercent
+	// float ClientGetHealthPercent();                                                                                          // [0x9e4deb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/SpecialEventGameplayRuntime.SpecialRelevancyHealthComponent.ClientGetHealth
+	// float ClientGetHealth();                                                                                                 // [0x9e4de88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialClientEvent
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FSpecialClientEvent : public MDKStruct
@@ -618,10 +1156,10 @@ class FSpecialClientEvent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(AFortPlayerControllerAthena*)              PlayerController                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     TimeSeconds                                                 ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FGameplayTag)                              EventTag                                                    ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     TimeSeconds                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventStatArrayEntry
@@ -632,11 +1170,11 @@ class FSpecialEventStatArrayEntry : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(USpecialEventStatComponent*)               StatComponent                                               ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(AActor*)                                   Owner                                                       ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	DMember(int32_t)                                   StatDefinitionIndex                                         ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	SMember(FSpecialEventStatDefinition)               StatDefinitionCopy                                          ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x34, 4, 0, 0})
+	CMember(USpecialEventStatComponent*)               StatComponent                                               OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(AActor*)                                   Owner                                                       OFFSET(get<T>, {0x18, 8, 0, 0})
+	DMember(int32_t)                                   StatDefinitionIndex                                         OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FSpecialEventStatDefinition)               StatDefinitionCopy                                          OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventStatDefinition
@@ -647,10 +1185,10 @@ class FSpecialEventStatDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              LookupTag                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     min                                                         ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     max                                                         ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     DefaultValue                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	SMember(FGameplayTag)                              LookupTag                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     min                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     max                                                         OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     DefaultValue                                                OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventTODMSubphaseData
@@ -661,11 +1199,11 @@ class FSpecialEventTODMSubphaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     PhaseTime                                                   ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(ESpecialEventTODMModifyType)               ModifyType                                                  ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	CMember(UClass*)                                   SpawnClass                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     TimeOfDay                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     SpeedFactor                                                 ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     PhaseTime                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(ESpecialEventTODMModifyType)               ModifyType                                                  OFFSET(get<T>, {0x4, 1, 0, 0})
+	CMember(UClass*)                                   SpawnClass                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     TimeOfDay                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     SpeedFactor                                                 OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventTODMPhaseData
@@ -676,8 +1214,8 @@ class FSpecialEventTODMPhaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGameplayTag)                              PhaseTag                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FSpecialEventTODMSubphaseData>)     SubphaseDataArray                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayTag)                              PhaseTag                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FSpecialEventTODMSubphaseData>)     SubphaseDataArray                                           OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventMathEaseData
@@ -688,9 +1226,9 @@ class FSpecialEventMathEaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	CMember(TEnumAsByte<EEasingFunc>)                  EasingFunc                                                  ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(float)                                     BlendExp                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Steps                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	CMember(TEnumAsByte<EEasingFunc>)                  EasingFunc                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(float)                                     BlendExp                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Steps                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.DestroyActorsAndComponentsMutator_ComponentDefinition
@@ -701,11 +1239,11 @@ class FDestroyActorsAndComponentsMutator_ComponentDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ComponentName                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EDestroyActorsAndComponentsMutator_ComponentNameComparisonType) NameComparisonType                     ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bDestroyOnServer                                            ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(bool)                                      bDestroyOnClient                                            ___ OFFSET(get<bool>, {0x12, 1, 0, 0})
-	DMember(bool)                                      bPromoteChildrenOfDestroyedComponents                       ___ OFFSET(get<bool>, {0x13, 1, 0, 0})
+	SMember(FString)                                   ComponentName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EDestroyActorsAndComponentsMutator_ComponentNameComparisonType) NameComparisonType                     OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bDestroyOnServer                                            OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bDestroyOnClient                                            OFFSET(get<bool>, {0x12, 1, 0, 0})
+	DMember(bool)                                      bPromoteChildrenOfDestroyedComponents                       OFFSET(get<bool>, {0x13, 1, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.DestroyActorsAndComponentsMutator_ActorDefinition
@@ -716,17 +1254,17 @@ class FDestroyActorsAndComponentsMutator_ActorDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   SoftActorClass                                              ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	DMember(bool)                                      bStartEnabled                                               ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	DMember(bool)                                      bDestroyActorOnServer                                       ___ OFFSET(get<bool>, {0x41, 1, 0, 0})
-	DMember(bool)                                      bDestroyActorOnClient                                       ___ OFFSET(get<bool>, {0x42, 1, 0, 0})
-	DMember(bool)                                      bNetForceOnActorDestroy                                     ___ OFFSET(get<bool>, {0x43, 1, 0, 0})
-	DMember(bool)                                      bShouldModifyLevelOnActorDestroy                            ___ OFFSET(get<bool>, {0x44, 1, 0, 0})
-	CMember(TArray<FDestroyActorsAndComponentsMutator_ComponentDefinition>) ComponentDefinitions                   ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(bool)                                      bCurrentlyEnabled                                           ___ OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(bool)                                      bPermanentlyDisabled                                        ___ OFFSET(get<bool>, {0x59, 1, 0, 0})
-	CMember(TArray<AActor*>)                           ActorsToProcess                                             ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   SoftActorClass                                              OFFSET(get<T>, {0x20, 32, 0, 0})
+	DMember(bool)                                      bStartEnabled                                               OFFSET(get<bool>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bDestroyActorOnServer                                       OFFSET(get<bool>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bDestroyActorOnClient                                       OFFSET(get<bool>, {0x42, 1, 0, 0})
+	DMember(bool)                                      bNetForceOnActorDestroy                                     OFFSET(get<bool>, {0x43, 1, 0, 0})
+	DMember(bool)                                      bShouldModifyLevelOnActorDestroy                            OFFSET(get<bool>, {0x44, 1, 0, 0})
+	CMember(TArray<FDestroyActorsAndComponentsMutator_ComponentDefinition>) ComponentDefinitions                   OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(bool)                                      bCurrentlyEnabled                                           OFFSET(get<bool>, {0x58, 1, 0, 0})
+	DMember(bool)                                      bPermanentlyDisabled                                        OFFSET(get<bool>, {0x59, 1, 0, 0})
+	CMember(TArray<AActor*>)                           ActorsToProcess                                             OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FakeKillRelevancyVictim
@@ -737,8 +1275,8 @@ class FFakeKillRelevancyVictim : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(AFortPlayerStateAthena*)                   PlayerState                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   DeathLocation                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(AFortPlayerStateAthena*)                   PlayerState                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FVector)                                   DeathLocation                                               OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FakeKillRelevancyPlayerDataEntry
@@ -749,12 +1287,12 @@ class FFakeKillRelevancyPlayerDataEntry : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FFakeKillRelevancyVictim>)          Victims                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGameplayTag)                              Reason                                                      ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   PhaseNum                                                    ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(int32_t)                                   WaveNum                                                     ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	DMember(float)                                     RelevancyDelay                                              ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     RelevancyChangeServerWorldTime                              ___ OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(TArray<FFakeKillRelevancyVictim>)          Victims                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGameplayTag)                              Reason                                                      OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   PhaseNum                                                    OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(int32_t)                                   WaveNum                                                     OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(float)                                     RelevancyDelay                                              OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     RelevancyChangeServerWorldTime                              OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FakeKillRelevancyPlayerDataArray
@@ -765,8 +1303,8 @@ class FFakeKillRelevancyPlayerDataArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FFakeKillRelevancyPlayerDataEntry>) Entries                                                     ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UFortControllerComponent_FakeKillRelevancy*) ControllerComponent                                       ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FFakeKillRelevancyPlayerDataEntry>) Entries                                                     OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UFortControllerComponent_FakeKillRelevancy*) ControllerComponent                                       OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FakeKillRelevancyPhaseData
@@ -777,10 +1315,10 @@ class FFakeKillRelevancyPhaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              Reason                                                      ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   NumWavesExpected                                            ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	DMember(int32_t)                                   WaveNum                                                     ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(float)                                     RelevancyDelay                                              ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
+	SMember(FGameplayTag)                              Reason                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   NumWavesExpected                                            OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   WaveNum                                                     OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(float)                                     RelevancyDelay                                              OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FakeKillRelevancyBucket
@@ -821,10 +1359,10 @@ class FSpecialEventMapData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGameplayTag)                              MapTag                                                      ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FName>)                             MapNames                                                    ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(bool)                                      bReplicatedHasBeenUnloaded                                  ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bHasBeenUnloaded                                            ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
+	SMember(FGameplayTag)                              MapTag                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FName>)                             MapNames                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(bool)                                      bReplicatedHasBeenUnloaded                                  OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bHasBeenUnloaded                                            OFFSET(get<bool>, {0x19, 1, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FortDelayRTMMData
@@ -835,10 +1373,10 @@ class FFortDelayRTMMData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bDelayRTTM                                                  ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     MinRTTMDelay                                                ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MaxRTTMDelay                                                ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Timestamp                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bDelayRTTM                                                  OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     MinRTTMDelay                                                OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MaxRTTMDelay                                                OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FortSpecialEventGEData
@@ -849,8 +1387,8 @@ class FFortSpecialEventGEData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UClass*)                                   GameplayEffect                                              ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(int32_t)                                   Level                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	CMember(UClass*)                                   GameplayEffect                                              OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(int32_t)                                   Level                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.FortSpecialEventOverrideParts
@@ -861,8 +1399,8 @@ class FFortSpecialEventOverrideParts : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<UCustomCharacterPart*>)             OverrideParts                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FFortSpecialEventGEData)                   GameplayEffectToApplyOnSwap                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<UCustomCharacterPart*>)             OverrideParts                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FFortSpecialEventGEData)                   GameplayEffectToApplyOnSwap                                 OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.BuffetBubblesReplicatedData
@@ -873,8 +1411,8 @@ class FBuffetBubblesReplicatedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                RelativeTransform                                           ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FVector)                                   RelativeVelocity                                            ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FTransform)                                RelativeTransform                                           OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FVector)                                   RelativeVelocity                                            OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.BuffetBubblesDebugData
@@ -895,8 +1433,8 @@ class FBuffetFlyingRicochetReplicatedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     StartTime                                                   ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.CustomTickComonentQualitySettings
@@ -907,11 +1445,11 @@ class FCustomTickComonentQualitySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(int32_t)                                   NumFramesToSkipBetweenEvaluations                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   MinFramesToSkipBetweenCustomTicks                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   MaxFramesToSkipBetweenCustomTicks                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     InnerDistance                                               ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     OuterDistance                                               ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   NumFramesToSkipBetweenEvaluations                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   MinFramesToSkipBetweenCustomTicks                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MaxFramesToSkipBetweenCustomTicks                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     InnerDistance                                               OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     OuterDistance                                               OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventAudioHapticsAction
@@ -922,14 +1460,14 @@ class FSpecialEventAudioHapticsAction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     LoudnessFloor                                               ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     LoudnessCeiling                                             ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     HapticsIntensity                                            ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   ChannelIndex                                                ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bAffectsLeftLarge                                           ___ OFFSET(get<bool>, {0x10, 1, 1, 0})
-	DMember(bool)                                      bAffectsLeftSmall                                           ___ OFFSET(get<bool>, {0x10, 1, 1, 1})
-	DMember(bool)                                      bAffectsRightLarge                                          ___ OFFSET(get<bool>, {0x10, 1, 1, 2})
-	DMember(bool)                                      bAffectsRightSmall                                          ___ OFFSET(get<bool>, {0x10, 1, 1, 3})
+	DMember(float)                                     LoudnessFloor                                               OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     LoudnessCeiling                                             OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     HapticsIntensity                                            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   ChannelIndex                                                OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bAffectsLeftLarge                                           OFFSET(get<bool>, {0x10, 1, 1, 0})
+	DMember(bool)                                      bAffectsLeftSmall                                           OFFSET(get<bool>, {0x10, 1, 1, 1})
+	DMember(bool)                                      bAffectsRightLarge                                          OFFSET(get<bool>, {0x10, 1, 1, 2})
+	DMember(bool)                                      bAffectsRightSmall                                          OFFSET(get<bool>, {0x10, 1, 1, 3})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventCursorMode
@@ -940,29 +1478,29 @@ class FSpecialEventCursorMode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UClass*)                                   WidgetClass                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(bool)                                      bAllowDebugCursorDrawing                                    ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FSpecialEventMathEaseData)                 GamepadMoveEaseData                                         ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FScalableFloat)                            GamepadMoveSpeed                                            ___ OFFSET(get<T>, {0x18, 40, 0, 0})
-	SMember(FSpecialEventMathEaseData)                 TouchMoveEaseData                                           ___ OFFSET(get<T>, {0x40, 12, 0, 0})
-	SMember(FScalableFloat)                            TouchMoveSpeed                                              ___ OFFSET(get<T>, {0x50, 40, 0, 0})
-	DMember(float)                                     TouchDeadzoneTreshold                                       ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	DMember(float)                                     TouchAttenuator                                             ___ OFFSET(get<float>, {0x7C, 4, 0, 0})
-	SMember(FScalableFloat)                            MinCursorPercentForAdditiveRotationPitch                    ___ OFFSET(get<T>, {0x80, 40, 0, 0})
-	SMember(FScalableFloat)                            MinCursorPercentForAdditiveRotationYaw                      ___ OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxAdditiveRotationPitch                                    ___ OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxAdditiveRotationYaw                                      ___ OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FScalableFloat)                            AdditiveRotationInterpSpeed                                 ___ OFFSET(get<T>, {0x120, 40, 0, 0})
-	SMember(FScalableFloat)                            ZoomInInterpSpeed                                           ___ OFFSET(get<T>, {0x148, 40, 0, 0})
-	SMember(FScalableFloat)                            ZoomOutInterpSpeed                                          ___ OFFSET(get<T>, {0x170, 40, 0, 0})
-	SMember(FScalableFloat)                            ZoomAdditiveFOV                                             ___ OFFSET(get<T>, {0x198, 40, 0, 0})
-	SMember(FScalableFloat)                            GamepadZoomMoveSpeed                                        ___ OFFSET(get<T>, {0x1C0, 40, 0, 0})
-	SMember(FScalableFloat)                            TouchZoomMoveSpeed                                          ___ OFFSET(get<T>, {0x1E8, 40, 0, 0})
-	DMember(bool)                                      bAllowTrace                                                 ___ OFFSET(get<bool>, {0x210, 1, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                ___ OFFSET(get<T>, {0x211, 1, 0, 0})
-	SMember(FScalableFloat)                            SweepRadius                                                 ___ OFFSET(get<T>, {0x218, 40, 0, 0})
-	SMember(FScalableFloat)                            TraceDistance                                               ___ OFFSET(get<T>, {0x240, 40, 0, 0})
-	SMember(FScalableFloat)                            bTraceComplex                                               ___ OFFSET(get<T>, {0x268, 40, 0, 0})
+	CMember(UClass*)                                   WidgetClass                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bAllowDebugCursorDrawing                                    OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FSpecialEventMathEaseData)                 GamepadMoveEaseData                                         OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FScalableFloat)                            GamepadMoveSpeed                                            OFFSET(get<T>, {0x18, 40, 0, 0})
+	SMember(FSpecialEventMathEaseData)                 TouchMoveEaseData                                           OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FScalableFloat)                            TouchMoveSpeed                                              OFFSET(get<T>, {0x50, 40, 0, 0})
+	DMember(float)                                     TouchDeadzoneTreshold                                       OFFSET(get<float>, {0x78, 4, 0, 0})
+	DMember(float)                                     TouchAttenuator                                             OFFSET(get<float>, {0x7C, 4, 0, 0})
+	SMember(FScalableFloat)                            MinCursorPercentForAdditiveRotationPitch                    OFFSET(get<T>, {0x80, 40, 0, 0})
+	SMember(FScalableFloat)                            MinCursorPercentForAdditiveRotationYaw                      OFFSET(get<T>, {0xA8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAdditiveRotationPitch                                    OFFSET(get<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAdditiveRotationYaw                                      OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            AdditiveRotationInterpSpeed                                 OFFSET(get<T>, {0x120, 40, 0, 0})
+	SMember(FScalableFloat)                            ZoomInInterpSpeed                                           OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FScalableFloat)                            ZoomOutInterpSpeed                                          OFFSET(get<T>, {0x170, 40, 0, 0})
+	SMember(FScalableFloat)                            ZoomAdditiveFOV                                             OFFSET(get<T>, {0x198, 40, 0, 0})
+	SMember(FScalableFloat)                            GamepadZoomMoveSpeed                                        OFFSET(get<T>, {0x1C0, 40, 0, 0})
+	SMember(FScalableFloat)                            TouchZoomMoveSpeed                                          OFFSET(get<T>, {0x1E8, 40, 0, 0})
+	DMember(bool)                                      bAllowTrace                                                 OFFSET(get<bool>, {0x210, 1, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0x211, 1, 0, 0})
+	SMember(FScalableFloat)                            SweepRadius                                                 OFFSET(get<T>, {0x218, 40, 0, 0})
+	SMember(FScalableFloat)                            TraceDistance                                               OFFSET(get<T>, {0x240, 40, 0, 0})
+	SMember(FScalableFloat)                            bTraceComplex                                               OFFSET(get<T>, {0x268, 40, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventCursorStackEntry
@@ -973,8 +1511,8 @@ class FSpecialEventCursorStackEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FGameplayTag)                              CursorModeTag                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  InstigatingObject                                           ___ OFFSET(get<T>, {0x4, 8, 0, 0})
+	SMember(FGameplayTag)                              CursorModeTag                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  InstigatingObject                                           OFFSET(get<T>, {0x4, 8, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventPhaseComponentNetModeInfo
@@ -985,8 +1523,8 @@ class FSpecialEventPhaseComponentNetModeInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ESpecialEventPhaseComponentNetModeType)    NetModeType                                                 ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(UClass*)                                   ComponentClass                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(ESpecialEventPhaseComponentNetModeType)    NetModeType                                                 OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(UClass*)                                   ComponentClass                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentStateData
@@ -997,9 +1535,9 @@ class FSpecialEventRewindComponentStateData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(ESpecialEventRewindComponentState)         State                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(char)                                      StateChangedCount                                           ___ OFFSET(get<char>, {0x1, 1, 0, 0})
-	DMember(float)                                     ServerWorldTime                                             ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(ESpecialEventRewindComponentState)         State                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(char)                                      StateChangedCount                                           OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(float)                                     ServerWorldTime                                             OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentFrame
@@ -1010,7 +1548,7 @@ class FSpecialEventRewindComponentFrame : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     ServerWorldTime                                             ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     ServerWorldTime                                             OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentRecording
@@ -1021,9 +1559,9 @@ class FSpecialEventRewindComponentRecording : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(USpecialEventRewindComponent*)             RewindComponent                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   StartFrameIndex                                             ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   EndFrameIndex                                               ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	CMember(USpecialEventRewindComponent*)             RewindComponent                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   StartFrameIndex                                             OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   EndFrameIndex                                               OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentFrame_PlayerPawn
@@ -1034,9 +1572,9 @@ class FSpecialEventRewindComponentFrame_PlayerPawn : public FSpecialEventRewindC
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector_NetQuantize)                       Location                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	DMember(char)                                      CompressedYaw                                               ___ OFFSET(get<char>, {0x28, 1, 0, 0})
-	DMember(char)                                      CompressedControlRotationPitch                              ___ OFFSET(get<char>, {0x29, 1, 0, 0})
+	SMember(FVector_NetQuantize)                       Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(char)                                      CompressedYaw                                               OFFSET(get<char>, {0x28, 1, 0, 0})
+	DMember(char)                                      CompressedControlRotationPitch                              OFFSET(get<char>, {0x29, 1, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentRecordingFastArray_PlayerPawn
@@ -1047,7 +1585,7 @@ class FSpecialEventRewindComponentRecordingFastArray_PlayerPawn : public FFastAr
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(TArray<FSpecialEventRewindComponentFrame_PlayerPawn>) Frames                                           ___ OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(TArray<FSpecialEventRewindComponentFrame_PlayerPawn>) Frames                                           OFFSET(get<T>, {0x108, 16, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventRewindComponentRecording_PlayerPawn
@@ -1068,12 +1606,12 @@ class FPhaseLevelEntryBase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(bool)                                      bLoadLevelOnScriptStart                                     ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bLevelStartsVisible                                         ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      bUnloadLevelOnPhaseEnd                                      ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
-	DMember(bool)                                      bMakeVisibleOnPhaseStart                                    ___ OFFSET(get<bool>, {0xB, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     MakeVisibleAtPhaseTags                                      ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     UnloadLevelAtPhaseTags                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      bLoadLevelOnScriptStart                                     OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bLevelStartsVisible                                         OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      bUnloadLevelOnPhaseEnd                                      OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      bMakeVisibleOnPhaseStart                                    OFFSET(get<bool>, {0xB, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     MakeVisibleAtPhaseTags                                      OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     UnloadLevelAtPhaseTags                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.PhaseLevelEntry
@@ -1084,12 +1622,12 @@ class FPhaseLevelEntry : public FPhaseLevelEntryBase
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TWeakObjectPtr<UWorld*>)                   LevelToLoad                                                 ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FString)                                   LevelName                                                   ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(bool)                                      bExcludeFromServerPreload                                   ___ OFFSET(get<bool>, {0x90, 1, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0xB0, 24, 0, 0})
-	CMember(ULevelStreamingDynamic*)                   LevelInstance                                               ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(TWeakObjectPtr<UWorld*>)                   LevelToLoad                                                 OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FString)                                   LevelName                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(bool)                                      bExcludeFromServerPreload                                   OFFSET(get<bool>, {0x90, 1, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0xB0, 24, 0, 0})
+	CMember(ULevelStreamingDynamic*)                   LevelInstance                                               OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.PhaseDataLayerEntry
@@ -1100,8 +1638,8 @@ class FPhaseDataLayerEntry : public FPhaseLevelEntryBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(UDataLayerAsset*)                          DataLayerAsset                                              ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	DMember(bool)                                      bIsRecursive                                                ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	CMember(UDataLayerAsset*)                          DataLayerAsset                                              OFFSET(get<T>, {0x60, 8, 0, 0})
+	DMember(bool)                                      bIsRecursive                                                OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.PhaseInfo
@@ -1112,19 +1650,19 @@ class FPhaseInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(UClass*)                                   PhaseActorClass                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              PhaseTag                                                    ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(float)                                     SequenceTime                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bSetRelevancyMode                                           ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	CMember(ESpecialRelevancyMode)                     RelevancyMode                                               ___ OFFSET(get<T>, {0x11, 1, 0, 0})
-	DMember(int32_t)                                   NumOfSquadsInRelevancyGroup                                 ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     RequireLevelsFromPhaseTags                                  ___ OFFSET(get<T>, {0x18, 32, 0, 0})
-	DMember(bool)                                      bStartNextPhaseOnPhaseFinished                              ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bGarbageCollectAtPhaseStartOnServer                         ___ OFFSET(get<bool>, {0x39, 1, 0, 0})
-	DMember(bool)                                      bGarbageCollectAtPhaseStartOnClient                         ___ OFFSET(get<bool>, {0x3A, 1, 0, 0})
-	CMember(ASpecialEventPhase*)                       PhaseActor                                                  ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	CMember(TArray<FPhaseLevelEntry>)                  Levels                                                      ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FPhaseDataLayerEntry>)              DataLayers                                                  ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(UClass*)                                   PhaseActorClass                                             OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              PhaseTag                                                    OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(float)                                     SequenceTime                                                OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bSetRelevancyMode                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
+	CMember(ESpecialRelevancyMode)                     RelevancyMode                                               OFFSET(get<T>, {0x11, 1, 0, 0})
+	DMember(int32_t)                                   NumOfSquadsInRelevancyGroup                                 OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     RequireLevelsFromPhaseTags                                  OFFSET(get<T>, {0x18, 32, 0, 0})
+	DMember(bool)                                      bStartNextPhaseOnPhaseFinished                              OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bGarbageCollectAtPhaseStartOnServer                         OFFSET(get<bool>, {0x39, 1, 0, 0})
+	DMember(bool)                                      bGarbageCollectAtPhaseStartOnClient                         OFFSET(get<bool>, {0x3A, 1, 0, 0})
+	CMember(ASpecialEventPhase*)                       PhaseActor                                                  OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(TArray<FPhaseLevelEntry>)                  Levels                                                      OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FPhaseDataLayerEntry>)              DataLayers                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/SpecialEventGameplayRuntime.SpecialEventStatArray
@@ -1135,8 +1673,8 @@ class FSpecialEventStatArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FSpecialEventStatArrayEntry>)       Stats                                                       ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(USpecialEventStatComponent*)               StatComponent                                               ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FSpecialEventStatArrayEntry>)       Stats                                                       OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(USpecialEventStatComponent*)               StatComponent                                               OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Enum /Script/SpecialEventGameplayRuntime.ESpecialEventTODMModifyType

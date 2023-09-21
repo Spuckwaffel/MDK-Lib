@@ -15,11 +15,11 @@ class UWaveTableBank : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(EWaveTableSamplingMode)                    SampleMode                                                  ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(EWaveTableResolution)                      Resolution                                                  ___ OFFSET(get<T>, {0x31, 1, 0, 0})
-	DMember(int32_t)                                   SampleRate                                                  ___ OFFSET(get<int32_t>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bBipolar                                                    ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	CMember(TArray<FWaveTableBankEntry>)               Entries                                                     ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(EWaveTableSamplingMode)                    SampleMode                                                  OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(EWaveTableResolution)                      Resolution                                                  OFFSET(get<T>, {0x31, 1, 0, 0})
+	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bBipolar                                                    OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(TArray<FWaveTableBankEntry>)               Entries                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableData
@@ -30,9 +30,9 @@ class FWaveTableData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(EWaveTableBitDepth)                        BitDepth                                                    ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(TArray<char>)                              Data                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(float)                                     FinalValue                                                  ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(EWaveTableBitDepth)                        BitDepth                                                    OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(TArray<char>)                              Data                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     FinalValue                                                  OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableBankEntry
@@ -43,7 +43,7 @@ class FWaveTableBankEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FWaveTableTransform)                       Transform                                                   ___ OFFSET(get<T>, {0x0, 184, 0, 0})
+	SMember(FWaveTableTransform)                       Transform                                                   OFFSET(get<T>, {0x0, 184, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableTransform
@@ -54,12 +54,12 @@ class FWaveTableTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(EWaveTableCurve)                           Curve                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scalar                                                      ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FRichCurve)                                CurveCustom                                                 ___ OFFSET(get<T>, {0x8, 128, 0, 0})
-	CMember(UCurveFloat*)                              CurveShared                                                 ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FWaveTableData)                            TableData                                                   ___ OFFSET(get<T>, {0x90, 32, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xB0, 4, 0, 0})
+	CMember(EWaveTableCurve)                           Curve                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scalar                                                      OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FRichCurve)                                CurveCustom                                                 OFFSET(get<T>, {0x8, 128, 0, 0})
+	CMember(UCurveFloat*)                              CurveShared                                                 OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FWaveTableData)                            TableData                                                   OFFSET(get<T>, {0x90, 32, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xB0, 4, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableSettings
@@ -70,17 +70,17 @@ class FWaveTableSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FFilePath)                                 FilePath                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   ChannelIndex                                                ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FWaveTableData)                            SourceData                                                  ___ OFFSET(get<T>, {0x18, 32, 0, 0})
-	DMember(int32_t)                                   SourceSampleRate                                            ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	DMember(float)                                     Phase                                                       ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Top                                                         ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     Tail                                                        ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     FadeIn                                                      ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     FadeOut                                                     ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(bool)                                      bNormalize                                                  ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bRemoveOffset                                               ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
+	SMember(FFilePath)                                 FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   ChannelIndex                                                OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FWaveTableData)                            SourceData                                                  OFFSET(get<T>, {0x18, 32, 0, 0})
+	DMember(int32_t)                                   SourceSampleRate                                            OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	DMember(float)                                     Phase                                                       OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Top                                                         OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     Tail                                                        OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     FadeIn                                                      OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     FadeOut                                                     OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(bool)                                      bNormalize                                                  OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bRemoveOffset                                               OFFSET(get<bool>, {0x51, 1, 0, 0})
 };
 
 /// Enum /Script/WaveTable.EWaveTableBitDepth

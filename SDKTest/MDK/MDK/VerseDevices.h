@@ -18,9 +18,9 @@ class UVerseCreativePropAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     AssetPathName                                               ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	CMember(ULevelSaveRecord*)                         LevelSaveRecord                                             ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  ___ OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FName)                                     AssetPathName                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	CMember(ULevelSaveRecord*)                         LevelSaveRecord                                             OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  OFFSET(get<T>, {0x38, 32, 0, 0})
 };
 
 /// Class /Script/VerseDevices.PlaylistUserOptionScript
@@ -31,8 +31,8 @@ class UPlaylistUserOptionScript : public UPlaylistUserOptionBase
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	CMember(TArray<FPlaylistOptionScriptValue>)        OptionValues                                                ___ OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	DMember(int32_t)                                   DefaultValueIndex                                           ___ OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
+	CMember(TArray<FPlaylistOptionScriptValue>)        OptionValues                                                OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	DMember(int32_t)                                   DefaultValueIndex                                           OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
 };
 
 /// Class /Script/VerseDevices.ScriptDevice
@@ -43,10 +43,21 @@ class AScriptDevice : public ABuildingProp
 	static inline constexpr uint64_t __MDKClassSize = 3040;
 
 public:
-	CMember(UVerseCreativeDevice*)                     Script                                                      ___ OFFSET(get<T>, {0xBB8, 8, 0, 0})
-	CMember(UVerseCreativeDevice*)                     ScriptInstance                                              ___ OFFSET(get<T>, {0xBC8, 8, 0, 0})
+	CMember(UVerseCreativeDevice*)                     Script                                                      OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	CMember(UVerseCreativeDevice*)                     ScriptInstance                                              OFFSET(get<T>, {0xBC8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VerseDevices.ScriptDevice.SetEnabled
+	// void SetEnabled(bool bInEnabled);                                                                                        // [0x97b12b8] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/VerseDevices.ScriptDevice.HandlePreMinigameStartedSetup
+	// void HandlePreMinigameStartedSetup();                                                                                    // [0x97b12a4] Final|Native|Public  
+	// Function /Script/VerseDevices.ScriptDevice.HandleMinigameEndGame
+	// void HandleMinigameEndGame(AFortPlayerController* PlayerController, EFortMinigameEnd EndMethod, EFortMinigameState NextState); // [0x97b11a4] Final|Native|Public  
+	// Function /Script/VerseDevices.ScriptDevice.BP_SetVisibility
+	// void BP_SetVisibility(bool bVisible);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/VerseDevices.VerseMovableObjectBase
 /// Size: 0x0078 (0x000028 - 0x0000A0)
 class UVerseMovableObjectBase : public UObject
@@ -75,7 +86,7 @@ class UVerseCreativeObject : public UVerseMovableObjectBase
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(ABuildingActor*)                           SavedActor                                                  ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(ABuildingActor*)                           SavedActor                                                  OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Class /Script/VerseDevices.VerseCreativeObjectQuotaHelperComponent
@@ -96,7 +107,7 @@ class UVerseDevicesFeatureAction_RegisterWrapperClasses : public UGameFeatureAct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TWeakObjectPtr<UVerseDeviceWrapperClassMap*>) DeviceToWrapperClassMapAsset                             ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	CMember(TWeakObjectPtr<UVerseDeviceWrapperClassMap*>) DeviceToWrapperClassMapAsset                             OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/VerseDevices.VerseDeviceWrapperClassMap
@@ -107,7 +118,7 @@ class UVerseDeviceWrapperClassMap : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<TWeakObjectPtr, UClass*>)             DeviceClassMap                                              ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, UClass*>)             DeviceClassMap                                              OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Class /Script/VerseDevices.VerseDeviceWrapperClassMapSubsystem
@@ -118,7 +129,7 @@ class UVerseDeviceWrapperClassMapSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<TWeakObjectPtr, UVerseClass*>)        DeviceClassToVerseClassMap                                  ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, UVerseClass*>)        DeviceClassToVerseClassMap                                  OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VerseDevices.PlaylistOptionScriptValue
@@ -129,7 +140,7 @@ class FPlaylistOptionScriptValue : public FPlaylistOptionValue
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(UClass*)                                   Value                                                       ___ OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(UClass*)                                   Value                                                       OFFSET(get<T>, {0x98, 8, 0, 0})
 };
 
 /// Struct /Script/VerseDevices.VerseDeviceFunctionPayload
@@ -140,6 +151,6 @@ class FVerseDeviceFunctionPayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(AController*)                              Instigator                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(AController*)                              Instigator                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 

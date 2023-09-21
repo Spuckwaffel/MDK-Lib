@@ -22,10 +22,17 @@ class UControlRigShapeLibraryLink : public UNameSpacedUserData
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	CMember(UControlRigShapeLibrary*)                  ShapeLibrary                                                ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(TArray<FName>)                             ShapeNames                                                  ___ OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UControlRigShapeLibrary*)                  ShapeLibrary                                                OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(TArray<FName>)                             ShapeNames                                                  OFFSET(get<T>, {0x108, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigShapeLibraryLink.SetShapeLibrary
+	// void SetShapeLibrary(UControlRigShapeLibrary* InShapeLibrary);                                                           // [0x6de7714] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeLibraryLink.GetShapeLibrary
+	// UControlRigShapeLibrary* GetShapeLibrary();                                                                              // [0x6d74778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ControlRig.RigHierarchy
 /// Size: 0x0358 (0x000028 - 0x000380)
 class URigHierarchy : public UObject
@@ -34,17 +41,342 @@ class URigHierarchy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FMulticastInlineDelegate)                  ModifiedEventDynamic                                        ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	DMember(uint16_t)                                  TopologyVersion                                             ___ OFFSET(get<uint16_t>, {0x98, 2, 0, 0})
-	DMember(uint16_t)                                  MetadataVersion                                             ___ OFFSET(get<uint16_t>, {0x9A, 2, 0, 0})
-	DMember(uint16_t)                                  MetadataTagVersion                                          ___ OFFSET(get<uint16_t>, {0x9C, 2, 0, 0})
-	DMember(bool)                                      bEnableDirtyPropagation                                     ___ OFFSET(get<bool>, {0x9E, 1, 0, 0})
-	DMember(int32_t)                                   TransformStackIndex                                         ___ OFFSET(get<int32_t>, {0x138, 4, 0, 0})
-	CMember(URigHierarchyController*)                  HierarchyController                                         ___ OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	CMember(TMap<FRigElementKey, FRigElementKey>)      PreviousNameMap                                             ___ OFFSET(get<T>, {0x208, 80, 0, 0})
-	CMember(URigHierarchy*)                            HierarchyForCacheValidation                                 ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ModifiedEventDynamic                                        OFFSET(get<T>, {0x40, 16, 0, 0})
+	DMember(uint16_t)                                  TopologyVersion                                             OFFSET(get<uint16_t>, {0x98, 2, 0, 0})
+	DMember(uint16_t)                                  MetadataVersion                                             OFFSET(get<uint16_t>, {0x9A, 2, 0, 0})
+	DMember(uint16_t)                                  MetadataTagVersion                                          OFFSET(get<uint16_t>, {0x9C, 2, 0, 0})
+	DMember(bool)                                      bEnableDirtyPropagation                                     OFFSET(get<bool>, {0x9E, 1, 0, 0})
+	DMember(int32_t)                                   TransformStackIndex                                         OFFSET(get<int32_t>, {0x138, 4, 0, 0})
+	CMember(URigHierarchyController*)                  HierarchyController                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
+	CMember(TMap<FRigElementKey, FRigElementKey>)      PreviousNameMap                                             OFFSET(get<T>, {0x208, 80, 0, 0})
+	CMember(URigHierarchy*)                            HierarchyForCacheValidation                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.RigHierarchy.UnsetCurveValueByIndex
+	// void UnsetCurveValueByIndex(int32_t InElementIndex, bool bSetupUndo);                                                    // [0x6de9904] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.UnsetCurveValue
+	// void UnsetCurveValue(FRigElementKey InKey, bool bSetupUndo);                                                             // [0x6de967c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SwitchToWorldSpace
+	// bool SwitchToWorldSpace(FRigElementKey InChild, bool bInitial, bool bAffectChildren);                                    // [0x6de92e8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SwitchToParent
+	// bool SwitchToParent(FRigElementKey InChild, FRigElementKey InParent, bool bInitial, bool bAffectChildren);               // [0x6de8e44] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SwitchToDefaultParent
+	// bool SwitchToDefaultParent(FRigElementKey InChild, bool bInitial, bool bAffectChildren);                                 // [0x6de8ab0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SortKeys
+	// TArray<FRigElementKey> SortKeys(TArray<FRigElementKey>& InKeys);                                                         // [0x6de89e8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.SetVectorMetadata
+	// bool SetVectorMetadata(FRigElementKey InItem, FName InMetadataName, FVector InValue);                                    // [0x6de8640] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetVectorArrayMetadata
+	// bool SetVectorArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FVector> InValue);                       // [0x6de8250] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetTransformMetadata
+	// bool SetTransformMetadata(FRigElementKey InItem, FName InMetadataName, FTransform InValue);                              // [0x6de7e0c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetTransformArrayMetadata
+	// bool SetTransformArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FTransform> InValue);                 // [0x6de7a1c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetTag
+	// bool SetTag(FRigElementKey InItem, FName InTag);                                                                         // [0x6de7794] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetRotatorMetadata
+	// bool SetRotatorMetadata(FRigElementKey InItem, FName InMetadataName, FRotator InValue);                                  // [0x6de736c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetRotatorArrayMetadata
+	// bool SetRotatorArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FRotator> InValue);                     // [0x6de6fa0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetRigElementKeyMetadata
+	// bool SetRigElementKeyMetadata(FRigElementKey InItem, FName InMetadataName, FRigElementKey InValue);                      // [0x6de6c04] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetRigElementKeyArrayMetadata
+	// bool SetRigElementKeyArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FRigElementKey> InValue);         // [0x6de6838] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetQuatMetadata
+	// bool SetQuatMetadata(FRigElementKey InItem, FName InMetadataName, FQuat InValue);                                        // [0x6de6490] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetQuatArrayMetadata
+	// bool SetQuatArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FQuat> InValue);                           // [0x6de60c4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetPose_ForBlueprint
+	// void SetPose_ForBlueprint(FRigPose InPose);                                                                              // [0x6de5ef8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetParentWeightArray
+	// bool SetParentWeightArray(FRigElementKey InChild, TArray<FRigElementWeight> InWeights, bool bInitial, bool bAffectChildren); // [0x6de5a0c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetParentWeight
+	// bool SetParentWeight(FRigElementKey InChild, FRigElementKey InParent, FRigElementWeight InWeight, bool bInitial, bool bAffectChildren); // [0x6de543c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetNameMetadata
+	// bool SetNameMetadata(FRigElementKey InItem, FName InMetadataName, FName InValue);                                        // [0x6de50a4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetNameArrayMetadata
+	// bool SetNameArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FName> InValue);                           // [0x6de4cb8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetLocalTransformByIndex
+	// void SetLocalTransformByIndex(int32_t InElementIndex, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands); // [0x6de461c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetLocalTransform
+	// void SetLocalTransform(FRigElementKey InKey, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands); // [0x6de3eb0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetLinearColorMetadata
+	// bool SetLinearColorMetadata(FRigElementKey InItem, FName InMetadataName, FLinearColor InValue);                          // [0x6de3b10] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetLinearColorArrayMetadata
+	// bool SetLinearColorArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<FLinearColor> InValue);             // [0x6de3744] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetInt32Metadata
+	// bool SetInt32Metadata(FRigElementKey InItem, FName InMetadataName, int32_t InValue);                                     // [0x6de33ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetInt32ArrayMetadata
+	// bool SetInt32ArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<int32_t> InValue);                        // [0x6de2fc0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetGlobalTransformByIndex
+	// void SetGlobalTransformByIndex(int32_t InElementIndex, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommand); // [0x6de2924] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetGlobalTransform
+	// void SetGlobalTransform(FRigElementKey InKey, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommand); // [0x6de21b8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetFloatMetadata
+	// bool SetFloatMetadata(FRigElementKey InItem, FName InMetadataName, float InValue);                                       // [0x6de1e24] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetFloatArrayMetadata
+	// bool SetFloatArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<float> InValue);                          // [0x6de1a38] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetCurveValueByIndex
+	// void SetCurveValueByIndex(int32_t InElementIndex, float InValue, bool bSetupUndo);                                       // [0x6de1938] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetCurveValue
+	// void SetCurveValue(FRigElementKey InKey, float InValue, bool bSetupUndo);                                                // [0x6de15b8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlVisibilityByIndex
+	// void SetControlVisibilityByIndex(int32_t InElementIndex, bool bVisibility);                                              // [0x6de14f4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlVisibility
+	// void SetControlVisibility(FRigElementKey InKey, bool bVisibility);                                                       // [0x6de1260] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlValueByIndex
+	// void SetControlValueByIndex(int32_t InElementIndex, FRigControlValue InValue, ERigControlValueType InValueType, bool bSetupUndo, bool bPrintPythonCommands); // [0x6de0cf0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlValue
+	// void SetControlValue(FRigElementKey InKey, FRigControlValue InValue, ERigControlValueType InValueType, bool bSetupUndo, bool bPrintPythonCommands); // [0x6de06ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlShapeTransformByIndex
+	// void SetControlShapeTransformByIndex(int32_t InElementIndex, FTransform InTransform, bool bInitial, bool bSetupUndo);    // [0x6de0244] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlShapeTransform
+	// void SetControlShapeTransform(FRigElementKey InKey, FTransform InTransform, bool bInitial, bool bSetupUndo);             // [0x6ddfd00] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlSettingsByIndex
+	// void SetControlSettingsByIndex(int32_t InElementIndex, FRigControlSettings InSettings, bool bSetupUndo, bool bForce, bool bPrintPythonCommands); // [0x6ddf7d8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlSettings
+	// void SetControlSettings(FRigElementKey InKey, FRigControlSettings InSettings, bool bSetupUndo, bool bForce, bool bPrintPythonCommands); // [0x6ddf1d0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredRotatorByIndex
+	// void SetControlPreferredRotatorByIndex(int32_t InElementIndex, FRotator& InRotator, bool bInitial, bool bFixEulerFlips); // [0x6ddefa8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredRotator
+	// void SetControlPreferredRotator(FRigElementKey InKey, FRotator& InRotator, bool bInitial, bool bFixEulerFlips);          // [0x6ddeb64] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredRotationOrderByIndex
+	// void SetControlPreferredRotationOrderByIndex(int32_t InElementIndex, EEulerRotationOrder InRotationOrder);               // [0x6ddeaa0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredRotationOrder
+	// void SetControlPreferredRotationOrder(FRigElementKey InKey, EEulerRotationOrder InRotationOrder);                        // [0x6dde810] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredEulerAnglesByIndex
+	// void SetControlPreferredEulerAnglesByIndex(int32_t InElementIndex, FVector& InEulerAngles, EEulerRotationOrder InRotationOrder, bool bInitial, bool bFixEulerFlips); // [0x6dde4f0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlPreferredEulerAngles
+	// void SetControlPreferredEulerAngles(FRigElementKey InKey, FVector& InEulerAngles, EEulerRotationOrder InRotationOrder, bool bInitial, bool bFixEulerFlips); // [0x6dddf34] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlOffsetTransformByIndex
+	// void SetControlOffsetTransformByIndex(int32_t InElementIndex, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands); // [0x6ddd898] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetControlOffsetTransform
+	// void SetControlOffsetTransform(FRigElementKey InKey, FTransform InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands); // [0x6ddd12c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetBoolMetadata
+	// bool SetBoolMetadata(FRigElementKey InItem, FName InMetadataName, bool InValue);                                         // [0x6ddcd94] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SetBoolArrayMetadata
+	// bool SetBoolArrayMetadata(FRigElementKey InItem, FName InMetadataName, TArray<bool> InValue);                            // [0x6ddc9ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.SendAutoKeyEvent
+	// void SendAutoKeyEvent(FRigElementKey InElement, float InOffsetInSeconds, bool bAsynchronous);                            // [0x6ddc624] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.ResetToDefault
+	// void ResetToDefault();                                                                                                   // [0x6ddc610] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.ResetPoseToInitial
+	// void ResetPoseToInitial(ERigElementType InTypeFilter);                                                                   // [0x6ddc590] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.ResetCurveValues
+	// void ResetCurveValues();                                                                                                 // [0x6ddc538] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.Reset
+	// void Reset();                                                                                                            // [0x6ddc524] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.RemoveMetadata
+	// bool RemoveMetadata(FRigElementKey InItem, FName InMetadataName);                                                        // [0x6ddc29c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.RemoveAllMetadata
+	// bool RemoveAllMetadata(FRigElementKey InItem);                                                                           // [0x6ddc134] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.Num
+	// int32_t Num();                                                                                                           // [0x315ad40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromVector2D
+	// FRigControlValue MakeControlValueFromVector2D(FVector2D InValue);                                                        // [0x6ddbd78] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromVector
+	// FRigControlValue MakeControlValueFromVector(FVector InValue);                                                            // [0x6ddbf50] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromTransformNoScale
+	// FRigControlValue MakeControlValueFromTransformNoScale(FTransformNoScale InValue);                                        // [0x6ddbb84] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromTransform
+	// FRigControlValue MakeControlValueFromTransform(FTransform InValue);                                                      // [0x6ddb944] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromRotator
+	// FRigControlValue MakeControlValueFromRotator(FRotator InValue);                                                          // [0x6ddb784] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromInt
+	// FRigControlValue MakeControlValueFromInt(int32_t InValue);                                                               // [0x6ddb690] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromFloat
+	// FRigControlValue MakeControlValueFromFloat(float InValue);                                                               // [0x6ddb598] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromEulerTransform
+	// FRigControlValue MakeControlValueFromEulerTransform(FEulerTransform InValue);                                            // [0x6ddb388] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.MakeControlValueFromBool
+	// FRigControlValue MakeControlValueFromBool(bool InValue);                                                                 // [0x6ddb27c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.IsValidIndex
+	// bool IsValidIndex(int32_t InElementIndex);                                                                               // [0x6ddb1e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsSelectedByIndex
+	// bool IsSelectedByIndex(int32_t InIndex);                                                                                 // [0x6ddb138] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsSelected
+	// bool IsSelected(FRigElementKey InKey);                                                                                   // [0x6ddafd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsProcedural
+	// bool IsProcedural(FRigElementKey& InKey);                                                                                // [0x6ddaf24] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsParentedTo
+	// bool IsParentedTo(FRigElementKey InChild, FRigElementKey InParent);                                                      // [0x6ddac98] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsCurveValueSetByIndex
+	// bool IsCurveValueSetByIndex(int32_t InElementIndex);                                                                     // [0x6ddac0c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsCurveValueSet
+	// bool IsCurveValueSet(FRigElementKey InKey);                                                                              // [0x6ddaa9c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.IsControllerAvailable
+	// bool IsControllerAvailable();                                                                                            // [0x6ddaa84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.HasTag
+	// bool HasTag(FRigElementKey InItem, FName InTag);                                                                         // [0x6dda7fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetVectorMetadata
+	// FVector GetVectorMetadata(FRigElementKey InItem, FName InMetadataName, FVector DefaultValue);                            // [0x6dda434] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetVectorFromControlValue
+	// FVector GetVectorFromControlValue(FRigControlValue InValue);                                                             // [0x6dda2b0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetVectorArrayMetadata
+	// TArray<FVector> GetVectorArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                     // [0x6dda004] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetVector2DFromControlValue
+	// FVector2D GetVector2DFromControlValue(FRigControlValue InValue);                                                         // [0x6dd9e90] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetTransformNoScaleFromControlValue
+	// FTransformNoScale GetTransformNoScaleFromControlValue(FRigControlValue InValue);                                         // [0x6dd9ca4] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetTransformMetadata
+	// FTransform GetTransformMetadata(FRigElementKey InItem, FName InMetadataName, FTransform DefaultValue);                   // [0x6dd9820] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetTransformFromControlValue
+	// FTransform GetTransformFromControlValue(FRigControlValue InValue);                                                       // [0x6dd9604] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetTransformArrayMetadata
+	// TArray<FTransform> GetTransformArrayMetadata(FRigElementKey InItem, FName InMetadataName);                               // [0x6dd9358] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetTags
+	// TArray<FName> GetTags(FRigElementKey InItem);                                                                            // [0x6dd91d8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetSelectedKeys
+	// TArray<FRigElementKey> GetSelectedKeys(ERigElementType InTypeFilter);                                                    // [0x6dd9134] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRotatorMetadata
+	// FRotator GetRotatorMetadata(FRigElementKey InItem, FName InMetadataName, FRotator DefaultValue);                         // [0x6dd8d6c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRotatorFromControlValue
+	// FRotator GetRotatorFromControlValue(FRigControlValue InValue);                                                           // [0x6dd8bd8] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetRotatorArrayMetadata
+	// TArray<FRotator> GetRotatorArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                   // [0x6dd8904] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRootElementKeys
+	// TArray<FRigElementKey> GetRootElementKeys();                                                                             // [0x6dd88a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRigidBodyKeys
+	// TArray<FRigElementKey> GetRigidBodyKeys(bool bTraverse);                                                                 // [0x6dd87f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRigElementKeyMetadata
+	// FRigElementKey GetRigElementKeyMetadata(FRigElementKey InItem, FName InMetadataName, FRigElementKey DefaultValue);       // [0x6dd8450] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetRigElementKeyArrayMetadata
+	// TArray<FRigElementKey> GetRigElementKeyArrayMetadata(FRigElementKey InItem, FName InMetadataName);                       // [0x6dd8158] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetReferenceKeys
+	// TArray<FRigElementKey> GetReferenceKeys(bool bTraverse);                                                                 // [0x6dd80b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetQuatMetadata
+	// FQuat GetQuatMetadata(FRigElementKey InItem, FName InMetadataName, FQuat DefaultValue);                                  // [0x6dd7cec] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetQuatArrayMetadata
+	// TArray<FQuat> GetQuatArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                         // [0x6dd7a18] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetPreviousParent
+	// FRigElementKey GetPreviousParent(FRigElementKey& InKey);                                                                 // [0x6dd7980] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetPreviousName
+	// FName GetPreviousName(FRigElementKey& InKey);                                                                            // [0x6dd78ec] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetPose
+	// FRigPose GetPose(bool bInitial, bool bIncludeTransientControls);                                                         // [0x6dd77e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetParentWeightArray
+	// TArray<FRigElementWeight> GetParentWeightArray(FRigElementKey InChild, bool bInitial);                                   // [0x6dd7294] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetParentWeight
+	// FRigElementWeight GetParentWeight(FRigElementKey InChild, FRigElementKey InParent, bool bInitial);                       // [0x6dd6ee0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetParentTransformByIndex
+	// FTransform GetParentTransformByIndex(int32_t InElementIndex, bool bInitial);                                             // [0x6dd6dc0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetParentTransform
+	// FTransform GetParentTransform(FRigElementKey InKey, bool bInitial);                                                      // [0x6dd6ad8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetParents
+	// TArray<FRigElementKey> GetParents(FRigElementKey InKey, bool bRecursive);                                                // [0x6dd7534] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetNumberOfParents
+	// int32_t GetNumberOfParents(FRigElementKey InKey);                                                                        // [0x6dd696c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetNullKeys
+	// TArray<FRigElementKey> GetNullKeys(bool bTraverse);                                                                      // [0x6dd68c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetNameMetadata
+	// FName GetNameMetadata(FRigElementKey InItem, FName InMetadataName, FName DefaultValue);                                  // [0x6dd6520] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetNameArrayMetadata
+	// TArray<FName> GetNameArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                         // [0x6dd6274] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetMetadataType
+	// ERigMetadataType GetMetadataType(FRigElementKey InItem, FName InMetadataName);                                           // [0x6dd5fec] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.RigHierarchy.GetMetadataNames
+	// TArray<FName> GetMetadataNames(FRigElementKey InItem);                                                                   // [0x6dd5e6c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.RigHierarchy.GetLocalTransformByIndex
+	// FTransform GetLocalTransformByIndex(int32_t InElementIndex, bool bInitial);                                              // [0x6dd5d58] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLocalTransform
+	// FTransform GetLocalTransform(FRigElementKey InKey, bool bInitial);                                                       // [0x6dd5a88] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLocalIndex_ForBlueprint
+	// int32_t GetLocalIndex_ForBlueprint(FRigElementKey InKey);                                                                // [0x6dd5918] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLocalControlShapeTransformByIndex
+	// FTransform GetLocalControlShapeTransformByIndex(int32_t InElementIndex, bool bInitial);                                  // [0x6dd5804] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLocalControlShapeTransform
+	// FTransform GetLocalControlShapeTransform(FRigElementKey InKey, bool bInitial);                                           // [0x6dd5520] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLinearColorMetadata
+	// FLinearColor GetLinearColorMetadata(FRigElementKey InItem, FName InMetadataName, FLinearColor DefaultValue);             // [0x6dd5174] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetLinearColorArrayMetadata
+	// TArray<FLinearColor> GetLinearColorArrayMetadata(FRigElementKey InItem, FName InMetadataName);                           // [0x6dd4ea0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetKeys
+	// TArray<FRigElementKey> GetKeys(TArray<int32_t> InElementIndices);                                                        // [0x6dd4d3c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetKey
+	// FRigElementKey GetKey(int32_t InElementIndex);                                                                           // [0x6dd4cb4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetIntFromControlValue
+	// int32_t GetIntFromControlValue(FRigControlValue InValue);                                                                // [0x6dd4b50] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetInt32Metadata
+	// int32_t GetInt32Metadata(FRigElementKey InItem, FName InMetadataName, int32_t DefaultValue);                             // [0x6dd47b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetInt32ArrayMetadata
+	// TArray<int32_t> GetInt32ArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                      // [0x6dd450c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetIndex_ForBlueprint
+	// int32_t GetIndex_ForBlueprint(FRigElementKey InKey);                                                                     // [0x6dd43a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalTransformByIndex
+	// FTransform GetGlobalTransformByIndex(int32_t InElementIndex, bool bInitial);                                             // [0x6dd4294] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalTransform
+	// FTransform GetGlobalTransform(FRigElementKey InKey, bool bInitial);                                                      // [0x6dd3fc4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalControlShapeTransformByIndex
+	// FTransform GetGlobalControlShapeTransformByIndex(int32_t InElementIndex, bool bInitial);                                 // [0x6dd3eb0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalControlShapeTransform
+	// FTransform GetGlobalControlShapeTransform(FRigElementKey InKey, bool bInitial);                                          // [0x6dd3bcc] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalControlOffsetTransformByIndex
+	// FTransform GetGlobalControlOffsetTransformByIndex(int32_t InElementIndex, bool bInitial);                                // [0x6dd3ab8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetGlobalControlOffsetTransform
+	// FTransform GetGlobalControlOffsetTransform(FRigElementKey InKey, bool bInitial);                                         // [0x6dd37e8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetFloatMetadata
+	// float GetFloatMetadata(FRigElementKey InItem, FName InMetadataName, float DefaultValue);                                 // [0x6dd3454] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetFloatFromControlValue
+	// float GetFloatFromControlValue(FRigControlValue InValue);                                                                // [0x6dd32f8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetFloatArrayMetadata
+	// TArray<float> GetFloatArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                        // [0x6dd304c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetFirstParent
+	// FRigElementKey GetFirstParent(FRigElementKey InKey);                                                                     // [0x6dd2eec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetEulerTransformFromControlValue
+	// FEulerTransform GetEulerTransformFromControlValue(FRigControlValue InValue);                                             // [0x6dd2cf8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetDefaultParent
+	// FRigElementKey GetDefaultParent(FRigElementKey InKey);                                                                   // [0x6dd2b98] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetCurveValueByIndex
+	// float GetCurveValueByIndex(int32_t InElementIndex);                                                                      // [0x6dd2b08] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetCurveValue
+	// float GetCurveValue(FRigElementKey InKey);                                                                               // [0x6dd2998] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetCurveKeys
+	// TArray<FRigElementKey> GetCurveKeys();                                                                                   // [0x6dd2954] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlValueByIndex
+	// FRigControlValue GetControlValueByIndex(int32_t InElementIndex, ERigControlValueType InValueType);                       // [0x6dd2794] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlValue
+	// FRigControlValue GetControlValue(FRigElementKey InKey, ERigControlValueType InValueType);                                // [0x6dd24a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredRotatorByIndex
+	// FRotator GetControlPreferredRotatorByIndex(int32_t InElementIndex, bool bInitial);                                       // [0x6dd23d0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredRotator
+	// FRotator GetControlPreferredRotator(FRigElementKey InKey, bool bInitial);                                                // [0x6dd2118] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrderByIndex
+	// EEulerRotationOrder GetControlPreferredEulerRotationOrderByIndex(int32_t InElementIndex, bool bFromSettings);            // [0x6dd2054] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrder
+	// EEulerRotationOrder GetControlPreferredEulerRotationOrder(FRigElementKey InKey, bool bFromSettings);                     // [0x6dd1db8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredEulerAnglesByIndex
+	// FVector GetControlPreferredEulerAnglesByIndex(int32_t InElementIndex, EEulerRotationOrder InRotationOrder, bool bInitial); // [0x6dd1ca8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetControlPreferredEulerAngles
+	// FVector GetControlPreferredEulerAngles(FRigElementKey InKey, EEulerRotationOrder InRotationOrder, bool bInitial);        // [0x6dd18f4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetController
+	// URigHierarchyController* GetController(bool bCreateIfNeeded);                                                            // [0x6dd28c4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.GetControlKeys
+	// TArray<FRigElementKey> GetControlKeys(bool bTraverse);                                                                   // [0x6dd184c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetChildren
+	// TArray<FRigElementKey> GetChildren(FRigElementKey InKey, bool bRecursive);                                               // [0x6dd159c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetBoolMetadata
+	// bool GetBoolMetadata(FRigElementKey InItem, FName InMetadataName, bool DefaultValue);                                    // [0x6dd1204] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetBoolArrayMetadata
+	// TArray<bool> GetBoolArrayMetadata(FRigElementKey InItem, FName InMetadataName);                                          // [0x6dd0f58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetBoneKeys
+	// TArray<FRigElementKey> GetBoneKeys(bool bTraverse);                                                                      // [0x6dd0eb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.GetAllKeys_ForBlueprint
+	// TArray<FRigElementKey> GetAllKeys_ForBlueprint(bool bTraverse);                                                          // [0x6dd0e08] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.FindNull_ForBlueprintOnly
+	// FRigNullElement FindNull_ForBlueprintOnly(FRigElementKey& InKey);                                                        // [0x6dd0cb0] Final|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.FindControl_ForBlueprintOnly
+	// FRigControlElement FindControl_ForBlueprintOnly(FRigElementKey& InKey);                                                  // [0x6dd0bd0] Final|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.FindBone_ForBlueprintOnly
+	// FRigBoneElement FindBone_ForBlueprintOnly(FRigElementKey& InKey);                                                        // [0x6dd0a78] Final|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchy.CopyPose
+	// void CopyPose(URigHierarchy* InHierarchy, bool bCurrent, bool bInitial, bool bWeights, bool bMatchPoseInGlobalIfNeeded); // [0x6dd08d4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.CopyHierarchy
+	// void CopyHierarchy(URigHierarchy* InHierarchy);                                                                          // [0x6dd0854] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchy.Contains_ForBlueprint
+	// bool Contains_ForBlueprint(FRigElementKey InKey);                                                                        // [0x6dd06ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ControlRig.TransformableControlHandle
 /// Size: 0x0028 (0x000058 - 0x000080)
 class UTransformableControlHandle : public UTransformableHandle
@@ -53,8 +385,8 @@ class UTransformableControlHandle : public UTransformableHandle
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  ___ OFFSET(get<T>, {0x58, 32, 0, 0})
-	SMember(FName)                                     ControlName                                                 ___ OFFSET(get<T>, {0x78, 4, 0, 0})
+	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  OFFSET(get<T>, {0x58, 32, 0, 0})
+	SMember(FName)                                     ControlName                                                 OFFSET(get<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRig
@@ -65,19 +397,50 @@ class UControlRig : public URigVMHost
 	static inline constexpr uint64_t __MDKClassSize = 1552;
 
 public:
-	CMember(ERigExecutionType)                         ExecutionType                                               ___ OFFSET(get<T>, {0x340, 1, 0, 0})
-	SMember(FRigHierarchySettings)                     HierarchySettings                                           ___ OFFSET(get<T>, {0x344, 4, 0, 0})
-	CMember(TMap<FRigElementKey, FRigControlElementCustomization>) ControlCustomizations                           ___ OFFSET(get<T>, {0x348, 80, 0, 0})
-	CMember(URigHierarchy*)                            DynamicHierarchy                                            ___ OFFSET(get<T>, {0x398, 8, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    ShapeLibraries                                              ___ OFFSET(get<T>, {0x3A0, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    ShapeLibraryNameMap                                         ___ OFFSET(get<T>, {0x3B0, 80, 0, 0})
-	CMember(UAnimationDataSourceRegistry*)             DataSourceRegistry                                          ___ OFFSET(get<T>, {0x418, 8, 0, 0})
-	SMember(FRigInfluenceMapPerEvent)                  Influences                                                  ___ OFFSET(get<T>, {0x4B0, 96, 0, 0})
-	CMember(UControlRig*)                              InteractionRig                                              ___ OFFSET(get<T>, {0x510, 8, 0, 0})
-	CMember(UClass*)                                   InteractionRigClass                                         ___ OFFSET(get<T>, {0x518, 8, 0, 0})
-	SMember(FMulticastSparseDelegate)                  OnControlSelected_BP                                        ___ OFFSET(get<T>, {0x5F0, 1, 0, 0})
+	CMember(ERigExecutionType)                         ExecutionType                                               OFFSET(get<T>, {0x340, 1, 0, 0})
+	SMember(FRigHierarchySettings)                     HierarchySettings                                           OFFSET(get<T>, {0x344, 4, 0, 0})
+	CMember(TMap<FRigElementKey, FRigControlElementCustomization>) ControlCustomizations                           OFFSET(get<T>, {0x348, 80, 0, 0})
+	CMember(URigHierarchy*)                            DynamicHierarchy                                            OFFSET(get<T>, {0x398, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    ShapeLibraries                                              OFFSET(get<T>, {0x3A0, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    ShapeLibraryNameMap                                         OFFSET(get<T>, {0x3B0, 80, 0, 0})
+	CMember(UAnimationDataSourceRegistry*)             DataSourceRegistry                                          OFFSET(get<T>, {0x418, 8, 0, 0})
+	SMember(FRigInfluenceMapPerEvent)                  Influences                                                  OFFSET(get<T>, {0x4B0, 96, 0, 0})
+	CMember(UControlRig*)                              InteractionRig                                              OFFSET(get<T>, {0x510, 8, 0, 0})
+	CMember(UClass*)                                   InteractionRigClass                                         OFFSET(get<T>, {0x518, 8, 0, 0})
+	SMember(FMulticastSparseDelegate)                  OnControlSelected_BP                                        OFFSET(get<T>, {0x5F0, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRig.SetInteractionRigClass
+	// void SetInteractionRigClass(UClass* InInteractionRigClass);                                                              // [0x6e1e7cc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRig.SetInteractionRig
+	// void SetInteractionRig(UControlRig* InInteractionRig);                                                                   // [0x6e1e74c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRig.SelectControl
+	// void SelectControl(FName& InControlName, bool bSelect);                                                                  // [0x6e1c2a0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRig.RequestConstruction
+	// void RequestConstruction();                                                                                              // [0x6e1c278] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRig.OnControlSelectedBP__DelegateSignature
+	// void OnControlSelectedBP__DelegateSignature(UControlRig* Rig, FRigControlElement& Control, bool bSelected);              // [0x1ebf994] MulticastDelegate|Public|Delegate|HasOutParms 
+	// Function /Script/ControlRig.ControlRig.IsControlSelected
+	// bool IsControlSelected(FName& InControlName);                                                                            // [0x6e1bc98] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.GetInteractionRigClass
+	// UClass* GetInteractionRigClass();                                                                                        // [0x6e1ba7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.GetInteractionRig
+	// UControlRig* GetInteractionRig();                                                                                        // [0x6e1ba64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.GetHostingActor
+	// AActor* GetHostingActor();                                                                                               // [0x6e1b804] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.GetHierarchy
+	// URigHierarchy* GetHierarchy();                                                                                           // [0x278ab08] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRig.FindControlRigs
+	// TArray<UControlRig*> FindControlRigs(UObject* Outer, UClass* OptionalClass);                                             // [0x6e1ab44] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRig.CurrentControlSelection
+	// TArray<FName> CurrentControlSelection();                                                                                 // [0x6e1aa18] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.CreateTransformableControlHandle
+	// UTransformableControlHandle* CreateTransformableControlHandle(UObject* Outer, FName& ControlName);                       // [0x6e1a948] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRig.ClearControlSelection
+	// bool ClearControlSelection();                                                                                            // [0x6e19c1c] Native|Public|BlueprintCallable 
 /// Class /Script/ControlRig.ControlRigAnimInstance
 /// Size: 0x0000 (0x000350 - 0x000350)
 class UControlRigAnimInstance : public UAnimInstance
@@ -106,28 +469,125 @@ class UControlRigComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1744;
 
 public:
-	CMember(UClass*)                                   ControlRigClass                                             ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreInitializeDelegate                                     ___ OFFSET(get<T>, {0x570, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostInitializeDelegate                                    ___ OFFSET(get<T>, {0x580, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreConstructionDelegate                                   ___ OFFSET(get<T>, {0x590, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostConstructionDelegate                                  ___ OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreForwardsSolveDelegate                                  ___ OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostForwardsSolveDelegate                                 ___ OFFSET(get<T>, {0x5C0, 16, 0, 0})
-	CMember(TArray<FControlRigComponentMappedElement>) UserDefinedElements                                         ___ OFFSET(get<T>, {0x5D0, 16, 0, 0})
-	CMember(TArray<FControlRigComponentMappedElement>) MappedElements                                              ___ OFFSET(get<T>, {0x5E0, 16, 0, 0})
-	DMember(bool)                                      bEnableLazyEvaluation                                       ___ OFFSET(get<bool>, {0x5F0, 1, 0, 0})
-	DMember(float)                                     LazyEvaluationPositionThreshold                             ___ OFFSET(get<float>, {0x5F4, 4, 0, 0})
-	DMember(float)                                     LazyEvaluationRotationThreshold                             ___ OFFSET(get<float>, {0x5F8, 4, 0, 0})
-	DMember(float)                                     LazyEvaluationScaleThreshold                                ___ OFFSET(get<float>, {0x5FC, 4, 0, 0})
-	DMember(bool)                                      bResetTransformBeforeTick                                   ___ OFFSET(get<bool>, {0x600, 1, 0, 0})
-	DMember(bool)                                      bResetInitialsBeforeConstruction                            ___ OFFSET(get<bool>, {0x601, 1, 0, 0})
-	DMember(bool)                                      bUpdateRigOnTick                                            ___ OFFSET(get<bool>, {0x602, 1, 0, 0})
-	DMember(bool)                                      bUpdateInEditor                                             ___ OFFSET(get<bool>, {0x603, 1, 0, 0})
-	DMember(bool)                                      bDrawBones                                                  ___ OFFSET(get<bool>, {0x604, 1, 0, 0})
-	DMember(bool)                                      bShowDebugDrawing                                           ___ OFFSET(get<bool>, {0x605, 1, 0, 0})
-	CMember(UControlRig*)                              ControlRig                                                  ___ OFFSET(get<T>, {0x608, 8, 0, 0})
+	CMember(UClass*)                                   ControlRigClass                                             OFFSET(get<T>, {0x568, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreInitializeDelegate                                     OFFSET(get<T>, {0x570, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostInitializeDelegate                                    OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreConstructionDelegate                                   OFFSET(get<T>, {0x590, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostConstructionDelegate                                  OFFSET(get<T>, {0x5A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreForwardsSolveDelegate                                  OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostForwardsSolveDelegate                                 OFFSET(get<T>, {0x5C0, 16, 0, 0})
+	CMember(TArray<FControlRigComponentMappedElement>) UserDefinedElements                                         OFFSET(get<T>, {0x5D0, 16, 0, 0})
+	CMember(TArray<FControlRigComponentMappedElement>) MappedElements                                              OFFSET(get<T>, {0x5E0, 16, 0, 0})
+	DMember(bool)                                      bEnableLazyEvaluation                                       OFFSET(get<bool>, {0x5F0, 1, 0, 0})
+	DMember(float)                                     LazyEvaluationPositionThreshold                             OFFSET(get<float>, {0x5F4, 4, 0, 0})
+	DMember(float)                                     LazyEvaluationRotationThreshold                             OFFSET(get<float>, {0x5F8, 4, 0, 0})
+	DMember(float)                                     LazyEvaluationScaleThreshold                                OFFSET(get<float>, {0x5FC, 4, 0, 0})
+	DMember(bool)                                      bResetTransformBeforeTick                                   OFFSET(get<bool>, {0x600, 1, 0, 0})
+	DMember(bool)                                      bResetInitialsBeforeConstruction                            OFFSET(get<bool>, {0x601, 1, 0, 0})
+	DMember(bool)                                      bUpdateRigOnTick                                            OFFSET(get<bool>, {0x602, 1, 0, 0})
+	DMember(bool)                                      bUpdateInEditor                                             OFFSET(get<bool>, {0x603, 1, 0, 0})
+	DMember(bool)                                      bDrawBones                                                  OFFSET(get<bool>, {0x604, 1, 0, 0})
+	DMember(bool)                                      bShowDebugDrawing                                           OFFSET(get<bool>, {0x605, 1, 0, 0})
+	CMember(UControlRig*)                              ControlRig                                                  OFFSET(get<T>, {0x608, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigComponent.Update
+	// void Update(float DeltaTime);                                                                                            // [0x6e1ed0c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetObjectBinding
+	// void SetObjectBinding(UObject* InObjectToBind);                                                                          // [0x6e1e928] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetMappedElements
+	// void SetMappedElements(TArray<FControlRigComponentMappedElement> NewMappedElements);                                     // [0x6e1e84c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetInitialSpaceTransform
+	// void SetInitialSpaceTransform(FName SpaceName, FTransform InitialTransform, EControlRigComponentSpace Space);            // [0x6e1e3f0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetInitialBoneTransform
+	// void SetInitialBoneTransform(FName BoneName, FTransform InitialTransform, EControlRigComponentSpace Space, bool bPropagateToChildren); // [0x6e1df7c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlVector2D
+	// void SetControlVector2D(FName ControlName, FVector2D Value);                                                             // [0x6e1dc48] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlTransform
+	// void SetControlTransform(FName ControlName, FTransform Value, EControlRigComponentSpace Space);                          // [0x6e1d8ec] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlScale
+	// void SetControlScale(FName ControlName, FVector Value, EControlRigComponentSpace Space);                                 // [0x6e1d62c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlRotator
+	// void SetControlRotator(FName ControlName, FRotator Value, EControlRigComponentSpace Space);                              // [0x6e1d36c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlRigClass
+	// void SetControlRigClass(UClass* InControlRigClass);                                                                      // [0x6e1d2e4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlPosition
+	// void SetControlPosition(FName ControlName, FVector Value, EControlRigComponentSpace Space);                              // [0x6e1d024] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlOffset
+	// void SetControlOffset(FName ControlName, FTransform OffsetTransform, EControlRigComponentSpace Space);                   // [0x6e1ccc8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlInt
+	// void SetControlInt(FName ControlName, int32_t Value);                                                                    // [0x6e1cbc8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlFloat
+	// void SetControlFloat(FName ControlName, float Value);                                                                    // [0x6e1cb04] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetControlBool
+	// void SetControlBool(FName ControlName, bool Value);                                                                      // [0x6e1ca04] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetBoneTransform
+	// void SetBoneTransform(FName BoneName, FTransform Transform, EControlRigComponentSpace Space, float Weight, bool bPropagateToChildren); // [0x6e1c474] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.SetBoneInitialTransformsFromSkeletalMesh
+	// void SetBoneInitialTransformsFromSkeletalMesh(USkeletalMesh* InSkeletalMesh);                                            // [0x6e1c3dc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.OnPreInitialize
+	// void OnPreInitialize(UControlRigComponent* Component);                                                                   // [0x6e1bfe0] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.OnPreForwardsSolve
+	// void OnPreForwardsSolve(UControlRigComponent* Component);                                                                // [0x6e1bf5c] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.OnPreConstruction
+	// void OnPreConstruction(UControlRigComponent* Component);                                                                 // [0x6e1bed8] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.OnPostInitialize
+	// void OnPostInitialize(UControlRigComponent* Component);                                                                  // [0x6e1be54] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.OnPostForwardsSolve
+	// void OnPostForwardsSolve(UControlRigComponent* Component);                                                               // [0x599a2b4] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.OnPostConstruction
+	// void OnPostConstruction(UControlRigComponent* Component);                                                                // [0x6e1bdd0] Native|Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigComponent.Initialize
+	// void Initialize();                                                                                                       // [0x6e1bc84] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.GetSpaceTransform
+	// FTransform GetSpaceTransform(FName SpaceName, EControlRigComponentSpace Space);                                          // [0x6e1bad4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetInitialSpaceTransform
+	// FTransform GetInitialSpaceTransform(FName SpaceName, EControlRigComponentSpace Space);                                   // [0x6e1b950] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetInitialBoneTransform
+	// FTransform GetInitialBoneTransform(FName BoneName, EControlRigComponentSpace Space);                                     // [0x6e1b83c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetElementNames
+	// TArray<FName> GetElementNames(ERigElementType ElementType);                                                              // [0x6e1b5d8] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlVector2D
+	// FVector2D GetControlVector2D(FName ControlName);                                                                         // [0x6e1b540] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlTransform
+	// FTransform GetControlTransform(FName ControlName, EControlRigComponentSpace Space);                                      // [0x6e1b42c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlScale
+	// FVector GetControlScale(FName ControlName, EControlRigComponentSpace Space);                                             // [0x6e1b32c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlRotator
+	// FRotator GetControlRotator(FName ControlName, EControlRigComponentSpace Space);                                          // [0x6e1b220] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlRig
+	// UControlRig* GetControlRig();                                                                                            // [0x6e1b1fc] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlPosition
+	// FVector GetControlPosition(FName ControlName, EControlRigComponentSpace Space);                                          // [0x6e1b0fc] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlOffset
+	// FTransform GetControlOffset(FName ControlName, EControlRigComponentSpace Space);                                         // [0x6e1afe8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlInt
+	// int32_t GetControlInt(FName ControlName);                                                                                // [0x6e1aefc] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlFloat
+	// float GetControlFloat(FName ControlName);                                                                                // [0x6e1ae6c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetControlBool
+	// bool GetControlBool(FName ControlName);                                                                                  // [0x6e1ad80] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetBoneTransform
+	// FTransform GetBoneTransform(FName BoneName, EControlRigComponentSpace Space);                                            // [0x6e1ac6c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.GetAbsoluteTime
+	// float GetAbsoluteTime();                                                                                                 // [0x6e1ac40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigComponent.DoesElementExist
+	// bool DoesElementExist(FName Name, ERigElementType ElementType);                                                          // [0x6e1aa5c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.ClearMappedElements
+	// void ClearMappedElements();                                                                                              // [0x6e19c44] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.CanExecute
+	// bool CanExecute();                                                                                                       // [0x6e19be4] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ControlRig.ControlRigComponent.AddMappedSkeletalMesh
+	// void AddMappedSkeletalMesh(USkeletalMeshComponent* SkeletalMeshComponent, TArray<FControlRigComponentMappedBone> Bones, TArray<FControlRigComponentMappedCurve> Curves); // [0x6e18eb4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.AddMappedElements
+	// void AddMappedElements(TArray<FControlRigComponentMappedElement> NewMappedElements);                                     // [0x6e18e0c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.AddMappedComponents
+	// void AddMappedComponents(TArray<FControlRigComponentMappedComponent> Components);                                        // [0x6e18734] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
+	// void AddMappedCompleteSkeletalMesh(USkeletalMeshComponent* SkeletalMeshComponent);                                       // [0x6e18690] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ControlRig.ControlRigControlActor
 /// Size: 0x00A8 (0x000290 - 0x000338)
 class AControlRigControlActor : public AActor
@@ -136,22 +596,31 @@ class AControlRigControlActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	CMember(AActor*)                                   ActorToTrack                                                ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UClass*)                                   ControlRigClass                                             ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	DMember(bool)                                      bRefreshOnTick                                              ___ OFFSET(get<bool>, {0x2A0, 1, 0, 0})
-	DMember(bool)                                      bIsSelectable                                               ___ OFFSET(get<bool>, {0x2A1, 1, 0, 0})
-	CMember(UMaterialInterface*)                       MaterialOverride                                            ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FString)                                   ColorParameter                                              ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	DMember(bool)                                      bCastShadows                                                ___ OFFSET(get<bool>, {0x2C0, 1, 0, 0})
-	CMember(USceneComponent*)                          ActorRootComponent                                          ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  ___ OFFSET(get<T>, {0x2D0, 32, 0, 0})
-	CMember(TArray<FName>)                             ControlNames                                                ___ OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	CMember(TArray<FTransform>)                        ShapeTransforms                                             ___ OFFSET(get<T>, {0x300, 16, 0, 0})
-	CMember(TArray<UStaticMeshComponent*>)             Components                                                  ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(TArray<UMaterialInstanceDynamic*>)         Materials                                                   ___ OFFSET(get<T>, {0x320, 16, 0, 0})
-	SMember(FName)                                     ColorParameterName                                          ___ OFFSET(get<T>, {0x330, 4, 0, 0})
+	CMember(AActor*)                                   ActorToTrack                                                OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UClass*)                                   ControlRigClass                                             OFFSET(get<T>, {0x298, 8, 0, 0})
+	DMember(bool)                                      bRefreshOnTick                                              OFFSET(get<bool>, {0x2A0, 1, 0, 0})
+	DMember(bool)                                      bIsSelectable                                               OFFSET(get<bool>, {0x2A1, 1, 0, 0})
+	CMember(UMaterialInterface*)                       MaterialOverride                                            OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FString)                                   ColorParameter                                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	DMember(bool)                                      bCastShadows                                                OFFSET(get<bool>, {0x2C0, 1, 0, 0})
+	CMember(USceneComponent*)                          ActorRootComponent                                          OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  OFFSET(get<T>, {0x2D0, 32, 0, 0})
+	CMember(TArray<FName>)                             ControlNames                                                OFFSET(get<T>, {0x2F0, 16, 0, 0})
+	CMember(TArray<FTransform>)                        ShapeTransforms                                             OFFSET(get<T>, {0x300, 16, 0, 0})
+	CMember(TArray<UStaticMeshComponent*>)             Components                                                  OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(TArray<UMaterialInstanceDynamic*>)         Materials                                                   OFFSET(get<T>, {0x320, 16, 0, 0})
+	SMember(FName)                                     ColorParameterName                                          OFFSET(get<T>, {0x330, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigControlActor.ResetControlActor
+	// void ResetControlActor();                                                                                                // [0x6e1c28c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigControlActor.Refresh
+	// void Refresh();                                                                                                          // [0x6e1c250] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigControlActor.Clear
+	// void Clear();                                                                                                            // [0x6e19c08] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ControlRig.ControlRigShapeActor
 /// Size: 0x00B0 (0x000290 - 0x000340)
 class AControlRigShapeActor : public AActor
@@ -160,17 +629,48 @@ class AControlRigShapeActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	CMember(USceneComponent*)                          ActorRootComponent                                          ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StaticMeshComponent                                         ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	DMember(uint32_t)                                  ControlRigIndex                                             ___ OFFSET(get<uint32_t>, {0x2A0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  ___ OFFSET(get<T>, {0x2A4, 8, 0, 0})
-	SMember(FName)                                     ControlName                                                 ___ OFFSET(get<T>, {0x2AC, 4, 0, 0})
-	SMember(FName)                                     ShapeName                                                   ___ OFFSET(get<T>, {0x2B0, 4, 0, 0})
-	SMember(FName)                                     ColorParameterName                                          ___ OFFSET(get<T>, {0x2B4, 4, 0, 0})
-	DMember(bool)                                      bSelected                                                   ___ OFFSET(get<bool>, {0x330, 1, 1, 0})
-	DMember(bool)                                      bHovered                                                    ___ OFFSET(get<bool>, {0x330, 1, 1, 1})
+	CMember(USceneComponent*)                          ActorRootComponent                                          OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StaticMeshComponent                                         OFFSET(get<T>, {0x298, 8, 0, 0})
+	DMember(uint32_t)                                  ControlRigIndex                                             OFFSET(get<uint32_t>, {0x2A0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  OFFSET(get<T>, {0x2A4, 8, 0, 0})
+	SMember(FName)                                     ControlName                                                 OFFSET(get<T>, {0x2AC, 4, 0, 0})
+	SMember(FName)                                     ShapeName                                                   OFFSET(get<T>, {0x2B0, 4, 0, 0})
+	SMember(FName)                                     ColorParameterName                                          OFFSET(get<T>, {0x2B4, 4, 0, 0})
+	DMember(bool)                                      bSelected                                                   OFFSET(get<bool>, {0x330, 1, 1, 0})
+	DMember(bool)                                      bHovered                                                    OFFSET(get<bool>, {0x330, 1, 1, 1})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigShapeActor.SetSelected
+	// void SetSelected(bool bInSelected);                                                                                      // [0x6e1ea2c] Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeActor.SetSelectable
+	// void SetSelectable(bool bInSelectable);                                                                                  // [0x6e1e9a8] Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeActor.SetHovered
+	// void SetHovered(bool bInHovered);                                                                                        // [0x6e1def8] Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeActor.SetGlobalTransform
+	// void SetGlobalTransform(FTransform& InTransform);                                                                        // [0x6e1dde8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeActor.SetEnabled
+	// void SetEnabled(bool bInEnabled);                                                                                        // [0x570e6d8] Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigShapeActor.OnTransformChanged
+	// void OnTransformChanged(FTransform& NewTransform);                                                                       // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigShapeActor.OnSelectionChanged
+	// void OnSelectionChanged(bool bIsSelected);                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigShapeActor.OnManipulatingChanged
+	// void OnManipulatingChanged(bool bIsManipulating);                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigShapeActor.OnHoveredChanged
+	// void OnHoveredChanged(bool bIsSelected);                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigShapeActor.OnEnabledChanged
+	// void OnEnabledChanged(bool bIsEnabled);                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/ControlRig.ControlRigShapeActor.IsSelectedInEditor
+	// bool IsSelectedInEditor();                                                                                               // [0x5c35748] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigShapeActor.IsHovered
+	// bool IsHovered();                                                                                                        // [0x6e1bd60] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigShapeActor.IsEnabled
+	// bool IsEnabled();                                                                                                        // [0x6e1bd38] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigShapeActor.GetGlobalTransform
+	// FTransform GetGlobalTransform();                                                                                         // [0x6e1b748] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ControlRig.ControlRigShapeLibrary
 /// Size: 0x0118 (0x000028 - 0x000140)
 class UControlRigShapeLibrary : public UObject
@@ -179,11 +679,11 @@ class UControlRigShapeLibrary : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FControlRigShapeDefinition)                DefaultShape                                                ___ OFFSET(get<T>, {0x30, 160, 0, 0})
-	CMember(TWeakObjectPtr<UMaterial*>)                DefaultMaterial                                             ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
-	CMember(TWeakObjectPtr<UMaterial*>)                XRayMaterial                                                ___ OFFSET(get<T>, {0xF0, 32, 0, 0})
-	SMember(FName)                                     MaterialColorParameter                                      ___ OFFSET(get<T>, {0x110, 4, 0, 0})
-	CMember(TArray<FControlRigShapeDefinition>)        Shapes                                                      ___ OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FControlRigShapeDefinition)                DefaultShape                                                OFFSET(get<T>, {0x30, 160, 0, 0})
+	CMember(TWeakObjectPtr<UMaterial*>)                DefaultMaterial                                             OFFSET(get<T>, {0xD0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UMaterial*>)                XRayMaterial                                                OFFSET(get<T>, {0xF0, 32, 0, 0})
+	SMember(FName)                                     MaterialColorParameter                                      OFFSET(get<T>, {0x110, 4, 0, 0})
+	CMember(TArray<FControlRigShapeDefinition>)        Shapes                                                      OFFSET(get<T>, {0x118, 16, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRigTestData
@@ -194,14 +694,35 @@ class UControlRigTestData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FSoftObjectPath)                           ControlRigObjectPath                                        ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FControlRigTestDataFrame)                  Initial                                                     ___ OFFSET(get<T>, {0x40, 144, 0, 0})
-	CMember(TArray<FControlRigTestDataFrame>)          InputFrames                                                 ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<FControlRigTestDataFrame>)          OutputFrames                                                ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<int32_t>)                           FramesToSkip                                                ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	DMember(double)                                    Tolerance                                                   ___ OFFSET(get<double>, {0x100, 8, 0, 0})
+	SMember(FSoftObjectPath)                           ControlRigObjectPath                                        OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FControlRigTestDataFrame)                  Initial                                                     OFFSET(get<T>, {0x40, 144, 0, 0})
+	CMember(TArray<FControlRigTestDataFrame>)          InputFrames                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<FControlRigTestDataFrame>)          OutputFrames                                                OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           FramesToSkip                                                OFFSET(get<T>, {0xF0, 16, 0, 0})
+	DMember(double)                                    Tolerance                                                   OFFSET(get<double>, {0x100, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigTestData.SetupReplay
+	// bool SetupReplay(UControlRig* InControlRig, bool bGroundTruth);                                                          // [0x6e1eab0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigTestData.ReleaseReplay
+	// void ReleaseReplay();                                                                                                    // [0x6e1c264] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigTestData.Record
+	// bool Record(UControlRig* InControlRig, double InRecordingDuration);                                                      // [0x6e1c064] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigTestData.IsReplaying
+	// bool IsReplaying();                                                                                                      // [0x6e1bdac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigTestData.IsRecording
+	// bool IsRecording();                                                                                                      // [0x6e1bd88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigTestData.GetTimeRange
+	// FVector2D GetTimeRange(bool bInput);                                                                                     // [0x6e1bbe8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigTestData.GetPlaybackMode
+	// EControlRigTestDataPlaybackMode GetPlaybackMode();                                                                       // [0x6e1ba94] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigTestData.GetFrameIndexForTime
+	// int32_t GetFrameIndexForTime(double InSeconds, bool bInput);                                                             // [0x6e1b67c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigTestData.CreateNewAsset
+	// UControlRigTestData* CreateNewAsset(FString InDesiredPackagePath, FString InBlueprintPathName);                          // [0x6e19c58] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/ControlRig.ControlRigValidator
 /// Size: 0x0040 (0x000028 - 0x000068)
 class UControlRigValidator : public UObject
@@ -210,7 +731,7 @@ class UControlRigValidator : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TArray<UControlRigValidationPass*>)        Passes                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UControlRigValidationPass*>)        Passes                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRigValidationPass
@@ -241,8 +762,8 @@ class UFKControlRig : public UControlRig
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	CMember(TArray<bool>)                              IsControlActive                                             ___ OFFSET(get<T>, {0x610, 16, 0, 0})
-	CMember(EControlRigFKRigExecuteMode)               ApplyMode                                                   ___ OFFSET(get<T>, {0x620, 1, 0, 0})
+	CMember(TArray<bool>)                              IsControlActive                                             OFFSET(get<T>, {0x610, 16, 0, 0})
+	CMember(EControlRigFKRigExecuteMode)               ApplyMode                                                   OFFSET(get<T>, {0x620, 1, 0, 0})
 };
 
 /// Class /Script/ControlRig.RigHierarchyController
@@ -253,10 +774,71 @@ class URigHierarchyController : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(bool)                                      bReportWarningsAndErrors                                    ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	CMember(TWeakObjectPtr<URigHierarchy*>)            Hierarchy                                                   ___ OFFSET(get<T>, {0x2C, 8, 0, 0})
+	DMember(bool)                                      bReportWarningsAndErrors                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
+	CMember(TWeakObjectPtr<URigHierarchy*>)            Hierarchy                                                   OFFSET(get<T>, {0x2C, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.RigHierarchyController.SetSelection
+	// bool SetSelection(TArray<FRigElementKey>& InKeys, bool bPrintPythonCommand);                                             // [0x6e91480] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.SetParent
+	// bool SetParent(FRigElementKey InChild, FRigElementKey InParent, bool bMaintainGlobalTransform, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e90edc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.SetHierarchy
+	// void SetHierarchy(URigHierarchy* InHierarchy);                                                                           // [0x6e90e5c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.SetDisplayName
+	// FName SetDisplayName(FRigElementKey InControl, FName InDisplayName, bool bRenameElement, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e908b4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.SetControlSettings
+	// bool SetControlSettings(FRigElementKey InKey, FRigControlSettings InSettings, bool bSetupUndo);                          // [0x6e904c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchyController.SelectElement
+	// bool SelectElement(FRigElementKey InKey, bool bSelect, bool bClearSelection);                                            // [0x6e90130] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.ReorderElement
+	// bool ReorderElement(FRigElementKey InElement, int32_t InIndex, bool bSetupUndo, bool bPrintPythonCommand);               // [0x6e8fa28] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.RenameElement
+	// FRigElementKey RenameElement(FRigElementKey InElement, FName InName, bool bSetupUndo, bool bPrintPythonCommand, bool bClearSelection); // [0x6e8f46c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.RemoveParent
+	// bool RemoveParent(FRigElementKey InChild, FRigElementKey InParent, bool bMaintainGlobalTransform, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8eec8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.RemoveElement
+	// bool RemoveElement(FRigElementKey InElement, bool bSetupUndo, bool bPrintPythonCommand);                                 // [0x6e8eb38] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.RemoveAllParents
+	// bool RemoveAllParents(FRigElementKey InChild, bool bMaintainGlobalTransform, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8e6a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.MirrorElements
+	// TArray<FRigElementKey> MirrorElements(TArray<FRigElementKey> InKeys, FRigVMMirrorSettings InSettings, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands); // [0x6e8d8f4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.ImportFromText
+	// TArray<FRigElementKey> ImportFromText(FString InContent, bool bReplaceExistingElements, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands); // [0x6e8d120] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.ImportCurves
+	// TArray<FRigElementKey> ImportCurves(USkeleton* InSkeleton, FName InNameSpace, bool bSelectCurves, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8ced0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.ImportBones
+	// TArray<FRigElementKey> ImportBones(USkeleton* InSkeleton, FName InNameSpace, bool bReplaceExistingBones, bool bRemoveObsoleteBones, bool bSelectBones, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8cc4c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.GetHierarchy
+	// URigHierarchy* GetHierarchy();                                                                                           // [0x6e8cc24] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchyController.GetControlSettings
+	// FRigControlSettings GetControlSettings(FRigElementKey InKey);                                                            // [0x6e8c96c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchyController.ExportToText
+	// FString ExportToText(TArray<FRigElementKey> InKeys);                                                                     // [0x6e8c25c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchyController.ExportSelectionToText
+	// FString ExportSelectionToText();                                                                                         // [0x6e8bbdc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.RigHierarchyController.DuplicateElements
+	// TArray<FRigElementKey> DuplicateElements(TArray<FRigElementKey> InKeys, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands); // [0x6e8b9c0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.DeselectElement
+	// bool DeselectElement(FRigElementKey InKey);                                                                              // [0x6e8b784] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.ClearSelection
+	// bool ClearSelection();                                                                                                   // [0x6e8b760] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddRigidBody
+	// FRigElementKey AddRigidBody(FName InName, FRigElementKey InParent, FRigRigidBodySettings InSettings, FTransform InLocalTransform, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8b0ac] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddParent
+	// bool AddParent(FRigElementKey InChild, FRigElementKey InParent, float InWeight, bool bMaintainGlobalTransform, bool bSetupUndo); // [0x6e8ab08] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddNull
+	// FRigElementKey AddNull(FName InName, FRigElementKey InParent, FTransform InTransform, bool bTransformInGlobal, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e8a460] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddCurve
+	// FRigElementKey AddCurve(FName InName, float InValue, bool bSetupUndo, bool bPrintPythonCommand);                         // [0x6e8a328] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddControl_ForBlueprint
+	// FRigElementKey AddControl_ForBlueprint(FName InName, FRigElementKey InParent, FRigControlSettings InSettings, FRigControlValue InValue, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e89c14] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddBone
+	// FRigElementKey AddBone(FName InName, FRigElementKey InParent, FTransform InTransform, bool bTransformInGlobal, ERigBoneType InBoneType, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e89458] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/ControlRig.RigHierarchyController.AddAnimationChannel_ForBlueprint
+	// FRigElementKey AddAnimationChannel_ForBlueprint(FName InName, FRigElementKey InParentControl, FRigControlSettings InSettings, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e88f10] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ControlRig.ControlRigLayerInstance
 /// Size: 0x0000 (0x000350 - 0x000350)
 class UControlRigLayerInstance : public UAnimInstance
@@ -275,7 +857,7 @@ class UControlRigObjectHolder : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UObject*>)                          Objects                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UObject*>)                          Objects                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ControlRig.MovieSceneControlRigParameterSection
@@ -286,16 +868,16 @@ class UMovieSceneControlRigParameterSection : public UMovieSceneParameterSection
 	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
-	CMember(UControlRig*)                              ControlRig                                                  ___ OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	CMember(UClass*)                                   ControlRigClass                                             ___ OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	CMember(TArray<bool>)                              ControlsMask                                                ___ OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FMovieSceneTransformMask)                  TransformMask                                               ___ OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Weight                                                      ___ OFFSET(get<T>, {0x1C8, 272, 0, 0})
-	CMember(TMap<FName, FChannelMapInfo>)              ControlChannelMap                                           ___ OFFSET(get<T>, {0x2D8, 80, 0, 0})
-	CMember(TArray<FEnumParameterNameAndCurve>)        EnumParameterNamesAndCurves                                 ___ OFFSET(get<T>, {0x328, 16, 0, 0})
-	CMember(TArray<FIntegerParameterNameAndCurve>)     IntegerParameterNamesAndCurves                              ___ OFFSET(get<T>, {0x338, 16, 0, 0})
-	CMember(TArray<FSpaceControlNameAndChannel>)       SpaceChannels                                               ___ OFFSET(get<T>, {0x348, 16, 0, 0})
-	CMember(TArray<FConstraintAndActiveChannel>)       ConstraintsChannels                                         ___ OFFSET(get<T>, {0x358, 16, 0, 0})
+	CMember(UControlRig*)                              ControlRig                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
+	CMember(UClass*)                                   ControlRigClass                                             OFFSET(get<T>, {0x1A8, 8, 0, 0})
+	CMember(TArray<bool>)                              ControlsMask                                                OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	SMember(FMovieSceneTransformMask)                  TransformMask                                               OFFSET(get<T>, {0x1C0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Weight                                                      OFFSET(get<T>, {0x1C8, 272, 0, 0})
+	CMember(TMap<FName, FChannelMapInfo>)              ControlChannelMap                                           OFFSET(get<T>, {0x2D8, 80, 0, 0})
+	CMember(TArray<FEnumParameterNameAndCurve>)        EnumParameterNamesAndCurves                                 OFFSET(get<T>, {0x328, 16, 0, 0})
+	CMember(TArray<FIntegerParameterNameAndCurve>)     IntegerParameterNamesAndCurves                              OFFSET(get<T>, {0x338, 16, 0, 0})
+	CMember(TArray<FSpaceControlNameAndChannel>)       SpaceChannels                                               OFFSET(get<T>, {0x348, 16, 0, 0})
+	CMember(TArray<FConstraintAndActiveChannel>)       ConstraintsChannels                                         OFFSET(get<T>, {0x358, 16, 0, 0})
 };
 
 /// Class /Script/ControlRig.MovieSceneControlRigParameterTrack
@@ -306,11 +888,11 @@ class UMovieSceneControlRigParameterTrack : public UMovieSceneNameableTrack
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(UControlRig*)                              ControlRig                                                  ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
-	CMember(UMovieSceneSection*)                       SectionToKey                                                ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	CMember(TArray<UMovieSceneSection*>)               Sections                                                    ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FName)                                     TrackName                                                   ___ OFFSET(get<T>, {0xF8, 4, 0, 0})
-	CMember(TMap<FName, FControlRotationOrder>)        ControlsRotationOrder                                       ___ OFFSET(get<T>, {0x100, 80, 0, 0})
+	CMember(UControlRig*)                              ControlRig                                                  OFFSET(get<T>, {0xD8, 8, 0, 0})
+	CMember(UMovieSceneSection*)                       SectionToKey                                                OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FName)                                     TrackName                                                   OFFSET(get<T>, {0xF8, 4, 0, 0})
+	CMember(TMap<FName, FControlRotationOrder>)        ControlsRotationOrder                                       OFFSET(get<T>, {0x100, 80, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRigSettings
@@ -341,9 +923,26 @@ class UControlRigPoseAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FControlRigControlPose)                    Pose                                                        ___ OFFSET(get<T>, {0x28, 96, 0, 0})
+	SMember(FControlRigControlPose)                    Pose                                                        OFFSET(get<T>, {0x28, 96, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigPoseAsset.SelectControls
+	// void SelectControls(UControlRig* InControlRig, bool bDoMirror);                                                          // [0x6e90068] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigPoseAsset.SavePose
+	// void SavePose(UControlRig* InControlRig, bool bUseAll);                                                                  // [0x6e8ffa0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigPoseAsset.ReplaceControlName
+	// void ReplaceControlName(FName& CurrentName, FName& NewName);                                                             // [0x6e8fec8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigPoseAsset.PastePose
+	// void PastePose(UControlRig* InControlRig, bool bDoKey, bool bDoMirror);                                                  // [0x6e8e4a8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigPoseAsset.GetCurrentPose
+	// void GetCurrentPose(UControlRig* InControlRig, FControlRigControlPose& OutPose);                                         // [0x6e8cb08] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ControlRig.ControlRigPoseAsset.GetControlNames
+	// TArray<FName> GetControlNames();                                                                                         // [0x6e8c924] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ControlRig.ControlRigPoseAsset.DoesMirrorMatch
+	// bool DoesMirrorMatch(UControlRig* ControlRig, FName& ControlName);                                                       // [0x6e8b8f0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ControlRig.ControlRigPoseMirrorSettings
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UControlRigPoseMirrorSettings : public UObject
@@ -352,10 +951,10 @@ class UControlRigPoseMirrorSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   RightSide                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   LeftSide                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  ___ OFFSET(get<T>, {0x48, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  ___ OFFSET(get<T>, {0x49, 1, 0, 0})
+	SMember(FString)                                   RightSide                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   LeftSide                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x48, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x49, 1, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRigPoseProjectSettings
@@ -366,7 +965,7 @@ class UControlRigPoseProjectSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FDirectoryPath>)                    RootSaveDirs                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FDirectoryPath>)                    RootSaveDirs                                                OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ControlRig.ControlRigWorkflowOptions
@@ -377,10 +976,15 @@ class UControlRigWorkflowOptions : public URigVMUserWorkflowOptions
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(URigHierarchy*)                            Hierarchy                                                   ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Selection                                                   ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(URigHierarchy*)                            Hierarchy                                                   OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Selection                                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigWorkflowOptions.EnsureAtLeastOneRigElementSelected
+	// bool EnsureAtLeastOneRigElementSelected();                                                                               // [0x6e8bb68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ControlRig.ControlRigTransformWorkflowOptions
 /// Size: 0x0008 (0x0000B0 - 0x0000B8)
 class UControlRigTransformWorkflowOptions : public UControlRigWorkflowOptions
@@ -389,9 +993,14 @@ class UControlRigTransformWorkflowOptions : public UControlRigWorkflowOptions
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(TEnumAsByte<ERigTransformType>)            TransformType                                               ___ OFFSET(get<T>, {0xB0, 1, 0, 0})
+	CMember(TEnumAsByte<ERigTransformType>)            TransformType                                               OFFSET(get<T>, {0xB0, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ControlRig.ControlRigTransformWorkflowOptions.ProvideWorkflows
+	// TArray<FRigVMUserWorkflow> ProvideWorkflows(UObject* InSubject);                                                         // [0x6e8e5d4] Final|Native|Public  
 /// Class /Script/ControlRig.ControlRigNumericalValidationPass
 /// Size: 0x0090 (0x000028 - 0x0000B8)
 class UControlRigNumericalValidationPass : public UControlRigValidationPass
@@ -400,16 +1009,16 @@ class UControlRigNumericalValidationPass : public UControlRigValidationPass
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	DMember(bool)                                      bCheckControls                                              ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bCheckBones                                                 ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(bool)                                      bCheckCurves                                                ___ OFFSET(get<bool>, {0x2A, 1, 0, 0})
-	DMember(float)                                     TranslationPrecision                                        ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     RotationPrecision                                           ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     ScalePrecision                                              ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     CurvePrecision                                              ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     EventNameA                                                  ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
-	SMember(FName)                                     EventNameB                                                  ___ OFFSET(get<T>, {0x40, 4, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x48, 112, 0, 0})
+	DMember(bool)                                      bCheckControls                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bCheckBones                                                 OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      bCheckCurves                                                OFFSET(get<bool>, {0x2A, 1, 0, 0})
+	DMember(float)                                     TranslationPrecision                                        OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     RotationPrecision                                           OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     ScalePrecision                                              OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     CurvePrecision                                              OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     EventNameA                                                  OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FName)                                     EventNameB                                                  OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x48, 112, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigElementKey
@@ -420,8 +1029,8 @@ class FRigElementKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(ERigElementType)                           Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(ERigElementType)                           Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigBaseElement
@@ -432,12 +1041,12 @@ class FRigBaseElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FRigElementKey)                            Key                                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FString)                                   NameString                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   SubIndex                                                    ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(int32_t)                                   CreatedAtInstructionIndex                                   ___ OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
-	DMember(bool)                                      bSelected                                                   ___ OFFSET(get<bool>, {0xDC, 1, 0, 0})
+	SMember(FRigElementKey)                            Key                                                         OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FString)                                   NameString                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   SubIndex                                                    OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(int32_t)                                   CreatedAtInstructionIndex                                   OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
+	DMember(bool)                                      bSelected                                                   OFFSET(get<bool>, {0xDC, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigTransformElement
@@ -448,7 +1057,7 @@ class FRigTransformElement : public FRigBaseElement
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FRigCurrentAndInitialTransform)            Pose                                                        ___ OFFSET(get<T>, {0xE0, 416, 0, 0})
+	SMember(FRigCurrentAndInitialTransform)            Pose                                                        OFFSET(get<T>, {0xE0, 416, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigCurrentAndInitialTransform
@@ -459,8 +1068,8 @@ class FRigCurrentAndInitialTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FRigLocalAndGlobalTransform)               Current                                                     ___ OFFSET(get<T>, {0x0, 208, 0, 0})
-	SMember(FRigLocalAndGlobalTransform)               Initial                                                     ___ OFFSET(get<T>, {0xD0, 208, 0, 0})
+	SMember(FRigLocalAndGlobalTransform)               Current                                                     OFFSET(get<T>, {0x0, 208, 0, 0})
+	SMember(FRigLocalAndGlobalTransform)               Initial                                                     OFFSET(get<T>, {0xD0, 208, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigLocalAndGlobalTransform
@@ -471,8 +1080,8 @@ class FRigLocalAndGlobalTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FRigComputedTransform)                     Local                                                       ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FRigComputedTransform)                     Global                                                      ___ OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FRigComputedTransform)                     Local                                                       OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FRigComputedTransform)                     Global                                                      OFFSET(get<T>, {0x60, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigComputedTransform
@@ -483,7 +1092,7 @@ class FRigComputedTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigMultiParentElement
@@ -504,10 +1113,10 @@ class FRigControlElement : public FRigMultiParentElement
 	static inline constexpr uint64_t __MDKClassSize = 2288;
 
 public:
-	SMember(FRigControlSettings)                       Settings                                                    ___ OFFSET(get<T>, {0x3C0, 432, 0, 0})
-	SMember(FRigCurrentAndInitialTransform)            Offset                                                      ___ OFFSET(get<T>, {0x570, 416, 0, 0})
-	SMember(FRigCurrentAndInitialTransform)            Shape                                                       ___ OFFSET(get<T>, {0x710, 416, 0, 0})
-	SMember(FRigPreferredEulerAngles)                  PreferredEulerAngles                                        ___ OFFSET(get<T>, {0x8B0, 56, 0, 0})
+	SMember(FRigControlSettings)                       Settings                                                    OFFSET(get<T>, {0x3C0, 432, 0, 0})
+	SMember(FRigCurrentAndInitialTransform)            Offset                                                      OFFSET(get<T>, {0x570, 416, 0, 0})
+	SMember(FRigCurrentAndInitialTransform)            Shape                                                       OFFSET(get<T>, {0x710, 416, 0, 0})
+	SMember(FRigPreferredEulerAngles)                  PreferredEulerAngles                                        OFFSET(get<T>, {0x8B0, 56, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigPreferredEulerAngles
@@ -518,9 +1127,9 @@ class FRigPreferredEulerAngles : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   Current                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Initial                                                     ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   Current                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Initial                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlSettings
@@ -531,28 +1140,28 @@ class FRigControlSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(ERigControlAnimationType)                  AnimationType                                               ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(ERigControlType)                           ControlType                                                 ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FName)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(ERigControlAxis)                           PrimaryAxis                                                 ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bIsCurve                                                    ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	CMember(TArray<FRigControlLimitEnabled>)           LimitEnabled                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FRigControlValue)                          MinimumValue                                                ___ OFFSET(get<T>, {0x24, 132, 0, 0})
-	SMember(FRigControlValue)                          MaximumValue                                                ___ OFFSET(get<T>, {0xA8, 132, 0, 0})
-	DMember(bool)                                      bShapeVisible                                               ___ OFFSET(get<bool>, {0x12C, 1, 0, 0})
-	CMember(ERigControlVisibility)                     ShapeVisibility                                             ___ OFFSET(get<T>, {0x12D, 1, 0, 0})
-	SMember(FName)                                     ShapeName                                                   ___ OFFSET(get<T>, {0x130, 4, 0, 0})
-	SMember(FLinearColor)                              ShapeColor                                                  ___ OFFSET(get<T>, {0x134, 16, 0, 0})
-	DMember(bool)                                      bIsTransientControl                                         ___ OFFSET(get<bool>, {0x144, 1, 0, 0})
-	CMember(UEnum*)                                    ControlEnum                                                 ___ OFFSET(get<T>, {0x148, 8, 0, 0})
-	SMember(FRigControlElementCustomization)           Customization                                               ___ OFFSET(get<T>, {0x150, 32, 0, 0})
-	CMember(TArray<FRigElementKey>)                    DrivenControls                                              ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(bool)                                      bGroupWithParentControl                                     ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	DMember(bool)                                      bRestrictSpaceSwitching                                     ___ OFFSET(get<bool>, {0x191, 1, 0, 0})
-	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            ___ OFFSET(get<T>, {0x198, 16, 0, 0})
-	CMember(EEulerRotationOrder)                       PreferredRotationOrder                                      ___ OFFSET(get<T>, {0x1A8, 1, 0, 0})
-	DMember(bool)                                      bUsePreferredRotationOrder                                  ___ OFFSET(get<bool>, {0x1A9, 1, 0, 0})
+	CMember(ERigControlAnimationType)                  AnimationType                                               OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(ERigControlType)                           ControlType                                                 OFFSET(get<T>, {0x1, 1, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(ERigControlAxis)                           PrimaryAxis                                                 OFFSET(get<T>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bIsCurve                                                    OFFSET(get<bool>, {0x9, 1, 0, 0})
+	CMember(TArray<FRigControlLimitEnabled>)           LimitEnabled                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FRigControlValue)                          MinimumValue                                                OFFSET(get<T>, {0x24, 132, 0, 0})
+	SMember(FRigControlValue)                          MaximumValue                                                OFFSET(get<T>, {0xA8, 132, 0, 0})
+	DMember(bool)                                      bShapeVisible                                               OFFSET(get<bool>, {0x12C, 1, 0, 0})
+	CMember(ERigControlVisibility)                     ShapeVisibility                                             OFFSET(get<T>, {0x12D, 1, 0, 0})
+	SMember(FName)                                     ShapeName                                                   OFFSET(get<T>, {0x130, 4, 0, 0})
+	SMember(FLinearColor)                              ShapeColor                                                  OFFSET(get<T>, {0x134, 16, 0, 0})
+	DMember(bool)                                      bIsTransientControl                                         OFFSET(get<bool>, {0x144, 1, 0, 0})
+	CMember(UEnum*)                                    ControlEnum                                                 OFFSET(get<T>, {0x148, 8, 0, 0})
+	SMember(FRigControlElementCustomization)           Customization                                               OFFSET(get<T>, {0x150, 32, 0, 0})
+	CMember(TArray<FRigElementKey>)                    DrivenControls                                              OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(bool)                                      bGroupWithParentControl                                     OFFSET(get<bool>, {0x190, 1, 0, 0})
+	DMember(bool)                                      bRestrictSpaceSwitching                                     OFFSET(get<bool>, {0x191, 1, 0, 0})
+	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            OFFSET(get<T>, {0x198, 16, 0, 0})
+	CMember(EEulerRotationOrder)                       PreferredRotationOrder                                      OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	DMember(bool)                                      bUsePreferredRotationOrder                                  OFFSET(get<bool>, {0x1A9, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlElementCustomization
@@ -563,8 +1172,8 @@ class FRigControlElementCustomization : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FRigElementKey>)                    AvailableSpaces                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FRigElementKey>)                    RemovedSpaces                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    AvailableSpaces                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    RemovedSpaces                                               OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlValue
@@ -575,7 +1184,7 @@ class FRigControlValue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 132;
 
 public:
-	SMember(FRigControlValueStorage)                   FloatStorage                                                ___ OFFSET(get<T>, {0x0, 132, 0, 0})
+	SMember(FRigControlValueStorage)                   FloatStorage                                                OFFSET(get<T>, {0x0, 132, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlValueStorage
@@ -586,39 +1195,39 @@ class FRigControlValueStorage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 132;
 
 public:
-	DMember(float)                                     Float00                                                     ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Float01                                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Float02                                                     ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Float03                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Float10                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Float11                                                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Float12                                                     ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Float13                                                     ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     Float20                                                     ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     Float21                                                     ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     Float22                                                     ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     Float23                                                     ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Float30                                                     ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     Float31                                                     ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Float32                                                     ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     Float33                                                     ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Float001                                                    ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     Float011                                                    ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     Float021                                                    ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     Float031                                                    ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     Float101                                                    ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     Float111                                                    ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     Float121                                                    ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     Float131                                                    ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     Float201                                                    ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(float)                                     Float211                                                    ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     Float221                                                    ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     Float231                                                    ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	DMember(float)                                     Float301                                                    ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     Float311                                                    ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Float321                                                    ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	DMember(float)                                     Float331                                                    ___ OFFSET(get<float>, {0x7C, 4, 0, 0})
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
+	DMember(float)                                     Float00                                                     OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Float01                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Float02                                                     OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Float03                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Float10                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Float11                                                     OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Float12                                                     OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Float13                                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Float20                                                     OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Float21                                                     OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     Float22                                                     OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     Float23                                                     OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Float30                                                     OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     Float31                                                     OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Float32                                                     OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     Float33                                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Float001                                                    OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     Float011                                                    OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     Float021                                                    OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     Float031                                                    OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     Float101                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     Float111                                                    OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     Float121                                                    OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     Float131                                                    OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     Float201                                                    OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(float)                                     Float211                                                    OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     Float221                                                    OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     Float231                                                    OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     Float301                                                    OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     Float311                                                    OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Float321                                                    OFFSET(get<float>, {0x78, 4, 0, 0})
+	DMember(float)                                     Float331                                                    OFFSET(get<float>, {0x7C, 4, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x80, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlLimitEnabled
@@ -629,8 +1238,8 @@ class FRigControlLimitEnabled : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(bool)                                      bMinimum                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bMaximum                                                    ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bMinimum                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bMaximum                                                    OFFSET(get<bool>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInfluenceMapPerEvent
@@ -641,8 +1250,8 @@ class FRigInfluenceMapPerEvent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FRigInfluenceMap>)                  Maps                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FName, int32_t>)                      EventToIndex                                                ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	CMember(TArray<FRigInfluenceMap>)                  Maps                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FName, int32_t>)                      EventToIndex                                                OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInfluenceMap
@@ -653,9 +1262,9 @@ class FRigInfluenceMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FName)                                     EventName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FRigInfluenceEntry>)                Entries                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TMap<FRigElementKey, int32_t>)             KeyToIndex                                                  ___ OFFSET(get<T>, {0x18, 80, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FRigInfluenceEntry>)                Entries                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TMap<FRigElementKey, int32_t>)             KeyToIndex                                                  OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInfluenceEntry
@@ -666,8 +1275,8 @@ class FRigInfluenceEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRigElementKey)                            Source                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FRigElementKey>)                    AffectedList                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKey)                            Source                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FRigElementKey>)                    AffectedList                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigHierarchySettings
@@ -678,7 +1287,7 @@ class FRigHierarchySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   ProceduralElementLimit                                      ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   ProceduralElementLimit                                      OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.MovieSceneControlRigInstanceData
@@ -689,11 +1298,11 @@ class FMovieSceneControlRigInstanceData : public FMovieSceneSequenceInstanceData
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	DMember(bool)                                      bAdditive                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bApplyBoneFilter                                            ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	SMember(FInputBlendPose)                           BoneFilter                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Weight                                                      ___ OFFSET(get<T>, {0x20, 272, 0, 0})
-	SMember(FMovieSceneEvaluationOperand)              Operand                                                     ___ OFFSET(get<T>, {0x130, 20, 0, 0})
+	DMember(bool)                                      bAdditive                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bApplyBoneFilter                                            OFFSET(get<bool>, {0x9, 1, 0, 0})
+	SMember(FInputBlendPose)                           BoneFilter                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Weight                                                      OFFSET(get<T>, {0x20, 272, 0, 0})
+	SMember(FMovieSceneEvaluationOperand)              Operand                                                     OFFSET(get<T>, {0x130, 20, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigTransformStackEntry
@@ -704,13 +1313,13 @@ class FRigTransformStackEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FRigElementKey)                            Key                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TEnumAsByte<ERigTransformStackEntryType>)  EntryType                                                   ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	CMember(TEnumAsByte<ERigTransformType>)            TransformType                                               ___ OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FTransform)                                OldTransform                                                ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                NewTransform                                                ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	DMember(bool)                                      bAffectChildren                                             ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	CMember(TArray<FString>)                           Callstack                                                   ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FRigElementKey)                            Key                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TEnumAsByte<ERigTransformStackEntryType>)  EntryType                                                   OFFSET(get<T>, {0x8, 1, 0, 0})
+	CMember(TEnumAsByte<ERigTransformType>)            TransformType                                               OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(FTransform)                                OldTransform                                                OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                NewTransform                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	DMember(bool)                                      bAffectChildren                                             OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	CMember(TArray<FString>)                           Callstack                                                   OFFSET(get<T>, {0xD8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigSingleParentElement
@@ -731,9 +1340,9 @@ class FRigElementWeight : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     Location                                                    ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Rotation                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Location                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Rotation                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigElementParentConstraint
@@ -784,7 +1393,7 @@ class FRigRigidBodySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigRigidBodyElement
@@ -815,11 +1424,11 @@ class FRigHierarchyCopyPasteContentPerElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FRigElementKey)                            Key                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FString)                                   Content                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Parents                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FRigElementWeight>)                 ParentWeights                                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FRigCurrentAndInitialTransform)            Pose                                                        ___ OFFSET(get<T>, {0x40, 416, 0, 0})
+	SMember(FRigElementKey)                            Key                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FString)                                   Content                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Parents                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FRigElementWeight>)                 ParentWeights                                               OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FRigCurrentAndInitialTransform)            Pose                                                        OFFSET(get<T>, {0x40, 416, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigHierarchyCopyPasteContent
@@ -830,11 +1439,11 @@ class FRigHierarchyCopyPasteContent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FRigHierarchyCopyPasteContentPerElement>) Elements                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<ERigElementType>)                   Types                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FString>)                           Contents                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FTransform>)                        LocalTransforms                                             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FTransform>)                        GlobalTransforms                                            ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FRigHierarchyCopyPasteContentPerElement>) Elements                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<ERigElementType>)                   Types                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FString>)                           Contents                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FTransform>)                        LocalTransforms                                             OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FTransform>)                        GlobalTransforms                                            OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigExecuteContext
@@ -875,7 +1484,7 @@ class FRigUnitMutable : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugBaseMutable
@@ -926,18 +1535,18 @@ class FAnimNode_ControlRigBase : public FAnimNode_CustomProperty
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	DMember(bool)                                      bResetInputPoseToInitial                                    ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
-	DMember(bool)                                      bTransferInputPose                                          ___ OFFSET(get<bool>, {0x69, 1, 0, 0})
-	DMember(bool)                                      bTransferInputCurves                                        ___ OFFSET(get<bool>, {0x6A, 1, 0, 0})
-	DMember(bool)                                      bTransferPoseInGlobalSpace                                  ___ OFFSET(get<bool>, {0x6B, 1, 0, 0})
-	CMember(TArray<FBoneReference>)                    InputBonesToTransfer                                        ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FBoneReference>)                    OutputBonesToTransfer                                       ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TWeakObjectPtr<UNodeMappingContainer*>)    NodeMappingContainer                                        ___ OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(FControlRigIOSettings)                     InputSettings                                               ___ OFFSET(get<T>, {0x208, 2, 0, 0})
-	SMember(FControlRigIOSettings)                     OutputSettings                                              ___ OFFSET(get<T>, {0x20A, 2, 0, 0})
-	DMember(bool)                                      bExecute                                                    ___ OFFSET(get<bool>, {0x20C, 1, 0, 0})
-	CMember(TArray<FControlRigAnimNodeEventName>)      EventQueue                                                  ___ OFFSET(get<T>, {0x218, 16, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(bool)                                      bResetInputPoseToInitial                                    OFFSET(get<bool>, {0x68, 1, 0, 0})
+	DMember(bool)                                      bTransferInputPose                                          OFFSET(get<bool>, {0x69, 1, 0, 0})
+	DMember(bool)                                      bTransferInputCurves                                        OFFSET(get<bool>, {0x6A, 1, 0, 0})
+	DMember(bool)                                      bTransferPoseInGlobalSpace                                  OFFSET(get<bool>, {0x6B, 1, 0, 0})
+	CMember(TArray<FBoneReference>)                    InputBonesToTransfer                                        OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FBoneReference>)                    OutputBonesToTransfer                                       OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TWeakObjectPtr<UNodeMappingContainer*>)    NodeMappingContainer                                        OFFSET(get<T>, {0x200, 8, 0, 0})
+	SMember(FControlRigIOSettings)                     InputSettings                                               OFFSET(get<T>, {0x208, 2, 0, 0})
+	SMember(FControlRigIOSettings)                     OutputSettings                                              OFFSET(get<T>, {0x20A, 2, 0, 0})
+	DMember(bool)                                      bExecute                                                    OFFSET(get<bool>, {0x20C, 1, 0, 0})
+	CMember(TArray<FControlRigAnimNodeEventName>)      EventQueue                                                  OFFSET(get<T>, {0x218, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigAnimNodeEventName
@@ -948,7 +1557,7 @@ class FControlRigAnimNodeEventName : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     EventName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigIOSettings
@@ -959,8 +1568,8 @@ class FControlRigIOSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(bool)                                      bUpdatePose                                                 ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bUpdateCurves                                               ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bUpdatePose                                                 OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bUpdateCurves                                               OFFSET(get<bool>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.AnimNode_ControlRig
@@ -971,19 +1580,19 @@ class FAnimNode_ControlRig : public FAnimNode_ControlRigBase
 	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
-	CMember(UClass*)                                   ControlRigClass                                             ___ OFFSET(get<T>, {0x230, 8, 0, 0})
-	CMember(UControlRig*)                              ControlRig                                                  ___ OFFSET(get<T>, {0x238, 8, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x240, 4, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0x244, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0x245, 1, 1, 0})
-	DMember(bool)                                      bSetRefPoseFromSkeleton                                     ___ OFFSET(get<bool>, {0x245, 1, 1, 1})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x248, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x250, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0x298, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0x29C, 48, 0, 0})
-	CMember(TMap<FName, FName>)                        InputMapping                                                ___ OFFSET(get<T>, {0x2D0, 80, 0, 0})
-	CMember(TMap<FName, FName>)                        OutputMapping                                               ___ OFFSET(get<T>, {0x320, 80, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x420, 4, 0, 0})
+	CMember(UClass*)                                   ControlRigClass                                             OFFSET(get<T>, {0x230, 8, 0, 0})
+	CMember(UControlRig*)                              ControlRig                                                  OFFSET(get<T>, {0x238, 8, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x240, 4, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x244, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x245, 1, 1, 0})
+	DMember(bool)                                      bSetRefPoseFromSkeleton                                     OFFSET(get<bool>, {0x245, 1, 1, 1})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x248, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x250, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0x298, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0x29C, 48, 0, 0})
+	CMember(TMap<FName, FName>)                        InputMapping                                                OFFSET(get<T>, {0x2D0, 80, 0, 0})
+	CMember(TMap<FName, FName>)                        OutputMapping                                               OFFSET(get<T>, {0x320, 80, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x420, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.AnimNode_ControlRig_ExternalSource
@@ -994,7 +1603,7 @@ class FAnimNode_ControlRig_ExternalSource : public FAnimNode_ControlRigBase
 	static inline constexpr uint64_t __MDKClassSize = 568;
 
 public:
-	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  ___ OFFSET(get<T>, {0x230, 8, 0, 0})
+	CMember(TWeakObjectPtr<UControlRig*>)              ControlRig                                                  OFFSET(get<T>, {0x230, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigAnimInstanceProxy
@@ -1015,18 +1624,18 @@ class FControlRigComponentMappedElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FSoftComponentReference)                   ComponentReference                                          ___ OFFSET(get<T>, {0x0, 64, 0, 0})
-	DMember(int32_t)                                   TransformIndex                                              ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	SMember(FName)                                     TransformName                                               ___ OFFSET(get<T>, {0x44, 4, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x48, 1, 0, 0})
-	SMember(FName)                                     ElementName                                                 ___ OFFSET(get<T>, {0x4C, 4, 0, 0})
-	CMember(EControlRigComponentMapDirection)          Direction                                                   ___ OFFSET(get<T>, {0x50, 1, 0, 0})
-	SMember(FTransform)                                Offset                                                      ___ OFFSET(get<T>, {0x60, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0xC0, 4, 0, 0})
-	CMember(EControlRigComponentSpace)                 Space                                                       ___ OFFSET(get<T>, {0xC4, 1, 0, 0})
-	CMember(USceneComponent*)                          SceneComponent                                              ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	DMember(int32_t)                                   ElementIndex                                                ___ OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
-	DMember(int32_t)                                   SubIndex                                                    ___ OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
+	SMember(FSoftComponentReference)                   ComponentReference                                          OFFSET(get<T>, {0x0, 64, 0, 0})
+	DMember(int32_t)                                   TransformIndex                                              OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	SMember(FName)                                     TransformName                                               OFFSET(get<T>, {0x44, 4, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x48, 1, 0, 0})
+	SMember(FName)                                     ElementName                                                 OFFSET(get<T>, {0x4C, 4, 0, 0})
+	CMember(EControlRigComponentMapDirection)          Direction                                                   OFFSET(get<T>, {0x50, 1, 0, 0})
+	SMember(FTransform)                                Offset                                                      OFFSET(get<T>, {0x60, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0xC0, 4, 0, 0})
+	CMember(EControlRigComponentSpace)                 Space                                                       OFFSET(get<T>, {0xC4, 1, 0, 0})
+	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0xC8, 8, 0, 0})
+	DMember(int32_t)                                   ElementIndex                                                OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
+	DMember(int32_t)                                   SubIndex                                                    OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigComponentMappedComponent
@@ -1037,10 +1646,10 @@ class FControlRigComponentMappedComponent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(USceneComponent*)                          Component                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ElementName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	CMember(EControlRigComponentMapDirection)          Direction                                                   ___ OFFSET(get<T>, {0xD, 1, 0, 0})
+	CMember(USceneComponent*)                          Component                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     ElementName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(EControlRigComponentMapDirection)          Direction                                                   OFFSET(get<T>, {0xD, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigComponentMappedBone
@@ -1051,8 +1660,8 @@ class FControlRigComponentMappedBone : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Source                                                      ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Target                                                      ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Source                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Target                                                      OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigComponentMappedCurve
@@ -1063,8 +1672,8 @@ class FControlRigComponentMappedCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Source                                                      ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Target                                                      ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Source                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Target                                                      OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlShapeActorCreationParam
@@ -1085,9 +1694,9 @@ class FControlRigShapeDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     ShapeName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UStaticMesh*>)              StaticMesh                                                  ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FName)                                     ShapeName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UStaticMesh*>)              StaticMesh                                                  OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigTestDataVariable
@@ -1098,9 +1707,9 @@ class FControlRigTestDataVariable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     CPPType                                                     ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigTestDataFrame
@@ -1111,10 +1720,10 @@ class FControlRigTestDataFrame : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(double)                                    AbsoluteTime                                                ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    DeltaTime                                                   ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	CMember(TArray<FControlRigTestDataVariable>)       Variables                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x20, 112, 0, 0})
+	DMember(double)                                    AbsoluteTime                                                OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    DeltaTime                                                   OFFSET(get<double>, {0x8, 8, 0, 0})
+	CMember(TArray<FControlRigTestDataVariable>)       Variables                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x20, 112, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigPose
@@ -1125,9 +1734,9 @@ class FRigPose : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<FRigPoseElement>)                   Elements                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   HierarchyTopologyVersion                                    ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   PoseHash                                                    ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	CMember(TArray<FRigPoseElement>)                   Elements                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   HierarchyTopologyVersion                                    OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   PoseHash                                                    OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigPoseElement
@@ -1138,10 +1747,10 @@ class FRigPoseElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FCachedRigElement)                         Index                                                       ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                GlobalTransform                                             ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	DMember(float)                                     CurveValue                                                  ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
+	SMember(FCachedRigElement)                         Index                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                GlobalTransform                                             OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x80, 96, 0, 0})
+	DMember(float)                                     CurveValue                                                  OFFSET(get<float>, {0xE0, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CachedRigElement
@@ -1152,9 +1761,9 @@ class FCachedRigElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRigElementKey)                            Key                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(uint16_t)                                  Index                                                       ___ OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
-	DMember(int32_t)                                   ContainerVersion                                            ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FRigElementKey)                            Key                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(uint16_t)                                  Index                                                       OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
+	DMember(int32_t)                                   ContainerVersion                                            OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigValidationContext
@@ -1175,9 +1784,9 @@ class FCRSimContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     TimeStep                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     AccumulatedTime                                             ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     TimeLeftForStep                                             ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     TimeStep                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     AccumulatedTime                                             OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     TimeLeftForStep                                             OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CRSimLinearSpring
@@ -1188,10 +1797,10 @@ class FCRSimLinearSpring : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   SubjectA                                                    ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   SubjectB                                                    ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(float)                                     Coefficient                                                 ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Equilibrium                                                 ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   SubjectA                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   SubjectB                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(float)                                     Coefficient                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Equilibrium                                                 OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CRSimPointConstraint
@@ -1202,11 +1811,11 @@ class FCRSimPointConstraint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(ECRSimConstraintType)                      Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   SubjectA                                                    ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   SubjectB                                                    ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   DataA                                                       ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   DataB                                                       ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(ECRSimConstraintType)                      Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   SubjectA                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   SubjectB                                                    OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FVector)                                   DataA                                                       OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   DataB                                                       OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CRSimPointContainer
@@ -1217,12 +1826,12 @@ class FCRSimPointContainer : public FCRSimContainer
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TArray<FRigVMSimPoint>)                    Points                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FCRSimLinearSpring>)                Springs                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FCRSimPointForce>)                  Forces                                                      ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FCRSimSoftCollision>)               CollisionVolumes                                            ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FCRSimPointConstraint>)             Constraints                                                 ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FRigVMSimPoint>)                    PreviousStep                                                ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FRigVMSimPoint>)                    Points                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FCRSimLinearSpring>)                Springs                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FCRSimPointForce>)                  Forces                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FCRSimSoftCollision>)               CollisionVolumes                                            OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FCRSimPointConstraint>)             Constraints                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FRigVMSimPoint>)                    PreviousStep                                                OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CRSimSoftCollision
@@ -1233,13 +1842,13 @@ class FCRSimSoftCollision : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	CMember(ECRSimSoftCollisionType)                   ShapeType                                                   ___ OFFSET(get<T>, {0x60, 1, 0, 0})
-	DMember(float)                                     MinimumDistance                                             ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     MaximumDistance                                             ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	CMember(ERigVMAnimEasingType)                      FalloffType                                                 ___ OFFSET(get<T>, {0x6C, 1, 0, 0})
-	DMember(float)                                     Coefficient                                                 ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(bool)                                      bInverted                                                   ___ OFFSET(get<bool>, {0x74, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	CMember(ECRSimSoftCollisionType)                   ShapeType                                                   OFFSET(get<T>, {0x60, 1, 0, 0})
+	DMember(float)                                     MinimumDistance                                             OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     MaximumDistance                                             OFFSET(get<float>, {0x68, 4, 0, 0})
+	CMember(ERigVMAnimEasingType)                      FalloffType                                                 OFFSET(get<T>, {0x6C, 1, 0, 0})
+	DMember(float)                                     Coefficient                                                 OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(bool)                                      bInverted                                                   OFFSET(get<bool>, {0x74, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.CRSimPointForce
@@ -1250,10 +1859,10 @@ class FCRSimPointForce : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(ECRSimPointForceType)                      ForceType                                                   ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Coefficient                                                 ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(bool)                                      bNormalize                                                  ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
+	CMember(ECRSimPointForceType)                      ForceType                                                   OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Coefficient                                                 OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(bool)                                      bNormalize                                                  OFFSET(get<bool>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ConstraintNodeData
@@ -1264,10 +1873,10 @@ class FConstraintNodeData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FTransform)                                RelativeParent                                              ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FConstraintOffset)                         ConstraintOffset                                            ___ OFFSET(get<T>, {0x60, 192, 0, 0})
-	SMember(FName)                                     LinkedNode                                                  ___ OFFSET(get<T>, {0x120, 4, 0, 0})
-	CMember(TArray<FTransformConstraint>)              Constraints                                                 ___ OFFSET(get<T>, {0x128, 16, 0, 0})
+	SMember(FTransform)                                RelativeParent                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FConstraintOffset)                         ConstraintOffset                                            OFFSET(get<T>, {0x60, 192, 0, 0})
+	SMember(FName)                                     LinkedNode                                                  OFFSET(get<T>, {0x120, 4, 0, 0})
+	CMember(TArray<FTransformConstraint>)              Constraints                                                 OFFSET(get<T>, {0x128, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.AnimationHierarchy
@@ -1278,7 +1887,7 @@ class FAnimationHierarchy : public FNodeHierarchyWithUserData
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<FConstraintNodeData>)               UserData                                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FConstraintNodeData>)               UserData                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigElement
@@ -1289,8 +1898,8 @@ class FRigElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigBone
@@ -1301,13 +1910,13 @@ class FRigBone : public FRigElement
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FName)                                     ParentName                                                  ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   ParentIndex                                                 ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FTransform)                                GlobalTransform                                             ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0xE0, 96, 0, 0})
-	CMember(TArray<int32_t>)                           Dependents                                                  ___ OFFSET(get<T>, {0x140, 16, 0, 0})
-	CMember(ERigBoneType)                              Type                                                        ___ OFFSET(get<T>, {0x150, 1, 0, 0})
+	SMember(FName)                                     ParentName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   ParentIndex                                                 OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                GlobalTransform                                             OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0xE0, 96, 0, 0})
+	CMember(TArray<int32_t>)                           Dependents                                                  OFFSET(get<T>, {0x140, 16, 0, 0})
+	CMember(ERigBoneType)                              Type                                                        OFFSET(get<T>, {0x150, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigBoneHierarchy
@@ -1318,7 +1927,7 @@ class FRigBoneHierarchy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigBone>)                          Bones                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigBone>)                          Bones                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControl
@@ -1329,32 +1938,32 @@ class FRigControl : public FRigElement
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	CMember(ERigControlType)                           ControlType                                                 ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FName)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FName)                                     ParentName                                                  ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   ParentIndex                                                 ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	SMember(FName)                                     SpaceName                                                   ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   SpaceIndex                                                  ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	SMember(FTransform)                                OffsetTransform                                             ___ OFFSET(get<T>, {0x30, 96, 0, 0})
-	SMember(FRigControlValue)                          InitialValue                                                ___ OFFSET(get<T>, {0x90, 132, 0, 0})
-	SMember(FRigControlValue)                          Value                                                       ___ OFFSET(get<T>, {0x114, 132, 0, 0})
-	CMember(ERigControlAxis)                           PrimaryAxis                                                 ___ OFFSET(get<T>, {0x198, 1, 0, 0})
-	DMember(bool)                                      bIsCurve                                                    ___ OFFSET(get<bool>, {0x199, 1, 0, 0})
-	DMember(bool)                                      bAnimatable                                                 ___ OFFSET(get<bool>, {0x19A, 1, 0, 0})
-	DMember(bool)                                      bLimitTranslation                                           ___ OFFSET(get<bool>, {0x19B, 1, 0, 0})
-	DMember(bool)                                      bLimitRotation                                              ___ OFFSET(get<bool>, {0x19C, 1, 0, 0})
-	DMember(bool)                                      bLimitScale                                                 ___ OFFSET(get<bool>, {0x19D, 1, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0x19E, 1, 0, 0})
-	SMember(FRigControlValue)                          MinimumValue                                                ___ OFFSET(get<T>, {0x1A0, 132, 0, 0})
-	SMember(FRigControlValue)                          MaximumValue                                                ___ OFFSET(get<T>, {0x224, 132, 0, 0})
-	DMember(bool)                                      bGizmoEnabled                                               ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-	DMember(bool)                                      bGizmoVisible                                               ___ OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-	SMember(FName)                                     GizmoName                                                   ___ OFFSET(get<T>, {0x2AC, 4, 0, 0})
-	SMember(FTransform)                                GizmoTransform                                              ___ OFFSET(get<T>, {0x2B0, 96, 0, 0})
-	SMember(FLinearColor)                              GizmoColor                                                  ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	CMember(TArray<int32_t>)                           Dependents                                                  ___ OFFSET(get<T>, {0x320, 16, 0, 0})
-	DMember(bool)                                      bIsTransientControl                                         ___ OFFSET(get<bool>, {0x330, 1, 0, 0})
-	CMember(UEnum*)                                    ControlEnum                                                 ___ OFFSET(get<T>, {0x338, 8, 0, 0})
+	CMember(ERigControlType)                           ControlType                                                 OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     ParentName                                                  OFFSET(get<T>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   ParentIndex                                                 OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     SpaceName                                                   OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   SpaceIndex                                                  OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	SMember(FTransform)                                OffsetTransform                                             OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FRigControlValue)                          InitialValue                                                OFFSET(get<T>, {0x90, 132, 0, 0})
+	SMember(FRigControlValue)                          Value                                                       OFFSET(get<T>, {0x114, 132, 0, 0})
+	CMember(ERigControlAxis)                           PrimaryAxis                                                 OFFSET(get<T>, {0x198, 1, 0, 0})
+	DMember(bool)                                      bIsCurve                                                    OFFSET(get<bool>, {0x199, 1, 0, 0})
+	DMember(bool)                                      bAnimatable                                                 OFFSET(get<bool>, {0x19A, 1, 0, 0})
+	DMember(bool)                                      bLimitTranslation                                           OFFSET(get<bool>, {0x19B, 1, 0, 0})
+	DMember(bool)                                      bLimitRotation                                              OFFSET(get<bool>, {0x19C, 1, 0, 0})
+	DMember(bool)                                      bLimitScale                                                 OFFSET(get<bool>, {0x19D, 1, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0x19E, 1, 0, 0})
+	SMember(FRigControlValue)                          MinimumValue                                                OFFSET(get<T>, {0x1A0, 132, 0, 0})
+	SMember(FRigControlValue)                          MaximumValue                                                OFFSET(get<T>, {0x224, 132, 0, 0})
+	DMember(bool)                                      bGizmoEnabled                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	DMember(bool)                                      bGizmoVisible                                               OFFSET(get<bool>, {0x2A9, 1, 0, 0})
+	SMember(FName)                                     GizmoName                                                   OFFSET(get<T>, {0x2AC, 4, 0, 0})
+	SMember(FTransform)                                GizmoTransform                                              OFFSET(get<T>, {0x2B0, 96, 0, 0})
+	SMember(FLinearColor)                              GizmoColor                                                  OFFSET(get<T>, {0x310, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Dependents                                                  OFFSET(get<T>, {0x320, 16, 0, 0})
+	DMember(bool)                                      bIsTransientControl                                         OFFSET(get<bool>, {0x330, 1, 0, 0})
+	CMember(UEnum*)                                    ControlEnum                                                 OFFSET(get<T>, {0x338, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlHierarchy
@@ -1365,7 +1974,7 @@ class FRigControlHierarchy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigControl>)                       Controls                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigControl>)                       Controls                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigCurve
@@ -1376,7 +1985,7 @@ class FRigCurve : public FRigElement
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigCurveContainer
@@ -1387,7 +1996,7 @@ class FRigCurveContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigCurve>)                         Curves                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigCurve>)                         Curves                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigHierarchyContainer
@@ -1398,10 +2007,10 @@ class FRigHierarchyContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigBoneHierarchy)                         BoneHierarchy                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FRigSpaceHierarchy)                        SpaceHierarchy                                              ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRigControlHierarchy)                      ControlHierarchy                                            ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FRigCurveContainer)                        CurveContainer                                              ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FRigBoneHierarchy)                         BoneHierarchy                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FRigSpaceHierarchy)                        SpaceHierarchy                                              OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRigControlHierarchy)                      ControlHierarchy                                            OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigCurveContainer)                        CurveContainer                                              OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigSpaceHierarchy
@@ -1412,7 +2021,7 @@ class FRigSpaceHierarchy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigSpace>)                         Spaces                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigSpace>)                         Spaces                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigSpace
@@ -1423,11 +2032,11 @@ class FRigSpace : public FRigElement
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(ERigSpaceType)                             SpaceType                                                   ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FName)                                     ParentName                                                  ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	DMember(int32_t)                                   ParentIndex                                                 ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0x80, 96, 0, 0})
+	CMember(ERigSpaceType)                             SpaceType                                                   OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FName)                                     ParentName                                                  OFFSET(get<T>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   ParentIndex                                                 OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x80, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigHierarchyRef
@@ -1458,7 +2067,7 @@ class FRigElementKeyCollection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Keys                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Keys                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigEventContext
@@ -1479,8 +2088,8 @@ class FRigBaseMetadata : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(ERigMetadataType)                          Type                                                        ___ OFFSET(get<T>, {0x14, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(ERigMetadataType)                          Type                                                        OFFSET(get<T>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigBoolMetadata
@@ -1491,7 +2100,7 @@ class FRigBoolMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigBoolArrayMetadata
@@ -1502,7 +2111,7 @@ class FRigBoolArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<bool>)                              Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<bool>)                              Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigFloatMetadata
@@ -1513,7 +2122,7 @@ class FRigFloatMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigFloatArrayMetadata
@@ -1524,7 +2133,7 @@ class FRigFloatArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<float>)                             Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<float>)                             Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInt32Metadata
@@ -1535,7 +2144,7 @@ class FRigInt32Metadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInt32ArrayMetadata
@@ -1546,7 +2155,7 @@ class FRigInt32ArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<int32_t>)                           Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigNameMetadata
@@ -1557,7 +2166,7 @@ class FRigNameMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     Value                                                       ___ OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FName)                                     Value                                                       OFFSET(get<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigNameArrayMetadata
@@ -1568,7 +2177,7 @@ class FRigNameArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FName>)                             Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FName>)                             Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigVectorMetadata
@@ -1579,7 +2188,7 @@ class FRigVectorMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigVectorArrayMetadata
@@ -1590,7 +2199,7 @@ class FRigVectorArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FVector>)                           Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FVector>)                           Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigRotatorMetadata
@@ -1601,7 +2210,7 @@ class FRigRotatorMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRotator)                                  Value                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigRotatorArrayMetadata
@@ -1612,7 +2221,7 @@ class FRigRotatorArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FRotator>)                          Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FRotator>)                          Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigQuatMetadata
@@ -1623,7 +2232,7 @@ class FRigQuatMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigQuatArrayMetadata
@@ -1634,7 +2243,7 @@ class FRigQuatArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FQuat>)                             Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FQuat>)                             Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigTransformMetadata
@@ -1645,7 +2254,7 @@ class FRigTransformMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigTransformArrayMetadata
@@ -1656,7 +2265,7 @@ class FRigTransformArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FTransform>)                        Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigLinearColorMetadata
@@ -1667,7 +2276,7 @@ class FRigLinearColorMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FLinearColor)                              Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigLinearColorArrayMetadata
@@ -1678,7 +2287,7 @@ class FRigLinearColorArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FLinearColor>)                      Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FLinearColor>)                      Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigElementKeyMetadata
@@ -1689,7 +2298,7 @@ class FRigElementKeyMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKey)                            Value                                                       ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FRigElementKey)                            Value                                                       OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigElementKeyArrayMetadata
@@ -1700,7 +2309,7 @@ class FRigElementKeyArrayMetadata : public FRigBaseMetadata
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigInfluenceEntryModifier
@@ -1711,7 +2320,7 @@ class FRigInfluenceEntryModifier : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigElementKey>)                    AffectedList                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    AffectedList                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.AnimNode_ControlRigInputPose
@@ -1722,7 +2331,7 @@ class FAnimNode_ControlRigInputPose : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FPoseLink)                                 InputPose                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 InputPose                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigLayerInstanceProxy
@@ -1743,7 +2352,7 @@ class FControlRigSequenceObjectReference : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UClass*)                                   ControlRigClass                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   ControlRigClass                                             OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigSequenceObjectReferences
@@ -1754,7 +2363,7 @@ class FControlRigSequenceObjectReferences : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FControlRigSequenceObjectReference>) Array                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FControlRigSequenceObjectReference>) Array                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigSequenceObjectReferenceMap
@@ -1765,8 +2374,8 @@ class FControlRigSequenceObjectReferenceMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FGuid>)                             BindingIds                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FControlRigSequenceObjectReferences>) References                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FGuid>)                             BindingIds                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FControlRigSequenceObjectReferences>) References                                                OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.EnumParameterNameAndCurve
@@ -1777,8 +2386,8 @@ class FEnumParameterNameAndCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneByteChannel)                    ParameterCurve                                              ___ OFFSET(get<T>, {0x8, 264, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneByteChannel)                    ParameterCurve                                              OFFSET(get<T>, {0x8, 264, 0, 0})
 };
 
 /// Struct /Script/ControlRig.IntegerParameterNameAndCurve
@@ -1789,8 +2398,8 @@ class FIntegerParameterNameAndCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneIntegerChannel)                 ParameterCurve                                              ___ OFFSET(get<T>, {0x8, 256, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 ParameterCurve                                              OFFSET(get<T>, {0x8, 256, 0, 0})
 };
 
 /// Struct /Script/ControlRig.SpaceControlNameAndChannel
@@ -1801,8 +2410,8 @@ class FSpaceControlNameAndChannel : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FName)                                     ControlName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneControlRigSpaceChannel)         SpaceCurve                                                  ___ OFFSET(get<T>, {0x8, 272, 0, 0})
+	SMember(FName)                                     ControlName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneControlRigSpaceChannel)         SpaceCurve                                                  OFFSET(get<T>, {0x8, 272, 0, 0})
 };
 
 /// Struct /Script/ControlRig.MovieSceneControlRigSpaceChannel
@@ -1813,9 +2422,9 @@ class FMovieSceneControlRigSpaceChannel : public FMovieSceneChannel
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<FMovieSceneControlRigSpaceBaseKey>) KeyValues                                                   ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  ___ OFFSET(get<T>, {0x70, 136, 0, 0})
+	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FMovieSceneControlRigSpaceBaseKey>) KeyValues                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x70, 136, 0, 0})
 };
 
 /// Struct /Script/ControlRig.MovieSceneControlRigSpaceBaseKey
@@ -1826,8 +2435,8 @@ class FMovieSceneControlRigSpaceBaseKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	CMember(EMovieSceneControlRigSpaceType)            SpaceType                                                   ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FRigElementKey)                            ControlRigElement                                           ___ OFFSET(get<T>, {0x4, 8, 0, 0})
+	CMember(EMovieSceneControlRigSpaceType)            SpaceType                                                   OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FRigElementKey)                            ControlRigElement                                           OFFSET(get<T>, {0x4, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ChannelMapInfo
@@ -1838,16 +2447,16 @@ class FChannelMapInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   ControlIndex                                                ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   TotalChannelIndex                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   ChannelIndex                                                ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   ParentControlIndex                                          ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FName)                                     ChannelTypeName                                             ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bDoesHaveSpace                                              ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(int32_t)                                   SpaceChannelIndex                                           ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   MaskIndex                                                   ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	DMember(int32_t)                                   CategoryIndex                                               ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	CMember(TArray<uint32_t>)                          ConstraintsIndex                                            ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(int32_t)                                   ControlIndex                                                OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   TotalChannelIndex                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   ChannelIndex                                                OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   ParentControlIndex                                          OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FName)                                     ChannelTypeName                                             OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bDoesHaveSpace                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(int32_t)                                   SpaceChannelIndex                                           OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   MaskIndex                                                   OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	DMember(int32_t)                                   CategoryIndex                                               OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	CMember(TArray<uint32_t>)                          ConstraintsIndex                                            OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.MovieSceneControlRigParameterTemplate
@@ -1858,10 +2467,10 @@ class FMovieSceneControlRigParameterTemplate : public FMovieSceneParameterSectio
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FEnumParameterNameAndCurve>)        Enums                                                       ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FIntegerParameterNameAndCurve>)     Integers                                                    ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TArray<FSpaceControlNameAndChannel>)       Spaces                                                      ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TArray<FConstraintAndActiveChannel>)       Constraints                                                 ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FEnumParameterNameAndCurve>)        Enums                                                       OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FIntegerParameterNameAndCurve>)     Integers                                                    OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TArray<FSpaceControlNameAndChannel>)       Spaces                                                      OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FConstraintAndActiveChannel>)       Constraints                                                 OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRotationOrder
@@ -1872,8 +2481,8 @@ class FControlRotationOrder : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bOverrideSetting                                            ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bOverrideSetting                                            OFFSET(get<bool>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigSettingsPerPinBool
@@ -1884,7 +2493,7 @@ class FControlRigSettingsPerPinBool : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<FString, bool>)                       Values                                                      ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FString, bool>)                       Values                                                      OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigControlCopy
@@ -1895,14 +2504,14 @@ class FRigControlCopy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(ERigControlType)                           ControlType                                                 ___ OFFSET(get<T>, {0x14, 1, 0, 0})
-	SMember(FRigControlValue)                          Value                                                       ___ OFFSET(get<T>, {0x18, 132, 0, 0})
-	SMember(FRigElementKey)                            ParentKey                                                   ___ OFFSET(get<T>, {0x9C, 8, 0, 0})
-	SMember(FTransform)                                OffsetTransform                                             ___ OFFSET(get<T>, {0xB0, 96, 0, 0})
-	SMember(FTransform)                                ParentTransform                                             ___ OFFSET(get<T>, {0x110, 96, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FTransform)                                GlobalTransform                                             ___ OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(ERigControlType)                           ControlType                                                 OFFSET(get<T>, {0x14, 1, 0, 0})
+	SMember(FRigControlValue)                          Value                                                       OFFSET(get<T>, {0x18, 132, 0, 0})
+	SMember(FRigElementKey)                            ParentKey                                                   OFFSET(get<T>, {0x9C, 8, 0, 0})
+	SMember(FTransform)                                OffsetTransform                                             OFFSET(get<T>, {0xB0, 96, 0, 0})
+	SMember(FTransform)                                ParentTransform                                             OFFSET(get<T>, {0x110, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                GlobalTransform                                             OFFSET(get<T>, {0x1D0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ControlRigControlPose
@@ -1913,7 +2522,7 @@ class FControlRigControlPose : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FRigControlCopy>)                   CopyOfControls                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigControlCopy>)                   CopyOfControls                                              OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigDispatchFactory
@@ -1964,13 +2573,13 @@ class FRigUnit_SphereTraceWorld : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Start                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   End                                                         ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            Channel                                                     ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(bool)                                      bHit                                                        ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	SMember(FVector)                                   HitLocation                                                 ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   HitNormal                                                   ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Start                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   End                                                         OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            Channel                                                     OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(bool)                                      bHit                                                        OFFSET(get<bool>, {0x40, 1, 0, 0})
+	SMember(FVector)                                   HitLocation                                                 OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   HitNormal                                                   OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SphereTraceByTraceChannel
@@ -1981,13 +2590,13 @@ class FRigUnit_SphereTraceByTraceChannel : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Start                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   End                                                         ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(TEnumAsByte<ETraceTypeQuery>)              TraceChannel                                                ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(bool)                                      bHit                                                        ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	SMember(FVector)                                   HitLocation                                                 ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   HitNormal                                                   ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Start                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   End                                                         OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TEnumAsByte<ETraceTypeQuery>)              TraceChannel                                                OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(bool)                                      bHit                                                        OFFSET(get<bool>, {0x40, 1, 0, 0})
+	SMember(FVector)                                   HitLocation                                                 OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   HitNormal                                                   OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SphereTraceByObjectTypes
@@ -1998,13 +2607,13 @@ class FRigUnit_SphereTraceByObjectTypes : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Start                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   End                                                         ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       ObjectTypes                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(bool)                                      bHit                                                        ___ OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	SMember(FVector)                                   HitLocation                                                 ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   HitNormal                                                   ___ OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Start                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   End                                                         OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       ObjectTypes                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(bool)                                      bHit                                                        OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	SMember(FVector)                                   HitLocation                                                 OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   HitNormal                                                   OFFSET(get<T>, {0x68, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Control
@@ -2015,12 +2624,12 @@ class FRigUnit_Control : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FEulerTransform)                           Transform                                                   ___ OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                base                                                        ___ OFFSET(get<T>, {0x50, 96, 0, 0})
-	SMember(FTransform)                                InitTransform                                               ___ OFFSET(get<T>, {0xB0, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x110, 96, 0, 0})
-	SMember(FTransformFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x170, 9, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x179, 1, 0, 0})
+	SMember(FEulerTransform)                           Transform                                                   OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                base                                                        OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FTransform)                                InitTransform                                               OFFSET(get<T>, {0xB0, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x110, 96, 0, 0})
+	SMember(FTransformFilter)                          Filter                                                      OFFSET(get<T>, {0x170, 9, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x179, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Control_StaticMesh
@@ -2031,7 +2640,7 @@ class FRigUnit_Control_StaticMesh : public FRigUnit_Control
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FTransform)                                MeshTransform                                               ___ OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FTransform)                                MeshTransform                                               OFFSET(get<T>, {0x180, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigDispatch_GetUserData
@@ -2052,11 +2661,11 @@ class FRigUnit_SetupShapeLibraryFromUserData : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FString)                                   Namespace                                                   ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FString)                                   Path                                                        ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FString)                                   LibraryName                                                 ___ OFFSET(get<T>, {0x180, 16, 0, 0})
-	DMember(bool)                                      ReplaceExisting                                             ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	DMember(bool)                                      LogShapeLibraries                                           ___ OFFSET(get<bool>, {0x191, 1, 0, 0})
+	SMember(FString)                                   Namespace                                                   OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FString)                                   Path                                                        OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FString)                                   LibraryName                                                 OFFSET(get<T>, {0x180, 16, 0, 0})
+	DMember(bool)                                      ReplaceExisting                                             OFFSET(get<bool>, {0x190, 1, 0, 0})
+	DMember(bool)                                      LogShapeLibraries                                           OFFSET(get<bool>, {0x191, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ShapeExists
@@ -2067,8 +2676,8 @@ class FRigUnit_ShapeExists : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     ShapeName                                                   ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FName)                                     ShapeName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugBezier
@@ -2079,15 +2688,15 @@ class FRigUnit_DebugBezier : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	DMember(float)                                     MinimumU                                                    ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(float)                                     MaximumU                                                    ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x180, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
+	DMember(float)                                     MinimumU                                                    OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(float)                                     MaximumU                                                    OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x168, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x180, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugBezierItemSpace
@@ -2098,15 +2707,15 @@ class FRigUnit_DebugBezierItemSpace : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	DMember(float)                                     MinimumU                                                    ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(float)                                     MaximumU                                                    ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
+	DMember(float)                                     MinimumU                                                    OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(float)                                     MaximumU                                                    OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x168, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x180, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugHierarchy
@@ -2117,12 +2726,12 @@ class FRigUnit_DebugHierarchy : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x164, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x160, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x164, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugPose
@@ -2133,13 +2742,13 @@ class FRigUnit_DebugPose : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x160, 112, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1D4, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1E4, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x160, 112, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1D4, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1E4, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugLine
@@ -2150,13 +2759,13 @@ class FRigUnit_DebugLine : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x190, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x1A4, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1B0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x210, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x190, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x1A4, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1B0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x210, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugLineItemSpace
@@ -2167,13 +2776,13 @@ class FRigUnit_DebugLineItemSpace : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x190, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x1A4, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1B0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x210, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x190, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x1A4, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1B0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x210, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugLineStrip
@@ -2184,12 +2793,12 @@ class FRigUnit_DebugLineStrip : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	CMember(TArray<FVector>)                           Points                                                      ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x184, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x184, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugLineStripItemSpace
@@ -2200,12 +2809,12 @@ class FRigUnit_DebugLineStripItemSpace : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	CMember(TArray<FVector>)                           Points                                                      ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x184, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x184, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugRectangle
@@ -2216,13 +2825,13 @@ class FRigUnit_DebugRectangle : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x1D8, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x1D8, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x240, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugRectangleItemSpace
@@ -2233,13 +2842,13 @@ class FRigUnit_DebugRectangleItemSpace : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x240, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugArc
@@ -2250,16 +2859,16 @@ class FRigUnit_DebugArc : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     MinimumDegrees                                              ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     MaximumDegrees                                              ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1DC, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x1E4, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1DC, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x1E4, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugArcItemSpace
@@ -2270,16 +2879,16 @@ class FRigUnit_DebugArcItemSpace : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     MinimumDegrees                                              ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     MaximumDegrees                                              ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1DC, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x1E4, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1DC, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x1E4, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransform
@@ -2290,14 +2899,14 @@ class FRigUnit_DebugTransform : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x70, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x74, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x8C, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x90, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0xF0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x70, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x74, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x88, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x8C, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x90, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0xF0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransformMutable
@@ -2308,14 +2917,14 @@ class FRigUnit_DebugTransformMutable : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x1C0, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C4, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x1DC, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x1C0, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C4, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x1DC, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x240, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransformMutableItemSpace
@@ -2326,14 +2935,14 @@ class FRigUnit_DebugTransformMutableItemSpace : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x160, 96, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x1C0, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x1C4, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x1DC, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x160, 96, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x1C0, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x1C4, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x1DC, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransformArrayMutable_WorkData
@@ -2344,7 +2953,7 @@ class FRigUnit_DebugTransformArrayMutable_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FTransform>)                        DrawTransforms                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FTransform>)                        DrawTransforms                                              OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransformArrayMutable
@@ -2355,15 +2964,15 @@ class FRigUnit_DebugTransformArrayMutable : public FRigUnit_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x170, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x174, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x18C, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
-	SMember(FRigUnit_DebugTransformArrayMutable_WorkData) WorkData                                                 ___ OFFSET(get<T>, {0x1F8, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x170, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x174, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x184, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x188, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x18C, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FRigUnit_DebugTransformArrayMutable_WorkData) WorkData                                                 OFFSET(get<T>, {0x1F8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DebugTransformArrayMutableItemSpace
@@ -2374,15 +2983,15 @@ class FRigUnit_DebugTransformArrayMutableItemSpace : public FRigUnit_DebugBaseMu
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x184, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x198, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x19C, 8, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x1B0, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x210, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x170, 16, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x180, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x184, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x198, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x19C, 8, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x1B0, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x210, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_StartProfilingTimer
@@ -2403,11 +3012,11 @@ class FRigUnit_EndProfilingTimer : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	DMember(int32_t)                                   NumberOfMeasurements                                        ___ OFFSET(get<int32_t>, {0x100, 4, 0, 0})
-	SMember(FString)                                   Prefix                                                      ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	DMember(float)                                     AccumulatedTime                                             ___ OFFSET(get<float>, {0x118, 4, 0, 0})
-	DMember(int32_t)                                   MeasurementsLeft                                            ___ OFFSET(get<int32_t>, {0x11C, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x120, 1, 0, 0})
+	DMember(int32_t)                                   NumberOfMeasurements                                        OFFSET(get<int32_t>, {0x100, 4, 0, 0})
+	SMember(FString)                                   Prefix                                                      OFFSET(get<T>, {0x108, 16, 0, 0})
+	DMember(float)                                     AccumulatedTime                                             OFFSET(get<float>, {0x118, 4, 0, 0})
+	DMember(int32_t)                                   MeasurementsLeft                                            OFFSET(get<int32_t>, {0x11C, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x120, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugVector
@@ -2418,13 +3027,13 @@ class FRigUnit_VisualDebugVector : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugVectorItemSpace
@@ -2435,13 +3044,13 @@ class FRigUnit_VisualDebugVectorItemSpace : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x3C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugQuat
@@ -2452,11 +3061,11 @@ class FRigUnit_VisualDebugQuat : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugQuatItemSpace
@@ -2467,11 +3076,11 @@ class FRigUnit_VisualDebugQuatItemSpace : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x3C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugTransform
@@ -2482,11 +3091,11 @@ class FRigUnit_VisualDebugTransform : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x7C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_VisualDebugTransformItemSpace
@@ -2497,11 +3106,11 @@ class FRigUnit_VisualDebugTransformItemSpace : public FRigUnit_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x7C, 8, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x7C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertTransform
@@ -2512,8 +3121,8 @@ class FRigUnit_ConvertTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FTransform)                                Input                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FEulerTransform)                           Result                                                      ___ OFFSET(get<T>, {0x70, 72, 0, 0})
+	SMember(FTransform)                                Input                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FEulerTransform)                           Result                                                      OFFSET(get<T>, {0x70, 72, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertEulerTransform
@@ -2524,8 +3133,8 @@ class FRigUnit_ConvertEulerTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FEulerTransform)                           Input                                                       ___ OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FEulerTransform)                           Input                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertRotation
@@ -2536,8 +3145,8 @@ class FRigUnit_ConvertRotation : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Input                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FRotator)                                  Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertVectorRotation
@@ -2558,8 +3167,8 @@ class FRigUnit_ConvertQuaternion : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Input                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FRotator)                                  Result                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FRotator)                                  Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertVectorToRotation
@@ -2570,8 +3179,8 @@ class FRigUnit_ConvertVectorToRotation : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Input                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  Result                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  Result                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertVectorToQuaternion
@@ -2582,8 +3191,8 @@ class FRigUnit_ConvertVectorToQuaternion : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Input                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertRotationToVector
@@ -2594,8 +3203,8 @@ class FRigUnit_ConvertRotationToVector : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRotator)                                  Input                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FRotator)                                  Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ConvertQuaternionToVector
@@ -2606,8 +3215,8 @@ class FRigUnit_ConvertQuaternionToVector : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Input                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToSwingAndTwist
@@ -2618,10 +3227,10 @@ class FRigUnit_ToSwingAndTwist : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FQuat)                                     Input                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FQuat)                                     Swing                                                       ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	SMember(FQuat)                                     Twist                                                       ___ OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Swing                                                       OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Twist                                                       OFFSET(get<T>, {0x70, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BinaryFloatOp
@@ -2632,9 +3241,9 @@ class FRigUnit_BinaryFloatOp : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Argument0                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Argument1                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Argument0                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Argument1                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Multiply_FloatFloat
@@ -2685,10 +3294,10 @@ class FRigUnit_Clamp_Float : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     min                                                         ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     max                                                         ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     min                                                         OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     max                                                         OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_MapRange_Float
@@ -2699,12 +3308,12 @@ class FRigUnit_MapRange_Float : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinIn                                                       ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     MaxIn                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     MinOut                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     MaxOut                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinIn                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     MaxIn                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     MinOut                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     MaxOut                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BinaryQuaternionOp
@@ -2715,9 +3324,9 @@ class FRigUnit_BinaryQuaternionOp : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     Argument0                                                   ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Argument1                                                   ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Argument0                                                   OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Argument1                                                   OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_MultiplyQuaternion
@@ -2738,8 +3347,8 @@ class FRigUnit_UnaryQuaternionOp : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Argument                                                    ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Argument                                                    OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_InverseQuaterion
@@ -2760,9 +3369,9 @@ class FRigUnit_QuaternionToAxisAndAngle : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Argument                                                    ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     Angle                                                       ___ OFFSET(get<float>, {0x48, 4, 0, 0})
+	SMember(FQuat)                                     Argument                                                    OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_QuaternionFromAxisAndAngle
@@ -2773,9 +3382,9 @@ class FRigUnit_QuaternionFromAxisAndAngle : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Angle                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_QuaternionToAngle
@@ -2786,9 +3395,9 @@ class FRigUnit_QuaternionToAngle : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Argument                                                    ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	DMember(float)                                     Angle                                                       ___ OFFSET(get<float>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Argument                                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BinaryTransformOp
@@ -2799,9 +3408,9 @@ class FRigUnit_BinaryTransformOp : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                Argument0                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Argument1                                                   ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Argument0                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Argument1                                                   OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_MultiplyTransform
@@ -2832,9 +3441,9 @@ class FRigUnit_BinaryVectorOp : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Argument0                                                   ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Argument1                                                   ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Argument0                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Argument1                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Multiply_VectorVector
@@ -2885,9 +3494,9 @@ class FRigUnit_Distance_VectorVector : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Argument0                                                   ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Argument1                                                   ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   Argument0                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Argument1                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.AimTarget
@@ -2898,9 +3507,9 @@ class FAimTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   AlignVector                                                 ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   AlignVector                                                 OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimConstraint_WorkData
@@ -2911,7 +3520,7 @@ class FRigUnit_AimConstraint_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FConstraintData>)                   ConstraintData                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FConstraintData>)                   ConstraintData                                              OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimConstraint
@@ -2922,14 +3531,14 @@ class FRigUnit_AimConstraint : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FName)                                     Joint                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	CMember(EAimMode)                                  AimMode                                                     ___ OFFSET(get<T>, {0x164, 1, 0, 0})
-	CMember(EAimMode)                                  UpMode                                                      ___ OFFSET(get<T>, {0x165, 1, 0, 0})
-	SMember(FVector)                                   AimVector                                                   ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FVector)                                   UpVector                                                    ___ OFFSET(get<T>, {0x180, 24, 0, 0})
-	CMember(TArray<FAimTarget>)                        AimTargets                                                  ___ OFFSET(get<T>, {0x198, 16, 0, 0})
-	CMember(TArray<FAimTarget>)                        UpTargets                                                   ___ OFFSET(get<T>, {0x1A8, 16, 0, 0})
-	SMember(FRigUnit_AimConstraint_WorkData)           WorkData                                                    ___ OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	SMember(FName)                                     Joint                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	CMember(EAimMode)                                  AimMode                                                     OFFSET(get<T>, {0x164, 1, 0, 0})
+	CMember(EAimMode)                                  UpMode                                                      OFFSET(get<T>, {0x165, 1, 0, 0})
+	SMember(FVector)                                   AimVector                                                   OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   UpVector                                                    OFFSET(get<T>, {0x180, 24, 0, 0})
+	CMember(TArray<FAimTarget>)                        AimTargets                                                  OFFSET(get<T>, {0x198, 16, 0, 0})
+	CMember(TArray<FAimTarget>)                        UpTargets                                                   OFFSET(get<T>, {0x1A8, 16, 0, 0})
+	SMember(FRigUnit_AimConstraint_WorkData)           WorkData                                                    OFFSET(get<T>, {0x1B8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ApplyFK
@@ -2940,13 +3549,13 @@ class FRigUnit_ApplyFK : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FName)                                     Joint                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FTransformFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x1D0, 9, 0, 0})
-	CMember(EApplyTransformMode)                       ApplyTransformMode                                          ___ OFFSET(get<T>, {0x1D9, 1, 0, 0})
-	CMember(ETransformSpaceMode)                       ApplyTransformSpace                                         ___ OFFSET(get<T>, {0x1DA, 1, 0, 0})
-	SMember(FTransform)                                BaseTransform                                               ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	SMember(FName)                                     BaseJoint                                                   ___ OFFSET(get<T>, {0x240, 4, 0, 0})
+	SMember(FName)                                     Joint                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransformFilter)                          Filter                                                      OFFSET(get<T>, {0x1D0, 9, 0, 0})
+	CMember(EApplyTransformMode)                       ApplyTransformMode                                          OFFSET(get<T>, {0x1D9, 1, 0, 0})
+	CMember(ETransformSpaceMode)                       ApplyTransformSpace                                         OFFSET(get<T>, {0x1DA, 1, 0, 0})
+	SMember(FTransform)                                BaseTransform                                               OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	SMember(FName)                                     BaseJoint                                                   OFFSET(get<T>, {0x240, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.BlendTarget
@@ -2957,8 +3566,8 @@ class FBlendTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x60, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x60, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BlendTransform
@@ -2969,9 +3578,9 @@ class FRigUnit_BlendTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FTransform)                                Source                                                      ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	CMember(TArray<FBlendTarget>)                      Targets                                                     ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Source                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
+	CMember(TArray<FBlendTarget>)                      Targets                                                     OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x80, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetJointTransform
@@ -2982,12 +3591,12 @@ class FRigUnit_GetJointTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FName)                                     Joint                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	CMember(ETransformGetterType)                      Type                                                        ___ OFFSET(get<T>, {0x164, 1, 0, 0})
-	CMember(ETransformSpaceMode)                       TransformSpace                                              ___ OFFSET(get<T>, {0x165, 1, 0, 0})
-	SMember(FTransform)                                BaseTransform                                               ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FName)                                     BaseJoint                                                   ___ OFFSET(get<T>, {0x1D0, 4, 0, 0})
-	SMember(FTransform)                                Output                                                      ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	SMember(FName)                                     Joint                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	CMember(ETransformGetterType)                      Type                                                        OFFSET(get<T>, {0x164, 1, 0, 0})
+	CMember(ETransformSpaceMode)                       TransformSpace                                              OFFSET(get<T>, {0x165, 1, 0, 0})
+	SMember(FTransform)                                BaseTransform                                               OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FName)                                     BaseJoint                                                   OFFSET(get<T>, {0x1D0, 4, 0, 0})
+	SMember(FTransform)                                Output                                                      OFFSET(get<T>, {0x1E0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKFK
@@ -2998,25 +3607,25 @@ class FRigUnit_TwoBoneIKFK : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 1136;
 
 public:
-	SMember(FName)                                     StartJoint                                                  ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndJoint                                                    ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FVector)                                   PoleTarget                                                  ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	DMember(float)                                     Spin                                                        ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FTransform)                                EndEffector                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(float)                                     IKBlend                                                     ___ OFFSET(get<float>, {0x1F0, 4, 0, 0})
-	SMember(FTransform)                                StartJointFKTransform                                       ___ OFFSET(get<T>, {0x200, 96, 0, 0})
-	SMember(FTransform)                                MidJointFKTransform                                         ___ OFFSET(get<T>, {0x260, 96, 0, 0})
-	SMember(FTransform)                                EndJointFKTransform                                         ___ OFFSET(get<T>, {0x2C0, 96, 0, 0})
-	DMember(float)                                     PreviousFKIKBlend                                           ___ OFFSET(get<float>, {0x320, 4, 0, 0})
-	SMember(FTransform)                                StartJointIKTransform                                       ___ OFFSET(get<T>, {0x330, 96, 0, 0})
-	SMember(FTransform)                                MidJointIKTransform                                         ___ OFFSET(get<T>, {0x390, 96, 0, 0})
-	SMember(FTransform)                                EndJointIKTransform                                         ___ OFFSET(get<T>, {0x3F0, 96, 0, 0})
-	DMember(int32_t)                                   StartJointIndex                                             ___ OFFSET(get<int32_t>, {0x450, 4, 0, 0})
-	DMember(int32_t)                                   MidJointIndex                                               ___ OFFSET(get<int32_t>, {0x454, 4, 0, 0})
-	DMember(int32_t)                                   EndJointIndex                                               ___ OFFSET(get<int32_t>, {0x458, 4, 0, 0})
-	DMember(float)                                     UpperLimbLength                                             ___ OFFSET(get<float>, {0x45C, 4, 0, 0})
-	DMember(float)                                     LowerLimbLength                                             ___ OFFSET(get<float>, {0x460, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x464, 1, 0, 0})
+	SMember(FName)                                     StartJoint                                                  OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndJoint                                                    OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FVector)                                   PoleTarget                                                  OFFSET(get<T>, {0x168, 24, 0, 0})
+	DMember(float)                                     Spin                                                        OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FTransform)                                EndEffector                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(float)                                     IKBlend                                                     OFFSET(get<float>, {0x1F0, 4, 0, 0})
+	SMember(FTransform)                                StartJointFKTransform                                       OFFSET(get<T>, {0x200, 96, 0, 0})
+	SMember(FTransform)                                MidJointFKTransform                                         OFFSET(get<T>, {0x260, 96, 0, 0})
+	SMember(FTransform)                                EndJointFKTransform                                         OFFSET(get<T>, {0x2C0, 96, 0, 0})
+	DMember(float)                                     PreviousFKIKBlend                                           OFFSET(get<float>, {0x320, 4, 0, 0})
+	SMember(FTransform)                                StartJointIKTransform                                       OFFSET(get<T>, {0x330, 96, 0, 0})
+	SMember(FTransform)                                MidJointIKTransform                                         OFFSET(get<T>, {0x390, 96, 0, 0})
+	SMember(FTransform)                                EndJointIKTransform                                         OFFSET(get<T>, {0x3F0, 96, 0, 0})
+	DMember(int32_t)                                   StartJointIndex                                             OFFSET(get<int32_t>, {0x450, 4, 0, 0})
+	DMember(int32_t)                                   MidJointIndex                                               OFFSET(get<int32_t>, {0x454, 4, 0, 0})
+	DMember(int32_t)                                   EndJointIndex                                               OFFSET(get<int32_t>, {0x458, 4, 0, 0})
+	DMember(float)                                     UpperLimbLength                                             OFFSET(get<float>, {0x45C, 4, 0, 0})
+	DMember(float)                                     LowerLimbLength                                             OFFSET(get<float>, {0x460, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x464, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DrawContainerGetInstruction
@@ -3027,9 +3636,9 @@ class FRigUnit_DrawContainerGetInstruction : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     InstructionName                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0xC, 16, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FName)                                     InstructionName                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0xC, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DrawContainerSetColor
@@ -3040,8 +3649,8 @@ class FRigUnit_DrawContainerSetColor : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FName)                                     InstructionName                                             ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x164, 16, 0, 0})
+	SMember(FName)                                     InstructionName                                             OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x164, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DrawContainerSetThickness
@@ -3052,8 +3661,8 @@ class FRigUnit_DrawContainerSetThickness : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FName)                                     InstructionName                                             ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FName)                                     InstructionName                                             OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x164, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DrawContainerSetTransform
@@ -3064,8 +3673,8 @@ class FRigUnit_DrawContainerSetTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FName)                                     InstructionName                                             ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FName)                                     InstructionName                                             OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BeginExecution
@@ -3076,7 +3685,7 @@ class FRigUnit_BeginExecution : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionBase
@@ -3107,10 +3716,10 @@ class FRigUnit_CollectionChain : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            FirstItem                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            LastItem                                                    ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Reverse                                                     ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigElementKey)                            FirstItem                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            LastItem                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Reverse                                                     OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionChainArray
@@ -3121,10 +3730,10 @@ class FRigUnit_CollectionChainArray : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            FirstItem                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            LastItem                                                    ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Reverse                                                     ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigElementKey)                            FirstItem                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            LastItem                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Reverse                                                     OFFSET(get<bool>, {0x18, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionNameSearch
@@ -3135,9 +3744,9 @@ class FRigUnit_CollectionNameSearch : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PartialName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigElementType)                           TypeToSearch                                                ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     PartialName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigElementType)                           TypeToSearch                                                OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionNameSearchArray
@@ -3148,9 +3757,9 @@ class FRigUnit_CollectionNameSearchArray : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PartialName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigElementType)                           TypeToSearch                                                ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     PartialName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigElementType)                           TypeToSearch                                                OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionChildren
@@ -3161,11 +3770,11 @@ class FRigUnit_CollectionChildren : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeParent                                              ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bRecursive                                                  ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	CMember(ERigElementType)                           TypeToSearch                                                ___ OFFSET(get<T>, {0x12, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeParent                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bRecursive                                                  OFFSET(get<bool>, {0x11, 1, 0, 0})
+	CMember(ERigElementType)                           TypeToSearch                                                OFFSET(get<T>, {0x12, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionChildrenArray
@@ -3176,11 +3785,11 @@ class FRigUnit_CollectionChildrenArray : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeParent                                              ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bRecursive                                                  ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	CMember(ERigElementType)                           TypeToSearch                                                ___ OFFSET(get<T>, {0x12, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeParent                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bRecursive                                                  OFFSET(get<bool>, {0x11, 1, 0, 0})
+	CMember(ERigElementType)                           TypeToSearch                                                OFFSET(get<T>, {0x12, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionGetAll
@@ -3191,8 +3800,8 @@ class FRigUnit_CollectionGetAll : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(ERigElementType)                           TypeToSearch                                                ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(ERigElementType)                           TypeToSearch                                                OFFSET(get<T>, {0x8, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionReplaceItems
@@ -3203,12 +3812,12 @@ class FRigUnit_CollectionReplaceItems : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     Old                                                         ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     New                                                         ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	DMember(bool)                                      RemoveInvalidItems                                          ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bAllowDuplicates                                            ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Old                                                         OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     New                                                         OFFSET(get<T>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      RemoveInvalidItems                                          OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bAllowDuplicates                                            OFFSET(get<bool>, {0x21, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionReplaceItemsArray
@@ -3219,12 +3828,12 @@ class FRigUnit_CollectionReplaceItemsArray : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     Old                                                         ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     New                                                         ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	DMember(bool)                                      RemoveInvalidItems                                          ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bAllowDuplicates                                            ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Old                                                         OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     New                                                         OFFSET(get<T>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      RemoveInvalidItems                                          OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bAllowDuplicates                                            OFFSET(get<bool>, {0x21, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionItems
@@ -3235,9 +3844,9 @@ class FRigUnit_CollectionItems : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(bool)                                      bAllowDuplicates                                            ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(bool)                                      bAllowDuplicates                                            OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionGetItems
@@ -3248,8 +3857,8 @@ class FRigUnit_CollectionGetItems : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionGetParentIndices
@@ -3260,8 +3869,8 @@ class FRigUnit_CollectionGetParentIndices : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionGetParentIndicesItemArray
@@ -3272,8 +3881,8 @@ class FRigUnit_CollectionGetParentIndicesItemArray : public FRigUnit_CollectionB
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionUnion
@@ -3284,10 +3893,10 @@ class FRigUnit_CollectionUnion : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigElementKeyCollection)                  A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bAllowDuplicates                                            ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bAllowDuplicates                                            OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionIntersection
@@ -3298,9 +3907,9 @@ class FRigUnit_CollectionIntersection : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRigElementKeyCollection)                  A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionDifference
@@ -3311,9 +3920,9 @@ class FRigUnit_CollectionDifference : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRigElementKeyCollection)                  A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionReverse
@@ -3324,8 +3933,8 @@ class FRigUnit_CollectionReverse : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  Reversed                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Reversed                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionCount
@@ -3336,8 +3945,8 @@ class FRigUnit_CollectionCount : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionItemAtIndex
@@ -3348,9 +3957,9 @@ class FRigUnit_CollectionItemAtIndex : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x1C, 8, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x1C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionLoop
@@ -3361,13 +3970,13 @@ class FRigUnit_CollectionLoop : public FRigUnit_CollectionBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FName)                                     BlockToRun                                                  ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x178, 8, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x184, 4, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	SMember(FControlRigExecuteContext)                 Completed                                                   ___ OFFSET(get<T>, {0x190, 336, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x178, 8, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x184, 4, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x188, 4, 0, 0})
+	SMember(FControlRigExecuteContext)                 Completed                                                   OFFSET(get<T>, {0x190, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CollectionAddItem
@@ -3378,9 +3987,9 @@ class FRigUnit_CollectionAddItem : public FRigUnit_CollectionBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKeyCollection)                  Collection                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FRigElementKeyCollection)                  Result                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Collection                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FRigElementKeyCollection)                  Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DynamicHierarchyBase
@@ -3411,8 +4020,8 @@ class FRigUnit_AddParent : public FRigUnit_DynamicHierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x168, 8, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x168, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetDefaultParent
@@ -3423,8 +4032,8 @@ class FRigUnit_SetDefaultParent : public FRigUnit_DynamicHierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x168, 8, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x168, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SwitchParent
@@ -3435,10 +4044,10 @@ class FRigUnit_SwitchParent : public FRigUnit_DynamicHierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	CMember(ERigSwitchParentMode)                      Mode                                                        ___ OFFSET(get<T>, {0x160, 1, 0, 0})
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x164, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x16C, 8, 0, 0})
-	DMember(bool)                                      bMaintainGlobal                                             ___ OFFSET(get<bool>, {0x174, 1, 0, 0})
+	CMember(ERigSwitchParentMode)                      Mode                                                        OFFSET(get<T>, {0x160, 1, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x164, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x16C, 8, 0, 0})
+	DMember(bool)                                      bMaintainGlobal                                             OFFSET(get<bool>, {0x174, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetParentWeights
@@ -3449,9 +4058,9 @@ class FRigUnit_HierarchyGetParentWeights : public FRigUnit_DynamicHierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<FRigElementWeight>)                 Weights                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRigElementKeyCollection)                  Parents                                                     ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FRigElementWeight>)                 Weights                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Parents                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetParentWeightsArray
@@ -3462,9 +4071,9 @@ class FRigUnit_HierarchyGetParentWeightsArray : public FRigUnit_DynamicHierarchy
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<FRigElementWeight>)                 Weights                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Parents                                                     ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FRigElementWeight>)                 Weights                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Parents                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchySetParentWeights
@@ -3475,8 +4084,8 @@ class FRigUnit_HierarchySetParentWeights : public FRigUnit_DynamicHierarchyBaseM
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(TArray<FRigElementWeight>)                 Weights                                                     ___ OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(TArray<FRigElementWeight>)                 Weights                                                     OFFSET(get<T>, {0x168, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyReset
@@ -3497,9 +4106,9 @@ class FRigUnit_HierarchyImportFromSkeleton : public FRigUnit_DynamicHierarchyBas
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FName)                                     Namespace                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(bool)                                      bIncludeCurves                                              ___ OFFSET(get<bool>, {0x164, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FName)                                     Namespace                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(bool)                                      bIncludeCurves                                              OFFSET(get<bool>, {0x164, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x168, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyRemoveElement
@@ -3510,8 +4119,8 @@ class FRigUnit_HierarchyRemoveElement : public FRigUnit_DynamicHierarchyBaseMuta
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bSuccess                                                    ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bSuccess                                                    OFFSET(get<bool>, {0x168, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddElement
@@ -3522,9 +4131,9 @@ class FRigUnit_HierarchyAddElement : public FRigUnit_DynamicHierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x168, 4, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x16C, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x168, 4, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x16C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddBone
@@ -3535,8 +4144,8 @@ class FRigUnit_HierarchyAddBone : public FRigUnit_HierarchyAddElement
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x180, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddNull
@@ -3547,8 +4156,8 @@ class FRigUnit_HierarchyAddNull : public FRigUnit_HierarchyAddElement
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x180, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControl_Settings
@@ -3559,7 +4168,7 @@ class FRigUnit_HierarchyAddControl_Settings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControl_ShapeSettings
@@ -3570,10 +4179,10 @@ class FRigUnit_HierarchyAddControl_ShapeSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(bool)                                      bVisible                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControl_ProxySettings
@@ -3584,9 +4193,9 @@ class FRigUnit_HierarchyAddControl_ProxySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bIsProxy                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    DrivenControls                                              ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(ERigControlVisibility)                     ShapeVisibility                                             ___ OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bIsProxy                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    DrivenControls                                              OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(ERigControlVisibility)                     ShapeVisibility                                             OFFSET(get<T>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlFloat_LimitSettings
@@ -3597,10 +4206,10 @@ class FRigUnit_HierarchyAddControlFloat_LimitSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FRigControlLimitEnabled)                   Limit                                                       ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	DMember(float)                                     MinValue                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MaxValue                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FRigControlLimitEnabled)                   Limit                                                       OFFSET(get<T>, {0x0, 2, 0, 0})
+	DMember(float)                                     MinValue                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlFloat_Settings
@@ -3611,10 +4220,10 @@ class FRigUnit_HierarchyAddControlFloat_Settings : public FRigUnit_HierarchyAddC
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(ERigControlAxis)                           PrimaryAxis                                                 ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlFloat_LimitSettings) Limits                                                ___ OFFSET(get<T>, {0x14, 16, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x30, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xB0, 32, 0, 0})
+	CMember(ERigControlAxis)                           PrimaryAxis                                                 OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlFloat_LimitSettings) Limits                                                OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x30, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xB0, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlElement
@@ -3625,8 +4234,8 @@ class FRigUnit_HierarchyAddControlElement : public FRigUnit_HierarchyAddElement
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                OffsetTransform                                             ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      OffsetSpace                                                 ___ OFFSET(get<T>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                OffsetTransform                                             OFFSET(get<T>, {0x180, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      OffsetSpace                                                 OFFSET(get<T>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlFloat
@@ -3637,8 +4246,8 @@ class FRigUnit_HierarchyAddControlFloat : public FRigUnit_HierarchyAddControlEle
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	DMember(float)                                     InitialValue                                                ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlFloat_Settings) Settings                                                   ___ OFFSET(get<T>, {0x1F0, 208, 0, 0})
+	DMember(float)                                     InitialValue                                                OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlFloat_Settings) Settings                                                   OFFSET(get<T>, {0x1F0, 208, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlInteger_LimitSettings
@@ -3649,10 +4258,10 @@ class FRigUnit_HierarchyAddControlInteger_LimitSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FRigControlLimitEnabled)                   Limit                                                       ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	DMember(int32_t)                                   MinValue                                                    ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   MaxValue                                                    ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FRigControlLimitEnabled)                   Limit                                                       OFFSET(get<T>, {0x0, 2, 0, 0})
+	DMember(int32_t)                                   MinValue                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   MaxValue                                                    OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlInteger_Settings
@@ -3663,10 +4272,10 @@ class FRigUnit_HierarchyAddControlInteger_Settings : public FRigUnit_HierarchyAd
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(ERigControlAxis)                           PrimaryAxis                                                 ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlInteger_LimitSettings) Limits                                              ___ OFFSET(get<T>, {0x14, 16, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x30, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xB0, 32, 0, 0})
+	CMember(ERigControlAxis)                           PrimaryAxis                                                 OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlInteger_LimitSettings) Limits                                              OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x30, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xB0, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlInteger
@@ -3677,8 +4286,8 @@ class FRigUnit_HierarchyAddControlInteger : public FRigUnit_HierarchyAddControlE
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	DMember(int32_t)                                   InitialValue                                                ___ OFFSET(get<int32_t>, {0x1E8, 4, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlInteger_Settings) Settings                                                 ___ OFFSET(get<T>, {0x1F0, 208, 0, 0})
+	DMember(int32_t)                                   InitialValue                                                OFFSET(get<int32_t>, {0x1E8, 4, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlInteger_Settings) Settings                                                 OFFSET(get<T>, {0x1F0, 208, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector2D_LimitSettings
@@ -3689,11 +4298,11 @@ class FRigUnit_HierarchyAddControlVector2D_LimitSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigControlLimitEnabled)                   LimitX                                                      ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FRigControlLimitEnabled)                   LimitY                                                      ___ OFFSET(get<T>, {0x2, 2, 0, 0})
-	SMember(FVector2D)                                 MinValue                                                    ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 MaxValue                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitX                                                      OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitY                                                      OFFSET(get<T>, {0x2, 2, 0, 0})
+	SMember(FVector2D)                                 MinValue                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 MaxValue                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector2D_Settings
@@ -3704,11 +4313,11 @@ class FRigUnit_HierarchyAddControlVector2D_Settings : public FRigUnit_HierarchyA
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	CMember(ERigControlAxis)                           PrimaryAxis                                                 ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlVector2D_LimitSettings) Limits                                             ___ OFFSET(get<T>, {0x18, 48, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x50, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
-	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(ERigControlAxis)                           PrimaryAxis                                                 OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlVector2D_LimitSettings) Limits                                             OFFSET(get<T>, {0x18, 48, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x50, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xD0, 32, 0, 0})
+	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            OFFSET(get<T>, {0xF0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector2D
@@ -3719,8 +4328,8 @@ class FRigUnit_HierarchyAddControlVector2D : public FRigUnit_HierarchyAddControl
 	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	SMember(FVector2D)                                 InitialValue                                                ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlVector2D_Settings) Settings                                                ___ OFFSET(get<T>, {0x200, 256, 0, 0})
+	SMember(FVector2D)                                 InitialValue                                                OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlVector2D_Settings) Settings                                                OFFSET(get<T>, {0x200, 256, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector_LimitSettings
@@ -3731,12 +4340,12 @@ class FRigUnit_HierarchyAddControlVector_LimitSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigControlLimitEnabled)                   LimitX                                                      ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FRigControlLimitEnabled)                   LimitY                                                      ___ OFFSET(get<T>, {0x2, 2, 0, 0})
-	SMember(FRigControlLimitEnabled)                   LimitZ                                                      ___ OFFSET(get<T>, {0x4, 2, 0, 0})
-	SMember(FVector)                                   MinValue                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   MaxValue                                                    ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitX                                                      OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitY                                                      OFFSET(get<T>, {0x2, 2, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitZ                                                      OFFSET(get<T>, {0x4, 2, 0, 0})
+	SMember(FVector)                                   MinValue                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   MaxValue                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector_Settings
@@ -3747,12 +4356,12 @@ class FRigUnit_HierarchyAddControlVector_Settings : public FRigUnit_HierarchyAdd
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	CMember(ERigVMTransformSpace)                      InitialSpace                                                ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bIsPosition                                                 ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlVector_LimitSettings) Limits                                               ___ OFFSET(get<T>, {0x18, 64, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x60, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xE0, 32, 0, 0})
-	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            ___ OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      InitialSpace                                                OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bIsPosition                                                 OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlVector_LimitSettings) Limits                                               OFFSET(get<T>, {0x18, 64, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x60, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xE0, 32, 0, 0})
+	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            OFFSET(get<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlVector
@@ -3763,8 +4372,8 @@ class FRigUnit_HierarchyAddControlVector : public FRigUnit_HierarchyAddControlEl
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FVector)                                   InitialValue                                                ___ OFFSET(get<T>, {0x1E8, 24, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlVector_Settings) Settings                                                  ___ OFFSET(get<T>, {0x200, 272, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x1E8, 24, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlVector_Settings) Settings                                                  OFFSET(get<T>, {0x200, 272, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlRotator_LimitSettings
@@ -3775,12 +4384,12 @@ class FRigUnit_HierarchyAddControlRotator_LimitSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigControlLimitEnabled)                   LimitPitch                                                  ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FRigControlLimitEnabled)                   LimitYaw                                                    ___ OFFSET(get<T>, {0x2, 2, 0, 0})
-	SMember(FRigControlLimitEnabled)                   LimitRoll                                                   ___ OFFSET(get<T>, {0x4, 2, 0, 0})
-	SMember(FRotator)                                  MinValue                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  MaxValue                                                    ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      bDrawLimits                                                 ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitPitch                                                  OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitYaw                                                    OFFSET(get<T>, {0x2, 2, 0, 0})
+	SMember(FRigControlLimitEnabled)                   LimitRoll                                                   OFFSET(get<T>, {0x4, 2, 0, 0})
+	SMember(FRotator)                                  MinValue                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  MaxValue                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      bDrawLimits                                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlRotator_Settings
@@ -3791,11 +4400,11 @@ class FRigUnit_HierarchyAddControlRotator_Settings : public FRigUnit_HierarchyAd
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	CMember(ERigVMTransformSpace)                      InitialSpace                                                ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlRotator_LimitSettings) Limits                                              ___ OFFSET(get<T>, {0x18, 64, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x60, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xE0, 32, 0, 0})
-	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            ___ OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      InitialSpace                                                OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlRotator_LimitSettings) Limits                                              OFFSET(get<T>, {0x18, 64, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x60, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xE0, 32, 0, 0})
+	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            OFFSET(get<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlRotator
@@ -3806,8 +4415,8 @@ class FRigUnit_HierarchyAddControlRotator : public FRigUnit_HierarchyAddControlE
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FRotator)                                  InitialValue                                                ___ OFFSET(get<T>, {0x1E8, 24, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlRotator_Settings) Settings                                                 ___ OFFSET(get<T>, {0x200, 272, 0, 0})
+	SMember(FRotator)                                  InitialValue                                                OFFSET(get<T>, {0x1E8, 24, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlRotator_Settings) Settings                                                 OFFSET(get<T>, {0x200, 272, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlTransform_Settings
@@ -3818,10 +4427,10 @@ class FRigUnit_HierarchyAddControlTransform_Settings : public FRigUnit_Hierarchy
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(ERigVMTransformSpace)                      InitialSpace                                                ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      ___ OFFSET(get<T>, {0x20, 128, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      ___ OFFSET(get<T>, {0xA0, 32, 0, 0})
-	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      InitialSpace                                                OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Shape                                                      OFFSET(get<T>, {0x20, 128, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ProxySettings) Proxy                                                      OFFSET(get<T>, {0xA0, 32, 0, 0})
+	CMember(TArray<ERigControlTransformChannel>)       FilteredChannels                                            OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddControlTransform
@@ -3832,8 +4441,8 @@ class FRigUnit_HierarchyAddControlTransform : public FRigUnit_HierarchyAddContro
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FTransform)                                InitialValue                                                ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	SMember(FRigUnit_HierarchyAddControlTransform_Settings) Settings                                               ___ OFFSET(get<T>, {0x250, 208, 0, 0})
+	SMember(FTransform)                                InitialValue                                                OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	SMember(FRigUnit_HierarchyAddControlTransform_Settings) Settings                                               OFFSET(get<T>, {0x250, 208, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddAnimationChannelBool
@@ -3854,9 +4463,9 @@ class FRigUnit_HierarchyAddAnimationChannelFloat : public FRigUnit_HierarchyAddE
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	DMember(float)                                     InitialValue                                                ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(float)                                     MinimumValue                                                ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	DMember(float)                                     MaximumValue                                                ___ OFFSET(get<float>, {0x180, 4, 0, 0})
+	DMember(float)                                     InitialValue                                                OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(float)                                     MinimumValue                                                OFFSET(get<float>, {0x17C, 4, 0, 0})
+	DMember(float)                                     MaximumValue                                                OFFSET(get<float>, {0x180, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddAnimationChannelInteger
@@ -3867,9 +4476,9 @@ class FRigUnit_HierarchyAddAnimationChannelInteger : public FRigUnit_HierarchyAd
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	DMember(int32_t)                                   InitialValue                                                ___ OFFSET(get<int32_t>, {0x178, 4, 0, 0})
-	DMember(int32_t)                                   MinimumValue                                                ___ OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
-	DMember(int32_t)                                   MaximumValue                                                ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	DMember(int32_t)                                   InitialValue                                                OFFSET(get<int32_t>, {0x178, 4, 0, 0})
+	DMember(int32_t)                                   MinimumValue                                                OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
+	DMember(int32_t)                                   MaximumValue                                                OFFSET(get<int32_t>, {0x180, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddAnimationChannelVector2D
@@ -3880,9 +4489,9 @@ class FRigUnit_HierarchyAddAnimationChannelVector2D : public FRigUnit_HierarchyA
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FVector2D)                                 InitialValue                                                ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FVector2D)                                 MinimumValue                                                ___ OFFSET(get<T>, {0x188, 16, 0, 0})
-	SMember(FVector2D)                                 MaximumValue                                                ___ OFFSET(get<T>, {0x198, 16, 0, 0})
+	SMember(FVector2D)                                 InitialValue                                                OFFSET(get<T>, {0x178, 16, 0, 0})
+	SMember(FVector2D)                                 MinimumValue                                                OFFSET(get<T>, {0x188, 16, 0, 0})
+	SMember(FVector2D)                                 MaximumValue                                                OFFSET(get<T>, {0x198, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddAnimationChannelVector
@@ -3893,9 +4502,9 @@ class FRigUnit_HierarchyAddAnimationChannelVector : public FRigUnit_HierarchyAdd
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FVector)                                   InitialValue                                                ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FVector)                                   MinimumValue                                                ___ OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FVector)                                   MaximumValue                                                ___ OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   MinimumValue                                                OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FVector)                                   MaximumValue                                                OFFSET(get<T>, {0x1A8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyAddAnimationChannelRotator
@@ -3906,9 +4515,9 @@ class FRigUnit_HierarchyAddAnimationChannelRotator : public FRigUnit_HierarchyAd
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FRotator)                                  InitialValue                                                ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FRotator)                                  MinimumValue                                                ___ OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FRotator)                                  MaximumValue                                                ___ OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	SMember(FRotator)                                  InitialValue                                                OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FRotator)                                  MinimumValue                                                OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FRotator)                                  MaximumValue                                                OFFSET(get<T>, {0x1A8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetShapeSettings
@@ -3919,8 +4528,8 @@ class FRigUnit_HierarchyGetShapeSettings : public FRigUnit_DynamicHierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Settings                                                   ___ OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Settings                                                   OFFSET(get<T>, {0x10, 128, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchySetShapeSettings
@@ -3931,8 +4540,8 @@ class FRigUnit_HierarchySetShapeSettings : public FRigUnit_DynamicHierarchyBaseM
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Settings                                                   ___ OFFSET(get<T>, {0x170, 128, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigUnit_HierarchyAddControl_ShapeSettings) Settings                                                   OFFSET(get<T>, {0x170, 128, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyBase
@@ -3963,10 +4572,10 @@ class FRigUnit_HierarchyGetParent : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetParents
@@ -3977,12 +4586,12 @@ class FRigUnit_HierarchyGetParents : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeChild                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bReverse                                                    ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Parents                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRigElementKeyCollection)                  CachedParents                                               ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeChild                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bReverse                                                    OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Parents                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  CachedParents                                               OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetParentsItemArray
@@ -3993,12 +4602,12 @@ class FRigUnit_HierarchyGetParentsItemArray : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeChild                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bReverse                                                    ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Parents                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRigElementKeyCollection)                  CachedParents                                               ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeChild                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bReverse                                                    OFFSET(get<bool>, {0x11, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Parents                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  CachedParents                                               OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetChildren
@@ -4009,12 +4618,12 @@ class FRigUnit_HierarchyGetChildren : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeParent                                              ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bRecursive                                                  ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Children                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRigElementKeyCollection)                  CachedChildren                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeParent                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bRecursive                                                  OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Children                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  CachedChildren                                              OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetSiblings
@@ -4025,11 +4634,11 @@ class FRigUnit_HierarchyGetSiblings : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeItem                                                ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Siblings                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedItem                                                  ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRigElementKeyCollection)                  CachedSiblings                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeItem                                                OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Siblings                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedItem                                                  OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  CachedSiblings                                              OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetSiblingsItemArray
@@ -4040,11 +4649,11 @@ class FRigUnit_HierarchyGetSiblingsItemArray : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIncludeItem                                                ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Siblings                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedItem                                                  ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRigElementKeyCollection)                  CachedSiblings                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIncludeItem                                                OFFSET(get<bool>, {0x10, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Siblings                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedItem                                                  OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  CachedSiblings                                              OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetPose
@@ -4055,10 +4664,10 @@ class FRigUnit_HierarchyGetPose : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(bool)                                      Initial                                                     ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  ItemsToGet                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x20, 112, 0, 0})
+	DMember(bool)                                      Initial                                                     OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  ItemsToGet                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x20, 112, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchyGetPoseItemArray
@@ -4069,10 +4678,10 @@ class FRigUnit_HierarchyGetPoseItemArray : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(bool)                                      Initial                                                     ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x9, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    ItemsToGet                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x20, 112, 0, 0})
+	DMember(bool)                                      Initial                                                     OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x9, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    ItemsToGet                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x20, 112, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchySetPose
@@ -4083,11 +4692,11 @@ class FRigUnit_HierarchySetPose : public FRigUnit_HierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x160, 112, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1D1, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  ItemsToSet                                                  ___ OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x160, 112, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  ItemsToSet                                                  OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HierarchySetPoseItemArray
@@ -4098,11 +4707,11 @@ class FRigUnit_HierarchySetPoseItemArray : public FRigUnit_HierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x160, 112, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1D1, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    ItemsToSet                                                  ___ OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x160, 112, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    ItemsToSet                                                  OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseIsEmpty
@@ -4113,8 +4722,8 @@ class FRigUnit_PoseIsEmpty : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	DMember(bool)                                      IsEmpty                                                     ___ OFFSET(get<bool>, {0x78, 1, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	DMember(bool)                                      IsEmpty                                                     OFFSET(get<bool>, {0x78, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetItems
@@ -4125,9 +4734,9 @@ class FRigUnit_PoseGetItems : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x78, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x78, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetItemsItemArray
@@ -4138,9 +4747,9 @@ class FRigUnit_PoseGetItemsItemArray : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0x78, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0x78, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetDelta
@@ -4151,17 +4760,17 @@ class FRigUnit_PoseGetDelta : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FRigPose)                                  PoseA                                                       ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	SMember(FRigPose)                                  PoseB                                                       ___ OFFSET(get<T>, {0x78, 112, 0, 0})
-	DMember(float)                                     PositionThreshold                                           ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
-	DMember(float)                                     RotationThreshold                                           ___ OFFSET(get<float>, {0xEC, 4, 0, 0})
-	DMember(float)                                     ScaleThreshold                                              ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
-	DMember(float)                                     CurveThreshold                                              ___ OFFSET(get<float>, {0xF4, 4, 0, 0})
-	CMember(ERigElementType)                           ElementType                                                 ___ OFFSET(get<T>, {0xF8, 1, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xF9, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  ItemsToCompare                                              ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	DMember(bool)                                      PosesAreEqual                                               ___ OFFSET(get<bool>, {0x110, 1, 0, 0})
-	SMember(FRigElementKeyCollection)                  ItemsWithDelta                                              ___ OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FRigPose)                                  PoseA                                                       OFFSET(get<T>, {0x8, 112, 0, 0})
+	SMember(FRigPose)                                  PoseB                                                       OFFSET(get<T>, {0x78, 112, 0, 0})
+	DMember(float)                                     PositionThreshold                                           OFFSET(get<float>, {0xE8, 4, 0, 0})
+	DMember(float)                                     RotationThreshold                                           OFFSET(get<float>, {0xEC, 4, 0, 0})
+	DMember(float)                                     ScaleThreshold                                              OFFSET(get<float>, {0xF0, 4, 0, 0})
+	DMember(float)                                     CurveThreshold                                              OFFSET(get<float>, {0xF4, 4, 0, 0})
+	CMember(ERigElementType)                           ElementType                                                 OFFSET(get<T>, {0xF8, 1, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xF9, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  ItemsToCompare                                              OFFSET(get<T>, {0x100, 16, 0, 0})
+	DMember(bool)                                      PosesAreEqual                                               OFFSET(get<bool>, {0x110, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  ItemsWithDelta                                              OFFSET(get<T>, {0x118, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetTransform
@@ -4172,14 +4781,14 @@ class FRigUnit_PoseGetTransform : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x80, 1, 0, 0})
-	DMember(bool)                                      Valid                                                       ___ OFFSET(get<bool>, {0x81, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x90, 96, 0, 0})
-	DMember(float)                                     CurveValue                                                  ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
-	DMember(int32_t)                                   CachedPoseElementIndex                                      ___ OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
-	DMember(int32_t)                                   CachedPoseHash                                              ___ OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x80, 1, 0, 0})
+	DMember(bool)                                      Valid                                                       OFFSET(get<bool>, {0x81, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x90, 96, 0, 0})
+	DMember(float)                                     CurveValue                                                  OFFSET(get<float>, {0xF0, 4, 0, 0})
+	DMember(int32_t)                                   CachedPoseElementIndex                                      OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
+	DMember(int32_t)                                   CachedPoseHash                                              OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetTransformArray
@@ -4190,10 +4799,10 @@ class FRigUnit_PoseGetTransformArray : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x78, 1, 0, 0})
-	DMember(bool)                                      Valid                                                       ___ OFFSET(get<bool>, {0x79, 1, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x78, 1, 0, 0})
+	DMember(bool)                                      Valid                                                       OFFSET(get<bool>, {0x79, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseGetCurve
@@ -4204,12 +4813,12 @@ class FRigUnit_PoseGetCurve : public FRigUnit_HierarchyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x8, 112, 0, 0})
-	SMember(FName)                                     Curve                                                       ___ OFFSET(get<T>, {0x78, 4, 0, 0})
-	DMember(bool)                                      Valid                                                       ___ OFFSET(get<bool>, {0x7C, 1, 0, 0})
-	DMember(float)                                     CurveValue                                                  ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	DMember(int32_t)                                   CachedPoseElementIndex                                      ___ OFFSET(get<int32_t>, {0x84, 4, 0, 0})
-	DMember(int32_t)                                   CachedPoseHash                                              ___ OFFSET(get<int32_t>, {0x88, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x8, 112, 0, 0})
+	SMember(FName)                                     Curve                                                       OFFSET(get<T>, {0x78, 4, 0, 0})
+	DMember(bool)                                      Valid                                                       OFFSET(get<bool>, {0x7C, 1, 0, 0})
+	DMember(float)                                     CurveValue                                                  OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(int32_t)                                   CachedPoseElementIndex                                      OFFSET(get<int32_t>, {0x84, 4, 0, 0})
+	DMember(int32_t)                                   CachedPoseHash                                              OFFSET(get<int32_t>, {0x88, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PoseLoop
@@ -4220,16 +4829,16 @@ class FRigUnit_PoseLoop : public FRigUnit_HierarchyBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 1024;
 
 public:
-	SMember(FName)                                     BlockToRun                                                  ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FRigPose)                                  Pose                                                        ___ OFFSET(get<T>, {0x168, 112, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FTransform)                                GlobalTransform                                             ___ OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0x240, 96, 0, 0})
-	DMember(float)                                     CurveValue                                                  ___ OFFSET(get<float>, {0x2A0, 4, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x2A4, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x2A8, 4, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x2AC, 4, 0, 0})
-	SMember(FControlRigExecuteContext)                 Completed                                                   ___ OFFSET(get<T>, {0x2B0, 336, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FRigPose)                                  Pose                                                        OFFSET(get<T>, {0x168, 112, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	SMember(FTransform)                                GlobalTransform                                             OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x240, 96, 0, 0})
+	DMember(float)                                     CurveValue                                                  OFFSET(get<float>, {0x2A0, 4, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x2A4, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x2A8, 4, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x2AC, 4, 0, 0})
+	SMember(FControlRigExecuteContext)                 Completed                                                   OFFSET(get<T>, {0x2B0, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_InteractionExecution
@@ -4240,7 +4849,7 @@ class FRigUnit_InteractionExecution : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_InverseExecution
@@ -4251,7 +4860,7 @@ class FRigUnit_InverseExecution : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_IsInteracting
@@ -4262,11 +4871,11 @@ class FRigUnit_IsInteracting : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bIsInteracting                                              ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bIsTranslating                                              ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      bIsRotating                                                 ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
-	DMember(bool)                                      bIsScaling                                                  ___ OFFSET(get<bool>, {0xB, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bIsInteracting                                              OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bIsTranslating                                              OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      bIsRotating                                                 OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      bIsScaling                                                  OFFSET(get<bool>, {0xB, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemBase
@@ -4297,9 +4906,9 @@ class FRigUnit_ItemExists : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      Exists                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      Exists                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemReplace
@@ -4310,10 +4919,10 @@ class FRigUnit_ItemReplace : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     Old                                                         ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FName)                                     New                                                         ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FRigElementKey)                            Result                                                      ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Old                                                         OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     New                                                         OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FRigElementKey)                            Result                                                      OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemEquals
@@ -4324,9 +4933,9 @@ class FRigUnit_ItemEquals : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKey)                            A                                                           ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            B                                                           ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKey)                            A                                                           OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            B                                                           OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemNotEquals
@@ -4337,9 +4946,9 @@ class FRigUnit_ItemNotEquals : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKey)                            A                                                           ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            B                                                           ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKey)                            A                                                           OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            B                                                           OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemTypeEquals
@@ -4350,9 +4959,9 @@ class FRigUnit_ItemTypeEquals : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKey)                            A                                                           ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            B                                                           ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKey)                            A                                                           OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            B                                                           OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemTypeNotEquals
@@ -4363,9 +4972,9 @@ class FRigUnit_ItemTypeNotEquals : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRigElementKey)                            A                                                           ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FRigElementKey)                            B                                                           ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FRigElementKey)                            A                                                           OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            B                                                           OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemToName
@@ -4376,8 +4985,8 @@ class FRigUnit_ItemToName : public FRigUnit_ItemBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRigElementKey)                            Value                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     Result                                                      ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FRigElementKey)                            Value                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PrepareForExecution
@@ -4388,7 +4997,7 @@ class FRigUnit_PrepareForExecution : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SequenceExecution
@@ -4399,11 +5008,11 @@ class FRigUnit_SequenceExecution : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 1696;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 336, 0, 0})
-	SMember(FControlRigExecuteContext)                 A                                                           ___ OFFSET(get<T>, {0x160, 336, 0, 0})
-	SMember(FControlRigExecuteContext)                 B                                                           ___ OFFSET(get<T>, {0x2B0, 336, 0, 0})
-	SMember(FControlRigExecuteContext)                 C                                                           ___ OFFSET(get<T>, {0x400, 336, 0, 0})
-	SMember(FControlRigExecuteContext)                 D                                                           ___ OFFSET(get<T>, {0x550, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x10, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 A                                                           OFFSET(get<T>, {0x160, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 B                                                           OFFSET(get<T>, {0x2B0, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 C                                                           OFFSET(get<T>, {0x400, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 D                                                           OFFSET(get<T>, {0x550, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AddBoneTransform
@@ -4414,12 +5023,12 @@ class FRigUnit_AddBoneTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(bool)                                      bPostMultiply                                               ___ OFFSET(get<bool>, {0x1D4, 1, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D5, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(bool)                                      bPostMultiply                                               OFFSET(get<bool>, {0x1D4, 1, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D5, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Item
@@ -4430,7 +5039,7 @@ class FRigUnit_Item : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemArray
@@ -4441,7 +5050,7 @@ class FRigUnit_ItemArray : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BoneName
@@ -4452,7 +5061,7 @@ class FRigUnit_BoneName : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpaceName
@@ -4463,7 +5072,7 @@ class FRigUnit_SpaceName : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ControlName
@@ -4474,7 +5083,7 @@ class FRigUnit_ControlName : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetAnimationChannelBase
@@ -4485,11 +5094,11 @@ class FRigUnit_GetAnimationChannelBase : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Channel                                                     ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FRigElementKey)                            CachedChannelKey                                            ___ OFFSET(get<T>, {0x14, 8, 0, 0})
-	DMember(int32_t)                                   CachedChannelHash                                           ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Channel                                                     OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FRigElementKey)                            CachedChannelKey                                            OFFSET(get<T>, {0x14, 8, 0, 0})
+	DMember(int32_t)                                   CachedChannelHash                                           OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetBoolAnimationChannel
@@ -4500,7 +5109,7 @@ class FRigUnit_GetBoolAnimationChannel : public FRigUnit_GetAnimationChannelBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetFloatAnimationChannel
@@ -4511,7 +5120,7 @@ class FRigUnit_GetFloatAnimationChannel : public FRigUnit_GetAnimationChannelBas
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetIntAnimationChannel
@@ -4522,7 +5131,7 @@ class FRigUnit_GetIntAnimationChannel : public FRigUnit_GetAnimationChannelBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetVector2DAnimationChannel
@@ -4533,7 +5142,7 @@ class FRigUnit_GetVector2DAnimationChannel : public FRigUnit_GetAnimationChannel
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector2D)                                 Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetVectorAnimationChannel
@@ -4544,7 +5153,7 @@ class FRigUnit_GetVectorAnimationChannel : public FRigUnit_GetAnimationChannelBa
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetRotatorAnimationChannel
@@ -4555,7 +5164,7 @@ class FRigUnit_GetRotatorAnimationChannel : public FRigUnit_GetAnimationChannelB
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRotator)                                  Value                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetTransformAnimationChannel
@@ -4566,7 +5175,7 @@ class FRigUnit_GetTransformAnimationChannel : public FRigUnit_GetAnimationChanne
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetAnimationChannelBase
@@ -4577,7 +5186,7 @@ class FRigUnit_SetAnimationChannelBase : public FRigUnit_GetAnimationChannelBase
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FControlRigExecuteContext)                 ExecuteContext                                              ___ OFFSET(get<T>, {0x20, 336, 0, 0})
+	SMember(FControlRigExecuteContext)                 ExecuteContext                                              OFFSET(get<T>, {0x20, 336, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetBoolAnimationChannel
@@ -4588,7 +5197,7 @@ class FRigUnit_SetBoolAnimationChannel : public FRigUnit_SetAnimationChannelBase
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x170, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetFloatAnimationChannel
@@ -4599,7 +5208,7 @@ class FRigUnit_SetFloatAnimationChannel : public FRigUnit_SetAnimationChannelBas
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetIntAnimationChannel
@@ -4610,7 +5219,7 @@ class FRigUnit_SetIntAnimationChannel : public FRigUnit_SetAnimationChannelBase
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x170, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x170, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetVector2DAnimationChannel
@@ -4621,7 +5230,7 @@ class FRigUnit_SetVector2DAnimationChannel : public FRigUnit_SetAnimationChannel
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FVector2D)                                 Value                                                       ___ OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FVector2D)                                 Value                                                       OFFSET(get<T>, {0x170, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetVectorAnimationChannel
@@ -4632,7 +5241,7 @@ class FRigUnit_SetVectorAnimationChannel : public FRigUnit_SetAnimationChannelBa
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRotatorAnimationChannel
@@ -4643,7 +5252,7 @@ class FRigUnit_SetRotatorAnimationChannel : public FRigUnit_SetAnimationChannelB
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRotator)                                  Value                                                       ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetTransformAnimationChannel
@@ -4654,7 +5263,7 @@ class FRigUnit_SetTransformAnimationChannel : public FRigUnit_SetAnimationChanne
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x170, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetBoneTransform
@@ -4665,11 +5274,11 @@ class FRigUnit_GetBoneTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	DMember(bool)                                      bFirstUpdate                                                ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
+	DMember(bool)                                      bFirstUpdate                                                OFFSET(get<bool>, {0x88, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlInitialTransform
@@ -4680,10 +5289,10 @@ class FRigUnit_GetControlInitialTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlBool
@@ -4694,9 +5303,9 @@ class FRigUnit_GetControlBool : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(bool)                                      BoolValue                                                   ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(bool)                                      BoolValue                                                   OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlFloat
@@ -4707,11 +5316,11 @@ class FRigUnit_GetControlFloat : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(float)                                     FloatValue                                                  ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlInteger
@@ -4722,11 +5331,11 @@ class FRigUnit_GetControlInteger : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   IntegerValue                                                ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Minimum                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   Maximum                                                     ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   IntegerValue                                                OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Minimum                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   Maximum                                                     OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlVector2D
@@ -4737,11 +5346,11 @@ class FRigUnit_GetControlVector2D : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FVector2D)                                 Vector                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 Minimum                                                     ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FVector2D)                                 Maximum                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FVector2D)                                 Vector                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 Minimum                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 Maximum                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlVector
@@ -4752,12 +5361,12 @@ class FRigUnit_GetControlVector : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   Minimum                                                     ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   Maximum                                                     ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Minimum                                                     OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Maximum                                                     OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x58, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlRotator
@@ -4768,12 +5377,12 @@ class FRigUnit_GetControlRotator : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FRotator)                                  Rotator                                                     ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FRotator)                                  Minimum                                                     ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRotator)                                  Maximum                                                     ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FRotator)                                  Rotator                                                     OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FRotator)                                  Minimum                                                     OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRotator)                                  Maximum                                                     OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x58, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlTransform
@@ -4784,12 +5393,12 @@ class FRigUnit_GetControlTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Minimum                                                     ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Maximum                                                     ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Minimum                                                     OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Maximum                                                     OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x130, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetCurveValue
@@ -4800,10 +5409,10 @@ class FRigUnit_GetCurveValue : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Curve                                                       ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(bool)                                      Valid                                                       ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedCurveIndex                                            ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FName)                                     Curve                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(bool)                                      Valid                                                       OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedCurveIndex                                            OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetInitialBoneTransform
@@ -4814,10 +5423,10 @@ class FRigUnit_GetInitialBoneTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetRelativeBoneTransform
@@ -4828,11 +5437,11 @@ class FRigUnit_GetRelativeBoneTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedSpace                                                 ___ OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedSpace                                                 OFFSET(get<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetRelativeTransformForItem
@@ -4843,13 +5452,13 @@ class FRigUnit_GetRelativeTransformForItem : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bChildInitial                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x14, 8, 0, 0})
-	DMember(bool)                                      bParentInitial                                              ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	SMember(FTransform)                                RelativeTransform                                           ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bChildInitial                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x14, 8, 0, 0})
+	DMember(bool)                                      bParentInitial                                              OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	SMember(FTransform)                                RelativeTransform                                           OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x98, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetSpaceTransform
@@ -4860,10 +5469,10 @@ class FRigUnit_GetSpaceTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigVMTransformSpace)                      SpaceType                                                   ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedSpaceIndex                                            ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigVMTransformSpace)                      SpaceType                                                   OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedSpaceIndex                                            OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetTransform
@@ -4874,11 +5483,11 @@ class FRigUnit_GetTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x80, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetTransformArray
@@ -4889,11 +5498,11 @@ class FRigUnit_GetTransformArray : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x19, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetTransformItemArray
@@ -4904,11 +5513,11 @@ class FRigUnit_GetTransformItemArray : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x19, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigDispatch_MetadataBase
@@ -4949,10 +5558,10 @@ class FRigUnit_RemoveMetadata : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x168, 4, 0, 0})
-	DMember(bool)                                      Removed                                                     ___ OFFSET(get<bool>, {0x16C, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x168, 4, 0, 0})
+	DMember(bool)                                      Removed                                                     OFFSET(get<bool>, {0x16C, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_RemoveAllMetadata
@@ -4963,9 +5572,9 @@ class FRigUnit_RemoveAllMetadata : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      Removed                                                     ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      Removed                                                     OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HasMetadata
@@ -4976,11 +5585,11 @@ class FRigUnit_HasMetadata : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(ERigMetadataType)                          Type                                                        ___ OFFSET(get<T>, {0x14, 1, 0, 0})
-	DMember(bool)                                      Found                                                       ___ OFFSET(get<bool>, {0x15, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(ERigMetadataType)                          Type                                                        OFFSET(get<T>, {0x14, 1, 0, 0})
+	DMember(bool)                                      Found                                                       OFFSET(get<bool>, {0x15, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FindItemsWithMetadata
@@ -4991,9 +5600,9 @@ class FRigUnit_FindItemsWithMetadata : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(ERigMetadataType)                          Type                                                        ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ERigMetadataType)                          Type                                                        OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetMetadataTags
@@ -5004,9 +5613,9 @@ class FRigUnit_GetMetadataTags : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMetadataTag
@@ -5017,9 +5626,9 @@ class FRigUnit_SetMetadataTag : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x168, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x168, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMetadataTagArray
@@ -5030,9 +5639,9 @@ class FRigUnit_SetMetadataTagArray : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x178, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_RemoveMetadataTag
@@ -5043,10 +5652,10 @@ class FRigUnit_RemoveMetadataTag : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x168, 4, 0, 0})
-	DMember(bool)                                      Removed                                                     ___ OFFSET(get<bool>, {0x16C, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x168, 4, 0, 0})
+	DMember(bool)                                      Removed                                                     OFFSET(get<bool>, {0x16C, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HasMetadataTag
@@ -5057,10 +5666,10 @@ class FRigUnit_HasMetadataTag : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(bool)                                      Found                                                       ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(bool)                                      Found                                                       OFFSET(get<bool>, {0x14, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_HasMetadataTagArray
@@ -5071,10 +5680,10 @@ class FRigUnit_HasMetadataTagArray : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      Found                                                       ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      Found                                                       OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FindItemsWithMetadataTag
@@ -5085,8 +5694,8 @@ class FRigUnit_FindItemsWithMetadataTag : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FindItemsWithMetadataTagArray
@@ -5097,8 +5706,8 @@ class FRigUnit_FindItemsWithMetadataTagArray : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FilterItemsByMetadataTags
@@ -5109,11 +5718,11 @@ class FRigUnit_FilterItemsByMetadataTags : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      Inclusive                                                   ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Result                                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedIndices                                               ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      Inclusive                                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Result                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedIndices                                               OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_OffsetTransformForItem
@@ -5124,11 +5733,11 @@ class FRigUnit_OffsetTransformForItem : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FTransform)                                OffsetTransform                                             ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D4, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FTransform)                                OffsetTransform                                             OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D4, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ParentSwitchConstraint
@@ -5139,16 +5748,16 @@ class FRigUnit_ParentSwitchConstraint : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FRigElementKey)                            Subject                                                     ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(int32_t)                                   ParentIndex                                                 ___ OFFSET(get<int32_t>, {0x168, 4, 0, 0})
-	SMember(FRigElementKeyCollection)                  Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FTransform)                                InitialGlobalTransform                                      ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      Switched                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedSubject                                               ___ OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x270, 24, 0, 0})
-	SMember(FTransform)                                RelativeOffset                                              ___ OFFSET(get<T>, {0x290, 96, 0, 0})
+	SMember(FRigElementKey)                            Subject                                                     OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(int32_t)                                   ParentIndex                                                 OFFSET(get<int32_t>, {0x168, 4, 0, 0})
+	SMember(FRigElementKeyCollection)                  Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FTransform)                                InitialGlobalTransform                                      OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      Switched                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedSubject                                               OFFSET(get<T>, {0x258, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x270, 24, 0, 0})
+	SMember(FTransform)                                RelativeOffset                                              OFFSET(get<T>, {0x290, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ParentSwitchConstraintArray
@@ -5159,16 +5768,16 @@ class FRigUnit_ParentSwitchConstraintArray : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FRigElementKey)                            Subject                                                     ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(int32_t)                                   ParentIndex                                                 ___ OFFSET(get<int32_t>, {0x168, 4, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FTransform)                                InitialGlobalTransform                                      ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
-	DMember(bool)                                      Switched                                                    ___ OFFSET(get<bool>, {0x250, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedSubject                                               ___ OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x270, 24, 0, 0})
-	SMember(FTransform)                                RelativeOffset                                              ___ OFFSET(get<T>, {0x290, 96, 0, 0})
+	SMember(FRigElementKey)                            Subject                                                     OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(int32_t)                                   ParentIndex                                                 OFFSET(get<int32_t>, {0x168, 4, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FTransform)                                InitialGlobalTransform                                      OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	DMember(bool)                                      Switched                                                    OFFSET(get<bool>, {0x250, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedSubject                                               OFFSET(get<T>, {0x258, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x270, 24, 0, 0})
+	SMember(FTransform)                                RelativeOffset                                              OFFSET(get<T>, {0x290, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ProjectTransformToNewParent
@@ -5179,16 +5788,16 @@ class FRigUnit_ProjectTransformToNewParent : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bChildInitial                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FRigElementKey)                            OldParent                                                   ___ OFFSET(get<T>, {0x14, 8, 0, 0})
-	DMember(bool)                                      bOldParentInitial                                           ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	SMember(FRigElementKey)                            NewParent                                                   ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(bool)                                      bNewParentInitial                                           ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x30, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedOldParent                                             ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedNewParent                                             ___ OFFSET(get<T>, {0xC0, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bChildInitial                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FRigElementKey)                            OldParent                                                   OFFSET(get<T>, {0x14, 8, 0, 0})
+	DMember(bool)                                      bOldParentInitial                                           OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	SMember(FRigElementKey)                            NewParent                                                   OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(bool)                                      bNewParentInitial                                           OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedOldParent                                             OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedNewParent                                             OFFSET(get<T>, {0xC0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PropagateTransform
@@ -5199,11 +5808,11 @@ class FRigUnit_PropagateTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bRecomputeGlobal                                            ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	DMember(bool)                                      bApplyToChildren                                            ___ OFFSET(get<bool>, {0x169, 1, 0, 0})
-	DMember(bool)                                      bRecursive                                                  ___ OFFSET(get<bool>, {0x16A, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bRecomputeGlobal                                            OFFSET(get<bool>, {0x168, 1, 0, 0})
+	DMember(bool)                                      bApplyToChildren                                            OFFSET(get<bool>, {0x169, 1, 0, 0})
+	DMember(bool)                                      bRecursive                                                  OFFSET(get<bool>, {0x16A, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SendEvent
@@ -5214,11 +5823,11 @@ class FRigUnit_SendEvent : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	CMember(ERigEvent)                                 Event                                                       ___ OFFSET(get<T>, {0x160, 1, 0, 0})
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x164, 8, 0, 0})
-	DMember(float)                                     OffsetInSeconds                                             ___ OFFSET(get<float>, {0x16C, 4, 0, 0})
-	DMember(bool)                                      bEnable                                                     ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	DMember(bool)                                      bOnlyDuringInteraction                                      ___ OFFSET(get<bool>, {0x171, 1, 0, 0})
+	CMember(ERigEvent)                                 Event                                                       OFFSET(get<T>, {0x160, 1, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x164, 8, 0, 0})
+	DMember(float)                                     OffsetInSeconds                                             OFFSET(get<float>, {0x16C, 4, 0, 0})
+	DMember(bool)                                      bEnable                                                     OFFSET(get<bool>, {0x170, 1, 0, 0})
+	DMember(bool)                                      bOnlyDuringInteraction                                      OFFSET(get<bool>, {0x171, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetBoneInitialTransform
@@ -5229,12 +5838,12 @@ class FRigUnit_SetBoneInitialTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x1D0, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x230, 1, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x231, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x238, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x230, 1, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x231, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x238, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetBoneRotation
@@ -5245,12 +5854,12 @@ class FRigUnit_SetBoneRotation : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x170, 32, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x190, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x1A0, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x170, 32, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x190, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x198, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x1A0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetBoneTransform
@@ -5261,13 +5870,13 @@ class FRigUnit_SetBoneTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x1D0, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x230, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x234, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x238, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x230, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x234, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x238, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x240, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetBoneTranslation
@@ -5278,12 +5887,12 @@ class FRigUnit_SetBoneTranslation : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x188, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0x168, 24, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x180, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x184, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x188, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlColor
@@ -5294,9 +5903,9 @@ class FRigUnit_GetControlColor : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0xC, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0xC, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlColor
@@ -5307,9 +5916,9 @@ class FRigUnit_SetControlColor : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x164, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x164, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x178, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlDrivenList
@@ -5320,9 +5929,9 @@ class FRigUnit_GetControlDrivenList : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Driven                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Driven                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlDrivenList
@@ -5333,9 +5942,9 @@ class FRigUnit_SetControlDrivenList : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	CMember(TArray<FRigElementKey>)                    Driven                                                      ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Driven                                                      OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x178, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlOffset
@@ -5346,10 +5955,10 @@ class FRigUnit_SetControlOffset : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Offset                                                      ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Offset                                                      OFFSET(get<T>, {0x170, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetShapeTransform
@@ -5360,9 +5969,9 @@ class FRigUnit_GetShapeTransform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetShapeTransform
@@ -5373,9 +5982,9 @@ class FRigUnit_SetShapeTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x1D0, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x1D0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlBool
@@ -5386,9 +5995,9 @@ class FRigUnit_SetControlBool : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(bool)                                      BoolValue                                                   ___ OFFSET(get<bool>, {0x164, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(bool)                                      BoolValue                                                   OFFSET(get<bool>, {0x164, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x168, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlBool_Entry
@@ -5399,8 +6008,8 @@ class FRigUnit_SetMultiControlBool_Entry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      BoolValue                                                   ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      BoolValue                                                   OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlBool
@@ -5411,8 +6020,8 @@ class FRigUnit_SetMultiControlBool : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	CMember(TArray<FRigUnit_SetMultiControlBool_Entry>) Entries                                                    ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x170, 16, 0, 0})
+	CMember(TArray<FRigUnit_SetMultiControlBool_Entry>) Entries                                                    OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x170, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlFloat
@@ -5423,10 +6032,10 @@ class FRigUnit_SetControlFloat : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	DMember(float)                                     FloatValue                                                  ___ OFFSET(get<float>, {0x168, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0x168, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlFloat_Entry
@@ -5437,8 +6046,8 @@ class FRigUnit_SetMultiControlFloat_Entry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     FloatValue                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlFloat
@@ -5449,9 +6058,9 @@ class FRigUnit_SetMultiControlFloat : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_SetMultiControlFloat_Entry>) Entries                                                   ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FRigUnit_SetMultiControlFloat_Entry>) Entries                                                   OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x178, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlInteger
@@ -5462,10 +6071,10 @@ class FRigUnit_SetControlInteger : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(int32_t)                                   Weight                                                      ___ OFFSET(get<int32_t>, {0x164, 4, 0, 0})
-	DMember(int32_t)                                   IntegerValue                                                ___ OFFSET(get<int32_t>, {0x168, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(int32_t)                                   Weight                                                      OFFSET(get<int32_t>, {0x164, 4, 0, 0})
+	DMember(int32_t)                                   IntegerValue                                                OFFSET(get<int32_t>, {0x168, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x170, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlInteger_Entry
@@ -5476,8 +6085,8 @@ class FRigUnit_SetMultiControlInteger_Entry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   IntegerValue                                                ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   IntegerValue                                                OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlInteger
@@ -5488,9 +6097,9 @@ class FRigUnit_SetMultiControlInteger : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_SetMultiControlInteger_Entry>) Entries                                                 ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FRigUnit_SetMultiControlInteger_Entry>) Entries                                                 OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x178, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlVector2D
@@ -5501,10 +6110,10 @@ class FRigUnit_SetControlVector2D : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FVector2D)                                 Vector                                                      ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FVector2D)                                 Vector                                                      OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x178, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlVector2D_Entry
@@ -5515,8 +6124,8 @@ class FRigUnit_SetMultiControlVector2D_Entry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 Vector                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 Vector                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlVector2D
@@ -5527,9 +6136,9 @@ class FRigUnit_SetMultiControlVector2D : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_SetMultiControlVector2D_Entry>) Entries                                                ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FRigUnit_SetMultiControlVector2D_Entry>) Entries                                                OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x178, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlVector
@@ -5540,11 +6149,11 @@ class FRigUnit_SetControlVector : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x168, 24, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x180, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x188, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlRotator
@@ -5555,11 +6164,11 @@ class FRigUnit_SetControlRotator : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FRotator)                                  Rotator                                                     ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FRotator)                                  Rotator                                                     OFFSET(get<T>, {0x168, 24, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x180, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x188, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlRotator_Entry
@@ -5570,9 +6179,9 @@ class FRigUnit_SetMultiControlRotator_Entry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FRotator)                                  Rotator                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FRotator)                                  Rotator                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetMultiControlRotator
@@ -5583,9 +6192,9 @@ class FRigUnit_SetMultiControlRotator : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_SetMultiControlRotator_Entry>) Entries                                                 ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FRigUnit_SetMultiControlRotator_Entry>) Entries                                                 OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x178, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlTransform
@@ -5596,11 +6205,11 @@ class FRigUnit_SetControlTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FName)                                     Control                                                     ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FName)                                     Control                                                     OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_GetControlVisibility
@@ -5611,9 +6220,9 @@ class FRigUnit_GetControlVisibility : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bVisible                                                    ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedControlIndex                                          ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedControlIndex                                          OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetControlVisibility
@@ -5624,10 +6233,10 @@ class FRigUnit_SetControlVisibility : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FString)                                   Pattern                                                     ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	DMember(bool)                                      bVisible                                                    ___ OFFSET(get<bool>, {0x178, 1, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        ___ OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FString)                                   Pattern                                                     OFFSET(get<T>, {0x168, 16, 0, 0})
+	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x178, 1, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedControlIndices                                        OFFSET(get<T>, {0x180, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetCurveValue
@@ -5638,9 +6247,9 @@ class FRigUnit_SetCurveValue : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FName)                                     Curve                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedCurveIndex                                            ___ OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FName)                                     Curve                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedCurveIndex                                            OFFSET(get<T>, {0x168, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRelativeBoneTransform
@@ -5651,13 +6260,13 @@ class FRigUnit_SetRelativeBoneTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D4, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedBone                                                  ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedSpaceIndex                                            ___ OFFSET(get<T>, {0x1F0, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D4, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedBone                                                  OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedSpaceIndex                                            OFFSET(get<T>, {0x1F0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRelativeTransformForItem
@@ -5668,14 +6277,14 @@ class FRigUnit_SetRelativeTransformForItem : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	DMember(bool)                                      bParentInitial                                              ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1E4, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x1E8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x200, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x168, 8, 0, 0})
+	DMember(bool)                                      bParentInitial                                              OFFSET(get<bool>, {0x170, 1, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1E4, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x1E8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x200, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRelativeTranslationForItem
@@ -5686,14 +6295,14 @@ class FRigUnit_SetRelativeTranslationForItem : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	DMember(bool)                                      bParentInitial                                              ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x194, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x198, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x1B0, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x168, 8, 0, 0})
+	DMember(bool)                                      bParentInitial                                              OFFSET(get<bool>, {0x170, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x178, 24, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x190, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x194, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x198, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x1B0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRelativeRotationForItem
@@ -5704,14 +6313,14 @@ class FRigUnit_SetRelativeRotationForItem : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            Parent                                                      ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	DMember(bool)                                      bParentInitial                                              ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x180, 32, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1A4, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedChild                                                 ___ OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedParent                                                ___ OFFSET(get<T>, {0x1C0, 24, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Parent                                                      OFFSET(get<T>, {0x168, 8, 0, 0})
+	DMember(bool)                                      bParentInitial                                              OFFSET(get<bool>, {0x170, 1, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x180, 32, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1A4, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedChild                                                 OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedParent                                                OFFSET(get<T>, {0x1C0, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetSpaceInitialTransform
@@ -5722,11 +6331,11 @@ class FRigUnit_SetSpaceInitialTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FName)                                     SpaceName                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x1D0, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x230, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedSpaceIndex                                            ___ OFFSET(get<T>, {0x238, 24, 0, 0})
+	SMember(FName)                                     SpaceName                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedSpaceIndex                                            OFFSET(get<T>, {0x238, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetSpaceTransform
@@ -5737,11 +6346,11 @@ class FRigUnit_SetSpaceTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	CMember(ERigVMTransformSpace)                      SpaceType                                                   ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedSpaceIndex                                            ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x164, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x170, 96, 0, 0})
+	CMember(ERigVMTransformSpace)                      SpaceType                                                   OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedSpaceIndex                                            OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetTransform
@@ -5752,13 +6361,13 @@ class FRigUnit_SetTransform : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x168, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x169, 1, 0, 0})
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D4, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x168, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x169, 1, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D4, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x1D8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetTranslation
@@ -5769,13 +6378,13 @@ class FRigUnit_SetTranslation : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x168, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x169, 1, 0, 0})
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x18C, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x168, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x169, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x170, 24, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x18C, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetRotation
@@ -5786,13 +6395,13 @@ class FRigUnit_SetRotation : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x168, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x169, 1, 0, 0})
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x170, 32, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x194, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x198, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x168, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x169, 1, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x170, 32, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x190, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x194, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x198, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetScale
@@ -5803,13 +6412,13 @@ class FRigUnit_SetScale : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x168, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x169, 1, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x18C, 1, 0, 0})
-	SMember(FCachedRigElement)                         CachedIndex                                                 ___ OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x168, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x169, 1, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x170, 24, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x18C, 1, 0, 0})
+	SMember(FCachedRigElement)                         CachedIndex                                                 OFFSET(get<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetTransformArray
@@ -5820,13 +6429,13 @@ class FRigUnit_SetTransformArray : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x170, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x171, 1, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x18C, 1, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 ___ OFFSET(get<T>, {0x190, 16, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x170, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x171, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x178, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x18C, 1, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 OFFSET(get<T>, {0x190, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SetTransformItemArray
@@ -5837,13 +6446,13 @@ class FRigUnit_SetTransformItemArray : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(ERigVMTransformSpace)                      Space                                                       ___ OFFSET(get<T>, {0x170, 1, 0, 0})
-	DMember(bool)                                      bInitial                                                    ___ OFFSET(get<bool>, {0x171, 1, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x18C, 1, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 ___ OFFSET(get<T>, {0x190, 16, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      Space                                                       OFFSET(get<T>, {0x170, 1, 0, 0})
+	DMember(bool)                                      bInitial                                                    OFFSET(get<bool>, {0x171, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x178, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x18C, 1, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedIndex                                                 OFFSET(get<T>, {0x190, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_UnsetCurveValue
@@ -5854,8 +6463,8 @@ class FRigUnit_UnsetCurveValue : public FRigUnitMutable
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FName)                                     Curve                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FCachedRigElement)                         CachedCurveIndex                                            ___ OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FName)                                     Curve                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FCachedRigElement)                         CachedCurveIndex                                            OFFSET(get<T>, {0x168, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToWorldSpace_Transform
@@ -5866,8 +6475,8 @@ class FRigUnit_ToWorldSpace_Transform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                World                                                       ___ OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                World                                                       OFFSET(get<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToRigSpace_Transform
@@ -5878,8 +6487,8 @@ class FRigUnit_ToRigSpace_Transform : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Global                                                      ___ OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Global                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToWorldSpace_Location
@@ -5890,8 +6499,8 @@ class FRigUnit_ToWorldSpace_Location : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   World                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   World                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToRigSpace_Location
@@ -5902,8 +6511,8 @@ class FRigUnit_ToRigSpace_Location : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Global                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Global                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToWorldSpace_Rotation
@@ -5914,8 +6523,8 @@ class FRigUnit_ToWorldSpace_Rotation : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     World                                                       ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     World                                                       OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ToRigSpace_Rotation
@@ -5926,8 +6535,8 @@ class FRigUnit_ToRigSpace_Rotation : public FRigUnit
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Global                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Global                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BoneHarmonics_BoneTarget
@@ -5938,8 +6547,8 @@ class FRigUnit_BoneHarmonics_BoneTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_Harmonics_TargetItem
@@ -5950,8 +6559,8 @@ class FRigUnit_Harmonics_TargetItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BoneHarmonics_WorkData
@@ -5962,8 +6571,8 @@ class FRigUnit_BoneHarmonics_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector)                                   WaveTime                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector)                                   WaveTime                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_BoneHarmonics
@@ -5974,18 +6583,18 @@ class FRigUnit_BoneHarmonics : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(TArray<FRigUnit_BoneHarmonics_BoneTarget>) Bones                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FVector)                                   WaveSpeed                                                   ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   WaveFrequency                                               ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	SMember(FVector)                                   WaveAmplitude                                               ___ OFFSET(get<T>, {0x1A0, 24, 0, 0})
-	SMember(FVector)                                   WaveOffset                                                  ___ OFFSET(get<T>, {0x1B8, 24, 0, 0})
-	SMember(FVector)                                   WaveNoise                                                   ___ OFFSET(get<T>, {0x1D0, 24, 0, 0})
-	CMember(ERigVMAnimEasingType)                      WaveEase                                                    ___ OFFSET(get<T>, {0x1E8, 1, 0, 0})
-	DMember(float)                                     WaveMinimum                                                 ___ OFFSET(get<float>, {0x1EC, 4, 0, 0})
-	DMember(float)                                     WaveMaximum                                                 ___ OFFSET(get<float>, {0x1F0, 4, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x1F4, 1, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1F5, 1, 0, 0})
-	SMember(FRigUnit_BoneHarmonics_WorkData)           WorkData                                                    ___ OFFSET(get<T>, {0x1F8, 40, 0, 0})
+	CMember(TArray<FRigUnit_BoneHarmonics_BoneTarget>) Bones                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FVector)                                   WaveSpeed                                                   OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   WaveFrequency                                               OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FVector)                                   WaveAmplitude                                               OFFSET(get<T>, {0x1A0, 24, 0, 0})
+	SMember(FVector)                                   WaveOffset                                                  OFFSET(get<T>, {0x1B8, 24, 0, 0})
+	SMember(FVector)                                   WaveNoise                                                   OFFSET(get<T>, {0x1D0, 24, 0, 0})
+	CMember(ERigVMAnimEasingType)                      WaveEase                                                    OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	DMember(float)                                     WaveMinimum                                                 OFFSET(get<float>, {0x1EC, 4, 0, 0})
+	DMember(float)                                     WaveMaximum                                                 OFFSET(get<float>, {0x1F0, 4, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x1F4, 1, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F5, 1, 0, 0})
+	SMember(FRigUnit_BoneHarmonics_WorkData)           WorkData                                                    OFFSET(get<T>, {0x1F8, 40, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ItemHarmonics
@@ -5996,17 +6605,17 @@ class FRigUnit_ItemHarmonics : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(TArray<FRigUnit_Harmonics_TargetItem>)     Targets                                                     ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FVector)                                   WaveSpeed                                                   ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   WaveFrequency                                               ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	SMember(FVector)                                   WaveAmplitude                                               ___ OFFSET(get<T>, {0x1A0, 24, 0, 0})
-	SMember(FVector)                                   WaveOffset                                                  ___ OFFSET(get<T>, {0x1B8, 24, 0, 0})
-	SMember(FVector)                                   WaveNoise                                                   ___ OFFSET(get<T>, {0x1D0, 24, 0, 0})
-	CMember(ERigVMAnimEasingType)                      WaveEase                                                    ___ OFFSET(get<T>, {0x1E8, 1, 0, 0})
-	DMember(float)                                     WaveMinimum                                                 ___ OFFSET(get<float>, {0x1EC, 4, 0, 0})
-	DMember(float)                                     WaveMaximum                                                 ___ OFFSET(get<float>, {0x1F0, 4, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x1F4, 1, 0, 0})
-	SMember(FRigUnit_BoneHarmonics_WorkData)           WorkData                                                    ___ OFFSET(get<T>, {0x1F8, 40, 0, 0})
+	CMember(TArray<FRigUnit_Harmonics_TargetItem>)     Targets                                                     OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FVector)                                   WaveSpeed                                                   OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   WaveFrequency                                               OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FVector)                                   WaveAmplitude                                               OFFSET(get<T>, {0x1A0, 24, 0, 0})
+	SMember(FVector)                                   WaveOffset                                                  OFFSET(get<T>, {0x1B8, 24, 0, 0})
+	SMember(FVector)                                   WaveNoise                                                   OFFSET(get<T>, {0x1D0, 24, 0, 0})
+	CMember(ERigVMAnimEasingType)                      WaveEase                                                    OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	DMember(float)                                     WaveMinimum                                                 OFFSET(get<float>, {0x1EC, 4, 0, 0})
+	DMember(float)                                     WaveMaximum                                                 OFFSET(get<float>, {0x1F0, 4, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x1F4, 1, 0, 0})
+	SMember(FRigUnit_BoneHarmonics_WorkData)           WorkData                                                    OFFSET(get<T>, {0x1F8, 40, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonics_Reach
@@ -6017,12 +6626,12 @@ class FRigUnit_ChainHarmonics_Reach : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   ReachTarget                                                 ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   ReachAxis                                                   ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     ReachMinimum                                                ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     ReachMaximum                                                ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	CMember(ERigVMAnimEasingType)                      ReachEase                                                   ___ OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   ReachTarget                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   ReachAxis                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     ReachMinimum                                                OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     ReachMaximum                                                OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(ERigVMAnimEasingType)                      ReachEase                                                   OFFSET(get<T>, {0x40, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonics_Wave
@@ -6033,14 +6642,14 @@ class FRigUnit_ChainHarmonics_Wave : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   WaveFrequency                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   WaveAmplitude                                               ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   WaveOffset                                                  ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   WaveNoise                                                   ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	DMember(float)                                     WaveMinimum                                                 ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     WaveMaximum                                                 ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	CMember(ERigVMAnimEasingType)                      WaveEase                                                    ___ OFFSET(get<T>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   WaveFrequency                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   WaveAmplitude                                               OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   WaveOffset                                                  OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   WaveNoise                                                   OFFSET(get<T>, {0x50, 24, 0, 0})
+	DMember(float)                                     WaveMinimum                                                 OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     WaveMaximum                                                 OFFSET(get<float>, {0x6C, 4, 0, 0})
+	CMember(ERigVMAnimEasingType)                      WaveEase                                                    OFFSET(get<T>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonics_Pendulum
@@ -6051,17 +6660,17 @@ class FRigUnit_ChainHarmonics_Pendulum : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     PendulumStiffness                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   PendulumGravity                                             ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     PendulumBlend                                               ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     PendulumDrag                                                ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     PendulumMinimum                                             ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     PendulumMaximum                                             ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	CMember(ERigVMAnimEasingType)                      PendulumEase                                                ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   UnwindAxis                                                  ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(float)                                     UnwindMinimum                                               ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     UnwindMaximum                                               ___ OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     PendulumStiffness                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FVector)                                   PendulumGravity                                             OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     PendulumBlend                                               OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     PendulumDrag                                                OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     PendulumMinimum                                             OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     PendulumMaximum                                             OFFSET(get<float>, {0x2C, 4, 0, 0})
+	CMember(ERigVMAnimEasingType)                      PendulumEase                                                OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FVector)                                   UnwindAxis                                                  OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(float)                                     UnwindMinimum                                               OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     UnwindMaximum                                               OFFSET(get<float>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonics_WorkData
@@ -6072,15 +6681,15 @@ class FRigUnit_ChainHarmonics_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FVector)                                   Time                                                        ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 Items                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<float>)                             Ratio                                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FVector>)                           LocalTip                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FVector>)                           PendulumTip                                                 ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FVector>)                           PendulumPosition                                            ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FVector>)                           PendulumVelocity                                            ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(TArray<FVector>)                           HierarchyLine                                               ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FVector>)                           VelocityLines                                               ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FVector)                                   Time                                                        OFFSET(get<T>, {0x0, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 Items                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<float>)                             Ratio                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FVector>)                           LocalTip                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FVector>)                           PendulumTip                                                 OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FVector>)                           PendulumPosition                                            OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FVector>)                           PendulumVelocity                                            OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FVector>)                           HierarchyLine                                               OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FVector>)                           VelocityLines                                               OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonics
@@ -6091,15 +6700,15 @@ class FRigUnit_ChainHarmonics : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 1072;
 
 public:
-	SMember(FName)                                     ChainRoot                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FVector)                                   Speed                                                       ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Reach)             Reach                                                       ___ OFFSET(get<T>, {0x180, 72, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Wave)              Wave                                                        ___ OFFSET(get<T>, {0x1C8, 120, 0, 0})
-	SMember(FRuntimeFloatCurve)                        WaveCurve                                                   ___ OFFSET(get<T>, {0x240, 136, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Pendulum)          Pendulum                                                    ___ OFFSET(get<T>, {0x2C8, 88, 0, 0})
-	DMember(bool)                                      bDrawDebug                                                  ___ OFFSET(get<bool>, {0x320, 1, 0, 0})
-	SMember(FTransform)                                DrawWorldOffset                                             ___ OFFSET(get<T>, {0x330, 96, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_WorkData)          WorkData                                                    ___ OFFSET(get<T>, {0x390, 152, 0, 0})
+	SMember(FName)                                     ChainRoot                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Reach)             Reach                                                       OFFSET(get<T>, {0x180, 72, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Wave)              Wave                                                        OFFSET(get<T>, {0x1C8, 120, 0, 0})
+	SMember(FRuntimeFloatCurve)                        WaveCurve                                                   OFFSET(get<T>, {0x240, 136, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Pendulum)          Pendulum                                                    OFFSET(get<T>, {0x2C8, 88, 0, 0})
+	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0x320, 1, 0, 0})
+	SMember(FTransform)                                DrawWorldOffset                                             OFFSET(get<T>, {0x330, 96, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_WorkData)          WorkData                                                    OFFSET(get<T>, {0x390, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ChainHarmonicsPerItem
@@ -6110,15 +6719,15 @@ class FRigUnit_ChainHarmonicsPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 1072;
 
 public:
-	SMember(FRigElementKey)                            ChainRoot                                                   ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FVector)                                   Speed                                                       ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Reach)             Reach                                                       ___ OFFSET(get<T>, {0x180, 72, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Wave)              Wave                                                        ___ OFFSET(get<T>, {0x1C8, 120, 0, 0})
-	SMember(FRuntimeFloatCurve)                        WaveCurve                                                   ___ OFFSET(get<T>, {0x240, 136, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_Pendulum)          Pendulum                                                    ___ OFFSET(get<T>, {0x2C8, 88, 0, 0})
-	DMember(bool)                                      bDrawDebug                                                  ___ OFFSET(get<bool>, {0x320, 1, 0, 0})
-	SMember(FTransform)                                DrawWorldOffset                                             ___ OFFSET(get<T>, {0x330, 96, 0, 0})
-	SMember(FRigUnit_ChainHarmonics_WorkData)          WorkData                                                    ___ OFFSET(get<T>, {0x390, 152, 0, 0})
+	SMember(FRigElementKey)                            ChainRoot                                                   OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Reach)             Reach                                                       OFFSET(get<T>, {0x180, 72, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Wave)              Wave                                                        OFFSET(get<T>, {0x1C8, 120, 0, 0})
+	SMember(FRuntimeFloatCurve)                        WaveCurve                                                   OFFSET(get<T>, {0x240, 136, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_Pendulum)          Pendulum                                                    OFFSET(get<T>, {0x2C8, 88, 0, 0})
+	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0x320, 1, 0, 0})
+	SMember(FTransform)                                DrawWorldOffset                                             OFFSET(get<T>, {0x330, 96, 0, 0})
+	SMember(FRigUnit_ChainHarmonics_WorkData)          WorkData                                                    OFFSET(get<T>, {0x390, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimBone_Target
@@ -6129,11 +6738,11 @@ class FRigUnit_AimBone_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(EControlRigVectorKind)                     Kind                                                        ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(EControlRigVectorKind)                     Kind                                                        OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimItem_Target
@@ -6144,11 +6753,11 @@ class FRigUnit_AimItem_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(EControlRigVectorKind)                     Kind                                                        ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(EControlRigVectorKind)                     Kind                                                        OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x3C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimBone_DebugSettings
@@ -6159,9 +6768,9 @@ class FRigUnit_AimBone_DebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimBoneMath
@@ -6172,15 +6781,15 @@ class FRigUnit_AimBoneMath : public FRigUnit_HighlevelBase
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FTransform)                                InputTransform                                              ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FRigUnit_AimItem_Target)                   Primary                                                     ___ OFFSET(get<T>, {0x70, 72, 0, 0})
-	SMember(FRigUnit_AimItem_Target)                   Secondary                                                   ___ OFFSET(get<T>, {0xB8, 72, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x100, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x110, 96, 0, 0})
-	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               ___ OFFSET(get<T>, {0x170, 112, 0, 0})
-	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          ___ OFFSET(get<T>, {0x1E0, 24, 0, 0})
-	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x210, 1, 0, 0})
+	SMember(FTransform)                                InputTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FRigUnit_AimItem_Target)                   Primary                                                     OFFSET(get<T>, {0x70, 72, 0, 0})
+	SMember(FRigUnit_AimItem_Target)                   Secondary                                                   OFFSET(get<T>, {0xB8, 72, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x100, 4, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x110, 96, 0, 0})
+	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               OFFSET(get<T>, {0x170, 112, 0, 0})
+	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x210, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimBone
@@ -6191,16 +6800,16 @@ class FRigUnit_AimBone : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FRigUnit_AimBone_Target)                   Primary                                                     ___ OFFSET(get<T>, {0x168, 64, 0, 0})
-	SMember(FRigUnit_AimBone_Target)                   Secondary                                                   ___ OFFSET(get<T>, {0x1A8, 64, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1EC, 1, 0, 0})
-	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               ___ OFFSET(get<T>, {0x1F0, 112, 0, 0})
-	SMember(FCachedRigElement)                         CachedBoneIndex                                             ___ OFFSET(get<T>, {0x260, 24, 0, 0})
-	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          ___ OFFSET(get<T>, {0x278, 24, 0, 0})
-	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        ___ OFFSET(get<T>, {0x290, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FRigUnit_AimBone_Target)                   Primary                                                     OFFSET(get<T>, {0x168, 64, 0, 0})
+	SMember(FRigUnit_AimBone_Target)                   Secondary                                                   OFFSET(get<T>, {0x1A8, 64, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1EC, 1, 0, 0})
+	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               OFFSET(get<T>, {0x1F0, 112, 0, 0})
+	SMember(FCachedRigElement)                         CachedBoneIndex                                             OFFSET(get<T>, {0x260, 24, 0, 0})
+	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          OFFSET(get<T>, {0x278, 24, 0, 0})
+	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        OFFSET(get<T>, {0x290, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimItem
@@ -6211,15 +6820,15 @@ class FRigUnit_AimItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigUnit_AimItem_Target)                   Primary                                                     ___ OFFSET(get<T>, {0x168, 72, 0, 0})
-	SMember(FRigUnit_AimItem_Target)                   Secondary                                                   ___ OFFSET(get<T>, {0x1B0, 72, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1F8, 4, 0, 0})
-	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               ___ OFFSET(get<T>, {0x200, 112, 0, 0})
-	SMember(FCachedRigElement)                         CachedItem                                                  ___ OFFSET(get<T>, {0x270, 24, 0, 0})
-	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          ___ OFFSET(get<T>, {0x288, 24, 0, 0})
-	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        ___ OFFSET(get<T>, {0x2A0, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x2B8, 1, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigUnit_AimItem_Target)                   Primary                                                     OFFSET(get<T>, {0x168, 72, 0, 0})
+	SMember(FRigUnit_AimItem_Target)                   Secondary                                                   OFFSET(get<T>, {0x1B0, 72, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1F8, 4, 0, 0})
+	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               OFFSET(get<T>, {0x200, 112, 0, 0})
+	SMember(FCachedRigElement)                         CachedItem                                                  OFFSET(get<T>, {0x270, 24, 0, 0})
+	SMember(FCachedRigElement)                         PrimaryCachedSpace                                          OFFSET(get<T>, {0x288, 24, 0, 0})
+	SMember(FCachedRigElement)                         SecondaryCachedSpace                                        OFFSET(get<T>, {0x2A0, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x2B8, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimConstraint_WorldUp
@@ -6230,9 +6839,9 @@ class FRigUnit_AimConstraint_WorldUp : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	CMember(EControlRigVectorKind)                     Kind                                                        ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(FRigElementKey)                            Space                                                       ___ OFFSET(get<T>, {0x1C, 8, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	CMember(EControlRigVectorKind)                     Kind                                                        OFFSET(get<T>, {0x18, 1, 0, 0})
+	SMember(FRigElementKey)                            Space                                                       OFFSET(get<T>, {0x1C, 8, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimConstraint_AdvancedSettings
@@ -6243,8 +6852,8 @@ class FRigUnit_AimConstraint_AdvancedSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               ___ OFFSET(get<T>, {0x0, 112, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      ___ OFFSET(get<T>, {0x70, 1, 0, 0})
+	SMember(FRigUnit_AimBone_DebugSettings)            DebugSettings                                               OFFSET(get<T>, {0x0, 112, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      OFFSET(get<T>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_AimConstraintLocalSpaceOffset
@@ -6255,19 +6864,19 @@ class FRigUnit_AimConstraintLocalSpaceOffset : public FRigUnit_HighlevelBaseMuta
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	SMember(FVector)                                   AimAxis                                                     ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   UpAxis                                                      ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	SMember(FRigUnit_AimConstraint_WorldUp)            WorldUp                                                     ___ OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(FRigUnit_AimConstraint_AdvancedSettings)   AdvancedSettings                                            ___ OFFSET(get<T>, {0x1E0, 128, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x260, 4, 0, 0})
-	SMember(FCachedRigElement)                         WorldUpSpaceCache                                           ___ OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FCachedRigElement)                         ChildCache                                                  ___ OFFSET(get<T>, {0x280, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	SMember(FVector)                                   AimAxis                                                     OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   UpAxis                                                      OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FRigUnit_AimConstraint_WorldUp)            WorldUp                                                     OFFSET(get<T>, {0x1A0, 40, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	SMember(FRigUnit_AimConstraint_AdvancedSettings)   AdvancedSettings                                            OFFSET(get<T>, {0x1E0, 128, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x260, 4, 0, 0})
+	SMember(FCachedRigElement)                         WorldUpSpaceCache                                           OFFSET(get<T>, {0x268, 24, 0, 0})
+	SMember(FCachedRigElement)                         ChildCache                                                  OFFSET(get<T>, {0x280, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                OFFSET(get<T>, {0x298, 16, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ConstraintParent
@@ -6278,8 +6887,8 @@ class FConstraintParent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIK_RotationLimit
@@ -6290,8 +6899,8 @@ class FRigUnit_CCDIK_RotationLimit : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     Limit                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     Limit                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIK_RotationLimitPerItem
@@ -6302,8 +6911,8 @@ class FRigUnit_CCDIK_RotationLimitPerItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     Limit                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     Limit                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIK_WorkData
@@ -6314,11 +6923,11 @@ class FRigUnit_CCDIK_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TArray<FCCDIKChainLink>)                   Chain                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<int32_t>)                           RotationLimitIndex                                          ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<float>)                             RotationLimitsPerItem                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedEffector                                              ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	CMember(TArray<FCCDIKChainLink>)                   Chain                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<int32_t>)                           RotationLimitIndex                                          OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<float>)                             RotationLimitsPerItem                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedEffector                                              OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIK
@@ -6329,17 +6938,17 @@ class FRigUnit_CCDIK : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EffectorBone                                                ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
-	DMember(bool)                                      bStartFromTail                                              ___ OFFSET(get<bool>, {0x1DC, 1, 0, 0})
-	DMember(float)                                     BaseRotationLimit                                           ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	CMember(TArray<FRigUnit_CCDIK_RotationLimit>)      RotationLimits                                              ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    ___ OFFSET(get<T>, {0x200, 88, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EffectorBone                                                OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
+	DMember(bool)                                      bStartFromTail                                              OFFSET(get<bool>, {0x1DC, 1, 0, 0})
+	DMember(float)                                     BaseRotationLimit                                           OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	CMember(TArray<FRigUnit_CCDIK_RotationLimit>)      RotationLimits                                              OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F8, 1, 0, 0})
+	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    OFFSET(get<T>, {0x200, 88, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIKPerItem
@@ -6350,16 +6959,16 @@ class FRigUnit_CCDIKPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
-	DMember(bool)                                      bStartFromTail                                              ___ OFFSET(get<bool>, {0x1DC, 1, 0, 0})
-	DMember(float)                                     BaseRotationLimit                                           ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	CMember(TArray<FRigUnit_CCDIK_RotationLimitPerItem>) RotationLimits                                            ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    ___ OFFSET(get<T>, {0x200, 88, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
+	DMember(bool)                                      bStartFromTail                                              OFFSET(get<bool>, {0x1DC, 1, 0, 0})
+	DMember(float)                                     BaseRotationLimit                                           OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	CMember(TArray<FRigUnit_CCDIK_RotationLimitPerItem>) RotationLimits                                            OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F8, 1, 0, 0})
+	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    OFFSET(get<T>, {0x200, 88, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_CCDIKItemArray
@@ -6370,16 +6979,16 @@ class FRigUnit_CCDIKItemArray : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
-	DMember(bool)                                      bStartFromTail                                              ___ OFFSET(get<bool>, {0x1DC, 1, 0, 0})
-	DMember(float)                                     BaseRotationLimit                                           ___ OFFSET(get<float>, {0x1E0, 4, 0, 0})
-	CMember(TArray<FRigUnit_CCDIK_RotationLimitPerItem>) RotationLimits                                            ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    ___ OFFSET(get<T>, {0x200, 88, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
+	DMember(bool)                                      bStartFromTail                                              OFFSET(get<bool>, {0x1DC, 1, 0, 0})
+	DMember(float)                                     BaseRotationLimit                                           OFFSET(get<float>, {0x1E0, 4, 0, 0})
+	CMember(TArray<FRigUnit_CCDIK_RotationLimitPerItem>) RotationLimits                                            OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F8, 1, 0, 0})
+	SMember(FRigUnit_CCDIK_WorkData)                   WorkData                                                    OFFSET(get<T>, {0x200, 88, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DistributeRotation_Rotation
@@ -6390,8 +6999,8 @@ class FRigUnit_DistributeRotation_Rotation : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DistributeRotation_WorkData
@@ -6402,11 +7011,11 @@ class FRigUnit_DistributeRotation_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ItemRotationA                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ItemRotationB                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<float>)                             ItemRotationT                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FTransform>)                        ItemLocalTransforms                                         ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ItemRotationA                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ItemRotationB                                               OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<float>)                             ItemRotationT                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FTransform>)                        ItemLocalTransforms                                         OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DistributeRotation
@@ -6417,13 +7026,13 @@ class FRigUnit_DistributeRotation : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndBone                                                     ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x178, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x180, 1, 0, 0})
-	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    ___ OFFSET(get<T>, {0x188, 80, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndBone                                                     OFFSET(get<T>, {0x164, 4, 0, 0})
+	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                OFFSET(get<T>, {0x168, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x178, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x17C, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x180, 1, 0, 0})
+	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    OFFSET(get<T>, {0x188, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DistributeRotationForCollection
@@ -6434,11 +7043,11 @@ class FRigUnit_DistributeRotationForCollection : public FRigUnit_HighlevelBaseMu
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    ___ OFFSET(get<T>, {0x188, 80, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                OFFSET(get<T>, {0x170, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x180, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x184, 4, 0, 0})
+	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    OFFSET(get<T>, {0x188, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_DistributeRotationForItemArray
@@ -6449,11 +7058,11 @@ class FRigUnit_DistributeRotationForItemArray : public FRigUnit_HighlevelBaseMut
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x180, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    ___ OFFSET(get<T>, {0x188, 80, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<FRigUnit_DistributeRotation_Rotation>) Rotations                                                OFFSET(get<T>, {0x170, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x180, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x184, 4, 0, 0})
+	SMember(FRigUnit_DistributeRotation_WorkData)      WorkData                                                    OFFSET(get<T>, {0x188, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FABRIK_WorkData
@@ -6464,9 +7073,9 @@ class FRigUnit_FABRIK_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FFABRIKChainLink>)                  Chain                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedEffector                                              ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TArray<FFABRIKChainLink>)                  Chain                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedEffector                                              OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FABRIK
@@ -6477,15 +7086,15 @@ class FRigUnit_FABRIK : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EffectorBone                                                ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D8, 1, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    ___ OFFSET(get<T>, {0x1E0, 56, 0, 0})
-	DMember(bool)                                      bSetEffectorTransform                                       ___ OFFSET(get<bool>, {0x218, 1, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EffectorBone                                                OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D8, 1, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    OFFSET(get<T>, {0x1E0, 56, 0, 0})
+	DMember(bool)                                      bSetEffectorTransform                                       OFFSET(get<bool>, {0x218, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FABRIKPerItem
@@ -6496,14 +7105,14 @@ class FRigUnit_FABRIKPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D8, 1, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    ___ OFFSET(get<T>, {0x1E0, 56, 0, 0})
-	DMember(bool)                                      bSetEffectorTransform                                       ___ OFFSET(get<bool>, {0x218, 1, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D8, 1, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    OFFSET(get<T>, {0x1E0, 56, 0, 0})
+	DMember(bool)                                      bSetEffectorTransform                                       OFFSET(get<bool>, {0x218, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FABRIKItemArray
@@ -6514,14 +7123,14 @@ class FRigUnit_FABRIKItemArray : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D8, 1, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    ___ OFFSET(get<T>, {0x1E0, 56, 0, 0})
-	DMember(bool)                                      bSetEffectorTransform                                       ___ OFFSET(get<bool>, {0x218, 1, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0x170, 96, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D8, 1, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	SMember(FRigUnit_FABRIK_WorkData)                  WorkData                                                    OFFSET(get<T>, {0x1E0, 56, 0, 0})
+	DMember(bool)                                      bSetEffectorTransform                                       OFFSET(get<bool>, {0x218, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurve_Rotation
@@ -6532,8 +7141,8 @@ class FRigUnit_FitChainToCurve_Rotation : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurve_DebugSettings
@@ -6544,11 +7153,11 @@ class FRigUnit_FitChainToCurve_DebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FLinearColor)                              CurveColor                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              SegmentsColor                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x30, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FLinearColor)                              CurveColor                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              SegmentsColor                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurve_WorkData
@@ -6559,16 +7168,16 @@ class FRigUnit_FitChainToCurve_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	DMember(float)                                     ChainLength                                                 ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(TArray<FVector>)                           ItemPositions                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<float>)                             ItemSegments                                                ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FVector>)                           CurvePositions                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<float>)                             CurveSegments                                               ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ItemRotationA                                               ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ItemRotationB                                               ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(TArray<float>)                             ItemRotationT                                               ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FTransform>)                        ItemLocalTransforms                                         ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	DMember(float)                                     ChainLength                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(TArray<FVector>)                           ItemPositions                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<float>)                             ItemSegments                                                OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FVector>)                           CurvePositions                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<float>)                             CurveSegments                                               OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ItemRotationA                                               OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ItemRotationB                                               OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<float>)                             ItemRotationT                                               OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FTransform>)                        ItemLocalTransforms                                         OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurve
@@ -6579,22 +7188,22 @@ class FRigUnit_FitChainToCurve : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndBone                                                     ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x168, 96, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   ___ OFFSET(get<T>, {0x1C8, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x1CC, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(int32_t)                                   SamplingPrecision                                           ___ OFFSET(get<int32_t>, {0x1D4, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1D8, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1F0, 24, 0, 0})
-	SMember(FVector)                                   PoleVectorPosition                                          ___ OFFSET(get<T>, {0x208, 24, 0, 0})
-	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   ___ OFFSET(get<T>, {0x220, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x230, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x234, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x238, 1, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x240, 144, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    ___ OFFSET(get<T>, {0x2D0, 152, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndBone                                                     OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x168, 96, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1C8, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1CC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x1D4, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1F0, 24, 0, 0})
+	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(get<T>, {0x208, 24, 0, 0})
+	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x220, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x230, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x234, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x238, 1, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x240, 144, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(get<T>, {0x2D0, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurvePerItem
@@ -6605,21 +7214,21 @@ class FRigUnit_FitChainToCurvePerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	DMember(int32_t)                                   SamplingPrecision                                           ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1E0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FVector)                                   PoleVectorPosition                                          ___ OFFSET(get<T>, {0x210, 24, 0, 0})
-	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   ___ OFFSET(get<T>, {0x228, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x238, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x23C, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x250, 144, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    ___ OFFSET(get<T>, {0x2E0, 152, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x170, 96, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(get<T>, {0x210, 24, 0, 0})
+	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x228, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x238, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x23C, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x250, 144, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(get<T>, {0x2E0, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_FitChainToCurveItemArray
@@ -6630,21 +7239,21 @@ class FRigUnit_FitChainToCurveItemArray : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x1D8, 4, 0, 0})
-	DMember(int32_t)                                   SamplingPrecision                                           ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1E0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FVector)                                   PoleVectorPosition                                          ___ OFFSET(get<T>, {0x210, 24, 0, 0})
-	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   ___ OFFSET(get<T>, {0x228, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            ___ OFFSET(get<T>, {0x238, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x23C, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x250, 144, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    ___ OFFSET(get<T>, {0x2E0, 152, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x170, 96, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1D8, 4, 0, 0})
+	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(get<T>, {0x210, 24, 0, 0})
+	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x228, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x238, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x23C, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x250, 144, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(get<T>, {0x2E0, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ModifyBoneTransforms_PerBone
@@ -6655,8 +7264,8 @@ class FRigUnit_ModifyBoneTransforms_PerBone : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ModifyTransforms_WorkData
@@ -6667,7 +7276,7 @@ class FRigUnit_ModifyTransforms_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ModifyBoneTransforms_WorkData
@@ -6688,12 +7297,12 @@ class FRigUnit_ModifyBoneTransforms : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_ModifyBoneTransforms_PerBone>) BoneToModify                                            ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     WeightMinimum                                               ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     WeightMaximum                                               ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	CMember(EControlRigModifyBoneMode)                 Mode                                                        ___ OFFSET(get<T>, {0x17C, 1, 0, 0})
-	SMember(FRigUnit_ModifyBoneTransforms_WorkData)    WorkData                                                    ___ OFFSET(get<T>, {0x180, 16, 0, 0})
+	CMember(TArray<FRigUnit_ModifyBoneTransforms_PerBone>) BoneToModify                                            OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     WeightMinimum                                               OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     WeightMaximum                                               OFFSET(get<float>, {0x178, 4, 0, 0})
+	CMember(EControlRigModifyBoneMode)                 Mode                                                        OFFSET(get<T>, {0x17C, 1, 0, 0})
+	SMember(FRigUnit_ModifyBoneTransforms_WorkData)    WorkData                                                    OFFSET(get<T>, {0x180, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ModifyTransforms_PerItem
@@ -6704,8 +7313,8 @@ class FRigUnit_ModifyTransforms_PerItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ModifyTransforms
@@ -6716,12 +7325,12 @@ class FRigUnit_ModifyTransforms : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FRigUnit_ModifyTransforms_PerItem>) ItemToModify                                                ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     WeightMinimum                                               ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     WeightMaximum                                               ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	CMember(EControlRigModifyBoneMode)                 Mode                                                        ___ OFFSET(get<T>, {0x17C, 1, 0, 0})
-	SMember(FRigUnit_ModifyTransforms_WorkData)        WorkData                                                    ___ OFFSET(get<T>, {0x180, 16, 0, 0})
+	CMember(TArray<FRigUnit_ModifyTransforms_PerItem>) ItemToModify                                                OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     WeightMinimum                                               OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     WeightMaximum                                               OFFSET(get<float>, {0x178, 4, 0, 0})
+	CMember(EControlRigModifyBoneMode)                 Mode                                                        OFFSET(get<T>, {0x17C, 1, 0, 0})
+	SMember(FRigUnit_ModifyTransforms_WorkData)        WorkData                                                    OFFSET(get<T>, {0x180, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_MultiFABRIK_WorkData
@@ -6742,8 +7351,8 @@ class FRigUnit_MultiFABRIK_EndEffector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_MultiFABRIK
@@ -6754,13 +7363,13 @@ class FRigUnit_MultiFABRIK : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     RootBone                                                    ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	CMember(TArray<FRigUnit_MultiFABRIK_EndEffector>)  Effectors                                                   ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x17C, 1, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FRigUnit_MultiFABRIK_WorkData)             WorkData                                                    ___ OFFSET(get<T>, {0x188, 104, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FName)                                     RootBone                                                    OFFSET(get<T>, {0x160, 4, 0, 0})
+	CMember(TArray<FRigUnit_MultiFABRIK_EndEffector>)  Effectors                                                   OFFSET(get<T>, {0x168, 16, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x17C, 1, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	SMember(FRigUnit_MultiFABRIK_WorkData)             WorkData                                                    OFFSET(get<T>, {0x188, 104, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SlideChain_WorkData
@@ -6771,11 +7380,11 @@ class FRigUnit_SlideChain_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(float)                                     ChainLength                                                 ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(TArray<float>)                             ItemSegments                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FTransform>)                        BlendedTransforms                                           ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(float)                                     ChainLength                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(TArray<float>)                             ItemSegments                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FTransform>)                        BlendedTransforms                                           OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SlideChain
@@ -6786,11 +7395,11 @@ class FRigUnit_SlideChain : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndBone                                                     ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	DMember(float)                                     SlideAmount                                                 ___ OFFSET(get<float>, {0x168, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x16C, 1, 0, 0})
-	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    ___ OFFSET(get<T>, {0x170, 72, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndBone                                                     OFFSET(get<T>, {0x164, 4, 0, 0})
+	DMember(float)                                     SlideAmount                                                 OFFSET(get<float>, {0x168, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x16C, 1, 0, 0})
+	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    OFFSET(get<T>, {0x170, 72, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SlideChainPerItem
@@ -6801,10 +7410,10 @@ class FRigUnit_SlideChainPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     SlideAmount                                                 ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x174, 1, 0, 0})
-	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    ___ OFFSET(get<T>, {0x178, 72, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     SlideAmount                                                 OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x174, 1, 0, 0})
+	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    OFFSET(get<T>, {0x178, 72, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SlideChainItemArray
@@ -6815,10 +7424,10 @@ class FRigUnit_SlideChainItemArray : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     SlideAmount                                                 ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x174, 1, 0, 0})
-	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    ___ OFFSET(get<T>, {0x178, 72, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     SlideAmount                                                 OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x174, 1, 0, 0})
+	SMember(FRigUnit_SlideChain_WorkData)              WorkData                                                    OFFSET(get<T>, {0x178, 72, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RegionScaleFactors
@@ -6829,10 +7438,10 @@ class FRegionScaleFactors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     PositiveWidth                                               ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     NegativeWidth                                               ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     PositiveHeight                                              ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     NegativeHeight                                              ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     PositiveWidth                                               OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     NegativeWidth                                               OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     PositiveHeight                                              OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     NegativeHeight                                              OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.SphericalRegion
@@ -6853,12 +7462,12 @@ class FSphericalPoseReaderDebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bDrawDebug                                                  ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bDraw2D                                                     ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bDrawLocalAxes                                              ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(float)                                     DebugScale                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   DebugSegments                                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     DebugThickness                                              ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bDraw2D                                                     OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bDrawLocalAxes                                              OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(float)                                     DebugScale                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   DebugSegments                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     DebugThickness                                              OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SphericalPoseReader
@@ -6869,27 +7478,27 @@ class FRigUnit_SphericalPoseReader : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	DMember(float)                                     OutputParam                                                 ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FRigElementKey)                            DriverItem                                                  ___ OFFSET(get<T>, {0x164, 8, 0, 0})
-	SMember(FVector)                                   DriverAxis                                                  ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   RotationOffset                                              ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	DMember(float)                                     ActiveRegionSize                                            ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	SMember(FRegionScaleFactors)                       ActiveRegionScaleFactors                                    ___ OFFSET(get<T>, {0x1A4, 16, 0, 0})
-	DMember(float)                                     FalloffSize                                                 ___ OFFSET(get<float>, {0x1B4, 4, 0, 0})
-	SMember(FRegionScaleFactors)                       FalloffRegionScaleFactors                                   ___ OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	DMember(bool)                                      FlipWidthScaling                                            ___ OFFSET(get<bool>, {0x1C8, 1, 0, 0})
-	DMember(bool)                                      FlipHeightScaling                                           ___ OFFSET(get<bool>, {0x1C9, 1, 0, 0})
-	SMember(FRigElementKey)                            OptionalParentItem                                          ___ OFFSET(get<T>, {0x1CC, 8, 0, 0})
-	SMember(FSphericalPoseReaderDebugSettings)         Debug                                                       ___ OFFSET(get<T>, {0x1D4, 16, 0, 0})
-	SMember(FSphericalRegion)                          InnerRegion                                                 ___ OFFSET(get<T>, {0x1E4, 20, 0, 0})
-	SMember(FSphericalRegion)                          OuterRegion                                                 ___ OFFSET(get<T>, {0x1F8, 20, 0, 0})
-	SMember(FVector)                                   DriverNormal                                                ___ OFFSET(get<T>, {0x210, 24, 0, 0})
-	SMember(FVector)                                   Driver2D                                                    ___ OFFSET(get<T>, {0x228, 24, 0, 0})
-	SMember(FCachedRigElement)                         DriverCache                                                 ___ OFFSET(get<T>, {0x240, 24, 0, 0})
-	SMember(FCachedRigElement)                         OptionalParentCache                                         ___ OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FTransform)                                LocalDriverTransformInit                                    ___ OFFSET(get<T>, {0x270, 96, 0, 0})
-	SMember(FVector)                                   CachedRotationOffset                                        ___ OFFSET(get<T>, {0x2D0, 24, 0, 0})
-	DMember(bool)                                      bCachedInitTransforms                                       ___ OFFSET(get<bool>, {0x2E8, 1, 0, 0})
+	DMember(float)                                     OutputParam                                                 OFFSET(get<float>, {0x160, 4, 0, 0})
+	SMember(FRigElementKey)                            DriverItem                                                  OFFSET(get<T>, {0x164, 8, 0, 0})
+	SMember(FVector)                                   DriverAxis                                                  OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   RotationOffset                                              OFFSET(get<T>, {0x188, 24, 0, 0})
+	DMember(float)                                     ActiveRegionSize                                            OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	SMember(FRegionScaleFactors)                       ActiveRegionScaleFactors                                    OFFSET(get<T>, {0x1A4, 16, 0, 0})
+	DMember(float)                                     FalloffSize                                                 OFFSET(get<float>, {0x1B4, 4, 0, 0})
+	SMember(FRegionScaleFactors)                       FalloffRegionScaleFactors                                   OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	DMember(bool)                                      FlipWidthScaling                                            OFFSET(get<bool>, {0x1C8, 1, 0, 0})
+	DMember(bool)                                      FlipHeightScaling                                           OFFSET(get<bool>, {0x1C9, 1, 0, 0})
+	SMember(FRigElementKey)                            OptionalParentItem                                          OFFSET(get<T>, {0x1CC, 8, 0, 0})
+	SMember(FSphericalPoseReaderDebugSettings)         Debug                                                       OFFSET(get<T>, {0x1D4, 16, 0, 0})
+	SMember(FSphericalRegion)                          InnerRegion                                                 OFFSET(get<T>, {0x1E4, 20, 0, 0})
+	SMember(FSphericalRegion)                          OuterRegion                                                 OFFSET(get<T>, {0x1F8, 20, 0, 0})
+	SMember(FVector)                                   DriverNormal                                                OFFSET(get<T>, {0x210, 24, 0, 0})
+	SMember(FVector)                                   Driver2D                                                    OFFSET(get<T>, {0x228, 24, 0, 0})
+	SMember(FCachedRigElement)                         DriverCache                                                 OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FCachedRigElement)                         OptionalParentCache                                         OFFSET(get<T>, {0x258, 24, 0, 0})
+	SMember(FTransform)                                LocalDriverTransformInit                                    OFFSET(get<T>, {0x270, 96, 0, 0})
+	SMember(FVector)                                   CachedRotationOffset                                        OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	DMember(bool)                                      bCachedInitTransforms                                       OFFSET(get<bool>, {0x2E8, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringIK_DebugSettings
@@ -6900,10 +7509,10 @@ class FRigUnit_SpringIK_DebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringIK_WorkData
@@ -6914,10 +7523,10 @@ class FRigUnit_SpringIK_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TArray<FCachedRigElement>)                 CachedBones                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FCachedRigElement)                         CachedPoleVector                                            ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FCRSimPointContainer)                      Simulation                                                  ___ OFFSET(get<T>, {0x38, 120, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedBones                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FCachedRigElement)                         CachedPoleVector                                            OFFSET(get<T>, {0x10, 24, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FCRSimPointContainer)                      Simulation                                                  OFFSET(get<T>, {0x38, 120, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringIK
@@ -6928,26 +7537,26 @@ class FRigUnit_SpringIK : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndBone                                                     ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	DMember(float)                                     HierarchyStrength                                           ___ OFFSET(get<float>, {0x168, 4, 0, 0})
-	DMember(float)                                     EffectorStrength                                            ___ OFFSET(get<float>, {0x16C, 4, 0, 0})
-	DMember(float)                                     EffectorRatio                                               ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     RootStrength                                                ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     RootRatio                                                   ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(float)                                     Damping                                                     ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  ___ OFFSET(get<T>, {0x180, 24, 0, 0})
-	DMember(bool)                                      bFlipPolePlane                                              ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
-	CMember(EControlRigVectorKind)                     PoleVectorKind                                              ___ OFFSET(get<T>, {0x199, 1, 0, 0})
-	SMember(FName)                                     PoleVectorSpace                                             ___ OFFSET(get<T>, {0x19C, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1A0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1B8, 24, 0, 0})
-	DMember(bool)                                      bLiveSimulation                                             ___ OFFSET(get<bool>, {0x1D0, 1, 0, 0})
-	DMember(int32_t)                                   Iterations                                                  ___ OFFSET(get<int32_t>, {0x1D4, 4, 0, 0})
-	DMember(bool)                                      bLimitLocalPosition                                         ___ OFFSET(get<bool>, {0x1D8, 1, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1D9, 1, 0, 0})
-	SMember(FRigUnit_SpringIK_DebugSettings)           DebugSettings                                               ___ OFFSET(get<T>, {0x1E0, 128, 0, 0})
-	SMember(FRigUnit_SpringIK_WorkData)                WorkData                                                    ___ OFFSET(get<T>, {0x260, 176, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndBone                                                     OFFSET(get<T>, {0x164, 4, 0, 0})
+	DMember(float)                                     HierarchyStrength                                           OFFSET(get<float>, {0x168, 4, 0, 0})
+	DMember(float)                                     EffectorStrength                                            OFFSET(get<float>, {0x16C, 4, 0, 0})
+	DMember(float)                                     EffectorRatio                                               OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     RootStrength                                                OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     RootRatio                                                   OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(float)                                     Damping                                                     OFFSET(get<float>, {0x17C, 4, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x180, 24, 0, 0})
+	DMember(bool)                                      bFlipPolePlane                                              OFFSET(get<bool>, {0x198, 1, 0, 0})
+	CMember(EControlRigVectorKind)                     PoleVectorKind                                              OFFSET(get<T>, {0x199, 1, 0, 0})
+	SMember(FName)                                     PoleVectorSpace                                             OFFSET(get<T>, {0x19C, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1A0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1B8, 24, 0, 0})
+	DMember(bool)                                      bLiveSimulation                                             OFFSET(get<bool>, {0x1D0, 1, 0, 0})
+	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x1D4, 4, 0, 0})
+	DMember(bool)                                      bLimitLocalPosition                                         OFFSET(get<bool>, {0x1D8, 1, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1D9, 1, 0, 0})
+	SMember(FRigUnit_SpringIK_DebugSettings)           DebugSettings                                               OFFSET(get<T>, {0x1E0, 128, 0, 0})
+	SMember(FRigUnit_SpringIK_WorkData)                WorkData                                                    OFFSET(get<T>, {0x260, 176, 0, 0})
 };
 
 /// Struct /Script/ControlRig.ConstraintTarget
@@ -6958,10 +7567,10 @@ class FConstraintTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x64, 1, 0, 0})
-	SMember(FTransformFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x65, 9, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x64, 1, 0, 0})
+	SMember(FTransformFilter)                          Filter                                                      OFFSET(get<T>, {0x65, 9, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TransformConstraint_WorkData
@@ -6972,8 +7581,8 @@ class FRigUnit_TransformConstraint_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FConstraintData>)                   ConstraintData                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<int32_t, int32_t>)                    ConstraintDataToTargets                                     ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	CMember(TArray<FConstraintData>)                   ConstraintData                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<int32_t, int32_t>)                    ConstraintDataToTargets                                     OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TransformConstraint
@@ -6984,13 +7593,13 @@ class FRigUnit_TransformConstraint : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	CMember(ETransformSpaceMode)                       BaseTransformSpace                                          ___ OFFSET(get<T>, {0x164, 1, 0, 0})
-	SMember(FTransform)                                BaseTransform                                               ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FName)                                     BaseBone                                                    ___ OFFSET(get<T>, {0x1D0, 4, 0, 0})
-	CMember(TArray<FConstraintTarget>)                 Targets                                                     ___ OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	DMember(bool)                                      bUseInitialTransforms                                       ___ OFFSET(get<bool>, {0x1E8, 1, 0, 0})
-	SMember(FRigUnit_TransformConstraint_WorkData)     WorkData                                                    ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	CMember(ETransformSpaceMode)                       BaseTransformSpace                                          OFFSET(get<T>, {0x164, 1, 0, 0})
+	SMember(FTransform)                                BaseTransform                                               OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FName)                                     BaseBone                                                    OFFSET(get<T>, {0x1D0, 4, 0, 0})
+	CMember(TArray<FConstraintTarget>)                 Targets                                                     OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	DMember(bool)                                      bUseInitialTransforms                                       OFFSET(get<bool>, {0x1E8, 1, 0, 0})
+	SMember(FRigUnit_TransformConstraint_WorkData)     WorkData                                                    OFFSET(get<T>, {0x1F0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TransformConstraintPerItem
@@ -7001,13 +7610,13 @@ class FRigUnit_TransformConstraintPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	CMember(ETransformSpaceMode)                       BaseTransformSpace                                          ___ OFFSET(get<T>, {0x168, 1, 0, 0})
-	SMember(FTransform)                                BaseTransform                                               ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FRigElementKey)                            BaseItem                                                    ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	CMember(TArray<FConstraintTarget>)                 Targets                                                     ___ OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	DMember(bool)                                      bUseInitialTransforms                                       ___ OFFSET(get<bool>, {0x1E8, 1, 0, 0})
-	SMember(FRigUnit_TransformConstraint_WorkData)     WorkData                                                    ___ OFFSET(get<T>, {0x1F0, 96, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	CMember(ETransformSpaceMode)                       BaseTransformSpace                                          OFFSET(get<T>, {0x168, 1, 0, 0})
+	SMember(FTransform)                                BaseTransform                                               OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FRigElementKey)                            BaseItem                                                    OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(TArray<FConstraintTarget>)                 Targets                                                     OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	DMember(bool)                                      bUseInitialTransforms                                       OFFSET(get<bool>, {0x1E8, 1, 0, 0})
+	SMember(FRigUnit_TransformConstraint_WorkData)     WorkData                                                    OFFSET(get<T>, {0x1F0, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ParentConstraint_AdvancedSettings
@@ -7018,8 +7627,8 @@ class FRigUnit_ParentConstraint_AdvancedSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	CMember(EConstraintInterpType)                     InterpolationType                                           ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      ___ OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(EConstraintInterpType)                     InterpolationType                                           OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      OFFSET(get<T>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ParentConstraint
@@ -7030,14 +7639,14 @@ class FRigUnit_ParentConstraint : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FTransformFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x169, 9, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FRigUnit_ParentConstraint_AdvancedSettings) AdvancedSettings                                           ___ OFFSET(get<T>, {0x188, 2, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x18C, 4, 0, 0})
-	SMember(FCachedRigElement)                         ChildCache                                                  ___ OFFSET(get<T>, {0x190, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                ___ OFFSET(get<T>, {0x1A8, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FTransformFilter)                          Filter                                                      OFFSET(get<T>, {0x169, 9, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x178, 16, 0, 0})
+	SMember(FRigUnit_ParentConstraint_AdvancedSettings) AdvancedSettings                                           OFFSET(get<T>, {0x188, 2, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x18C, 4, 0, 0})
+	SMember(FCachedRigElement)                         ChildCache                                                  OFFSET(get<T>, {0x190, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                OFFSET(get<T>, {0x1A8, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PositionConstraint
@@ -7048,11 +7657,11 @@ class FRigUnit_PositionConstraint : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x180, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PositionConstraintLocalSpaceOffset
@@ -7063,13 +7672,13 @@ class FRigUnit_PositionConstraintLocalSpaceOffset : public FRigUnit_HighlevelBas
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FCachedRigElement)                         ChildCache                                                  ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FCachedRigElement)                         ChildCache                                                  OFFSET(get<T>, {0x188, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                OFFSET(get<T>, {0x1A0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_RotationConstraint_AdvancedSettings
@@ -7080,8 +7689,8 @@ class FRigUnit_RotationConstraint_AdvancedSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	CMember(EConstraintInterpType)                     InterpolationType                                           ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      ___ OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(EConstraintInterpType)                     InterpolationType                                           OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrderForFilter                                      OFFSET(get<T>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_RotationConstraint
@@ -7092,12 +7701,12 @@ class FRigUnit_RotationConstraint : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FRigUnit_RotationConstraint_AdvancedSettings) AdvancedSettings                                         ___ OFFSET(get<T>, {0x180, 2, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x184, 4, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FRigUnit_RotationConstraint_AdvancedSettings) AdvancedSettings                                         OFFSET(get<T>, {0x180, 2, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x184, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_RotationConstraintLocalSpaceOffset
@@ -7108,14 +7717,14 @@ class FRigUnit_RotationConstraintLocalSpaceOffset : public FRigUnit_HighlevelBas
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FRigUnit_RotationConstraint_AdvancedSettings) AdvancedSettings                                         ___ OFFSET(get<T>, {0x180, 2, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	SMember(FCachedRigElement)                         ChildCache                                                  ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FRigUnit_RotationConstraint_AdvancedSettings) AdvancedSettings                                         OFFSET(get<T>, {0x180, 2, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x184, 4, 0, 0})
+	SMember(FCachedRigElement)                         ChildCache                                                  OFFSET(get<T>, {0x188, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                OFFSET(get<T>, {0x1A0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ScaleConstraint
@@ -7126,11 +7735,11 @@ class FRigUnit_ScaleConstraint : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x180, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_ScaleConstraintLocalSpaceOffset
@@ -7141,13 +7750,13 @@ class FRigUnit_ScaleConstraintLocalSpaceOffset : public FRigUnit_HighlevelBaseMu
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKey)                            Child                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      Filter                                                      ___ OFFSET(get<T>, {0x169, 3, 0, 0})
-	CMember(TArray<FConstraintParent>)                 Parents                                                     ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FCachedRigElement)                         ChildCache                                                  ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(FRigElementKey)                            Child                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      Filter                                                      OFFSET(get<T>, {0x169, 3, 0, 0})
+	CMember(TArray<FConstraintParent>)                 Parents                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FCachedRigElement)                         ChildCache                                                  OFFSET(get<T>, {0x188, 24, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 ParentCaches                                                OFFSET(get<T>, {0x1A0, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwistBones_WorkData
@@ -7158,9 +7767,9 @@ class FRigUnit_TwistBones_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<float>)                             ItemRatios                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FTransform>)                        ItemTransforms                                              ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 CachedItems                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<float>)                             ItemRatios                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FTransform>)                        ItemTransforms                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwistBones
@@ -7171,14 +7780,14 @@ class FRigUnit_TwistBones : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FName)                                     StartBone                                                   ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     EndBone                                                     ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FVector)                                   PoleAxis                                                    ___ OFFSET(get<T>, {0x180, 24, 0, 0})
-	CMember(ERigVMAnimEasingType)                      TwistEaseType                                               ___ OFFSET(get<T>, {0x198, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x19C, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FRigUnit_TwistBones_WorkData)              WorkData                                                    ___ OFFSET(get<T>, {0x1A8, 48, 0, 0})
+	SMember(FName)                                     StartBone                                                   OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     EndBone                                                     OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   PoleAxis                                                    OFFSET(get<T>, {0x180, 24, 0, 0})
+	CMember(ERigVMAnimEasingType)                      TwistEaseType                                               OFFSET(get<T>, {0x198, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x19C, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FRigUnit_TwistBones_WorkData)              WorkData                                                    OFFSET(get<T>, {0x1A8, 48, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwistBonesPerItem
@@ -7189,13 +7798,13 @@ class FRigUnit_TwistBonesPerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   PoleAxis                                                    ___ OFFSET(get<T>, {0x188, 24, 0, 0})
-	CMember(ERigVMAnimEasingType)                      TwistEaseType                                               ___ OFFSET(get<T>, {0x1A0, 1, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x1A4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x1A8, 1, 0, 0})
-	SMember(FRigUnit_TwistBones_WorkData)              WorkData                                                    ___ OFFSET(get<T>, {0x1B0, 48, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   PoleAxis                                                    OFFSET(get<T>, {0x188, 24, 0, 0})
+	CMember(ERigVMAnimEasingType)                      TwistEaseType                                               OFFSET(get<T>, {0x1A0, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1A4, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1A8, 1, 0, 0})
+	SMember(FRigUnit_TwistBones_WorkData)              WorkData                                                    OFFSET(get<T>, {0x1B0, 48, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKSimple_DebugSettings
@@ -7206,9 +7815,9 @@ class FRigUnit_TwoBoneIKSimple_DebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKSimple
@@ -7219,28 +7828,28 @@ class FRigUnit_TwoBoneIKSimple : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FName)                                     BoneA                                                       ___ OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     BoneB                                                       ___ OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FName)                                     EffectorBone                                                ___ OFFSET(get<T>, {0x168, 4, 0, 0})
-	SMember(FTransform)                                Effector                                                    ___ OFFSET(get<T>, {0x170, 96, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1D0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1E8, 24, 0, 0})
-	DMember(float)                                     SecondaryAxisWeight                                         ___ OFFSET(get<float>, {0x200, 4, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  ___ OFFSET(get<T>, {0x208, 24, 0, 0})
-	CMember(EControlRigVectorKind)                     PoleVectorKind                                              ___ OFFSET(get<T>, {0x220, 1, 0, 0})
-	SMember(FName)                                     PoleVectorSpace                                             ___ OFFSET(get<T>, {0x224, 4, 0, 0})
-	DMember(bool)                                      bEnableStretch                                              ___ OFFSET(get<bool>, {0x228, 1, 0, 0})
-	DMember(float)                                     StretchStartRatio                                           ___ OFFSET(get<float>, {0x22C, 4, 0, 0})
-	DMember(float)                                     StretchMaximumRatio                                         ___ OFFSET(get<float>, {0x230, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x234, 4, 0, 0})
-	DMember(float)                                     BoneALength                                                 ___ OFFSET(get<float>, {0x238, 4, 0, 0})
-	DMember(float)                                     BoneBLength                                                 ___ OFFSET(get<float>, {0x23C, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x240, 1, 0, 0})
-	SMember(FRigUnit_TwoBoneIKSimple_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x250, 112, 0, 0})
-	SMember(FCachedRigElement)                         CachedBoneAIndex                                            ___ OFFSET(get<T>, {0x2C0, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedBoneBIndex                                            ___ OFFSET(get<T>, {0x2D8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedEffectorBoneIndex                                     ___ OFFSET(get<T>, {0x2F0, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedPoleVectorSpaceIndex                                  ___ OFFSET(get<T>, {0x308, 24, 0, 0})
+	SMember(FName)                                     BoneA                                                       OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     BoneB                                                       OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FName)                                     EffectorBone                                                OFFSET(get<T>, {0x168, 4, 0, 0})
+	SMember(FTransform)                                Effector                                                    OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1D0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1E8, 24, 0, 0})
+	DMember(float)                                     SecondaryAxisWeight                                         OFFSET(get<float>, {0x200, 4, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x208, 24, 0, 0})
+	CMember(EControlRigVectorKind)                     PoleVectorKind                                              OFFSET(get<T>, {0x220, 1, 0, 0})
+	SMember(FName)                                     PoleVectorSpace                                             OFFSET(get<T>, {0x224, 4, 0, 0})
+	DMember(bool)                                      bEnableStretch                                              OFFSET(get<bool>, {0x228, 1, 0, 0})
+	DMember(float)                                     StretchStartRatio                                           OFFSET(get<float>, {0x22C, 4, 0, 0})
+	DMember(float)                                     StretchMaximumRatio                                         OFFSET(get<float>, {0x230, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x234, 4, 0, 0})
+	DMember(float)                                     BoneALength                                                 OFFSET(get<float>, {0x238, 4, 0, 0})
+	DMember(float)                                     BoneBLength                                                 OFFSET(get<float>, {0x23C, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x240, 1, 0, 0})
+	SMember(FRigUnit_TwoBoneIKSimple_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x250, 112, 0, 0})
+	SMember(FCachedRigElement)                         CachedBoneAIndex                                            OFFSET(get<T>, {0x2C0, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedBoneBIndex                                            OFFSET(get<T>, {0x2D8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedEffectorBoneIndex                                     OFFSET(get<T>, {0x2F0, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedPoleVectorSpaceIndex                                  OFFSET(get<T>, {0x308, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKSimplePerItem
@@ -7251,28 +7860,28 @@ class FRigUnit_TwoBoneIKSimplePerItem : public FRigUnit_HighlevelBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FRigElementKey)                            ItemA                                                       ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FRigElementKey)                            ItemB                                                       ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	SMember(FRigElementKey)                            EffectorItem                                                ___ OFFSET(get<T>, {0x170, 8, 0, 0})
-	SMember(FTransform)                                Effector                                                    ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0x1E0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	DMember(float)                                     SecondaryAxisWeight                                         ___ OFFSET(get<float>, {0x210, 4, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  ___ OFFSET(get<T>, {0x218, 24, 0, 0})
-	CMember(EControlRigVectorKind)                     PoleVectorKind                                              ___ OFFSET(get<T>, {0x230, 1, 0, 0})
-	SMember(FRigElementKey)                            PoleVectorSpace                                             ___ OFFSET(get<T>, {0x234, 8, 0, 0})
-	DMember(bool)                                      bEnableStretch                                              ___ OFFSET(get<bool>, {0x23C, 1, 0, 0})
-	DMember(float)                                     StretchStartRatio                                           ___ OFFSET(get<float>, {0x240, 4, 0, 0})
-	DMember(float)                                     StretchMaximumRatio                                         ___ OFFSET(get<float>, {0x244, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x248, 4, 0, 0})
-	DMember(float)                                     ItemALength                                                 ___ OFFSET(get<float>, {0x24C, 4, 0, 0})
-	DMember(float)                                     ItemBLength                                                 ___ OFFSET(get<float>, {0x250, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x254, 1, 0, 0})
-	SMember(FRigUnit_TwoBoneIKSimple_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x260, 112, 0, 0})
-	SMember(FCachedRigElement)                         CachedItemAIndex                                            ___ OFFSET(get<T>, {0x2D0, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedItemBIndex                                            ___ OFFSET(get<T>, {0x2E8, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedEffectorItemIndex                                     ___ OFFSET(get<T>, {0x300, 24, 0, 0})
-	SMember(FCachedRigElement)                         CachedPoleVectorSpaceIndex                                  ___ OFFSET(get<T>, {0x318, 24, 0, 0})
+	SMember(FRigElementKey)                            ItemA                                                       OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            ItemB                                                       OFFSET(get<T>, {0x168, 8, 0, 0})
+	SMember(FRigElementKey)                            EffectorItem                                                OFFSET(get<T>, {0x170, 8, 0, 0})
+	SMember(FTransform)                                Effector                                                    OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	DMember(float)                                     SecondaryAxisWeight                                         OFFSET(get<float>, {0x210, 4, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x218, 24, 0, 0})
+	CMember(EControlRigVectorKind)                     PoleVectorKind                                              OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(FRigElementKey)                            PoleVectorSpace                                             OFFSET(get<T>, {0x234, 8, 0, 0})
+	DMember(bool)                                      bEnableStretch                                              OFFSET(get<bool>, {0x23C, 1, 0, 0})
+	DMember(float)                                     StretchStartRatio                                           OFFSET(get<float>, {0x240, 4, 0, 0})
+	DMember(float)                                     StretchMaximumRatio                                         OFFSET(get<float>, {0x244, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x248, 4, 0, 0})
+	DMember(float)                                     ItemALength                                                 OFFSET(get<float>, {0x24C, 4, 0, 0})
+	DMember(float)                                     ItemBLength                                                 OFFSET(get<float>, {0x250, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x254, 1, 0, 0})
+	SMember(FRigUnit_TwoBoneIKSimple_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x260, 112, 0, 0})
+	SMember(FCachedRigElement)                         CachedItemAIndex                                            OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedItemBIndex                                            OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedEffectorItemIndex                                     OFFSET(get<T>, {0x300, 24, 0, 0})
+	SMember(FCachedRigElement)                         CachedPoleVectorSpaceIndex                                  OFFSET(get<T>, {0x318, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKSimpleVectors
@@ -7283,15 +7892,15 @@ class FRigUnit_TwoBoneIKSimpleVectors : public FRigUnit_HighlevelBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Root                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Effector                                                    ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(bool)                                      bEnableStretch                                              ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(float)                                     StretchStartRatio                                           ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     StretchMaximumRatio                                         ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     BoneALength                                                 ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     BoneBLength                                                 ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	SMember(FVector)                                   Elbow                                                       ___ OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Root                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Effector                                                    OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(bool)                                      bEnableStretch                                              OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(float)                                     StretchStartRatio                                           OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     StretchMaximumRatio                                         OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     BoneALength                                                 OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     BoneBLength                                                 OFFSET(get<float>, {0x60, 4, 0, 0})
+	SMember(FVector)                                   Elbow                                                       OFFSET(get<T>, {0x68, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_TwoBoneIKSimpleTransforms
@@ -7302,18 +7911,18 @@ class FRigUnit_TwoBoneIKSimpleTransforms : public FRigUnit_HighlevelBase
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FTransform)                                Root                                                        ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FTransform)                                Effector                                                    ___ OFFSET(get<T>, {0x90, 96, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               ___ OFFSET(get<T>, {0x108, 24, 0, 0})
-	DMember(float)                                     SecondaryAxisWeight                                         ___ OFFSET(get<float>, {0x120, 4, 0, 0})
-	DMember(bool)                                      bEnableStretch                                              ___ OFFSET(get<bool>, {0x124, 1, 0, 0})
-	DMember(float)                                     StretchStartRatio                                           ___ OFFSET(get<float>, {0x128, 4, 0, 0})
-	DMember(float)                                     StretchMaximumRatio                                         ___ OFFSET(get<float>, {0x12C, 4, 0, 0})
-	DMember(float)                                     BoneALength                                                 ___ OFFSET(get<float>, {0x130, 4, 0, 0})
-	DMember(float)                                     BoneBLength                                                 ___ OFFSET(get<float>, {0x134, 4, 0, 0})
-	SMember(FTransform)                                Elbow                                                       ___ OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(FTransform)                                Root                                                        OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FTransform)                                Effector                                                    OFFSET(get<T>, {0x90, 96, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(get<T>, {0x108, 24, 0, 0})
+	DMember(float)                                     SecondaryAxisWeight                                         OFFSET(get<float>, {0x120, 4, 0, 0})
+	DMember(bool)                                      bEnableStretch                                              OFFSET(get<bool>, {0x124, 1, 0, 0})
+	DMember(float)                                     StretchStartRatio                                           OFFSET(get<float>, {0x128, 4, 0, 0})
+	DMember(float)                                     StretchMaximumRatio                                         OFFSET(get<float>, {0x12C, 4, 0, 0})
+	DMember(float)                                     BoneALength                                                 OFFSET(get<float>, {0x130, 4, 0, 0})
+	DMember(float)                                     BoneBLength                                                 OFFSET(get<float>, {0x134, 4, 0, 0})
+	SMember(FTransform)                                Elbow                                                       OFFSET(get<T>, {0x140, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PointSimulation_DebugSettings
@@ -7324,12 +7933,12 @@ class FRigUnit_PointSimulation_DebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     CollisionScale                                              ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bDrawPointsAsSpheres                                        ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     CollisionScale                                              OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bDrawPointsAsSpheres                                        OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PointSimulation_BoneTarget
@@ -7340,10 +7949,10 @@ class FRigUnit_PointSimulation_BoneTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     bone                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   TranslationPoint                                            ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   PrimaryAimPoint                                             ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   SecondaryAimPoint                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   TranslationPoint                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   PrimaryAimPoint                                             OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   SecondaryAimPoint                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PointSimulation_WorkData
@@ -7354,8 +7963,8 @@ class FRigUnit_PointSimulation_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FCRSimPointContainer)                      Simulation                                                  ___ OFFSET(get<T>, {0x0, 120, 0, 0})
-	CMember(TArray<FCachedRigElement>)                 BoneIndices                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FCRSimPointContainer)                      Simulation                                                  OFFSET(get<T>, {0x0, 120, 0, 0})
+	CMember(TArray<FCachedRigElement>)                 BoneIndices                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_PointSimulation
@@ -7366,21 +7975,21 @@ class FRigUnit_PointSimulation : public FRigVMFunction_SimBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	CMember(TArray<FRigVMSimPoint>)                    Points                                                      ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	CMember(TArray<FCRSimLinearSpring>)                Links                                                       ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	CMember(TArray<FCRSimPointForce>)                  Forces                                                      ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TArray<FCRSimSoftCollision>)               CollisionVolumes                                            ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	DMember(float)                                     SimulatedStepsPerSecond                                     ___ OFFSET(get<float>, {0x140, 4, 0, 0})
-	CMember(ERigVMSimPointIntegrateType)               IntegratorType                                              ___ OFFSET(get<T>, {0x144, 1, 0, 0})
-	DMember(float)                                     VerletBlend                                                 ___ OFFSET(get<float>, {0x148, 4, 0, 0})
-	CMember(TArray<FRigUnit_PointSimulation_BoneTarget>) BoneTargets                                               ___ OFFSET(get<T>, {0x150, 16, 0, 0})
-	DMember(bool)                                      bLimitLocalPosition                                         ___ OFFSET(get<bool>, {0x160, 1, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        ___ OFFSET(get<bool>, {0x161, 1, 0, 0})
-	SMember(FVector)                                   PrimaryAimAxis                                              ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAimAxis                                            ___ OFFSET(get<T>, {0x180, 24, 0, 0})
-	SMember(FRigUnit_PointSimulation_DebugSettings)    DebugSettings                                               ___ OFFSET(get<T>, {0x1A0, 128, 0, 0})
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x220, 96, 0, 0})
-	SMember(FRigUnit_PointSimulation_WorkData)         WorkData                                                    ___ OFFSET(get<T>, {0x280, 136, 0, 0})
+	CMember(TArray<FRigVMSimPoint>)                    Points                                                      OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(TArray<FCRSimLinearSpring>)                Links                                                       OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(TArray<FCRSimPointForce>)                  Forces                                                      OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(TArray<FCRSimSoftCollision>)               CollisionVolumes                                            OFFSET(get<T>, {0x130, 16, 0, 0})
+	DMember(float)                                     SimulatedStepsPerSecond                                     OFFSET(get<float>, {0x140, 4, 0, 0})
+	CMember(ERigVMSimPointIntegrateType)               IntegratorType                                              OFFSET(get<T>, {0x144, 1, 0, 0})
+	DMember(float)                                     VerletBlend                                                 OFFSET(get<float>, {0x148, 4, 0, 0})
+	CMember(TArray<FRigUnit_PointSimulation_BoneTarget>) BoneTargets                                               OFFSET(get<T>, {0x150, 16, 0, 0})
+	DMember(bool)                                      bLimitLocalPosition                                         OFFSET(get<bool>, {0x160, 1, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x161, 1, 0, 0})
+	SMember(FVector)                                   PrimaryAimAxis                                              OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAimAxis                                            OFFSET(get<T>, {0x180, 24, 0, 0})
+	SMember(FRigUnit_PointSimulation_DebugSettings)    DebugSettings                                               OFFSET(get<T>, {0x1A0, 128, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x220, 96, 0, 0})
+	SMember(FRigUnit_PointSimulation_WorkData)         WorkData                                                    OFFSET(get<T>, {0x280, 136, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringInterp
@@ -7391,13 +8000,13 @@ class FRigUnit_SpringInterp : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     Current                                                     ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Target                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Stiffness                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     CriticalDamping                                             ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	SMember(FFloatSpringState)                         SpringState                                                 ___ OFFSET(get<T>, {0x20, 12, 0, 0})
+	DMember(float)                                     Current                                                     OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Target                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Stiffness                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     CriticalDamping                                             OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x1C, 4, 0, 0})
+	SMember(FFloatSpringState)                         SpringState                                                 OFFSET(get<T>, {0x20, 12, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringInterpVector
@@ -7408,13 +8017,13 @@ class FRigUnit_SpringInterpVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FVector)                                   Current                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Stiffness                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     CriticalDamping                                             ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVectorSpringState)                        SpringState                                                 ___ OFFSET(get<T>, {0x60, 56, 0, 0})
+	SMember(FVector)                                   Current                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Stiffness                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     CriticalDamping                                             OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVectorSpringState)                        SpringState                                                 OFFSET(get<T>, {0x60, 56, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringInterpV2
@@ -7425,18 +8034,18 @@ class FRigUnit_SpringInterpV2 : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     Target                                                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     CriticalDamping                                             ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Force                                                       ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(bool)                                      bUseCurrentInput                                            ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	DMember(float)                                     Current                                                     ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     TargetVelocityAmount                                        ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(bool)                                      bInitializeFromTarget                                       ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     Velocity                                                    ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     SimulatedResult                                             ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FFloatSpringState)                         SpringState                                                 ___ OFFSET(get<T>, {0x34, 12, 0, 0})
+	DMember(float)                                     Target                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     CriticalDamping                                             OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Force                                                       OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(bool)                                      bUseCurrentInput                                            OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(float)                                     Current                                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     TargetVelocityAmount                                        OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(bool)                                      bInitializeFromTarget                                       OFFSET(get<bool>, {0x24, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     Velocity                                                    OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     SimulatedResult                                             OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FFloatSpringState)                         SpringState                                                 OFFSET(get<T>, {0x34, 12, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringInterpVectorV2
@@ -7447,18 +8056,18 @@ class FRigUnit_SpringInterpVectorV2 : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     CriticalDamping                                             ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector)                                   Force                                                       ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	DMember(bool)                                      bUseCurrentInput                                            ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	SMember(FVector)                                   Current                                                     ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	DMember(float)                                     TargetVelocityAmount                                        ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(bool)                                      bInitializeFromTarget                                       ___ OFFSET(get<bool>, {0x64, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   SimulatedResult                                             ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FVectorSpringState)                        SpringState                                                 ___ OFFSET(get<T>, {0xB0, 56, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     CriticalDamping                                             OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FVector)                                   Force                                                       OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(bool)                                      bUseCurrentInput                                            OFFSET(get<bool>, {0x40, 1, 0, 0})
+	SMember(FVector)                                   Current                                                     OFFSET(get<T>, {0x48, 24, 0, 0})
+	DMember(float)                                     TargetVelocityAmount                                        OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(bool)                                      bInitializeFromTarget                                       OFFSET(get<bool>, {0x64, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   SimulatedResult                                             OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FVectorSpringState)                        SpringState                                                 OFFSET(get<T>, {0xB0, 56, 0, 0})
 };
 
 /// Struct /Script/ControlRig.RigUnit_SpringInterpQuaternionV2
@@ -7469,18 +8078,18 @@ class FRigUnit_SpringInterpQuaternionV2 : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     CriticalDamping                                             ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FVector)                                   Torque                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(bool)                                      bUseCurrentInput                                            ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	SMember(FQuat)                                     Current                                                     ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	DMember(float)                                     TargetVelocityAmount                                        ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	DMember(bool)                                      bInitializeFromTarget                                       ___ OFFSET(get<bool>, {0x84, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x90, 32, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0xB0, 24, 0, 0})
-	SMember(FQuat)                                     SimulatedResult                                             ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
-	SMember(FQuaternionSpringState)                    SpringState                                                 ___ OFFSET(get<T>, {0xF0, 64, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     CriticalDamping                                             OFFSET(get<float>, {0x34, 4, 0, 0})
+	SMember(FVector)                                   Torque                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(bool)                                      bUseCurrentInput                                            OFFSET(get<bool>, {0x50, 1, 0, 0})
+	SMember(FQuat)                                     Current                                                     OFFSET(get<T>, {0x60, 32, 0, 0})
+	DMember(float)                                     TargetVelocityAmount                                        OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(bool)                                      bInitializeFromTarget                                       OFFSET(get<bool>, {0x84, 1, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x90, 32, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0xB0, 24, 0, 0})
+	SMember(FQuat)                                     SimulatedResult                                             OFFSET(get<T>, {0xD0, 32, 0, 0})
+	SMember(FQuaternionSpringState)                    SpringState                                                 OFFSET(get<T>, {0xF0, 64, 0, 0})
 };
 
 /// Enum /Script/ControlRig.ERigElementType

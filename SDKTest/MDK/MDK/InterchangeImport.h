@@ -137,12 +137,12 @@ class UMaterialExpressionMaterialXRamp4 : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          C                                                           ___ OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FExpressionInput)                          D                                                           ___ OFFSET(get<T>, {0x150, 40, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x178, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          C                                                           OFFSET(get<T>, {0x128, 40, 0, 0})
+	SMember(FExpressionInput)                          D                                                           OFFSET(get<T>, {0x150, 40, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x178, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.InterchangeAnimSequenceFactory
@@ -193,9 +193,9 @@ class UMaterialExpressionMaterialXAppend3Vector : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          C                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          C                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXAppend4Vector
@@ -206,10 +206,10 @@ class UMaterialExpressionMaterialXAppend4Vector : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          C                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          D                                                           ___ OFFSET(get<T>, {0x128, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          C                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          D                                                           OFFSET(get<T>, {0x128, 40, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXBurn
@@ -220,10 +220,10 @@ class UMaterialExpressionMaterialXBurn : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXDifference
@@ -234,10 +234,10 @@ class UMaterialExpressionMaterialXDifference : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXDisjointOver
@@ -248,10 +248,10 @@ class UMaterialExpressionMaterialXDisjointOver : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXDodge
@@ -262,10 +262,10 @@ class UMaterialExpressionMaterialXDodge : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXFractal3D
@@ -276,20 +276,20 @@ class UMaterialExpressionMaterialXFractal3D : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FExpressionInput)                          Position                                                    ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          Amplitude                                                   ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	DMember(float)                                     ConstAmplitude                                              ___ OFFSET(get<float>, {0x100, 4, 0, 0})
-	SMember(FExpressionInput)                          Octaves                                                     ___ OFFSET(get<T>, {0x108, 40, 0, 0})
-	DMember(int32_t)                                   ConstOctaves                                                ___ OFFSET(get<int32_t>, {0x130, 4, 0, 0})
-	SMember(FExpressionInput)                          Lacunarity                                                  ___ OFFSET(get<T>, {0x138, 40, 0, 0})
-	DMember(float)                                     ConstLacunarity                                             ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FExpressionInput)                          Diminish                                                    ___ OFFSET(get<T>, {0x168, 40, 0, 0})
-	DMember(float)                                     ConstDiminish                                               ___ OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(bool)                                      bTurbulence                                                 ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
-	DMember(int32_t)                                   Levels                                                      ___ OFFSET(get<int32_t>, {0x19C, 4, 0, 0})
-	DMember(float)                                     OutputMin                                                   ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	DMember(float)                                     OutputMax                                                   ___ OFFSET(get<float>, {0x1A4, 4, 0, 0})
+	SMember(FExpressionInput)                          Position                                                    OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          Amplitude                                                   OFFSET(get<T>, {0xD8, 40, 0, 0})
+	DMember(float)                                     ConstAmplitude                                              OFFSET(get<float>, {0x100, 4, 0, 0})
+	SMember(FExpressionInput)                          Octaves                                                     OFFSET(get<T>, {0x108, 40, 0, 0})
+	DMember(int32_t)                                   ConstOctaves                                                OFFSET(get<int32_t>, {0x130, 4, 0, 0})
+	SMember(FExpressionInput)                          Lacunarity                                                  OFFSET(get<T>, {0x138, 40, 0, 0})
+	DMember(float)                                     ConstLacunarity                                             OFFSET(get<float>, {0x160, 4, 0, 0})
+	SMember(FExpressionInput)                          Diminish                                                    OFFSET(get<T>, {0x168, 40, 0, 0})
+	DMember(float)                                     ConstDiminish                                               OFFSET(get<float>, {0x190, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(bool)                                      bTurbulence                                                 OFFSET(get<bool>, {0x198, 1, 0, 0})
+	DMember(int32_t)                                   Levels                                                      OFFSET(get<int32_t>, {0x19C, 4, 0, 0})
+	DMember(float)                                     OutputMin                                                   OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	DMember(float)                                     OutputMax                                                   OFFSET(get<float>, {0x1A4, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXIn
@@ -300,10 +300,10 @@ class UMaterialExpressionMaterialXIn : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXLuminance
@@ -314,9 +314,9 @@ class UMaterialExpressionMaterialXLuminance : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FLinearColor)                              LuminanceFactors                                            ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	CMember(EMaterialXLuminanceMode)                   LuminanceMode                                               ___ OFFSET(get<T>, {0xE8, 1, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FLinearColor)                              LuminanceFactors                                            OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(EMaterialXLuminanceMode)                   LuminanceMode                                               OFFSET(get<T>, {0xE8, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXMask
@@ -327,10 +327,10 @@ class UMaterialExpressionMaterialXMask : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXMatte
@@ -341,10 +341,10 @@ class UMaterialExpressionMaterialXMatte : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXMinus
@@ -355,10 +355,10 @@ class UMaterialExpressionMaterialXMinus : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXOut
@@ -369,10 +369,10 @@ class UMaterialExpressionMaterialXOut : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXOver
@@ -383,10 +383,10 @@ class UMaterialExpressionMaterialXOver : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXOverlay
@@ -397,10 +397,10 @@ class UMaterialExpressionMaterialXOverlay : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXPlace2D
@@ -411,13 +411,13 @@ class UMaterialExpressionMaterialXPlace2D : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          Pivot                                                       ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Scale                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          Offset                                                      ___ OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FExpressionInput)                          RotationAngle                                               ___ OFFSET(get<T>, {0x150, 40, 0, 0})
-	DMember(float)                                     ConstRotationAngle                                          ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x17C, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          Pivot                                                       OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Scale                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          Offset                                                      OFFSET(get<T>, {0x128, 40, 0, 0})
+	SMember(FExpressionInput)                          RotationAngle                                               OFFSET(get<T>, {0x150, 40, 0, 0})
+	DMember(float)                                     ConstRotationAngle                                          OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x17C, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXPlus
@@ -428,10 +428,10 @@ class UMaterialExpressionMaterialXPlus : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXPremult
@@ -442,7 +442,7 @@ class UMaterialExpressionMaterialXPremult : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXRampLeftRight
@@ -453,10 +453,10 @@ class UMaterialExpressionMaterialXRampLeftRight : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x128, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x128, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXRampTopBottom
@@ -467,10 +467,10 @@ class UMaterialExpressionMaterialXRampTopBottom : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x128, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x128, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXRemap
@@ -481,15 +481,15 @@ class UMaterialExpressionMaterialXRemap : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          InputLow                                                    ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          InputHigh                                                   ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          TargetLow                                                   ___ OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FExpressionInput)                          TargetHigh                                                  ___ OFFSET(get<T>, {0x150, 40, 0, 0})
-	DMember(float)                                     InputLowDefault                                             ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(float)                                     InputHighDefault                                            ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	DMember(float)                                     TargetLowDefault                                            ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	DMember(float)                                     TargetHighDefault                                           ___ OFFSET(get<float>, {0x184, 4, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          InputLow                                                    OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          InputHigh                                                   OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          TargetLow                                                   OFFSET(get<T>, {0x128, 40, 0, 0})
+	SMember(FExpressionInput)                          TargetHigh                                                  OFFSET(get<T>, {0x150, 40, 0, 0})
+	DMember(float)                                     InputLowDefault                                             OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(float)                                     InputHighDefault                                            OFFSET(get<float>, {0x17C, 4, 0, 0})
+	DMember(float)                                     TargetLowDefault                                            OFFSET(get<float>, {0x180, 4, 0, 0})
+	DMember(float)                                     TargetHighDefault                                           OFFSET(get<float>, {0x184, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXRotate2D
@@ -500,9 +500,9 @@ class UMaterialExpressionMaterialXRotate2D : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          RotationAngle                                               ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	DMember(float)                                     ConstRotationAngle                                          ___ OFFSET(get<float>, {0x100, 4, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          RotationAngle                                               OFFSET(get<T>, {0xD8, 40, 0, 0})
+	DMember(float)                                     ConstRotationAngle                                          OFFSET(get<float>, {0x100, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXScreen
@@ -513,10 +513,10 @@ class UMaterialExpressionMaterialXScreen : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          Alpha                                                       ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	DMember(float)                                     ConstAlpha                                                  ___ OFFSET(get<float>, {0x128, 4, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          Alpha                                                       OFFSET(get<T>, {0x100, 40, 0, 0})
+	DMember(float)                                     ConstAlpha                                                  OFFSET(get<float>, {0x128, 4, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXSplitLeftRight
@@ -527,12 +527,12 @@ class UMaterialExpressionMaterialXSplitLeftRight : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          Center                                                      ___ OFFSET(get<T>, {0x128, 40, 0, 0})
-	DMember(float)                                     ConstCenter                                                 ___ OFFSET(get<float>, {0x150, 4, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x154, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          Center                                                      OFFSET(get<T>, {0x128, 40, 0, 0})
+	DMember(float)                                     ConstCenter                                                 OFFSET(get<float>, {0x150, 4, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x154, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXSplitTopBottom
@@ -543,12 +543,12 @@ class UMaterialExpressionMaterialXSplitTopBottom : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FExpressionInput)                          Coordinates                                                 ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          A                                                           ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FExpressionInput)                          B                                                           ___ OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FExpressionInput)                          Center                                                      ___ OFFSET(get<T>, {0x128, 40, 0, 0})
-	DMember(float)                                     ConstCenter                                                 ___ OFFSET(get<float>, {0x150, 4, 0, 0})
-	DMember(char)                                      ConstCoordinate                                             ___ OFFSET(get<char>, {0x154, 1, 0, 0})
+	SMember(FExpressionInput)                          Coordinates                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          A                                                           OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FExpressionInput)                          B                                                           OFFSET(get<T>, {0x100, 40, 0, 0})
+	SMember(FExpressionInput)                          Center                                                      OFFSET(get<T>, {0x128, 40, 0, 0})
+	DMember(float)                                     ConstCenter                                                 OFFSET(get<float>, {0x150, 4, 0, 0})
+	DMember(char)                                      ConstCoordinate                                             OFFSET(get<char>, {0x154, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXSwizzle
@@ -559,8 +559,8 @@ class UMaterialExpressionMaterialXSwizzle : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FString)                                   Channels                                                    ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FString)                                   Channels                                                    OFFSET(get<T>, {0xD8, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXTextureSampleParameterBlur
@@ -571,10 +571,10 @@ class UMaterialExpressionMaterialXTextureSampleParameterBlur : public UMaterialE
 	static inline constexpr uint64_t __MDKClassSize = 584;
 
 public:
-	CMember(EMAterialXTextureSampleBlurKernel)         KernelSize                                                  ___ OFFSET(get<T>, {0x238, 4, 0, 0})
-	DMember(float)                                     FilterSize                                                  ___ OFFSET(get<float>, {0x23C, 4, 0, 0})
-	DMember(float)                                     FilterOffset                                                ___ OFFSET(get<float>, {0x240, 4, 0, 0})
-	CMember(EMaterialXTextureSampleBlurFilter)         Filter                                                      ___ OFFSET(get<T>, {0x244, 1, 0, 0})
+	CMember(EMAterialXTextureSampleBlurKernel)         KernelSize                                                  OFFSET(get<T>, {0x238, 4, 0, 0})
+	DMember(float)                                     FilterSize                                                  OFFSET(get<float>, {0x23C, 4, 0, 0})
+	DMember(float)                                     FilterOffset                                                OFFSET(get<float>, {0x240, 4, 0, 0})
+	CMember(EMaterialXTextureSampleBlurFilter)         Filter                                                      OFFSET(get<T>, {0x244, 1, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.MaterialExpressionMaterialXUnpremult
@@ -585,7 +585,7 @@ class UMaterialExpressionMaterialXUnpremult : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
 };
 
 /// Class /Script/InterchangeImport.InterchangeMaterialFactory

@@ -17,9 +17,9 @@ class UInventoryComponentBase : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(AFortInventory*)                           CachedFortInventory                                         ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	CMember(AFortPawn*)                                CachedFortPawn                                              ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	CMember(UBlackboardComponent*)                     CachedBlackboardComponent                                   ___ OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(AFortInventory*)                           CachedFortInventory                                         OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(AFortPawn*)                                CachedFortPawn                                              OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(UBlackboardComponent*)                     CachedBlackboardComponent                                   OFFSET(get<T>, {0x90, 8, 0, 0})
 };
 
 /// Class /Script/VerseNPC.LeashComponentBase

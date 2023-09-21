@@ -16,6 +16,9 @@
     <Filter Include="Source Files\MDK">
       <UniqueIdentifier>{2d9fa597-4804-4e0f-bf2e-c9b7d61f8c52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{d2c33d81-d214-42c5-b768-223e0e3a804b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SDKTest.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="MDK.cpp">
       <Filter>Source Files\MDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +43,12 @@
     </ClInclude>
     <ClInclude Include="MDK.h">
       <Filter>Source Files\MDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Source Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="driver.h">
+      <Filter>Source Files\Memory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

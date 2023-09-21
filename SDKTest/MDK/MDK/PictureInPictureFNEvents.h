@@ -49,7 +49,24 @@ class UPictureInPictureFNEventsController : public UPictureInPictureMediaControl
 	static inline constexpr uint64_t __MDKClassSize = 1800;
 
 public:
-	CMember(UPictureInPictureFNEventsClient*)          FNEventsClient                                              ___ OFFSET(get<T>, {0x6D8, 8, 0, 0})
-	CMember(ULiveEventHUDAd*)                          HUDAdvertWidget                                             ___ OFFSET(get<T>, {0x6E0, 8, 0, 0})
+	CMember(UPictureInPictureFNEventsClient*)          FNEventsClient                                              OFFSET(get<T>, {0x6D8, 8, 0, 0})
+	CMember(ULiveEventHUDAd*)                          HUDAdvertWidget                                             OFFSET(get<T>, {0x6E0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.UpdateClientLoginState
+	// void UpdateClientLoginState(TArray<FPiPPartnerSource>& UpdatedSources);                                                  // [0x2127df0] Final|Native|Private|HasOutParms 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.OnClientLogoutSuccess
+	// void OnClientLogoutSuccess();                                                                                            // [0x9cee674] Final|Native|Private 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.OnClientLoginSuccess
+	// void OnClientLoginSuccess();                                                                                             // [0x9cee660] Final|Native|Private 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.HandleFNMediaRemoveEventsStream
+	// void HandleFNMediaRemoveEventsStream(FString InEventName);                                                               // [0x9cedfac] Final|Native|Protected 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.HandleFNMediaEventsStreams
+	// void HandleFNMediaEventsStreams(FFortMediaEventsStreamAssets& VideoStreamAssets);                                        // [0x9ced8d4] Final|Native|Protected|HasOutParms 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.ExitEvent
+	// void ExitEvent();                                                                                                        // [0x9ced8c0] Final|Native|Private 
+	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.AddPartnerActionAnalytics
+	// void AddPartnerActionAnalytics(FString InPartnerName, PictureInPictureAction InActionType);                              // [0x9ced1e0] Final|Native|Private 

@@ -15,7 +15,7 @@ class UAnimationDataSourceRegistry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<FName, TWeakObjectPtr>)               DataSources                                                 ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FName, TWeakObjectPtr>)               DataSources                                                 OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.Axis
@@ -26,8 +26,8 @@ class FAxis : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(bool)                                      bInLocalSpace                                               ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bInLocalSpace                                               OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.NodeChain
@@ -38,7 +38,7 @@ class FNodeChain : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FName>)                             Nodes                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FName>)                             Nodes                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.NodeObject
@@ -49,8 +49,8 @@ class FNodeObject : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ParentName                                                  ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ParentName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.NodeHierarchyData
@@ -61,9 +61,9 @@ class FNodeHierarchyData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<FNodeObject>)                       Nodes                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TMap<FName, int32_t>)                      NodeNameToIndexMapping                                      ___ OFFSET(get<T>, {0x20, 80, 0, 0})
+	CMember(TArray<FNodeObject>)                       Nodes                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TMap<FName, int32_t>)                      NodeNameToIndexMapping                                      OFFSET(get<T>, {0x20, 80, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.NodeHierarchyWithUserData
@@ -74,7 +74,7 @@ class FNodeHierarchyWithUserData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FNodeHierarchyData)                        Hierarchy                                                   ___ OFFSET(get<T>, {0x8, 112, 0, 0})
+	SMember(FNodeHierarchyData)                        Hierarchy                                                   OFFSET(get<T>, {0x8, 112, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.CCDIKChainLink
@@ -95,9 +95,9 @@ class FFilterOptionPerAxis : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
 public:
-	DMember(bool)                                      bX                                                          ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bY                                                          ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bZ                                                          ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bX                                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bY                                                          OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bZ                                                          OFFSET(get<bool>, {0x2, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.TransformFilter
@@ -108,9 +108,9 @@ class FTransformFilter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
 public:
-	SMember(FFilterOptionPerAxis)                      TranslationFilter                                           ___ OFFSET(get<T>, {0x0, 3, 0, 0})
-	SMember(FFilterOptionPerAxis)                      RotationFilter                                              ___ OFFSET(get<T>, {0x3, 3, 0, 0})
-	SMember(FFilterOptionPerAxis)                      ScaleFilter                                                 ___ OFFSET(get<T>, {0x6, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      TranslationFilter                                           OFFSET(get<T>, {0x0, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      RotationFilter                                              OFFSET(get<T>, {0x3, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      ScaleFilter                                                 OFFSET(get<T>, {0x6, 3, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.ConstraintDescription
@@ -121,13 +121,13 @@ class FConstraintDescription : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 13;
 
 public:
-	DMember(bool)                                      bTranslation                                                ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bRotation                                                   ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bScale                                                      ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bParent                                                     ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      TranslationAxes                                             ___ OFFSET(get<T>, {0x4, 3, 0, 0})
-	SMember(FFilterOptionPerAxis)                      RotationAxes                                                ___ OFFSET(get<T>, {0x7, 3, 0, 0})
-	SMember(FFilterOptionPerAxis)                      ScaleAxes                                                   ___ OFFSET(get<T>, {0xA, 3, 0, 0})
+	DMember(bool)                                      bTranslation                                                OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bRotation                                                   OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bScale                                                      OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bParent                                                     OFFSET(get<bool>, {0x3, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      TranslationAxes                                             OFFSET(get<T>, {0x4, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      RotationAxes                                                OFFSET(get<T>, {0x7, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      ScaleAxes                                                   OFFSET(get<T>, {0xA, 3, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.ConstraintOffset
@@ -138,10 +138,10 @@ class FConstraintOffset : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FTransform)                                Parent                                                      ___ OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FTransform)                                Parent                                                      OFFSET(get<T>, {0x60, 96, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.TransformConstraint
@@ -152,11 +152,11 @@ class FTransformConstraint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FConstraintDescription)                    Operator                                                    ___ OFFSET(get<T>, {0x0, 13, 0, 0})
-	SMember(FName)                                     SourceNode                                                  ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FName)                                     TargetNode                                                  ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	SMember(FConstraintDescription)                    Operator                                                    OFFSET(get<T>, {0x0, 13, 0, 0})
+	SMember(FName)                                     SourceNode                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     TargetNode                                                  OFFSET(get<T>, {0x14, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.ConstraintDescriptionEx
@@ -167,7 +167,7 @@ class FConstraintDescriptionEx : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FFilterOptionPerAxis)                      AxesFilterOption                                            ___ OFFSET(get<T>, {0x8, 3, 0, 0})
+	SMember(FFilterOptionPerAxis)                      AxesFilterOption                                            OFFSET(get<T>, {0x8, 3, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.TransformConstraintDescription
@@ -178,7 +178,7 @@ class FTransformConstraintDescription : public FConstraintDescriptionEx
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(ETransformConstraintType)                  TransformType                                               ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	CMember(ETransformConstraintType)                  TransformType                                               OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.AimConstraintDescription
@@ -189,10 +189,10 @@ class FAimConstraintDescription : public FConstraintDescriptionEx
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FAxis)                                     LookAt_Axis                                                 ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FAxis)                                     LookUp_Axis                                                 ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(bool)                                      bUseLookUp                                                  ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	SMember(FVector)                                   LookUpTarget                                                ___ OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FAxis)                                     LookAt_Axis                                                 OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FAxis)                                     LookUp_Axis                                                 OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      bUseLookUp                                                  OFFSET(get<bool>, {0x50, 1, 0, 0})
+	SMember(FVector)                                   LookUpTarget                                                OFFSET(get<T>, {0x58, 24, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.ConstraintDescriptor
@@ -203,7 +203,7 @@ class FConstraintDescriptor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(EConstraintType)                           Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EConstraintType)                           Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.ConstraintData
@@ -214,11 +214,11 @@ class FConstraintData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FConstraintDescriptor)                     Constraint                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bMaintainOffset                                             ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FTransform)                                Offset                                                      ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FTransform)                                CurrentTransform                                            ___ OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FConstraintDescriptor)                     Constraint                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x14, 1, 0, 0})
+	SMember(FTransform)                                Offset                                                      OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FTransform)                                CurrentTransform                                            OFFSET(get<T>, {0x80, 96, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.EulerTransform
@@ -229,9 +229,9 @@ class FEulerTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/AnimationCore.FABRIKChainLink
@@ -252,8 +252,8 @@ class FTransformNoScale : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Enum /Script/AnimationCore.EConstraintType

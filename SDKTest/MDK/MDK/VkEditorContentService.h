@@ -15,6 +15,6 @@ class FVkContentPackageRequest : public FVkResolvedContent
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 

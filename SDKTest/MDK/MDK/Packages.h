@@ -16,28 +16,63 @@ class A_WaterMeshBlueprintMaster_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 763;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CollisionMesh1                                              ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CollisionMesh2                                              ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CollisionMesh4                                              ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CollisionMesh3                                              ___ OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StaticMesh1                                                 ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	DMember(int32_t)                                   Number_of_Collision_Meshes                                  ___ OFFSET(get<int32_t>, {0x2C0, 4, 0, 0})
-	DMember(bool)                                      FlipFlow                                                    ___ OFFSET(get<bool>, {0x2C4, 1, 0, 0})
-	DMember(bool)                                      NoFlow                                                      ___ OFFSET(get<bool>, {0x2C5, 1, 0, 0})
-	CMember(UMaterialInterface*)                       FlippedMaterial                                             ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	DMember(int32_t)                                   Current_Characters_Personal_Water_Counter                   ___ OFFSET(get<int32_t>, {0x2D0, 4, 0, 0})
-	DMember(bool)                                      Enable_Player_Water_Interactions                            ___ OFFSET(get<bool>, {0x2D4, 1, 0, 0})
-	DMember(bool)                                      Entering_True_Exiting_False                                 ___ OFFSET(get<bool>, {0x2D5, 1, 0, 0})
-	CMember(APlayerPawn_Generic_Parent_C*)             ExternalActor                                               ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Internal_Mesh                                               ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	DMember(bool)                                      Continue                                                    ___ OFFSET(get<bool>, {0x2E8, 1, 0, 0})
-	DMember(double)                                    Minimum_time_between_splashes                               ___ OFFSET(get<double>, {0x2F0, 8, 0, 0})
-	DMember(bool)                                      ShowTestMesh                                                ___ OFFSET(get<bool>, {0x2F8, 1, 0, 0})
-	DMember(bool)                                      HasExecutedConstuctionScript                                ___ OFFSET(get<bool>, {0x2F9, 1, 0, 0})
-	DMember(bool)                                      Is_Deep_Water_Asset_                                        ___ OFFSET(get<bool>, {0x2FA, 1, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CollisionMesh1                                              OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CollisionMesh2                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CollisionMesh4                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CollisionMesh3                                              OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StaticMesh1                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	DMember(int32_t)                                   Number_of_Collision_Meshes                                  OFFSET(get<int32_t>, {0x2C0, 4, 0, 0})
+	DMember(bool)                                      FlipFlow                                                    OFFSET(get<bool>, {0x2C4, 1, 0, 0})
+	DMember(bool)                                      NoFlow                                                      OFFSET(get<bool>, {0x2C5, 1, 0, 0})
+	CMember(UMaterialInterface*)                       FlippedMaterial                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	DMember(int32_t)                                   Current_Characters_Personal_Water_Counter                   OFFSET(get<int32_t>, {0x2D0, 4, 0, 0})
+	DMember(bool)                                      Enable_Player_Water_Interactions                            OFFSET(get<bool>, {0x2D4, 1, 0, 0})
+	DMember(bool)                                      Entering_True_Exiting_False                                 OFFSET(get<bool>, {0x2D5, 1, 0, 0})
+	CMember(APlayerPawn_Generic_Parent_C*)             ExternalActor                                               OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Internal_Mesh                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	DMember(bool)                                      Continue                                                    OFFSET(get<bool>, {0x2E8, 1, 0, 0})
+	DMember(double)                                    Minimum_time_between_splashes                               OFFSET(get<double>, {0x2F0, 8, 0, 0})
+	DMember(bool)                                      ShowTestMesh                                                OFFSET(get<bool>, {0x2F8, 1, 0, 0})
+	DMember(bool)                                      HasExecutedConstuctionScript                                OFFSET(get<bool>, {0x2F9, 1, 0, 0})
+	DMember(bool)                                      Is_Deep_Water_Asset_                                        OFFSET(get<bool>, {0x2FA, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.Construction
+	// void Construction();                                                                                                     // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.Handle Water Penetration Components And Arrays
+	// void Handle Water Penetration Components And Arrays(bool In T Out F, AActor* Touching Actor, UStaticMeshComponent* Touching Volume); // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.Find Placement on water mesh surfaces
+	// void Find Placement on water mesh surfaces(FTransform& Traced Transform, FVector& VelocityVector, bool& Trace Hit);      // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.SetupMeshCollisionVolumes
+	// void SetupMeshCollisionVolumes(UStaticMeshComponent* StaticMeshComponent, int32_t Target Int);                           // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh2_K2Node_ComponentBoundEvent_220_ComponentEndOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh2_K2Node_ComponentBoundEvent_220_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh3_K2Node_ComponentBoundEvent_211_ComponentEndOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh3_K2Node_ComponentBoundEvent_211_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh_K2Node_ComponentBoundEvent_66_ComponentBeginOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh_K2Node_ComponentBoundEvent_66_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh4_K2Node_ComponentBoundEvent_203_ComponentEndOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh4_K2Node_ComponentBoundEvent_203_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh2_K2Node_ComponentBoundEvent_196_ComponentBeginOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh2_K2Node_ComponentBoundEvent_196_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh3_K2Node_ComponentBoundEvent_190_ComponentBeginOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh3_K2Node_ComponentBoundEvent_190_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh4_K2Node_ComponentBoundEvent_185_ComponentBeginOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh4_K2Node_ComponentBoundEvent_185_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.BndEvt__CollisionMesh_K2Node_ComponentBoundEvent_69_ComponentEndOverlapSignature__DelegateSignature
+	// void BndEvt__CollisionMesh_K2Node_ComponentBoundEvent_69_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.Construct
+	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.ExecuteUbergraph__WaterMeshBlueprintMaster
+	// void ExecuteUbergraph__WaterMeshBlueprintMaster(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
 /// Struct /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/WaterMeshAssetsToReplace.WaterMeshAssetsToReplace
 /// Size: 0x0014 (0x000000 - 0x000014)
 class FWaterMeshAssetsToReplace : public MDKStruct
@@ -46,8 +81,8 @@ class FWaterMeshAssetsToReplace : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	CMember(UStaticMesh*)                              StaticMesh_4_B162F6034281E7ABCD4DD1A24FFB5843               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UClass*)                                   Blueprint_8_FAC48F2D497ED83408C598897E74E513                ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   WaterMaterialID_11_1F00A5914214393D3251C4918ACFBCD2         ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	CMember(UStaticMesh*)                              StaticMesh_4_B162F6034281E7ABCD4DD1A24FFB5843               OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   Blueprint_8_FAC48F2D497ED83408C598897E74E513                OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   WaterMaterialID_11_1F00A5914214393D3251C4918ACFBCD2         OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 

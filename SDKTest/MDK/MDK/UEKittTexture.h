@@ -16,7 +16,7 @@ class UUEKittTexture : public UTexture
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FIntPoint)                                 Dimensions                                                  ___ OFFSET(get<T>, {0x138, 8, 0, 0})
-	SMember(FLinearColor)                              ClearColor                                                  ___ OFFSET(get<T>, {0x140, 16, 0, 0})
+	SMember(FIntPoint)                                 Dimensions                                                  OFFSET(get<T>, {0x138, 8, 0, 0})
+	SMember(FLinearColor)                              ClearColor                                                  OFFSET(get<T>, {0x140, 16, 0, 0})
 };
 

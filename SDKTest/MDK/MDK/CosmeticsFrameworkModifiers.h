@@ -45,6 +45,6 @@ class FSoftModifierClassPtr : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   SoftClass                                                   ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   SoftClass                                                   OFFSET(get<T>, {0x0, 32, 0, 0})
 };
 

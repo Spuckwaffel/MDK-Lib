@@ -18,7 +18,7 @@ class UMLDeformerAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UMLDeformerModel*)                         Model                                                       ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UMLDeformerModel*)                         Model                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerVizSettings
@@ -49,9 +49,9 @@ class UMLDeformerMorphModelVizSettings : public UMLDeformerGeomCacheVizSettings
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(float)                                     MorphTargetDeltaThreshold                                   ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   MorphTargetNumber                                           ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	DMember(bool)                                      bDrawMorphTargets                                           ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     MorphTargetDeltaThreshold                                   OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   MorphTargetNumber                                           OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(bool)                                      bDrawMorphTargets                                           OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerComponent
@@ -62,12 +62,33 @@ class UMLDeformerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(UMLDeformerAsset*)                         DeformerAsset                                               ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0xD8, 4, 0, 0})
-	DMember(int32_t)                                   QualityLevel                                                ___ OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
-	CMember(UMLDeformerModelInstance*)                 ModelInstance                                               ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UMLDeformerAsset*)                         DeformerAsset                                               OFFSET(get<T>, {0xD0, 8, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0xD8, 4, 0, 0})
+	DMember(int32_t)                                   QualityLevel                                                OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
+	CMember(UMLDeformerModelInstance*)                 ModelInstance                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.UpdateSkeletalMeshComponent
+	// void UpdateSkeletalMeshComponent();                                                                                      // [0x9ccb3e8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.SetWeight
+	// void SetWeight(float NormalizedWeightValue);                                                                             // [0x64a9ebc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.SetQualityLevel
+	// void SetQualityLevel(int32_t InQualityLevel);                                                                            // [0x9ccb364] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.SetDeformerAsset
+	// void SetDeformerAsset(UMLDeformerAsset* InDeformerAsset);                                                                // [0x5fcf0ec] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.GetWeight
+	// float GetWeight();                                                                                                       // [0x5fcf63c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.GetSkeletalMeshComponent
+	// USkeletalMeshComponent* GetSkeletalMeshComponent();                                                                      // [0x29f7474] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.GetQualityLevel
+	// int32_t GetQualityLevel();                                                                                               // [0x893a51c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.GetDeformerAsset
+	// UMLDeformerAsset* GetDeformerAsset();                                                                                    // [0x82ba578] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MLDeformerFramework.MLDeformerComponent.FindSkeletalMeshComponent
+	// USkeletalMeshComponent* FindSkeletalMeshComponent(UMLDeformerAsset* Asset);                                              // [0x9ccaf00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/MLDeformerFramework.MLDeformerComponentSource
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMLDeformerComponentSource : public UOptimusComponentSource
@@ -86,11 +107,11 @@ class UMLDeformerModel : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	DMember(int32_t)                                   NumBaseMeshVerts                                            ___ OFFSET(get<int32_t>, {0xC8, 4, 0, 0})
-	DMember(int32_t)                                   NumTargetMeshVerts                                          ___ OFFSET(get<int32_t>, {0xCC, 4, 0, 0})
-	CMember(UMLDeformerInputInfo*)                     InputInfo                                                   ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(TArray<int32_t>)                           VertexMap                                                   ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	CMember(USkeletalMesh*)                            SkeletalMesh                                                ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	DMember(int32_t)                                   NumBaseMeshVerts                                            OFFSET(get<int32_t>, {0xC8, 4, 0, 0})
+	DMember(int32_t)                                   NumTargetMeshVerts                                          OFFSET(get<int32_t>, {0xCC, 4, 0, 0})
+	CMember(UMLDeformerInputInfo*)                     InputInfo                                                   OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(TArray<int32_t>)                           VertexMap                                                   OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(USkeletalMesh*)                            SkeletalMesh                                                OFFSET(get<T>, {0xE8, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerGeomCacheModel
@@ -121,8 +142,8 @@ class UMLDeformerGraphDebugDataProvider : public UComputeDataProvider
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UMLDeformerComponent*)                     DeformerComponent                                           ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UMLDeformerAsset*)                         DeformerAsset                                               ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMLDeformerComponent*)                     DeformerComponent                                           OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UMLDeformerAsset*)                         DeformerAsset                                               OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerInputInfo
@@ -133,11 +154,11 @@ class UMLDeformerInputInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FSoftObjectPath)                           SkeletalMesh                                                ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	CMember(TArray<FName>)                             BoneNames                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FName>)                             CurveNames                                                  ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(int32_t)                                   NumBaseMeshVertices                                         ___ OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   NumTargetMeshVertices                                       ___ OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	SMember(FSoftObjectPath)                           SkeletalMesh                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(TArray<FName>)                             BoneNames                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FName>)                             CurveNames                                                  OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(int32_t)                                   NumBaseMeshVertices                                         OFFSET(get<int32_t>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   NumTargetMeshVertices                                       OFFSET(get<int32_t>, {0x64, 4, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerModelInstance
@@ -148,7 +169,7 @@ class UMLDeformerModelInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(UMLDeformerModel*)                         Model                                                       ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UMLDeformerModel*)                         Model                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerFramework.MLDeformerMorphModel
@@ -159,21 +180,32 @@ class UMLDeformerMorphModel : public UMLDeformerGeomCacheModel
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	CMember(TArray<FVector3f>)                         MorphTargetDeltas                                           ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	DMember(int32_t)                                   NumMorphTargets                                             ___ OFFSET(get<int32_t>, {0x110, 4, 0, 0})
-	DMember(uint64_t)                                  CompressedMorphDataSizeInBytes                              ___ OFFSET(get<uint64_t>, {0x118, 8, 0, 0})
-	DMember(uint64_t)                                  UncompressedMorphDataSizeInBytes                            ___ OFFSET(get<uint64_t>, {0x120, 8, 0, 0})
-	CMember(TArray<int32_t>)                           MorphTargetErrorOrder                                       ___ OFFSET(get<T>, {0x128, 16, 0, 0})
-	CMember(TArray<float>)                             MorphTargetErrors                                           ___ OFFSET(get<T>, {0x138, 16, 0, 0})
-	CMember(TArray<float>)                             MaxMorphWeights                                             ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	CMember(TArray<FMLDeformerMorphModelQualityLevel>) QualityLevels                                               ___ OFFSET(get<T>, {0x158, 16, 0, 0})
-	DMember(bool)                                      bIncludeNormals                                             ___ OFFSET(get<bool>, {0x168, 1, 0, 0})
-	DMember(float)                                     MorphDeltaZeroThreshold                                     ___ OFFSET(get<float>, {0x16C, 4, 0, 0})
-	DMember(float)                                     MorphCompressionLevel                                       ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	CMember(EMLDeformerMaskChannel)                    MaskChannel                                                 ___ OFFSET(get<T>, {0x174, 1, 0, 0})
-	DMember(bool)                                      bInvertMaskChannel                                          ___ OFFSET(get<bool>, {0x175, 1, 0, 0})
+	CMember(TArray<FVector3f>)                         MorphTargetDeltas                                           OFFSET(get<T>, {0x100, 16, 0, 0})
+	DMember(int32_t)                                   NumMorphTargets                                             OFFSET(get<int32_t>, {0x110, 4, 0, 0})
+	DMember(uint64_t)                                  CompressedMorphDataSizeInBytes                              OFFSET(get<uint64_t>, {0x118, 8, 0, 0})
+	DMember(uint64_t)                                  UncompressedMorphDataSizeInBytes                            OFFSET(get<uint64_t>, {0x120, 8, 0, 0})
+	CMember(TArray<int32_t>)                           MorphTargetErrorOrder                                       OFFSET(get<T>, {0x128, 16, 0, 0})
+	CMember(TArray<float>)                             MorphTargetErrors                                           OFFSET(get<T>, {0x138, 16, 0, 0})
+	CMember(TArray<float>)                             MaxMorphWeights                                             OFFSET(get<T>, {0x148, 16, 0, 0})
+	CMember(TArray<FMLDeformerMorphModelQualityLevel>) QualityLevels                                               OFFSET(get<T>, {0x158, 16, 0, 0})
+	DMember(bool)                                      bIncludeNormals                                             OFFSET(get<bool>, {0x168, 1, 0, 0})
+	DMember(float)                                     MorphDeltaZeroThreshold                                     OFFSET(get<float>, {0x16C, 4, 0, 0})
+	DMember(float)                                     MorphCompressionLevel                                       OFFSET(get<float>, {0x170, 4, 0, 0})
+	CMember(EMLDeformerMaskChannel)                    MaskChannel                                                 OFFSET(get<T>, {0x174, 1, 0, 0})
+	DMember(bool)                                      bInvertMaskChannel                                          OFFSET(get<bool>, {0x175, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MLDeformerFramework.MLDeformerMorphModel.SetMorphTargetsMaxWeights
+	// void SetMorphTargetsMaxWeights(TArray<float>& MaxWeights);                                                               // [0x9ccb2c4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerMorphModel.SetMorphTargetsErrorOrder
+	// void SetMorphTargetsErrorOrder(TArray<int32_t>& MorphTargetOrder, TArray<float>& ErrorValues);                           // [0x9ccb19c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerMorphModel.SetMorphTargetDeltas
+	// void SetMorphTargetDeltas(TArray<FVector3f>& Deltas);                                                                    // [0x9ccb0fc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MLDeformerFramework.MLDeformerMorphModel.SetMorphTargetDeltaFloats
+	// void SetMorphTargetDeltaFloats(TArray<float>& Deltas);                                                                   // [0x9ccb05c] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/MLDeformerFramework.MLDeformerMorphModelInputInfo
 /// Size: 0x0000 (0x000068 - 0x000068)
 class UMLDeformerMorphModelInputInfo : public UMLDeformerInputInfo
@@ -202,7 +234,7 @@ class FMLDeformerCurveReference : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     CurveName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CurveName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/MLDeformerFramework.MLDeformerMorphModelQualityLevel
@@ -213,7 +245,7 @@ class FMLDeformerMorphModelQualityLevel : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   MaxActiveMorphs                                             ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   MaxActiveMorphs                                             OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Enum /Script/MLDeformerFramework.EMLDeformerVizMode

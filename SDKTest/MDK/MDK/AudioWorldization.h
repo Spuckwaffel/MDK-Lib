@@ -18,8 +18,8 @@ class AAudioWorldizationReflectionProbe : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	CMember(USubmixSendVolumeComponent*)               SubmixSends                                                 ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UAudioGameplayVolumeComponent*)            AGVComponent                                                ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(USubmixSendVolumeComponent*)               SubmixSends                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UAudioGameplayVolumeComponent*)            AGVComponent                                                OFFSET(get<T>, {0x2A0, 8, 0, 0})
 };
 
 /// Class /Script/AudioWorldization.AudioWorldizationDefaultSettings
@@ -30,9 +30,9 @@ class UAudioWorldizationDefaultSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FAudioWorldizationGlobalSettings)          GlobalSettings                                              ___ OFFSET(get<T>, {0x30, 48, 0, 0})
-	SMember(FAudioWorldizationSettings)                DefaultSettings                                             ___ OFFSET(get<T>, {0x60, 88, 0, 0})
-	CMember(TArray<FSoftObjectPath>)                   ModulationParameters                                        ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FAudioWorldizationGlobalSettings)          GlobalSettings                                              OFFSET(get<T>, {0x30, 48, 0, 0})
+	SMember(FAudioWorldizationSettings)                DefaultSettings                                             OFFSET(get<T>, {0x60, 88, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   ModulationParameters                                        OFFSET(get<T>, {0xB8, 16, 0, 0})
 };
 
 /// Class /Script/AudioWorldization.AudioWorldizationSubsystem
@@ -43,18 +43,35 @@ class UAudioWorldizationSubsystem : public UTickableWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	CMember(USoundControlBus*)                         EnclosureBus                                                ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	CMember(USoundControlBus*)                         WallDistanceBus                                             ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	CMember(USoundControlBus*)                         ListenerAzimuthBus                                          ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAudioWorldizationSettings)                CurrentSettings                                             ___ OFFSET(get<T>, {0x88, 88, 0, 0})
-	CMember(AAudioWorldizationReflectionProbe*)        VolumeActor                                                 ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	CMember(UAudioWorldizationTracePolicyBase*)        TracePolicy                                                 ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(UAudioWorldizationTraceDirectionPolicyBase*) TraceDirectionPolicy                                      ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
-	CMember(TArray<FAudioWorldizationSettings>)        SettingsStack                                               ___ OFFSET(get<T>, {0x138, 16, 0, 0})
-	CMember(TArray<USoundControlBus*>)                 QuadrantEnclosureBuses                                      ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	CMember(TArray<USoundControlBus*>)                 QuadrantWallDistanceBuses                                   ___ OFFSET(get<T>, {0x158, 16, 0, 0})
+	CMember(USoundControlBus*)                         EnclosureBus                                                OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(USoundControlBus*)                         WallDistanceBus                                             OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(USoundControlBus*)                         ListenerAzimuthBus                                          OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FAudioWorldizationSettings)                CurrentSettings                                             OFFSET(get<T>, {0x88, 88, 0, 0})
+	CMember(AAudioWorldizationReflectionProbe*)        VolumeActor                                                 OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UAudioWorldizationTracePolicyBase*)        TracePolicy                                                 OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(UAudioWorldizationTraceDirectionPolicyBase*) TraceDirectionPolicy                                      OFFSET(get<T>, {0xF0, 8, 0, 0})
+	CMember(TArray<FAudioWorldizationSettings>)        SettingsStack                                               OFFSET(get<T>, {0x138, 16, 0, 0})
+	CMember(TArray<USoundControlBus*>)                 QuadrantEnclosureBuses                                      OFFSET(get<T>, {0x148, 16, 0, 0})
+	CMember(TArray<USoundControlBus*>)                 QuadrantWallDistanceBuses                                   OFFSET(get<T>, {0x158, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.SetWorldizationSettings
+	// void SetWorldizationSettings(FAudioWorldizationSettings& InSettings);                                                    // [0x74fa520] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.SetEnabled
+	// void SetEnabled(bool bNewEnabled);                                                                                       // [0x74fa4a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.SetDefaultSettings
+	// void SetDefaultSettings();                                                                                               // [0x74fa48c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.RemoveWorldizationSettings
+	// void RemoveWorldizationSettings(FName InIdentifier);                                                                     // [0x74fa40c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.GetTraceResults
+	// TArray<FAudioSphereTraceResult> GetTraceResults();                                                                       // [0x74fa390] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.GetEnclosureFactor
+	// float GetEnclosureFactor();                                                                                              // [0x74fa378] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.GetAverageTraceDistance
+	// float GetAverageTraceDistance();                                                                                         // [0x74fa360] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AudioWorldization.AudioWorldizationTraceDirectionPolicyBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAudioWorldizationTraceDirectionPolicyBase : public UObject
@@ -103,7 +120,7 @@ class UGameFeatureAction_SetAudioWorldizationSettings : public UGameFeatureActio
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FAudioWorldizationSettings)                Settings                                                    ___ OFFSET(get<T>, {0x28, 88, 0, 0})
+	SMember(FAudioWorldizationSettings)                Settings                                                    OFFSET(get<T>, {0x28, 88, 0, 0})
 };
 
 /// Struct /Script/AudioWorldization.AudioWorldizationSend
@@ -114,9 +131,9 @@ class FAudioWorldizationSend : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(USoundSubmix*)                             Submix                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TSet<USoundModulatorBase*>)                VolumeModulators                                            ___ OFFSET(get<T>, {0x8, 80, 0, 0})
-	CMember(TArray<USoundEffectSubmixPreset*>)         EffectChain                                                 ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(USoundSubmix*)                             Submix                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TSet<USoundModulatorBase*>)                VolumeModulators                                            OFFSET(get<T>, {0x8, 80, 0, 0})
+	CMember(TArray<USoundEffectSubmixPreset*>)         EffectChain                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/AudioWorldization.AudioWorldizationSettings
@@ -127,15 +144,15 @@ class FAudioWorldizationSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     Identifier                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FAudioWorldizationSend>)            Sends                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(float)                                     TraceRadius                                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   TracePoints                                                 ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	DMember(int32_t)                                   TracesPerFrame                                              ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   TraceOrigin                                                 ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	CMember(UClass*)                                   TracePolicy                                                 ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	CMember(UClass*)                                   TraceDirectionPolicy                                        ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FName)                                     Identifier                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FAudioWorldizationSend>)            Sends                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     TraceRadius                                                 OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   TracePoints                                                 OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	DMember(int32_t)                                   TracesPerFrame                                              OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   TraceOrigin                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(UClass*)                                   TracePolicy                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(UClass*)                                   TraceDirectionPolicy                                        OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/AudioWorldization.AudioWorldizationQuadrantSettings
@@ -146,8 +163,8 @@ class FAudioWorldizationQuadrantSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(USoundControlBus*)                         WallDistanceBus                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(USoundControlBus*)                         EnclosureBus                                                ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(USoundControlBus*)                         WallDistanceBus                                             OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(USoundControlBus*)                         EnclosureBus                                                OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/AudioWorldization.AudioWorldizationGlobalSettings
@@ -158,11 +175,11 @@ class FAudioWorldizationGlobalSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     EffectCrossfadeTime                                         ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(USoundControlBus*)                         EnclosureBus                                                ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(USoundControlBus*)                         WallDistanceBus                                             ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(USoundControlBus*)                         ListenerAzimuthBus                                          ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(TArray<FAudioWorldizationQuadrantSettings>) Quadrants                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(float)                                     EffectCrossfadeTime                                         OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(USoundControlBus*)                         EnclosureBus                                                OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(USoundControlBus*)                         WallDistanceBus                                             OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(USoundControlBus*)                         ListenerAzimuthBus                                          OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(TArray<FAudioWorldizationQuadrantSettings>) Quadrants                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/AudioWorldization.AudioSphereTraceResult
@@ -173,8 +190,8 @@ class FAudioSphereTraceResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(bool)                                      bBlocking                                                   ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     Distance                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bBlocking                                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Enum /Script/AudioWorldization.ETraceDirection

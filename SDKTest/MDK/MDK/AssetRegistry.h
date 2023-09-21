@@ -45,8 +45,8 @@ class FTagAndValue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/AssetRegistry.AssetRegistryDependencyOptions
@@ -57,10 +57,10 @@ class FAssetRegistryDependencyOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 5;
 
 public:
-	DMember(bool)                                      bIncludeSoftPackageReferences                               ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bIncludeHardPackageReferences                               ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bIncludeSearchableNames                                     ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bIncludeSoftManagementReferences                            ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bIncludeHardManagementReferences                            ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bIncludeSoftPackageReferences                               OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bIncludeHardPackageReferences                               OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bIncludeSearchableNames                                     OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bIncludeSoftManagementReferences                            OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bIncludeHardManagementReferences                            OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 

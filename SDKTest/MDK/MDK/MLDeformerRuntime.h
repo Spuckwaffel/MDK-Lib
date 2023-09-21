@@ -19,8 +19,8 @@ class UFortMLDeformerComponent : public UMLDeformerComponent
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(UMLDeformerAsset*)                         RequestedMLDeformerAsset                                    ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(UMeshDeformer*)                            RequestedMeshDeformerAsset                                  ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
+	CMember(UMLDeformerAsset*)                         RequestedMLDeformerAsset                                    OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(UMeshDeformer*)                            RequestedMeshDeformerAsset                                  OFFSET(get<T>, {0xF0, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerRuntime.MLDeformerGameFeatureData
@@ -31,9 +31,9 @@ class UMLDeformerGameFeatureData : public UFortGameFeatureData
 	static inline constexpr uint64_t __MDKClassSize = 1184;
 
 public:
-	DMember(bool)                                      bDisableWhenOwnerIsNotViewTarget                            ___ OFFSET(get<bool>, {0x498, 1, 0, 0})
-	DMember(bool)                                      bShouldRampUpWeightWhenEnabled                              ___ OFFSET(get<bool>, {0x499, 1, 0, 0})
-	DMember(float)                                     WeightIncreasePerSecond                                     ___ OFFSET(get<float>, {0x49C, 4, 0, 0})
+	DMember(bool)                                      bDisableWhenOwnerIsNotViewTarget                            OFFSET(get<bool>, {0x498, 1, 0, 0})
+	DMember(bool)                                      bShouldRampUpWeightWhenEnabled                              OFFSET(get<bool>, {0x499, 1, 0, 0})
+	DMember(float)                                     WeightIncreasePerSecond                                     OFFSET(get<float>, {0x49C, 4, 0, 0})
 };
 
 /// Class /Script/MLDeformerRuntime.MLDeformerAssetMapping
@@ -44,9 +44,9 @@ class UMLDeformerAssetMapping : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      CharacterItemDefinitionToMLDeformerAssetMap                 ___ OFFSET(get<T>, {0x30, 80, 0, 0})
-	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      CharacterPartToMLDeformerAssetMap                           ___ OFFSET(get<T>, {0x80, 80, 0, 0})
-	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      MLDeformerToMeshDeformerAssetMap                            ___ OFFSET(get<T>, {0xD0, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      CharacterItemDefinitionToMLDeformerAssetMap                 OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      CharacterPartToMLDeformerAssetMap                           OFFSET(get<T>, {0x80, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, TWeakObjectPtr>)      MLDeformerToMeshDeformerAssetMap                            OFFSET(get<T>, {0xD0, 80, 0, 0})
 };
 
 /// Class /Script/MLDeformerRuntime.MLDeformerComponentManager

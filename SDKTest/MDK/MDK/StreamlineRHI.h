@@ -15,8 +15,8 @@ class UStreamlineOverrideSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EStreamlineSettingOverride)                EnableDLSSFGInPlayInEditorViewportsOverride                 ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	CMember(EStreamlineSettingOverride)                LoadDebugOverlayOverride                                    ___ OFFSET(get<T>, {0x29, 1, 0, 0})
+	CMember(EStreamlineSettingOverride)                EnableDLSSFGInPlayInEditorViewportsOverride                 OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(EStreamlineSettingOverride)                LoadDebugOverlayOverride                                    OFFSET(get<T>, {0x29, 1, 0, 0})
 };
 
 /// Class /Script/StreamlineRHI.StreamlineSettings
@@ -27,12 +27,12 @@ class UStreamlineSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(bool)                                      bEnableStreamlineD3D12                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bEnableStreamlineD3D11                                      ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(bool)                                      bEnableDLSSFGInPlayInEditorViewports                        ___ OFFSET(get<bool>, {0x2A, 1, 0, 0})
-	DMember(bool)                                      bLoadDebugOverlay                                           ___ OFFSET(get<bool>, {0x2B, 1, 0, 0})
-	DMember(bool)                                      bAllowOTAUpdate                                             ___ OFFSET(get<bool>, {0x2C, 1, 0, 0})
-	DMember(int32_t)                                   NVIDIANGXApplicationId                                      ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bEnableStreamlineD3D12                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bEnableStreamlineD3D11                                      OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      bEnableDLSSFGInPlayInEditorViewports                        OFFSET(get<bool>, {0x2A, 1, 0, 0})
+	DMember(bool)                                      bLoadDebugOverlay                                           OFFSET(get<bool>, {0x2B, 1, 0, 0})
+	DMember(bool)                                      bAllowOTAUpdate                                             OFFSET(get<bool>, {0x2C, 1, 0, 0})
+	DMember(int32_t)                                   NVIDIANGXApplicationId                                      OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 };
 
 /// Enum /Script/StreamlineRHI.EStreamlineSettingOverride

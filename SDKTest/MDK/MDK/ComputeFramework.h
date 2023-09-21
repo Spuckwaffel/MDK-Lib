@@ -36,13 +36,13 @@ class UComputeKernelSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FString)                                   EntryPoint                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FIntVector)                                GroupSize                                                   ___ OFFSET(get<T>, {0x38, 12, 0, 0})
-	SMember(FComputeKernelPermutationSet)              PermutationSet                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FComputeKernelDefinitionSet)               DefinitionsSet                                              ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(TArray<FShaderFunctionDefinition>)         ExternalInputs                                              ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FShaderFunctionDefinition>)         ExternalOutputs                                             ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   EntryPoint                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FIntVector)                                GroupSize                                                   OFFSET(get<T>, {0x38, 12, 0, 0})
+	SMember(FComputeKernelPermutationSet)              PermutationSet                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FComputeKernelDefinitionSet)               DefinitionsSet                                              OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FShaderFunctionDefinition>)         ExternalInputs                                              OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FShaderFunctionDefinition>)         ExternalOutputs                                             OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Class /Script/ComputeFramework.ComputeSource
@@ -53,7 +53,7 @@ class UComputeSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ComputeFramework.ComputeGraph
@@ -64,11 +64,11 @@ class UComputeGraph : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TArray<UComputeKernel*>)                   KernelInvocations                                           ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<UComputeDataInterface*>)            DataInterfaces                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FComputeGraphEdge>)                 GraphEdges                                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<UClass*>)                           Bindings                                                    ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<int32_t>)                           DataInterfaceToBinding                                      ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<UComputeKernel*>)                   KernelInvocations                                           OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UComputeDataInterface*>)            DataInterfaces                                              OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FComputeGraphEdge>)                 GraphEdges                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<UClass*>)                           Bindings                                                    OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<int32_t>)                           DataInterfaceToBinding                                      OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Class /Script/ComputeFramework.ComputeGraphComponent
@@ -79,10 +79,19 @@ class UComputeGraphComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(UComputeGraph*)                            ComputeGraph                                                ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	SMember(FComputeGraphInstance)                     ComputeGraphInstance                                        ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
+	CMember(UComputeGraph*)                            ComputeGraph                                                OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FComputeGraphInstance)                     ComputeGraphInstance                                        OFFSET(get<T>, {0xA8, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ComputeFramework.ComputeGraphComponent.QueueExecute
+	// void QueueExecute();                                                                                                     // [0x9c3c57c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ComputeFramework.ComputeGraphComponent.DestroyDataProviders
+	// void DestroyDataProviders();                                                                                             // [0x9c3c54c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ComputeFramework.ComputeGraphComponent.CreateDataProviders
+	// void CreateDataProviders(int32_t InBindingIndex, UObject* InBindingObject);                                              // [0x9c3c47c] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ComputeFramework.ComputeKernel
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UComputeKernel : public UObject
@@ -91,8 +100,8 @@ class UComputeKernel : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UComputeKernelSource*)                     KernelSource                                                ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	DMember(int32_t)                                   KernelFlags                                                 ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	CMember(UComputeKernelSource*)                     KernelSource                                                OFFSET(get<T>, {0x28, 8, 0, 0})
+	DMember(int32_t)                                   KernelFlags                                                 OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/ComputeFramework.ComputeKernelFromText
@@ -103,7 +112,7 @@ class UComputeKernelFromText : public UComputeKernelSource
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FFilePath)                                 SourceFile                                                  ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FFilePath)                                 SourceFile                                                  OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/ComputeFramework.ComputeSourceFromText
@@ -114,7 +123,7 @@ class UComputeSourceFromText : public UComputeSource
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FFilePath)                                 SourceFile                                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FFilePath)                                 SourceFile                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeGraphEdge
@@ -125,13 +134,13 @@ class FComputeGraphEdge : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   KernelIndex                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   KernelBindingIndex                                          ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   DataInterfaceIndex                                          ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   DataInterfaceBindingIndex                                   ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bKernelInput                                                ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FString)                                   BindingFunctionNameOverride                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   BindingFunctionNamespace                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(int32_t)                                   KernelIndex                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   KernelBindingIndex                                          OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   DataInterfaceIndex                                          OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   DataInterfaceBindingIndex                                   OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bKernelInput                                                OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FString)                                   BindingFunctionNameOverride                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   BindingFunctionNamespace                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeGraphInstance
@@ -142,7 +151,7 @@ class FComputeGraphInstance : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<UComputeDataProvider*>)             DataProviders                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UComputeDataProvider*>)             DataProviders                                               OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeKernelPermutationBool
@@ -153,8 +162,8 @@ class FComputeKernelPermutationBool : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeKernelPermutationSet
@@ -165,7 +174,7 @@ class FComputeKernelPermutationSet : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FComputeKernelPermutationBool>)     BooleanOptions                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FComputeKernelPermutationBool>)     BooleanOptions                                              OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeKernelDefinition
@@ -176,8 +185,8 @@ class FComputeKernelDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Symbol                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Define                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Symbol                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Define                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeKernelDefinitionSet
@@ -188,7 +197,7 @@ class FComputeKernelDefinitionSet : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FComputeKernelDefinition>)          Defines                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FComputeKernelDefinition>)          Defines                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ComputeKernelPermutationVector
@@ -199,8 +208,8 @@ class FComputeKernelPermutationVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TMap<FString, uint32_t>)                   Permutations                                                ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	DMember(uint32_t)                                  BitCount                                                    ___ OFFSET(get<uint32_t>, {0x50, 4, 0, 0})
+	CMember(TMap<FString, uint32_t>)                   Permutations                                                OFFSET(get<T>, {0x0, 80, 0, 0})
+	DMember(uint32_t)                                  BitCount                                                    OFFSET(get<uint32_t>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ShaderValueTypeHandle
@@ -221,10 +230,10 @@ class FShaderValueType : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(EShaderFundamentalType)                    Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EShaderFundamentalDimensionType)           DimensionType                                               ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bIsDynamicArray                                             ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(EShaderFundamentalType)                    Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EShaderFundamentalDimensionType)           DimensionType                                               OFFSET(get<T>, {0x1, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bIsDynamicArray                                             OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ShaderParamTypeDefinition
@@ -235,12 +244,12 @@ class FShaderParamTypeDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   TypeDeclaration                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FShaderValueTypeHandle)                    ValueType                                                   ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(uint16_t)                                  ArrayElementCount                                           ___ OFFSET(get<uint16_t>, {0x28, 2, 0, 0})
-	CMember(EShaderParamBindingType)                   BindingType                                                 ___ OFFSET(get<T>, {0x2A, 1, 0, 0})
-	CMember(EShaderResourceType)                       ResourceType                                                ___ OFFSET(get<T>, {0x2B, 1, 0, 0})
+	SMember(FString)                                   TypeDeclaration                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(uint16_t)                                  ArrayElementCount                                           OFFSET(get<uint16_t>, {0x28, 2, 0, 0})
+	CMember(EShaderParamBindingType)                   BindingType                                                 OFFSET(get<T>, {0x2A, 1, 0, 0})
+	CMember(EShaderResourceType)                       ResourceType                                                OFFSET(get<T>, {0x2B, 1, 0, 0})
 };
 
 /// Struct /Script/ComputeFramework.ShaderFunctionDefinition
@@ -251,9 +260,9 @@ class FShaderFunctionDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FShaderParamTypeDefinition>)        ParamTypes                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bHasReturnType                                              ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FShaderParamTypeDefinition>)        ParamTypes                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bHasReturnType                                              OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Enum /Script/ComputeFramework.EComputeKernelFlags

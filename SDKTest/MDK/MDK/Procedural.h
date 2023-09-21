@@ -16,11 +16,16 @@ class UProceduralParameterModifier : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(float)                                     Contribution                                                ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	CMember(EProceduralParameterModifierBlendMode)     BlendMode                                                   ___ OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     Contribution                                                OFFSET(get<float>, {0x2C, 4, 0, 0})
+	CMember(EProceduralParameterModifierBlendMode)     BlendMode                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralParameterModifier.GetContribution
+	// float GetContribution();                                                                                                 // [0xa346c6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralDensityModifier
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UProceduralDensityModifier : public UProceduralParameterModifier
@@ -39,7 +44,7 @@ class UProceduralDataMap : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bUseRemapCurve                                              ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bUseRemapCurve                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralFloatDataMap
@@ -50,7 +55,7 @@ class UProceduralFloatDataMap : public UProceduralDataMap
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FProceduralRemapFloatCurve)                RemapCurve                                                  ___ OFFSET(get<T>, {0x30, 136, 0, 0})
+	SMember(FProceduralRemapFloatCurve)                RemapCurve                                                  OFFSET(get<T>, {0x30, 136, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralLandscapeLayerMap
@@ -61,8 +66,8 @@ class UProceduralLandscapeLayerMap : public UProceduralFloatDataMap
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     LandscapeLayerName                                          ___ OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     LandscapeEditLayerName                                      ___ OFFSET(get<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     LandscapeLayerName                                          OFFSET(get<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     LandscapeEditLayerName                                      OFFSET(get<T>, {0xBC, 4, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralRotationModifier
@@ -93,8 +98,8 @@ class UProceduralTextureFloatMap : public UProceduralFloatDataMap
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	CMember(EProceduralTextureColorChannel)            Channel                                                     ___ OFFSET(get<T>, {0xB8, 1, 0, 0})
-	SMember(FProceduralTextureSource)                  Source                                                      ___ OFFSET(get<T>, {0xC0, 56, 0, 0})
+	CMember(EProceduralTextureColorChannel)            Channel                                                     OFFSET(get<T>, {0xB8, 1, 0, 0})
+	SMember(FProceduralTextureSource)                  Source                                                      OFFSET(get<T>, {0xC0, 56, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralVectorDataMap
@@ -105,7 +110,7 @@ class UProceduralVectorDataMap : public UProceduralDataMap
 	static inline constexpr uint64_t __MDKClassSize = 568;
 
 public:
-	SMember(FProceduralRemapVectorCurve)               RemapCurve                                                  ___ OFFSET(get<T>, {0x30, 520, 0, 0})
+	SMember(FProceduralRemapVectorCurve)               RemapCurve                                                  OFFSET(get<T>, {0x30, 520, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralTextureVectorMap
@@ -116,7 +121,7 @@ class UProceduralTextureVectorMap : public UProceduralVectorDataMap
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FProceduralTextureSource)                  Source                                                      ___ OFFSET(get<T>, {0x238, 56, 0, 0})
+	SMember(FProceduralTextureSource)                  Source                                                      OFFSET(get<T>, {0x238, 56, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralVertexColorMap
@@ -127,7 +132,7 @@ class UProceduralVertexColorMap : public UProceduralFloatDataMap
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(EProceduralTextureColorChannel)            Channel                                                     ___ OFFSET(get<T>, {0xB8, 1, 0, 0})
+	CMember(EProceduralTextureColorChannel)            Channel                                                     OFFSET(get<T>, {0xB8, 1, 0, 0})
 };
 
 /// Class /Script/Procedural.HISMBuilderSettings
@@ -138,33 +143,40 @@ class UHISMBuilderSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	CMember(TEnumAsByte<EComponentMobility>)           Mobility                                                    ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FInt32Interval)                            CullDistance                                                ___ OFFSET(get<T>, {0x2C, 8, 0, 0})
-	DMember(float)                                     LODDistanceScale                                            ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bCastShadow                                                 ___ OFFSET(get<bool>, {0x38, 1, 1, 0})
-	DMember(bool)                                      bAffectDynamicIndirectLighting                              ___ OFFSET(get<bool>, {0x38, 1, 1, 1})
-	DMember(bool)                                      bAffectDistanceFieldLighting                                ___ OFFSET(get<bool>, {0x38, 1, 1, 2})
-	DMember(bool)                                      bCastDynamicShadow                                          ___ OFFSET(get<bool>, {0x38, 1, 1, 3})
-	DMember(bool)                                      bCastStaticShadow                                           ___ OFFSET(get<bool>, {0x38, 1, 1, 4})
-	DMember(bool)                                      bCastShadowAsTwoSided                                       ___ OFFSET(get<bool>, {0x38, 1, 1, 5})
-	DMember(bool)                                      bReceivesDecals                                             ___ OFFSET(get<bool>, {0x38, 1, 1, 6})
-	DMember(bool)                                      bOverrideLightMapRes                                        ___ OFFSET(get<bool>, {0x38, 1, 1, 7})
-	DMember(int32_t)                                   OverriddenLightMapRes                                       ___ OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-	CMember(ELightmapType)                             LightmapType                                                ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	DMember(bool)                                      bUseAsOccluder                                              ___ OFFSET(get<bool>, {0x44, 1, 1, 0})
-	SMember(FBodyInstance)                             BodyInstance                                                ___ OFFSET(get<T>, {0x48, 392, 0, 0})
-	CMember(TEnumAsByte<EHasCustomNavigableGeometry>)  CustomNavigableGeometry                                     ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(FLightingChannels)                         LightingChannels                                            ___ OFFSET(get<T>, {0x1D1, 1, 0, 0})
-	DMember(bool)                                      bRenderCustomDepth                                          ___ OFFSET(get<bool>, {0x1D4, 1, 1, 0})
-	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 ___ OFFSET(get<T>, {0x1D8, 1, 0, 0})
-	DMember(int32_t)                                   CustomDepthStencilValue                                     ___ OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
-	DMember(int32_t)                                   TranslucencySortPriority                                    ___ OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
-	DMember(bool)                                      bEnableDensityScaling                                       ___ OFFSET(get<bool>, {0x1E4, 1, 1, 0})
-	CMember(TArray<URuntimeVirtualTexture*>)           RuntimeVirtualTextures                                      ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	DMember(int32_t)                                   VirtualTextureCullMips                                      ___ OFFSET(get<int32_t>, {0x1F8, 4, 0, 0})
-	CMember(ERuntimeVirtualTextureMainPassType)        VirtualTextureRenderPassType                                ___ OFFSET(get<T>, {0x1FC, 1, 0, 0})
+	CMember(TEnumAsByte<EComponentMobility>)           Mobility                                                    OFFSET(get<T>, {0x28, 1, 0, 0})
+	SMember(FInt32Interval)                            CullDistance                                                OFFSET(get<T>, {0x2C, 8, 0, 0})
+	DMember(float)                                     LODDistanceScale                                            OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bCastShadow                                                 OFFSET(get<bool>, {0x38, 1, 1, 0})
+	DMember(bool)                                      bAffectDynamicIndirectLighting                              OFFSET(get<bool>, {0x38, 1, 1, 1})
+	DMember(bool)                                      bAffectDistanceFieldLighting                                OFFSET(get<bool>, {0x38, 1, 1, 2})
+	DMember(bool)                                      bCastDynamicShadow                                          OFFSET(get<bool>, {0x38, 1, 1, 3})
+	DMember(bool)                                      bCastStaticShadow                                           OFFSET(get<bool>, {0x38, 1, 1, 4})
+	DMember(bool)                                      bCastShadowAsTwoSided                                       OFFSET(get<bool>, {0x38, 1, 1, 5})
+	DMember(bool)                                      bReceivesDecals                                             OFFSET(get<bool>, {0x38, 1, 1, 6})
+	DMember(bool)                                      bOverrideLightMapRes                                        OFFSET(get<bool>, {0x38, 1, 1, 7})
+	DMember(int32_t)                                   OverriddenLightMapRes                                       OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
+	CMember(ELightmapType)                             LightmapType                                                OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bUseAsOccluder                                              OFFSET(get<bool>, {0x44, 1, 1, 0})
+	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(get<T>, {0x48, 392, 0, 0})
+	CMember(TEnumAsByte<EHasCustomNavigableGeometry>)  CustomNavigableGeometry                                     OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	SMember(FLightingChannels)                         LightingChannels                                            OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	DMember(bool)                                      bRenderCustomDepth                                          OFFSET(get<bool>, {0x1D4, 1, 1, 0})
+	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 OFFSET(get<T>, {0x1D8, 1, 0, 0})
+	DMember(int32_t)                                   CustomDepthStencilValue                                     OFFSET(get<int32_t>, {0x1DC, 4, 0, 0})
+	DMember(int32_t)                                   TranslucencySortPriority                                    OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
+	DMember(bool)                                      bEnableDensityScaling                                       OFFSET(get<bool>, {0x1E4, 1, 1, 0})
+	CMember(TArray<URuntimeVirtualTexture*>)           RuntimeVirtualTextures                                      OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	DMember(int32_t)                                   VirtualTextureCullMips                                      OFFSET(get<int32_t>, {0x1F8, 4, 0, 0})
+	CMember(ERuntimeVirtualTextureMainPassType)        VirtualTextureRenderPassType                                OFFSET(get<T>, {0x1FC, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.HISMBuilderSettings.SetOverriddenLightMapRes
+	// void SetOverriddenLightMapRes(int32_t Value);                                                                            // [0xa347720] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.HISMBuilderSettings.GetOverriddenLightMapRes
+	// int32_t GetOverriddenLightMapRes();                                                                                      // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralContentVariationsWeightsModifier
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UProceduralContentVariationsWeightsModifier : public UProceduralParameterModifier
@@ -183,7 +195,7 @@ class UProceduralContentVariationsWeightsMapModifier : public UProceduralContent
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FProceduralContentVariationMap>)    VariationsMaps                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FProceduralContentVariationMap>)    VariationsMaps                                              OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralGenerator
@@ -194,7 +206,7 @@ class UProceduralGenerator : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FProceduralDebugSettings)                  DebugSettings                                               ___ OFFSET(get<T>, {0x28, 12, 0, 0})
+	SMember(FProceduralDebugSettings)                  DebugSettings                                               OFFSET(get<T>, {0x28, 12, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralCustomGenerator
@@ -205,8 +217,8 @@ class UProceduralCustomGenerator : public UProceduralGenerator
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(UClass*)                                   GeneratorContextClass                                       ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(UProceduralGeneratorContext*)              GeneratorContext                                            ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(UClass*)                                   GeneratorContextClass                                       OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UProceduralGeneratorContext*)              GeneratorContext                                            OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralDensityMapModifier
@@ -217,7 +229,7 @@ class UProceduralDensityMapModifier : public UProceduralDensityModifier
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UProceduralFloatDataMap*)                  Map                                                         ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UProceduralFloatDataMap*)                  Map                                                         OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralGenerationBlockingVolume
@@ -228,7 +240,7 @@ class AProceduralGenerationBlockingVolume : public AVolume
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	CMember(TArray<AProceduralGenerationVolume*>)      BlockedVolumes                                              ___ OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	CMember(TArray<AProceduralGenerationVolume*>)      BlockedVolumes                                              OFFSET(get<T>, {0x2C8, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralGenerationComponent
@@ -239,11 +251,11 @@ class UProceduralGenerationComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(UProceduralGenerator*)                     Generator                                                   ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	DMember(bool)                                      bShowDebugVisualization                                     ___ OFFSET(get<bool>, {0xA8, 1, 0, 0})
-	SMember(FGuid)                                     ProceduralGenerationGuid                                    ___ OFFSET(get<T>, {0xAC, 16, 0, 0})
-	CMember(AVolume*)                                  GenerationVolume                                            ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(UProceduralGenerationContext*)             GenerationContext                                           ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(UProceduralGenerator*)                     Generator                                                   OFFSET(get<T>, {0xA0, 8, 0, 0})
+	DMember(bool)                                      bShowDebugVisualization                                     OFFSET(get<bool>, {0xA8, 1, 0, 0})
+	SMember(FGuid)                                     ProceduralGenerationGuid                                    OFFSET(get<T>, {0xAC, 16, 0, 0})
+	CMember(AVolume*)                                  GenerationVolume                                            OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(UProceduralGenerationContext*)             GenerationContext                                           OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralGenerationContext
@@ -254,12 +266,19 @@ class UProceduralGenerationContext : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(UProceduralGeneratorContext*)              GeneratorContext                                            ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TArray<UProceduralGeneratorContext*>)      GeneratedContexts                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<UProceduralGeneratorContext*>)      RegisteredContexts                                          ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TMap<FGuid, UProceduralGeneratorContext*>) GeneratorContexts                                           ___ OFFSET(get<T>, {0x50, 80, 0, 0})
+	CMember(UProceduralGeneratorContext*)              GeneratorContext                                            OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TArray<UProceduralGeneratorContext*>)      GeneratedContexts                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<UProceduralGeneratorContext*>)      RegisteredContexts                                          OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TMap<FGuid, UProceduralGeneratorContext*>) GeneratorContexts                                           OFFSET(get<T>, {0x50, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralGenerationContext.GetGenerationVolume
+	// AVolume* GetGenerationVolume();                                                                                          // [0xa347354] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralGenerationContext.GetGenerationComponent
+	// UProceduralGenerationComponent* GetGenerationComponent();                                                                // [0xa347330] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralGenerationVolume
 /// Size: 0x0008 (0x0002C8 - 0x0002D0)
 class AProceduralGenerationVolume : public AVolume
@@ -268,9 +287,16 @@ class AProceduralGenerationVolume : public AVolume
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	CMember(UProceduralGenerationComponent*)           ProceduralComponent                                         ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(UProceduralGenerationComponent*)           ProceduralComponent                                         OFFSET(get<T>, {0x2C8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralGenerationVolume.Generate
+	// void Generate();                                                                                                         // [0xa346c2c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralGenerationVolume.ClearGeneratedContent
+	// void ClearGeneratedContent();                                                                                            // [0xa346be8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/Procedural.ProceduralGeneratorContext
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UProceduralGeneratorContext : public UObject
@@ -279,13 +305,30 @@ class UProceduralGeneratorContext : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UProceduralGenerator*)                     Generator                                                   ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UProceduralGenerationContext*)             GenerationContext                                           ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(UProceduralGeneratorContext*)              OwnerContext                                                ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(TArray<UObject*>)                          GeneratedObjects                                            ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(UProceduralPointCloud*)                    ExportedPointCloud                                          ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UProceduralGenerator*)                     Generator                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UProceduralGenerationContext*)             GenerationContext                                           OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UProceduralGeneratorContext*)              OwnerContext                                                OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TArray<UObject*>)                          GeneratedObjects                                            OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(UProceduralPointCloud*)                    ExportedPointCloud                                          OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralGeneratorContext.OnGenerate
+	// bool OnGenerate();                                                                                                       // [0x18ca390] Native|Event|Public|BlueprintEvent 
+	// Function /Script/Procedural.ProceduralGeneratorContext.OnDrawVisualization
+	// void OnDrawVisualization();                                                                                              // [0x1ebf994] Event|Public|BlueprintEvent|Const 
+	// Function /Script/Procedural.ProceduralGeneratorContext.OnClearGeneratedContent
+	// void OnClearGeneratedContent();                                                                                          // [0x128ea78] Native|Event|Public|BlueprintEvent 
+	// Function /Script/Procedural.ProceduralGeneratorContext.GetOrCreateGeneratorContext
+	// void GetOrCreateGeneratorContext(UProceduralGenerator* Generator, UProceduralGeneratorContext*& Context);                // [0xa347378] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralGeneratorContext.GetGeneratedContexts
+	// TArray<UProceduralGeneratorContext*> GetGeneratedContexts();                                                             // [0xa346c8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralGeneratorContext.Generate
+	// bool Generate();                                                                                                         // [0xa346c48] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralGeneratorContext.ClearGeneratedContent
+	// void ClearGeneratedContent();                                                                                            // [0xa346c04] Final|Native|Public|BlueprintCallable 
 /// Class /Script/Procedural.ProceduralGeneratorStack
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UProceduralGeneratorStack : public UProceduralGenerator
@@ -294,7 +337,7 @@ class UProceduralGeneratorStack : public UProceduralGenerator
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FProceduralGenerationStackElement>) Generators                                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FProceduralGenerationStackElement>) Generators                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralGeneratorStackContext
@@ -315,9 +358,16 @@ class UProceduralPointCloud : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FProceduralPointCloudPoint>)        Points                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FProceduralPointCloudPoint>)        Points                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralPointCloud.GetPointsByTag
+	// TArray<FProceduralPointCloudPoint> GetPointsByTag(FName InTag);                                                          // [0xa347448] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralPointCloud.Empty
+	// void Empty();                                                                                                            // [0xa346c18] Final|Native|Public|BlueprintCallable 
 /// Class /Script/Procedural.ProceduralRotationMapModifier
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UProceduralRotationMapModifier : public UProceduralRotationModifier
@@ -326,13 +376,40 @@ class UProceduralRotationMapModifier : public UProceduralRotationModifier
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(UProceduralVectorDataMap*)                 Map                                                         ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(EProceduralRotationFormat)                 RotationFormat                                              ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	SMember(FFloatInterval)                            Roll                                                        ___ OFFSET(get<T>, {0x44, 8, 0, 0})
-	SMember(FFloatInterval)                            Pitch                                                       ___ OFFSET(get<T>, {0x4C, 8, 0, 0})
-	SMember(FFloatInterval)                            Yaw                                                         ___ OFFSET(get<T>, {0x54, 8, 0, 0})
+	CMember(UProceduralVectorDataMap*)                 Map                                                         OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(EProceduralRotationFormat)                 RotationFormat                                              OFFSET(get<T>, {0x40, 1, 0, 0})
+	SMember(FFloatInterval)                            Roll                                                        OFFSET(get<T>, {0x44, 8, 0, 0})
+	SMember(FFloatInterval)                            Pitch                                                       OFFSET(get<T>, {0x4C, 8, 0, 0})
+	SMember(FFloatInterval)                            Yaw                                                         OFFSET(get<T>, {0x54, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetYawMin
+	// void SetYawMin(float InValue);                                                                                           // [0xa347b7c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetYawMax
+	// void SetYawMax(float InValue);                                                                                           // [0xa347af0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetRollMin
+	// void SetRollMin(float InValue);                                                                                          // [0xa347c94] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetRollMax
+	// void SetRollMax(float InValue);                                                                                          // [0xa347c08] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetPitchMin
+	// void SetPitchMin(float InValue);                                                                                         // [0xa347834] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.SetPitchMax
+	// void SetPitchMax(float InValue);                                                                                         // [0xa3477a8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetYawMin
+	// float GetYawMin();                                                                                                       // [0x5c31b70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetYawMax
+	// float GetYawMax();                                                                                                       // [0x5c34634] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetRollMin
+	// float GetRollMin();                                                                                                      // [0x30de474] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetRollMax
+	// float GetRollMax();                                                                                                      // [0x327b0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetPitchMin
+	// float GetPitchMin();                                                                                                     // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationMapModifier.GetPitchMax
+	// float GetPitchMax();                                                                                                     // [0x276e40c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralRotationNoiseModifier
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UProceduralRotationNoiseModifier : public UProceduralRotationModifier
@@ -341,14 +418,41 @@ class UProceduralRotationNoiseModifier : public UProceduralRotationModifier
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(bool)                                      bRandomRoll                                                 ___ OFFSET(get<bool>, {0x38, 1, 1, 0})
-	SMember(FFloatInterval)                            RandomRoll                                                  ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
-	DMember(bool)                                      bRandomPitch                                                ___ OFFSET(get<bool>, {0x44, 1, 1, 0})
-	SMember(FFloatInterval)                            RandomPitch                                                 ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	DMember(bool)                                      bRandomYaw                                                  ___ OFFSET(get<bool>, {0x50, 1, 1, 0})
-	SMember(FFloatInterval)                            RandomYaw                                                   ___ OFFSET(get<T>, {0x54, 8, 0, 0})
+	DMember(bool)                                      bRandomRoll                                                 OFFSET(get<bool>, {0x38, 1, 1, 0})
+	SMember(FFloatInterval)                            RandomRoll                                                  OFFSET(get<T>, {0x3C, 8, 0, 0})
+	DMember(bool)                                      bRandomPitch                                                OFFSET(get<bool>, {0x44, 1, 1, 0})
+	SMember(FFloatInterval)                            RandomPitch                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
+	DMember(bool)                                      bRandomYaw                                                  OFFSET(get<bool>, {0x50, 1, 1, 0})
+	SMember(FFloatInterval)                            RandomYaw                                                   OFFSET(get<T>, {0x54, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomYawMin
+	// void SetRandomYawMin(float InValue);                                                                                     // [0xa347b7c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomYawMax
+	// void SetRandomYawMax(float InValue);                                                                                     // [0xa347af0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomRollMin
+	// void SetRandomRollMin(float InValue);                                                                                    // [0xa347a64] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomRollMax
+	// void SetRandomRollMax(float InValue);                                                                                    // [0xa3479d8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomPitchMin
+	// void SetRandomPitchMin(float InValue);                                                                                   // [0xa34794c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.SetRandomPitchMax
+	// void SetRandomPitchMax(float InValue);                                                                                   // [0xa3478c0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomYawMin
+	// float GetRandomYawMin();                                                                                                 // [0x5c31b70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomYawMax
+	// float GetRandomYawMax();                                                                                                 // [0x5c34634] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomRollMin
+	// float GetRandomRollMin();                                                                                                // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomRollMax
+	// float GetRandomRollMax();                                                                                                // [0x2edc708] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomPitchMin
+	// float GetRandomPitchMin();                                                                                               // [0x327b0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomPitchMax
+	// float GetRandomPitchMax();                                                                                               // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralScaleMapModifier
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UProceduralScaleMapModifier : public UProceduralScaleModifier
@@ -357,11 +461,22 @@ class UProceduralScaleMapModifier : public UProceduralScaleModifier
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	DMember(bool)                                      bRemapScale                                                 ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FFloatInterval)                            RemapScale                                                  ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
-	CMember(UProceduralFloatDataMap*)                  Map                                                         ___ OFFSET(get<T>, {0x48, 8, 0, 0})
+	DMember(bool)                                      bRemapScale                                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FFloatInterval)                            RemapScale                                                  OFFSET(get<T>, {0x3C, 8, 0, 0})
+	CMember(UProceduralFloatDataMap*)                  Map                                                         OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralScaleMapModifier.SetRemapScaleMin
+	// void SetRemapScaleMin(float InValue);                                                                                    // [0xa347a64] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScaleMapModifier.SetRemapScaleMax
+	// void SetRemapScaleMax(float InValue);                                                                                    // [0xa3479d8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScaleMapModifier.GetRemapScaleMin
+	// float GetRemapScaleMin();                                                                                                // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralScaleMapModifier.GetRemapScaleMax
+	// float GetRemapScaleMax();                                                                                                // [0x2edc708] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralScaleNoiseModifier
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UProceduralScaleNoiseModifier : public UProceduralScaleModifier
@@ -370,9 +485,20 @@ class UProceduralScaleNoiseModifier : public UProceduralScaleModifier
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FFloatInterval)                            Scale                                                       ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FFloatInterval)                            Scale                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralScaleNoiseModifier.SetScaleMin
+	// void SetScaleMin(float InValue);                                                                                         // [0xa347dac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScaleNoiseModifier.SetScaleMax
+	// void SetScaleMax(float InValue);                                                                                         // [0xa347d20] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScaleNoiseModifier.GetScaleMin
+	// float GetScaleMin();                                                                                                     // [0x5c31240] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralScaleNoiseModifier.GetScaleMax
+	// float GetScaleMax();                                                                                                     // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralScatterContentVariation
 /// Size: 0x00C0 (0x000028 - 0x0000E8)
 class UProceduralScatterContentVariation : public UObject
@@ -381,11 +507,11 @@ class UProceduralScatterContentVariation : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(EProceduralScatterContentPivotMode)        PivotMode                                                   ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	SMember(FVector)                                   AdditionalPivotOffset                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     FootprintBoundingBoxRatio                                   ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	CMember(TArray<FName>)                             SetActorTags                                                ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(EProceduralScatterContentPivotMode)        PivotMode                                                   OFFSET(get<T>, {0x2C, 1, 0, 0})
+	SMember(FVector)                                   AdditionalPivotOffset                                       OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     FootprintBoundingBoxRatio                                   OFFSET(get<float>, {0x48, 4, 0, 0})
+	CMember(TArray<FName>)                             SetActorTags                                                OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterActorContentVariation
@@ -396,7 +522,7 @@ class UProceduralScatterActorContentVariation : public UProceduralScatterContent
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(UClass*)                                   ActorClass                                                  ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(UClass*)                                   ActorClass                                                  OFFSET(get<T>, {0xE8, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterContentSettings
@@ -407,8 +533,8 @@ class UProceduralScatterContentSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TArray<FName>)                             SetActorTags                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<UProceduralScatterContentVariation*>) Variations                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FName>)                             SetActorTags                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UProceduralScatterContentVariation*>) Variations                                                OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterActorContentSettings
@@ -419,7 +545,7 @@ class UProceduralScatterActorContentSettings : public UProceduralScatterContentS
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      bHideFromWorldOutliner                                      ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	DMember(bool)                                      bHideFromWorldOutliner                                      OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterGenerator
@@ -430,20 +556,20 @@ class UProceduralScatterGenerator : public UProceduralGenerator
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(EProceduralScatterMethod)                  ScatterMethod                                               ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FProceduralScatterTileSettings)            TileSettings                                                ___ OFFSET(get<T>, {0x3C, 20, 0, 0})
-	DMember(int32_t)                                   RandomSeed                                                  ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-	DMember(int32_t)                                   NumUniqueSourcePointPatterns                                ___ OFFSET(get<int32_t>, {0x54, 4, 0, 0})
-	SMember(FVector2D)                                 GridSize                                                    ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FVector2D)                                 GridJitter                                                  ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(float)                                     GridRotation                                                ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FVector2D)                                 GridOffset                                                  ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FProceduralScatterSettingsElement>) ScatterSettingsElements                                     ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TArray<FName>)                             BlockingActorTags                                           ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	DMember(bool)                                      bAllScatterPointsBlocking                                   ___ OFFSET(get<bool>, {0xB0, 1, 0, 0})
-	DMember(bool)                                      bLocalDistribution                                          ___ OFFSET(get<bool>, {0xB1, 1, 0, 0})
-	CMember(TArray<FName>)                             BlockingScatterPointTags                                    ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FProceduralScatterDebugSettings)           ScatterDebugSettings                                        ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
+	CMember(EProceduralScatterMethod)                  ScatterMethod                                               OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FProceduralScatterTileSettings)            TileSettings                                                OFFSET(get<T>, {0x3C, 20, 0, 0})
+	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	DMember(int32_t)                                   NumUniqueSourcePointPatterns                                OFFSET(get<int32_t>, {0x54, 4, 0, 0})
+	SMember(FVector2D)                                 GridSize                                                    OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 GridJitter                                                  OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(float)                                     GridRotation                                                OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FVector2D)                                 GridOffset                                                  OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FProceduralScatterSettingsElement>) ScatterSettingsElements                                     OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TArray<FName>)                             BlockingActorTags                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
+	DMember(bool)                                      bAllScatterPointsBlocking                                   OFFSET(get<bool>, {0xB0, 1, 0, 0})
+	DMember(bool)                                      bLocalDistribution                                          OFFSET(get<bool>, {0xB1, 1, 0, 0})
+	CMember(TArray<FName>)                             BlockingScatterPointTags                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FProceduralScatterDebugSettings)           ScatterDebugSettings                                        OFFSET(get<T>, {0xC8, 12, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterGeneratorContext
@@ -454,13 +580,13 @@ class UProceduralScatterGeneratorContext : public UProceduralGeneratorContext
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FScatteredPointCloud)                      ScatteredPointCloud                                         ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<UProceduralScatterGeneratorTile*>)  UniqueTiles                                                 ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(TArray<FSourcePointGenerator>)             SourcePointGenerators                                       ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FProceduralScatterProjectionPoint>) ProjectionPointCloud                                        ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	CMember(UProceduralPointCloud*)                    SourcePointCloud                                            ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(UProceduralPointCloud*)                    BlockerPointCloud                                           ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(UMaterialInstanceDynamic*)                 ProjectionVectorMaterial                                    ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
+	SMember(FScatteredPointCloud)                      ScatteredPointCloud                                         OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<UProceduralScatterGeneratorTile*>)  UniqueTiles                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<FSourcePointGenerator>)             SourcePointGenerators                                       OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FProceduralScatterProjectionPoint>) ProjectionPointCloud                                        OFFSET(get<T>, {0x88, 16, 0, 0})
+	CMember(UProceduralPointCloud*)                    SourcePointCloud                                            OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(UProceduralPointCloud*)                    BlockerPointCloud                                           OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UMaterialInstanceDynamic*)                 ProjectionVectorMaterial                                    OFFSET(get<T>, {0xA8, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterGeneratorTile
@@ -471,8 +597,8 @@ class UProceduralScatterGeneratorTile : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	CMember(UProceduralScatterGenerator*)              Generator                                                   ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TArray<FProceduralScatter2DPoint>)         GeneratedPoints                                             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UProceduralScatterGenerator*)              Generator                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TArray<FProceduralScatter2DPoint>)         GeneratedPoints                                             OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterSettings
@@ -483,46 +609,57 @@ class UProceduralScatterSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	CMember(UProceduralScatterContentSettings*)        Content                                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	DMember(bool)                                      bContentVariationsModifiersEnabled                          ___ OFFSET(get<bool>, {0x30, 1, 1, 0})
-	SMember(FProceduralContentVariationsModifiers)     ContentVariationsModifiers                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FName>)                             SetPointTags                                                ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(float)                                     CollisionRadius                                             ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(bool)                                      bAutomaticCollisionRadius                                   ___ OFFSET(get<bool>, {0x5C, 1, 1, 0})
-	DMember(bool)                                      bUseSphericalBoundsForAutomaticCollisionRadius              ___ OFFSET(get<bool>, {0x5C, 1, 1, 1})
-	DMember(float)                                     AutomaticCollisionRadiusScaleFactor                         ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   DistributionSeed                                            ___ OFFSET(get<int32_t>, {0x64, 4, 0, 0})
-	DMember(bool)                                      bDensityModifiersEnabled                                    ___ OFFSET(get<bool>, {0x68, 1, 1, 0})
-	SMember(FProceduralDensityModifiers)               DensityModifiers                                            ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	DMember(float)                                     Density                                                     ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	CMember(TArray<FName>)                             SourcePointTagIncludes                                      ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	CMember(TArray<FName>)                             SourcePointTagExcludes                                      ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TArray<FName>)                             SourceActorTagIncludes                                      ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	CMember(TArray<FName>)                             SourceActorTagExcludes                                      ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	CMember(TArray<FName>)                             SourceComponentTagIncludes                                  ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	CMember(TArray<FName>)                             SourceComponentTagExcludes                                  ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FFloatInterval)                            SourcePointDistance                                         ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	DMember(bool)                                      bUseSourcePointExactNumber                                  ___ OFFSET(get<bool>, {0xF0, 1, 1, 0})
-	DMember(int32_t)                                   SourcePointExactNumber                                      ___ OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
-	DMember(bool)                                      bScaleModifiersEnabled                                      ___ OFFSET(get<bool>, {0xF8, 1, 1, 0})
-	SMember(FProceduralScaleModifiers)                 ScaleModifiers                                              ___ OFFSET(get<T>, {0x100, 32, 0, 0})
-	DMember(bool)                                      bRotationModifiersEnabled                                   ___ OFFSET(get<bool>, {0x120, 1, 1, 0})
-	SMember(FProceduralRotationModifiers)              RotationModifiers                                           ___ OFFSET(get<T>, {0x128, 16, 0, 0})
-	DMember(bool)                                      bAlignToNormal                                              ___ OFFSET(get<bool>, {0x138, 1, 1, 0})
-	DMember(float)                                     AlignMaxAngle                                               ___ OFFSET(get<float>, {0x13C, 4, 0, 0})
-	SMember(FProceduralScatterTargetSurface)           TargetSurface                                               ___ OFFSET(get<T>, {0x140, 72, 0, 0})
-	DMember(bool)                                      bDetectOverhangingLedge                                     ___ OFFSET(get<bool>, {0x188, 1, 1, 0})
-	DMember(int32_t)                                   OverhangingLedgeDetectionRayCount                           ___ OFFSET(get<int32_t>, {0x18C, 4, 0, 0})
-	DMember(float)                                     OverhangingLedgeDetectionLength                             ___ OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(float)                                     OverhangingLedgeDetectionVerticalThreshold                  ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(float)                                     OverhangingLedgeDetectionRadiusScale                        ___ OFFSET(get<float>, {0x198, 4, 0, 0})
-	DMember(float)                                     FilterMinimumScale                                          ___ OFFSET(get<float>, {0x19C, 4, 0, 0})
-	DMember(float)                                     OverlapPriority                                             ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	DMember(bool)                                      bCollisionWithWorld                                         ___ OFFSET(get<bool>, {0x1A4, 1, 1, 0})
-	SMember(FVector)                                   CollisionScale                                              ___ OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	SMember(FColor)                                    DebugColor                                                  ___ OFFSET(get<T>, {0x1C0, 4, 0, 0})
+	CMember(UProceduralScatterContentSettings*)        Content                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
+	DMember(bool)                                      bContentVariationsModifiersEnabled                          OFFSET(get<bool>, {0x30, 1, 1, 0})
+	SMember(FProceduralContentVariationsModifiers)     ContentVariationsModifiers                                  OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FName>)                             SetPointTags                                                OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(float)                                     CollisionRadius                                             OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(bool)                                      bAutomaticCollisionRadius                                   OFFSET(get<bool>, {0x5C, 1, 1, 0})
+	DMember(bool)                                      bUseSphericalBoundsForAutomaticCollisionRadius              OFFSET(get<bool>, {0x5C, 1, 1, 1})
+	DMember(float)                                     AutomaticCollisionRadiusScaleFactor                         OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   DistributionSeed                                            OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	DMember(bool)                                      bDensityModifiersEnabled                                    OFFSET(get<bool>, {0x68, 1, 1, 0})
+	SMember(FProceduralDensityModifiers)               DensityModifiers                                            OFFSET(get<T>, {0x70, 16, 0, 0})
+	DMember(float)                                     Density                                                     OFFSET(get<float>, {0x80, 4, 0, 0})
+	CMember(TArray<FName>)                             SourcePointTagIncludes                                      OFFSET(get<T>, {0x88, 16, 0, 0})
+	CMember(TArray<FName>)                             SourcePointTagExcludes                                      OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TArray<FName>)                             SourceActorTagIncludes                                      OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(TArray<FName>)                             SourceActorTagExcludes                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(TArray<FName>)                             SourceComponentTagIncludes                                  OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(TArray<FName>)                             SourceComponentTagExcludes                                  OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FFloatInterval)                            SourcePointDistance                                         OFFSET(get<T>, {0xE8, 8, 0, 0})
+	DMember(bool)                                      bUseSourcePointExactNumber                                  OFFSET(get<bool>, {0xF0, 1, 1, 0})
+	DMember(int32_t)                                   SourcePointExactNumber                                      OFFSET(get<int32_t>, {0xF4, 4, 0, 0})
+	DMember(bool)                                      bScaleModifiersEnabled                                      OFFSET(get<bool>, {0xF8, 1, 1, 0})
+	SMember(FProceduralScaleModifiers)                 ScaleModifiers                                              OFFSET(get<T>, {0x100, 32, 0, 0})
+	DMember(bool)                                      bRotationModifiersEnabled                                   OFFSET(get<bool>, {0x120, 1, 1, 0})
+	SMember(FProceduralRotationModifiers)              RotationModifiers                                           OFFSET(get<T>, {0x128, 16, 0, 0})
+	DMember(bool)                                      bAlignToNormal                                              OFFSET(get<bool>, {0x138, 1, 1, 0})
+	DMember(float)                                     AlignMaxAngle                                               OFFSET(get<float>, {0x13C, 4, 0, 0})
+	SMember(FProceduralScatterTargetSurface)           TargetSurface                                               OFFSET(get<T>, {0x140, 72, 0, 0})
+	DMember(bool)                                      bDetectOverhangingLedge                                     OFFSET(get<bool>, {0x188, 1, 1, 0})
+	DMember(int32_t)                                   OverhangingLedgeDetectionRayCount                           OFFSET(get<int32_t>, {0x18C, 4, 0, 0})
+	DMember(float)                                     OverhangingLedgeDetectionLength                             OFFSET(get<float>, {0x190, 4, 0, 0})
+	DMember(float)                                     OverhangingLedgeDetectionVerticalThreshold                  OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(float)                                     OverhangingLedgeDetectionRadiusScale                        OFFSET(get<float>, {0x198, 4, 0, 0})
+	DMember(float)                                     FilterMinimumScale                                          OFFSET(get<float>, {0x19C, 4, 0, 0})
+	DMember(float)                                     OverlapPriority                                             OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	DMember(bool)                                      bCollisionWithWorld                                         OFFSET(get<bool>, {0x1A4, 1, 1, 0})
+	SMember(FVector)                                   CollisionScale                                              OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x1C0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralScatterSettings.SetSourcePointDistanceMin
+	// void SetSourcePointDistanceMin(float InValue);                                                                           // [0xa347ecc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScatterSettings.SetSourcePointDistanceMax
+	// void SetSourcePointDistanceMax(float InValue);                                                                           // [0xa347e38] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralScatterSettings.GetSourcePointDistanceMin
+	// float GetSourcePointDistanceMin();                                                                                       // [0x597c71c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralScatterSettings.GetSourcePointDistanceMax
+	// float GetSourcePointDistanceMax();                                                                                       // [0x7f0f09c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralScatterStaticMeshContentVariation
 /// Size: 0x0080 (0x0000E8 - 0x000168)
 class UProceduralScatterStaticMeshContentVariation : public UProceduralScatterContentVariation
@@ -531,11 +668,11 @@ class UProceduralScatterStaticMeshContentVariation : public UProceduralScatterCo
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	CMember(EProceduralScatterStaticMeshMode)          StaticMeshMode                                              ___ OFFSET(get<T>, {0xE8, 1, 0, 0})
-	CMember(UStaticMesh*)                              Mesh                                                        ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
-	CMember(UClass*)                                   ActorClass                                                  ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	CMember(UHISMBuilderSettings*)                     OverrideInstancingSettings                                  ___ OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(EProceduralScatterStaticMeshMode)          StaticMeshMode                                              OFFSET(get<T>, {0xE8, 1, 0, 0})
+	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0xF0, 8, 0, 0})
+	CMember(UClass*)                                   ActorClass                                                  OFFSET(get<T>, {0xF8, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(UHISMBuilderSettings*)                     OverrideInstancingSettings                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralScatterStaticMeshContentSettings
@@ -546,9 +683,9 @@ class UProceduralScatterStaticMeshContentSettings : public UProceduralScatterCon
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(UClass*)                                   ComponentClass                                              ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FName)                                     ComponentTag                                                ___ OFFSET(get<T>, {0x70, 4, 0, 0})
-	CMember(UHISMBuilderSettings*)                     VariationsInstancingSettings                                ___ OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(UClass*)                                   ComponentClass                                              OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FName)                                     ComponentTag                                                OFFSET(get<T>, {0x70, 4, 0, 0})
+	CMember(UHISMBuilderSettings*)                     VariationsInstancingSettings                                OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
 /// Class /Script/Procedural.ProceduralSurfaceHeightMap
@@ -559,10 +696,23 @@ class UProceduralSurfaceHeightMap : public UProceduralFloatDataMap
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	DMember(bool)                                      bNormalizedHeight                                           ___ OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	SMember(FFloatInterval)                            HeightRange                                                 ___ OFFSET(get<T>, {0xBC, 8, 0, 0})
+	DMember(bool)                                      bNormalizedHeight                                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	SMember(FFloatInterval)                            HeightRange                                                 OFFSET(get<T>, {0xBC, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralSurfaceHeightMap.SetHeightRangeMin
+	// void SetHeightRangeMin(float InValue);                                                                                   // [0xa34768c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralSurfaceHeightMap.SetHeightRangeMax
+	// void SetHeightRangeMax(float InValue);                                                                                   // [0xa3475f8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralSurfaceHeightMap.GetValue
+	// float GetValue(float InHeight);                                                                                          // [0xa347568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralSurfaceHeightMap.GetHeightRangeMin
+	// float GetHeightRangeMin();                                                                                               // [0x6c15274] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralSurfaceHeightMap.GetHeightRangeMax
+	// float GetHeightRangeMax();                                                                                               // [0x58f324c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Procedural.ProceduralSurfaceSlopeAngleMap
 /// Size: 0x0010 (0x0000B8 - 0x0000C8)
 class UProceduralSurfaceSlopeAngleMap : public UProceduralFloatDataMap
@@ -571,10 +721,23 @@ class UProceduralSurfaceSlopeAngleMap : public UProceduralFloatDataMap
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	DMember(bool)                                      bNormalizedSlopeAngle                                       ___ OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	SMember(FFloatInterval)                            SlopeAngleRange                                             ___ OFFSET(get<T>, {0xBC, 8, 0, 0})
+	DMember(bool)                                      bNormalizedSlopeAngle                                       OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	SMember(FFloatInterval)                            SlopeAngleRange                                             OFFSET(get<T>, {0xBC, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.SetSlopeAngleRangeMin
+	// void SetSlopeAngleRangeMin(float InValue);                                                                               // [0xa34768c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.SetSlopeAngleRangeMax
+	// void SetSlopeAngleRangeMax(float InValue);                                                                               // [0xa3475f8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.GetValue
+	// float GetValue(float InSlopeAngle);                                                                                      // [0xa347568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.GetSlopeAngleRangeMin
+	// float GetSlopeAngleRangeMin();                                                                                           // [0x6c15274] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.GetSlopeAngleRangeMax
+	// float GetSlopeAngleRangeMax();                                                                                           // [0x58f324c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/Procedural.ProceduralPointCloudPoint
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
 class FProceduralPointCloudPoint : public MDKStruct
@@ -583,14 +746,14 @@ class FProceduralPointCloudPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FVector)                                   SurfaceNormal                                               ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	CMember(UObject*)                                  SurfaceObject                                               ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(UObject*)                                  Object                                                      ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	DMember(int32_t)                                   ObjectVariation                                             ___ OFFSET(get<int32_t>, {0x88, 4, 0, 0})
-	CMember(TArray<FName>)                             Tags                                                        ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	DMember(float)                                     CollisionRadius                                             ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	DMember(float)                                     SourcePointGeneratorIndex                                   ___ OFFSET(get<float>, {0xA4, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FVector)                                   SurfaceNormal                                               OFFSET(get<T>, {0x60, 24, 0, 0})
+	CMember(UObject*)                                  SurfaceObject                                               OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x80, 8, 0, 0})
+	DMember(int32_t)                                   ObjectVariation                                             OFFSET(get<int32_t>, {0x88, 4, 0, 0})
+	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x90, 16, 0, 0})
+	DMember(float)                                     CollisionRadius                                             OFFSET(get<float>, {0xA0, 4, 0, 0})
+	DMember(float)                                     SourcePointGeneratorIndex                                   OFFSET(get<float>, {0xA4, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterPoint
@@ -601,13 +764,13 @@ class FProceduralScatterPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	CMember(UProceduralScatterSettings*)               ScatterSettings                                             ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	DMember(int32_t)                                   VariationIdx                                                ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   GenerationLocation                                          ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FProceduralHitPoint)                       HitPoint                                                    ___ OFFSET(get<T>, {0x60, 64, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(UProceduralScatterSettings*)               ScatterSettings                                             OFFSET(get<T>, {0x38, 8, 0, 0})
+	DMember(int32_t)                                   VariationIdx                                                OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   GenerationLocation                                          OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FProceduralHitPoint)                       HitPoint                                                    OFFSET(get<T>, {0x60, 64, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralHitPoint
@@ -618,10 +781,10 @@ class FProceduralHitPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bIsTraceDone                                                ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      Component                                                   ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	DMember(bool)                                      bIsTraceDone                                                OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      Component                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterProjectionPoint
@@ -632,14 +795,14 @@ class FProceduralScatterProjectionPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   GenerationLocation                                          ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	CMember(UProceduralScatterSettings*)               ScatterSettings                                             ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	DMember(int32_t)                                   VariationIdx                                                ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   StartTrace                                                  ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   EndTrace                                                    ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FProceduralHitPoint)                       HitPoint                                                    ___ OFFSET(get<T>, {0x78, 64, 0, 0})
+	SMember(FVector)                                   GenerationLocation                                          OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(UProceduralScatterSettings*)               ScatterSettings                                             OFFSET(get<T>, {0x38, 8, 0, 0})
+	DMember(int32_t)                                   VariationIdx                                                OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   StartTrace                                                  OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   EndTrace                                                    OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FProceduralHitPoint)                       HitPoint                                                    OFFSET(get<T>, {0x78, 64, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralTextureSource
@@ -650,15 +813,15 @@ class FProceduralTextureSource : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(bool)                                      bUseRenderTarget                                            ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(UTexture2D*)                               Texture                                                     ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UTextureRenderTarget2D*)                   RenderTarget                                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(UMaterialInterface*)                       RenderTargetMaterial                                        ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	DMember(bool)                                      bStretchToFit                                               ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(float)                                     TexelSize                                                   ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     XOffset                                                     ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     YOffset                                                     ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Rotation                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bUseRenderTarget                                            OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(UTexture2D*)                               Texture                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UTextureRenderTarget2D*)                   RenderTarget                                                OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UMaterialInterface*)                       RenderTargetMaterial                                        OFFSET(get<T>, {0x18, 8, 0, 0})
+	DMember(bool)                                      bStretchToFit                                               OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(float)                                     TexelSize                                                   OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     XOffset                                                     OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     YOffset                                                     OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Rotation                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralContentVariationMap
@@ -669,9 +832,9 @@ class FProceduralContentVariationMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   VariationIndex                                              ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(UProceduralFloatDataMap*)                  Map                                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   VariationIndex                                              OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(UProceduralFloatDataMap*)                  Map                                                         OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralRemapFloatCurve
@@ -682,7 +845,7 @@ class FProceduralRemapFloatCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FRuntimeFloatCurve)                        RemapCurve                                                  ___ OFFSET(get<T>, {0x0, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        RemapCurve                                                  OFFSET(get<T>, {0x0, 136, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralRemapVectorCurve
@@ -693,7 +856,7 @@ class FProceduralRemapVectorCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
-	SMember(FRuntimeCurveLinearColor)                  RemapCurve                                                  ___ OFFSET(get<T>, {0x0, 520, 0, 0})
+	SMember(FRuntimeCurveLinearColor)                  RemapCurve                                                  OFFSET(get<T>, {0x0, 520, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralDebugSettings
@@ -704,9 +867,9 @@ class FProceduralDebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(bool)                                      bShowDebugPointCloud                                        ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FColor)                                    DebugPointColor                                             ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(float)                                     DebugCullingDistance                                        ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bShowDebugPointCloud                                        OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FColor)                                    DebugPointColor                                             OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(float)                                     DebugCullingDistance                                        OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralGenerationStackElement
@@ -717,8 +880,8 @@ class FProceduralGenerationStackElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(UProceduralGenerator*)                     Generator                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(UProceduralGenerator*)                     Generator                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatter2DPoint
@@ -729,13 +892,13 @@ class FProceduralScatter2DPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	CMember(UProceduralScatterSettings*)               ScatterSettings                                             ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FBox2D)                                    MaxAABB                                                     ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	DMember(float)                                     CollisionRadius                                             ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(bool)                                      bBlocker                                                    ___ OFFSET(get<bool>, {0x54, 1, 0, 0})
-	DMember(int32_t)                                   RandomNumber                                                ___ OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(UProceduralScatterSettings*)               ScatterSettings                                             OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FBox2D)                                    MaxAABB                                                     OFFSET(get<T>, {0x28, 40, 0, 0})
+	DMember(float)                                     CollisionRadius                                             OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bBlocker                                                    OFFSET(get<bool>, {0x54, 1, 0, 0})
+	DMember(int32_t)                                   RandomNumber                                                OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterSettingsElement
@@ -746,9 +909,9 @@ class FProceduralScatterSettingsElement : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(UProceduralScatterSettings*)               ScatterSettings                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   MaxPoints                                                   ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(UProceduralScatterSettings*)               ScatterSettings                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   MaxPoints                                                   OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterDebugSettings
@@ -759,13 +922,13 @@ class FProceduralScatterDebugSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(bool)                                      bShowDebugPlane                                             ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bShowDebugTrace                                             ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bShowDebugFootprint                                         ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bShowDebugHitNormal                                         ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bShowDebugPoints                                            ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bShowDebugPivots                                            ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
-	DMember(float)                                     DebugMaxCullingDistance                                     ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bShowDebugPlane                                             OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bShowDebugTrace                                             OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bShowDebugFootprint                                         OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bShowDebugHitNormal                                         OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bShowDebugPoints                                            OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bShowDebugPivots                                            OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(float)                                     DebugMaxCullingDistance                                     OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterTileSettings
@@ -776,11 +939,11 @@ class FProceduralScatterTileSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(int32_t)                                   NumUniqueTiles                                              ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(float)                                     TileSize                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     TileOverlapPercentage                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinimumQuadTreeSize                                         ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	CMember(EProceduralScatterTileRandomGenerator)     RandomGenerator                                             ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   NumUniqueTiles                                              OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(float)                                     TileSize                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     TileOverlapPercentage                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinimumQuadTreeSize                                         OFFSET(get<float>, {0xC, 4, 0, 0})
+	CMember(EProceduralScatterTileRandomGenerator)     RandomGenerator                                             OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Procedural.SourcePointGenerator
@@ -801,7 +964,7 @@ class FScatteredPointCloud : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FProceduralScatterPoint>)           Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FProceduralScatterPoint>)           Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScatterTargetSurface
@@ -812,14 +975,14 @@ class FProceduralScatterTargetSurface : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(bool)                                      bAllowLandscape                                             ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bAllowBSP                                                   ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bAllowStaticMesh                                            ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bAllowTranslucent                                           ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	CMember(TArray<FName>)                             AllowedActorTags                                            ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FName>)                             DisallowedActorTags                                         ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FName>)                             AllowedComponentTags                                        ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FName>)                             DisallowedComponentTags                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(bool)                                      bAllowLandscape                                             OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bAllowBSP                                                   OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bAllowStaticMesh                                            OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bAllowTranslucent                                           OFFSET(get<bool>, {0x3, 1, 0, 0})
+	CMember(TArray<FName>)                             AllowedActorTags                                            OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FName>)                             DisallowedActorTags                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FName>)                             AllowedComponentTags                                        OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FName>)                             DisallowedComponentTags                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralContentVariationsModifiers
@@ -830,7 +993,7 @@ class FProceduralContentVariationsModifiers : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UProceduralContentVariationsWeightsModifier*>) Modifiers                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UProceduralContentVariationsWeightsModifier*>) Modifiers                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralDensityModifiers
@@ -841,7 +1004,7 @@ class FProceduralDensityModifiers : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UProceduralDensityModifier*>)       Modifiers                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UProceduralDensityModifier*>)       Modifiers                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralScaleModifiers
@@ -852,9 +1015,9 @@ class FProceduralScaleModifiers : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(bool)                                      bRandomScaleEnabled                                         ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FFloatInterval)                            RandomScale                                                 ___ OFFSET(get<T>, {0x4, 8, 0, 0})
-	CMember(TArray<UProceduralScaleModifier*>)         Modifiers                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bRandomScaleEnabled                                         OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FFloatInterval)                            RandomScale                                                 OFFSET(get<T>, {0x4, 8, 0, 0})
+	CMember(TArray<UProceduralScaleModifier*>)         Modifiers                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Procedural.ProceduralRotationModifiers
@@ -865,7 +1028,7 @@ class FProceduralRotationModifiers : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UProceduralRotationModifier*>)      Modifiers                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UProceduralRotationModifier*>)      Modifiers                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/Procedural.EProceduralParameterModifierBlendMode

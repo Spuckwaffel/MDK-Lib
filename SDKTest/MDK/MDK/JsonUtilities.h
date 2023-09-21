@@ -25,6 +25,6 @@ class FJsonObjectWrapper : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   JsonString                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   JsonString                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 

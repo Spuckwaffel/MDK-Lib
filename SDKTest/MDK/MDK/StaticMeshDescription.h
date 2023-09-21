@@ -26,10 +26,10 @@ class FUVMapSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Size                                                        ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector2D)                                 UVTile                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Size                                                        OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector2D)                                 UVTile                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x58, 24, 0, 0})
 };
 

@@ -25,6 +25,6 @@ class UPacketHandlerProfileConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FString>)                           Components                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FString>)                           Components                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 

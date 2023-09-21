@@ -24,24 +24,24 @@ class FChaosSolverConfiguration : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	DMember(int32_t)                                   PositionIterations                                          ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   VelocityIterations                                          ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   ProjectionIterations                                        ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     CollisionMarginFraction                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     CollisionMarginMax                                          ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     CollisionCullDistance                                       ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     CollisionMaxPushOutVelocity                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     ClusterConnectionFactor                                     ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	CMember(EClusterUnionMethod)                       ClusterUnionConnectionType                                  ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bGenerateCollisionData                                      ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(bool)                                      bGenerateBreakData                                          ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(bool)                                      bGenerateTrailingData                                       ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      ___ OFFSET(get<T>, {0x4C, 16, 0, 0})
-	DMember(int32_t)                                   Iterations                                                  ___ OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
-	DMember(int32_t)                                   PushOutIterations                                           ___ OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(bool)                                      bGenerateContactGraph                                       ___ OFFSET(get<bool>, {0x64, 1, 0, 0})
+	DMember(int32_t)                                   PositionIterations                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   VelocityIterations                                          OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   ProjectionIterations                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     CollisionMarginFraction                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     CollisionMarginMax                                          OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     CollisionCullDistance                                       OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     CollisionMaxPushOutVelocity                                 OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
+	CMember(EClusterUnionMethod)                       ClusterUnionConnectionType                                  OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bGenerateCollisionData                                      OFFSET(get<bool>, {0x21, 1, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(bool)                                      bGenerateBreakData                                          OFFSET(get<bool>, {0x34, 1, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(bool)                                      bGenerateTrailingData                                       OFFSET(get<bool>, {0x48, 1, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(get<T>, {0x4C, 16, 0, 0})
+	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
+	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x60, 4, 0, 0})
+	DMember(bool)                                      bGenerateContactGraph                                       OFFSET(get<bool>, {0x64, 1, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverTrailingFilterSettings
@@ -52,10 +52,10 @@ class FSolverTrailingFilterSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      FilterEnabled                                               ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     MinMass                                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MinSpeed                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinVolume                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      FilterEnabled                                               OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     MinMass                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinVolume                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverBreakingFilterSettings
@@ -66,10 +66,10 @@ class FSolverBreakingFilterSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      FilterEnabled                                               ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     MinMass                                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MinSpeed                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinVolume                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      FilterEnabled                                               OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     MinMass                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinVolume                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverCollisionFilterSettings
@@ -80,10 +80,10 @@ class FSolverCollisionFilterSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      FilterEnabled                                               ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     MinMass                                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MinSpeed                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MinImpulse                                                  ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      FilterEnabled                                               OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     MinMass                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MinImpulse                                                  OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.ManagedArrayCollection
@@ -104,19 +104,19 @@ class FSolverCollisionData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedImpulse                                          ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Velocity1                                                   ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   Velocity2                                                   ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity1                                            ___ OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity2                                            ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	DMember(float)                                     Mass1                                                       ___ OFFSET(get<float>, {0xA8, 4, 0, 0})
-	DMember(float)                                     Mass2                                                       ___ OFFSET(get<float>, {0xAC, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndex                                               ___ OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
-	DMember(int32_t)                                   LevelsetIndex                                               ___ OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndexMesh                                           ___ OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
-	DMember(int32_t)                                   LevelsetIndexMesh                                           ___ OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Velocity1                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Velocity2                                                   OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity1                                            OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity2                                            OFFSET(get<T>, {0x90, 24, 0, 0})
+	DMember(float)                                     Mass1                                                       OFFSET(get<float>, {0xA8, 4, 0, 0})
+	DMember(float)                                     Mass2                                                       OFFSET(get<float>, {0xAC, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
+	DMember(int32_t)                                   LevelsetIndex                                               OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndexMesh                                           OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
+	DMember(int32_t)                                   LevelsetIndexMesh                                           OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverBreakingData
@@ -127,12 +127,12 @@ class FSolverBreakingData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndex                                               ___ OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndexMesh                                           ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndexMesh                                           OFFSET(get<int32_t>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverTrailingData
@@ -143,12 +143,12 @@ class FSolverTrailingData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndex                                               ___ OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	DMember(int32_t)                                   ParticleIndexMesh                                           ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	DMember(int32_t)                                   ParticleIndexMesh                                           OFFSET(get<int32_t>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.RecordedFrame
@@ -159,14 +159,14 @@ class FRecordedFrame : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<int32_t>)                           TransformIndices                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<int32_t>)                           PreviousTransformIndices                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<bool>)                              DisabledFlags                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FSolverCollisionData>)              Collisions                                                  ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FSolverBreakingData>)               Breakings                                                   ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TSet<FSolverTrailingData>)                 Trailings                                                   ___ OFFSET(get<T>, {0x60, 80, 0, 0})
-	DMember(float)                                     Timestamp                                                   ___ OFFSET(get<float>, {0xB0, 4, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<int32_t>)                           TransformIndices                                            OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<int32_t>)                           PreviousTransformIndices                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<bool>)                              DisabledFlags                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FSolverCollisionData>)              Collisions                                                  OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FSolverBreakingData>)               Breakings                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TSet<FSolverTrailingData>)                 Trailings                                                   OFFSET(get<T>, {0x60, 80, 0, 0})
+	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0xB0, 4, 0, 0})
 };
 
 /// Struct /Script/Chaos.RecordedTransformTrack
@@ -177,7 +177,7 @@ class FRecordedTransformTrack : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRecordedFrame>)                    Records                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRecordedFrame>)                    Records                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverRemovalFilterSettings
@@ -188,9 +188,9 @@ class FSolverRemovalFilterSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(bool)                                      FilterEnabled                                               ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     MinMass                                                     ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MinVolume                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      FilterEnabled                                               OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     MinMass                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MinVolume                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Enum /Script/Chaos.ChaosDeformableSimSpace

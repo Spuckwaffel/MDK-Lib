@@ -17,10 +17,10 @@ class UFortPlayerAnimInstance_AntiVehMountedTurret : public UFortPlayerAnimInsta
 	static inline constexpr uint64_t __MDKClassSize = 5632;
 
 public:
-	SMember(FVector)                                   HandAttachL                                                 ___ OFFSET(get<T>, {0x15C8, 24, 0, 0})
-	SMember(FVector)                                   HandAttachR                                                 ___ OFFSET(get<T>, {0x15E0, 24, 0, 0})
-	SMember(FName)                                     HandAttachBoneNameL                                         ___ OFFSET(get<T>, {0x15F8, 4, 0, 0})
-	SMember(FName)                                     HandAttachBoneNameR                                         ___ OFFSET(get<T>, {0x15FC, 4, 0, 0})
+	SMember(FVector)                                   HandAttachL                                                 OFFSET(get<T>, {0x15C8, 24, 0, 0})
+	SMember(FVector)                                   HandAttachR                                                 OFFSET(get<T>, {0x15E0, 24, 0, 0})
+	SMember(FName)                                     HandAttachBoneNameL                                         OFFSET(get<T>, {0x15F8, 4, 0, 0})
+	SMember(FName)                                     HandAttachBoneNameR                                         OFFSET(get<T>, {0x15FC, 4, 0, 0})
 };
 
 /// Class /Script/ResolveTurretRuntime.FortVehicleAnimInstance_AntiVehMountedTurret

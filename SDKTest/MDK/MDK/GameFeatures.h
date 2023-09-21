@@ -47,9 +47,9 @@ class UGameFeatureAction_AddCheats : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<TWeakObjectPtr>)                    CheatManagers                                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bLoadCheatManagersAsync                                     ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    SpawnedCheatManagers                                        ___ OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    CheatManagers                                               OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bLoadCheatManagersAsync                                     OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    SpawnedCheatManagers                                        OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeatureAction_AddChunkOverride
@@ -70,7 +70,7 @@ class UGameFeatureAction_AddComponents : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<FGameFeatureComponentEntry>)        ComponentList                                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameFeatureComponentEntry>)        ComponentList                                               OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeatureAction_AddWPContent
@@ -81,7 +81,7 @@ class UGameFeatureAction_AddWPContent : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UContentBundleDescriptor*)                 ContentBundleDescriptor                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UContentBundleDescriptor*)                 ContentBundleDescriptor                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeatureAction_DataRegistry
@@ -92,8 +92,8 @@ class UGameFeatureAction_DataRegistry : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<TWeakObjectPtr>)                    RegistriesToAdd                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bPreloadInEditor                                            ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    RegistriesToAdd                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bPreloadInEditor                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeatureAction_DataRegistrySource
@@ -104,8 +104,8 @@ class UGameFeatureAction_DataRegistrySource : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FDataRegistrySourceToAdd>)          SourcesToAdd                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bPreloadInEditor                                            ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(TArray<FDataRegistrySourceToAdd>)          SourcesToAdd                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bPreloadInEditor                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeatureData
@@ -116,10 +116,15 @@ class UGameFeatureData : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<UGameFeatureAction*>)               Actions                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FPrimaryAssetTypeInfo>)             PrimaryAssetTypesToScan                                     ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UGameFeatureAction*>)               Actions                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FPrimaryAssetTypeInfo>)             PrimaryAssetTypesToScan                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameFeatures.GameFeatureData.GetPluginName
+	// void GetPluginName(UGameFeatureData* GFD, FString& PluginName);                                                          // [0x6357044] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/GameFeatures.GameFeaturePluginStateMachine
 /// Size: 0x01C0 (0x000028 - 0x0001E8)
 class UGameFeaturePluginStateMachine : public UObject
@@ -128,7 +133,7 @@ class UGameFeaturePluginStateMachine : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FGameFeaturePluginStateMachineProperties)  StateProperties                                             ___ OFFSET(get<T>, {0x30, 200, 0, 0})
+	SMember(FGameFeaturePluginStateMachineProperties)  StateProperties                                             OFFSET(get<T>, {0x30, 200, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeaturesProjectPolicies
@@ -159,10 +164,10 @@ class UGameFeaturesSubsystem : public UEngineSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(TMap<FString, UGameFeaturePluginStateMachine*>) GameFeaturePluginStateMachines                         ___ OFFSET(get<T>, {0x30, 80, 0, 0})
-	CMember(TArray<UGameFeaturePluginStateMachine*>)   TerminalGameFeaturePluginStateMachines                      ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<UObject*>)                          Observers                                                   ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	CMember(UGameFeaturesProjectPolicies*)             GameSpecificPolicies                                        ___ OFFSET(get<T>, {0x140, 8, 0, 0})
+	CMember(TMap<FString, UGameFeaturePluginStateMachine*>) GameFeaturePluginStateMachines                         OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TArray<UGameFeaturePluginStateMachine*>)   TerminalGameFeaturePluginStateMachines                      OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<UObject*>)                          Observers                                                   OFFSET(get<T>, {0x130, 16, 0, 0})
+	CMember(UGameFeaturesProjectPolicies*)             GameSpecificPolicies                                        OFFSET(get<T>, {0x140, 8, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeaturesSubsystemSettings
@@ -173,10 +178,10 @@ class UGameFeaturesSubsystemSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FSoftClassPath)                            GameFeaturesManagerClassName                                ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	CMember(TArray<FString>)                           EnabledPlugins                                              ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FString>)                           DisabledPlugins                                             ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FString>)                           AdditionalPluginMetadataKeys                                ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FSoftClassPath)                            GameFeaturesManagerClassName                                OFFSET(get<T>, {0x30, 24, 0, 0})
+	CMember(TArray<FString>)                           EnabledPlugins                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FString>)                           DisabledPlugins                                             OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FString>)                           AdditionalPluginMetadataKeys                                OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Struct /Script/GameFeatures.GameFeatureComponentEntry
@@ -187,10 +192,10 @@ class FGameFeatureComponentEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   ComponentClass                                              ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	DMember(bool)                                      bClientComponent                                            ___ OFFSET(get<bool>, {0x40, 1, 1, 0})
-	DMember(bool)                                      bServerComponent                                            ___ OFFSET(get<bool>, {0x40, 1, 1, 1})
+	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   ComponentClass                                              OFFSET(get<T>, {0x20, 32, 0, 0})
+	DMember(bool)                                      bClientComponent                                            OFFSET(get<bool>, {0x40, 1, 1, 0})
+	DMember(bool)                                      bServerComponent                                            OFFSET(get<bool>, {0x40, 1, 1, 1})
 };
 
 /// Struct /Script/GameFeatures.DataRegistrySourceToAdd
@@ -201,12 +206,12 @@ class FDataRegistrySourceToAdd : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     RegistryToAddTo                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   AssetPriority                                               ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bClientSource                                               ___ OFFSET(get<bool>, {0x8, 1, 1, 0})
-	DMember(bool)                                      bServerSource                                               ___ OFFSET(get<bool>, {0x8, 1, 1, 1})
-	CMember(TWeakObjectPtr<UDataTable*>)               DataTableToAdd                                              ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	CMember(TWeakObjectPtr<UCurveTable*>)              CurveTableToAdd                                             ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FName)                                     RegistryToAddTo                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   AssetPriority                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bClientSource                                               OFFSET(get<bool>, {0x8, 1, 1, 0})
+	DMember(bool)                                      bServerSource                                               OFFSET(get<bool>, {0x8, 1, 1, 1})
+	CMember(TWeakObjectPtr<UDataTable*>)               DataTableToAdd                                              OFFSET(get<T>, {0x10, 32, 0, 0})
+	CMember(TWeakObjectPtr<UCurveTable*>)              CurveTableToAdd                                             OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/GameFeatures.GameFeaturePluginStateMachineProperties
@@ -217,7 +222,7 @@ class FGameFeaturePluginStateMachineProperties : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	CMember(UGameFeatureData*)                         GameFeatureData                                             ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(UGameFeatureData*)                         GameFeatureData                                             OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Struct /Script/GameFeatures.GameFeaturePluginIdentifier

@@ -18,12 +18,27 @@ class AMeshBeaconClient : public AOnlineBeaconClient
 	static inline constexpr uint64_t __MDKClassSize = 928;
 
 public:
-	DMember(bool)                                      bConnectedToRoot                                            ___ OFFSET(get<bool>, {0x360, 1, 0, 0})
-	SMember(FDateTime)                                 MeshPingTime                                                ___ OFFSET(get<T>, {0x368, 8, 0, 0})
-	CMember(TArray<FString>)                           ParentIds                                                   ___ OFFSET(get<T>, {0x370, 16, 0, 0})
-	SMember(FString)                                   ClientId                                                    ___ OFFSET(get<T>, {0x380, 16, 0, 0})
+	DMember(bool)                                      bConnectedToRoot                                            OFFSET(get<bool>, {0x360, 1, 0, 0})
+	SMember(FDateTime)                                 MeshPingTime                                                OFFSET(get<T>, {0x368, 8, 0, 0})
+	CMember(TArray<FString>)                           ParentIds                                                   OFFSET(get<T>, {0x370, 16, 0, 0})
+	SMember(FString)                                   ClientId                                                    OFFSET(get<T>, {0x380, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MeshNetwork.MeshBeaconClient.ServerUpdateMultipleLevelsVisibility
+	// void ServerUpdateMultipleLevelsVisibility(TArray<FUpdateLevelVisibilityLevelInfo> LevelVisibilities);                    // [0x6f0b59c] Final|Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/MeshNetwork.MeshBeaconClient.ServerUpdateLevelVisibility
+	// void ServerUpdateLevelVisibility(FUpdateLevelVisibilityLevelInfo LevelVisibility);                                       // [0x6f0b410] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/MeshNetwork.MeshBeaconClient.ServerSetClientId
+	// void ServerSetClientId(FString NewClientId);                                                                             // [0x6f0ad58] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// Function /Script/MeshNetwork.MeshBeaconClient.OnRep_ParentIds
+	// void OnRep_ParentIds();                                                                                                  // [0x6f0ad44] Final|Native|Protected 
+	// Function /Script/MeshNetwork.MeshBeaconClient.OnRep_MeshPingTime
+	// void OnRep_MeshPingTime();                                                                                               // [0x3417154] Native|Protected     
+	// Function /Script/MeshNetwork.MeshBeaconClient.OnRep_ConnectedToRoot
+	// void OnRep_ConnectedToRoot();                                                                                            // [0x6f0ad30] Final|Native|Protected 
 /// Class /Script/MeshNetwork.MeshBeaconHost
 /// Size: 0x0008 (0x0003D0 - 0x0003D8)
 class AMeshBeaconHost : public AOnlineBeaconHost
@@ -32,7 +47,7 @@ class AMeshBeaconHost : public AOnlineBeaconHost
 	static inline constexpr uint64_t __MDKClassSize = 984;
 
 public:
-	DMember(int32_t)                                   MaxConnections                                              ___ OFFSET(get<int32_t>, {0x3D0, 4, 0, 0})
+	DMember(int32_t)                                   MaxConnections                                              OFFSET(get<int32_t>, {0x3D0, 4, 0, 0})
 };
 
 /// Class /Script/MeshNetwork.MeshBeaconHostObject
@@ -63,7 +78,7 @@ class UMeshNetDriver : public UIpNetDriver
 	static inline constexpr uint64_t __MDKClassSize = 2176;
 
 public:
-	CMember(TArray<AActor*>)                           ClientDormantDynamicActors                                  ___ OFFSET(get<T>, {0x870, 16, 0, 0})
+	CMember(TArray<AActor*>)                           ClientDormantDynamicActors                                  OFFSET(get<T>, {0x870, 16, 0, 0})
 };
 
 /// Class /Script/MeshNetwork.MeshNetworkComponent
@@ -74,11 +89,18 @@ class UMeshNetworkComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(EMeshNetworkRelevancy)                     MeshRelevancy                                               ___ OFFSET(get<T>, {0xA0, 1, 0, 0})
-	CMember(TMap<FString, FAggregatedFunction>)        AggregatedFunctions                                         ___ OFFSET(get<T>, {0xA8, 80, 0, 0})
-	CMember(TMap<FName, FAggregatedFunctionConfig>)    AggregatedFunctionConfigs                                   ___ OFFSET(get<T>, {0xF8, 80, 0, 0})
+	CMember(EMeshNetworkRelevancy)                     MeshRelevancy                                               OFFSET(get<T>, {0xA0, 1, 0, 0})
+	CMember(TMap<FString, FAggregatedFunction>)        AggregatedFunctions                                         OFFSET(get<T>, {0xA8, 80, 0, 0})
+	CMember(TMap<FName, FAggregatedFunctionConfig>)    AggregatedFunctionConfigs                                   OFFSET(get<T>, {0xF8, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MeshNetwork.MeshNetworkComponent.IsConnectedToMeshRoot
+	// bool IsConnectedToMeshRoot();                                                                                            // [0x6f0ace4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MeshNetwork.MeshNetworkComponent.GetMeshNetworkNodeType
+	// EMeshNetworkNodeType GetMeshNetworkNodeType();                                                                           // [0x6f0a084] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/MeshNetwork.MeshNetworkSubsystem
 /// Size: 0x00D8 (0x000030 - 0x000108)
 class UMeshNetworkSubsystem : public UGameInstanceSubsystem
@@ -87,17 +109,38 @@ class UMeshNetworkSubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMeshNodeTypeChanged                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnConnectedToRootChanged                                    ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnGameServerNodeTypeChanged                                 ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMeshMetaDataUpdated                                       ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMeshPlayerRequested                                       ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(EMeshNetworkNodeType)                      NodeType                                                    ___ OFFSET(get<T>, {0xB0, 1, 0, 0})
-	CMember(EMeshNetworkNodeType)                      GameServerNodeType                                          ___ OFFSET(get<T>, {0xB1, 1, 0, 0})
-	DMember(bool)                                      bConnectedToRoot                                            ___ OFFSET(get<bool>, {0xB2, 1, 0, 0})
-	DMember(bool)                                      bMetadataReceived                                           ___ OFFSET(get<bool>, {0xB3, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshNodeTypeChanged                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnConnectedToRootChanged                                    OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnGameServerNodeTypeChanged                                 OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshMetaDataUpdated                                       OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshPlayerRequested                                       OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(EMeshNetworkNodeType)                      NodeType                                                    OFFSET(get<T>, {0xB0, 1, 0, 0})
+	CMember(EMeshNetworkNodeType)                      GameServerNodeType                                          OFFSET(get<T>, {0xB1, 1, 0, 0})
+	DMember(bool)                                      bConnectedToRoot                                            OFFSET(get<bool>, {0xB2, 1, 0, 0})
+	DMember(bool)                                      bMetadataReceived                                           OFFSET(get<bool>, {0xB3, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.SetMetaDataWithKey
+	// void SetMetaDataWithKey(FName Key, FMeshMetaDataStruct& MetaData);                                                       // [0x6f0b6a0] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.SetMetaData
+	// void SetMetaData(FMeshMetaDataStruct& MetaData);                                                                         // [0x5707fc8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.GetMetaDataWithKey
+	// bool GetMetaDataWithKey(FName Key, FMeshMetaDataStruct& MetaData);                                                       // [0x6f0a0c0] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.GetMetadata
+	// void GetMetadata(FMeshMetaDataStruct& MetaData);                                                                         // [0x5707fc8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.GetMeshNetworkNodeType
+	// EMeshNetworkNodeType GetMeshNetworkNodeType();                                                                           // [0x6f0a0a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.GetGameServerNodeType
+	// EMeshNetworkNodeType GetGameServerNodeType();                                                                            // [0x6f0a06c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.GetConnectedToRoot
+	// bool GetConnectedToRoot();                                                                                               // [0x6f0a054] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.EnableMeshReplication
+	// void EnableMeshReplication(AActor* Actor, UClass* MeshComponentClass);                                                   // [0x6f09fa0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MeshNetwork.MeshNetworkSubsystem.DisableMeshReplication
+	// void DisableMeshReplication(AActor* Actor);                                                                              // [0x6f09f30] Final|Native|Public|BlueprintCallable 
 /// Class /Script/MeshNetwork.MeshReplicationGraphConnection
 /// Size: 0x0000 (0x000378 - 0x000378)
 class UMeshReplicationGraphConnection : public UNetReplicationGraphConnection
@@ -126,7 +169,7 @@ class FAggregatedFunction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UFunction*)                                Function                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UFunction*)                                Function                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/MeshNetwork.AggregatedFunctionConfig
@@ -137,9 +180,9 @@ class FAggregatedFunctionConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(double)                                    AggregationTimeout                                          ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(bool)                                      bAggregationEnabled                                         ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	CMember(TSet<FName>)                               NoAggregationParameters                                     ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	DMember(double)                                    AggregationTimeout                                          OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bAggregationEnabled                                         OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(TSet<FName>)                               NoAggregationParameters                                     OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/MeshNetwork.MeshMetaDataStruct

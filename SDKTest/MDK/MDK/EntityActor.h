@@ -27,9 +27,9 @@ class UEntityActorCustomReplicationComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TEnumAsByte<EEntityActorReplicationOverrideType>) ReplicationOverride                                  ___ OFFSET(get<T>, {0x58, 1, 0, 0})
-	CMember(TEnumAsByte<EEntityActorReplicationRelevancyBucketType>) ReplicationRelevancyBucketType                ___ OFFSET(get<T>, {0x59, 1, 0, 0})
-	DMember(float)                                     CustomReplicationRelevancyRange                             ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
+	CMember(TEnumAsByte<EEntityActorReplicationOverrideType>) ReplicationOverride                                  OFFSET(get<T>, {0x58, 1, 0, 0})
+	CMember(TEnumAsByte<EEntityActorReplicationRelevancyBucketType>) ReplicationRelevancyBucketType                OFFSET(get<T>, {0x59, 1, 0, 0})
+	DMember(float)                                     CustomReplicationRelevancyRange                             OFFSET(get<float>, {0x5C, 4, 0, 0})
 };
 
 /// Class /Script/EntityActor.SimObject
@@ -50,8 +50,8 @@ class UActorToEntityAdapterComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<UEntityComponent*>)                 SerializedComponents                                        ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	DMember(bool)                                      bForceOwnerReplication                                      ___ OFFSET(get<bool>, {0xB8, 1, 1, 0})
+	CMember(TArray<UEntityComponent*>)                 SerializedComponents                                        OFFSET(get<T>, {0xA8, 16, 0, 0})
+	DMember(bool)                                      bForceOwnerReplication                                      OFFSET(get<bool>, {0xB8, 1, 1, 0})
 };
 
 /// Class /Script/EntityActor.EntityActorComponent
@@ -62,10 +62,15 @@ class UEntityActorComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(UActorComponent*)                          ActorComponent                                              ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	DMember(bool)                                      bCreatedActorComponent                                      ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	CMember(UActorComponent*)                          ActorComponent                                              OFFSET(get<T>, {0x60, 8, 0, 0})
+	DMember(bool)                                      bCreatedActorComponent                                      OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorComponent.OnRep_ActorComponent
+	// void OnRep_ActorComponent();                                                                                             // [0x1c67f28] Final|Native|Private 
 /// Class /Script/EntityActor.EntityActorSubsystem
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UEntityActorSubsystem : public UWorldSubsystem
@@ -84,11 +89,18 @@ class UEntityDynamicActivationComponent : public UEntityEnableableComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	DMember(float)                                     TransitionTargetTime                                        ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	DMember(bool)                                      bTargetState                                                ___ OFFSET(get<bool>, {0x84, 1, 0, 0})
-	CMember(TArray<UEntityComponent*>)                 LinkedComponents                                            ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	DMember(float)                                     TransitionTargetTime                                        OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(bool)                                      bTargetState                                                OFFSET(get<bool>, {0x84, 1, 0, 0})
+	CMember(TArray<UEntityComponent*>)                 LinkedComponents                                            OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityDynamicActivationComponent.OnRep_TransitionTarget
+	// void OnRep_TransitionTarget();                                                                                           // [0x6925524] Final|Native|Private 
+	// Function /Script/EntityActor.EntityDynamicActivationComponent.OnEnabledChanged
+	// void OnEnabledChanged(bool bIsEnabled);                                                                                  // [0x6924e04] Final|Native|Public  
 /// Class /Script/EntityActor.EntityToActorAdapterComponent
 /// Size: 0x0008 (0x000058 - 0x000060)
 class UEntityToActorAdapterComponent : public UEntityComponent
@@ -107,7 +119,7 @@ class UEntityActorLocalInputComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TEnumAsByte<EAutoReceiveInput>)            AutoReceiveControllerInput                                  ___ OFFSET(get<T>, {0x58, 1, 0, 0})
+	CMember(TEnumAsByte<EAutoReceiveInput>)            AutoReceiveControllerInput                                  OFFSET(get<T>, {0x58, 1, 0, 0})
 };
 
 /// Class /Script/EntityActor.EntityActorCollisionComponent
@@ -118,11 +130,26 @@ class UEntityActorCollisionComponent : public UEntityEnableableComponent
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FName)                                     ShadowVar_CollisionProfileName                              ___ OFFSET(get<T>, {0xC0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      PrimitiveComponentCache                                     ___ OFFSET(get<T>, {0xC8, 32, 0, 0})
-	CMember(TEnumAsByte<ECollisionShapeMode>)          CollisionShapeMode                                          ___ OFFSET(get<T>, {0xEA, 1, 0, 0})
+	SMember(FName)                                     ShadowVar_CollisionProfileName                              OFFSET(get<T>, {0xC0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      PrimitiveComponentCache                                     OFFSET(get<T>, {0xC8, 32, 0, 0})
+	CMember(TEnumAsByte<ECollisionShapeMode>)          CollisionShapeMode                                          OFFSET(get<T>, {0xEA, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnRep_PrimitiveComponent
+	// void OnRep_PrimitiveComponent();                                                                                         // [0x6925484] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnRep_CollisionProfileName
+	// void OnRep_CollisionProfileName();                                                                                       // [0x6925484] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnNativeComponentHit
+	// void OnNativeComponentHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, FHitResult& Hit); // [0x69251c0] Final|Native|Private|HasOutParms|HasDefaults 
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnNativeComponentEndOverlap
+	// void OnNativeComponentEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x6925084] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnNativeComponentBeginOverlap
+	// void OnNativeComponentBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x6924e84] Final|Native|Private|HasOutParms 
+	// Function /Script/EntityActor.EntityActorCollisionComponent.OnEnabledChanged
+	// void OnEnabledChanged(bool bIsEnabled);                                                                                  // [0x6924d84] Final|Native|Private 
 /// Class /Script/EntityActor.EntityActorPlayerComponent
 /// Size: 0x0070 (0x000060 - 0x0000D0)
 class UEntityActorPlayerComponent : public UEntityDataBackedComponent
@@ -131,11 +158,16 @@ class UEntityActorPlayerComponent : public UEntityDataBackedComponent
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FUniqueNetIdRepl)                          PlayerId                                                    ___ OFFSET(get<T>, {0x60, 48, 0, 0})
-	CMember(TWeakObjectPtr<APlayerController*>)        PlayerControllerCache                                       ___ OFFSET(get<T>, {0x90, 32, 0, 0})
-	CMember(TWeakObjectPtr<APlayerState*>)             PlayerStateCache                                            ___ OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FUniqueNetIdRepl)                          PlayerId                                                    OFFSET(get<T>, {0x60, 48, 0, 0})
+	CMember(TWeakObjectPtr<APlayerController*>)        PlayerControllerCache                                       OFFSET(get<T>, {0x90, 32, 0, 0})
+	CMember(TWeakObjectPtr<APlayerState*>)             PlayerStateCache                                            OFFSET(get<T>, {0xB0, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorPlayerComponent.OnRep_PlayerId
+	// void OnRep_PlayerId();                                                                                                   // [0x1c67f28] Native|Protected     
 /// Class /Script/EntityActor.EntityActorSkeletalMeshRenderComponent
 /// Size: 0x0020 (0x000058 - 0x000078)
 class UEntityActorSkeletalMeshRenderComponent : public UEntityComponent
@@ -144,9 +176,9 @@ class UEntityActorSkeletalMeshRenderComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(bool)                                      bAddedMeshRenderComponent                                   ___ OFFSET(get<bool>, {0x60, 1, 0, 0})
-	CMember(USkeletalMesh*)                            ShadowVar_SkeletalMesh                                      ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	CMember(TEnumAsByte<ECollisionEnabled>)            ShadowVar_EnableCollision                                   ___ OFFSET(get<T>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bAddedMeshRenderComponent                                   OFFSET(get<bool>, {0x60, 1, 0, 0})
+	CMember(USkeletalMesh*)                            ShadowVar_SkeletalMesh                                      OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(TEnumAsByte<ECollisionEnabled>)            ShadowVar_EnableCollision                                   OFFSET(get<T>, {0x70, 1, 0, 0})
 };
 
 /// Class /Script/EntityActor.EntityActorStaticMeshRenderComponent
@@ -157,11 +189,20 @@ class UEntityActorStaticMeshRenderComponent : public UEntityActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(TArray<UMaterialInterface*>)               ShadowVar_MeshMaterials                                     ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	CMember(TEnumAsByte<ECollisionEnabled>)            ShadowVar_EnableCollision                                   ___ OFFSET(get<T>, {0x98, 1, 0, 0})
-	DMember(float)                                     ShadowVar_MaxDrawDistance                                   ___ OFFSET(get<float>, {0x9C, 4, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               ShadowVar_MeshMaterials                                     OFFSET(get<T>, {0x88, 16, 0, 0})
+	CMember(TEnumAsByte<ECollisionEnabled>)            ShadowVar_EnableCollision                                   OFFSET(get<T>, {0x98, 1, 0, 0})
+	DMember(float)                                     ShadowVar_MaxDrawDistance                                   OFFSET(get<float>, {0x9C, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorStaticMeshRenderComponent.OnRep_MeshMaterials
+	// void OnRep_MeshMaterials();                                                                                              // [0x69254f8] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorStaticMeshRenderComponent.OnRep_MaxDrawDistance
+	// void OnRep_MaxDrawDistance();                                                                                            // [0x69254dc] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorStaticMeshRenderComponent.OnRep_EnableCollision
+	// void OnRep_EnableCollision();                                                                                            // [0x69254c8] Final|Native|Private 
 /// Class /Script/EntityActor.EntityActorTextDisplayComponent
 /// Size: 0x0028 (0x000088 - 0x0000B0)
 class UEntityActorTextDisplayComponent : public UEntityActorComponent
@@ -170,12 +211,49 @@ class UEntityActorTextDisplayComponent : public UEntityActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FText)                                     DisplayText                                                 ___ OFFSET(get<T>, {0x88, 24, 0, 0})
-	DMember(float)                                     ShadowVar_WorldSize                                         ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FColor)                                    ShadowVar_TextRenderColor                                   ___ OFFSET(get<T>, {0xA4, 4, 0, 0})
-	DMember(bool)                                      bAddedTextRenderComponent                                   ___ OFFSET(get<bool>, {0xA8, 1, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x88, 24, 0, 0})
+	DMember(float)                                     ShadowVar_WorldSize                                         OFFSET(get<float>, {0xA0, 4, 0, 0})
+	SMember(FColor)                                    ShadowVar_TextRenderColor                                   OFFSET(get<T>, {0xA4, 4, 0, 0})
+	DMember(bool)                                      bAddedTextRenderComponent                                   OFFSET(get<bool>, {0xA8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetWorldSize
+	// void SetWorldSize(float Value);                                                                                          // [0x6925ee0] Final|Native|Public  
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetVerticalAlignment
+	// void SetVerticalAlignment(TEnumAsByte<EVerticalTextAligment> Value);                                                     // [0x6925e58] Final|Native|Public  
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetTextRenderColor
+	// void SetTextRenderColor(FColor Value);                                                                                   // [0x6925d08] Final|Native|Public|HasDefaults 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetText
+	// void SetText(FText Text);                                                                                                // [0x6925c6c] Final|Native|Public  
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetRelativeScale
+	// void SetRelativeScale(FVector RelativeScale);                                                                            // [0x6925b04] Final|Native|Public|HasDefaults 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetRelativeRotation
+	// void SetRelativeRotation(FRotator RelativeRotation);                                                                     // [0x692599c] Final|Native|Public|HasDefaults 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetRelativeLocation
+	// void SetRelativeLocation(FVector RelativeLocation);                                                                      // [0x6925834] Final|Native|Public|HasDefaults 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.SetHorizontalAlignment
+	// void SetHorizontalAlignment(TEnumAsByte<EHorizTextAligment> Value);                                                      // [0x69257ac] Final|Native|Public  
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.OnRep_WorldSize
+	// void OnRep_WorldSize();                                                                                                  // [0x6925538] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.OnRep_TextRenderColor
+	// void OnRep_TextRenderColor();                                                                                            // [0x692550c] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.OnRep_DisplayText
+	// void OnRep_DisplayText();                                                                                                // [0x69254b4] Final|Native|Private 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetWorldSize
+	// float GetWorldSize();                                                                                                    // [0x6924d3c] Final|Native|Public|Const 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetVerticalAlignment
+	// TEnumAsByte<EVerticalTextAligment> GetVerticalAlignment();                                                               // [0x6924d00] Final|Native|Public  
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetTextRenderColor
+	// FColor GetTextRenderColor();                                                                                             // [0x6924cbc] Final|Native|Public|HasDefaults|Const 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetText
+	// FText GetText();                                                                                                         // [0x6924c48] Final|Native|Public|Const 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetRelativeLocation
+	// FVector GetRelativeLocation();                                                                                           // [0x6924bf8] Final|Native|Public|HasDefaults 
+	// Function /Script/EntityActor.EntityActorTextDisplayComponent.GetHorizontalAlignment
+	// TEnumAsByte<EHorizTextAligment> GetHorizontalAlignment();                                                                // [0x6924bbc] Final|Native|Public  
 /// Class /Script/EntityActor.EntityActorPositionComponent
 /// Size: 0x0020 (0x000060 - 0x000080)
 class UEntityActorPositionComponent : public UEntityPositionComponent
@@ -184,9 +262,14 @@ class UEntityActorPositionComponent : public UEntityPositionComponent
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   ShadowVar_Location                                          ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   ShadowVar_Location                                          OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorPositionComponent.OnRootComponentChanged
+	// void OnRootComponentChanged(USceneComponent* InRootComponent, bool bIsRootComponent);                                    // [0x6925554] Final|Native|Private 
 /// Class /Script/EntityActor.EntityActorRotationComponent
 /// Size: 0x0028 (0x000060 - 0x000088)
 class UEntityActorRotationComponent : public UEntityRotationComponent
@@ -195,9 +278,14 @@ class UEntityActorRotationComponent : public UEntityRotationComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FRotator)                                  ShadowVar_Rotation                                          ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FRotator)                                  ShadowVar_Rotation                                          OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorRotationComponent.OnRootComponentChanged
+	// void OnRootComponentChanged(USceneComponent* InRootComponent, bool bIsRootComponent);                                    // [0x692561c] Final|Native|Private 
 /// Class /Script/EntityActor.EntityActorScaleComponent
 /// Size: 0x0020 (0x000060 - 0x000080)
 class UEntityActorScaleComponent : public UEntityScaleComponent
@@ -206,9 +294,14 @@ class UEntityActorScaleComponent : public UEntityScaleComponent
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   ShadowVar_Scale                                             ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   ShadowVar_Scale                                             OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityActor.EntityActorScaleComponent.OnRootComponentChanged
+	// void OnRootComponentChanged(USceneComponent* InRootComponent, bool bIsRootComponent);                                    // [0x69256e4] Final|Native|Private 
 /// Enum /Script/EntityActor.EEntityActorReplicationOverrideType
 /// Size: 0x07
 enum EEntityActorReplicationOverrideType : uint8_t

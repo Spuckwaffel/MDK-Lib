@@ -60,14 +60,19 @@ class UFortBuildingSettingsComponentBase : public UEntityEnableableComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(AFortAthenaMutator_BuildingSettings*)      Mutator                                                     ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  Building                                                    ___ OFFSET(get<T>, {0x80, 1, 0, 0})
-	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  BuildingOnWater                                             ___ OFFSET(get<T>, {0x81, 1, 0, 0})
-	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  Editing                                                     ___ OFFSET(get<T>, {0x82, 1, 0, 0})
-	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  EditingHostile                                              ___ OFFSET(get<T>, {0x83, 1, 0, 0})
-	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  TrapPlacement                                               ___ OFFSET(get<T>, {0x84, 1, 0, 0})
+	CMember(AFortAthenaMutator_BuildingSettings*)      Mutator                                                     OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  Building                                                    OFFSET(get<T>, {0x80, 1, 0, 0})
+	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  BuildingOnWater                                             OFFSET(get<T>, {0x81, 1, 0, 0})
+	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  Editing                                                     OFFSET(get<T>, {0x82, 1, 0, 0})
+	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  EditingHostile                                              OFFSET(get<T>, {0x83, 1, 0, 0})
+	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  TrapPlacement                                               OFFSET(get<T>, {0x84, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VerseFortniteInternal.FortBuildingSettingsComponentBase.OnRep_Settings
+	// void OnRep_Settings();                                                                                                   // [0x97c9cc8] Final|Native|Private 
 /// Class /Script/VerseFortniteInternal.FortPlayspaceComponentHelper
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UFortPlayspaceComponentHelper : public UObject

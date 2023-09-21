@@ -27,7 +27,7 @@ class UNetDriverEOSBase : public UIpNetDriver
 	static inline constexpr uint64_t __MDKClassSize = 2160;
 
 public:
-	DMember(bool)                                      bIsPassthrough                                              ___ OFFSET(get<bool>, {0x868, 1, 0, 0})
-	DMember(bool)                                      bIsUsingP2PSockets                                          ___ OFFSET(get<bool>, {0x869, 1, 0, 0})
+	DMember(bool)                                      bIsPassthrough                                              OFFSET(get<bool>, {0x868, 1, 0, 0})
+	DMember(bool)                                      bIsUsingP2PSockets                                          OFFSET(get<bool>, {0x869, 1, 0, 0})
 };
 

@@ -14,8 +14,8 @@ class FOnlineLinkId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Mnemonic                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   Mnemonic                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Enum /Script/LinkId.ELinkCodeUserInputError

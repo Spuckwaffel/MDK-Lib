@@ -17,7 +17,7 @@ class UVerseAgent : public UVersePersistentVarWeakMapKey
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TWeakObjectPtr<AController*>)              Controller                                                  ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TWeakObjectPtr<AController*>)              Controller                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/VerseSimulation.VerseTeam
@@ -38,7 +38,7 @@ class UVerseSimulationSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TMap<TWeakObjectPtr, UVerseAgent*>)        TrackedAgents                                               ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, UVerseAgent*>)        TrackedAgents                                               OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VerseSimulation.LocalizableMessageParameterAgent
@@ -49,6 +49,6 @@ class FLocalizableMessageParameterAgent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FUniqueNetIdRepl)                          Value                                                       ___ OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          Value                                                       OFFSET(get<T>, {0x0, 48, 0, 0})
 };
 

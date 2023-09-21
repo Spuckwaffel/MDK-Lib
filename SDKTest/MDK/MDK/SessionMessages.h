@@ -14,7 +14,7 @@ class FSessionServicePing : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   UserName                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   UserName                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/SessionMessages.SessionServicePong
@@ -25,16 +25,16 @@ class FSessionServicePong : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(bool)                                      AUTHORIZED                                                  ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FString)                                   BuildDate                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   DeviceName                                                  ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FGuid)                                     InstanceID                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   InstanceName                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   PlatformName                                                ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FGuid)                                     SessionId                                                   ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FString)                                   SessionName                                                 ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   SessionOwner                                                ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	DMember(bool)                                      Standalone                                                  ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(bool)                                      AUTHORIZED                                                  OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FString)                                   BuildDate                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FGuid)                                     InstanceID                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   InstanceName                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   PlatformName                                                OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FGuid)                                     SessionId                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   SessionName                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   SessionOwner                                                OFFSET(get<T>, {0x78, 16, 0, 0})
+	DMember(bool)                                      Standalone                                                  OFFSET(get<bool>, {0x88, 1, 0, 0})
 };
 
 /// Struct /Script/SessionMessages.SessionServiceLog
@@ -45,11 +45,11 @@ class FSessionServiceLog : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     category                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Data                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FGuid)                                     InstanceID                                                  ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(double)                                    TimeSeconds                                                 ___ OFFSET(get<double>, {0x28, 8, 0, 0})
-	DMember(char)                                      Verbosity                                                   ___ OFFSET(get<char>, {0x30, 1, 0, 0})
+	SMember(FName)                                     category                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Data                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGuid)                                     InstanceID                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(double)                                    TimeSeconds                                                 OFFSET(get<double>, {0x28, 8, 0, 0})
+	DMember(char)                                      Verbosity                                                   OFFSET(get<char>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/SessionMessages.SessionServiceLogSubscribe

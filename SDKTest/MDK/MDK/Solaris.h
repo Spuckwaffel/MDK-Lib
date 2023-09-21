@@ -16,12 +16,12 @@ class UVerseStruct : public UScriptStruct
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	DMember(uint32_t)                                  VerseClassFlags                                             ___ OFFSET(get<uint32_t>, {0xC0, 4, 0, 0})
-	CMember(UFunction*)                                InitFunction                                                ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	CMember(UVerseClass*)                              ModuleClass                                                 ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FGuid)                                     Guid                                                        ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	CMember(UFunction*)                                FactoryFunction                                             ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(UFunction*)                                OverrideFactoryFunction                                     ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
+	DMember(uint32_t)                                  VerseClassFlags                                             OFFSET(get<uint32_t>, {0xC0, 4, 0, 0})
+	CMember(UFunction*)                                InitFunction                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(UVerseClass*)                              ModuleClass                                                 OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(UFunction*)                                FactoryFunction                                             OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(UFunction*)                                OverrideFactoryFunction                                     OFFSET(get<T>, {0xF0, 8, 0, 0})
 };
 
 /// Class /Script/Solaris.SolarisWeakMapLibrary
@@ -42,10 +42,10 @@ class UVerseDigest : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<char>)                              DigestCode                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   ProjectName                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(EVerseDigestVariant)                       Variant                                                     ___ OFFSET(get<T>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bCookAllVerseInternalDigests                                ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
+	CMember(TArray<char>)                              DigestCode                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   ProjectName                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(EVerseDigestVariant)                       Variant                                                     OFFSET(get<T>, {0x48, 1, 0, 0})
+	DMember(bool)                                      bCookAllVerseInternalDigests                                OFFSET(get<bool>, {0x49, 1, 0, 0})
 };
 
 /// Class /Script/Solaris.VerseEnum
@@ -56,7 +56,7 @@ class UVerseEnum : public UEnum
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(EVerseEnumFlags)                           VerseEnumFlags                                              ___ OFFSET(get<T>, {0x68, 4, 0, 0})
+	CMember(EVerseEnumFlags)                           VerseEnumFlags                                              OFFSET(get<T>, {0x68, 4, 0, 0})
 };
 
 /// Class /Script/Solaris.SolarisArrayLibrary
@@ -167,8 +167,8 @@ class USolarisGameSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FString>)                           Blacklist                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(int32_t)                                   MaxAllowedSize                                              ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	CMember(TArray<FString>)                           Blacklist                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(int32_t)                                   MaxAllowedSize                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/Solaris.SolarisUtilLibrary
@@ -189,13 +189,13 @@ class UVerseClass : public UVerseClassBase
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	DMember(uint32_t)                                  SolClassFlags                                               ___ OFFSET(get<uint32_t>, {0x200, 4, 0, 0})
-	CMember(TArray<UVerseClass*>)                      TaskClasses                                                 ___ OFFSET(get<T>, {0x208, 16, 0, 0})
-	CMember(TSet<UVerseClass*>)                        InterfaceClasses                                            ___ OFFSET(get<T>, {0x218, 80, 0, 0})
-	CMember(TMap<FName, InterfaceMethodFunctionProperties>) InterfaceMethodFunctionProperties                      ___ OFFSET(get<T>, {0x268, 80, 0, 0})
-	CMember(UFunction*)                                InitInstanceFunction                                        ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(TArray<FVersePersistentVar>)               PersistentVars                                              ___ OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	CMember(TArray<FVerseSessionVar>)                  SessionVars                                                 ___ OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	DMember(uint32_t)                                  SolClassFlags                                               OFFSET(get<uint32_t>, {0x200, 4, 0, 0})
+	CMember(TArray<UVerseClass*>)                      TaskClasses                                                 OFFSET(get<T>, {0x208, 16, 0, 0})
+	CMember(TSet<UVerseClass*>)                        InterfaceClasses                                            OFFSET(get<T>, {0x218, 80, 0, 0})
+	CMember(TMap<FName, InterfaceMethodFunctionProperties>) InterfaceMethodFunctionProperties                      OFFSET(get<T>, {0x268, 80, 0, 0})
+	CMember(UFunction*)                                InitInstanceFunction                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(TArray<FVersePersistentVar>)               PersistentVars                                              OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	CMember(TArray<FVerseSessionVar>)                  SessionVars                                                 OFFSET(get<T>, {0x2D0, 16, 0, 0})
 };
 
 /// Class /Script/Solaris.VerseDebugData
@@ -246,10 +246,10 @@ class FVersePackageContainerSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   VersePath                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EVersePackageScope)                        VerseScope                                                  ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	CMember(TArray<FString>)                           DependencyPackages                                          ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   VniDestDir                                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   VersePath                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EVersePackageScope)                        VerseScope                                                  OFFSET(get<T>, {0x10, 1, 0, 0})
+	CMember(TArray<FString>)                           DependencyPackages                                          OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   VniDestDir                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseSourceCode
@@ -260,7 +260,7 @@ class FVerseSourceCode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<char>)                              Code                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<char>)                              Code                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseSourceFile
@@ -271,8 +271,8 @@ class FVerseSourceFile : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Filename                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FVerseSourceCode>)                  CodeChunks                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVerseSourceCode>)                  CodeChunks                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VersePackageContainer
@@ -283,14 +283,14 @@ class FVersePackageContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DirPath                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(EVersePackageType)                         PackageType                                                 ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bEnableVerseAssetReflection                                 ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FVersePackageContainerSettings)            Settings                                                    ___ OFFSET(get<T>, {0x28, 56, 0, 0})
-	CMember(TArray<FVerseSourceFile>)                  SourceFiles                                                 ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<char>)                              AssetDigest                                                 ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FString>)                           AssetDependencies                                           ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DirPath                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(EVersePackageType)                         PackageType                                                 OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bEnableVerseAssetReflection                                 OFFSET(get<bool>, {0x21, 1, 0, 0})
+	SMember(FVersePackageContainerSettings)            Settings                                                    OFFSET(get<T>, {0x28, 56, 0, 0})
+	CMember(TArray<FVerseSourceFile>)                  SourceFiles                                                 OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<char>)                              AssetDigest                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FString>)                           AssetDependencies                                           OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseProjectContainer
@@ -301,7 +301,7 @@ class FVerseProjectContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FVersePackageContainer>)            Packages                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVersePackageContainer>)            Packages                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.GenericElementType
@@ -322,7 +322,7 @@ class FVersePersistentVar : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Path                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Path                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseSessionVar

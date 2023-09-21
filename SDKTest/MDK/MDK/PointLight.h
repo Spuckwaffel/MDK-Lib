@@ -16,12 +16,25 @@ class UPointLightNativeComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	CMember(UTimelineComponent*)                       ShortCircuitTimelineComponent                               ___ OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FLinearColor)                              FlickerColor                                                ___ OFFSET(get<T>, {0x150, 16, 0, 0})
-	DMember(float)                                     ShortCircuitMinDelay                                        ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(float)                                     ShortCircuitMaxDelay                                        ___ OFFSET(get<float>, {0x164, 4, 0, 0})
+	CMember(UTimelineComponent*)                       ShortCircuitTimelineComponent                               OFFSET(get<T>, {0x130, 8, 0, 0})
+	SMember(FLinearColor)                              FlickerColor                                                OFFSET(get<T>, {0x150, 16, 0, 0})
+	DMember(float)                                     ShortCircuitMinDelay                                        OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(float)                                     ShortCircuitMaxDelay                                        OFFSET(get<float>, {0x164, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/PointLight.PointLightNativeComponent.UpdateShortCircuit
+	// void UpdateShortCircuit();                                                                                               // [0x9adc774] Final|Native|Private 
+	// Function /Script/PointLight.PointLightNativeComponent.UpdateDeviceSettings
+	// void UpdateDeviceSettings(FPointLightRhythmParameters& RhythmParameters);                                                // [0x9adc6e4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/PointLight.PointLightNativeComponent.StopShortCircuitUpdate
+	// void StopShortCircuitUpdate();                                                                                           // [0x9adc6d0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/PointLight.PointLightNativeComponent.StartShortCircuitUpdate
+	// void StartShortCircuitUpdate(UTimelineComponent* ShortCircuitTimeline);                                                  // [0x9adc52c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/PointLight.PointLightNativeComponent.StartRhythmUpdate
+	// void StartRhythmUpdate(FTimerHandle& TimerHandle, float Rate);                                                           // [0x9adc3f4] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Struct /Script/PointLight.PointLightRhythmParameters
 /// Size: 0x0038 (0x000000 - 0x000038)
 class FPointLightRhythmParameters : public MDKStruct
@@ -30,16 +43,16 @@ class FPointLightRhythmParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              LightColor                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(ULightComponent*)                          ActiveLight                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StaticMeshComponent                                         ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	DMember(int32_t)                                   ColorBands                                                  ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(float)                                     RhythmFrequencyValue                                        ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     WindAmplitudeSpotLight                                      ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     FlashFactor                                                 ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     SizeBasedIntensity                                          ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	CMember(EPointLightDeviceLightType)                LightType                                                   ___ OFFSET(get<T>, {0x34, 1, 0, 0})
-	CMember(EPointLightDeviceModes)                    RhythmMode                                                  ___ OFFSET(get<T>, {0x35, 1, 0, 0})
+	SMember(FLinearColor)                              LightColor                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(ULightComponent*)                          ActiveLight                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StaticMeshComponent                                         OFFSET(get<T>, {0x18, 8, 0, 0})
+	DMember(int32_t)                                   ColorBands                                                  OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(float)                                     RhythmFrequencyValue                                        OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     WindAmplitudeSpotLight                                      OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     FlashFactor                                                 OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     SizeBasedIntensity                                          OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(EPointLightDeviceLightType)                LightType                                                   OFFSET(get<T>, {0x34, 1, 0, 0})
+	CMember(EPointLightDeviceModes)                    RhythmMode                                                  OFFSET(get<T>, {0x35, 1, 0, 0})
 };
 
 /// Enum /Script/PointLight.EPointLightDeviceModes

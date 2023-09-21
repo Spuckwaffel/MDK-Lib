@@ -16,6 +16,15 @@ class UUACNetworkComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	DMember(int32_t)                                   PlayerId                                                    ___ OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
+	DMember(int32_t)                                   PlayerId                                                    OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/UACCommon.UACNetworkComponent.SendPacketToServer
+	// void SendPacketToServer(char EnhPacketType, TArray<char> Data);                                                          // [0x72fdc70] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/UACCommon.UACNetworkComponent.SendPacketToClient
+	// void SendPacketToClient(char EnhPacketType, TArray<char> Data);                                                          // [0x72fdb98] Net|NetReliableNative|Event|Protected|NetClient 
+	// Function /Script/UACCommon.UACNetworkComponent.SendClientHello
+	// void SendClientHello(uint32_t SessionKey);                                                                               // [0x72fda40] Net|NetReliableNative|Event|Public|NetClient 

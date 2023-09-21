@@ -14,8 +14,8 @@ class FLiveLinkPingMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     PollRequest                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   LiveLinkVersion                                             ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FGuid)                                     PollRequest                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   LiveLinkVersion                                             OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMessageBusFramework.LiveLinkPongMessage
@@ -26,11 +26,11 @@ class FLiveLinkPongMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   ProviderName                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   MachineName                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGuid)                                     PollRequest                                                 ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(int32_t)                                   LiveLinkVersion                                             ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(double)                                    CreationPlatformTime                                        ___ OFFSET(get<double>, {0x38, 8, 0, 0})
+	SMember(FString)                                   ProviderName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   MachineName                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     PollRequest                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(int32_t)                                   LiveLinkVersion                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(double)                                    CreationPlatformTime                                        OFFSET(get<double>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMessageBusFramework.LiveLinkConnectMessage
@@ -41,7 +41,7 @@ class FLiveLinkConnectMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   LiveLinkVersion                                             ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   LiveLinkVersion                                             OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMessageBusFramework.LiveLinkHeartbeatMessage
@@ -62,7 +62,7 @@ class FLiveLinkClearSubject : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     SubjectName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SubjectName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMessageBusFramework.LiveLinkSubjectDataMessage
@@ -73,8 +73,8 @@ class FLiveLinkSubjectDataMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FLiveLinkRefSkeleton)                      RefSkeleton                                                 ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FName)                                     SubjectName                                                 ___ OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FLiveLinkRefSkeleton)                      RefSkeleton                                                 OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FName)                                     SubjectName                                                 OFFSET(get<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMessageBusFramework.LiveLinkSubjectFrameMessage
@@ -85,10 +85,10 @@ class FLiveLinkSubjectFrameMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     SubjectName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FLiveLinkCurveElement>)             Curves                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FLiveLinkMetaData)                         MetaData                                                    ___ OFFSET(get<T>, {0x28, 96, 0, 0})
-	DMember(double)                                    Time                                                        ___ OFFSET(get<double>, {0x88, 8, 0, 0})
+	SMember(FName)                                     SubjectName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FLiveLinkCurveElement>)             Curves                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLiveLinkMetaData)                         MetaData                                                    OFFSET(get<T>, {0x28, 96, 0, 0})
+	DMember(double)                                    Time                                                        OFFSET(get<double>, {0x88, 8, 0, 0})
 };
 

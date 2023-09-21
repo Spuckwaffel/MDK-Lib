@@ -27,7 +27,7 @@ class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FRigVMGraphFunctionStore)                  GraphFunctionStore                                          ___ OFFSET(get<T>, {0x370, 32, 0, 0})
+	SMember(FRigVMGraphFunctionStore)                  GraphFunctionStore                                          OFFSET(get<T>, {0x370, 32, 0, 0})
 };
 
 /// Class /Script/RigVM.RigVM
@@ -38,17 +38,68 @@ class URigVM : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	CMember(URigVMMemoryStorage*)                      WorkMemoryStorageObject                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(URigVMMemoryStorage*)                      LiteralMemoryStorageObject                                  ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(URigVMMemoryStorage*)                      DebugMemoryStorageObject                                    ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FRigVMByteCode)                            ByteCodeStorage                                             ___ OFFSET(get<T>, {0x60, 160, 0, 0})
-	SMember(FRigVMInstructionArray)                    Instructions                                                ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(TArray<FName>)                             FunctionNamesStorage                                        ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TArray<FRigVMParameter>)                   Parameters                                                  ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	CMember(TMap<FName, int32_t>)                      ParametersNameMap                                           ___ OFFSET(get<T>, {0x178, 80, 0, 0})
-	CMember(URigVM*)                                   DeferredVMToCopy                                            ___ OFFSET(get<T>, {0x300, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      WorkMemoryStorageObject                                     OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      LiteralMemoryStorageObject                                  OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      DebugMemoryStorageObject                                    OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FRigVMByteCode)                            ByteCodeStorage                                             OFFSET(get<T>, {0x60, 160, 0, 0})
+	SMember(FRigVMInstructionArray)                    Instructions                                                OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(TArray<FName>)                             FunctionNamesStorage                                        OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(TArray<FRigVMParameter>)                   Parameters                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
+	CMember(TMap<FName, int32_t>)                      ParametersNameMap                                           OFFSET(get<T>, {0x178, 80, 0, 0})
+	CMember(URigVM*)                                   DeferredVMToCopy                                            OFFSET(get<T>, {0x300, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RigVM.RigVM.SetParameterValueVector2D
+	// void SetParameterValueVector2D(FName& InParameterName, FVector2D& InValue, int32_t InArrayIndex);                        // [0x6d76bc0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueVector
+	// void SetParameterValueVector(FName& InParameterName, FVector& InValue, int32_t InArrayIndex);                            // [0x6d76d44] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueTransform
+	// void SetParameterValueTransform(FName& InParameterName, FTransform& InValue, int32_t InArrayIndex);                      // [0x6d769d0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueString
+	// void SetParameterValueString(FName& InParameterName, FString InValue, int32_t InArrayIndex);                             // [0x6d761d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueQuat
+	// void SetParameterValueQuat(FName& InParameterName, FQuat& InValue, int32_t InArrayIndex);                                // [0x6d75ff0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueName
+	// void SetParameterValueName(FName& InParameterName, FName& InValue, int32_t InArrayIndex);                                // [0x6d75e6c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueInt
+	// void SetParameterValueInt(FName& InParameterName, int32_t InValue, int32_t InArrayIndex);                                // [0x6d75c94] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueFloat
+	// void SetParameterValueFloat(FName& InParameterName, float InValue, int32_t InArrayIndex);                                // [0x6d75ab8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueDouble
+	// void SetParameterValueDouble(FName& InParameterName, double InValue, int32_t InArrayIndex);                              // [0x6d758d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.SetParameterValueBool
+	// void SetParameterValueBool(FName& InParameterName, bool InValue, int32_t InArrayIndex);                                  // [0x6d756ec] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetStatistics
+	// FRigVMStatistics GetStatistics();                                                                                        // [0x6d75624] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVM.GetRigVMFunctionName
+	// FString GetRigVMFunctionName(int32_t InFunctionIndex);                                                                   // [0x6d7557c] Native|Public|Const  
+	// Function /Script/RigVM.RigVM.GetParameterValueVector2D
+	// FVector2D GetParameterValueVector2D(FName& InParameterName, int32_t InArrayIndex);                                       // [0x6d752a8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueVector
+	// FVector GetParameterValueVector(FName& InParameterName, int32_t InArrayIndex);                                           // [0x6d75408] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueTransform
+	// FTransform GetParameterValueTransform(FName& InParameterName, int32_t InArrayIndex);                                     // [0x6d750dc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueString
+	// FString GetParameterValueString(FName& InParameterName, int32_t InArrayIndex);                                           // [0x6d74f68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueQuat
+	// FQuat GetParameterValueQuat(FName& InParameterName, int32_t InArrayIndex);                                               // [0x6d74df8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueName
+	// FName GetParameterValueName(FName& InParameterName, int32_t InArrayIndex);                                               // [0x6d74ca8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueInt
+	// int32_t GetParameterValueInt(FName& InParameterName, int32_t InArrayIndex);                                              // [0x6d74b64] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueFloat
+	// float GetParameterValueFloat(FName& InParameterName, int32_t InArrayIndex);                                              // [0x6d74a1c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueDouble
+	// double GetParameterValueDouble(FName& InParameterName, int32_t InArrayIndex);                                            // [0x6d748d4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.GetParameterValueBool
+	// bool GetParameterValueBool(FName& InParameterName, int32_t InArrayIndex);                                                // [0x6d74790] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.Execute
+	// bool Execute(FRigVMExtendedExecuteContext& Context, FName& InEntryName);                                                 // [0x6d745f0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVM.AddRigVMFunction
+	// int32_t AddRigVMFunction(UScriptStruct* InRigVMStruct, FName& InMethodName);                                             // [0x6d7451c] Native|Public|HasOutParms 
 /// Class /Script/RigVM.NameSpacedUserData
 /// Size: 0x00D8 (0x000028 - 0x000100)
 class UNameSpacedUserData : public UAssetUserData
@@ -57,7 +108,7 @@ class UNameSpacedUserData : public UAssetUserData
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FString)                                   Namespace                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Namespace                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/RigVM.DataAssetLink
@@ -68,9 +119,16 @@ class UDataAssetLink : public UNameSpacedUserData
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(UDataAsset*)                               DataAsset                                                   ___ OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(UDataAsset*)                               DataAsset                                                   OFFSET(get<T>, {0x100, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RigVM.DataAssetLink.SetDataAsset
+	// void SetDataAsset(UDataAsset* InDataAsset);                                                                              // [0x6d7566c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.DataAssetLink.GetDataAsset
+	// UDataAsset* GetDataAsset();                                                                                              // [0x6d74778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/RigVM.RigVMMemoryStorageGeneratorClass
 /// Size: 0x0040 (0x000200 - 0x000240)
 class URigVMMemoryStorageGeneratorClass : public UClass
@@ -109,10 +167,23 @@ class URigVMUserWorkflowOptions : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(UObject*)                                  Subject                                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FRigVMUserWorkflow)                        Workflow                                                    ___ OFFSET(get<T>, {0x30, 88, 0, 0})
+	CMember(UObject*)                                  Subject                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FRigVMUserWorkflow)                        Workflow                                                    OFFSET(get<T>, {0x30, 88, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RigVM.RigVMUserWorkflowOptions.RequiresDialog
+	// bool RequiresDialog();                                                                                                   // [0x6dbef90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportWarning
+	// void ReportWarning(FString InMessage);                                                                                   // [0x6dbe8d4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportInfo
+	// void ReportInfo(FString InMessage);                                                                                      // [0x6dbe218] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportError
+	// void ReportError(FString InMessage);                                                                                     // [0x6dbdb5c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMUserWorkflowOptions.IsValid
+	// bool IsValid();                                                                                                          // [0x6dbdb40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/RigVM.RigVMHost
 /// Size: 0x0310 (0x000028 - 0x000338)
 class URigVMHost : public UObject
@@ -121,14 +192,61 @@ class URigVMHost : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FRigVMRuntimeSettings)                     VMRuntimeSettings                                           ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	CMember(URigVM*)                                   VM                                                          ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      ___ OFFSET(get<T>, {0x60, 440, 0, 0})
-	SMember(FRigVMDrawContainer)                       DrawContainer                                               ___ OFFSET(get<T>, {0x218, 24, 0, 0})
-	CMember(TArray<FName>)                             EventQueue                                                  ___ OFFSET(get<T>, {0x248, 16, 0, 0})
-	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               ___ OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	SMember(FRigVMRuntimeSettings)                     VMRuntimeSettings                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	CMember(URigVM*)                                   VM                                                          OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      OFFSET(get<T>, {0x60, 440, 0, 0})
+	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(get<T>, {0x218, 24, 0, 0})
+	CMember(TArray<FName>)                             EventQueue                                                  OFFSET(get<T>, {0x248, 16, 0, 0})
+	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x2E8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/RigVM.RigVMHost.SupportsEvent
+	// bool SupportsEvent(FName& InEventName);                                                                                  // [0x6dcc244] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.SetVariableFromString
+	// bool SetVariableFromString(FName& InVariableName, FString InValue);                                                      // [0x6dcbb14] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.SetFramesPerSecond
+	// void SetFramesPerSecond(float InFramesPerSecond);                                                                        // [0x6dcba94] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.SetDeltaTime
+	// void SetDeltaTime(float InDeltaTime);                                                                                    // [0x6dcba14] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.SetAbsoluteTime
+	// void SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero);                                                     // [0x6dcb94c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.SetAbsoluteAndDeltaTime
+	// void SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime);                                                   // [0x6dcb884] Final|Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.RequestRunOnceEvent
+	// void RequestRunOnceEvent(FName& InEventName, int32_t InEventIndex);                                                      // [0x6dcb750] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.RequestInit
+	// void RequestInit();                                                                                                      // [0x5c3e9b4] Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.RemoveRunOnceEvent
+	// bool RemoveRunOnceEvent(FName& InEventName);                                                                             // [0x6dcb6b8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.GetVM
+	// URigVM* GetVM();                                                                                                         // [0x6dcaf58] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/RigVM.RigVMHost.GetVariableType
+	// FName GetVariableType(FName& InVariableName);                                                                            // [0x6dcb608] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetVariableAsString
+	// FString GetVariableAsString(FName& InVariableName);                                                                      // [0x6dcaf7c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetSupportedEvents
+	// TArray<FName> GetSupportedEvents();                                                                                      // [0x6dcaeb8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetScriptAccessibleVariables
+	// TArray<FName> GetScriptAccessibleVariables();                                                                            // [0x6dcae78] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetExtendedExecuteContext
+	// FRigVMExtendedExecuteContext GetExtendedExecuteContext();                                                                // [0x6dcae48] Native|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.GetDeltaTime
+	// float GetDeltaTime();                                                                                                    // [0x327b0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetCurrentFramesPerSecond
+	// float GetCurrentFramesPerSecond();                                                                                       // [0x6dcae28] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.GetAbsoluteTime
+	// float GetAbsoluteTime();                                                                                                 // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/RigVM.RigVMHost.FindRigVMHosts
+	// TArray<URigVMHost*> FindRigVMHosts(UObject* Outer, UClass* OptionalClass);                                               // [0x6dcad2c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.ExecuteEvent
+	// bool ExecuteEvent(FName& InEventName);                                                                                   // [0x6dcac94] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.Execute
+	// bool Execute(FName& InEventName);                                                                                        // [0x6dcabf4] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/RigVM.RigVMHost.CanExecute
+	// bool CanExecute();                                                                                                       // [0x18ca390] Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/RigVM.RigVMEditorSettings
 /// Size: 0x0000 (0x000030 - 0x000030)
 class URigVMEditorSettings : public UDeveloperSettings
@@ -147,9 +265,9 @@ class FRigVMExtendedExecuteContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 440;
 
 public:
-	DMember(uint32_t)                                  VMHash                                                      ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
-	DMember(uint32_t)                                  NumExecutions                                               ___ OFFSET(get<uint32_t>, {0x110, 4, 0, 0})
-	CMember(URigVM*)                                   DeferredVMToCopy                                            ___ OFFSET(get<T>, {0x170, 8, 0, 0})
+	DMember(uint32_t)                                  VMHash                                                      OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  NumExecutions                                               OFFSET(get<uint32_t>, {0x110, 4, 0, 0})
+	CMember(URigVM*)                                   DeferredVMToCopy                                            OFFSET(get<T>, {0x170, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDrawContainer
@@ -160,7 +278,7 @@ class FRigVMDrawContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FRigVMDrawInstruction>)             Instructions                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigVMDrawInstruction>)             Instructions                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDrawInstruction
@@ -171,12 +289,12 @@ class FRigVMDrawInstruction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TEnumAsByte<ERigVMDrawSettings>)           PrimitiveType                                               ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	CMember(TArray<FVector>)                           Positions                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TEnumAsByte<ERigVMDrawSettings>)           PrimitiveType                                               OFFSET(get<T>, {0x4, 1, 0, 0})
+	CMember(TArray<FVector>)                           Positions                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMRuntimeSettings
@@ -187,7 +305,7 @@ class FRigVMRuntimeSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   MaximumArraySize                                            ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   MaximumArraySize                                            OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMStruct
@@ -258,7 +376,7 @@ class FRigVMStructMutable : public FRigVMStruct
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMExecuteContext
@@ -309,9 +427,9 @@ class FRigVMFunction_Sequence : public FRigVMStruct
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      A                                                           ___ OFFSET(get<T>, {0x100, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      B                                                           ___ OFFSET(get<T>, {0x1F0, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      A                                                           OFFSET(get<T>, {0x100, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      B                                                           OFFSET(get<T>, {0x1F0, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDispatchFactory
@@ -332,7 +450,7 @@ class FRigVMUnknownType : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(uint32_t)                                  Hash                                                        ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Hash                                                        OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_SimBase
@@ -363,8 +481,8 @@ class FRigVMGraphFunctionStore : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FRigVMGraphFunctionData>)           PublicFunctions                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FRigVMGraphFunctionData>)           PrivateFunctions                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FRigVMGraphFunctionData>)           PublicFunctions                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigVMGraphFunctionData>)           PrivateFunctions                                            OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionData
@@ -375,9 +493,9 @@ class FRigVMGraphFunctionData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FRigVMGraphFunctionHeader)                 Header                                                      ___ OFFSET(get<T>, {0x0, 256, 0, 0})
-	SMember(FRigVMFunctionCompilationData)             CompilationData                                             ___ OFFSET(get<T>, {0x100, 552, 0, 0})
-	SMember(FString)                                   SerializedCollapsedNode                                     ___ OFFSET(get<T>, {0x328, 16, 0, 0})
+	SMember(FRigVMGraphFunctionHeader)                 Header                                                      OFFSET(get<T>, {0x0, 256, 0, 0})
+	SMember(FRigVMFunctionCompilationData)             CompilationData                                             OFFSET(get<T>, {0x100, 552, 0, 0})
+	SMember(FString)                                   SerializedCollapsedNode                                     OFFSET(get<T>, {0x328, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationData
@@ -388,19 +506,19 @@ class FRigVMFunctionCompilationData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FRigVMByteCode)                            ByteCode                                                    ___ OFFSET(get<T>, {0x0, 160, 0, 0})
-	CMember(TArray<FName>)                             FunctionNames                                               ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) WorkPropertyDescriptions                         ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) WorkPropertyPathDescriptions                            ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) LiteralPropertyDescriptions                      ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) LiteralPropertyPathDescriptions                         ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) DebugPropertyDescriptions                        ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) DebugPropertyPathDescriptions                           ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) ExternalPropertyDescriptions                     ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) ExternalPropertyPathDescriptions                        ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TMap<int32_t, FName>)                      ExternalRegisterIndexToVariable                             ___ OFFSET(get<T>, {0x130, 80, 0, 0})
-	CMember(TMap<FString, FRigVMOperand>)              Operands                                                    ___ OFFSET(get<T>, {0x180, 80, 0, 0})
-	DMember(uint32_t)                                  Hash                                                        ___ OFFSET(get<uint32_t>, {0x1D0, 4, 0, 0})
+	SMember(FRigVMByteCode)                            ByteCode                                                    OFFSET(get<T>, {0x0, 160, 0, 0})
+	CMember(TArray<FName>)                             FunctionNames                                               OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) WorkPropertyDescriptions                         OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) WorkPropertyPathDescriptions                            OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) LiteralPropertyDescriptions                      OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) LiteralPropertyPathDescriptions                         OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) DebugPropertyDescriptions                        OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) DebugPropertyPathDescriptions                           OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) ExternalPropertyDescriptions                     OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) ExternalPropertyPathDescriptions                        OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(TMap<int32_t, FName>)                      ExternalRegisterIndexToVariable                             OFFSET(get<T>, {0x130, 80, 0, 0})
+	CMember(TMap<FString, FRigVMOperand>)              Operands                                                    OFFSET(get<T>, {0x180, 80, 0, 0})
+	DMember(uint32_t)                                  Hash                                                        OFFSET(get<uint32_t>, {0x1D0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMOperand
@@ -411,9 +529,9 @@ class FRigVMOperand : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
 public:
-	CMember(ERigVMMemoryType)                          MemoryType                                                  ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(uint16_t)                                  RegisterIndex                                               ___ OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
-	DMember(uint16_t)                                  RegisterOffset                                              ___ OFFSET(get<uint16_t>, {0x4, 2, 0, 0})
+	CMember(ERigVMMemoryType)                          MemoryType                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(uint16_t)                                  RegisterIndex                                               OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
+	DMember(uint16_t)                                  RegisterOffset                                              OFFSET(get<uint16_t>, {0x4, 2, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationPropertyPath
@@ -424,9 +542,9 @@ class FRigVMFunctionCompilationPropertyPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   PropertyIndex                                               ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   HeadCPPType                                                 ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   SegmentPath                                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(int32_t)                                   PropertyIndex                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	SMember(FString)                                   HeadCPPType                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   SegmentPath                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationPropertyDescription
@@ -437,10 +555,10 @@ class FRigVMFunctionCompilationPropertyDescription : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   CPPType                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               ___ OFFSET(get<T>, {0x18, 32, 0, 0})
-	SMember(FString)                                   DefaultValue                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   CPPType                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMByteCode
@@ -451,11 +569,11 @@ class FRigVMByteCode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(TArray<char>)                              ByteCode                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   NumInstructions                                             ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	CMember(TArray<FRigVMByteCodeEntry>)               Entries                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FRigVMBranchInfo>)                  BranchInfos                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FRigVMPredicateBranch>)             PredicateBranches                                           ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<char>)                              ByteCode                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   NumInstructions                                             OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	CMember(TArray<FRigVMByteCodeEntry>)               Entries                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FRigVMBranchInfo>)                  BranchInfos                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FRigVMPredicateBranch>)             PredicateBranches                                           OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMPredicateBranch
@@ -476,12 +594,12 @@ class FRigVMBranchInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Label                                                       ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   InstructionIndex                                            ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   ArgumentIndex                                               ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(uint16_t)                                  FirstInstruction                                            ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(uint16_t)                                  LastInstruction                                             ___ OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Label                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   InstructionIndex                                            OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   ArgumentIndex                                               OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(uint16_t)                                  FirstInstruction                                            OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(uint16_t)                                  LastInstruction                                             OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMByteCodeEntry
@@ -492,8 +610,8 @@ class FRigVMByteCodeEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   InstructionIndex                                            ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   InstructionIndex                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionHeader
@@ -504,16 +622,16 @@ class FRigVMGraphFunctionHeader : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FRigVMGraphFunctionIdentifier)             LibraryPointer                                              ___ OFFSET(get<T>, {0x0, 48, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FString)                                   NodeTitle                                                   ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FLinearColor)                              NodeColor                                                   ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FText)                                     ToolTip                                                     ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FString)                                   category                                                    ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FString)                                   Keywords                                                    ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FRigVMGraphFunctionArgument>)       Arguments                                                   ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TMap<FRigVMGraphFunctionIdentifier, uint32_t>) Dependencies                                            ___ OFFSET(get<T>, {0xA0, 80, 0, 0})
-	CMember(TArray<FRigVMExternalVariable>)            ExternalVariables                                           ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FRigVMGraphFunctionIdentifier)             LibraryPointer                                              OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FString)                                   NodeTitle                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FLinearColor)                              NodeColor                                                   OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FText)                                     ToolTip                                                     OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FString)                                   category                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   Keywords                                                    OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FRigVMGraphFunctionArgument>)       Arguments                                                   OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TMap<FRigVMGraphFunctionIdentifier, uint32_t>) Dependencies                                            OFFSET(get<T>, {0xA0, 80, 0, 0})
+	CMember(TArray<FRigVMExternalVariable>)            ExternalVariables                                           OFFSET(get<T>, {0xF0, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionIdentifier
@@ -524,8 +642,8 @@ class FRigVMGraphFunctionIdentifier : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FSoftObjectPath)                           LibraryNode                                                 ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           HostObject                                                  ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSoftObjectPath)                           LibraryNode                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           HostObject                                                  OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionArgument
@@ -536,15 +654,15 @@ class FRigVMGraphFunctionArgument : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     CPPType                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(bool)                                      bIsArray                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	CMember(ERigVMPinDirection)                        Direction                                                   ___ OFFSET(get<T>, {0x31, 1, 0, 0})
-	SMember(FString)                                   DefaultValue                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(bool)                                      bIsConst                                                    ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	CMember(TMap<FString, FText>)                      PathToTooltip                                               ___ OFFSET(get<T>, {0x50, 80, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(bool)                                      bIsArray                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
+	CMember(ERigVMPinDirection)                        Direction                                                   OFFSET(get<T>, {0x31, 1, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(bool)                                      bIsConst                                                    OFFSET(get<bool>, {0x48, 1, 0, 0})
+	CMember(TMap<FString, FText>)                      PathToTooltip                                               OFFSET(get<T>, {0x50, 80, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMMemoryStatistics
@@ -555,9 +673,9 @@ class FRigVMMemoryStatistics : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   RegisterCount                                               ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   DataBytes                                                   ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   TotalBytes                                                  ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   RegisterCount                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   DataBytes                                                   OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   TotalBytes                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMByteCodeStatistics
@@ -568,8 +686,8 @@ class FRigVMByteCodeStatistics : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   InstructionCount                                            ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   DataBytes                                                   ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   InstructionCount                                            OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   DataBytes                                                   OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMStatistics
@@ -580,13 +698,13 @@ class FRigVMStatistics : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   BytesForCDO                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   BytesPerInstance                                            ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    LiteralMemory                                               ___ OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    WorkMemory                                                  ___ OFFSET(get<T>, {0x14, 12, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    DebugMemory                                                 ___ OFFSET(get<T>, {0x20, 12, 0, 0})
-	DMember(int32_t)                                   BytesForCaching                                             ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	SMember(FRigVMByteCodeStatistics)                  ByteCode                                                    ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(int32_t)                                   BytesForCDO                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   BytesPerInstance                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    LiteralMemory                                               OFFSET(get<T>, {0x8, 12, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    WorkMemory                                                  OFFSET(get<T>, {0x14, 12, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    DebugMemory                                                 OFFSET(get<T>, {0x20, 12, 0, 0})
+	DMember(int32_t)                                   BytesForCaching                                             OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	SMember(FRigVMByteCodeStatistics)                  ByteCode                                                    OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMParameter
@@ -597,12 +715,12 @@ class FRigVMParameter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(ERigVMParameterType)                       Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   RegisterIndex                                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FString)                                   CPPType                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(UScriptStruct*)                            ScriptStruct                                                ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FName)                                     ScriptStructPath                                            ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	CMember(ERigVMParameterType)                       Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   RegisterIndex                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FString)                                   CPPType                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(UScriptStruct*)                            ScriptStruct                                                OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FName)                                     ScriptStructPath                                            OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMBaseOp
@@ -763,9 +881,9 @@ class FRigVMInstruction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(uint64_t)                                  ByteCodeIndex                                               ___ OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
-	CMember(ERigVMOpCode)                              OpCode                                                      ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	DMember(char)                                      OperandAlignment                                            ___ OFFSET(get<char>, {0x9, 1, 0, 0})
+	DMember(uint64_t)                                  ByteCodeIndex                                               OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
+	CMember(ERigVMOpCode)                              OpCode                                                      OFFSET(get<T>, {0x8, 1, 0, 0})
+	DMember(char)                                      OperandAlignment                                            OFFSET(get<char>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMInstructionArray
@@ -776,7 +894,7 @@ class FRigVMInstructionArray : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FRigVMInstruction>)                 Instructions                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FRigVMInstruction>)                 Instructions                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMBreakpoint
@@ -827,17 +945,17 @@ class FRigVMRegister : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(ERigVMRegisterType)                        Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(uint32_t)                                  ByteIndex                                                   ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint16_t)                                  ElementSize                                                 ___ OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
-	DMember(uint16_t)                                  ElementCount                                                ___ OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
-	DMember(uint16_t)                                  SliceCount                                                  ___ OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
-	DMember(char)                                      AlignmentBytes                                              ___ OFFSET(get<char>, {0xE, 1, 0, 0})
-	DMember(uint16_t)                                  TrailingBytes                                               ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	DMember(int32_t)                                   ScriptStructIndex                                           ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bIsArray                                                    ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	DMember(bool)                                      bIsDynamic                                                  ___ OFFSET(get<bool>, {0x1D, 1, 0, 0})
+	CMember(ERigVMRegisterType)                        Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(uint32_t)                                  ByteIndex                                                   OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint16_t)                                  ElementSize                                                 OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
+	DMember(uint16_t)                                  ElementCount                                                OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
+	DMember(uint16_t)                                  SliceCount                                                  OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
+	DMember(char)                                      AlignmentBytes                                              OFFSET(get<char>, {0xE, 1, 0, 0})
+	DMember(uint16_t)                                  TrailingBytes                                               OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   ScriptStructIndex                                           OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bIsArray                                                    OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(bool)                                      bIsDynamic                                                  OFFSET(get<bool>, {0x1D, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMRegisterOffset
@@ -848,14 +966,14 @@ class FRigVMRegisterOffset : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<int32_t>)                           Segments                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(ERigVMRegisterType)                        Type                                                        ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FName)                                     CPPType                                                     ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	CMember(UScriptStruct*)                            ScriptStruct                                                ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(UScriptStruct*)                            ParentScriptStruct                                          ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(int32_t)                                   ArrayIndex                                                  ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	DMember(uint16_t)                                  ElementSize                                                 ___ OFFSET(get<uint16_t>, {0x2C, 2, 0, 0})
-	SMember(FString)                                   CachedSegmentPath                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<int32_t>)                           Segments                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(ERigVMRegisterType)                        Type                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x14, 4, 0, 0})
+	CMember(UScriptStruct*)                            ScriptStruct                                                OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(UScriptStruct*)                            ParentScriptStruct                                          OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(int32_t)                                   ArrayIndex                                                  OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(uint16_t)                                  ElementSize                                                 OFFSET(get<uint16_t>, {0x2C, 2, 0, 0})
+	SMember(FString)                                   CachedSegmentPath                                           OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMMemoryContainer
@@ -866,14 +984,14 @@ class FRigVMMemoryContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(bool)                                      bUseNameMap                                                 ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(ERigVMMemoryType)                          MemoryType                                                  ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	CMember(TArray<FRigVMRegister>)                    Registers                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FRigVMRegisterOffset>)              RegisterOffsets                                             ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<char>)                              Data                                                        ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<UScriptStruct*>)                    ScriptStructs                                               ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TMap<FName, int32_t>)                      NameMap                                                     ___ OFFSET(get<T>, {0x48, 80, 0, 0})
-	DMember(bool)                                      bEncounteredErrorDuringLoad                                 ___ OFFSET(get<bool>, {0x98, 1, 0, 0})
+	DMember(bool)                                      bUseNameMap                                                 OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(ERigVMMemoryType)                          MemoryType                                                  OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(TArray<FRigVMRegister>)                    Registers                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FRigVMRegisterOffset>)              RegisterOffsets                                             OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<char>)                              Data                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UScriptStruct*>)                    ScriptStructs                                               OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TMap<FName, int32_t>)                      NameMap                                                     OFFSET(get<T>, {0x48, 80, 0, 0})
+	DMember(bool)                                      bEncounteredErrorDuringLoad                                 OFFSET(get<bool>, {0x98, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMTemplateArgumentType
@@ -884,8 +1002,8 @@ class FRigVMTemplateArgumentType : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     CPPType                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UObject*)                                  CPPTypeObject                                               ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UObject*)                                  CPPTypeObject                                               OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMUserWorkflow
@@ -896,11 +1014,11 @@ class FRigVMUserWorkflow : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   Title                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ToolTip                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(ERigVMUserWorkflowType)                    Type                                                        ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FDelegateProperty)                         PerformDynamicDelegate                                      ___ OFFSET(get<T>, {0x40, 12, 0, 0})
-	CMember(UClass*)                                   OptionsClass                                                ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ToolTip                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(ERigVMUserWorkflowType)                    Type                                                        OFFSET(get<T>, {0x28, 1, 0, 0})
+	SMember(FDelegateProperty)                         PerformDynamicDelegate                                      OFFSET(get<T>, {0x40, 12, 0, 0})
+	CMember(UClass*)                                   OptionsClass                                                OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AnimEasingType
@@ -911,7 +1029,7 @@ class FRigVMFunction_AnimEasingType : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ERigVMAnimEasingType)                      Type                                                        ___ OFFSET(get<T>, {0x8, 1, 0, 0})
+	CMember(ERigVMAnimEasingType)                      Type                                                        OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AnimEasing
@@ -922,13 +1040,13 @@ class FRigVMFunction_AnimEasing : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	CMember(ERigVMAnimEasingType)                      Type                                                        ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	DMember(float)                                     SourceMinimum                                               ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     SourceMaximum                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     TargetMinimum                                               ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     TargetMaximum                                               ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	CMember(ERigVMAnimEasingType)                      Type                                                        OFFSET(get<T>, {0xC, 1, 0, 0})
+	DMember(float)                                     SourceMinimum                                               OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     SourceMaximum                                               OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     TargetMinimum                                               OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     TargetMaximum                                               OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AnimEvalRichCurve
@@ -939,13 +1057,13 @@ class FRigVMFunction_AnimEvalRichCurve : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        Curve                                                       ___ OFFSET(get<T>, {0x10, 136, 0, 0})
-	DMember(float)                                     SourceMinimum                                               ___ OFFSET(get<float>, {0x98, 4, 0, 0})
-	DMember(float)                                     SourceMaximum                                               ___ OFFSET(get<float>, {0x9C, 4, 0, 0})
-	DMember(float)                                     TargetMinimum                                               ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	DMember(float)                                     TargetMaximum                                               ___ OFFSET(get<float>, {0xA4, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xA8, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(get<T>, {0x10, 136, 0, 0})
+	DMember(float)                                     SourceMinimum                                               OFFSET(get<float>, {0x98, 4, 0, 0})
+	DMember(float)                                     SourceMaximum                                               OFFSET(get<float>, {0x9C, 4, 0, 0})
+	DMember(float)                                     TargetMinimum                                               OFFSET(get<float>, {0xA0, 4, 0, 0})
+	DMember(float)                                     TargetMaximum                                               OFFSET(get<float>, {0xA4, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xA8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AnimRichCurve
@@ -956,7 +1074,7 @@ class FRigVMFunction_AnimRichCurve : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRuntimeFloatCurve)                        Curve                                                       ___ OFFSET(get<T>, {0x8, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(get<T>, {0x8, 136, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_GetDeltaTime
@@ -967,7 +1085,7 @@ class FRigVMFunction_GetDeltaTime : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_GetWorldTime
@@ -978,14 +1096,14 @@ class FRigVMFunction_GetWorldTime : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Year                                                        ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Month                                                       ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Day                                                         ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     WeekDay                                                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Hours                                                       ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Minutes                                                     ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     Seconds                                                     ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     OverallSeconds                                              ___ OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     Year                                                        OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Month                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Day                                                         OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     WeekDay                                                     OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Hours                                                       OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Minutes                                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Seconds                                                     OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     OverallSeconds                                              OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_FramesToSeconds
@@ -996,8 +1114,8 @@ class FRigVMFunction_FramesToSeconds : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Frames                                                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Seconds                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Frames                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Seconds                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_SecondsToFrames
@@ -1008,8 +1126,8 @@ class FRigVMFunction_SecondsToFrames : public FRigVMFunction_AnimBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Seconds                                                     ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Frames                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Seconds                                                     OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Frames                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugLineNoSpace
@@ -1020,12 +1138,12 @@ class FRigVMFunction_DebugLineNoSpace : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x140, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x150, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1B0, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x130, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x140, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x150, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1B0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugLineStripNoSpace
@@ -1036,11 +1154,11 @@ class FRigVMFunction_DebugLineStripNoSpace : public FRigVMFunction_DebugBaseMuta
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	CMember(TArray<FVector>)                           Points                                                      ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x120, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x130, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
+	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x110, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x120, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x130, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x190, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugPoint
@@ -1051,14 +1169,14 @@ class FRigVMFunction_DebugPoint : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(ERigUnitDebugPointMode)                    Mode                                                        ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x40, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(ERigUnitDebugPointMode)                    Mode                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x40, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugPointMutable
@@ -1069,14 +1187,14 @@ class FRigVMFunction_DebugPointMutable : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x100, 24, 0, 0})
-	CMember(ERigUnitDebugPointMode)                    Mode                                                        ___ OFFSET(get<T>, {0x118, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x11C, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x12C, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x130, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x134, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x140, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x100, 24, 0, 0})
+	CMember(ERigUnitDebugPointMode)                    Mode                                                        OFFSET(get<T>, {0x118, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x11C, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x12C, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x130, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x134, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x140, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugRectangle
@@ -1087,13 +1205,13 @@ class FRigVMFunction_DebugRectangle : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x178, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x178, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugRectangleNoSpace
@@ -1104,12 +1222,12 @@ class FRigVMFunction_DebugRectangleNoSpace : public FRigVMFunction_DebugBaseMuta
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugArc
@@ -1120,16 +1238,16 @@ class FRigVMFunction_DebugArc : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     MinimumDegrees                                              ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     MaximumDegrees                                              ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FName)                                     Space                                                       ___ OFFSET(get<T>, {0x184, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x17C, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x184, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugArcNoSpace
@@ -1140,15 +1258,15 @@ class FRigVMFunction_DebugArcNoSpace : public FRigVMFunction_DebugBaseMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     MinimumDegrees                                              ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     MaximumDegrees                                              ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x17C, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x190, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x178, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x17C, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugTransformMutableNoSpace
@@ -1159,13 +1277,13 @@ class FRigVMFunction_DebugTransformMutableNoSpace : public FRigVMFunction_DebugB
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x100, 96, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x160, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x164, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x174, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x178, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x180, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x160, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x164, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x178, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugTransformArrayMutable_WorkData
@@ -1176,7 +1294,7 @@ class FRigVMFunction_DebugTransformArrayMutable_WorkData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FTransform>)                        DrawTransforms                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FTransform>)                        DrawTransforms                                              OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugTransformArrayMutableNoSpace
@@ -1187,14 +1305,14 @@ class FRigVMFunction_DebugTransformArrayMutableNoSpace : public FRigVMFunction_D
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	CMember(ERigUnitDebugTransformMode)                Mode                                                        ___ OFFSET(get<T>, {0x120, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x124, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x134, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x138, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 ___ OFFSET(get<T>, {0x140, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x120, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x124, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x134, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x138, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x140, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugVector
@@ -1205,13 +1323,13 @@ class FRigVMFunction_VisualDebugVector : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugVectorNoSpace
@@ -1222,12 +1340,12 @@ class FRigVMFunction_VisualDebugVectorNoSpace : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
+	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugQuat
@@ -1238,11 +1356,11 @@ class FRigVMFunction_VisualDebugQuat : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugQuatNoSpace
@@ -1253,10 +1371,10 @@ class FRigVMFunction_VisualDebugQuatNoSpace : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugTransform
@@ -1267,11 +1385,11 @@ class FRigVMFunction_VisualDebugTransform : public FRigVMFunction_DebugBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   ___ OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x7C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugTransformNoSpace
@@ -1282,10 +1400,10 @@ class FRigVMFunction_VisualDebugTransformNoSpace : public FRigVMFunction_DebugBa
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(float)                                     Thickness                                                   ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_ForLoopCount
@@ -1296,11 +1414,11 @@ class FRigVMFunction_ForLoopCount : public FRigVMStructMutable
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     BlockToRun                                                  ___ OFFSET(get<T>, {0x100, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x104, 4, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x108, 4, 0, 0})
-	DMember(float)                                     Ratio                                                       ___ OFFSET(get<float>, {0x10C, 4, 0, 0})
-	SMember(FRigVMExecuteContext)                      Completed                                                   ___ OFFSET(get<T>, {0x110, 240, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x100, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x104, 4, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x108, 4, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x10C, 4, 0, 0})
+	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(get<T>, {0x110, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_UserDefinedEvent
@@ -1311,8 +1429,8 @@ class FRigVMFunction_UserDefinedEvent : public FRigVMStruct
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 240, 0, 0})
-	SMember(FName)                                     EventName                                                   ___ OFFSET(get<T>, {0x100, 4, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x100, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolBase
@@ -1333,7 +1451,7 @@ class FRigVMFunction_MathBoolConstant : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolUnaryOp
@@ -1344,8 +1462,8 @@ class FRigVMFunction_MathBoolUnaryOp : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolBinaryOp
@@ -1356,9 +1474,9 @@ class FRigVMFunction_MathBoolBinaryOp : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      A                                                           ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      B                                                           ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      A                                                           OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      B                                                           OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xA, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolBinaryAggregateOp
@@ -1369,9 +1487,9 @@ class FRigVMFunction_MathBoolBinaryAggregateOp : public FRigVMFunction_MathBoolB
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      A                                                           ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      B                                                           ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      A                                                           OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      B                                                           OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xA, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolMake
@@ -1382,7 +1500,7 @@ class FRigVMFunction_MathBoolMake : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolConstTrue
@@ -1463,9 +1581,9 @@ class FRigVMFunction_MathBoolEquals : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      A                                                           ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      B                                                           ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      A                                                           OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      B                                                           OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xA, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolNotEquals
@@ -1476,9 +1594,9 @@ class FRigVMFunction_MathBoolNotEquals : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      A                                                           ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      B                                                           ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      A                                                           OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      B                                                           OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xA, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolToggled
@@ -1489,10 +1607,10 @@ class FRigVMFunction_MathBoolToggled : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      Toggled                                                     ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      Initialized                                                 ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
-	DMember(bool)                                      LastValue                                                   ___ OFFSET(get<bool>, {0xB, 1, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      Toggled                                                     OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      Initialized                                                 OFFSET(get<bool>, {0xA, 1, 0, 0})
+	DMember(bool)                                      LastValue                                                   OFFSET(get<bool>, {0xB, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolFlipFlop
@@ -1503,11 +1621,11 @@ class FRigVMFunction_MathBoolFlipFlop : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(bool)                                      StartValue                                                  ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      LastValue                                                   ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(float)                                     TimeLeft                                                    ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(bool)                                      StartValue                                                  OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      LastValue                                                   OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolOnce
@@ -1518,10 +1636,10 @@ class FRigVMFunction_MathBoolOnce : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	DMember(bool)                                      LastValue                                                   ___ OFFSET(get<bool>, {0xD, 1, 0, 0})
-	DMember(float)                                     TimeLeft                                                    ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(bool)                                      LastValue                                                   OFFSET(get<bool>, {0xD, 1, 0, 0})
+	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolToFloat
@@ -1532,8 +1650,8 @@ class FRigVMFunction_MathBoolToFloat : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolToInteger
@@ -1544,8 +1662,8 @@ class FRigVMFunction_MathBoolToInteger : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      Value                                                       ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorBase
@@ -1566,9 +1684,9 @@ class FRigVMFunction_MathColorBinaryOp : public FRigVMFunction_MathColorBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorBinaryAggregateOp
@@ -1579,9 +1697,9 @@ class FRigVMFunction_MathColorBinaryAggregateOp : public FRigVMFunction_MathColo
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorMake
@@ -1592,11 +1710,11 @@ class FRigVMFunction_MathColorMake : public FRigVMFunction_MathColorBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     R                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     G                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(float)                                     R                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     G                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorFromFloat
@@ -1607,8 +1725,8 @@ class FRigVMFunction_MathColorFromFloat : public FRigVMFunction_MathColorBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0xC, 16, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0xC, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorFromDouble
@@ -1619,8 +1737,8 @@ class FRigVMFunction_MathColorFromDouble : public FRigVMFunction_MathColorBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorAdd
@@ -1661,10 +1779,10 @@ class FRigVMFunction_MathColorLerp : public FRigVMFunction_MathColorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FLinearColor)                              A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      ___ OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x2C, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleBase
@@ -1685,7 +1803,7 @@ class FRigVMFunction_MathDoubleConstant : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleUnaryOp
@@ -1696,8 +1814,8 @@ class FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleBinaryOp
@@ -1708,9 +1826,9 @@ class FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleBinaryAggregateOp
@@ -1721,9 +1839,9 @@ class FRigVMFunction_MathDoubleBinaryAggregateOp : public FRigVMFunction_MathDou
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleMake
@@ -1734,7 +1852,7 @@ class FRigVMFunction_MathDoubleMake : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleConstPi
@@ -1895,9 +2013,9 @@ class FRigVMFunction_MathDoubleFloor : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleCeil
@@ -1908,9 +2026,9 @@ class FRigVMFunction_MathDoubleCeil : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleRound
@@ -1921,9 +2039,9 @@ class FRigVMFunction_MathDoubleRound : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleToInt
@@ -1934,8 +2052,8 @@ class FRigVMFunction_MathDoubleToInt : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleSign
@@ -1956,10 +2074,10 @@ class FRigVMFunction_MathDoubleClamp : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Minimum                                                     ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    Maximum                                                     ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x20, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Minimum                                                     OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Maximum                                                     OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleLerp
@@ -1970,10 +2088,10 @@ class FRigVMFunction_MathDoubleLerp : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    T                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x20, 8, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    T                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleRemap
@@ -1984,13 +2102,13 @@ class FRigVMFunction_MathDoubleRemap : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    SourceMinimum                                               ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    SourceMaximum                                               ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    TargetMinimum                                               ___ OFFSET(get<double>, {0x20, 8, 0, 0})
-	DMember(double)                                    TargetMaximum                                               ___ OFFSET(get<double>, {0x28, 8, 0, 0})
-	DMember(bool)                                      bClamp                                                      ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x38, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    SourceMinimum                                               OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    SourceMaximum                                               OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    TargetMinimum                                               OFFSET(get<double>, {0x20, 8, 0, 0})
+	DMember(double)                                    TargetMaximum                                               OFFSET(get<double>, {0x28, 8, 0, 0})
+	DMember(bool)                                      bClamp                                                      OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleEquals
@@ -2001,9 +2119,9 @@ class FRigVMFunction_MathDoubleEquals : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleNotEquals
@@ -2014,9 +2132,9 @@ class FRigVMFunction_MathDoubleNotEquals : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleGreater
@@ -2027,9 +2145,9 @@ class FRigVMFunction_MathDoubleGreater : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleLess
@@ -2040,9 +2158,9 @@ class FRigVMFunction_MathDoubleLess : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleGreaterEqual
@@ -2053,9 +2171,9 @@ class FRigVMFunction_MathDoubleGreaterEqual : public FRigVMFunction_MathDoubleBa
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleLessEqual
@@ -2066,9 +2184,9 @@ class FRigVMFunction_MathDoubleLessEqual : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleIsNearlyZero
@@ -2079,9 +2197,9 @@ class FRigVMFunction_MathDoubleIsNearlyZero : public FRigVMFunction_MathDoubleBa
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Tolerance                                                   ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Tolerance                                                   OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleIsNearlyEqual
@@ -2092,10 +2210,10 @@ class FRigVMFunction_MathDoubleIsNearlyEqual : public FRigVMFunction_MathDoubleB
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    Tolerance                                                   ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Tolerance                                                   OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleDeg
@@ -2186,13 +2304,13 @@ class FRigVMFunction_MathDoubleLawOfCosine : public FRigVMFunction_MathDoubleBas
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(double)                                    A                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    B                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    C                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    AlphaAngle                                                  ___ OFFSET(get<double>, {0x20, 8, 0, 0})
-	DMember(double)                                    BetaAngle                                                   ___ OFFSET(get<double>, {0x28, 8, 0, 0})
-	DMember(double)                                    GammaAngle                                                  ___ OFFSET(get<double>, {0x30, 8, 0, 0})
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(double)                                    A                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    B                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    C                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    AlphaAngle                                                  OFFSET(get<double>, {0x20, 8, 0, 0})
+	DMember(double)                                    BetaAngle                                                   OFFSET(get<double>, {0x28, 8, 0, 0})
+	DMember(double)                                    GammaAngle                                                  OFFSET(get<double>, {0x30, 8, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleExponential
@@ -2213,8 +2331,8 @@ class FRigVMFunction_MathDoubleArraySum : public FRigVMFunction_MathDoubleBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<double>)                            Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(double)                                    Sum                                                         ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	CMember(TArray<double>)                            Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(double)                                    Sum                                                         OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleArrayAverage
@@ -2225,8 +2343,8 @@ class FRigVMFunction_MathDoubleArrayAverage : public FRigVMFunction_MathDoubleBa
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<double>)                            Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(double)                                    Average                                                     ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	CMember(TArray<double>)                            Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(double)                                    Average                                                     OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatBase
@@ -2247,7 +2365,7 @@ class FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatUnaryOp
@@ -2258,8 +2376,8 @@ class FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatBinaryOp
@@ -2270,9 +2388,9 @@ class FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatBinaryAggregateOp
@@ -2283,9 +2401,9 @@ class FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloa
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatMake
@@ -2296,7 +2414,7 @@ class FRigVMFunction_MathFloatMake : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatConstPi
@@ -2457,9 +2575,9 @@ class FRigVMFunction_MathFloatFloor : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatCeil
@@ -2470,9 +2588,9 @@ class FRigVMFunction_MathFloatCeil : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatRound
@@ -2483,9 +2601,9 @@ class FRigVMFunction_MathFloatRound : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Int                                                         ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatToInt
@@ -2496,8 +2614,8 @@ class FRigVMFunction_MathFloatToInt : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatSign
@@ -2518,10 +2636,10 @@ class FRigVMFunction_MathFloatClamp : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatLerp
@@ -2532,10 +2650,10 @@ class FRigVMFunction_MathFloatLerp : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatRemap
@@ -2546,13 +2664,13 @@ class FRigVMFunction_MathFloatRemap : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     SourceMinimum                                               ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     SourceMaximum                                               ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     TargetMinimum                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     TargetMaximum                                               ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bClamp                                                      ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     SourceMinimum                                               OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     SourceMaximum                                               OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     TargetMinimum                                               OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     TargetMaximum                                               OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bClamp                                                      OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatEquals
@@ -2563,9 +2681,9 @@ class FRigVMFunction_MathFloatEquals : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatNotEquals
@@ -2576,9 +2694,9 @@ class FRigVMFunction_MathFloatNotEquals : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatGreater
@@ -2589,9 +2707,9 @@ class FRigVMFunction_MathFloatGreater : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatLess
@@ -2602,9 +2720,9 @@ class FRigVMFunction_MathFloatLess : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatGreaterEqual
@@ -2615,9 +2733,9 @@ class FRigVMFunction_MathFloatGreaterEqual : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatLessEqual
@@ -2628,9 +2746,9 @@ class FRigVMFunction_MathFloatLessEqual : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatIsNearlyZero
@@ -2641,9 +2759,9 @@ class FRigVMFunction_MathFloatIsNearlyZero : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Tolerance                                                   ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatIsNearlyEqual
@@ -2654,10 +2772,10 @@ class FRigVMFunction_MathFloatIsNearlyEqual : public FRigVMFunction_MathFloatBas
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Tolerance                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatSelectBool
@@ -2668,10 +2786,10 @@ class FRigVMFunction_MathFloatSelectBool : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(bool)                                      Condition                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(float)                                     IfTrue                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     IfFalse                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(float)                                     IfTrue                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     IfFalse                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatDeg
@@ -2762,13 +2880,13 @@ class FRigVMFunction_MathFloatLawOfCosine : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     C                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     AlphaAngle                                                  ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     BetaAngle                                                   ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     GammaAngle                                                  ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     C                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     AlphaAngle                                                  OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     BetaAngle                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     GammaAngle                                                  OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatExponential
@@ -2789,8 +2907,8 @@ class FRigVMFunction_MathFloatArraySum : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<float>)                             Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(float)                                     Sum                                                         ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(TArray<float>)                             Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     Sum                                                         OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathFloatArrayAverage
@@ -2801,8 +2919,8 @@ class FRigVMFunction_MathFloatArrayAverage : public FRigVMFunction_MathFloatBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<float>)                             Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(float)                                     Average                                                     ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(TArray<float>)                             Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     Average                                                     OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntBase
@@ -2823,8 +2941,8 @@ class FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntBinaryOp
@@ -2835,9 +2953,9 @@ class FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntBinaryAggregateOp
@@ -2848,9 +2966,9 @@ class FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBas
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntMake
@@ -2861,7 +2979,7 @@ class FRigVMFunction_MathIntMake : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntAdd
@@ -2972,8 +3090,8 @@ class FRigVMFunction_MathIntToFloat : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntToDouble
@@ -2984,8 +3102,8 @@ class FRigVMFunction_MathIntToDouble : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntSign
@@ -3006,10 +3124,10 @@ class FRigVMFunction_MathIntClamp : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Minimum                                                     ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   Maximum                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   Result                                                      ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Minimum                                                     OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   Maximum                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   Result                                                      OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntEquals
@@ -3020,9 +3138,9 @@ class FRigVMFunction_MathIntEquals : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntNotEquals
@@ -3033,9 +3151,9 @@ class FRigVMFunction_MathIntNotEquals : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntGreater
@@ -3046,9 +3164,9 @@ class FRigVMFunction_MathIntGreater : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntLess
@@ -3059,9 +3177,9 @@ class FRigVMFunction_MathIntLess : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntGreaterEqual
@@ -3072,9 +3190,9 @@ class FRigVMFunction_MathIntGreaterEqual : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntLessEqual
@@ -3085,9 +3203,9 @@ class FRigVMFunction_MathIntLessEqual : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntArraySum
@@ -3098,8 +3216,8 @@ class FRigVMFunction_MathIntArraySum : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<int32_t>)                           Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Sum                                                         ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	CMember(TArray<int32_t>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Sum                                                         OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntArrayAverage
@@ -3110,8 +3228,8 @@ class FRigVMFunction_MathIntArrayAverage : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<int32_t>)                           Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Average                                                     ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	CMember(TArray<int32_t>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Average                                                     OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntToString
@@ -3122,9 +3240,9 @@ class FRigVMFunction_MathIntToString : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int32_t)                                   Number                                                      ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   PaddedSize                                                  ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   Number                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   PaddedSize                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntToName
@@ -3135,9 +3253,9 @@ class FRigVMFunction_MathIntToName : public FRigVMFunction_MathIntBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   Number                                                      ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   PaddedSize                                                  ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FName)                                     Result                                                      ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   Number                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   PaddedSize                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBase
@@ -3158,8 +3276,8 @@ class FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FMatrix)                                   Value                                                       ___ OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x90, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBinaryOp
@@ -3170,9 +3288,9 @@ class FRigVMFunction_MathMatrixBinaryOp : public FRigVMFunction_MathMatrixBase
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMatrix)                                   A                                                           ___ OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   B                                                           ___ OFFSET(get<T>, {0x90, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x110, 128, 0, 0})
+	SMember(FMatrix)                                   A                                                           OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   B                                                           OFFSET(get<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x110, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBinaryAggregateOp
@@ -3183,9 +3301,9 @@ class FRigVMFunction_MathMatrixBinaryAggregateOp : public FRigVMFunction_MathMat
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMatrix)                                   A                                                           ___ OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   B                                                           ___ OFFSET(get<T>, {0x90, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x110, 128, 0, 0})
+	SMember(FMatrix)                                   A                                                           OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   B                                                           OFFSET(get<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x110, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixToTransform
@@ -3196,8 +3314,8 @@ class FRigVMFunction_MathMatrixToTransform : public FRigVMFunction_MathMatrixBas
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMatrix)                                   Value                                                       ___ OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x90, 96, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x90, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromTransform
@@ -3208,8 +3326,8 @@ class FRigVMFunction_MathMatrixFromTransform : public FRigVMFunction_MathMatrixB
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromTransformV2
@@ -3220,8 +3338,8 @@ class FRigVMFunction_MathMatrixFromTransformV2 : public FRigVMFunction_MathMatri
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixToVectors
@@ -3232,11 +3350,11 @@ class FRigVMFunction_MathMatrixToVectors : public FRigVMFunction_MathMatrixBase
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMatrix)                                   Value                                                       ___ OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FVector)                                   Origin                                                      ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector)                                   X                                                           ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FVector)                                   Y                                                           ___ OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FVector)                                   Z                                                           ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   X                                                           OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Y                                                           OFFSET(get<T>, {0xC0, 24, 0, 0})
+	SMember(FVector)                                   Z                                                           OFFSET(get<T>, {0xD8, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromVectors
@@ -3247,11 +3365,11 @@ class FRigVMFunction_MathMatrixFromVectors : public FRigVMFunction_MathMatrixBas
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FVector)                                   Origin                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   X                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Y                                                           ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Z                                                           ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FMatrix)                                   Result                                                      ___ OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   X                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Y                                                           OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Z                                                           OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixMul
@@ -3292,8 +3410,8 @@ class FRigVMFunction_MathQuaternionUnaryOp : public FRigVMFunction_MathQuaternio
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionBinaryOp
@@ -3304,9 +3422,9 @@ class FRigVMFunction_MathQuaternionBinaryOp : public FRigVMFunction_MathQuaterni
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionBinaryAggregateOp
@@ -3317,9 +3435,9 @@ class FRigVMFunction_MathQuaternionBinaryAggregateOp : public FRigVMFunction_Mat
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMake
@@ -3330,11 +3448,11 @@ class FRigVMFunction_MathQuaternionMake : public FRigVMFunction_MathQuaternionBa
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Z                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     W                                                           ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     W                                                           OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromAxisAndAngle
@@ -3345,9 +3463,9 @@ class FRigVMFunction_MathQuaternionFromAxisAndAngle : public FRigVMFunction_Math
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Angle                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromEuler
@@ -3358,9 +3476,9 @@ class FRigVMFunction_MathQuaternionFromEuler : public FRigVMFunction_MathQuatern
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Euler                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector)                                   Euler                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromRotator
@@ -3371,8 +3489,8 @@ class FRigVMFunction_MathQuaternionFromRotator : public FRigVMFunction_MathQuate
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Rotator                                                     ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FRotator)                                  Rotator                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromRotatorV2
@@ -3383,8 +3501,8 @@ class FRigVMFunction_MathQuaternionFromRotatorV2 : public FRigVMFunction_MathQua
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromTwoVectors
@@ -3395,9 +3513,9 @@ class FRigVMFunction_MathQuaternionFromTwoVectors : public FRigVMFunction_MathQu
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToAxisAndAngle
@@ -3408,9 +3526,9 @@ class FRigVMFunction_MathQuaternionToAxisAndAngle : public FRigVMFunction_MathQu
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Axis                                                        ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     Angle                                                       ___ OFFSET(get<float>, {0x48, 4, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionScale
@@ -3421,8 +3539,8 @@ class FRigVMFunction_MathQuaternionScale : public FRigVMFunction_MathQuaternionB
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionScaleV2
@@ -3433,9 +3551,9 @@ class FRigVMFunction_MathQuaternionScaleV2 : public FRigVMFunction_MathQuaternio
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(float)                                     Factor                                                      ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(float)                                     Factor                                                      OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToEuler
@@ -3446,9 +3564,9 @@ class FRigVMFunction_MathQuaternionToEuler : public FRigVMFunction_MathQuaternio
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToRotator
@@ -3459,8 +3577,8 @@ class FRigVMFunction_MathQuaternionToRotator : public FRigVMFunction_MathQuatern
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FRotator)                                  Result                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FRotator)                                  Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMul
@@ -3491,10 +3609,10 @@ class FRigVMFunction_MathQuaternionSlerp : public FRigVMFunction_MathQuaternionB
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0x50, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionEquals
@@ -3505,9 +3623,9 @@ class FRigVMFunction_MathQuaternionEquals : public FRigVMFunction_MathQuaternion
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x50, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionNotEquals
@@ -3518,9 +3636,9 @@ class FRigVMFunction_MathQuaternionNotEquals : public FRigVMFunction_MathQuatern
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x50, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionSelectBool
@@ -3531,10 +3649,10 @@ class FRigVMFunction_MathQuaternionSelectBool : public FRigVMFunction_MathQuater
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      Condition                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FQuat)                                     IfTrue                                                      ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     IfFalse                                                     ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FQuat)                                     IfTrue                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     IfFalse                                                     OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionDot
@@ -3545,9 +3663,9 @@ class FRigVMFunction_MathQuaternionDot : public FRigVMFunction_MathQuaternionBas
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x50, 4, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionUnit
@@ -3568,9 +3686,9 @@ class FRigVMFunction_MathQuaternionRotateVector : public FRigVMFunction_MathQuat
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     Transform                                                   ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FQuat)                                     Transform                                                   OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionGetAxis
@@ -3581,9 +3699,9 @@ class FRigVMFunction_MathQuaternionGetAxis : public FRigVMFunction_MathQuaternio
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Quaternion                                                  ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        Axis                                                        ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FQuat)                                     Quaternion                                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionSwingTwist
@@ -3594,10 +3712,10 @@ class FRigVMFunction_MathQuaternionSwingTwist : public FRigVMFunction_MathQuater
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FQuat)                                     Input                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FQuat)                                     Swing                                                       ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	SMember(FQuat)                                     Twist                                                       ___ OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Swing                                                       OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Twist                                                       OFFSET(get<T>, {0x70, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionRotationOrder
@@ -3608,7 +3726,7 @@ class FRigVMFunction_MathQuaternionRotationOrder : public FRigVMFunction_MathBas
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x8, 1, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMakeRelative
@@ -3619,9 +3737,9 @@ class FRigVMFunction_MathQuaternionMakeRelative : public FRigVMFunction_MathQuat
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     Global                                                      ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Parent                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Local                                                       ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Global                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Parent                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Local                                                       OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMakeAbsolute
@@ -3632,9 +3750,9 @@ class FRigVMFunction_MathQuaternionMakeAbsolute : public FRigVMFunction_MathQuat
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     Local                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Parent                                                      ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Global                                                      ___ OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Local                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Parent                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Global                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMirrorTransform
@@ -3645,11 +3763,11 @@ class FRigVMFunction_MathQuaternionMirrorTransform : public FRigVMFunction_MathQ
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  ___ OFFSET(get<T>, {0x31, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            ___ OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0xA0, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x31, 1, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0xA0, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatWorkData
@@ -3690,13 +3808,13 @@ class FRigVMFunction_MathRBFInterpolateQuatBase : public FRigVMFunction_MathRBFI
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FQuat)                                     Input                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	CMember(ERBFQuatDistanceType)                      DistanceFunction                                            ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(ERBFKernelType)                            SmoothingFunction                                           ___ OFFSET(get<T>, {0x31, 1, 0, 0})
-	DMember(float)                                     SmoothingAngle                                              ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bNormalizeOutput                                            ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FRigVMFunction_MathRBFInterpolateQuatWorkData) WorkData                                                ___ OFFSET(get<T>, {0x60, 144, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	CMember(ERBFQuatDistanceType)                      DistanceFunction                                            OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(ERBFKernelType)                            SmoothingFunction                                           OFFSET(get<T>, {0x31, 1, 0, 0})
+	DMember(float)                                     SmoothingAngle                                              OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bNormalizeOutput                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FRigVMFunction_MathRBFInterpolateQuatWorkData) WorkData                                                OFFSET(get<T>, {0x60, 144, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorBase
@@ -3707,12 +3825,12 @@ class FRigVMFunction_MathRBFInterpolateVectorBase : public FRigVMFunction_MathRB
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Input                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(ERBFVectorDistanceType)                    DistanceFunction                                            ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(ERBFKernelType)                            SmoothingFunction                                           ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	DMember(float)                                     SmoothingRadius                                             ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bNormalizeOutput                                            ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FRigVMFunction_MathRBFInterpolateVectorWorkData) WorkData                                              ___ OFFSET(get<T>, {0x30, 144, 0, 0})
+	SMember(FVector)                                   Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(ERBFVectorDistanceType)                    DistanceFunction                                            OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(ERBFKernelType)                            SmoothingFunction                                           OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(float)                                     SmoothingRadius                                             OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bNormalizeOutput                                            OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FRigVMFunction_MathRBFInterpolateVectorWorkData) WorkData                                              OFFSET(get<T>, {0x30, 144, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatFloat_Target
@@ -3723,8 +3841,8 @@ class FMathRBFInterpolateQuatFloat_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatFloat
@@ -3735,8 +3853,8 @@ class FRigVMFunction_MathRBFInterpolateQuatFloat : public FRigVMFunction_MathRBF
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	CMember(TArray<FMathRBFInterpolateQuatFloat_Target>) Targets                                                   ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	DMember(float)                                     Output                                                      ___ OFFSET(get<float>, {0x100, 4, 0, 0})
+	CMember(TArray<FMathRBFInterpolateQuatFloat_Target>) Targets                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
+	DMember(float)                                     Output                                                      OFFSET(get<float>, {0x100, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatVector_Target
@@ -3747,8 +3865,8 @@ class FMathRBFInterpolateQuatVector_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatVector
@@ -3759,8 +3877,8 @@ class FRigVMFunction_MathRBFInterpolateQuatVector : public FRigVMFunction_MathRB
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FMathRBFInterpolateQuatVector_Target>) Targets                                                  ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FVector)                                   Output                                                      ___ OFFSET(get<T>, {0x100, 24, 0, 0})
+	CMember(TArray<FMathRBFInterpolateQuatVector_Target>) Targets                                                  OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FVector)                                   Output                                                      OFFSET(get<T>, {0x100, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatColor_Target
@@ -3771,8 +3889,8 @@ class FMathRBFInterpolateQuatColor_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FLinearColor)                              Value                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatColor
@@ -3783,8 +3901,8 @@ class FRigVMFunction_MathRBFInterpolateQuatColor : public FRigVMFunction_MathRBF
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	CMember(TArray<FMathRBFInterpolateQuatColor_Target>) Targets                                                   ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FLinearColor)                              Output                                                      ___ OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(TArray<FMathRBFInterpolateQuatColor_Target>) Targets                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FLinearColor)                              Output                                                      OFFSET(get<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatQuat_Target
@@ -3795,8 +3913,8 @@ class FMathRBFInterpolateQuatQuat_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatQuat
@@ -3807,8 +3925,8 @@ class FRigVMFunction_MathRBFInterpolateQuatQuat : public FRigVMFunction_MathRBFI
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FMathRBFInterpolateQuatQuat_Target>) Targets                                                    ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FQuat)                                     Output                                                      ___ OFFSET(get<T>, {0x100, 32, 0, 0})
+	CMember(TArray<FMathRBFInterpolateQuatQuat_Target>) Targets                                                    OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FQuat)                                     Output                                                      OFFSET(get<T>, {0x100, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatXform_Target
@@ -3819,8 +3937,8 @@ class FMathRBFInterpolateQuatXform_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FQuat)                                     Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatXform
@@ -3831,8 +3949,8 @@ class FRigVMFunction_MathRBFInterpolateQuatXform : public FRigVMFunction_MathRBF
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	CMember(TArray<FMathRBFInterpolateQuatXform_Target>) Targets                                                   ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FTransform)                                Output                                                      ___ OFFSET(get<T>, {0x100, 96, 0, 0})
+	CMember(TArray<FMathRBFInterpolateQuatXform_Target>) Targets                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FTransform)                                Output                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorFloat_Target
@@ -3843,8 +3961,8 @@ class FMathRBFInterpolateVectorFloat_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorFloat
@@ -3855,8 +3973,8 @@ class FRigVMFunction_MathRBFInterpolateVectorFloat : public FRigVMFunction_MathR
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(TArray<FMathRBFInterpolateVectorFloat_Target>) Targets                                                 ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	DMember(float)                                     Output                                                      ___ OFFSET(get<float>, {0xD0, 4, 0, 0})
+	CMember(TArray<FMathRBFInterpolateVectorFloat_Target>) Targets                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
+	DMember(float)                                     Output                                                      OFFSET(get<float>, {0xD0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorVector_Target
@@ -3867,8 +3985,8 @@ class FMathRBFInterpolateVectorVector_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorVector
@@ -3879,8 +3997,8 @@ class FRigVMFunction_MathRBFInterpolateVectorVector : public FRigVMFunction_Math
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(TArray<FMathRBFInterpolateVectorVector_Target>) Targets                                                ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FVector)                                   Output                                                      ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
+	CMember(TArray<FMathRBFInterpolateVectorVector_Target>) Targets                                                OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FVector)                                   Output                                                      OFFSET(get<T>, {0xD0, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorColor_Target
@@ -3891,8 +4009,8 @@ class FMathRBFInterpolateVectorColor_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FLinearColor)                              Value                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorColor
@@ -3903,8 +4021,8 @@ class FRigVMFunction_MathRBFInterpolateVectorColor : public FRigVMFunction_MathR
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(TArray<FMathRBFInterpolateVectorColor_Target>) Targets                                                 ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FLinearColor)                              Output                                                      ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<FMathRBFInterpolateVectorColor_Target>) Targets                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FLinearColor)                              Output                                                      OFFSET(get<T>, {0xD0, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorQuat_Target
@@ -3915,8 +4033,8 @@ class FMathRBFInterpolateVectorQuat_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorQuat
@@ -3927,8 +4045,8 @@ class FRigVMFunction_MathRBFInterpolateVectorQuat : public FRigVMFunction_MathRB
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(TArray<FMathRBFInterpolateVectorQuat_Target>) Targets                                                  ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FQuat)                                     Output                                                      ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
+	CMember(TArray<FMathRBFInterpolateVectorQuat_Target>) Targets                                                  OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FQuat)                                     Output                                                      OFFSET(get<T>, {0xD0, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorXform_Target
@@ -3939,8 +4057,8 @@ class FMathRBFInterpolateVectorXform_Target : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorXform
@@ -3951,8 +4069,8 @@ class FRigVMFunction_MathRBFInterpolateVectorXform : public FRigVMFunction_MathR
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	CMember(TArray<FMathRBFInterpolateVectorXform_Target>) Targets                                                 ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FTransform)                                Output                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	CMember(TArray<FMathRBFInterpolateVectorXform_Target>) Targets                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FTransform)                                Output                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBase
@@ -3983,8 +4101,8 @@ class FRigVMFunction_MathTransformUnaryOp : public FRigVMFunction_MathTransformB
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBinaryOp
@@ -3995,9 +4113,9 @@ class FRigVMFunction_MathTransformBinaryOp : public FRigVMFunction_MathTransform
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                A                                                           ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBinaryAggregateOp
@@ -4008,9 +4126,9 @@ class FRigVMFunction_MathTransformBinaryAggregateOp : public FRigVMFunction_Math
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                A                                                           ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMake
@@ -4021,10 +4139,10 @@ class FRigVMFunction_MathTransformMake : public FRigVMFunction_MathTransformBase
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x60, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromEulerTransform
@@ -4035,8 +4153,8 @@ class FRigVMFunction_MathTransformFromEulerTransform : public FRigVMFunction_Mat
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FEulerTransform)                           EulerTransform                                              ___ OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromEulerTransformV2
@@ -4047,8 +4165,8 @@ class FRigVMFunction_MathTransformFromEulerTransformV2 : public FRigVMFunction_M
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FEulerTransform)                           Value                                                       ___ OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FEulerTransform)                           Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformToEulerTransform
@@ -4059,8 +4177,8 @@ class FRigVMFunction_MathTransformToEulerTransform : public FRigVMFunction_MathT
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FEulerTransform)                           Result                                                      ___ OFFSET(get<T>, {0x70, 72, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FEulerTransform)                           Result                                                      OFFSET(get<T>, {0x70, 72, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMul
@@ -4081,9 +4199,9 @@ class FRigVMFunction_MathTransformMakeRelative : public FRigVMFunction_MathTrans
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                Global                                                      ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Parent                                                      ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Local                                                       ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Global                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Parent                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Local                                                       OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMakeAbsolute
@@ -4094,9 +4212,9 @@ class FRigVMFunction_MathTransformMakeAbsolute : public FRigVMFunction_MathTrans
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                Local                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Parent                                                      ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Global                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Local                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Parent                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Global                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformAccumulateArray
@@ -4107,10 +4225,10 @@ class FRigVMFunction_MathTransformAccumulateArray : public FRigVMFunction_MathTr
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	CMember(ERigVMTransformSpace)                      TargetSpace                                                 ___ OFFSET(get<T>, {0x110, 1, 0, 0})
-	SMember(FTransform)                                Root                                                        ___ OFFSET(get<T>, {0x120, 96, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x180, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(ERigVMTransformSpace)                      TargetSpace                                                 OFFSET(get<T>, {0x110, 1, 0, 0})
+	SMember(FTransform)                                Root                                                        OFFSET(get<T>, {0x120, 96, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x180, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformInverse
@@ -4131,10 +4249,10 @@ class FRigVMFunction_MathTransformLerp : public FRigVMFunction_MathTransformBase
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FTransform)                                A                                                           ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0xD0, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0xD0, 4, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformSelectBool
@@ -4145,10 +4263,10 @@ class FRigVMFunction_MathTransformSelectBool : public FRigVMFunction_MathTransfo
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	DMember(bool)                                      Condition                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FTransform)                                IfTrue                                                      ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                IfFalse                                                     ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
+	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FTransform)                                IfTrue                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                IfFalse                                                     OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformRotateVector
@@ -4159,9 +4277,9 @@ class FRigVMFunction_MathTransformRotateVector : public FRigVMFunction_MathTrans
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   Vector                                                      ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformTransformVector
@@ -4172,9 +4290,9 @@ class FRigVMFunction_MathTransformTransformVector : public FRigVMFunction_MathTr
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromSRT
@@ -4185,12 +4303,12 @@ class FRigVMFunction_MathTransformFromSRT : public FRigVMFunction_MathTransformB
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Rotation                                                    ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(EEulerRotationOrder)                       RotationOrder                                               ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x60, 96, 0, 0})
-	SMember(FEulerTransform)                           EulerTransform                                              ___ OFFSET(get<T>, {0xC0, 72, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Rotation                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(get<T>, {0xC0, 72, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformArrayToSRT
@@ -4201,10 +4319,10 @@ class FRigVMFunction_MathTransformArrayToSRT : public FRigVMFunction_MathTransfo
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FVector>)                           Translations                                                ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FQuat>)                             Rotations                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FVector>)                           Scales                                                      ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FVector>)                           Translations                                                OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FQuat>)                             Rotations                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FVector>)                           Scales                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformClampSpatially
@@ -4215,16 +4333,16 @@ class FRigVMFunction_MathTransformClampSpatially : public FRigVMFunction_MathTra
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        Axis                                                        ___ OFFSET(get<T>, {0x70, 1, 0, 0})
-	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        ___ OFFSET(get<T>, {0x71, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FTransform)                                Space                                                       ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	DMember(bool)                                      bDrawDebug                                                  ___ OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  ___ OFFSET(get<T>, {0xE4, 16, 0, 0})
-	DMember(float)                                     DebugThickness                                              ___ OFFSET(get<float>, {0xF4, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x70, 1, 0, 0})
+	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        OFFSET(get<T>, {0x71, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FTransform)                                Space                                                       OFFSET(get<T>, {0x80, 96, 0, 0})
+	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0xE0, 1, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0xE4, 16, 0, 0})
+	DMember(float)                                     DebugThickness                                              OFFSET(get<float>, {0xF4, 4, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMirrorTransform
@@ -4235,11 +4353,11 @@ class FRigVMFunction_MathTransformMirrorTransform : public FRigVMFunction_MathTr
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  ___ OFFSET(get<T>, {0x70, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  ___ OFFSET(get<T>, {0x71, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x70, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x71, 1, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBase
@@ -4260,8 +4378,8 @@ class FRigVMFunction_MathVectorUnaryOp : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBinaryOp
@@ -4272,9 +4390,9 @@ class FRigVMFunction_MathVectorBinaryOp : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBinaryAggregateOp
@@ -4285,9 +4403,9 @@ class FRigVMFunction_MathVectorBinaryAggregateOp : public FRigVMFunction_MathVec
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMake
@@ -4298,10 +4416,10 @@ class FRigVMFunction_MathVectorMake : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Z                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorFromFloat
@@ -4312,8 +4430,8 @@ class FRigVMFunction_MathVectorFromFloat : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorFromDouble
@@ -4324,8 +4442,8 @@ class FRigVMFunction_MathVectorFromDouble : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorAdd
@@ -4366,9 +4484,9 @@ class FRigVMFunction_MathVectorScale : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Factor                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Factor                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorDiv
@@ -4479,10 +4597,10 @@ class FRigVMFunction_MathVectorClamp : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Minimum                                                     ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Maximum                                                     ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Minimum                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Maximum                                                     OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorLerp
@@ -4493,10 +4611,10 @@ class FRigVMFunction_MathVectorLerp : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorRemap
@@ -4507,13 +4625,13 @@ class FRigVMFunction_MathVectorRemap : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   SourceMinimum                                               ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   SourceMaximum                                               ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   TargetMinimum                                               ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   TargetMaximum                                               ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	DMember(bool)                                      bClamp                                                      ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   SourceMinimum                                               OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   SourceMaximum                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   TargetMinimum                                               OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   TargetMaximum                                               OFFSET(get<T>, {0x68, 24, 0, 0})
+	DMember(bool)                                      bClamp                                                      OFFSET(get<bool>, {0x80, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorEquals
@@ -4524,9 +4642,9 @@ class FRigVMFunction_MathVectorEquals : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorNotEquals
@@ -4537,9 +4655,9 @@ class FRigVMFunction_MathVectorNotEquals : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorIsNearlyZero
@@ -4550,9 +4668,9 @@ class FRigVMFunction_MathVectorIsNearlyZero : public FRigVMFunction_MathVectorBa
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Tolerance                                                   ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorIsNearlyEqual
@@ -4563,10 +4681,10 @@ class FRigVMFunction_MathVectorIsNearlyEqual : public FRigVMFunction_MathVectorB
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Tolerance                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x3C, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x3C, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorSelectBool
@@ -4577,10 +4695,10 @@ class FRigVMFunction_MathVectorSelectBool : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(bool)                                      Condition                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FVector)                                   IfTrue                                                      ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   IfFalse                                                     ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FVector)                                   IfTrue                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   IfFalse                                                     OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorDeg
@@ -4611,8 +4729,8 @@ class FRigVMFunction_MathVectorLengthSquared : public FRigVMFunction_MathVectorB
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorLength
@@ -4623,8 +4741,8 @@ class FRigVMFunction_MathVectorLength : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorDistance
@@ -4635,9 +4753,9 @@ class FRigVMFunction_MathVectorDistance : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorCross
@@ -4658,9 +4776,9 @@ class FRigVMFunction_MathVectorDot : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorUnit
@@ -4681,9 +4799,9 @@ class FRigVMFunction_MathVectorSetLength : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Length                                                      ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorClampLength
@@ -4694,10 +4812,10 @@ class FRigVMFunction_MathVectorClampLength : public FRigVMFunction_MathVectorBas
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     MinimumLength                                               ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     MaximumLength                                               ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     MinimumLength                                               OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     MaximumLength                                               OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMirror
@@ -4708,9 +4826,9 @@ class FRigVMFunction_MathVectorMirror : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorAngle
@@ -4721,9 +4839,9 @@ class FRigVMFunction_MathVectorAngle : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorParallel
@@ -4734,9 +4852,9 @@ class FRigVMFunction_MathVectorParallel : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorOrthogonal
@@ -4747,9 +4865,9 @@ class FRigVMFunction_MathVectorOrthogonal : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBezierFourPoint
@@ -4760,10 +4878,10 @@ class FRigVMFunction_MathVectorBezierFourPoint : public FRigVMFunction_MathVecto
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x8, 96, 0, 0})
-	DMember(float)                                     T                                                           ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Tangent                                                     ___ OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x8, 96, 0, 0})
+	DMember(float)                                     T                                                           OFFSET(get<float>, {0x68, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Tangent                                                     OFFSET(get<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFourPointBezier
@@ -4774,10 +4892,10 @@ class FRigVMFourPointBezier : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   A                                                           ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   B                                                           ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   C                                                           ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   D                                                           ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   C                                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   D                                                           OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
@@ -4788,7 +4906,7 @@ class FRigVMFunction_MathVectorMakeBezierFourPoint : public FRigVMFunction_MathV
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      ___ OFFSET(get<T>, {0x8, 96, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x8, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorClampSpatially
@@ -4799,16 +4917,16 @@ class FRigVMFunction_MathVectorClampSpatially : public FRigVMFunction_MathVector
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        Axis                                                        ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FTransform)                                Space                                                       ___ OFFSET(get<T>, {0x30, 96, 0, 0})
-	DMember(bool)                                      bDrawDebug                                                  ___ OFFSET(get<bool>, {0x90, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  ___ OFFSET(get<T>, {0x94, 16, 0, 0})
-	DMember(float)                                     DebugThickness                                              ___ OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FTransform)                                Space                                                       OFFSET(get<T>, {0x30, 96, 0, 0})
+	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0x90, 1, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x94, 16, 0, 0})
+	DMember(float)                                     DebugThickness                                              OFFSET(get<float>, {0xA4, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0xA8, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntersectPlane
@@ -4819,12 +4937,12 @@ class FRigVMFunction_MathIntersectPlane : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Start                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PlanePoint                                                  ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   PlaneNormal                                                 ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	DMember(float)                                     Distance                                                    ___ OFFSET(get<float>, {0x80, 4, 0, 0})
+	SMember(FVector)                                   Start                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PlanePoint                                                  OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   PlaneNormal                                                 OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x68, 24, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x80, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDistanceToPlane
@@ -4835,11 +4953,11 @@ class FRigVMFunction_MathDistanceToPlane : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Point                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   PlanePoint                                                  ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PlaneNormal                                                 ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   ClosestPointOnPlane                                         ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	DMember(float)                                     SignedDistance                                              ___ OFFSET(get<float>, {0x68, 4, 0, 0})
+	SMember(FVector)                                   Point                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   PlanePoint                                                  OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PlaneNormal                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   ClosestPointOnPlane                                         OFFSET(get<T>, {0x50, 24, 0, 0})
+	DMember(float)                                     SignedDistance                                              OFFSET(get<float>, {0x68, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMakeRelative
@@ -4850,9 +4968,9 @@ class FRigVMFunction_MathVectorMakeRelative : public FRigVMFunction_MathVectorBa
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Global                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Parent                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Local                                                       ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Global                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Parent                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Local                                                       OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMakeAbsolute
@@ -4863,9 +4981,9 @@ class FRigVMFunction_MathVectorMakeAbsolute : public FRigVMFunction_MathVectorBa
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Local                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Parent                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Global                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Local                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Parent                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Global                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMirrorTransform
@@ -4876,11 +4994,11 @@ class FRigVMFunction_MathVectorMirrorTransform : public FRigVMFunction_MathVecto
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            ___ OFFSET(get<T>, {0x30, 96, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x90, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorArraySum
@@ -4891,8 +5009,8 @@ class FRigVMFunction_MathVectorArraySum : public FRigVMFunction_MathVectorBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FVector>)                           Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector)                                   Sum                                                         ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FVector>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector)                                   Sum                                                         OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorArrayAverage
@@ -4903,8 +5021,8 @@ class FRigVMFunction_MathVectorArrayAverage : public FRigVMFunction_MathVectorBa
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FVector>)                           Array                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector)                                   Average                                                     ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	CMember(TArray<FVector>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector)                                   Average                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseFloat
@@ -4915,13 +5033,13 @@ class FRigVMFunction_NoiseFloat : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Speed                                                       ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Frequency                                                   ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     Time                                                        ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Speed                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Frequency                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Time                                                        OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseDouble
@@ -4932,13 +5050,13 @@ class FRigVMFunction_NoiseDouble : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Speed                                                       ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    Frequency                                                   ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	DMember(double)                                    Minimum                                                     ___ OFFSET(get<double>, {0x20, 8, 0, 0})
-	DMember(double)                                    Maximum                                                     ___ OFFSET(get<double>, {0x28, 8, 0, 0})
-	DMember(double)                                    Result                                                      ___ OFFSET(get<double>, {0x30, 8, 0, 0})
-	DMember(double)                                    Time                                                        ___ OFFSET(get<double>, {0x38, 8, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Speed                                                       OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Frequency                                                   OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    Minimum                                                     OFFSET(get<double>, {0x20, 8, 0, 0})
+	DMember(double)                                    Maximum                                                     OFFSET(get<double>, {0x28, 8, 0, 0})
+	DMember(double)                                    Result                                                      OFFSET(get<double>, {0x30, 8, 0, 0})
+	DMember(double)                                    Time                                                        OFFSET(get<double>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseVector
@@ -4949,13 +5067,13 @@ class FRigVMFunction_NoiseVector : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Speed                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Frequency                                                   ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   Time                                                        ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Frequency                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x54, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Time                                                        OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseVector2
@@ -4966,13 +5084,13 @@ class FRigVMFunction_NoiseVector2 : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Speed                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Frequency                                                   ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(double)                                    Minimum                                                     ___ OFFSET(get<double>, {0x50, 8, 0, 0})
-	DMember(double)                                    Maximum                                                     ___ OFFSET(get<double>, {0x58, 8, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   Time                                                        ___ OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Frequency                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(double)                                    Minimum                                                     OFFSET(get<double>, {0x50, 8, 0, 0})
+	DMember(double)                                    Maximum                                                     OFFSET(get<double>, {0x58, 8, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Time                                                        OFFSET(get<T>, {0x78, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_RandomFloat
@@ -4983,15 +5101,15 @@ class FRigVMFunction_RandomFloat : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   Seed                                                        ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     LastResult                                                  ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(int32_t)                                   LastSeed                                                    ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   BaseSeed                                                    ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(float)                                     TimeLeft                                                    ___ OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   Seed                                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     LastResult                                                  OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(int32_t)                                   LastSeed                                                    OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   BaseSeed                                                    OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_RandomVector
@@ -5002,15 +5120,15 @@ class FRigVMFunction_RandomVector : public FRigVMFunction_MathBase
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(int32_t)                                   Seed                                                        ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   LastResult                                                  ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(int32_t)                                   LastSeed                                                    ___ OFFSET(get<int32_t>, {0x48, 4, 0, 0})
-	DMember(int32_t)                                   BaseSeed                                                    ___ OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	DMember(float)                                     TimeLeft                                                    ___ OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(int32_t)                                   Seed                                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   LastResult                                                  OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(int32_t)                                   LastSeed                                                    OFFSET(get<int32_t>, {0x48, 4, 0, 0})
+	DMember(int32_t)                                   BaseSeed                                                    OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMMirrorSettings
@@ -5021,10 +5139,10 @@ class FRigVMMirrorSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FString)                                   SearchString                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ReplaceString                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x1, 1, 0, 0})
+	SMember(FString)                                   SearchString                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ReplaceString                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMSimPoint
@@ -5035,12 +5153,12 @@ class FRigVMSimPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Size                                                        ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     LinearDamping                                               ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     InheritMotion                                               ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   LinearVelocity                                              ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Size                                                        OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     LinearDamping                                               OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     InheritMotion                                               OFFSET(get<float>, {0xC, 4, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   LinearVelocity                                              OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDispatch_CoreBase
@@ -5351,12 +5469,12 @@ class FRigVMFunction_ControlFlowBranch : public FRigVMFunction_ControlFlowBase
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              ___ OFFSET(get<T>, {0x10, 240, 0, 0})
-	DMember(bool)                                      Condition                                                   ___ OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FRigVMExecuteContext)                      TRUE                                                        ___ OFFSET(get<T>, {0x110, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      FALSE                                                       ___ OFFSET(get<T>, {0x200, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      Completed                                                   ___ OFFSET(get<T>, {0x2F0, 240, 0, 0})
-	SMember(FName)                                     BlockToRun                                                  ___ OFFSET(get<T>, {0x3E0, 4, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
+	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x100, 1, 0, 0})
+	SMember(FRigVMExecuteContext)                      TRUE_                                                       OFFSET(get<T>, {0x110, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      FALSE_                                                      OFFSET(get<T>, {0x200, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(get<T>, {0x2F0, 240, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x3E0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameBase
@@ -5377,9 +5495,9 @@ class FRigVMFunction_NameConcat : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     A                                                           ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     B                                                           ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FName)                                     Result                                                      ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     A                                                           OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     B                                                           OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameTruncate
@@ -5390,11 +5508,11 @@ class FRigVMFunction_NameTruncate : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      FromEnd                                                     ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FName)                                     Remainder                                                   ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FName)                                     Chopped                                                     ___ OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      FromEnd                                                     OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FName)                                     Remainder                                                   OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     Chopped                                                     OFFSET(get<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameReplace
@@ -5405,10 +5523,10 @@ class FRigVMFunction_NameReplace : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Old                                                         ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FName)                                     New                                                         ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FName)                                     Result                                                      ___ OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Old                                                         OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     New                                                         OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_EndsWith
@@ -5419,9 +5537,9 @@ class FRigVMFunction_EndsWith : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Ending                                                      ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Ending                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StartsWith
@@ -5432,9 +5550,9 @@ class FRigVMFunction_StartsWith : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Start                                                       ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Start                                                       OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_Contains
@@ -5445,9 +5563,9 @@ class FRigVMFunction_Contains : public FRigVMFunction_NameBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Search                                                      ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Search                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringBase
@@ -5468,9 +5586,9 @@ class FRigVMFunction_StringConcat : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   A                                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   B                                                           ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringTruncate
@@ -5481,11 +5599,11 @@ class FRigVMFunction_StringTruncate : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(bool)                                      FromEnd                                                     ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	SMember(FString)                                   Remainder                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   Chopped                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(bool)                                      FromEnd                                                     OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	SMember(FString)                                   Remainder                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Chopped                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringReplace
@@ -5496,10 +5614,10 @@ class FRigVMFunction_StringReplace : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Old                                                         ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   New                                                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Old                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   New                                                         OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringEndsWith
@@ -5510,9 +5628,9 @@ class FRigVMFunction_StringEndsWith : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Ending                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Ending                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringStartsWith
@@ -5523,9 +5641,9 @@ class FRigVMFunction_StringStartsWith : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Start                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Start                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringContains
@@ -5536,9 +5654,9 @@ class FRigVMFunction_StringContains : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Search                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      Result                                                      ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Search                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringLength
@@ -5549,8 +5667,8 @@ class FRigVMFunction_StringLength : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Length                                                      ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Length                                                      OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringTrimWhitespace
@@ -5561,8 +5679,8 @@ class FRigVMFunction_StringTrimWhitespace : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringToUppercase
@@ -5573,8 +5691,8 @@ class FRigVMFunction_StringToUppercase : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringToLowercase
@@ -5585,8 +5703,8 @@ class FRigVMFunction_StringToLowercase : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringReverse
@@ -5597,8 +5715,8 @@ class FRigVMFunction_StringReverse : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Reverse                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Reverse                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringLeft
@@ -5609,9 +5727,9 @@ class FRigVMFunction_StringLeft : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringRight
@@ -5622,9 +5740,9 @@ class FRigVMFunction_StringRight : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringMiddle
@@ -5635,10 +5753,10 @@ class FRigVMFunction_StringMiddle : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   Start                                                       ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   Count                                                       ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   Start                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringFind
@@ -5649,10 +5767,10 @@ class FRigVMFunction_StringFind : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Search                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      Found                                                       ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Search                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      Found                                                       OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringSplit
@@ -5663,9 +5781,9 @@ class FRigVMFunction_StringSplit : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Separator                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FString>)                           Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Separator                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FString>)                           Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringJoin
@@ -5676,9 +5794,9 @@ class FRigVMFunction_StringJoin : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FString>)                           Values                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Separator                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FString>)                           Values                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Separator                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringPadInteger
@@ -5689,9 +5807,9 @@ class FRigVMFunction_StringPadInteger : public FRigVMFunction_StringBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Digits                                                      ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   Result                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Digits                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigDispatch_ToString
@@ -5732,12 +5850,12 @@ class FRigVMFunction_AccumulateFloatAdd : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Increment                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     InitialValue                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     AccumulatedValue                                            ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(float)                                     Increment                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     InitialValue                                                OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     AccumulatedValue                                            OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateVectorAdd
@@ -5748,12 +5866,12 @@ class FRigVMFunction_AccumulateVectorAdd : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Increment                                                   ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
+	SMember(FVector)                                   Increment                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateFloatMul
@@ -5764,12 +5882,12 @@ class FRigVMFunction_AccumulateFloatMul : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Multiplier                                                  ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     InitialValue                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     AccumulatedValue                                            ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(float)                                     Multiplier                                                  OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     InitialValue                                                OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     AccumulatedValue                                            OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateVectorMul
@@ -5780,12 +5898,12 @@ class FRigVMFunction_AccumulateVectorMul : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Multiplier                                                  ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
+	SMember(FVector)                                   Multiplier                                                  OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateQuatMul
@@ -5796,13 +5914,13 @@ class FRigVMFunction_AccumulateQuatMul : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FQuat)                                     Multiplier                                                  ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     InitialValue                                                ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(bool)                                      bFlipOrder                                                  ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FQuat)                                     AccumulatedValue                                            ___ OFFSET(get<T>, {0x80, 32, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	SMember(FQuat)                                     Multiplier                                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     InitialValue                                                OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      bFlipOrder                                                  OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x51, 1, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(get<T>, {0x80, 32, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateTransformMul
@@ -5813,13 +5931,13 @@ class FRigVMFunction_AccumulateTransformMul : public FRigVMFunction_AccumulateBa
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FTransform)                                Multiplier                                                  ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                InitialValue                                                ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	DMember(bool)                                      bFlipOrder                                                  ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0xD1, 1, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xE0, 96, 0, 0})
-	SMember(FTransform)                                AccumulatedValue                                            ___ OFFSET(get<T>, {0x140, 96, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FTransform)                                Multiplier                                                  OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                InitialValue                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	DMember(bool)                                      bFlipOrder                                                  OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0xD1, 1, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                AccumulatedValue                                            OFFSET(get<T>, {0x140, 96, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateFloatLerp
@@ -5830,13 +5948,13 @@ class FRigVMFunction_AccumulateFloatLerp : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(float)                                     TargetValue                                                 ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     InitialValue                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Blend                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     AccumulatedValue                                            ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(float)                                     TargetValue                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     InitialValue                                                OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     AccumulatedValue                                            OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateVectorLerp
@@ -5847,13 +5965,13 @@ class FRigVMFunction_AccumulateVectorLerp : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   TargetValue                                                 ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	DMember(float)                                     Blend                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x3C, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
+	SMember(FVector)                                   TargetValue                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x3C, 1, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateQuatLerp
@@ -5864,13 +5982,13 @@ class FRigVMFunction_AccumulateQuatLerp : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FQuat)                                     TargetValue                                                 ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     InitialValue                                                ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	DMember(float)                                     Blend                                                       ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0x54, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FQuat)                                     AccumulatedValue                                            ___ OFFSET(get<T>, {0x80, 32, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	SMember(FQuat)                                     TargetValue                                                 OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     InitialValue                                                OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x54, 1, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(get<T>, {0x80, 32, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateTransformLerp
@@ -5881,13 +5999,13 @@ class FRigVMFunction_AccumulateTransformLerp : public FRigVMFunction_AccumulateB
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FTransform)                                TargetValue                                                 ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                InitialValue                                                ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	DMember(float)                                     Blend                                                       ___ OFFSET(get<float>, {0xD0, 4, 0, 0})
-	DMember(bool)                                      bIntegrateDeltaTime                                         ___ OFFSET(get<bool>, {0xD4, 1, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0xE0, 96, 0, 0})
-	SMember(FTransform)                                AccumulatedValue                                            ___ OFFSET(get<T>, {0x140, 96, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FTransform)                                TargetValue                                                 OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                InitialValue                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0xD0, 4, 0, 0})
+	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0xD4, 1, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                AccumulatedValue                                            OFFSET(get<T>, {0x140, 96, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateFloatRange
@@ -5898,12 +6016,12 @@ class FRigVMFunction_AccumulateFloatRange : public FRigVMFunction_AccumulateBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Minimum                                                     ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     AccumulatedMinimum                                          ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     AccumulatedMaximum                                          ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x1C, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     AccumulatedMinimum                                          OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     AccumulatedMaximum                                          OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AccumulateVectorRange
@@ -5914,12 +6032,12 @@ class FRigVMFunction_AccumulateVectorRange : public FRigVMFunction_AccumulateBas
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Minimum                                                     ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Maximum                                                     ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedMinimum                                          ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedMaximum                                          ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Minimum                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Maximum                                                     OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedMinimum                                          OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedMaximum                                          OFFSET(get<T>, {0x68, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x80, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AlphaInterp
@@ -5930,20 +6048,20 @@ class FRigVMFunction_AlphaInterp : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     Bias                                                        ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bMapRange                                                   ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	DMember(bool)                                      bClampResult                                                ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(float)                                     ClampMin                                                    ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     ClampMax                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bInterpResult                                               ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	DMember(float)                                     InterpSpeedIncreasing                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     InterpSpeedDecreasing                                       ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              ___ OFFSET(get<T>, {0x44, 48, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x14, 1, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bInterpResult                                               OFFSET(get<bool>, {0x34, 1, 0, 0})
+	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x44, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AlphaInterpVector
@@ -5954,20 +6072,20 @@ class FRigVMFunction_AlphaInterpVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     Bias                                                        ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bMapRange                                                   ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     ___ OFFSET(get<T>, {0x2C, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    ___ OFFSET(get<T>, {0x34, 8, 0, 0})
-	DMember(bool)                                      bClampResult                                                ___ OFFSET(get<bool>, {0x3C, 1, 0, 0})
-	DMember(float)                                     ClampMin                                                    ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     ClampMax                                                    ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(bool)                                      bInterpResult                                               ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(float)                                     InterpSpeedIncreasing                                       ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     InterpSpeedDecreasing                                       ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              ___ OFFSET(get<T>, {0x70, 48, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x2C, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x34, 8, 0, 0})
+	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x3C, 1, 0, 0})
+	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(bool)                                      bInterpResult                                               OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x50, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x70, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AlphaInterpQuat
@@ -5978,20 +6096,20 @@ class FRigVMFunction_AlphaInterpQuat : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     Bias                                                        ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bMapRange                                                   ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     ___ OFFSET(get<T>, {0x3C, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    ___ OFFSET(get<T>, {0x44, 8, 0, 0})
-	DMember(bool)                                      bClampResult                                                ___ OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	DMember(float)                                     ClampMin                                                    ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     ClampMax                                                    ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(bool)                                      bInterpResult                                               ___ OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(float)                                     InterpSpeedIncreasing                                       ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     InterpSpeedDecreasing                                       ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      ___ OFFSET(get<T>, {0x70, 32, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              ___ OFFSET(get<T>, {0x90, 48, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x3C, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x44, 8, 0, 0})
+	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(bool)                                      bInterpResult                                               OFFSET(get<bool>, {0x58, 1, 0, 0})
+	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x60, 4, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x90, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DeltaFromPreviousFloat
@@ -6002,11 +6120,11 @@ class FRigVMFunction_DeltaFromPreviousFloat : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Delta                                                       ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     PreviousValue                                               ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Cache                                                       ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Delta                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     PreviousValue                                               OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Cache                                                       OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DeltaFromPreviousVector
@@ -6017,11 +6135,11 @@ class FRigVMFunction_DeltaFromPreviousVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Delta                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PreviousValue                                               ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Cache                                                       ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Delta                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PreviousValue                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Cache                                                       OFFSET(get<T>, {0x50, 24, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DeltaFromPreviousQuat
@@ -6032,11 +6150,11 @@ class FRigVMFunction_DeltaFromPreviousQuat : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FQuat)                                     Value                                                       ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Delta                                                       ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     PreviousValue                                               ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	SMember(FQuat)                                     Cache                                                       ___ OFFSET(get<T>, {0x70, 32, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x90, 1, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Delta                                                       OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     PreviousValue                                               OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Cache                                                       OFFSET(get<T>, {0x70, 32, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x90, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DeltaFromPreviousTransform
@@ -6047,11 +6165,11 @@ class FRigVMFunction_DeltaFromPreviousTransform : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Delta                                                       ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                PreviousValue                                               ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
-	SMember(FTransform)                                Cache                                                       ___ OFFSET(get<T>, {0x130, 96, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Delta                                                       OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                PreviousValue                                               OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Cache                                                       OFFSET(get<T>, {0x130, 96, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x190, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_KalmanFloat
@@ -6062,11 +6180,11 @@ class FRigVMFunction_KalmanFloat : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	CMember(TArray<float>)                             Buffer                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(TArray<float>)                             Buffer                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_KalmanVector
@@ -6077,11 +6195,11 @@ class FRigVMFunction_KalmanVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	CMember(TArray<FVector>)                           Buffer                                                      ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(TArray<FVector>)                           Buffer                                                      OFFSET(get<T>, {0x40, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_KalmanTransform
@@ -6092,11 +6210,11 @@ class FRigVMFunction_KalmanTransform : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	CMember(TArray<FTransform>)                        Buffer                                                      ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x80, 96, 0, 0})
+	CMember(TArray<FTransform>)                        Buffer                                                      OFFSET(get<T>, {0xE0, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_Timeline
@@ -6107,10 +6225,10 @@ class FRigVMFunction_Timeline : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Speed                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Time                                                        ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     AccumulatedValue                                            ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(float)                                     Speed                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Time                                                        OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     AccumulatedValue                                            OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_TimeLoop
@@ -6121,17 +6239,17 @@ class FRigVMFunction_TimeLoop : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(float)                                     Speed                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(bool)                                      Normalize                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     Absolute                                                    ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Relative                                                    ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     FlipFlop                                                    ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(bool)                                      Even                                                        ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(float)                                     AccumulatedAbsolute                                         ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     AccumulatedRelative                                         ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   NumIterations                                               ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(float)                                     Speed                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(bool)                                      Normalize                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     Absolute                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Relative                                                    OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     FlipFlop                                                    OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      Even                                                        OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(float)                                     AccumulatedAbsolute                                         OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     AccumulatedRelative                                         OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   NumIterations                                               OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_TimeOffsetFloat
@@ -6142,15 +6260,15 @@ class FRigVMFunction_TimeOffsetFloat : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     SecondsAgo                                                  ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(float)                                     TimeRange                                                   ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Result                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	CMember(TArray<float>)                             Buffer                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<float>)                             DeltaTimes                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	DMember(int32_t)                                   UpperBound                                                  ___ OFFSET(get<int32_t>, {0x44, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     SecondsAgo                                                  OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(float)                                     TimeRange                                                   OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(TArray<float>)                             Buffer                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<float>)                             DeltaTimes                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	DMember(int32_t)                                   UpperBound                                                  OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_TimeOffsetVector
@@ -6161,15 +6279,15 @@ class FRigVMFunction_TimeOffsetVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     SecondsAgo                                                  ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(float)                                     TimeRange                                                   ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	CMember(TArray<FVector>)                           Buffer                                                      ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<float>)                             DeltaTimes                                                  ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0x68, 4, 0, 0})
-	DMember(int32_t)                                   UpperBound                                                  ___ OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     SecondsAgo                                                  OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(float)                                     TimeRange                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	CMember(TArray<FVector>)                           Buffer                                                      OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<float>)                             DeltaTimes                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x68, 4, 0, 0})
+	DMember(int32_t)                                   UpperBound                                                  OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_TimeOffsetTransform
@@ -6180,15 +6298,15 @@ class FRigVMFunction_TimeOffsetTransform : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FTransform)                                Value                                                       ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(float)                                     SecondsAgo                                                  ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x74, 4, 0, 0})
-	DMember(float)                                     TimeRange                                                   ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      ___ OFFSET(get<T>, {0x80, 96, 0, 0})
-	CMember(TArray<FTransform>)                        Buffer                                                      ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<float>)                             DeltaTimes                                                  ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	DMember(int32_t)                                   LastInsertIndex                                             ___ OFFSET(get<int32_t>, {0x100, 4, 0, 0})
-	DMember(int32_t)                                   UpperBound                                                  ___ OFFSET(get<int32_t>, {0x104, 4, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(float)                                     SecondsAgo                                                  OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
+	DMember(float)                                     TimeRange                                                   OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x80, 96, 0, 0})
+	CMember(TArray<FTransform>)                        Buffer                                                      OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<float>)                             DeltaTimes                                                  OFFSET(get<T>, {0xF0, 16, 0, 0})
+	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x100, 4, 0, 0})
+	DMember(int32_t)                                   UpperBound                                                  OFFSET(get<int32_t>, {0x104, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VerletIntegrateVector
@@ -6199,16 +6317,16 @@ class FRigVMFunction_VerletIntegrateVector : public FRigVMFunction_SimBase
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FVector)                                   Target                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	DMember(float)                                     Strength                                                    ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     Damp                                                        ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     Blend                                                       ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FVector)                                   Force                                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   Acceleration                                                ___ OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FRigVMSimPoint)                            Point                                                       ___ OFFSET(get<T>, {0x90, 64, 0, 0})
-	DMember(bool)                                      bInitialized                                                ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Damp                                                        OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x28, 4, 0, 0})
+	SMember(FVector)                                   Force                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Acceleration                                                OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FRigVMSimPoint)                            Point                                                       OFFSET(get<T>, {0x90, 64, 0, 0})
+	DMember(bool)                                      bInitialized                                                OFFSET(get<bool>, {0xD0, 1, 0, 0})
 };
 
 /// Enum /Script/RigVM.ERigVMPinDirection

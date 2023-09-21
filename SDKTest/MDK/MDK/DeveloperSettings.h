@@ -45,7 +45,7 @@ class UPlatformSettingsManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<UClass*, FPlatformSettingsInstances>) SettingsMap                                                 ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<UClass*, FPlatformSettingsInstances>) SettingsMap                                                 OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Struct /Script/DeveloperSettings.PerPlatformSettings
@@ -56,7 +56,7 @@ class FPerPlatformSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UPlatformSettings*>)                Settings                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UPlatformSettings*>)                Settings                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/DeveloperSettings.PlatformSettingsInstances
@@ -67,7 +67,7 @@ class FPlatformSettingsInstances : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UPlatformSettings*)                        PlatformInstance                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TMap<FName, UPlatformSettings*>)           OtherPlatforms                                              ___ OFFSET(get<T>, {0x8, 80, 0, 0})
+	CMember(UPlatformSettings*)                        PlatformInstance                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TMap<FName, UPlatformSettings*>)           OtherPlatforms                                              OFFSET(get<T>, {0x8, 80, 0, 0})
 };
 

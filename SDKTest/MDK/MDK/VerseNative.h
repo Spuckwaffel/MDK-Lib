@@ -35,7 +35,7 @@ class UVerseAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UClass*)                                   AssetClass                                                  ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UClass*)                                   AssetClass                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/VerseNative.VerseStmLibrary
@@ -56,8 +56,8 @@ class FVerseIntRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int64_t)                                   Left                                                        ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Right                                                       ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   Left                                                        OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Right                                                       OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/VerseNative.VerseRational
@@ -68,8 +68,8 @@ class FVerseRational : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int64_t)                                   Numerator                                                   ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Denominator                                                 ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   Numerator                                                   OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Denominator                                                 OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/VerseNative.akeType

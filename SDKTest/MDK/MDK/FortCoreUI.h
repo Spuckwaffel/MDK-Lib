@@ -16,7 +16,7 @@ class UFortCTAButtonViewModel : public UMVVMViewModelBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FText)                                     Text                                                        ___ OFFSET(get<T>, {0x68, 24, 0, 0})
-	SMember(FText)                                     SecondaryText                                               ___ OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FText)                                     SecondaryText                                               OFFSET(get<T>, {0x80, 24, 0, 0})
 };
 

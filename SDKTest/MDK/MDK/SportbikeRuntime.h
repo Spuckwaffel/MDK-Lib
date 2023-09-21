@@ -18,14 +18,14 @@ class UFortSportbikeAnimInstance : public UFortMotorcycleVehicleAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 1680;
 
 public:
-	SMember(FRotator)                                  LimitedWheelRotationFR                                      ___ OFFSET(get<T>, {0x668, 24, 0, 0})
-	DMember(bool)                                      HasPassenger                                                ___ OFFSET(get<bool>, {0x680, 1, 0, 0})
-	DMember(bool)                                      ShouldPlayGroundTrick                                       ___ OFFSET(get<bool>, {0x681, 1, 0, 0})
-	DMember(bool)                                      IsWheelie                                                   ___ OFFSET(get<bool>, {0x682, 1, 0, 0})
-	DMember(bool)                                      StateRuleFromWheelieToGroundTrickOutro                      ___ OFFSET(get<bool>, {0x683, 1, 0, 0})
-	DMember(bool)                                      SportBikeWheelieEarlyOut                                    ___ OFFSET(get<bool>, {0x684, 1, 0, 0})
-	DMember(bool)                                      ShouldExitFromLocomotion                                    ___ OFFSET(get<bool>, {0x685, 1, 0, 0})
-	DMember(bool)                                      IsChangingGear                                              ___ OFFSET(get<bool>, {0x686, 1, 0, 0})
+	SMember(FRotator)                                  LimitedWheelRotationFR                                      OFFSET(get<T>, {0x668, 24, 0, 0})
+	DMember(bool)                                      HasPassenger                                                OFFSET(get<bool>, {0x680, 1, 0, 0})
+	DMember(bool)                                      ShouldPlayGroundTrick                                       OFFSET(get<bool>, {0x681, 1, 0, 0})
+	DMember(bool)                                      IsWheelie                                                   OFFSET(get<bool>, {0x682, 1, 0, 0})
+	DMember(bool)                                      StateRuleFromWheelieToGroundTrickOutro                      OFFSET(get<bool>, {0x683, 1, 0, 0})
+	DMember(bool)                                      SportBikeWheelieEarlyOut                                    OFFSET(get<bool>, {0x684, 1, 0, 0})
+	DMember(bool)                                      ShouldExitFromLocomotion                                    OFFSET(get<bool>, {0x685, 1, 0, 0})
+	DMember(bool)                                      IsChangingGear                                              OFFSET(get<bool>, {0x686, 1, 0, 0})
 };
 
 /// Class /Script/SportbikeRuntime.FortSportbikeDriverAnimInstance
@@ -36,18 +36,18 @@ class UFortSportbikeDriverAnimInstance : public UFortPlayerAnimInstance_Motorcyc
 	static inline constexpr uint64_t __MDKClassSize = 2384;
 
 public:
-	DMember(bool)                                      SportBikeWheelieEarlyOut                                    ___ OFFSET(get<bool>, {0x920, 1, 0, 0})
-	DMember(bool)                                      StateRuleFromWheelieToGroundTrickOutro                      ___ OFFSET(get<bool>, {0x921, 1, 0, 0})
-	DMember(bool)                                      EarlyExitFromGroundTrick                                    ___ OFFSET(get<bool>, {0x922, 1, 0, 0})
-	DMember(bool)                                      IsBoostingWithNoPassenger                                   ___ OFFSET(get<bool>, {0x923, 1, 0, 0})
-	DMember(int32_t)                                   MotorcycleGear                                              ___ OFFSET(get<int32_t>, {0x924, 4, 0, 0})
-	DMember(int32_t)                                   CurrentGear                                                 ___ OFFSET(get<int32_t>, {0x928, 4, 0, 0})
-	DMember(int32_t)                                   PreviousGear                                                ___ OFFSET(get<int32_t>, {0x92C, 4, 0, 0})
-	DMember(bool)                                      IsChangingGear                                              ___ OFFSET(get<bool>, {0x930, 1, 0, 0})
-	DMember(float)                                     SuperSlideBlendAlpha                                        ___ OFFSET(get<float>, {0x934, 4, 0, 0})
-	DMember(float)                                     SuperSlideBlendStart                                        ___ OFFSET(get<float>, {0x938, 4, 0, 0})
-	DMember(float)                                     SuperSlideBlendEnd                                          ___ OFFSET(get<float>, {0x93C, 4, 0, 0})
-	DMember(bool)                                      IsSuperSliding                                              ___ OFFSET(get<bool>, {0x940, 1, 0, 0})
+	DMember(bool)                                      SportBikeWheelieEarlyOut                                    OFFSET(get<bool>, {0x920, 1, 0, 0})
+	DMember(bool)                                      StateRuleFromWheelieToGroundTrickOutro                      OFFSET(get<bool>, {0x921, 1, 0, 0})
+	DMember(bool)                                      EarlyExitFromGroundTrick                                    OFFSET(get<bool>, {0x922, 1, 0, 0})
+	DMember(bool)                                      IsBoostingWithNoPassenger                                   OFFSET(get<bool>, {0x923, 1, 0, 0})
+	DMember(int32_t)                                   MotorcycleGear                                              OFFSET(get<int32_t>, {0x924, 4, 0, 0})
+	DMember(int32_t)                                   CurrentGear                                                 OFFSET(get<int32_t>, {0x928, 4, 0, 0})
+	DMember(int32_t)                                   PreviousGear                                                OFFSET(get<int32_t>, {0x92C, 4, 0, 0})
+	DMember(bool)                                      IsChangingGear                                              OFFSET(get<bool>, {0x930, 1, 0, 0})
+	DMember(float)                                     SuperSlideBlendAlpha                                        OFFSET(get<float>, {0x934, 4, 0, 0})
+	DMember(float)                                     SuperSlideBlendStart                                        OFFSET(get<float>, {0x938, 4, 0, 0})
+	DMember(float)                                     SuperSlideBlendEnd                                          OFFSET(get<float>, {0x93C, 4, 0, 0})
+	DMember(bool)                                      IsSuperSliding                                              OFFSET(get<bool>, {0x940, 1, 0, 0})
 };
 
 /// Class /Script/SportbikeRuntime.FortSportbikeVehicle

@@ -15,6 +15,6 @@ class UDiscordRuntimeSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bEnableJoinSecrets                                          ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bEnableJoinSecrets                                          OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 

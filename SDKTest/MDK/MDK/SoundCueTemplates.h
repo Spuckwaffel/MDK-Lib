@@ -57,8 +57,8 @@ class FSoundCueCrossfadeInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDistanceDatum)                            DistanceInfo                                                ___ OFFSET(get<T>, {0x0, 20, 0, 0})
-	CMember(USoundWave*)                               sound                                                       ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FDistanceDatum)                            DistanceInfo                                                OFFSET(get<T>, {0x0, 20, 0, 0})
+	CMember(USoundWave*)                               sound                                                       OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/SoundCueTemplates.SoundCueTemplateQualitySettings
@@ -69,10 +69,10 @@ class FSoundCueTemplateQualitySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(int32_t)                                   MaxConcatenatedVariations                                   ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   MaxRandomizedVariations                                     ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	DMember(int32_t)                                   MaxMixVariations                                            ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(int32_t)                                   MaxConcatenatedVariations                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   MaxRandomizedVariations                                     OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	DMember(int32_t)                                   MaxMixVariations                                            OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Enum /Script/SoundCueTemplates.ESoundContainerType

@@ -15,7 +15,7 @@ class UShaderPlatformQualitySettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FMaterialQualityOverrides)                 QualityOverrides                                            ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FMaterialQualityOverrides)                 QualityOverrides                                            OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/MaterialShaderQualitySettings.MaterialShaderQualitySettings
@@ -26,7 +26,7 @@ class UMaterialShaderQualitySettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<FName, UShaderPlatformQualitySettings*>) ForwardSettingMap                                        ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FName, UShaderPlatformQualitySettings*>) ForwardSettingMap                                        OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Struct /Script/MaterialShaderQualitySettings.MaterialQualityOverrides
@@ -37,14 +37,14 @@ class FMaterialQualityOverrides : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(bool)                                      bDiscardQualityDuringCook                                   ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bEnableOverride                                             ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bForceFullyRough                                            ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bForceNonMetal                                              ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bForceDisableLMDirectionality                               ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bForceDisablePreintegratedGF                                ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
-	DMember(bool)                                      bDisableMaterialNormalCalculation                           ___ OFFSET(get<bool>, {0x6, 1, 0, 0})
-	CMember(EMobileShadowQuality)                      MobileShadowQuality                                         ___ OFFSET(get<T>, {0x7, 1, 0, 0})
+	DMember(bool)                                      bDiscardQualityDuringCook                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bEnableOverride                                             OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bForceFullyRough                                            OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bForceNonMetal                                              OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bForceDisableLMDirectionality                               OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bForceDisablePreintegratedGF                                OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bDisableMaterialNormalCalculation                           OFFSET(get<bool>, {0x6, 1, 0, 0})
+	CMember(EMobileShadowQuality)                      MobileShadowQuality                                         OFFSET(get<T>, {0x7, 1, 0, 0})
 };
 
 /// Enum /Script/MaterialShaderQualitySettings.EMobileShadowQuality

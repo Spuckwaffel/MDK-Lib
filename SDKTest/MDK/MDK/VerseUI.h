@@ -28,7 +28,7 @@ class UVersePlayerUIEntityComponent : public UEntityActorPlayerComponent
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(UUIFrameworkPlayerComponent*)              UIFComponent                                                ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(UUIFrameworkPlayerComponent*)              UIFComponent                                                OFFSET(get<T>, {0xD0, 8, 0, 0})
 };
 
 /// Class /Script/VerseUI.VerseWidgetNativeBase
@@ -39,7 +39,7 @@ class UVerseWidgetNativeBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UUIFrameworkWidget*)                       UIFWidgetInstance                                           ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UUIFrameworkWidget*)                       UIFWidgetInstance                                           OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/VerseUI.VerseUIWorldSubsystem

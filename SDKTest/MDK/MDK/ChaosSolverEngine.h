@@ -37,10 +37,10 @@ class UChaosGameplayEventDispatcher : public UChaosEventListenerComponent
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	CMember(TMap<UPrimitiveComponent*, FChaosHandlerSet>) CollisionEventRegistrations                              ___ OFFSET(get<T>, {0x168, 80, 0, 0})
-	CMember(TMap<UPrimitiveComponent*, FBreakEventCallbackWrapper>) BreakEventRegistrations                        ___ OFFSET(get<T>, {0x1B8, 80, 0, 0})
-	CMember(TMap<UPrimitiveComponent*, FRemovalEventCallbackWrapper>) RemovalEventRegistrations                    ___ OFFSET(get<T>, {0x208, 80, 0, 0})
-	CMember(TMap<UPrimitiveComponent*, FCrumblingEventCallbackWrapper>) CrumblingEventRegistrations                ___ OFFSET(get<T>, {0x258, 80, 0, 0})
+	CMember(TMap<UPrimitiveComponent*, FChaosHandlerSet>) CollisionEventRegistrations                              OFFSET(get<T>, {0x168, 80, 0, 0})
+	CMember(TMap<UPrimitiveComponent*, FBreakEventCallbackWrapper>) BreakEventRegistrations                        OFFSET(get<T>, {0x1B8, 80, 0, 0})
+	CMember(TMap<UPrimitiveComponent*, FRemovalEventCallbackWrapper>) RemovalEventRegistrations                    OFFSET(get<T>, {0x208, 80, 0, 0})
+	CMember(TMap<UPrimitiveComponent*, FCrumblingEventCallbackWrapper>) CrumblingEventRegistrations                OFFSET(get<T>, {0x258, 80, 0, 0})
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosNotifyHandlerInterface
@@ -81,27 +81,34 @@ class AChaosSolverActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FChaosSolverConfiguration)                 Properties                                                  ___ OFFSET(get<T>, {0x290, 104, 0, 0})
-	DMember(float)                                     TimeStepMultiplier                                          ___ OFFSET(get<float>, {0x2F8, 4, 0, 0})
-	DMember(int32_t)                                   CollisionIterations                                         ___ OFFSET(get<int32_t>, {0x2FC, 4, 0, 0})
-	DMember(int32_t)                                   PushOutIterations                                           ___ OFFSET(get<int32_t>, {0x300, 4, 0, 0})
-	DMember(int32_t)                                   PushOutPairIterations                                       ___ OFFSET(get<int32_t>, {0x304, 4, 0, 0})
-	DMember(float)                                     ClusterConnectionFactor                                     ___ OFFSET(get<float>, {0x308, 4, 0, 0})
-	CMember(EClusterConnectionTypeEnum)                ClusterUnionConnectionType                                  ___ OFFSET(get<T>, {0x30C, 1, 0, 0})
-	DMember(bool)                                      DoGenerateCollisionData                                     ___ OFFSET(get<bool>, {0x30D, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	DMember(bool)                                      DoGenerateBreakingData                                      ___ OFFSET(get<bool>, {0x320, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      ___ OFFSET(get<T>, {0x324, 16, 0, 0})
-	DMember(bool)                                      DoGenerateTrailingData                                      ___ OFFSET(get<bool>, {0x334, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      ___ OFFSET(get<T>, {0x338, 16, 0, 0})
-	DMember(float)                                     MassScale                                                   ___ OFFSET(get<float>, {0x348, 4, 0, 0})
-	DMember(bool)                                      bHasFloor                                                   ___ OFFSET(get<bool>, {0x34C, 1, 0, 0})
-	DMember(float)                                     FloorHeight                                                 ___ OFFSET(get<float>, {0x350, 4, 0, 0})
-	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    ___ OFFSET(get<T>, {0x354, 3, 0, 0})
-	CMember(UBillboardComponent*)                      SpriteComponent                                             ___ OFFSET(get<T>, {0x358, 8, 0, 0})
-	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            ___ OFFSET(get<T>, {0x378, 8, 0, 0})
+	SMember(FChaosSolverConfiguration)                 Properties                                                  OFFSET(get<T>, {0x290, 104, 0, 0})
+	DMember(float)                                     TimeStepMultiplier                                          OFFSET(get<float>, {0x2F8, 4, 0, 0})
+	DMember(int32_t)                                   CollisionIterations                                         OFFSET(get<int32_t>, {0x2FC, 4, 0, 0})
+	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x300, 4, 0, 0})
+	DMember(int32_t)                                   PushOutPairIterations                                       OFFSET(get<int32_t>, {0x304, 4, 0, 0})
+	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x308, 4, 0, 0})
+	CMember(EClusterConnectionTypeEnum)                ClusterUnionConnectionType                                  OFFSET(get<T>, {0x30C, 1, 0, 0})
+	DMember(bool)                                      DoGenerateCollisionData                                     OFFSET(get<bool>, {0x30D, 1, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(get<T>, {0x310, 16, 0, 0})
+	DMember(bool)                                      DoGenerateBreakingData                                      OFFSET(get<bool>, {0x320, 1, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(get<T>, {0x324, 16, 0, 0})
+	DMember(bool)                                      DoGenerateTrailingData                                      OFFSET(get<bool>, {0x334, 1, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(get<T>, {0x338, 16, 0, 0})
+	DMember(float)                                     MassScale                                                   OFFSET(get<float>, {0x348, 4, 0, 0})
+	DMember(bool)                                      bHasFloor                                                   OFFSET(get<bool>, {0x34C, 1, 0, 0})
+	DMember(float)                                     FloorHeight                                                 OFFSET(get<float>, {0x350, 4, 0, 0})
+	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(get<T>, {0x354, 3, 0, 0})
+	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x358, 8, 0, 0})
+	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            OFFSET(get<T>, {0x378, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetSolverActive
+	// void SetSolverActive(bool bActive);                                                                                      // [0x570e6d8] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver
+	// void SetAsCurrentWorldSolver();                                                                                          // [0x570e6c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 /// Class /Script/ChaosSolverEngine.ChaosSolverSettings
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UChaosSolverSettings : public UDeveloperSettings
@@ -110,7 +117,7 @@ class UChaosSolverSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoftClassPath)                            DefaultChaosSolverActorClass                                ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FSoftClassPath)                            DefaultChaosSolverActorClass                                OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/ChaosSolverEngine.ChaosPhysicsCollisionInfo
@@ -121,17 +128,17 @@ class FChaosPhysicsCollisionInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(UPrimitiveComponent*)                      Component                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UPrimitiveComponent*)                      OtherComponent                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedImpulse                                          ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   OtherVelocity                                               ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             ___ OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FVector)                                   OtherAngularVelocity                                        ___ OFFSET(get<T>, {0xA0, 24, 0, 0})
-	DMember(float)                                     Mass                                                        ___ OFFSET(get<float>, {0xB8, 4, 0, 0})
-	DMember(float)                                     OtherMass                                                   ___ OFFSET(get<float>, {0xBC, 4, 0, 0})
+	CMember(UPrimitiveComponent*)                      Component                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UPrimitiveComponent*)                      OtherComponent                                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   OtherVelocity                                               OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   OtherAngularVelocity                                        OFFSET(get<T>, {0xA0, 24, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0xB8, 4, 0, 0})
+	DMember(float)                                     OtherMass                                                   OFFSET(get<float>, {0xBC, 4, 0, 0})
 };
 
 /// Struct /Script/ChaosSolverEngine.BreakEventCallbackWrapper
@@ -172,7 +179,7 @@ class FChaosHandlerSet : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TSet<UObject*>)                            ChaosHandlers                                               ___ OFFSET(get<T>, {0x8, 80, 0, 0})
+	CMember(TSet<UObject*>)                            ChaosHandlers                                               OFFSET(get<T>, {0x8, 80, 0, 0})
 };
 
 /// Struct /Script/ChaosSolverEngine.ChaosDebugSubstepControl
@@ -183,9 +190,9 @@ class FChaosDebugSubstepControl : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
 public:
-	DMember(bool)                                      bPause                                                      ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bSubstep                                                    ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bStep                                                       ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bPause                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bSubstep                                                    OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bStep                                                       OFFSET(get<bool>, {0x2, 1, 0, 0})
 };
 
 /// Enum /Script/ChaosSolverEngine.EClusterConnectionTypeEnum

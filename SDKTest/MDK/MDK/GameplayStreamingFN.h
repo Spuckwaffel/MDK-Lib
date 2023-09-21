@@ -26,8 +26,8 @@ class UFortGFNGameplayStreamingHandler : public UGFNGameplayStreamingHandler
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(UFortLocalPlayerAccountHelper*)            FortLocalPlayerAccountHelper                                ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	CMember(TWeakObjectPtr<UFortOnlineAccount*>)       WeakFortOnlineAccount                                       ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(UFortLocalPlayerAccountHelper*)            FortLocalPlayerAccountHelper                                OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(TWeakObjectPtr<UFortOnlineAccount*>)       WeakFortOnlineAccount                                       OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Class /Script/GameplayStreamingFN.FortLunaGameplayStreamingHandler

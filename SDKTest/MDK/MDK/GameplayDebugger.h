@@ -17,14 +17,35 @@ class AGameplayDebuggerCategoryReplicator : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	CMember(APlayerController*)                        OwnerPC                                                     ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	DMember(bool)                                      bIsEnabled                                                  ___ OFFSET(get<bool>, {0x298, 1, 0, 0})
-	SMember(FGameplayDebuggerNetPack)                  ReplicatedData                                              ___ OFFSET(get<T>, {0x2A0, 24, 0, 0})
-	SMember(FGameplayDebuggerDebugActor)               DebugActor                                                  ___ OFFSET(get<T>, {0x2B8, 16, 0, 0})
-	SMember(FGameplayDebuggerVisLogSync)               VisLogSync                                                  ___ OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	CMember(UGameplayDebuggerRenderingComponent*)      RenderingComp                                               ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(APlayerController*)                        OwnerPC                                                     OFFSET(get<T>, {0x290, 8, 0, 0})
+	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x298, 1, 0, 0})
+	SMember(FGameplayDebuggerNetPack)                  ReplicatedData                                              OFFSET(get<T>, {0x2A0, 24, 0, 0})
+	SMember(FGameplayDebuggerDebugActor)               DebugActor                                                  OFFSET(get<T>, {0x2B8, 16, 0, 0})
+	SMember(FGameplayDebuggerVisLogSync)               VisLogSync                                                  OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	CMember(UGameplayDebuggerRenderingComponent*)      RenderingComp                                               OFFSET(get<T>, {0x2D8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetViewPoint
+	// void ServerSetViewPoint(FVector InViewLocation, FVector InViewDirection);                                                // [0x6378f18] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|HasDefaults|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetEnabled
+	// void ServerSetEnabled(bool bEnable);                                                                                     // [0x6378e68] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetDebugActor
+	// void ServerSetDebugActor(AActor* Actor, bool bSelectInEditor);                                                           // [0x6378d70] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetCategoryEnabled
+	// void ServerSetCategoryEnabled(int32_t CategoryId, bool bEnable);                                                         // [0x6378c78] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendExtensionInputEvent
+	// void ServerSendExtensionInputEvent(int32_t ExtensionId, int32_t HandlerId);                                              // [0x6378b90] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendCategoryInputEvent
+	// void ServerSendCategoryInputEvent(int32_t CategoryId, int32_t HandlerId);                                                // [0x6378aa8] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerResetViewPoint
+	// void ServerResetViewPoint();                                                                                             // [0x6378a5c] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.OnRep_ReplicatedData
+	// void OnRep_ReplicatedData();                                                                                             // [0x6378a1c] Final|RequiredAPI|Native|Protected 
+	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ClientDataPackPacket
+	// void ClientDataPackPacket(FGameplayDebuggerDataPackRPCParams Params);                                                    // [0x6378898] RequiredAPI|Net|NetReliableNative|Event|Protected|NetClient 
 /// Class /Script/GameplayDebugger.GameplayDebuggerConfig
 /// Size: 0x0230 (0x000028 - 0x000258)
 class UGameplayDebuggerConfig : public UObject
@@ -33,26 +54,26 @@ class UGameplayDebuggerConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 600;
 
 public:
-	SMember(FKey)                                      ActivationKey                                               ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FKey)                                      CategoryRowNextKey                                          ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FKey)                                      CategoryRowPrevKey                                          ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot0                                               ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot1                                               ___ OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot2                                               ___ OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot3                                               ___ OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot4                                               ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot5                                               ___ OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot6                                               ___ OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot7                                               ___ OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot8                                               ___ OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot9                                               ___ OFFSET(get<T>, {0x148, 24, 0, 0})
-	DMember(float)                                     DebugCanvasPaddingLeft                                      ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(float)                                     DebugCanvasPaddingRight                                     ___ OFFSET(get<float>, {0x164, 4, 0, 0})
-	DMember(float)                                     DebugCanvasPaddingTop                                       ___ OFFSET(get<float>, {0x168, 4, 0, 0})
-	DMember(float)                                     DebugCanvasPaddingBottom                                    ___ OFFSET(get<float>, {0x16C, 4, 0, 0})
-	DMember(bool)                                      bDebugCanvasEnableTextShadow                                ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	CMember(TArray<FGameplayDebuggerCategoryConfig>)   Categories                                                  ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	CMember(TArray<FGameplayDebuggerExtensionConfig>)  Extensions                                                  ___ OFFSET(get<T>, {0x188, 16, 0, 0})
+	SMember(FKey)                                      ActivationKey                                               OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FKey)                                      CategoryRowNextKey                                          OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FKey)                                      CategoryRowPrevKey                                          OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot0                                               OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot1                                               OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot2                                               OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot3                                               OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot4                                               OFFSET(get<T>, {0xD0, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot5                                               OFFSET(get<T>, {0xE8, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot6                                               OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot7                                               OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot8                                               OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot9                                               OFFSET(get<T>, {0x148, 24, 0, 0})
+	DMember(float)                                     DebugCanvasPaddingLeft                                      OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(float)                                     DebugCanvasPaddingRight                                     OFFSET(get<float>, {0x164, 4, 0, 0})
+	DMember(float)                                     DebugCanvasPaddingTop                                       OFFSET(get<float>, {0x168, 4, 0, 0})
+	DMember(float)                                     DebugCanvasPaddingBottom                                    OFFSET(get<float>, {0x16C, 4, 0, 0})
+	DMember(bool)                                      bDebugCanvasEnableTextShadow                                OFFSET(get<bool>, {0x170, 1, 0, 0})
+	CMember(TArray<FGameplayDebuggerCategoryConfig>)   Categories                                                  OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FGameplayDebuggerExtensionConfig>)  Extensions                                                  OFFSET(get<T>, {0x188, 16, 0, 0})
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerUserSettings
@@ -63,10 +84,10 @@ class UGameplayDebuggerUserSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bEnableGameplayDebuggerInEditor                             ___ OFFSET(get<bool>, {0x30, 1, 1, 0})
-	DMember(float)                                     MaxViewDistance                                             ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     MaxViewAngle                                                ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(int32_t)                                   FontSize                                                    ___ OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
+	DMember(bool)                                      bEnableGameplayDebuggerInEditor                             OFFSET(get<bool>, {0x30, 1, 1, 0})
+	DMember(float)                                     MaxViewDistance                                             OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     MaxViewAngle                                                OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(int32_t)                                   FontSize                                                    OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerLocalController
@@ -77,10 +98,10 @@ class UGameplayDebuggerLocalController : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(AGameplayDebuggerCategoryReplicator*)      CachedReplicator                                            ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(AGameplayDebuggerPlayerManager*)           CachedPlayerManager                                         ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(AActor*)                                   DebugActorCandidate                                         ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(UFont*)                                    HUDFont                                                     ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(AGameplayDebuggerCategoryReplicator*)      CachedReplicator                                            OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(AGameplayDebuggerPlayerManager*)           CachedPlayerManager                                         OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(AActor*)                                   DebugActorCandidate                                         OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UFont*)                                    HUDFont                                                     OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerPlayerManager
@@ -91,8 +112,8 @@ class AGameplayDebuggerPlayerManager : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	CMember(TArray<FGameplayDebuggerPlayerData>)       PlayerData                                                  ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	CMember(TArray<AGameplayDebuggerCategoryReplicator*>) PendingRegistrations                                     ___ OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	CMember(TArray<FGameplayDebuggerPlayerData>)       PlayerData                                                  OFFSET(get<T>, {0x298, 16, 0, 0})
+	CMember(TArray<AGameplayDebuggerCategoryReplicator*>) PendingRegistrations                                     OFFSET(get<T>, {0x2A8, 16, 0, 0})
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerRenderingComponent
@@ -113,10 +134,10 @@ class FGameplayDebuggerDataPackRPCParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     CategoryName                                                ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   DataPackIdx                                                 ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FGameplayDebuggerDataPackHeader)           Header                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<char>)                              Data                                                        ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FName)                                     CategoryName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   DataPackIdx                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FGameplayDebuggerDataPackHeader)           Header                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<char>)                              Data                                                        OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerDataPackHeader
@@ -127,11 +148,11 @@ class FGameplayDebuggerDataPackHeader : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int16_t)                                   DataVersion                                                 ___ OFFSET(get<int16_t>, {0x0, 2, 0, 0})
-	DMember(int16_t)                                   SyncCounter                                                 ___ OFFSET(get<int16_t>, {0x2, 2, 0, 0})
-	DMember(int32_t)                                   DataSize                                                    ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   DataOffset                                                  ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bIsCompressed                                               ___ OFFSET(get<bool>, {0xC, 1, 1, 0})
+	DMember(int16_t)                                   DataVersion                                                 OFFSET(get<int16_t>, {0x0, 2, 0, 0})
+	DMember(int16_t)                                   SyncCounter                                                 OFFSET(get<int16_t>, {0x2, 2, 0, 0})
+	DMember(int32_t)                                   DataSize                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   DataOffset                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bIsCompressed                                               OFFSET(get<bool>, {0xC, 1, 1, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerCategoryData
@@ -142,11 +163,11 @@ class FGameplayDebuggerCategoryData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     CategoryName                                                ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FString>)                           TextLines                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FGameplayDebuggerShape>)            Shapes                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FGameplayDebuggerDataPackHeader>)   DataPacks                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bIsEnabled                                                  ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FName)                                     CategoryName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FString>)                           TextLines                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FGameplayDebuggerShape>)            Shapes                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FGameplayDebuggerDataPackHeader>)   DataPacks                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerShape
@@ -157,10 +178,10 @@ class FGameplayDebuggerShape : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FVector>)                           ShapeData                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Description                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FColor)                                    Color                                                       ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	CMember(EGameplayDebuggerShape)                    Type                                                        ___ OFFSET(get<T>, {0x24, 1, 0, 0})
+	CMember(TArray<FVector>)                           ShapeData                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FColor)                                    Color                                                       OFFSET(get<T>, {0x20, 4, 0, 0})
+	CMember(EGameplayDebuggerShape)                    Type                                                        OFFSET(get<T>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerNetPack
@@ -171,8 +192,8 @@ class FGameplayDebuggerNetPack : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(AGameplayDebuggerCategoryReplicator*)      Owner                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FGameplayDebuggerCategoryData>)     SavedData                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(AGameplayDebuggerCategoryReplicator*)      Owner                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FGameplayDebuggerCategoryData>)     SavedData                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerDebugActor
@@ -183,9 +204,9 @@ class FGameplayDebuggerDebugActor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ActorName                                                   ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int16_t)                                   SyncCounter                                                 ___ OFFSET(get<int16_t>, {0xC, 2, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     ActorName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int16_t)                                   SyncCounter                                                 OFFSET(get<int16_t>, {0xC, 2, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerVisLogSync
@@ -196,7 +217,7 @@ class FGameplayDebuggerVisLogSync : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   DeviceIDs                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DeviceIDs                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerInputConfig
@@ -207,12 +228,12 @@ class FGameplayDebuggerInputConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ConfigName                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FKey)                                      Key                                                         ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	DMember(bool)                                      bModShift                                                   ___ OFFSET(get<bool>, {0x28, 1, 1, 0})
-	DMember(bool)                                      bModCtrl                                                    ___ OFFSET(get<bool>, {0x28, 1, 1, 1})
-	DMember(bool)                                      bModAlt                                                     ___ OFFSET(get<bool>, {0x28, 1, 1, 2})
-	DMember(bool)                                      bModCmd                                                     ___ OFFSET(get<bool>, {0x28, 1, 1, 3})
+	SMember(FString)                                   ConfigName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(bool)                                      bModShift                                                   OFFSET(get<bool>, {0x28, 1, 1, 0})
+	DMember(bool)                                      bModCtrl                                                    OFFSET(get<bool>, {0x28, 1, 1, 1})
+	DMember(bool)                                      bModAlt                                                     OFFSET(get<bool>, {0x28, 1, 1, 2})
+	DMember(bool)                                      bModCmd                                                     OFFSET(get<bool>, {0x28, 1, 1, 3})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerCategoryConfig
@@ -223,13 +244,13 @@ class FGameplayDebuggerCategoryConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   CategoryName                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   SlotIdx                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	CMember(EGameplayDebuggerOverrideMode)             ActiveInGame                                                ___ OFFSET(get<T>, {0x14, 1, 0, 0})
-	CMember(EGameplayDebuggerOverrideMode)             ActiveInSimulate                                            ___ OFFSET(get<T>, {0x15, 1, 0, 0})
-	CMember(EGameplayDebuggerOverrideMode)             Hidden                                                      ___ OFFSET(get<T>, {0x16, 1, 0, 0})
-	DMember(bool)                                      bOverrideSlotIdx                                            ___ OFFSET(get<bool>, {0x18, 1, 1, 0})
-	CMember(TArray<FGameplayDebuggerInputConfig>)      InputHandlers                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   CategoryName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   SlotIdx                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	CMember(EGameplayDebuggerOverrideMode)             ActiveInGame                                                OFFSET(get<T>, {0x14, 1, 0, 0})
+	CMember(EGameplayDebuggerOverrideMode)             ActiveInSimulate                                            OFFSET(get<T>, {0x15, 1, 0, 0})
+	CMember(EGameplayDebuggerOverrideMode)             Hidden                                                      OFFSET(get<T>, {0x16, 1, 0, 0})
+	DMember(bool)                                      bOverrideSlotIdx                                            OFFSET(get<bool>, {0x18, 1, 1, 0})
+	CMember(TArray<FGameplayDebuggerInputConfig>)      InputHandlers                                               OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerExtensionConfig
@@ -240,9 +261,9 @@ class FGameplayDebuggerExtensionConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ExtensionName                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EGameplayDebuggerOverrideMode)             UseExtension                                                ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	CMember(TArray<FGameplayDebuggerInputConfig>)      InputHandlers                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ExtensionName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EGameplayDebuggerOverrideMode)             UseExtension                                                OFFSET(get<T>, {0x10, 1, 0, 0})
+	CMember(TArray<FGameplayDebuggerInputConfig>)      InputHandlers                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerPlayerData
@@ -253,9 +274,9 @@ class FGameplayDebuggerPlayerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UGameplayDebuggerLocalController*)         Controller                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UInputComponent*)                          InputComponent                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(AGameplayDebuggerCategoryReplicator*)      Replicator                                                  ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UGameplayDebuggerLocalController*)         Controller                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(AGameplayDebuggerCategoryReplicator*)      Replicator                                                  OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Enum /Script/GameplayDebugger.EGameplayDebuggerOverrideMode

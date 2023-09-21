@@ -16,7 +16,7 @@ class UCurveExpressionsDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	CMember(TArray<FName>)                             NamedConstants                                              ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FName>)                             NamedConstants                                              OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/CurveExpression.AnimNode_RemapCurvesBase
@@ -27,13 +27,13 @@ class FAnimNode_RemapCurvesBase : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(ERemapCurvesExpressionSource)              ExpressionSource                                            ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FCurveExpressionList)                      ExpressionList                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(UCurveExpressionsDataAsset*)               CurveExpressionsDataAsset                                   ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(TMap<FName, FString>)                      CurveExpressions                                            ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	DMember(bool)                                      bExpressionsImmutable                                       ___ OFFSET(get<bool>, {0x90, 1, 0, 0})
-	CMember(TArray<FName>)                             CachedConstantNames                                         ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(ERemapCurvesExpressionSource)              ExpressionSource                                            OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FCurveExpressionList)                      ExpressionList                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(UCurveExpressionsDataAsset*)               CurveExpressionsDataAsset                                   OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TMap<FName, FString>)                      CurveExpressions                                            OFFSET(get<T>, {0x40, 80, 0, 0})
+	DMember(bool)                                      bExpressionsImmutable                                       OFFSET(get<bool>, {0x90, 1, 0, 0})
+	CMember(TArray<FName>)                             CachedConstantNames                                         OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/CurveExpression.CurveExpressionList
@@ -44,7 +44,7 @@ class FCurveExpressionList : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   AssignmentExpressions                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   AssignmentExpressions                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CurveExpression.AnimNode_RemapCurves
@@ -65,8 +65,8 @@ class FAnimNode_RemapCurvesFromMesh : public FAnimNode_RemapCurvesBase
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	DMember(bool)                                      bUseAttachedParent                                          ___ OFFSET(get<bool>, {0x108, 1, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         OFFSET(get<T>, {0x100, 8, 0, 0})
+	DMember(bool)                                      bUseAttachedParent                                          OFFSET(get<bool>, {0x108, 1, 0, 0})
 };
 
 /// Enum /Script/CurveExpression.ERemapCurvesExpressionSource

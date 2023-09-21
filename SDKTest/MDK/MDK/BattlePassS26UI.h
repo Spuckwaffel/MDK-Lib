@@ -30,16 +30,21 @@ class UBattlePassLandingPageS26 : public UBattlePassLandingPageBase
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	CMember(UBattlePassLandingPageButton*)             Button_Rewards                                              ___ OFFSET(get<T>, {0x538, 8, 0, 0})
-	CMember(UBattlePassLandingPageButton*)             Button_CharacterCustomizer                                  ___ OFFSET(get<T>, {0x540, 8, 0, 0})
-	CMember(UBattlePassLandingPageButton*)             Button_BonusRewards                                         ___ OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UBattlePassLandingPageButton*)             Button_Quests                                               ___ OFFSET(get<T>, {0x550, 8, 0, 0})
-	CMember(UBattlePassLandingPageButton*)             Button_JoinSubscription                                     ___ OFFSET(get<T>, {0x558, 8, 0, 0})
-	CMember(UBattlePassLandingPageButton*)             Button_WeeklyRewards                                        ___ OFFSET(get<T>, {0x560, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_SeasonNumber                                           ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       ___ OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_Rewards                                              OFFSET(get<T>, {0x538, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_CharacterCustomizer                                  OFFSET(get<T>, {0x540, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_BonusRewards                                         OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_Quests                                               OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_JoinSubscription                                     OFFSET(get<T>, {0x558, 8, 0, 0})
+	CMember(UBattlePassLandingPageButton*)             Button_WeeklyRewards                                        OFFSET(get<T>, {0x560, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_SeasonNumber                                           OFFSET(get<T>, {0x568, 8, 0, 0})
+	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       OFFSET(get<T>, {0x570, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/BattlePassS26UI.BattlePassLandingPageS26.OnBattlePassSubscriptionAllowed
+	// void OnBattlePassSubscriptionAllowed(bool bSubscriptionAllowed);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/BattlePassS26UI.BattlePassRewardPageS26
 /// Size: 0x00A0 (0x000500 - 0x0005A0)
 class UBattlePassRewardPageS26 : public UBattlePassRewardPageBase
@@ -48,25 +53,40 @@ class UBattlePassRewardPageS26 : public UBattlePassRewardPageBase
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	CMember(UClass*)                                   RewardsTrackClass                                           ___ OFFSET(get<T>, {0x500, 8, 0, 0})
-	CMember(UFortBattlePassTile*)                      FocusedReward                                               ___ OFFSET(get<T>, {0x508, 8, 0, 0})
-	CMember(TArray<UFortBattlePassRewardTrack*>)       TrackPages                                                  ___ OFFSET(get<T>, {0x510, 16, 0, 0})
-	CMember(ERewardPageType)                           RewardPageType                                              ___ OFFSET(get<T>, {0x524, 1, 0, 0})
-	DMember(int32_t)                                   HoldTileTooltip_ClaimedRewardsToHide                        ___ OFFSET(get<int32_t>, {0x528, 4, 0, 0})
-	DMember(int32_t)                                   HoldTileTooltip_ClaimedBattlePassToHide                     ___ OFFSET(get<int32_t>, {0x52C, 4, 0, 0})
-	DMember(int32_t)                                   HoldTileTooltip_RequiredBattleStarsToShow                   ___ OFFSET(get<int32_t>, {0x530, 4, 0, 0})
-	DMember(int32_t)                                   LevelRequirementUnlockTooltip_RequiredLevel                 ___ OFFSET(get<int32_t>, {0x534, 4, 0, 0})
-	DMember(int32_t)                                   ClaimAllRewardsTooltip_RequiredLevelToShow                  ___ OFFSET(get<int32_t>, {0x538, 4, 0, 0})
-	CMember(UCommonAnimatedSwitcher*)                  Switcher_RewardTracks                                       ___ OFFSET(get<T>, {0x540, 8, 0, 0})
-	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_LevelRequirementUnlock                      ___ OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_ClaimAllRewards                             ___ OFFSET(get<T>, {0x550, 8, 0, 0})
-	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_HoldTile                                    ___ OFFSET(get<T>, {0x558, 8, 0, 0})
-	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       ___ OFFSET(get<T>, {0x560, 8, 0, 0})
-	CMember(UBattlePassBulkBuyInputData*)              BulkBuyInputData                                            ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_NextPage                                             ___ OFFSET(get<T>, {0x570, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_PreviousPage                                         ___ OFFSET(get<T>, {0x578, 8, 0, 0})
+	CMember(UClass*)                                   RewardsTrackClass                                           OFFSET(get<T>, {0x500, 8, 0, 0})
+	CMember(UFortBattlePassTile*)                      FocusedReward                                               OFFSET(get<T>, {0x508, 8, 0, 0})
+	CMember(TArray<UFortBattlePassRewardTrack*>)       TrackPages                                                  OFFSET(get<T>, {0x510, 16, 0, 0})
+	CMember(ERewardPageType)                           RewardPageType                                              OFFSET(get<T>, {0x524, 1, 0, 0})
+	DMember(int32_t)                                   HoldTileTooltip_ClaimedRewardsToHide                        OFFSET(get<int32_t>, {0x528, 4, 0, 0})
+	DMember(int32_t)                                   HoldTileTooltip_ClaimedBattlePassToHide                     OFFSET(get<int32_t>, {0x52C, 4, 0, 0})
+	DMember(int32_t)                                   HoldTileTooltip_RequiredBattleStarsToShow                   OFFSET(get<int32_t>, {0x530, 4, 0, 0})
+	DMember(int32_t)                                   LevelRequirementUnlockTooltip_RequiredLevel                 OFFSET(get<int32_t>, {0x534, 4, 0, 0})
+	DMember(int32_t)                                   ClaimAllRewardsTooltip_RequiredLevelToShow                  OFFSET(get<int32_t>, {0x538, 4, 0, 0})
+	CMember(UCommonAnimatedSwitcher*)                  Switcher_RewardTracks                                       OFFSET(get<T>, {0x540, 8, 0, 0})
+	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_LevelRequirementUnlock                      OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_ClaimAllRewards                             OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_HoldTile                                    OFFSET(get<T>, {0x558, 8, 0, 0})
+	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       OFFSET(get<T>, {0x560, 8, 0, 0})
+	CMember(UBattlePassBulkBuyInputData*)              BulkBuyInputData                                            OFFSET(get<T>, {0x568, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_NextPage                                             OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_PreviousPage                                         OFFSET(get<T>, {0x578, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.OnPageChanged
+	// void OnPageChanged(int32_t PageNumber, int32_t RewardPageTotal);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.OnLoadingScreenSelectedChanged
+	// void OnLoadingScreenSelectedChanged(bool bIsSelected);                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.OnInputMethodChanged
+	// void OnInputMethodChanged(ECommonInputType InputType);                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.OnInitForPageType
+	// void OnInitForPageType(ERewardPageType InRewardPageType);                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.HandleRewardTracksBoundaryNavigation
+	// UWidget* HandleRewardTracksBoundaryNavigation(EUINavigation InNavigation);                                               // [0x98aa5f8] Final|Native|Private 
+	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.GetRewardPageBackgroundData
+	// FVaultWorldBackgroundData GetRewardPageBackgroundData();                                                                 // [0x98aa3dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/BattlePassS26UI.BattlePassScreenS26
 /// Size: 0x04D8 (0x0008C8 - 0x000DA0)
 class UBattlePassScreenS26 : public UBattlePassScreenBase
@@ -75,60 +95,111 @@ class UBattlePassScreenS26 : public UBattlePassScreenBase
 	static inline constexpr uint64_t __MDKClassSize = 3488;
 
 public:
-	CMember(UClass*)                                   ResourcePurchaseScreenClass                                 ___ OFFSET(get<T>, {0x8C8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Close                                                ___ OFFSET(get<T>, {0x8D8, 8, 0, 0})
-	CMember(UCommonButtonLegacy*)                      Button_TouchClose                                           ___ OFFSET(get<T>, {0x8E0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ToggleViewDetails                                    ___ OFFSET(get<T>, {0x8E8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ReplayTrailer                                        ___ OFFSET(get<T>, {0x8F0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ReplayTrailer_Mobile                                 ___ OFFSET(get<T>, {0x8F8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ShowAbout                                            ___ OFFSET(get<T>, {0x900, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ShowAbout_Mobile                                     ___ OFFSET(get<T>, {0x908, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ShowAboutCustomization                               ___ OFFSET(get<T>, {0x910, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ShowAboutCustomization_Mobile                        ___ OFFSET(get<T>, {0x918, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_BulkBuyRewards                                       ___ OFFSET(get<T>, {0x920, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_PageComplete                                         ___ OFFSET(get<T>, {0x928, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_GiftBattlePass                                       ___ OFFSET(get<T>, {0x930, 8, 0, 0})
-	CMember(UCommonVisibilitySwitcher*)                VisibilitySwitcher_PlatformBasedButtons                     ___ OFFSET(get<T>, {0x938, 8, 0, 0})
-	CMember(UFortBattlePassResourcesWidgetBase*)       BattlePassCurrencyPanel                                     ___ OFFSET(get<T>, {0x940, 8, 0, 0})
-	CMember(UAthenaExclusiveRewardBanner*)             AthenaExclusiveRewardBanner                                 ___ OFFSET(get<T>, {0x948, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Description                                            ___ OFFSET(get<T>, {0x950, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ItemName                                               ___ OFFSET(get<T>, {0x958, 8, 0, 0})
-	CMember(UAthenaRewardItemTypeRarityTag*)           ItemRewardTag                                               ___ OFFSET(get<T>, {0x960, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_SetDetails                                             ___ OFFSET(get<T>, {0x968, 8, 0, 0})
-	CMember(UWidgetSwitcher*)                          Switcher_PrerequisiteInfo                                   ___ OFFSET(get<T>, {0x970, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Prerequisite                                           ___ OFFSET(get<T>, {0x978, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_PrerequisiteProgress                                 ___ OFFSET(get<T>, {0x980, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_LevelUpMessageFree                                   ___ OFFSET(get<T>, {0x988, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_LevelUpMessagePremium                                ___ OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_CustomResourceMessage                                ___ OFFSET(get<T>, {0x998, 8, 0, 0})
-	CMember(UWidgetSwitcher*)                          Switcher_PrimaryAction                                      ___ OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	CMember(UFortCTAButton*)                           Button_BuyLevels                                            ___ OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	CMember(UFortCTAButton*)                           Button_BuyBattlePass                                        ___ OFFSET(get<T>, {0x9B0, 8, 0, 0})
-	CMember(UFortCTAButton*)                           Button_ClaimReward                                          ___ OFFSET(get<T>, {0x9B8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ViewQuests                                           ___ OFFSET(get<T>, {0x9C0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_PreviewLoadingScreen                                 ___ OFFSET(get<T>, {0x9C8, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_RequiresBP                                              ___ OFFSET(get<T>, {0x9D0, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_PageLocked                                              ___ OFFSET(get<T>, {0x9D8, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_BaseItem                                                ___ OFFSET(get<T>, {0x9E0, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_Prerequisite                                            ___ OFFSET(get<T>, {0x9E8, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_CompletePage                                            ___ OFFSET(get<T>, {0x9F0, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_NotEnough_Currency                                      ___ OFFSET(get<T>, {0x9F8, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_Cost                                                    ___ OFFSET(get<T>, {0xA00, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_Owned                                                   ___ OFFSET(get<T>, {0xA08, 8, 0, 0})
-	CMember(UBorder*)                                  Tag_Delayed                                                 ___ OFFSET(get<T>, {0xA10, 8, 0, 0})
-	SMember(FGameplayTag)                              QuestCategoryParentTag                                      ___ OFFSET(get<T>, {0xA18, 4, 0, 0})
-	CMember(UClass*)                                   PreviewLoadingScreenWidgetClass                             ___ OFFSET(get<T>, {0xA20, 8, 0, 0})
-	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       ___ OFFSET(get<T>, {0xA80, 8, 0, 0})
-	CMember(UAthenaSeasonItemEntryBase*)               CurrentSelectedEntry                                        ___ OFFSET(get<T>, {0xA88, 8, 0, 0})
-	CMember(TArray<EBattlePassView>)                   SwitcherSubPageTypes                                        ___ OFFSET(get<T>, {0xA90, 16, 0, 0})
-	CMember(UCommonVisibilitySwitcher*)                VisibilitySwitcher_SubPage                                  ___ OFFSET(get<T>, {0xAA0, 8, 0, 0})
-	CMember(UFortItemDefinition*)                      SeasonalBaseCustomizationItem                               ___ OFFSET(get<T>, {0xBA8, 8, 0, 0})
-	DMember(bool)                                      bHasSubscription                                            ___ OFFSET(get<bool>, {0xBB0, 1, 0, 0})
-	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_BattleStars                                 ___ OFFSET(get<T>, {0xBB8, 8, 0, 0})
-	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_StylePoints                                 ___ OFFSET(get<T>, {0xBC0, 8, 0, 0})
-	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       ___ OFFSET(get<T>, {0xBC8, 8, 0, 0})
+	CMember(UClass*)                                   ResourcePurchaseScreenClass                                 OFFSET(get<T>, {0x8C8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Close                                                OFFSET(get<T>, {0x8D8, 8, 0, 0})
+	CMember(UCommonButtonLegacy*)                      Button_TouchClose                                           OFFSET(get<T>, {0x8E0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ToggleViewDetails                                    OFFSET(get<T>, {0x8E8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ReplayTrailer                                        OFFSET(get<T>, {0x8F0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ReplayTrailer_Mobile                                 OFFSET(get<T>, {0x8F8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ShowAbout                                            OFFSET(get<T>, {0x900, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ShowAbout_Mobile                                     OFFSET(get<T>, {0x908, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ShowAboutCustomization                               OFFSET(get<T>, {0x910, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ShowAboutCustomization_Mobile                        OFFSET(get<T>, {0x918, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_BulkBuyRewards                                       OFFSET(get<T>, {0x920, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_PageComplete                                         OFFSET(get<T>, {0x928, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_GiftBattlePass                                       OFFSET(get<T>, {0x930, 8, 0, 0})
+	CMember(UCommonVisibilitySwitcher*)                VisibilitySwitcher_PlatformBasedButtons                     OFFSET(get<T>, {0x938, 8, 0, 0})
+	CMember(UFortBattlePassResourcesWidgetBase*)       BattlePassCurrencyPanel                                     OFFSET(get<T>, {0x940, 8, 0, 0})
+	CMember(UAthenaExclusiveRewardBanner*)             AthenaExclusiveRewardBanner                                 OFFSET(get<T>, {0x948, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Description                                            OFFSET(get<T>, {0x950, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x958, 8, 0, 0})
+	CMember(UAthenaRewardItemTypeRarityTag*)           ItemRewardTag                                               OFFSET(get<T>, {0x960, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_SetDetails                                             OFFSET(get<T>, {0x968, 8, 0, 0})
+	CMember(UWidgetSwitcher*)                          Switcher_PrerequisiteInfo                                   OFFSET(get<T>, {0x970, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Prerequisite                                           OFFSET(get<T>, {0x978, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_PrerequisiteProgress                                 OFFSET(get<T>, {0x980, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_LevelUpMessageFree                                   OFFSET(get<T>, {0x988, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_LevelUpMessagePremium                                OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_CustomResourceMessage                                OFFSET(get<T>, {0x998, 8, 0, 0})
+	CMember(UWidgetSwitcher*)                          Switcher_PrimaryAction                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
+	CMember(UFortCTAButton*)                           Button_BuyLevels                                            OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	CMember(UFortCTAButton*)                           Button_BuyBattlePass                                        OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	CMember(UFortCTAButton*)                           Button_ClaimReward                                          OFFSET(get<T>, {0x9B8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ViewQuests                                           OFFSET(get<T>, {0x9C0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_PreviewLoadingScreen                                 OFFSET(get<T>, {0x9C8, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_RequiresBP                                              OFFSET(get<T>, {0x9D0, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_PageLocked                                              OFFSET(get<T>, {0x9D8, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_BaseItem                                                OFFSET(get<T>, {0x9E0, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_Prerequisite                                            OFFSET(get<T>, {0x9E8, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_CompletePage                                            OFFSET(get<T>, {0x9F0, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_NotEnough_Currency                                      OFFSET(get<T>, {0x9F8, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_Cost                                                    OFFSET(get<T>, {0xA00, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_Owned                                                   OFFSET(get<T>, {0xA08, 8, 0, 0})
+	CMember(UBorder*)                                  Tag_Delayed                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
+	SMember(FGameplayTag)                              QuestCategoryParentTag                                      OFFSET(get<T>, {0xA18, 4, 0, 0})
+	CMember(UClass*)                                   PreviewLoadingScreenWidgetClass                             OFFSET(get<T>, {0xA20, 8, 0, 0})
+	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       OFFSET(get<T>, {0xA80, 8, 0, 0})
+	CMember(UAthenaSeasonItemEntryBase*)               CurrentSelectedEntry                                        OFFSET(get<T>, {0xA88, 8, 0, 0})
+	CMember(TArray<EBattlePassView>)                   SwitcherSubPageTypes                                        OFFSET(get<T>, {0xA90, 16, 0, 0})
+	CMember(UCommonVisibilitySwitcher*)                VisibilitySwitcher_SubPage                                  OFFSET(get<T>, {0xAA0, 8, 0, 0})
+	CMember(UFortItemDefinition*)                      SeasonalBaseCustomizationItem                               OFFSET(get<T>, {0xBA8, 8, 0, 0})
+	DMember(bool)                                      bHasSubscription                                            OFFSET(get<bool>, {0xBB0, 1, 0, 0})
+	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_BattleStars                                 OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_StylePoints                                 OFFSET(get<T>, {0xBC0, 8, 0, 0})
+	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       OFFSET(get<T>, {0xBC8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OverviewShowAnimationFinished
+	// void OverviewShowAnimationFinished();                                                                                    // [0x2d79908] Final|Native|Public|BlueprintCallable 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnUpdateStatusBar
+	// void OnUpdateStatusBar(FText& StatusText, EBattlePassStatusBarTypeS26& BarType);                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnUpdateBattlePassRequiredBar
+	// void OnUpdateBattlePassRequiredBar(bool bPassRequiredVisible);                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnTransitionItemDetails
+	// void OnTransitionItemDetails(bool bTransitionForward);                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetWeeklyRewardsInfo
+	// void OnSetWeeklyRewardsInfo(FTimespan& DelayTimespan, int32_t AvailableRewards, int32_t OwnedRewards, int32_t TotalRewards, int32_t AvailablePages, int32_t CompletedPages, int32_t TotalPages); // [0x1ebf994] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetResourcePrice
+	// void OnSetResourcePrice(int32_t Cost, UFortPersistentResourceItemDefinition* PersistentResource);                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetQuestRewardsInfo
+	// void OnSetQuestRewardsInfo(FTimespan& DelayTimespan, int32_t OwnedRewards, int32_t TotalRewards, int32_t CompletedPages, int32_t TotalPages); // [0x1ebf994] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetPrerequisiteInfo
+	// void OnSetPrerequisiteInfo(FText& Description, int32_t CurrentAmount, int32_t NeededAmount, EBattlePassRewardPrerequisiteType PrerequisiteType, bool bShowPrerequisiteLock); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetItemPrice
+	// void OnSetItemPrice(int32_t Cost, EBattlePassCurrencyType CurrencyType);                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetCrewInfo
+	// void OnSetCrewInfo(bool bIsNextMonthRewards, FText& MonthText, FTimespan& NextMonthlyRewardTimespan, FText& CharacterDisplayName, FText& CharacterDescription); // [0x1ebf994] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetCoverPageData
+	// void OnSetCoverPageData(FText& Title, FText& Description, bool bPageComplete);                                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetBonusRewardsInfo
+	// void OnSetBonusRewardsInfo(bool bIsUnlocked, int32_t OwnedRewards, int32_t TotalRewards, int32_t CompletedPages, int32_t TotalPages, int32_t ClaimedOutfits, int32_t TotalOutfits); // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnSetBaseRewardsInfo
+	// void OnSetBaseRewardsInfo(int32_t OwnedRewards, int32_t TotalRewards, int32_t CompletedPages, int32_t TotalPages);       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnItemDelayed
+	// void OnItemDelayed(FTimespan Delay);                                                                                     // [0x1ebf994] Event|Protected|HasDefaults|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnInsufficientResource
+	// void OnInsufficientResource(UFortPersistentResourceItemDefinition* PersistentResource);                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnInsufficientFunds
+	// void OnInsufficientFunds(EBattlePassCurrencyType CurrencyType);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnBattlePassOwned
+	// void OnBattlePassOwned();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.OnBattlePassGiftingAllowed
+	// void OnBattlePassGiftingAllowed(bool bGiftingAllowed);                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.IsSeasonalCustomizationItemOwned
+	// bool IsSeasonalCustomizationItemOwned();                                                                                 // [0x98aa6b0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.HandleSwitcherVisibilityShown
+	// void HandleSwitcherVisibilityShown();                                                                                    // [0x98aa688] Final|Native|Public|BlueprintCallable 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.HandleFullScreenMapToggled
+	// void HandleFullScreenMapToggled(bool bMapVisible);                                                                       // [0x98aa578] Final|Native|Private 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.HandleClaimRewardComplete
+	// void HandleClaimRewardComplete(bool bSuccess, TArray<FString>& OfferTemplateIdList);                                     // [0x98aa48c] Final|Native|Private|HasOutParms 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.GoBackOneScreen
+	// void GoBackOneScreen();                                                                                                  // [0x98aa478] Final|Native|Public|BlueprintCallable 
+	// Function /Script/BattlePassS26UI.BattlePassScreenS26.GetQuestPageDelay
+	// FTimespan GetQuestPageDelay();                                                                                           // [0x98aa3b0] Final|Native|Protected|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/BattlePassS26UI.FortBattlePassCustomSkinPageS26
 /// Size: 0x0018 (0x0005B0 - 0x0005C8)
 class UFortBattlePassCustomSkinPageS26 : public UFortBattlePassCustomSkinPageBase
@@ -137,8 +208,8 @@ class UFortBattlePassCustomSkinPageS26 : public UFortBattlePassCustomSkinPageBas
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FString)                                   ClaimBaseItemTooltip_ClaimCheckTemplateId                   ___ OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	CMember(UFortBattlePassTutorialTooltip*)           TutorialTooltip_ClaimBaseItem                               ___ OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	SMember(FString)                                   ClaimBaseItemTooltip_ClaimCheckTemplateId                   OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	CMember(UFortBattlePassTutorialTooltip*)           TutorialTooltip_ClaimBaseItem                               OFFSET(get<T>, {0x5C0, 8, 0, 0})
 };
 
 /// Class /Script/BattlePassS26UI.FortBattlePassResourcesWidgetS26
@@ -149,12 +220,19 @@ class UFortBattlePassResourcesWidgetS26 : public UFortBattlePassResourcesWidgetB
 	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	CMember(UCommonTextBlock*)                         Text_BattleStarsAmount                                      ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_StylePointsAmount                                      ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(UBorder*)                                  Border_StylePointsRewardsTag                                ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UBorder*)                                  Border_BattleStarsRewardsTag                                ___ OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_BattleStarsAmount                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_StylePointsAmount                                      OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(UBorder*)                                  Border_StylePointsRewardsTag                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UBorder*)                                  Border_BattleStarsRewardsTag                                OFFSET(get<T>, {0x2F8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/BattlePassS26UI.FortBattlePassResourcesWidgetS26.OnStylePointsRewardsSet
+	// void OnStylePointsRewardsSet(int32_t Rewards);                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.FortBattlePassResourcesWidgetS26.OnBattleStarRewardsSet
+	// void OnBattleStarRewardsSet(int32_t Rewards);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Class /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortBattlePassTutorialTooltipS26 : public UCommonUserWidget
@@ -163,9 +241,18 @@ class UFortBattlePassTutorialTooltipS26 : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	CMember(UCommonRichTextBlock*)                     Text_Tooltip                                                ___ OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_Tooltip                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26.ShowTooltip
+	// void ShowTooltip();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26.SetText
+	// void SetText(FText Text);                                                                                                // [0x9891c58] Final|Native|Public|BlueprintCallable 
+	// Function /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26.HideTooltip
+	// void HideTooltip();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Enum /Script/BattlePassS26UI.EBattlePassStatusBarTypeS26
 /// Size: 0x08
 enum EBattlePassStatusBarTypeS26 : uint8_t

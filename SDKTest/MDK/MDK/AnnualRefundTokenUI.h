@@ -22,13 +22,18 @@ class UFortPurchaseHistoryEntryBase : public UFortHoldableButton
 	static inline constexpr uint64_t __MDKClassSize = 5456;
 
 public:
-	CMember(UClass*)                                   ItemCardClass                                               ___ OFFSET(get<T>, {0x1510, 8, 0, 0})
-	DMember(float)                                     CardWidthOverride                                           ___ OFFSET(get<float>, {0x1518, 4, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Name                                                   ___ OFFSET(get<T>, {0x1520, 8, 0, 0})
-	CMember(TArray<FString>)                           LootEntryItemTypesToExclude                                 ___ OFFSET(get<T>, {0x1528, 16, 0, 0})
-	CMember(TArray<FString>)                           LootEntryItemTypesToCombine                                 ___ OFFSET(get<T>, {0x1538, 16, 0, 0})
+	CMember(UClass*)                                   ItemCardClass                                               OFFSET(get<T>, {0x1510, 8, 0, 0})
+	DMember(float)                                     CardWidthOverride                                           OFFSET(get<float>, {0x1518, 4, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Name                                                   OFFSET(get<T>, {0x1520, 8, 0, 0})
+	CMember(TArray<FString>)                           LootEntryItemTypesToExclude                                 OFFSET(get<T>, {0x1528, 16, 0, 0})
+	CMember(TArray<FString>)                           LootEntryItemTypesToCombine                                 OFFSET(get<T>, {0x1538, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryEntryBase.UpdateItemList
+	// void UpdateItemList(TArray<UFortCosmeticItemCard*>& ItemCards);                                                          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 /// Class /Script/AnnualRefundTokenUI.FortPurchaseHistoryEntry
 /// Size: 0x0000 (0x001550 - 0x001550)
 class UFortPurchaseHistoryEntry : public UFortPurchaseHistoryEntryBase
@@ -67,7 +72,7 @@ class UFortPurchaseHistoryTreeView : public UFortPurchaseHistoryListView
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	CMember(UClass*)                                   HeaderEntryWidgetClass                                      ___ OFFSET(get<T>, {0x3C8, 8, 0, 0})
+	CMember(UClass*)                                   HeaderEntryWidgetClass                                      OFFSET(get<T>, {0x3C8, 8, 0, 0})
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortAnnualRefundTicket
@@ -78,9 +83,18 @@ class UFortAnnualRefundTicket : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	CMember(UCommonTextBlock*)                         Text_AvailableDate                                          ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_AvailableDate                                          OFFSET(get<T>, {0x2A8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnUpdatePendingState
+	// void OnUpdatePendingState(bool bIsPending);                                                                              // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnUpdateAvailableState
+	// void OnUpdateAvailableState(bool bIsAvailable);                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnPlayLockingAnimation
+	// void OnPlayLockingAnimation();                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/AnnualRefundTokenUI.FortAnnualRefundTokenData
 /// Size: 0x0020 (0x000498 - 0x0004B8)
 class UFortAnnualRefundTokenData : public UFortGameFeatureData
@@ -89,7 +103,7 @@ class UFortAnnualRefundTokenData : public UFortGameFeatureData
 	static inline constexpr uint64_t __MDKClassSize = 1208;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   PurchaseHistoryScreenClass                                  ___ OFFSET(get<T>, {0x498, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   PurchaseHistoryScreenClass                                  OFFSET(get<T>, {0x498, 32, 0, 0})
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen
@@ -100,30 +114,43 @@ class UFortPurchaseHistoryScreen : public UFortActivatablePanel
 	static inline constexpr uint64_t __MDKClassSize = 1624;
 
 public:
-	SMember(FDataTableRowHandle)                       BackAction                                                  ___ OFFSET(get<T>, {0x558, 16, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   RefundConfirmationClass                                     ___ OFFSET(get<T>, {0x580, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   DirectPurchaseInfoModalClass                                ___ OFFSET(get<T>, {0x5A0, 32, 0, 0})
-	CMember(UCommonAnimatedSwitcher*)                  Switcher_MainContent                                        ___ OFFSET(get<T>, {0x5C0, 8, 0, 0})
-	CMember(UFortPurchaseHistoryTreeView*)             TreeView_Purchases                                          ___ OFFSET(get<T>, {0x5C8, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_CloseTouch                                           ___ OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_PostApproval                                         ___ OFFSET(get<T>, {0x5D8, 8, 0, 0})
-	CMember(UScrollBox*)                               ScrollBox_ReturnTypeInfo                                    ___ OFFSET(get<T>, {0x5E0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_Desc                                                   ___ OFFSET(get<T>, {0x5E8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_RefundCount                                            ___ OFFSET(get<T>, {0x5F0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ResultHeader                                           ___ OFFSET(get<T>, {0x5F8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ResultTitle                                            ___ OFFSET(get<T>, {0x600, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ResultDesc                                             ___ OFFSET(get<T>, {0x608, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Left                                           ___ OFFSET(get<T>, {0x610, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Center                                         ___ OFFSET(get<T>, {0x618, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Right                                          ___ OFFSET(get<T>, {0x620, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_CancelPurchaseInfo                                   ___ OFFSET(get<T>, {0x628, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_ReturnTicketInfo                                     ___ OFFSET(get<T>, {0x630, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_TokenlessRefundInfo                                  ___ OFFSET(get<T>, {0x638, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_NonRefundableInfo                                    ___ OFFSET(get<T>, {0x640, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_BundledPurchaseInfo                                  ___ OFFSET(get<T>, {0x648, 8, 0, 0})
-	CMember(UWidget*)                                  Widget_BundledPurchaseTokenlessRefundInfo                   ___ OFFSET(get<T>, {0x650, 8, 0, 0})
+	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(get<T>, {0x558, 16, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   RefundConfirmationClass                                     OFFSET(get<T>, {0x580, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   DirectPurchaseInfoModalClass                                OFFSET(get<T>, {0x5A0, 32, 0, 0})
+	CMember(UCommonAnimatedSwitcher*)                  Switcher_MainContent                                        OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	CMember(UFortPurchaseHistoryTreeView*)             TreeView_Purchases                                          OFFSET(get<T>, {0x5C8, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_CloseTouch                                           OFFSET(get<T>, {0x5D0, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_PostApproval                                         OFFSET(get<T>, {0x5D8, 8, 0, 0})
+	CMember(UScrollBox*)                               ScrollBox_ReturnTypeInfo                                    OFFSET(get<T>, {0x5E0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_Desc                                                   OFFSET(get<T>, {0x5E8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_RefundCount                                            OFFSET(get<T>, {0x5F0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ResultHeader                                           OFFSET(get<T>, {0x5F8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ResultTitle                                            OFFSET(get<T>, {0x600, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ResultDesc                                             OFFSET(get<T>, {0x608, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Left                                           OFFSET(get<T>, {0x610, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Center                                         OFFSET(get<T>, {0x618, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Right                                          OFFSET(get<T>, {0x620, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_CancelPurchaseInfo                                   OFFSET(get<T>, {0x628, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_ReturnTicketInfo                                     OFFSET(get<T>, {0x630, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_TokenlessRefundInfo                                  OFFSET(get<T>, {0x638, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_NonRefundableInfo                                    OFFSET(get<T>, {0x640, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_BundledPurchaseInfo                                  OFFSET(get<T>, {0x648, 8, 0, 0})
+	CMember(UWidget*)                                  Widget_BundledPurchaseTokenlessRefundInfo                   OFFSET(get<T>, {0x650, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnPopulateView
+	// void OnPopulateView();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnNoPurchasesAvailable
+	// void OnNoPurchasesAvailable();                                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnEndRefundSubmission
+	// void OnEndRefundSubmission();                                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnBeginRefundSubmission
+	// void OnBeginRefundSubmission();                                                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.BP_IsShowingPurchases
+	// bool BP_IsShowingPurchases();                                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Class /Script/AnnualRefundTokenUI.FortRefundConfirmation
 /// Size: 0x0058 (0x000558 - 0x0005B0)
 class UFortRefundConfirmation : public UFortActivatablePanel
@@ -132,17 +159,24 @@ class UFortRefundConfirmation : public UFortActivatablePanel
 	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	CMember(UCommonTextBlock*)                         Text_RefundsRemaining                                       ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_RefundCount                                            ___ OFFSET(get<T>, {0x570, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_AreYouSure                                             ___ OFFSET(get<T>, {0x578, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Yes                                                  ___ OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_No                                                   ___ OFFSET(get<T>, {0x588, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_CloseTouch                                           ___ OFFSET(get<T>, {0x590, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Left                                           ___ OFFSET(get<T>, {0x598, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Center                                         ___ OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Right                                          ___ OFFSET(get<T>, {0x5A8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_RefundsRemaining                                       OFFSET(get<T>, {0x568, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_RefundCount                                            OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_AreYouSure                                             OFFSET(get<T>, {0x578, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Yes                                                  OFFSET(get<T>, {0x580, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_No                                                   OFFSET(get<T>, {0x588, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_CloseTouch                                           OFFSET(get<T>, {0x590, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Left                                           OFFSET(get<T>, {0x598, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Center                                         OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	CMember(UFortAnnualRefundTicket*)                  RefundTicket_Right                                          OFFSET(get<T>, {0x5A8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AnnualRefundTokenUI.FortRefundConfirmation.BP_UpdateRefundType
+	// void BP_UpdateRefundType(EFortPurchaseHistoryRefundType RefundType, bool bBundledRefund);                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/AnnualRefundTokenUI.FortRefundConfirmation.BP_UpdateItemsList
+	// void BP_UpdateItemsList(TArray<UFortItemDefinition*>& SelectedItemDefs, int32_t TotalMtxPaid);                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 /// Struct /Script/AnnualRefundTokenUI.PurchaseHistoryBundleEntry
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FPurchaseHistoryBundleEntry : public MDKStruct
@@ -151,7 +185,7 @@ class FPurchaseHistoryBundleEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   ID                                                          ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Enum /Script/AnnualRefundTokenUI.EFortPurchaseHistoryRefundType

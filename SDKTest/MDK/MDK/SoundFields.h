@@ -16,6 +16,6 @@ class UAmbisonicsEncodingSettings : public USoundfieldEncodingSettingsBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   AmbisonicsOrder                                             ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   AmbisonicsOrder                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 

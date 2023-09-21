@@ -36,7 +36,7 @@ class UMovieSceneScriptingChannel : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     ChannelName                                                 ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ChannelName                                                 OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/SequencerScripting.MovieSceneScriptingActorReferenceChannel
@@ -357,11 +357,11 @@ class FSequencerScriptingRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(bool)                                      bHasStart                                                   ___ OFFSET(get<bool>, {0x0, 1, 1, 0})
-	DMember(bool)                                      bHasEnd                                                     ___ OFFSET(get<bool>, {0x0, 1, 1, 1})
-	DMember(int32_t)                                   InclusiveStart                                              ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   ExclusiveEnd                                                ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FFrameRate)                                InternalRate                                                ___ OFFSET(get<T>, {0xC, 8, 0, 0})
+	DMember(bool)                                      bHasStart                                                   OFFSET(get<bool>, {0x0, 1, 1, 0})
+	DMember(bool)                                      bHasEnd                                                     OFFSET(get<bool>, {0x0, 1, 1, 1})
+	DMember(int32_t)                                   InclusiveStart                                              OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   ExclusiveEnd                                                OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FFrameRate)                                InternalRate                                                OFFSET(get<T>, {0xC, 8, 0, 0})
 };
 
 /// Enum /Script/SequencerScripting.ESequenceTimeUnit

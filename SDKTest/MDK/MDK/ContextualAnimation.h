@@ -26,10 +26,10 @@ class UAnimNotifyState_IKWindow : public UAnimNotifyState
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     GoalName                                                    ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FAlphaBlend)                               BlendIn                                                     ___ OFFSET(get<T>, {0x38, 48, 0, 0})
-	SMember(FAlphaBlend)                               BlendOut                                                    ___ OFFSET(get<T>, {0x68, 48, 0, 0})
-	DMember(bool)                                      bEnable                                                     ___ OFFSET(get<bool>, {0x98, 1, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FAlphaBlend)                               BlendIn                                                     OFFSET(get<T>, {0x38, 48, 0, 0})
+	SMember(FAlphaBlend)                               BlendOut                                                    OFFSET(get<T>, {0x68, 48, 0, 0})
+	DMember(bool)                                      bEnable                                                     OFFSET(get<bool>, {0x98, 1, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimActorInterface
@@ -50,10 +50,25 @@ class UContextualAnimManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TSet<UContextualAnimSceneActorComponent*>) SceneActorCompContainer                                     ___ OFFSET(get<T>, {0x30, 80, 0, 0})
-	CMember(TArray<UContextualAnimSceneInstance*>)     Instances                                                   ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TSet<UContextualAnimSceneActorComponent*>) SceneActorCompContainer                                     OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TArray<UContextualAnimSceneInstance*>)     Instances                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ContextualAnimation.ContextualAnimManager.TryStopSceneWithActor
+	// bool TryStopSceneWithActor(AActor* Actor);                                                                               // [0x7462080] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimManager.OnSceneInstanceEnded
+	// void OnSceneInstanceEnded(UContextualAnimSceneInstance* SceneInstance);                                                  // [0x74618a4] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimManager.IsActorInAnyScene
+	// bool IsActorInAnyScene(AActor* Actor);                                                                                   // [0x74611e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimManager.GetSceneWithActor
+	// UContextualAnimSceneInstance* GetSceneWithActor(AActor* Actor);                                                          // [0x7461128] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimManager.GetContextualAnimManager
+	// UContextualAnimManager* GetContextualAnimManager(UObject* WorldContextObject);                                           // [0x7460d98] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/ContextualAnimation.ContextualAnimManager.BP_TryStartScene
+	// UContextualAnimSceneInstance* BP_TryStartScene(UContextualAnimSceneAsset* SceneAsset, FContextualAnimStartSceneParams& Params); // [0x745fa38] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneActorComponent
 /// Size: 0x0120 (0x000570 - 0x000690)
 class UContextualAnimSceneActorComponent : public UPrimitiveComponent
@@ -62,19 +77,56 @@ class UContextualAnimSceneActorComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1680;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnJoinedSceneDelegate                                       ___ OFFSET(get<T>, {0x570, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLeftSceneDelegate                                         ___ OFFSET(get<T>, {0x580, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayMontageNotifyBeginDelegate                            ___ OFFSET(get<T>, {0x590, 16, 0, 0})
-	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  ___ OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	DMember(bool)                                      bEnableDebug                                                ___ OFFSET(get<bool>, {0x5A8, 1, 0, 0})
-	SMember(FContextualAnimRepBindingsData)            RepBindings                                                 ___ OFFSET(get<T>, {0x5B0, 64, 0, 0})
-	SMember(FContextualAnimRepLateJoinData)            RepLateJoinData                                             ___ OFFSET(get<T>, {0x5F0, 40, 0, 0})
-	SMember(FContextualAnimRepTransitionData)          RepTransitionData                                           ___ OFFSET(get<T>, {0x618, 24, 0, 0})
-	SMember(FContextualAnimRepTransitionData)          RepTransitionSingleActorData                                ___ OFFSET(get<T>, {0x630, 24, 0, 0})
-	SMember(FContextualAnimSceneBindings)              Bindings                                                    ___ OFFSET(get<T>, {0x648, 40, 0, 0})
-	CMember(TArray<FContextualAnimIKTarget>)           IKTargets                                                   ___ OFFSET(get<T>, {0x670, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnJoinedSceneDelegate                                       OFFSET(get<T>, {0x570, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLeftSceneDelegate                                         OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayMontageNotifyBeginDelegate                            OFFSET(get<T>, {0x590, 16, 0, 0})
+	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	DMember(bool)                                      bEnableDebug                                                OFFSET(get<bool>, {0x5A8, 1, 0, 0})
+	SMember(FContextualAnimRepBindingsData)            RepBindings                                                 OFFSET(get<T>, {0x5B0, 64, 0, 0})
+	SMember(FContextualAnimRepLateJoinData)            RepLateJoinData                                             OFFSET(get<T>, {0x5F0, 40, 0, 0})
+	SMember(FContextualAnimRepTransitionData)          RepTransitionData                                           OFFSET(get<T>, {0x618, 24, 0, 0})
+	SMember(FContextualAnimRepTransitionData)          RepTransitionSingleActorData                                OFFSET(get<T>, {0x630, 24, 0, 0})
+	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(get<T>, {0x648, 40, 0, 0})
+	CMember(TArray<FContextualAnimIKTarget>)           IKTargets                                                   OFFSET(get<T>, {0x670, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.TransitionSingleActor
+	// bool TransitionSingleActor(int32_t SectionIdx, int32_t AnimSetIdx);                                                      // [0x7461fc0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.TransitionContextualAnimScene
+	// bool TransitionContextualAnimScene(FName SectionName);                                                                   // [0x7461f34] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.StartContextualAnimScene
+	// bool StartContextualAnimScene(FContextualAnimSceneBindings& InBindings);                                                 // [0x7461e7c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.ServerStartContextualAnimScene
+	// void ServerStartContextualAnimScene(FContextualAnimSceneBindings InBindings);                                            // [0x7461cd8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.ServerEarlyOutContextualAnimScene
+	// void ServerEarlyOutContextualAnimScene();                                                                                // [0x7461c8c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnTickPose
+	// void OnTickPose(USkinnedMeshComponent* SkinnedMeshComponent, float DeltaTime, bool bNeedsValidRootMotion);               // [0x7461938] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_TransitionData
+	// void OnRep_TransitionData();                                                                                             // [0x7461890] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_RepTransitionSingleActor
+	// void OnRep_RepTransitionSingleActor();                                                                                   // [0x746187c] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_LateJoinData
+	// void OnRep_LateJoinData();                                                                                               // [0x7461868] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_Bindings
+	// void OnRep_Bindings();                                                                                                   // [0x7461854] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnPlayMontageNotifyBegin
+	// void OnPlayMontageNotifyBegin(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);              // [0x7461774] Final|Native|Protected|HasOutParms 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnMontageBlendingOut
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x7461424] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnLeftScene
+	// void OnLeftScene();                                                                                                      // [0x7461410] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnJoinedScene
+	// void OnJoinedScene(FContextualAnimSceneBindings& InBindings);                                                            // [0x7461364] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.LateJoinContextualAnimScene
+	// bool LateJoinContextualAnimScene(AActor* Actor, FName Role);                                                             // [0x74612a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.GetIKTargets
+	// TArray<FContextualAnimIKTarget> GetIKTargets();                                                                          // [0x7460f88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.GetIKTargetByGoalName
+	// FContextualAnimIKTarget GetIKTargetByGoalName(FName GoalName);                                                           // [0x7460ea4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ContextualAnimation.ContextualAnimRolesAsset
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UContextualAnimRolesAsset : public UDataAsset
@@ -83,7 +135,7 @@ class UContextualAnimRolesAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FContextualAnimRoleDefinition>)     Roles                                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FContextualAnimRoleDefinition>)     Roles                                                       OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneAsset
@@ -94,17 +146,38 @@ class UContextualAnimSceneAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(UContextualAnimRolesAsset*)                RolesAsset                                                  ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FName)                                     PrimaryRole                                                 ___ OFFSET(get<T>, {0x38, 4, 0, 0})
-	CMember(TArray<FContextualAnimActorPreviewData>)   OverridePreviewData                                         ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FContextualAnimSceneSection>)       Sections                                                    ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	CMember(UClass*)                                   SceneInstanceClass                                          ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	DMember(bool)                                      bDisableCollisionBetweenActors                              ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(bool)                                      bPrecomputeAlignmentTracks                                  ___ OFFSET(get<bool>, {0x71, 1, 0, 0})
-	DMember(int32_t)                                   SampleRate                                                  ___ OFFSET(get<int32_t>, {0x74, 4, 0, 0})
+	CMember(UContextualAnimRolesAsset*)                RolesAsset                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FName)                                     PrimaryRole                                                 OFFSET(get<T>, {0x38, 4, 0, 0})
+	CMember(TArray<FContextualAnimActorPreviewData>)   OverridePreviewData                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FContextualAnimSceneSection>)       Sections                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x60, 4, 0, 0})
+	CMember(UClass*)                                   SceneInstanceClass                                          OFFSET(get<T>, {0x68, 8, 0, 0})
+	DMember(bool)                                      bDisableCollisionBetweenActors                              OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bPrecomputeAlignmentTracks                                  OFFSET(get<bool>, {0x71, 1, 0, 0})
+	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.Query
+	// bool Query(FName Role, FContextualAnimQueryResult& OutResult, FContextualAnimQueryParams& QueryParams, FTransform& ToWorldTransform); // [0x7461a30] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetRoles
+	// TArray<FName> GetRoles();                                                                                                // [0x7461028] Final|Native|Public|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetAlignmentPointsForSecondaryRoleConsideringSelectionCriteria
+	// void GetAlignmentPointsForSecondaryRoleConsideringSelectionCriteria(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, FContextualAnimSceneBindingContext& Querier, EContextualAnimCriterionToConsider CriterionToConsider, TArray<FContextualAnimPoint>& OutResult); // [0x746043c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetAlignmentPointsForSecondaryRole
+	// void GetAlignmentPointsForSecondaryRole(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, TArray<FContextualAnimPoint>& OutResult); // [0x745fc68] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetStartAndEndTimeForWarpSection
+	// void BP_GetStartAndEndTimeForWarpSection(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName WarpSectionName, float& OutStartTime, float& OutEndTime); // [0x745cc70] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetIKTargetTransformForRoleAtTime
+	// FTransform BP_GetIKTargetTransformForRoleAtTime(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName TrackName, float Time); // [0x745cab4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetAlignmentTransformForRoleRelativeToWarpPoint
+	// FTransform BP_GetAlignmentTransformForRoleRelativeToWarpPoint(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, float Time); // [0x745c920] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_FindAnimSetIndexByAnimation
+	// int32_t BP_FindAnimSetIndexByAnimation(int32_t SectionIdx, UAnimSequenceBase* Animation);                                // [0x745c6f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_FindAnimationForRole
+	// UAnimSequenceBase* BP_FindAnimationForRole(int32_t SectionIdx, int32_t AnimSetIdx, FName Role);                          // [0x745c818] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneInstance
 /// Size: 0x00A8 (0x000028 - 0x0000D0)
 class UContextualAnimSceneInstance : public UObject
@@ -113,16 +186,27 @@ class UContextualAnimSceneInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSectionEndTimeReached                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSceneEnded                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorJoined                                               ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorLeft                                                 ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNotifyBegin                                               ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FContextualAnimSceneBindings)              Bindings                                                    ___ OFFSET(get<T>, {0x90, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSectionEndTimeReached                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSceneEnded                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorJoined                                               OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorLeft                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNotifyBegin                                               OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(get<T>, {0x90, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnNotifyEndReceived
+	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x7461694] Final|Native|Protected|HasOutParms 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnNotifyBeginReceived
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x74615b4] Final|Native|Protected|HasOutParms 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnMontageBlendingOut
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x74614ec] Final|Native|Protected 
+	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.GetActorByRole
+	// AActor* GetActorByRole(FName Role);                                                                                      // [0x745fb84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UContextualAnimSelectionCriterion : public UObject
@@ -131,7 +215,7 @@ class UContextualAnimSelectionCriterion : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EContextualAnimCriterionType)              Type                                                        ___ OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(EContextualAnimCriterionType)              Type                                                        OFFSET(get<T>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion_Blueprint
@@ -152,8 +236,8 @@ class UContextualAnimSelectionCriterion_TriggerArea : public UContextualAnimSele
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FVector>)                           PolygonPoints                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(float)                                     Height                                                      ___ OFFSET(get<float>, {0x40, 4, 0, 0})
+	CMember(TArray<FVector>)                           PolygonPoints                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion_Cone
@@ -164,10 +248,10 @@ class UContextualAnimSelectionCriterion_Cone : public UContextualAnimSelectionCr
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(EContextualAnimCriterionConeMode)          Mode                                                        ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	DMember(float)                                     Distance                                                    ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     HalfAngle                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     Offset                                                      ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(EContextualAnimCriterionConeMode)          Mode                                                        OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     HalfAngle                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     Offset                                                      OFFSET(get<float>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion_Distance
@@ -178,9 +262,9 @@ class UContextualAnimSelectionCriterion_Distance : public UContextualAnimSelecti
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(EContextualAnimCriterionDistanceMode)      Mode                                                        ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	DMember(float)                                     MinDistance                                                 ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     MaxDistance                                                 ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	CMember(EContextualAnimCriterionDistanceMode)      Mode                                                        OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(float)                                     MinDistance                                                 OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     MaxDistance                                                 OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimTransition
@@ -211,10 +295,10 @@ class FContextualAnimWarpTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     Role                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     TargetName                                                  ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     TargetRotation                                              ___ OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TargetName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     TargetRotation                                              OFFSET(get<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepData
@@ -225,7 +309,7 @@ class FContextualAnimRepData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(char)                                      RepCounter                                                  ___ OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      RepCounter                                                  OFFSET(get<char>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepBindingsData
@@ -236,8 +320,8 @@ class FContextualAnimRepBindingsData : public FContextualAnimRepData
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FContextualAnimSceneBindings)              Bindings                                                    ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(get<T>, {0x8, 40, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSceneBindings
@@ -248,11 +332,11 @@ class FContextualAnimSceneBindings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(char)                                      ID                                                          ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   SectionIdx                                                  ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   AnimSetIdx                                                  ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	CMember(TArray<FContextualAnimSceneBinding>)       Data                                                        ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(char)                                      ID                                                          OFFSET(get<char>, {0x0, 1, 0, 0})
+	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   SectionIdx                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   AnimSetIdx                                                  OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	CMember(TArray<FContextualAnimSceneBinding>)       Data                                                        OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSceneBinding
@@ -263,8 +347,8 @@ class FContextualAnimSceneBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FContextualAnimSceneBindingContext)        Context                                                     ___ OFFSET(get<T>, {0x0, 208, 0, 0})
-	DMember(int32_t)                                   AnimTrackIdx                                                ___ OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
+	SMember(FContextualAnimSceneBindingContext)        Context                                                     OFFSET(get<T>, {0x0, 208, 0, 0})
+	DMember(int32_t)                                   AnimTrackIdx                                                OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSceneBindingContext
@@ -275,10 +359,10 @@ class FContextualAnimSceneBindingContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TWeakObjectPtr<UContextualAnimSceneActorComponent*>) CachedSceneActorComp                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TWeakObjectPtr<UAnimInstance*>)            CachedAnimInstance                                          ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   CachedSkeletalMesh                                          ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TWeakObjectPtr<UContextualAnimSceneActorComponent*>) CachedSceneActorComp                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TWeakObjectPtr<UAnimInstance*>)            CachedAnimInstance                                          OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   CachedSkeletalMesh                                          OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepLateJoinData
@@ -289,9 +373,9 @@ class FContextualAnimRepLateJoinData : public FContextualAnimRepData
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(AActor*)                                   Actor                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     Role                                                        ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepTransitionData
@@ -302,10 +386,10 @@ class FContextualAnimRepTransitionData : public FContextualAnimRepData
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      ID                                                          ___ OFFSET(get<char>, {0x1, 1, 0, 0})
-	DMember(char)                                      SectionIdx                                                  ___ OFFSET(get<char>, {0x2, 1, 0, 0})
-	DMember(char)                                      AnimSetIdx                                                  ___ OFFSET(get<char>, {0x3, 1, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(char)                                      ID                                                          OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(char)                                      SectionIdx                                                  OFFSET(get<char>, {0x2, 1, 0, 0})
+	DMember(char)                                      AnimSetIdx                                                  OFFSET(get<char>, {0x3, 1, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSet
@@ -316,9 +400,9 @@ class FContextualAnimSet : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TArray<FContextualAnimTrack>)              Tracks                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FName, FTransform>)                   WarpPoints                                                  ___ OFFSET(get<T>, {0x10, 80, 0, 0})
-	DMember(float)                                     RandomWeight                                                ___ OFFSET(get<float>, {0x60, 4, 0, 0})
+	CMember(TArray<FContextualAnimTrack>)              Tracks                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FName, FTransform>)                   WarpPoints                                                  OFFSET(get<T>, {0x10, 80, 0, 0})
+	DMember(float)                                     RandomWeight                                                OFFSET(get<float>, {0x60, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimTrack
@@ -329,18 +413,18 @@ class FContextualAnimTrack : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(UAnimSequenceBase*)                        Animation                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     AnimMaxStartTime                                            ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bRequireFlyingMode                                          ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	DMember(bool)                                      bOptional                                                   ___ OFFSET(get<bool>, {0xD, 1, 0, 0})
-	SMember(FContextualAnimAlignmentTrackContainer)    AlignmentData                                               ___ OFFSET(get<T>, {0x10, 40, 0, 0})
-	SMember(FContextualAnimAlignmentTrackContainer)    IKTargetData                                                ___ OFFSET(get<T>, {0x38, 40, 0, 0})
-	CMember(TArray<UContextualAnimSelectionCriterion*>) SelectionCriteria                                          ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FTransform)                                MeshToScene                                                 ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FName)                                     Role                                                        ___ OFFSET(get<T>, {0xD0, 4, 0, 0})
-	DMember(int32_t)                                   SectionIdx                                                  ___ OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
-	DMember(int32_t)                                   AnimSetIdx                                                  ___ OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
-	DMember(int32_t)                                   AnimTrackIdx                                                ___ OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
+	CMember(UAnimSequenceBase*)                        Animation                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     AnimMaxStartTime                                            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bRequireFlyingMode                                          OFFSET(get<bool>, {0xC, 1, 0, 0})
+	DMember(bool)                                      bOptional                                                   OFFSET(get<bool>, {0xD, 1, 0, 0})
+	SMember(FContextualAnimAlignmentTrackContainer)    AlignmentData                                               OFFSET(get<T>, {0x10, 40, 0, 0})
+	SMember(FContextualAnimAlignmentTrackContainer)    IKTargetData                                                OFFSET(get<T>, {0x38, 40, 0, 0})
+	CMember(TArray<UContextualAnimSelectionCriterion*>) SelectionCriteria                                          OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FTransform)                                MeshToScene                                                 OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(get<T>, {0xD0, 4, 0, 0})
+	DMember(int32_t)                                   SectionIdx                                                  OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
+	DMember(int32_t)                                   AnimSetIdx                                                  OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
+	DMember(int32_t)                                   AnimTrackIdx                                                OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimAlignmentTrackContainer
@@ -351,8 +435,8 @@ class FContextualAnimAlignmentTrackContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FAnimSequenceTrackContainer)               Tracks                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(float)                                     SampleInterval                                              ___ OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FAnimSequenceTrackContainer)               Tracks                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(float)                                     SampleInterval                                              OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSceneSection
@@ -363,10 +447,10 @@ class FContextualAnimSceneSection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FContextualAnimSet>)                AnimSets                                                    ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TMap<FName, FContextualAnimIKTargetDefContainer>) RoleToIKTargetDefsMap                                ___ OFFSET(get<T>, {0x18, 80, 0, 0})
-	CMember(TArray<FContextualAnimWarpPointDefinition>) WarpPointDefinitions                                       ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FContextualAnimSet>)                AnimSets                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TMap<FName, FContextualAnimIKTargetDefContainer>) RoleToIKTargetDefsMap                                OFFSET(get<T>, {0x18, 80, 0, 0})
+	CMember(TArray<FContextualAnimWarpPointDefinition>) WarpPointDefinitions                                       OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimWarpPointDefinition
@@ -377,10 +461,10 @@ class FContextualAnimWarpPointDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FName)                                     WarpTargetName                                              ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EContextualAnimWarpPointDefinitionMode)    Mode                                                        ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FName)                                     SocketName                                                  ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FContextualAnimWarpPointCustomParams)      Params                                                      ___ OFFSET(get<T>, {0xC, 16, 0, 0})
+	SMember(FName)                                     WarpTargetName                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EContextualAnimWarpPointDefinitionMode)    Mode                                                        OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FContextualAnimWarpPointCustomParams)      Params                                                      OFFSET(get<T>, {0xC, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimWarpPointCustomParams
@@ -391,10 +475,10 @@ class FContextualAnimWarpPointCustomParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Origin                                                      ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bAlongClosestDistance                                       ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	SMember(FName)                                     OtherRole                                                   ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(float)                                     Weight                                                      ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Origin                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bAlongClosestDistance                                       OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FName)                                     OtherRole                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimIKTargetDefContainer
@@ -405,7 +489,7 @@ class FContextualAnimIKTargetDefContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FContextualAnimIKTargetDefinition>) IKTargetDefs                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FContextualAnimIKTargetDefinition>) IKTargetDefs                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimIKTargetDefinition
@@ -416,11 +500,11 @@ class FContextualAnimIKTargetDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FName)                                     GoalName                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(EContextualAnimIKTargetProvider)           Provider                                                    ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FName)                                     TargetRoleName                                              ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FName)                                     TargetBoneName                                              ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(EContextualAnimIKTargetProvider)           Provider                                                    OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(FName)                                     TargetRoleName                                              OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     TargetBoneName                                              OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimPoint
@@ -431,12 +515,12 @@ class FContextualAnimPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     Role                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(float)                                     Speed                                                       ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(int32_t)                                   SectionIdx                                                  ___ OFFSET(get<int32_t>, {0x74, 4, 0, 0})
-	DMember(int32_t)                                   AnimSetIdx                                                  ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(int32_t)                                   AnimTrackIdx                                                ___ OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(float)                                     Speed                                                       OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(int32_t)                                   SectionIdx                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
+	DMember(int32_t)                                   AnimSetIdx                                                  OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	DMember(int32_t)                                   AnimTrackIdx                                                OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimActorPreviewData
@@ -447,12 +531,12 @@ class FContextualAnimActorPreviewData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     Role                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EContextualAnimActorPreviewType)           Type                                                        ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	CMember(TWeakObjectPtr<USkeletalMesh*>)            PreviewSkeletalMesh                                         ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   PreviewAnimInstance                                         ___ OFFSET(get<T>, {0x28, 32, 0, 0})
-	CMember(TWeakObjectPtr<UStaticMesh*>)              PreviewStaticMesh                                           ___ OFFSET(get<T>, {0x48, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   PreviewActorClass                                           ___ OFFSET(get<T>, {0x68, 32, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EContextualAnimActorPreviewType)           Type                                                        OFFSET(get<T>, {0x4, 1, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMesh*>)            PreviewSkeletalMesh                                         OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   PreviewAnimInstance                                         OFFSET(get<T>, {0x28, 32, 0, 0})
+	CMember(TWeakObjectPtr<UStaticMesh*>)              PreviewStaticMesh                                           OFFSET(get<T>, {0x48, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   PreviewActorClass                                           OFFSET(get<T>, {0x68, 32, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimIKTarget
@@ -463,9 +547,9 @@ class FContextualAnimIKTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     GoalName                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRoleDefinition
@@ -476,9 +560,9 @@ class FContextualAnimRoleDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bIsCharacter                                                ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	SMember(FTransform)                                MeshToComponent                                             ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bIsCharacter                                                OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FTransform)                                MeshToComponent                                             OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimWarpPoint
@@ -489,8 +573,8 @@ class FContextualAnimWarpPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimStartSceneParams
@@ -501,9 +585,9 @@ class FContextualAnimStartSceneParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TMap<FName, FContextualAnimSceneBindingContext>) RoleToActorMap                                        ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	DMember(int32_t)                                   SectionIdx                                                  ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-	DMember(int32_t)                                   AnimSetIdx                                                  ___ OFFSET(get<int32_t>, {0x54, 4, 0, 0})
+	CMember(TMap<FName, FContextualAnimSceneBindingContext>) RoleToActorMap                                        OFFSET(get<T>, {0x0, 80, 0, 0})
+	DMember(int32_t)                                   SectionIdx                                                  OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	DMember(int32_t)                                   AnimSetIdx                                                  OFFSET(get<int32_t>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimQueryResult
@@ -514,11 +598,11 @@ class FContextualAnimQueryResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(TWeakObjectPtr<UAnimMontage*>)             Animation                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTransform)                                EntryTransform                                              ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                SyncTransform                                               ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	DMember(float)                                     AnimStartTime                                               ___ OFFSET(get<float>, {0xD0, 4, 0, 0})
-	DMember(int32_t)                                   AnimSetIdx                                                  ___ OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
+	CMember(TWeakObjectPtr<UAnimMontage*>)             Animation                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTransform)                                EntryTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                SyncTransform                                               OFFSET(get<T>, {0x70, 96, 0, 0})
+	DMember(float)                                     AnimStartTime                                               OFFSET(get<float>, {0xD0, 4, 0, 0})
+	DMember(int32_t)                                   AnimSetIdx                                                  OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimQueryParams
@@ -529,10 +613,10 @@ class FContextualAnimQueryParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Querier                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTransform)                                QueryTransform                                              ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	DMember(bool)                                      bComplexQuery                                               ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(bool)                                      bFindAnimStartTime                                          ___ OFFSET(get<bool>, {0x71, 1, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Querier                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTransform)                                QueryTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	DMember(bool)                                      bComplexQuery                                               OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bFindAnimStartTime                                          OFFSET(get<bool>, {0x71, 1, 0, 0})
 };
 
 /// Enum /Script/ContextualAnimation.EContextualAnimPointType

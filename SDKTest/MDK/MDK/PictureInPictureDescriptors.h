@@ -16,13 +16,13 @@ class UPictureInPicturePartnerDataAsset : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   PartnerName                                                 ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(UImage*)                                   ClientImage                                                 ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(int32_t)                                   MediaHeight                                                 ___ OFFSET(get<int32_t>, {0x48, 4, 0, 0})
-	DMember(int32_t)                                   MediaWidth                                                  ___ OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	CMember(UClass*)                                   MetadataOverlayClass                                        ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(TArray<FPictureInPictureActionConfig>)     Actions                                                     ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FPIPVideoPlayerAssetConfig)                AssetConfig                                                 ___ OFFSET(get<T>, {0x68, 136, 0, 0})
+	SMember(FString)                                   PartnerName                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UImage*)                                   ClientImage                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(int32_t)                                   MediaHeight                                                 OFFSET(get<int32_t>, {0x48, 4, 0, 0})
+	DMember(int32_t)                                   MediaWidth                                                  OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	CMember(UClass*)                                   MetadataOverlayClass                                        OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(TArray<FPictureInPictureActionConfig>)     Actions                                                     OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FPIPVideoPlayerAssetConfig)                AssetConfig                                                 OFFSET(get<T>, {0x68, 136, 0, 0})
 };
 
 /// Class /Script/PictureInPictureDescriptors.PictureInPictureActionData
@@ -33,15 +33,20 @@ class UPictureInPictureActionData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FString)                                   PartnerName                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FSlateBrush)                               ActionBrush                                                 ___ OFFSET(get<T>, {0x40, 192, 0, 0})
-	SMember(FText)                                     ActionText                                                  ___ OFFSET(get<T>, {0x100, 24, 0, 0})
-	CMember(PictureInPictureAction)                    ActionType                                                  ___ OFFSET(get<T>, {0x118, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ActionEvent                                                 ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ActionFiredEvent                                            ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CallbackEvent                                               ___ OFFSET(get<T>, {0x158, 16, 0, 0})
+	SMember(FString)                                   PartnerName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FSlateBrush)                               ActionBrush                                                 OFFSET(get<T>, {0x40, 192, 0, 0})
+	SMember(FText)                                     ActionText                                                  OFFSET(get<T>, {0x100, 24, 0, 0})
+	CMember(PictureInPictureAction)                    ActionType                                                  OFFSET(get<T>, {0x118, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ActionEvent                                                 OFFSET(get<T>, {0x120, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ActionFiredEvent                                            OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CallbackEvent                                               OFFSET(get<T>, {0x158, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/PictureInPictureDescriptors.PictureInPictureActionData.CallEvent
+	// void CallEvent();                                                                                                        // [0x128ea78] Native|Public|BlueprintCallable 
 /// Class /Script/PictureInPictureDescriptors.PictureInPictureSourceActionData
 /// Size: 0x0020 (0x000170 - 0x000190)
 class UPictureInPictureSourceActionData : public UPictureInPictureActionData
@@ -50,8 +55,8 @@ class UPictureInPictureSourceActionData : public UPictureInPictureActionData
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FString)                                   SourceName                                                  ___ OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SourceActionEvent                                           ___ OFFSET(get<T>, {0x178, 16, 0, 0})
+	SMember(FString)                                   SourceName                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SourceActionEvent                                           OFFSET(get<T>, {0x178, 16, 0, 0})
 };
 
 /// Class /Script/PictureInPictureDescriptors.PictureInPictureAnalyticsManager
@@ -62,7 +67,7 @@ class UPictureInPictureAnalyticsManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<FString, FPictureInPictureAnalyticsPayload>) PartnerAnalytics                                     ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FString, FPictureInPictureAnalyticsPayload>) PartnerAnalytics                                     OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Struct /Script/PictureInPictureDescriptors.PiPPartnerSource
@@ -73,18 +78,18 @@ class FPiPPartnerSource : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	CMember(PictureInPictureSourceType)                SourceType                                                  ___ OFFSET(get<T>, {0x48, 1, 0, 0})
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FDateTime)                                 StartTime                                                   ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	SMember(FDateTime)                                 EndTime                                                     ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FFortMediaEventsStreamAssets)              AssetConfig                                                 ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FString)                                   EventIconUrl                                                ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(UEpicCMSImage*)                            CMSImage                                                    ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	CMember(UPictureInPictureSourceActionData*)        ActionData                                                  ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(TSet<FString>)                             PlatformDenylist                                            ___ OFFSET(get<T>, {0xF0, 80, 0, 0})
-	CMember(TSet<FString>)                             GameplayTagDenylist                                         ___ OFFSET(get<T>, {0x140, 80, 0, 0})
-	CMember(TSet<FString>)                             GameplayTagAllowlist                                        ___ OFFSET(get<T>, {0x190, 80, 0, 0})
-	DMember(bool)                                      bManual                                                     ___ OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	CMember(PictureInPictureSourceType)                SourceType                                                  OFFSET(get<T>, {0x48, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FDateTime)                                 StartTime                                                   OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FDateTime)                                 EndTime                                                     OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FFortMediaEventsStreamAssets)              AssetConfig                                                 OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FString)                                   EventIconUrl                                                OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(UEpicCMSImage*)                            CMSImage                                                    OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UPictureInPictureSourceActionData*)        ActionData                                                  OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(TSet<FString>)                             PlatformDenylist                                            OFFSET(get<T>, {0xF0, 80, 0, 0})
+	CMember(TSet<FString>)                             GameplayTagDenylist                                         OFFSET(get<T>, {0x140, 80, 0, 0})
+	CMember(TSet<FString>)                             GameplayTagAllowlist                                        OFFSET(get<T>, {0x190, 80, 0, 0})
+	DMember(bool)                                      bManual                                                     OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/PictureInPictureDescriptors.PIPVideoPlayerAssetConfig
@@ -95,21 +100,21 @@ class FPIPVideoPlayerAssetConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(UMediaTexture*)                            VideoTexture                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UMediaPlayer*)                             VideoPlayer                                                 ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UMaterialInterface*)                       VideoMaterial                                               ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(UMaterialInterface*)                       ThumbnailMaterial                                           ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FVector2D)                                 LoadingScreenSize                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FVector2D)                                 LoadingScreenPosition                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(UFortStreamMediaSource*)                   MediaSource                                                 ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	CMember(UMediaSoundComponent*)                     SoundComponent                                              ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	CMember(USoundClass*)                              SoundClass                                                  ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(USoundMix*)                                ActiveSoundMix                                              ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(USoundSubmixBase*)                         DefaultSubmix                                               ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(USoundSubmixBase*)                         LicensedSubmix                                              ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	CMember(UFortMediaSubtitlesPlayer*)                SubtitlePlayer                                              ___ OFFSET(get<T>, {0x70, 8, 0, 0})
-	CMember(ULocalizedOverlays*)                       SubtitleOverlays                                            ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(USubtitleDisplayOptions*)                  SubtitleDisplayOptions                                      ___ OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(UMediaTexture*)                            VideoTexture                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UMediaPlayer*)                             VideoPlayer                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UMaterialInterface*)                       VideoMaterial                                               OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UMaterialInterface*)                       ThumbnailMaterial                                           OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FVector2D)                                 LoadingScreenSize                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 LoadingScreenPosition                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UFortStreamMediaSource*)                   MediaSource                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(UMediaSoundComponent*)                     SoundComponent                                              OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(USoundClass*)                              SoundClass                                                  OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(USoundMix*)                                ActiveSoundMix                                              OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(USoundSubmixBase*)                         DefaultSubmix                                               OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UFortMediaSubtitlesPlayer*)                SubtitlePlayer                                              OFFSET(get<T>, {0x70, 8, 0, 0})
+	CMember(ULocalizedOverlays*)                       SubtitleOverlays                                            OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(USubtitleDisplayOptions*)                  SubtitleDisplayOptions                                      OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
 /// Struct /Script/PictureInPictureDescriptors.PIPVideoPlayerConfig
@@ -120,13 +125,13 @@ class FPIPVideoPlayerConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   MimeType                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   BlurlVUID                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bLoopEnabled                                                ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bAutoPlay                                                   ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FString)                                   VideoURL                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bShareBlocked                                               ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FDateTime)                                 EventStartTime                                              ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FString)                                   MimeType                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   BlurlVUID                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bLoopEnabled                                                OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bAutoPlay                                                   OFFSET(get<bool>, {0x21, 1, 0, 0})
+	SMember(FString)                                   VideoURL                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bShareBlocked                                               OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FDateTime)                                 EventStartTime                                              OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Struct /Script/PictureInPictureDescriptors.PictureInPictureActionConfig
@@ -137,9 +142,9 @@ class FPictureInPictureActionConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	CMember(PictureInPictureAction)                    ActionType                                                  ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FSlateBrush)                               ActionBrush                                                 ___ OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FText)                                     ActionText                                                  ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
+	CMember(PictureInPictureAction)                    ActionType                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FSlateBrush)                               ActionBrush                                                 OFFSET(get<T>, {0x10, 192, 0, 0})
+	SMember(FText)                                     ActionText                                                  OFFSET(get<T>, {0xD0, 24, 0, 0})
 };
 
 /// Struct /Script/PictureInPictureDescriptors.PictureInPictureAnalyticsPayload
@@ -150,7 +155,7 @@ class FPictureInPictureAnalyticsPayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TMap<PictureInPictureAction, int32_t>)     PartnerActionTally                                          ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<PictureInPictureAction, int32_t>)     PartnerActionTally                                          OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Enum /Script/PictureInPictureDescriptors.PictureInPictureAction

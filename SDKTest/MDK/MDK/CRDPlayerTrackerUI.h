@@ -19,7 +19,7 @@ class UCRDPlayerTrackerUIComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(UCRDPlayerTrackerWidget*)                  SpawnedWidget                                               ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UCRDPlayerTrackerWidget*)                  SpawnedWidget                                               OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Class /Script/CRDPlayerTrackerUI.CRDPlayerTrackerWidget

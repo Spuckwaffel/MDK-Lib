@@ -48,8 +48,8 @@ class UAIComponent : public UEntityEnableableComponent
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(AFortPawn*)                                CachedPawn                                                  ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	CMember(AAIController*)                            CachedAIController                                          ___ OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(AFortPawn*)                                CachedPawn                                                  OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(AAIController*)                            CachedAIController                                          OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
 /// Class /Script/VerseFortnite.AIBehaviorScript
@@ -100,9 +100,16 @@ class UVerseFortnitePlayspace : public UVerseFortniteActorWrapper
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(TArray<UVerseFortnitePlayspaceExtensionBase*>) Extensions                                              ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(TArray<UVerseFortnitePlayspaceExtensionBase*>) Extensions                                              OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VerseFortnite.VerseFortnitePlayspace.OnMinigameSetUp
+	// void OnMinigameSetUp(AFortMinigame* Minigame);                                                                           // [0x96f6274] Final|Native|Private 
+	// Function /Script/VerseFortnite.VerseFortnitePlayspace.OnMinigamePlayerAdded
+	// void OnMinigamePlayerAdded(FUniqueNetIdRepl UniqueNetId, bool bIsLocalPlayer);                                           // [0x96f5f24] Final|Native|Private 
 /// Class /Script/VerseFortnite.VerseFortnitePlayspaceExtensionBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerseFortnitePlayspaceExtensionBase : public UObject
@@ -121,6 +128,6 @@ class UVerseFortniteSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(TMap<TWeakObjectPtr, UVerseFortniteActorWrapper*>) ActorToWrapperMap                                   ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, UVerseFortniteActorWrapper*>) ActorToWrapperMap                                   OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 

@@ -37,9 +37,14 @@ class UMVVMGameSubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UMVVMViewModelCollectionObject*)           ViewModelCollection                                         ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMVVMViewModelCollectionObject*)           ViewModelCollection                                         OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ModelViewViewModel.MVVMGameSubsystem.GetViewModelCollection
+	// UMVVMViewModelCollectionObject* GetViewModelCollection();                                                                // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ModelViewViewModel.MVVMSubsystem
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UMVVMSubsystem : public UEngineSubsystem
@@ -68,9 +73,22 @@ class UMVVMViewModelCollectionObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMVVMViewModelCollection)                  ViewModelCollection                                         ___ OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FMVVMViewModelCollection)                  ViewModelCollection                                         OFFSET(get<T>, {0x28, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.RemoveViewModel
+	// bool RemoveViewModel(FMVVMViewModelContext Context);                                                                     // [0x6bd1db0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.RemoveAllViewModelInstance
+	// int32_t RemoveAllViewModelInstance(UMVVMViewModelBase* ViewModel);                                                       // [0x6bd1d10] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.FindViewModelInstance
+	// UMVVMViewModelBase* FindViewModelInstance(FMVVMViewModelContext Context);                                                // [0x6bd058c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.FindFirstViewModelInstanceOfType
+	// UMVVMViewModelBase* FindFirstViewModelInstanceOfType(UClass*& ViewModelClass);                                           // [0x6bd04b8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.AddViewModelInstance
+	// bool AddViewModelInstance(FMVVMViewModelContext Context, UMVVMViewModelBase* ViewModel);                                 // [0x6bd00dc] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ModelViewViewModel.MVVMViewModelBlueprintGeneratedClass
 /// Size: 0x0000 (0x000368 - 0x000368)
 class UMVVMViewModelBlueprintGeneratedClass : public UBlueprintGeneratedClass
@@ -99,15 +117,36 @@ class UMVVMView : public UUserWidgetExtension
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UMVVMViewClass*)                           ClassExtension                                              ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TArray<FMVVMViewSource>)                   Sources                                                     ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(bool)                                      bLogBinding                                                 ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bConstructed                                                ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
-	DMember(bool)                                      bSourcesInitialized                                         ___ OFFSET(get<bool>, {0x52, 1, 0, 0})
-	DMember(bool)                                      bBindingsInitialized                                        ___ OFFSET(get<bool>, {0x53, 1, 0, 0})
-	DMember(bool)                                      bHasEveryTickBinding                                        ___ OFFSET(get<bool>, {0x54, 1, 0, 0})
+	CMember(UMVVMViewClass*)                           ClassExtension                                              OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TArray<FMVVMViewSource>)                   Sources                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(bool)                                      bLogBinding                                                 OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bConstructed                                                OFFSET(get<bool>, {0x51, 1, 0, 0})
+	DMember(bool)                                      bSourcesInitialized                                         OFFSET(get<bool>, {0x52, 1, 0, 0})
+	DMember(bool)                                      bBindingsInitialized                                        OFFSET(get<bool>, {0x53, 1, 0, 0})
+	DMember(bool)                                      bHasEveryTickBinding                                        OFFSET(get<bool>, {0x54, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ModelViewViewModel.MVVMView.UninitializeSources
+	// void UninitializeSources();                                                                                              // [0x6bd20f4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.UninitializeBindings
+	// void UninitializeBindings();                                                                                             // [0x6bd2094] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.SetViewModelByClass
+	// bool SetViewModelByClass(TScriptInterface<Class> NewValue);                                                              // [0x6bd1f20] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.SetViewModel
+	// bool SetViewModel(FName ViewModelName, TScriptInterface<Class> ViewModel);                                               // [0x2da3924] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.InitializeSources
+	// void InitializeSources();                                                                                                // [0x6bd07ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.InitializeBindings
+	// void InitializeBindings();                                                                                               // [0x6bd0798] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ModelViewViewModel.MVVMView.GetViewModel
+	// TScriptInterface<Class> GetViewModel(FName ViewModelName);                                                               // [0x6bd0700] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ModelViewViewModel.MVVMView.AreSourcesInitialized
+	// bool AreSourcesInitialized();                                                                                            // [0x6bd0390] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ModelViewViewModel.MVVMView.AreBindingsInitialized
+	// bool AreBindingsInitialized();                                                                                           // [0x6bd037c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ModelViewViewModel.MVVMViewClass
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UMVVMViewClass : public UWidgetBlueprintGeneratedClassExtension
@@ -116,11 +155,11 @@ class UMVVMViewClass : public UWidgetBlueprintGeneratedClassExtension
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TArray<FMVVMViewClass_SourceCreator>)      SourceCreators                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FMVVMViewClass_CompiledBinding>)    CompiledBindings                                            ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              ___ OFFSET(get<T>, {0x48, 96, 0, 0})
-	DMember(bool)                                      bInitializeSourcesOnConstruct                               ___ OFFSET(get<bool>, {0xAC, 1, 0, 0})
-	DMember(bool)                                      bInitializeBindingsOnConstruct                              ___ OFFSET(get<bool>, {0xAD, 1, 0, 0})
+	CMember(TArray<FMVVMViewClass_SourceCreator>)      SourceCreators                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FMVVMViewClass_CompiledBinding>)    CompiledBindings                                            OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              OFFSET(get<T>, {0x48, 96, 0, 0})
+	DMember(bool)                                      bInitializeSourcesOnConstruct                               OFFSET(get<bool>, {0xAC, 1, 0, 0})
+	DMember(bool)                                      bInitializeBindingsOnConstruct                              OFFSET(get<bool>, {0xAD, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMAvailableBinding
@@ -131,10 +170,10 @@ class FMVVMAvailableBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FMVVMBindingName)                          BindingName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bIsReadable                                                 ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bIsWritable                                                 ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
-	DMember(bool)                                      bHasNotify                                                  ___ OFFSET(get<bool>, {0x6, 1, 0, 0})
+	SMember(FMVVMBindingName)                          BindingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bIsReadable                                                 OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bIsWritable                                                 OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bHasNotify                                                  OFFSET(get<bool>, {0x6, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMBindingName
@@ -145,7 +184,7 @@ class FMVVMBindingName : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     BindingName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BindingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMEventField
@@ -166,8 +205,8 @@ class FMVVMViewModelContextInstance : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FMVVMViewModelContext)                     Context                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(UMVVMViewModelBase*)                       Instance                                                    ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FMVVMViewModelContext)                     Context                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(UMVVMViewModelBase*)                       Instance                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewModelContext
@@ -178,8 +217,8 @@ class FMVVMViewModelContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UClass*)                                   ContextClass                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ContextName                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(UClass*)                                   ContextClass                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     ContextName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFields
@@ -190,11 +229,11 @@ class FMVVMVCompiledFields : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UStruct*)                                  ClassOrScriptStruct                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(int16_t)                                   LibraryStartIndex                                           ___ OFFSET(get<int16_t>, {0x8, 2, 0, 0})
-	DMember(int16_t)                                   NumberOfProperties                                          ___ OFFSET(get<int16_t>, {0xA, 2, 0, 0})
-	DMember(int16_t)                                   NumberOfFunctions                                           ___ OFFSET(get<int16_t>, {0xC, 2, 0, 0})
-	DMember(int16_t)                                   NumberOfFieldIds                                            ___ OFFSET(get<int16_t>, {0xE, 2, 0, 0})
+	CMember(UStruct*)                                  ClassOrScriptStruct                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(int16_t)                                   LibraryStartIndex                                           OFFSET(get<int16_t>, {0x8, 2, 0, 0})
+	DMember(int16_t)                                   NumberOfProperties                                          OFFSET(get<int16_t>, {0xA, 2, 0, 0})
+	DMember(int16_t)                                   NumberOfFunctions                                           OFFSET(get<int16_t>, {0xC, 2, 0, 0})
+	DMember(int16_t)                                   NumberOfFieldIds                                            OFFSET(get<int16_t>, {0xE, 2, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFieldPath
@@ -205,8 +244,8 @@ class FMVVMVCompiledFieldPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int16_t)                                   StartIndex                                                  ___ OFFSET(get<int16_t>, {0x0, 2, 0, 0})
-	DMember(int16_t)                                   Num                                                         ___ OFFSET(get<int16_t>, {0x2, 2, 0, 0})
+	DMember(int16_t)                                   StartIndex                                                  OFFSET(get<int16_t>, {0x0, 2, 0, 0})
+	DMember(int16_t)                                   Num                                                         OFFSET(get<int16_t>, {0x2, 2, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFieldId
@@ -217,7 +256,7 @@ class FMVVMVCompiledFieldId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	DMember(int16_t)                                   FieldIdIndex                                                ___ OFFSET(get<int16_t>, {0x0, 2, 0, 0})
+	DMember(int16_t)                                   FieldIdIndex                                                OFFSET(get<int16_t>, {0x0, 2, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMCompiledLoadedPropertyOrFunctionIndex
@@ -228,10 +267,10 @@ class FMVVMCompiledLoadedPropertyOrFunctionIndex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int16_t)                                   Index                                                       ___ OFFSET(get<int16_t>, {0x0, 2, 0, 0})
-	DMember(bool)                                      bIsObjectProperty                                           ___ OFFSET(get<bool>, {0x2, 1, 1, 0})
-	DMember(bool)                                      bIsScriptStructProperty                                     ___ OFFSET(get<bool>, {0x2, 1, 1, 1})
-	DMember(bool)                                      bIsProperty                                                 ___ OFFSET(get<bool>, {0x2, 1, 1, 2})
+	DMember(int16_t)                                   Index                                                       OFFSET(get<int16_t>, {0x0, 2, 0, 0})
+	DMember(bool)                                      bIsObjectProperty                                           OFFSET(get<bool>, {0x2, 1, 1, 0})
+	DMember(bool)                                      bIsScriptStructProperty                                     OFFSET(get<bool>, {0x2, 1, 1, 1})
+	DMember(bool)                                      bIsProperty                                                 OFFSET(get<bool>, {0x2, 1, 1, 2})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledBinding
@@ -242,10 +281,10 @@ class FMVVMVCompiledBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 14;
 
 public:
-	SMember(FMVVMVCompiledFieldPath)                   SourceFieldPath                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   DestinationFieldPath                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   ConversionFunctionFieldPath                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(char)                                      Flags                                                       ___ OFFSET(get<char>, {0xC, 1, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   SourceFieldPath                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   DestinationFieldPath                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   ConversionFunctionFieldPath                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMCompiledBindingLibrary
@@ -256,10 +295,10 @@ class FMVVMCompiledBindingLibrary : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<UFunction*>)                        LoadedFunctions                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FMVVMCompiledLoadedPropertyOrFunctionIndex>) FieldPaths                                         ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FMVVMVCompiledFields>)              CompiledFields                                              ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<FName>)                             CompiledFieldNames                                          ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<UFunction*>)                        LoadedFunctions                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FMVVMCompiledLoadedPropertyOrFunctionIndex>) FieldPaths                                         OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FMVVMVCompiledFields>)              CompiledFields                                              OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FName>)                             CompiledFieldNames                                          OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewModelCollection
@@ -270,7 +309,7 @@ class FMVVMViewModelCollection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FMVVMViewModelContextInstance>)     ViewModelInstances                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FMVVMViewModelContextInstance>)     ViewModelInstances                                          OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewSource
@@ -281,12 +320,12 @@ class FMVVMViewSource : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UObject*)                                  Source                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     SourceName                                                  ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   RegisteredCount                                             ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bCreatedSource                                              ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bSetManually                                                ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(bool)                                      bAssignedToUserWidgetProperty                               ___ OFFSET(get<bool>, {0x12, 1, 0, 0})
+	CMember(UObject*)                                  Source                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   RegisteredCount                                             OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bCreatedSource                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bSetManually                                                OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bAssignedToUserWidgetProperty                               OFFSET(get<bool>, {0x12, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewClass_SourceCreator
@@ -297,13 +336,13 @@ class FMVVMViewClass_SourceCreator : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UClass*)                                   ExpectedSourceType                                          ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UMVVMViewModelContextResolver*)            Resolver                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FMVVMViewModelContext)                     GlobalViewModelInstance                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   FieldPath                                                   ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FName)                                     ParentSourceName                                            ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	DMember(char)                                      Flags                                                       ___ OFFSET(get<char>, {0x2C, 1, 0, 0})
+	CMember(UClass*)                                   ExpectedSourceType                                          OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UMVVMViewModelContextResolver*)            Resolver                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FMVVMViewModelContext)                     GlobalViewModelInstance                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   FieldPath                                                   OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FName)                                     ParentSourceName                                            OFFSET(get<T>, {0x28, 4, 0, 0})
+	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0x2C, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewClass_CompiledBinding
@@ -314,12 +353,12 @@ class FMVVMViewClass_CompiledBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FMVVMVCompiledFieldId)                     FieldId                                                     ___ OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FName)                                     SourcePropertyName                                          ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMVVMVCompiledBinding)                     Binding                                                     ___ OFFSET(get<T>, {0x8, 14, 0, 0})
-	CMember(EMVVMExecutionMode)                        ExecutionMode                                               ___ OFFSET(get<T>, {0x16, 1, 0, 0})
-	DMember(int8_t)                                    EvaluateSourceCreatorIndex                                  ___ OFFSET(get<int8_t>, {0x17, 1, 0, 0})
-	DMember(char)                                      Flags                                                       ___ OFFSET(get<char>, {0x18, 1, 0, 0})
+	SMember(FMVVMVCompiledFieldId)                     FieldId                                                     OFFSET(get<T>, {0x0, 2, 0, 0})
+	SMember(FName)                                     SourcePropertyName                                          OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FMVVMVCompiledBinding)                     Binding                                                     OFFSET(get<T>, {0x8, 14, 0, 0})
+	CMember(EMVVMExecutionMode)                        ExecutionMode                                               OFFSET(get<T>, {0x16, 1, 0, 0})
+	DMember(int8_t)                                    EvaluateSourceCreatorIndex                                  OFFSET(get<int8_t>, {0x17, 1, 0, 0})
+	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0x18, 1, 0, 0})
 };
 
 /// Enum /Script/ModelViewViewModel.EMVVMExecutionMode

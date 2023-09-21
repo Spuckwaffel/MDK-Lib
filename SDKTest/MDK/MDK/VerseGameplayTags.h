@@ -17,7 +17,7 @@ class UEntityTagContainerComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVerseGameplayTagContainer)                InternalTags                                                ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FVerseGameplayTagContainer)                InternalTags                                                OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/VerseGameplayTags.VerseGameplayTagBase
@@ -78,7 +78,7 @@ class UVerseTagMarkupComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FVerseGameplayTagContainer)                InternalTags                                                ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FVerseGameplayTagContainer)                InternalTags                                                OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/VerseGameplayTags.TaggedObjectFinderEntry
@@ -89,9 +89,9 @@ class FTaggedObjectFinderEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVerseGameplayTagContainer)                RequiredTags                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVerseGameplayTagContainer)                PreferredTags                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVerseGameplayTagContainer)                ExclusionTags                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVerseGameplayTagContainer)                RequiredTags                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVerseGameplayTagContainer)                PreferredTags                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVerseGameplayTagContainer)                ExclusionTags                                               OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VerseGameplayTags.VerseGameplayTagContainer
@@ -102,7 +102,7 @@ class FVerseGameplayTagContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FVerseGameplayTag>)                 InternalTags                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVerseGameplayTag>)                 InternalTags                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/VerseGameplayTags.VerseGameplayTag
@@ -113,6 +113,6 @@ class FVerseGameplayTag : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UClass*)                                   InternalTag                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   InternalTag                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 

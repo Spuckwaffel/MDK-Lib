@@ -14,7 +14,7 @@ class FVkLaunchData_JoinMatchmakingSession : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   SessionId                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   SessionId                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.ValkyrieProjectDescriptorIOContext
@@ -35,9 +35,9 @@ class FValkyriePluginReferenceDescriptor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsRoot                                                     ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bIsPublic                                                   ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsRoot                                                     OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bIsPublic                                                   OFFSET(get<bool>, {0x11, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.ValkyrieProjectReferenceDescriptor
@@ -48,10 +48,10 @@ class FValkyrieProjectReferenceDescriptor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(char)                                      FileVersion                                                 ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	SMember(FString)                                   ID                                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FOnlineLinkId)                             LinkCode                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(char)                                      FileVersion                                                 OFFSET(get<char>, {0x0, 1, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FOnlineLinkId)                             LinkCode                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.ValkyrieProjectBindingsDescriptor
@@ -62,8 +62,8 @@ class FValkyrieProjectBindingsDescriptor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    Modules                                                     ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    Modules                                                     OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.ValkyrieProjectDescriptor
@@ -74,22 +74,22 @@ class FValkyrieProjectDescriptor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	DMember(char)                                      FileVersion                                                 ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	SMember(FString)                                   VersionSuffix                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Title                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Description                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   KeyArt                                                      ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   DocsUrl                                                     ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(EValkyrieProjectKind)                      Kind                                                        ___ OFFSET(get<T>, {0x58, 4, 0, 0})
-	CMember(EValkyrieProjectTemplateCategory)          TemplateCategory                                            ___ OFFSET(get<T>, {0x5C, 4, 0, 0})
-	SMember(FString)                                   CompatibilityVersion                                        ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<FString>)                           EditorPermissions                                           ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FString)                                   EpicApp                                                     ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(float)                                     SortPriority                                                ___ OFFSET(get<float>, {0x90, 4, 0, 0})
-	CMember(TArray<FValkyriePluginReferenceDescriptor>) Plugins                                                    ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TMap<FString, FJsonObjectWrapper>)         DataSets                                                    ___ OFFSET(get<T>, {0xA8, 80, 0, 0})
-	CMember(TArray<FValkyrieProjectReferenceDescriptor>) Dependencies                                              ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
-	SMember(FValkyrieProjectBindingsDescriptor)        Bindings                                                    ___ OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	DMember(char)                                      FileVersion                                                 OFFSET(get<char>, {0x0, 1, 0, 0})
+	SMember(FString)                                   VersionSuffix                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   KeyArt                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DocsUrl                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(EValkyrieProjectKind)                      Kind                                                        OFFSET(get<T>, {0x58, 4, 0, 0})
+	CMember(EValkyrieProjectTemplateCategory)          TemplateCategory                                            OFFSET(get<T>, {0x5C, 4, 0, 0})
+	SMember(FString)                                   CompatibilityVersion                                        OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FString>)                           EditorPermissions                                           OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   EpicApp                                                     OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(float)                                     SortPriority                                                OFFSET(get<float>, {0x90, 4, 0, 0})
+	CMember(TArray<FValkyriePluginReferenceDescriptor>) Plugins                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TMap<FString, FJsonObjectWrapper>)         DataSets                                                    OFFSET(get<T>, {0xA8, 80, 0, 0})
+	CMember(TArray<FValkyrieProjectReferenceDescriptor>) Dependencies                                              OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FValkyrieProjectBindingsDescriptor)        Bindings                                                    OFFSET(get<T>, {0x1D0, 96, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkNamedId
@@ -100,8 +100,8 @@ class FVkNamedId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ID                                                          ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTypedId
@@ -112,8 +112,8 @@ class FVkTypedId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EVkIdType)                                 Type                                                        ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EVkIdType)                                 Type                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkVersionedLinkCode
@@ -124,8 +124,8 @@ class FVkVersionedLinkCode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Mnemonic                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   Mnemonic                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkContentFilter
@@ -136,7 +136,7 @@ class FVkContentFilter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Platform                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Platform                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkArtifactOption
@@ -147,9 +147,9 @@ class FVkArtifactOption : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ArtifactId                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EConsumerRole)                             Role                                                        ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FVkContentFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ArtifactId                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EConsumerRole)                             Role                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FVkContentFilter)                          Filter                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkFoundMatchingArtifact
@@ -160,9 +160,9 @@ class FVkFoundMatchingArtifact : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ArtifactId                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVkContentFilter)                          Filter                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ArtifactId                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVkContentFilter)                          Filter                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleVersion
@@ -173,8 +173,8 @@ class FVkModuleVersion : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ModuleId                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   ModuleId                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleVersionRef
@@ -185,8 +185,8 @@ class FVkModuleVersionRef : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ModuleId                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   ModuleId                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleVersionWithArtifacts
@@ -197,7 +197,7 @@ class FVkModuleVersionWithArtifacts : public FVkModuleVersion
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FVkArtifactOption>)                 Artifacts                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FVkArtifactOption>)                 Artifacts                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleDoc
@@ -208,17 +208,17 @@ class FVkModuleDoc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   ModuleId                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 Created                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FDateTime)                                 Updated                                                     ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FVkTypedId)                                Author                                                      ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   ModuleName                                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FString)                                   ContentType                                                 ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   ___ OFFSET(get<T>, {0x68, 80, 0, 0})
-	SMember(FString)                                   AliasForModuleId                                            ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0xC8, 32, 0, 0})
-	DMember(int32_t)                                   LatestVersion                                               ___ OFFSET(get<int32_t>, {0xE8, 4, 0, 0})
+	SMember(FString)                                   ModuleId                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 Updated                                                     OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FVkTypedId)                                Author                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ModuleName                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   ContentType                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   OFFSET(get<T>, {0x68, 80, 0, 0})
+	SMember(FString)                                   AliasForModuleId                                            OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0xC8, 32, 0, 0})
+	DMember(int32_t)                                   LatestVersion                                               OFFSET(get<int32_t>, {0xE8, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkContentPackage
@@ -229,9 +229,9 @@ class FVkContentPackage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    ProjectFlags                                                ___ OFFSET(get<T>, {0x10, 80, 0, 0})
-	CMember(TArray<FVkModuleVersionWithArtifacts>)     Content                                                     ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    ProjectFlags                                                OFFSET(get<T>, {0x10, 80, 0, 0})
+	CMember(TArray<FVkModuleVersionWithArtifacts>)     Content                                                     OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleBinaries
@@ -242,13 +242,13 @@ class FVkModuleBinaries : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   BaseUrl                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   manifest                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FString>)                           Files                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(double)                                    TotalSizeKb                                                 ___ OFFSET(get<double>, {0x30, 8, 0, 0})
-	DMember(double)                                    ManifestSizeKb                                              ___ OFFSET(get<double>, {0x38, 8, 0, 0})
-	DMember(double)                                    ManifestDiskSizeKb                                          ___ OFFSET(get<double>, {0x40, 8, 0, 0})
-	DMember(double)                                    ManifestDownloadSizeKb                                      ___ OFFSET(get<double>, {0x48, 8, 0, 0})
+	SMember(FString)                                   BaseUrl                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   manifest                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FString>)                           Files                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(double)                                    TotalSizeKb                                                 OFFSET(get<double>, {0x30, 8, 0, 0})
+	DMember(double)                                    ManifestSizeKb                                              OFFSET(get<double>, {0x38, 8, 0, 0})
+	DMember(double)                                    ManifestDiskSizeKb                                          OFFSET(get<double>, {0x40, 8, 0, 0})
+	DMember(double)                                    ManifestDownloadSizeKb                                      OFFSET(get<double>, {0x48, 8, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkResolvedModule
@@ -259,11 +259,11 @@ class FVkResolvedModule : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FString)                                   ModuleId                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FString)                                   ArtifactId                                                  ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   CookJobId                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FVkModuleBinaries)                         Binaries                                                    ___ OFFSET(get<T>, {0x38, 80, 0, 0})
+	SMember(FString)                                   ModuleId                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   ArtifactId                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   CookJobId                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVkModuleBinaries)                         Binaries                                                    OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkFileSize
@@ -274,10 +274,10 @@ class FVkFileSize : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FString>)                           Types                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int64_t)                                   SourceSize                                                  ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	DMember(int64_t)                                   UncompressedSize                                            ___ OFFSET(get<int64_t>, {0x18, 8, 0, 0})
-	DMember(int64_t)                                   CompressedSize                                              ___ OFFSET(get<int64_t>, {0x20, 8, 0, 0})
+	CMember(TArray<FString>)                           Types                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int64_t)                                   SourceSize                                                  OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int64_t)                                   UncompressedSize                                            OFFSET(get<int64_t>, {0x18, 8, 0, 0})
+	DMember(int64_t)                                   CompressedSize                                              OFFSET(get<int64_t>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkFileSizes
@@ -288,7 +288,7 @@ class FVkFileSizes : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<FString, FVkFileSize>)                FileSizeMap                                                 ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FString, FVkFileSize>)                FileSizeMap                                                 OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkExtendedErrorParam
@@ -299,8 +299,8 @@ class FVkExtendedErrorParam : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Key                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkExtendedError
@@ -311,10 +311,10 @@ class FVkExtendedError : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   FormatKey                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   FormatNs                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Message                                                     ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FVkExtendedErrorParam>)             Params                                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   FormatKey                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   FormatNs                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Message                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FVkExtendedErrorParam>)             Params                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkExtendedErrorInformation
@@ -325,9 +325,9 @@ class FVkExtendedErrorInformation : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ErrorCode                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ErrorMessage                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FVkExtendedError>)                  AdditionalErrors                                            ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ErrorCode                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ErrorMessage                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FVkExtendedError>)                  AdditionalErrors                                            OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTicketDetails
@@ -338,10 +338,10 @@ class FVkTicketDetails : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(EVkTicketStatus)                           Status                                                      ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FDateTime)                                 StartDate                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FDateTime)                                 EndDate                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FVkExtendedErrorInformation)               Error                                                       ___ OFFSET(get<T>, {0x18, 48, 0, 0})
+	CMember(EVkTicketStatus)                           Status                                                      OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FDateTime)                                 StartDate                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FDateTime)                                 EndDate                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FVkExtendedErrorInformation)               Error                                                       OFFSET(get<T>, {0x18, 48, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkVersePath
@@ -352,8 +352,8 @@ class FVkVersePath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   VersePath                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   URL                                                         ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   VersePath                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   URL                                                         OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkVersePathTarget
@@ -364,8 +364,8 @@ class FVkVersePathTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVkVersionedLinkCode)                      LinkCode                                                    ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVkVersionedLinkCode)                      LinkCode                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkResolvedVersePath
@@ -376,7 +376,7 @@ class FVkResolvedVersePath : public FVkVersePath
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FVkVersePathTarget)                        Target                                                      ___ OFFSET(get<T>, {0x20, 40, 0, 0})
+	SMember(FVkVersePathTarget)                        Target                                                      OFFSET(get<T>, {0x20, 40, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkContentManifest
@@ -387,7 +387,7 @@ class FVkContentManifest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FVkResolvedModule>)                 Content                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVkResolvedModule>)                 Content                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkBuildVersion
@@ -398,9 +398,9 @@ class FVkBuildVersion : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Major                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Minor                                                       ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   Patch                                                       ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	SMember(FString)                                   Major                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Minor                                                       OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   Patch                                                       OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkJobOutput
@@ -411,11 +411,11 @@ class FVkJobOutput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   BaseUrl                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(double)                                    TotalSizeKb                                                 ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    UserContentTotalSizeKb                                      ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	CMember(TArray<FString>)                           Files                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   manifest                                                    ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   BaseUrl                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(double)                                    TotalSizeKb                                                 OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    UserContentTotalSizeKb                                      OFFSET(get<double>, {0x18, 8, 0, 0})
+	CMember(TArray<FString>)                           Files                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   manifest                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkModuleVersionDoc
@@ -426,21 +426,21 @@ class FVkModuleVersionDoc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FString)                                   ModuleId                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(EVkModuleAccess)                           Access                                                      ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FDateTime)                                 Created                                                     ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FVkTypedId)                                Author                                                      ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	CMember(TArray<FVkModuleVersionRef>)               Dependencies                                                ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FVkJobOutput)                              StagedFiles                                                 ___ OFFSET(get<T>, {0x80, 64, 0, 0})
-	SMember(FVkBuildVersion)                           SourceVersion                                               ___ OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FString)                                   ContentType                                                 ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   ___ OFFSET(get<T>, {0xE8, 80, 0, 0})
-	SMember(FString)                                   ArtifactKey                                                 ___ OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FString)                                   Checksum                                                    ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	CMember(TArray<FVkArtifactOption>)                 Artifacts                                                   ___ OFFSET(get<T>, {0x158, 16, 0, 0})
+	SMember(FString)                                   ModuleId                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(EVkModuleAccess)                           Access                                                      OFFSET(get<T>, {0x28, 1, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FVkTypedId)                                Author                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x50, 32, 0, 0})
+	CMember(TArray<FVkModuleVersionRef>)               Dependencies                                                OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FVkJobOutput)                              StagedFiles                                                 OFFSET(get<T>, {0x80, 64, 0, 0})
+	SMember(FVkBuildVersion)                           SourceVersion                                               OFFSET(get<T>, {0xC0, 24, 0, 0})
+	SMember(FString)                                   ContentType                                                 OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   OFFSET(get<T>, {0xE8, 80, 0, 0})
+	SMember(FString)                                   ArtifactKey                                                 OFFSET(get<T>, {0x138, 16, 0, 0})
+	SMember(FString)                                   Checksum                                                    OFFSET(get<T>, {0x148, 16, 0, 0})
+	CMember(TArray<FVkArtifactOption>)                 Artifacts                                                   OFFSET(get<T>, {0x158, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectLimitsDoc
@@ -451,12 +451,12 @@ class FVkProjectLimitsDoc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int64_t)                                   PublishingMemorySize                                        ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   PublishingDownloadSize                                      ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
-	DMember(int64_t)                                   ProjectUploadSize                                           ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	DMember(int32_t)                                   ModuleUploadConcurrencyLimit                                ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int64_t)                                   FileCount                                                   ___ OFFSET(get<int64_t>, {0x20, 8, 0, 0})
-	DMember(int64_t)                                   IndividualFileSizeKb                                        ___ OFFSET(get<int64_t>, {0x28, 8, 0, 0})
+	DMember(int64_t)                                   PublishingMemorySize                                        OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   PublishingDownloadSize                                      OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   ProjectUploadSize                                           OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   ModuleUploadConcurrencyLimit                                OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int64_t)                                   FileCount                                                   OFFSET(get<int64_t>, {0x20, 8, 0, 0})
+	DMember(int64_t)                                   IndividualFileSizeKb                                        OFFSET(get<int64_t>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectUserInfo
@@ -467,13 +467,13 @@ class FVkProjectUserInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   AccountId                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Title                                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(bool)                                      HasStar                                                     ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(bool)                                      IsNew                                                       ___ OFFSET(get<bool>, {0x31, 1, 0, 0})
-	CMember(TMap<FString, bool>)                       Access                                                      ___ OFFSET(get<T>, {0x38, 80, 0, 0})
-	CMember(TArray<FString>)                           Permissions                                                 ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   AccountId                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(bool)                                      HasStar                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(bool)                                      IsNew                                                       OFFSET(get<bool>, {0x31, 1, 0, 0})
+	CMember(TMap<FString, bool>)                       Access                                                      OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(TArray<FString>)                           Permissions                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkCreateProjectRequest
@@ -484,9 +484,9 @@ class FVkCreateProjectRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   DesiredProjectId                                            ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FJsonObjectWrapper)                        SysMeta                                                     ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FString)                                   DesiredProjectId                                            OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FJsonObjectWrapper)                        SysMeta                                                     OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTransferProjectRequest
@@ -497,7 +497,7 @@ class FVkTransferProjectRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   TeamId                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TeamId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkCreateModuleRequest
@@ -508,11 +508,11 @@ class FVkCreateModuleRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   ModuleName                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FString)                                   ContentType                                                 ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	SMember(FString)                                   DesiredModuleId                                             ___ OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FString)                                   ModuleName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FString)                                   ContentType                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TMap<EConsumerRole, bool>)                 Relevance                                                   OFFSET(get<T>, {0x40, 80, 0, 0})
+	SMember(FString)                                   DesiredModuleId                                             OFFSET(get<T>, {0x90, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkCreateModuleVersionRequest
@@ -523,11 +523,11 @@ class FVkCreateModuleVersionRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(TMap<FString, FString>)                    RawFiles                                                    ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	CMember(TArray<FVkModuleVersionRef>)               Dependencies                                                ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FString)                                   Checksum                                                    ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FString)                                   ManifestLink                                                ___ OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    RawFiles                                                    OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TArray<FVkModuleVersionRef>)               Dependencies                                                OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FString)                                   Checksum                                                    OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FString)                                   ManifestLink                                                OFFSET(get<T>, {0x90, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkResolvedContent
@@ -538,8 +538,8 @@ class FVkResolvedContent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVkModuleVersionRef)                       Root                                                        ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	CMember(TMap<FString, int32_t>)                    Resolutions                                                 ___ OFFSET(get<T>, {0x18, 80, 0, 0})
+	SMember(FVkModuleVersionRef)                       Root                                                        OFFSET(get<T>, {0x0, 24, 0, 0})
+	CMember(TMap<FString, int32_t>)                    Resolutions                                                 OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkSnapshotSaveRequest
@@ -550,10 +550,10 @@ class FVkSnapshotSaveRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FVkResolvedContent)                        Content                                                     ___ OFFSET(get<T>, {0x0, 104, 0, 0})
-	CMember(TArray<FVkVersionedLinkCode>)              Palette                                                     ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   MapPath                                                     ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           ___ OFFSET(get<T>, {0x88, 32, 0, 0})
+	SMember(FVkResolvedContent)                        Content                                                     OFFSET(get<T>, {0x0, 104, 0, 0})
+	CMember(TArray<FVkVersionedLinkCode>)              Palette                                                     OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   MapPath                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           OFFSET(get<T>, {0x88, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectSnapshot
@@ -564,15 +564,15 @@ class FVkProjectSnapshot : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FString)                                   UniqueID                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   AccountId                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FDateTime)                                 CreatedAt                                                   ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(int32_t)                                   DeltaFileIndex                                              ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	SMember(FVkResolvedContent)                        Content                                                     ___ OFFSET(get<T>, {0x40, 104, 0, 0})
-	CMember(TArray<FVkVersionedLinkCode>)              Palette                                                     ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   MapPath                                                     ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           ___ OFFSET(get<T>, {0xC8, 32, 0, 0})
+	SMember(FString)                                   UniqueID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   AccountId                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FDateTime)                                 CreatedAt                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(int32_t)                                   DeltaFileIndex                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	SMember(FVkResolvedContent)                        Content                                                     OFFSET(get<T>, {0x40, 104, 0, 0})
+	CMember(TArray<FVkVersionedLinkCode>)              Palette                                                     OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   MapPath                                                     OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           OFFSET(get<T>, {0xC8, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkGenerateTestcodeRequest
@@ -583,10 +583,10 @@ class FVkGenerateTestcodeRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FVkResolvedContent)                        Content                                                     ___ OFFSET(get<T>, {0x0, 104, 0, 0})
-	SMember(FString)                                   CommitMessage                                               ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           ___ OFFSET(get<T>, {0x78, 32, 0, 0})
-	SMember(FString)                                   SourceControlBase                                           ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FVkResolvedContent)                        Content                                                     OFFSET(get<T>, {0x0, 104, 0, 0})
+	SMember(FString)                                   CommitMessage                                               OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        MatchmakingConfig                                           OFFSET(get<T>, {0x78, 32, 0, 0})
+	SMember(FString)                                   SourceControlBase                                           OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectSearchResult
@@ -597,12 +597,12 @@ class FVkProjectSearchResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 Created                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FDateTime)                                 Accessed                                                    ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FJsonObjectWrapper)                        SysMeta                                                     ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FString)                                   LinkCode                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 Accessed                                                    OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FJsonObjectWrapper)                        SysMeta                                                     OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FString)                                   LinkCode                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectInfoSlim
@@ -613,11 +613,11 @@ class FVkProjectInfoSlim : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVkTypedId)                                Owner                                                       ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   Title                                                       ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Description                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   RcsProvider                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        SysMeta                                                     ___ OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FVkTypedId)                                Owner                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   RcsProvider                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        SysMeta                                                     OFFSET(get<T>, {0x48, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectSearchResultSlim
@@ -628,11 +628,11 @@ class FVkProjectSearchResultSlim : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 Date                                                        ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FVkProjectInfoSlim)                        Info                                                        ___ OFFSET(get<T>, {0x18, 104, 0, 0})
-	DMember(bool)                                      is_starred                                                  ___ OFFSET(get<bool>, {0x80, 1, 0, 0})
-	DMember(bool)                                      is_new                                                      ___ OFFSET(get<bool>, {0x81, 1, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 Date                                                        OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FVkProjectInfoSlim)                        Info                                                        OFFSET(get<T>, {0x18, 104, 0, 0})
+	DMember(bool)                                      is_starred                                                  OFFSET(get<bool>, {0x80, 1, 0, 0})
+	DMember(bool)                                      is_new                                                      OFFSET(get<bool>, {0x81, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTeamMembershipResult
@@ -643,13 +643,13 @@ class FVkTeamMembershipResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FString, bool>)                       Access                                                      ___ OFFSET(get<T>, {0x10, 80, 0, 0})
-	SMember(FString)                                   Status                                                      ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FString)                                   MembershipId                                                ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FString)                                   TeamId                                                      ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FString)                                   AccountId                                                   ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FDateTime)                                 Updated                                                     ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FString, bool>)                       Access                                                      OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FString)                                   Status                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   MembershipId                                                OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   TeamId                                                      OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FString)                                   AccountId                                                   OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FDateTime)                                 Updated                                                     OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTeamAccessControl
@@ -660,10 +660,10 @@ class FVkTeamAccessControl : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(bool)                                      Admin                                                       ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      Edit                                                        ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      Operate                                                     ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      Publish                                                     ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      Admin                                                       OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      Edit                                                        OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      Operate                                                     OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      Publish                                                     OFFSET(get<bool>, {0x3, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTeamAuthorizedEmailDomain
@@ -674,8 +674,8 @@ class FVkTeamAuthorizedEmailDomain : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Domain                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVkTeamAccessControl)                      Access                                                      ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   Domain                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVkTeamAccessControl)                      Access                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTeamPublicProperties
@@ -686,9 +686,9 @@ class FVkTeamPublicProperties : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Description                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FVkTeamAuthorizedEmailDomain>)      EmailDomains                                                ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FVkTeamAuthorizedEmailDomain>)      EmailDomains                                                OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkTeamDoc
@@ -699,13 +699,13 @@ class FVkTeamDoc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FString)                                   TeamId                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 Created                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FDateTime)                                 Updated                                                     ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FVkTypedId)                                Owner                                                       ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVkTeamPublicProperties)                   PublicProps                                                 ___ OFFSET(get<T>, {0x38, 48, 0, 0})
-	DMember(int32_t)                                   MemberCount                                                 ___ OFFSET(get<int32_t>, {0x68, 4, 0, 0})
-	SMember(FJsonObjectWrapper)                        SysMeta                                                     ___ OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FString)                                   TeamId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 Updated                                                     OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FVkTypedId)                                Owner                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVkTeamPublicProperties)                   PublicProps                                                 OFFSET(get<T>, {0x38, 48, 0, 0})
+	DMember(int32_t)                                   MemberCount                                                 OFFSET(get<int32_t>, {0x68, 4, 0, 0})
+	SMember(FJsonObjectWrapper)                        SysMeta                                                     OFFSET(get<T>, {0x70, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkLaunchData_Link
@@ -716,8 +716,8 @@ class FVkLaunchData_Link : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   LinkCode                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FString)                                   LinkCode                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectPlaytestAccessRequest
@@ -728,8 +728,8 @@ class FVkProjectPlaytestAccessRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FString>)                           Users                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   PlaytestGroupId                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FString>)                           Users                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   PlaytestGroupId                                             OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectAccessControl
@@ -740,11 +740,11 @@ class FVkProjectAccessControl : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 5;
 
 public:
-	DMember(bool)                                      Read                                                        ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      Edit                                                        ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      Operate                                                     ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      Publish                                                     ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      Admin                                                       ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      Read                                                        OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      Edit                                                        OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      Operate                                                     OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      Publish                                                     OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      Admin                                                       OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectPlaytestAccessResult
@@ -755,9 +755,9 @@ class FVkProjectPlaytestAccessResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVkNamedId)                                Owner                                                       ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FString)                                   OwnerType                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TMap<FString, FVkProjectAccessControl>)    Playtesters                                                 ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	SMember(FVkNamedId)                                Owner                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FString)                                   OwnerType                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TMap<FString, FVkProjectAccessControl>)    Playtesters                                                 OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkSnapshotDeltaFiles
@@ -768,8 +768,8 @@ class FVkSnapshotDeltaFiles : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   SnapshotId                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    DeltaFileLinks                                              ___ OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FString)                                   SnapshotId                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    DeltaFileLinks                                              OFFSET(get<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProfileBuildResult_Duration
@@ -780,8 +780,8 @@ class FVkProfileBuildResult_Duration : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FDateTime)                                 Start                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FDateTime)                                 End                                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FDateTime)                                 Start                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FDateTime)                                 End                                                         OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProfileBuildResult_Server
@@ -792,9 +792,9 @@ class FVkProfileBuildResult_Server : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   BuildId                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Platform                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TMap<FString, float>)                      Stat                                                        ___ OFFSET(get<T>, {0x20, 80, 0, 0})
+	SMember(FString)                                   BuildId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Platform                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TMap<FString, float>)                      Stat                                                        OFFSET(get<T>, {0x20, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProfileBuildResult_Client
@@ -805,10 +805,10 @@ class FVkProfileBuildResult_Client : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FString)                                   AccountId                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   BuildId                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Platform                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TMap<FString, float>)                      Stat                                                        ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	SMember(FString)                                   AccountId                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   BuildId                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Platform                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TMap<FString, float>)                      Stat                                                        OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProfileBuildResult
@@ -819,11 +819,11 @@ class FVkProfileBuildResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	DMember(float)                                     Score                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FString)                                   SessionId                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVkProfileBuildResult_Duration)            Duration                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FVkProfileBuildResult_Server)              Server                                                      ___ OFFSET(get<T>, {0x28, 112, 0, 0})
-	CMember(TArray<FVkProfileBuildResult_Client>)      Clients                                                     ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	DMember(float)                                     Score                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FString)                                   SessionId                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVkProfileBuildResult_Duration)            Duration                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVkProfileBuildResult_Server)              Server                                                      OFFSET(get<T>, {0x28, 112, 0, 0})
+	CMember(TArray<FVkProfileBuildResult_Client>)      Clients                                                     OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkPublishedLink
@@ -834,12 +834,12 @@ class FVkPublishedLink : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FString)                                   LinkCode                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   LinkVersion                                                 ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FDateTime)                                 LastPublished                                               ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FString)                                   base                                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   CommitMessage                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FVkProfileBuildResult)                     ProfileResult                                               ___ OFFSET(get<T>, {0x40, 168, 0, 0})
+	SMember(FString)                                   LinkCode                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   LinkVersion                                                 OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	SMember(FDateTime)                                 LastPublished                                               OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FString)                                   base                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   CommitMessage                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FVkProfileBuildResult)                     ProfileResult                                               OFFSET(get<T>, {0x40, 168, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkProjectDoc
@@ -850,13 +850,13 @@ class FVkProjectDoc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDateTime)                                 Created                                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FVkTypedId)                                Author                                                      ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVkTypedId)                                Owner                                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FJsonObjectWrapper)                        meta                                                        ___ OFFSET(get<T>, {0x48, 32, 0, 0})
-	SMember(FJsonObjectWrapper)                        SysMeta                                                     ___ OFFSET(get<T>, {0x68, 32, 0, 0})
-	SMember(FVkPublishedLink)                          LiveLink                                                    ___ OFFSET(get<T>, {0x88, 232, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FVkTypedId)                                Author                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVkTypedId)                                Owner                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FJsonObjectWrapper)                        meta                                                        OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FJsonObjectWrapper)                        SysMeta                                                     OFFSET(get<T>, {0x68, 32, 0, 0})
+	SMember(FVkPublishedLink)                          LiveLink                                                    OFFSET(get<T>, {0x88, 232, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkLinkCodeInfo
@@ -867,12 +867,12 @@ class FVkLinkCodeInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   LinkCode                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(bool)                                      IsActive                                                    ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FString)                                   ProjectID                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   CreatorName                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        MetaData                                                    ___ OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FString)                                   LinkCode                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x14, 1, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   CreatorName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        MetaData                                                    OFFSET(get<T>, {0x38, 32, 0, 0})
 };
 
 /// Struct /Script/VkEngineTypes.VkMetaDataFlags
@@ -883,7 +883,7 @@ class FVkMetaDataFlags : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<FString, FString>)                    _validation_flags                                           ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FString, FString>)                    _validation_flags                                           OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Enum /Script/VkEngineTypes.EValkyrieProjectDescriptorFileVersion

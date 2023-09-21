@@ -16,7 +16,7 @@ class UFacialLiveLinkRemapAsset : public ULiveLinkRetargetAsset
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bExtractBoneTransform                                       ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bExtractCurve                                               ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      bExtractBoneTransform                                       OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bExtractCurve                                               OFFSET(get<bool>, {0x29, 1, 0, 0})
 };
 

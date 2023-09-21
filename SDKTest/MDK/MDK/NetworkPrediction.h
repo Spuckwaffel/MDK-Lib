@@ -16,13 +16,18 @@ class UNetworkPredictionComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      ___ OFFSET(get<T>, {0xA0, 176, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_ServerRPC                                  ___ OFFSET(get<T>, {0x150, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Autonomous                                 ___ OFFSET(get<T>, {0x1A0, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Simulated                                  ___ OFFSET(get<T>, {0x1F0, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Replay                                     ___ OFFSET(get<T>, {0x240, 80, 0, 0})
+	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(get<T>, {0xA0, 176, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_ServerRPC                                  OFFSET(get<T>, {0x150, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Autonomous                                 OFFSET(get<T>, {0x1A0, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Simulated                                  OFFSET(get<T>, {0x1F0, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Replay                                     OFFSET(get<T>, {0x240, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/NetworkPrediction.NetworkPredictionComponent.ServerReceiveClientInput
+	// void ServerReceiveClientInput(FServerReplicationRPCParameter ProxyParameter);                                            // [0x6bdffc4] Net|Native|Event|Protected|NetServer|NetValidate 
 /// Class /Script/NetworkPrediction.NetworkPredictionPhysicsComponent
 /// Size: 0x0120 (0x0000A0 - 0x0001C0)
 class UNetworkPredictionPhysicsComponent : public UActorComponent
@@ -31,9 +36,9 @@ class UNetworkPredictionPhysicsComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      ___ OFFSET(get<T>, {0xA0, 176, 0, 0})
-	CMember(UPrimitiveComponent*)                      UpdatedPrimitive                                            ___ OFFSET(get<T>, {0x150, 8, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy                                            ___ OFFSET(get<T>, {0x160, 80, 0, 0})
+	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(get<T>, {0xA0, 176, 0, 0})
+	CMember(UPrimitiveComponent*)                      UpdatedPrimitive                                            OFFSET(get<T>, {0x150, 8, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy                                            OFFSET(get<T>, {0x160, 80, 0, 0})
 };
 
 /// Class /Script/NetworkPrediction.NetworkPredictionReplicatedManager
@@ -44,7 +49,7 @@ class ANetworkPredictionReplicatedManager : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FSharedPackageMap)                         SharedPackageMap                                            ___ OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FSharedPackageMap)                         SharedPackageMap                                            OFFSET(get<T>, {0x290, 16, 0, 0})
 };
 
 /// Class /Script/NetworkPrediction.NetworkPredictionSettingsObject
@@ -55,8 +60,8 @@ class UNetworkPredictionSettingsObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FNetworkPredictionSettings)                Settings                                                    ___ OFFSET(get<T>, {0x28, 48, 0, 0})
-	CMember(TArray<FNetworkPredictionDevHUD>)          DevHUDs                                                     ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FNetworkPredictionSettings)                Settings                                                    OFFSET(get<T>, {0x28, 48, 0, 0})
+	CMember(TArray<FNetworkPredictionDevHUD>)          DevHUDs                                                     OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Class /Script/NetworkPrediction.NetworkPredictionWorldManager
@@ -67,7 +72,7 @@ class UNetworkPredictionWorldManager : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	CMember(ANetworkPredictionReplicatedManager*)      ReplicatedManager                                           ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(ANetworkPredictionReplicatedManager*)      ReplicatedManager                                           OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionProxy
@@ -78,7 +83,7 @@ class FNetworkPredictionProxy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(UNetworkPredictionWorldManager*)           WorldManager                                                ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UNetworkPredictionWorldManager*)           WorldManager                                                OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.SharedPackageMapItem
@@ -89,7 +94,7 @@ class FSharedPackageMapItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TWeakObjectPtr<UObject*>)                  SoftPtr                                                     ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SoftPtr                                                     OFFSET(get<T>, {0x0, 32, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.SharedPackageMap
@@ -100,7 +105,7 @@ class FSharedPackageMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FSharedPackageMapItem>)             Items                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FSharedPackageMapItem>)             Items                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.ReplicationProxy
@@ -131,17 +136,17 @@ class FNetworkPredictionSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(ENetworkPredictionTickingPolicy)           PreferredTickingPolicy                                      ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(UClass*)                                   ReplicatedManagerClassOverride                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   FixedTickFrameRate                                          ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bForceEngineFixTickForcePhysics                             ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	CMember(ENetworkLOD)                               SimulatedProxyNetworkLOD                                    ___ OFFSET(get<T>, {0x15, 1, 0, 0})
-	DMember(int32_t)                                   FixedTickInterpolationBufferedMS                            ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   IndependentTickInterpolationBufferedMS                      ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	DMember(int32_t)                                   IndependentTickInterpolationMaxBufferedMS                   ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   FixedTickInputSendCount                                     ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(int32_t)                                   IndependentTickInputSendCount                               ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   MaximumRemoteInputFaultLimit                                ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	CMember(ENetworkPredictionTickingPolicy)           PreferredTickingPolicy                                      OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(UClass*)                                   ReplicatedManagerClassOverride                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   FixedTickFrameRate                                          OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bForceEngineFixTickForcePhysics                             OFFSET(get<bool>, {0x14, 1, 0, 0})
+	CMember(ENetworkLOD)                               SimulatedProxyNetworkLOD                                    OFFSET(get<T>, {0x15, 1, 0, 0})
+	DMember(int32_t)                                   FixedTickInterpolationBufferedMS                            OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   IndependentTickInterpolationBufferedMS                      OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	DMember(int32_t)                                   IndependentTickInterpolationMaxBufferedMS                   OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   FixedTickInputSendCount                                     OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(int32_t)                                   IndependentTickInputSendCount                               OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   MaximumRemoteInputFaultLimit                                OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionDevHUDItem
@@ -152,11 +157,11 @@ class FNetworkPredictionDevHUDItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   DisplayName                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ExecCommand                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bAutoBack                                                   ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bRequirePIE                                                 ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bRequireNotPIE                                              ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
+	SMember(FString)                                   DisplayName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ExecCommand                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bAutoBack                                                   OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bRequirePIE                                                 OFFSET(get<bool>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bRequireNotPIE                                              OFFSET(get<bool>, {0x22, 1, 0, 0})
 };
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionDevHUD
@@ -167,10 +172,10 @@ class FNetworkPredictionDevHUD : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   HUDName                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FNetworkPredictionDevHUDItem>)      Items                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bRequirePIE                                                 ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bRequireNotPIE                                              ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
+	SMember(FString)                                   HUDName                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FNetworkPredictionDevHUDItem>)      Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bRequirePIE                                                 OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bRequireNotPIE                                              OFFSET(get<bool>, {0x21, 1, 0, 0})
 };
 
 /// Enum /Script/NetworkPrediction.ENetworkPredictionTickingPolicy

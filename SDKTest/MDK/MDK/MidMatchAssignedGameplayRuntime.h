@@ -20,16 +20,25 @@ class UFortGameStateComponent_AssignedObjective : public UFortGameStateComponent
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FScalableFloat)                            IdealNumSquadsPerObjective                                  ___ OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FScalableFloat)                            bAllowUnopposedSquads                                       ___ OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinPairedSquadDistForUnopposed                              ___ OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FScalableFloat)                            UnopposedSquad_FakeSquadMaxSafeZonePct                      ___ OFFSET(get<T>, {0x120, 40, 0, 0})
-	SMember(FScalableFloat)                            UnopposedSquad_FakeSquadMinDistToSquad                      ___ OFFSET(get<T>, {0x148, 40, 0, 0})
-	SMember(FScalableFloat)                            SpawnObjectivesInsideSafeZonePct                            ___ OFFSET(get<T>, {0x170, 40, 0, 0})
-	CMember(TWeakObjectPtr<UEnvQuery*>)                AssignedObjectiveLocationEnvQuery                           ___ OFFSET(get<T>, {0x198, 32, 0, 0})
-	CMember(TArray<FFortAssignedObjectiveData>)        AssignedObjectives                                          ___ OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	SMember(FScalableFloat)                            IdealNumSquadsPerObjective                                  OFFSET(get<T>, {0xA8, 40, 0, 0})
+	SMember(FScalableFloat)                            bAllowUnopposedSquads                                       OFFSET(get<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinPairedSquadDistForUnopposed                              OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            UnopposedSquad_FakeSquadMaxSafeZonePct                      OFFSET(get<T>, {0x120, 40, 0, 0})
+	SMember(FScalableFloat)                            UnopposedSquad_FakeSquadMinDistToSquad                      OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FScalableFloat)                            SpawnObjectivesInsideSafeZonePct                            OFFSET(get<T>, {0x170, 40, 0, 0})
+	CMember(TWeakObjectPtr<UEnvQuery*>)                AssignedObjectiveLocationEnvQuery                           OFFSET(get<T>, {0x198, 32, 0, 0})
+	CMember(TArray<FFortAssignedObjectiveData>)        AssignedObjectives                                          OFFSET(get<T>, {0x1B8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MidMatchAssignedGameplayRuntime.FortGameStateComponent_AssignedObjective.StartAssignedObjectives
+	// void StartAssignedObjectives();                                                                                          // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/MidMatchAssignedGameplayRuntime.FortGameStateComponent_AssignedObjective.OnAssignedObjectiveReady
+	// void OnAssignedObjectiveReady(FFortAssignedObjectiveData& ObjectiveData);                                                // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/MidMatchAssignedGameplayRuntime.FortGameStateComponent_AssignedObjective.CalculateSquadAvgLocation
+	// FVector CalculateSquadAvgLocation(char SquadId, UObject* WorldContextObject);                                            // [0x9c2f4e8] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/MidMatchAssignedGameplayRuntime.FortQueryContext_SpawnedObjectiveLocations
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortQueryContext_SpawnedObjectiveLocations : public UEnvQueryContext
@@ -58,7 +67,7 @@ class UFortQueryTest_ClosestPlayersToObjectiveDeltaDistance : public UEnvQueryTe
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	DMember(bool)                                      bUseDistance2D                                              ___ OFFSET(get<bool>, {0x1F8, 1, 0, 0})
+	DMember(bool)                                      bUseDistance2D                                              OFFSET(get<bool>, {0x1F8, 1, 0, 0})
 };
 
 /// Struct /Script/MidMatchAssignedGameplayRuntime.FortAssignedObjectiveSquadData
@@ -69,8 +78,8 @@ class FFortAssignedObjectiveSquadData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(char)                                      SquadId                                                     ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   CachedSquadAvgLocation                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(char)                                      SquadId                                                     OFFSET(get<char>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   CachedSquadAvgLocation                                      OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/MidMatchAssignedGameplayRuntime.FortAssignedObjectiveData
@@ -81,7 +90,7 @@ class FFortAssignedObjectiveData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FFortAssignedObjectiveSquadData>)   AssignedSquadDataArray                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector)                                   ObjectiveLocation                                           ___ OFFSET(get<T>, {0x10, 24, 0, 0})
+	CMember(TArray<FFortAssignedObjectiveSquadData>)   AssignedSquadDataArray                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector)                                   ObjectiveLocation                                           OFFSET(get<T>, {0x10, 24, 0, 0})
 };
 

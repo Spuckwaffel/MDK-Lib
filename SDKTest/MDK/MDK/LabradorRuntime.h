@@ -19,27 +19,27 @@ class UFortAIFaunaAnimInstance_Labrador : public UFortAIFaunaAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 1808;
 
 public:
-	DMember(bool)                                      bHighVelocity                                               ___ OFFSET(get<bool>, {0x6D8, 1, 0, 0})
-	DMember(bool)                                      bIsInterruptible                                            ___ OFFSET(get<bool>, {0x6D9, 1, 0, 0})
-	DMember(bool)                                      bLocoToIdle                                                 ___ OFFSET(get<bool>, {0x6DA, 1, 0, 0})
-	DMember(bool)                                      bIdleToLoco                                                 ___ OFFSET(get<bool>, {0x6DB, 1, 0, 0})
-	DMember(bool)                                      bJumpStartToJumpLoop                                        ___ OFFSET(get<bool>, {0x6DC, 1, 0, 0})
-	DMember(bool)                                      bJumpLandToMovement                                         ___ OFFSET(get<bool>, {0x6DD, 1, 0, 0})
-	DMember(bool)                                      bIsRunning                                                  ___ OFFSET(get<bool>, {0x6DE, 1, 0, 0})
-	DMember(bool)                                      bIdleToFalling                                              ___ OFFSET(get<bool>, {0x6DF, 1, 0, 0})
-	DMember(bool)                                      bToppledOnGround                                            ___ OFFSET(get<bool>, {0x6E0, 1, 0, 0})
-	DMember(bool)                                      bTransitionToLand                                           ___ OFFSET(get<bool>, {0x6E1, 1, 0, 0})
-	DMember(float)                                     TargetDistance                                              ___ OFFSET(get<float>, {0x6E4, 4, 0, 0})
-	DMember(bool)                                      bTargetIsClose                                              ___ OFFSET(get<bool>, {0x6E8, 1, 0, 0})
-	DMember(bool)                                      bIsToppled                                                  ___ OFFSET(get<bool>, {0x6E9, 1, 0, 0})
-	DMember(bool)                                      bIsLeaking                                                  ___ OFFSET(get<bool>, {0x6EA, 1, 0, 0})
-	DMember(float)                                     MinHighVelocityMagnitude                                    ___ OFFSET(get<float>, {0x6EC, 4, 0, 0})
-	DMember(float)                                     MaxInterruptibleCurveValue                                  ___ OFFSET(get<float>, {0x6F0, 4, 0, 0})
-	DMember(float)                                     LocoIdleTransitionThreshold                                 ___ OFFSET(get<float>, {0x6F4, 4, 0, 0})
-	DMember(float)                                     RunSpeedThreshold                                           ___ OFFSET(get<float>, {0x6F8, 4, 0, 0})
-	DMember(float)                                     JumpLandToMovementInterruptibleThreshold                    ___ OFFSET(get<float>, {0x6FC, 4, 0, 0})
-	DMember(float)                                     MinTargetIsCloseDistance                                    ___ OFFSET(get<float>, {0x700, 4, 0, 0})
-	SMember(FName)                                     CurveName_Interruptible                                     ___ OFFSET(get<T>, {0x704, 4, 0, 0})
+	DMember(bool)                                      bHighVelocity                                               OFFSET(get<bool>, {0x6D8, 1, 0, 0})
+	DMember(bool)                                      bIsInterruptible                                            OFFSET(get<bool>, {0x6D9, 1, 0, 0})
+	DMember(bool)                                      bLocoToIdle                                                 OFFSET(get<bool>, {0x6DA, 1, 0, 0})
+	DMember(bool)                                      bIdleToLoco                                                 OFFSET(get<bool>, {0x6DB, 1, 0, 0})
+	DMember(bool)                                      bJumpStartToJumpLoop                                        OFFSET(get<bool>, {0x6DC, 1, 0, 0})
+	DMember(bool)                                      bJumpLandToMovement                                         OFFSET(get<bool>, {0x6DD, 1, 0, 0})
+	DMember(bool)                                      bIsRunning                                                  OFFSET(get<bool>, {0x6DE, 1, 0, 0})
+	DMember(bool)                                      bIdleToFalling                                              OFFSET(get<bool>, {0x6DF, 1, 0, 0})
+	DMember(bool)                                      bToppledOnGround                                            OFFSET(get<bool>, {0x6E0, 1, 0, 0})
+	DMember(bool)                                      bTransitionToLand                                           OFFSET(get<bool>, {0x6E1, 1, 0, 0})
+	DMember(float)                                     TargetDistance                                              OFFSET(get<float>, {0x6E4, 4, 0, 0})
+	DMember(bool)                                      bTargetIsClose                                              OFFSET(get<bool>, {0x6E8, 1, 0, 0})
+	DMember(bool)                                      bIsToppled                                                  OFFSET(get<bool>, {0x6E9, 1, 0, 0})
+	DMember(bool)                                      bIsLeaking                                                  OFFSET(get<bool>, {0x6EA, 1, 0, 0})
+	DMember(float)                                     MinHighVelocityMagnitude                                    OFFSET(get<float>, {0x6EC, 4, 0, 0})
+	DMember(float)                                     MaxInterruptibleCurveValue                                  OFFSET(get<float>, {0x6F0, 4, 0, 0})
+	DMember(float)                                     LocoIdleTransitionThreshold                                 OFFSET(get<float>, {0x6F4, 4, 0, 0})
+	DMember(float)                                     RunSpeedThreshold                                           OFFSET(get<float>, {0x6F8, 4, 0, 0})
+	DMember(float)                                     JumpLandToMovementInterruptibleThreshold                    OFFSET(get<float>, {0x6FC, 4, 0, 0})
+	DMember(float)                                     MinTargetIsCloseDistance                                    OFFSET(get<float>, {0x700, 4, 0, 0})
+	SMember(FName)                                     CurveName_Interruptible                                     OFFSET(get<T>, {0x704, 4, 0, 0})
 };
 
 /// Class /Script/LabradorRuntime.FortLabradorComponent_Telemetry
@@ -50,12 +50,21 @@ class UFortLabradorComponent_Telemetry : public UFortAIComponent_Telemetry
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	DMember(bool)                                      bWasAwake                                                   ___ OFFSET(get<bool>, {0x108, 1, 0, 0})
-	SMember(FString)                                   InstigatorAwakeNetIDString                                  ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	CMember(ELabradorDespawnReason)                    DespawnReason                                               ___ OFFSET(get<T>, {0x120, 1, 0, 0})
-	DMember(float)                                     DamageReceivedFromPlayers                                   ___ OFFSET(get<float>, {0x124, 4, 0, 0})
+	DMember(bool)                                      bWasAwake                                                   OFFSET(get<bool>, {0x108, 1, 0, 0})
+	SMember(FString)                                   InstigatorAwakeNetIDString                                  OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(ELabradorDespawnReason)                    DespawnReason                                               OFFSET(get<T>, {0x120, 1, 0, 0})
+	DMember(float)                                     DamageReceivedFromPlayers                                   OFFSET(get<float>, {0x124, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/LabradorRuntime.FortLabradorComponent_Telemetry.OnWakeUp
+	// void OnWakeUp(AActor* GoalActor);                                                                                        // [0x9a23164] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LabradorRuntime.FortLabradorComponent_Telemetry.OnTeleport
+	// void OnTeleport();                                                                                                       // [0x9a2314c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LabradorRuntime.FortLabradorComponent_Telemetry.OnDamaged
+	// void OnDamaged(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x9a22bc8] Final|Native|Private|HasDefaults 
 /// Enum /Script/LabradorRuntime.ELabradorDespawnReason
 /// Size: 0x07
 enum ELabradorDespawnReason : uint8_t

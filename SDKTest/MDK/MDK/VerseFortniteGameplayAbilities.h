@@ -30,10 +30,21 @@ class UFortGameplayAbility_PlayAnim : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2872;
 
 public:
-	CMember(UAnimMontage*)                             MontageToPlay                                               ___ OFFSET(get<T>, {0xB28, 8, 0, 0})
-	DMember(float)                                     PlayRate                                                    ___ OFFSET(get<float>, {0xB30, 4, 0, 0})
+	CMember(UAnimMontage*)                             MontageToPlay                                               OFFSET(get<T>, {0xB28, 8, 0, 0})
+	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0xB30, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnim.OnInterrupted
+	// void OnInterrupted();                                                                                                    // [0x98f8860] Final|Native|Private 
+	// Function /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnim.OnCompleted
+	// void OnCompleted();                                                                                                      // [0x98f8860] Final|Native|Private 
+	// Function /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnim.OnCancelled
+	// void OnCancelled();                                                                                                      // [0x98f8860] Final|Native|Private 
+	// Function /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnim.OnBlendOut
+	// void OnBlendOut();                                                                                                       // [0x2d79908] Final|Native|Private 
 /// Class /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnimAndApplyEffect
 /// Size: 0x0018 (0x000B38 - 0x000B50)
 class UFortGameplayAbility_PlayAnimAndApplyEffect : public UFortGameplayAbility_PlayAnim
@@ -42,9 +53,9 @@ class UFortGameplayAbility_PlayAnimAndApplyEffect : public UFortGameplayAbility_
 	static inline constexpr uint64_t __MDKClassSize = 2896;
 
 public:
-	DMember(bool)                                      bWaitForAnimNotify                                          ___ OFFSET(get<bool>, {0xB38, 1, 0, 0})
-	CMember(UClass*)                                   EffectToApply                                               ___ OFFSET(get<T>, {0xB40, 8, 0, 0})
-	CMember(UTargetingPreset*)                         TargetingPreset                                             ___ OFFSET(get<T>, {0xB48, 8, 0, 0})
+	DMember(bool)                                      bWaitForAnimNotify                                          OFFSET(get<bool>, {0xB38, 1, 0, 0})
+	CMember(UClass*)                                   EffectToApply                                               OFFSET(get<T>, {0xB40, 8, 0, 0})
+	CMember(UTargetingPreset*)                         TargetingPreset                                             OFFSET(get<T>, {0xB48, 8, 0, 0})
 };
 
 /// Class /Script/VerseFortniteGameplayAbilities.VerseFortniteAbilityComponentBase

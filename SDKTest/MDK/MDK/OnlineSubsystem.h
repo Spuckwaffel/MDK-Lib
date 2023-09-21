@@ -15,8 +15,8 @@ class UNamedInterfaces : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FNamedInterface>)                   NamedInterfaces                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FNamedInterfaceDef>)                NamedInterfaceDefs                                          ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FNamedInterface>)                   NamedInterfaces                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FNamedInterfaceDef>)                NamedInterfaceDefs                                          OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/OnlineSubsystem.TurnBasedMatchInterface
@@ -37,8 +37,8 @@ class FNamedInterface : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     InterfaceName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UObject*)                                  InterfaceObject                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     InterfaceName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UObject*)                                  InterfaceObject                                             OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterfaceDef
@@ -49,8 +49,8 @@ class FNamedInterfaceDef : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     InterfaceName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   InterfaceClassName                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     InterfaceName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   InterfaceClassName                                          OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/OnlineSubsystem.EInAppPurchaseState

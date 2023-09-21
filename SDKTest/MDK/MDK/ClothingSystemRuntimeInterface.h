@@ -15,8 +15,8 @@ class UClothingAssetBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   ImportedFilePath                                            ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FGuid)                                     AssetGuid                                                   ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ImportedFilePath                                            OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FGuid)                                     AssetGuid                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/ClothingSystemRuntimeInterface.ClothConfigBase
@@ -67,9 +67,42 @@ class UClothingSimulationInteractor : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TMap<FName, UClothingInteractor*>)         ClothingInteractors                                         ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FName, UClothingInteractor*>)         ClothingInteractors                                         OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetNumSubsteps
+	// void SetNumSubsteps(int32_t NumSubsteps);                                                                                // [0x1832de0] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetNumIterations
+	// void SetNumIterations(int32_t NumIterations);                                                                            // [0x1832d5c] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetMaxNumIterations
+	// void SetMaxNumIterations(int32_t MaxNumIterations);                                                                      // [0x5253a84] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetAnimDriveSpringStiffness
+	// void SetAnimDriveSpringStiffness(float InStiffness);                                                                     // [0x5253a00] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.PhysicsAssetUpdated
+	// void PhysicsAssetUpdated();                                                                                              // [0x19b1658] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime
+	// float GetSimulationTime();                                                                                               // [0x52539e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps
+	// int32_t GetNumSubsteps();                                                                                                // [0x52539d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles
+	// int32_t GetNumKinematicParticles();                                                                                      // [0x52539bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations
+	// int32_t GetNumIterations();                                                                                              // [0x52539a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles
+	// int32_t GetNumDynamicParticles();                                                                                        // [0x525398c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths
+	// int32_t GetNumCloths();                                                                                                  // [0x5253978] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetClothingInteractor
+	// UClothingInteractor* GetClothingInteractor(FString ClothingAssetName);                                                   // [0x183363c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.EnableGravityOverride
+	// void EnableGravityOverride(FVector& InVector);                                                                           // [0x525388c] RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.DisableGravityOverride
+	// void DisableGravityOverride();                                                                                           // [0x1fd6cc8] RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated
+	// void ClothConfigUpdated();                                                                                               // [0xd30dac] RequiredAPI|Native|Public|BlueprintCallable 
 /// Class /Script/ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
 /// Size: 0x00B8 (0x000028 - 0x0000E0)
 class UClothPhysicalMeshDataBase_Legacy : public UObject
@@ -78,14 +111,14 @@ class UClothPhysicalMeshDataBase_Legacy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(TArray<FVector3f>)                         Vertices                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FVector3f>)                         Normals                                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<uint32_t>)                          Indices                                                     ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<float>)                             InverseMasses                                               ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FClothVertBoneData>)                BoneData                                                    ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(int32_t)                                   NumFixedVerts                                               ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(int32_t)                                   MaxBoneWeights                                              ___ OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
-	CMember(TArray<uint32_t>)                          SelfCollisionIndices                                        ___ OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FVector3f>)                         Vertices                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FVector3f>)                         Normals                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<uint32_t>)                          Indices                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<float>)                             InverseMasses                                               OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FClothVertBoneData>)                BoneData                                                    OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(int32_t)                                   NumFixedVerts                                               OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	DMember(int32_t)                                   MaxBoneWeights                                              OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
+	CMember(TArray<uint32_t>)                          SelfCollisionIndices                                        OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Sphere
@@ -96,9 +129,9 @@ class FClothCollisionPrim_Sphere : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int32_t)                                   BoneIndex                                                   ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   LocalPosition                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	DMember(int32_t)                                   BoneIndex                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FVector)                                   LocalPosition                                               OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_SphereConnection
@@ -109,7 +142,7 @@ class FClothCollisionPrim_SphereConnection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   SphereIndices                                               ___ OFFSET(get<int32_t>, {0x0, 8, 0, 0})
+	DMember(int32_t)                                   SphereIndices                                               OFFSET(get<int32_t>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_ConvexFace
@@ -120,8 +153,8 @@ class FClothCollisionPrim_ConvexFace : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FPlane)                                    Plane                                                       ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(TArray<int32_t>)                           Indices                                                     ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FPlane)                                    Plane                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TArray<int32_t>)                           Indices                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Convex
@@ -132,9 +165,9 @@ class FClothCollisionPrim_Convex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TArray<FClothCollisionPrim_ConvexFace>)    Faces                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FVector>)                           SurfacePoints                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   BoneIndex                                                   ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	CMember(TArray<FClothCollisionPrim_ConvexFace>)    Faces                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FVector>)                           SurfacePoints                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   BoneIndex                                                   OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Box
@@ -145,10 +178,10 @@ class FClothCollisionPrim_Box : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   LocalPosition                                               ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     LocalRotation                                               ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   HalfExtents                                                 ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	DMember(int32_t)                                   BoneIndex                                                   ___ OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	SMember(FVector)                                   LocalPosition                                               OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     LocalRotation                                               OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   HalfExtents                                                 OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(int32_t)                                   BoneIndex                                                   OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothVertBoneData
@@ -159,9 +192,9 @@ class FClothVertBoneData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 76;
 
 public:
-	DMember(int32_t)                                   NumInfluences                                               ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(uint16_t)                                  BoneIndices                                                 ___ OFFSET(get<uint16_t>, {0x4, 24, 0, 0})
-	DMember(float)                                     BoneWeights                                                 ___ OFFSET(get<float>, {0x1C, 48, 0, 0})
+	DMember(int32_t)                                   NumInfluences                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(uint16_t)                                  BoneIndices                                                 OFFSET(get<uint16_t>, {0x4, 24, 0, 0})
+	DMember(float)                                     BoneWeights                                                 OFFSET(get<float>, {0x1C, 48, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionData
@@ -172,9 +205,9 @@ class FClothCollisionData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FClothCollisionPrim_Sphere>)        Spheres                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FClothCollisionPrim_SphereConnection>) SphereConnections                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FClothCollisionPrim_Convex>)        Convexes                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FClothCollisionPrim_Box>)           Boxes                                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FClothCollisionPrim_Sphere>)        Spheres                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FClothCollisionPrim_SphereConnection>) SphereConnections                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FClothCollisionPrim_Convex>)        Convexes                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FClothCollisionPrim_Box>)           Boxes                                                       OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 

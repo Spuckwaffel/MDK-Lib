@@ -18,15 +18,30 @@ class UFortGameFrameworkComponent_EventMode : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	CMember(TWeakObjectPtr<UFortWeaponItemDefinition*>) ActivatorAsset                                             ___ OFFSET(get<T>, {0x100, 32, 0, 0})
-	CMember(TArray<FUIExtension>)                      UIExtensions                                                ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        TaggedUIExtensions                                          ___ OFFSET(get<T>, {0x130, 80, 0, 0})
-	CMember(TArray<FEventModeFocusActor>)              FocusActors                                                 ___ OFFSET(get<T>, {0x180, 16, 0, 0})
-	CMember(UInputComponent*)                          InputComponent                                              ___ OFFSET(get<T>, {0x198, 8, 0, 0})
-	CMember(TArray<FEventModeWidgetCachedData>)        CachedWidgetData                                            ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   CurrentlyFocusedActor                                       ___ OFFSET(get<T>, {0x1B0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UFortWeaponItemDefinition*>) ActivatorAsset                                             OFFSET(get<T>, {0x100, 32, 0, 0})
+	CMember(TArray<FUIExtension>)                      UIExtensions                                                OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        TaggedUIExtensions                                          OFFSET(get<T>, {0x130, 80, 0, 0})
+	CMember(TArray<FEventModeFocusActor>)              FocusActors                                                 OFFSET(get<T>, {0x180, 16, 0, 0})
+	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x198, 8, 0, 0})
+	CMember(TArray<FEventModeWidgetCachedData>)        CachedWidgetData                                            OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   CurrentlyFocusedActor                                       OFFSET(get<T>, {0x1B0, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.OnPlayerPawnPossessed
+	// void OnPlayerPawnPossessed(APawn* PossessedPawn);                                                                        // [0x56ba1a4] Final|Native|Private 
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.OnExitVehicle
+	// void OnExitVehicle();                                                                                                    // [0x9b7b97c] Final|Native|Private 
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.OnEnterVehicle
+	// void OnEnterVehicle();                                                                                                   // [0x9b7b968] Final|Native|Private 
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.GetIsFocusing
+	// bool GetIsFocusing();                                                                                                    // [0x9b7b950] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.GetIsFocusAvailable
+	// bool GetIsFocusAvailable();                                                                                              // [0x9b7b938] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.GetIsEventModeActive
+	// bool GetIsEventModeActive();                                                                                             // [0x9b7b920] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/EventModeRuntime.FortWeapon_EventMode
 /// Size: 0x0000 (0x0011F8 - 0x0011F8)
 class AFortWeapon_EventMode : public AFortWeapon
@@ -45,10 +60,10 @@ class FEventModeFocusActor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TWeakObjectPtr<AActor*>)                   Target                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(float)                                     Distance                                                    ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Offset                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	DMember(float)                                     FOV                                                         ___ OFFSET(get<float>, {0x40, 4, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(float)                                     FOV                                                         OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/EventModeRuntime.EventModeWidgetCachedData
@@ -59,8 +74,8 @@ class FEventModeWidgetCachedData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	CMember(EUIExtensionSlot)                          Slot                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(TWeakObjectPtr<UUserWidget*>)              Widget                                                      ___ OFFSET(get<T>, {0x4, 8, 0, 0})
+	CMember(EUIExtensionSlot)                          Slot                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(TWeakObjectPtr<UUserWidget*>)              Widget                                                      OFFSET(get<T>, {0x4, 8, 0, 0})
 };
 
 /// Enum /Script/EventModeRuntime.EFortEventModeEmoteToPlay

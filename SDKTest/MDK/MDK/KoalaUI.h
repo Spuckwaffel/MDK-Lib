@@ -21,7 +21,7 @@ class UFortGameSettingRegistryExtension_Koala : public UFortGameSettingRegistryE
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FFortSettingNameExtensions)                SettingExtensions                                           ___ OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FFortSettingNameExtensions)                SettingExtensions                                           OFFSET(get<T>, {0x30, 24, 0, 0})
 };
 
 /// Class /Script/KoalaUI.FortSidebarPanelKoala
@@ -32,11 +32,16 @@ class UFortSidebarPanelKoala : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1056;
 
 public:
-	CMember(UCommonButtonBase*)                        Button_KoalaDummy                                           ___ OFFSET(get<T>, {0x400, 8, 0, 0})
-	CMember(UFortLazyImage*)                           QrCodeImage                                                 ___ OFFSET(get<T>, {0x408, 8, 0, 0})
-	SMember(FString)                                   QRCodeURL                                                   ___ OFFSET(get<T>, {0x410, 16, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_KoalaDummy                                           OFFSET(get<T>, {0x400, 8, 0, 0})
+	CMember(UFortLazyImage*)                           QrCodeImage                                                 OFFSET(get<T>, {0x408, 8, 0, 0})
+	SMember(FString)                                   QRCodeURL                                                   OFFSET(get<T>, {0x410, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/KoalaUI.FortSidebarPanelKoala.OnConnectionChanged
+	// void OnConnectionChanged(bool bConnected);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 /// Class /Script/KoalaUI.FortUIGameFeatureAction_AttemptKoalaModal
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UFortUIGameFeatureAction_AttemptKoalaModal : public UFortUIGameFeatureAction_PostFrontendFlowActions
@@ -45,7 +50,7 @@ class UFortUIGameFeatureAction_AttemptKoalaModal : public UFortUIGameFeatureActi
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   KoalaGraphicsModalClass                                     ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   KoalaGraphicsModalClass                                     OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/KoalaUI.KoalaGraphicsModal
@@ -56,8 +61,8 @@ class UKoalaGraphicsModal : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1040;
 
 public:
-	CMember(UCommonButtonBase*)                        Button_KeepEnabled                                          ___ OFFSET(get<T>, {0x400, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Disable                                              ___ OFFSET(get<T>, {0x408, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_KeepEnabled                                          OFFSET(get<T>, {0x400, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Disable                                              OFFSET(get<T>, {0x408, 8, 0, 0})
 };
 
 /// Class /Script/KoalaUI.KoalaHUDWidget
@@ -68,23 +73,58 @@ class UKoalaHUDWidget : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	DMember(float)                                     ClipDebounceTime                                            ___ OFFSET(get<float>, {0x3F0, 4, 0, 0})
-	DMember(float)                                     PlayerKilledPlayerReminderTime                              ___ OFFSET(get<float>, {0x3F4, 4, 0, 0})
-	DMember(float)                                     MatchEndedReminderTime                                      ___ OFFSET(get<float>, {0x3F8, 4, 0, 0})
-	DMember(float)                                     ClipReminderCooldownTime                                    ___ OFFSET(get<float>, {0x3FC, 4, 0, 0})
-	DMember(float)                                     EliminationClipReminderDelayTime                            ___ OFFSET(get<float>, {0x400, 4, 0, 0})
-	CMember(USoundSubmix*)                             ClipAudioSubmix                                             ___ OFFSET(get<T>, {0x408, 8, 0, 0})
-	CMember(UCommonActionWidget*)                      ClipActionWidget                                            ___ OFFSET(get<T>, {0x410, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       ClipObjectInputAction                                       ___ OFFSET(get<T>, {0x418, 16, 0, 0})
-	CMember(TMap<int32_t, FKoalaClipInfo>)             ClipTracker                                                 ___ OFFSET(get<T>, {0x430, 80, 0, 0})
-	DMember(int32_t)                                   LastClipID                                                  ___ OFFSET(get<int32_t>, {0x488, 4, 0, 0})
-	CMember(EKoalaMockClipMode)                        MockClipMode                                                ___ OFFSET(get<T>, {0x4A2, 1, 0, 0})
-	DMember(int32_t)                                   MockClipUploadShortTime                                     ___ OFFSET(get<int32_t>, {0x4A4, 4, 0, 0})
-	DMember(int32_t)                                   MockClipUploadLongTime                                      ___ OFFSET(get<int32_t>, {0x4A8, 4, 0, 0})
-	DMember(int32_t)                                   MockClipCreateShortTime                                     ___ OFFSET(get<int32_t>, {0x4AC, 4, 0, 0})
-	DMember(int32_t)                                   MockClipCreateLongTime                                      ___ OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
+	DMember(float)                                     ClipDebounceTime                                            OFFSET(get<float>, {0x3F0, 4, 0, 0})
+	DMember(float)                                     PlayerKilledPlayerReminderTime                              OFFSET(get<float>, {0x3F4, 4, 0, 0})
+	DMember(float)                                     MatchEndedReminderTime                                      OFFSET(get<float>, {0x3F8, 4, 0, 0})
+	DMember(float)                                     ClipReminderCooldownTime                                    OFFSET(get<float>, {0x3FC, 4, 0, 0})
+	DMember(float)                                     EliminationClipReminderDelayTime                            OFFSET(get<float>, {0x400, 4, 0, 0})
+	CMember(USoundSubmix*)                             ClipAudioSubmix                                             OFFSET(get<T>, {0x408, 8, 0, 0})
+	CMember(UCommonActionWidget*)                      ClipActionWidget                                            OFFSET(get<T>, {0x410, 8, 0, 0})
+	SMember(FDataTableRowHandle)                       ClipObjectInputAction                                       OFFSET(get<T>, {0x418, 16, 0, 0})
+	CMember(TMap<int32_t, FKoalaClipInfo>)             ClipTracker                                                 OFFSET(get<T>, {0x430, 80, 0, 0})
+	DMember(int32_t)                                   LastClipID                                                  OFFSET(get<int32_t>, {0x488, 4, 0, 0})
+	CMember(EKoalaMockClipMode)                        MockClipMode                                                OFFSET(get<T>, {0x4A2, 1, 0, 0})
+	DMember(int32_t)                                   MockClipUploadShortTime                                     OFFSET(get<int32_t>, {0x4A4, 4, 0, 0})
+	DMember(int32_t)                                   MockClipUploadLongTime                                      OFFSET(get<int32_t>, {0x4A8, 4, 0, 0})
+	DMember(int32_t)                                   MockClipCreateShortTime                                     OFFSET(get<int32_t>, {0x4AC, 4, 0, 0})
+	DMember(int32_t)                                   MockClipCreateLongTime                                      OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/KoalaUI.KoalaHUDWidget.UnregisterClipButtonInput
+	// void UnregisterClipButtonInput();                                                                                        // [0x9bc6838] Final|Native|Private 
+	// Function /Script/KoalaUI.KoalaHUDWidget.RegisterClipButtonInput
+	// void RegisterClipButtonInput();                                                                                          // [0x9bc6824] Final|Native|Private 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnTouchAreaMouseDown
+	// void OnTouchAreaMouseDown();                                                                                             // [0x9bc6810] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnReminderTimerStarted
+	// void OnReminderTimerStarted(float Time);                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnReminderEnded
+	// void OnReminderEnded();                                                                                                  // [0x9bc67f8] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnRecordingStatusChanged
+	// void OnRecordingStatusChanged(EKoalaRecording InRecordingStatus);                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnInputProgress
+	// void OnInputProgress(float Progress);                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnInputComplete
+	// void OnInputComplete();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnConnectionChanged
+	// void OnConnectionChanged(EKoalaConnectionStatus InStatus);                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnClipStatusChanged
+	// void OnClipStatusChanged(int32_t InClipID, EKoalaClipStatus InClipStatus, float InUploadProgress);                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.OnAvailabilityChanged
+	// void OnAvailabilityChanged(EKoalaAvailability Availability);                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KoalaUI.KoalaHUDWidget.HandlePlayerPawnEmoteStopped
+	// void HandlePlayerPawnEmoteStopped(UFortItemDefinition* MontageItemDef, AFortPawn* PawnEmoting);                          // [0x9bc668c] Final|Native|Private 
+	// Function /Script/KoalaUI.KoalaHUDWidget.HandlePlayerMatchWon
+	// void HandlePlayerMatchWon();                                                                                             // [0x9bc6678] Final|Native|Private 
+	// Function /Script/KoalaUI.KoalaHUDWidget.HandleLocalPlayerKilledPlayer
+	// void HandleLocalPlayerKilledPlayer(AFortPlayerStateAthena* Player);                                                      // [0x9bc65f8] Final|Native|Private 
+	// Function /Script/KoalaUI.KoalaHUDWidget.GetUploadingClipCount
+	// int32_t GetUploadingClipCount();                                                                                         // [0x9bc65d4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/KoalaUI.KoalaHUDWidget.GetTrackedClipCount
+	// int32_t GetTrackedClipCount();                                                                                           // [0x916c218] Final|Native|Protected|BlueprintCallable 
 /// Class /Script/KoalaUI.KoalaMainMenuButton
 /// Size: 0x0010 (0x0015F0 - 0x001600)
 class UKoalaMainMenuButton : public UFortMainMenuButtonExtension

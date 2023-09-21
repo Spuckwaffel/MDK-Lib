@@ -55,7 +55,7 @@ class UGameplayStreamingClassLoader : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FSoftClassPath)                            GameplayStreamingServiceClassName                           ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSoftClassPath)                            GameplayStreamingServiceClassName                           OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/GameplayStreaming.GameplayStreamingService
@@ -66,6 +66,6 @@ class UGameplayStreamingService : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UBaseGameplayStreamingHandler*)            ActiveHandler                                               ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UBaseGameplayStreamingHandler*)            ActiveHandler                                               OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 

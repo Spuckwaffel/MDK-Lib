@@ -35,8 +35,8 @@ class UMetaSoundBuilderDocument : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FMetasoundFrontendDocument)                Document                                                    ___ OFFSET(get<T>, {0x30, 448, 0, 0})
-	CMember(UClass*)                                   MetaSoundUClass                                             ___ OFFSET(get<T>, {0x1F0, 8, 0, 0})
+	SMember(FMetasoundFrontendDocument)                Document                                                    OFFSET(get<T>, {0x30, 448, 0, 0})
+	CMember(UClass*)                                   MetaSoundUClass                                             OFFSET(get<T>, {0x1F0, 8, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVersionNumber
@@ -47,8 +47,8 @@ class FMetasoundFrontendVersionNumber : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   Major                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Minor                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Major                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Minor                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVersion
@@ -59,8 +59,8 @@ class FMetasoundFrontendVersion : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMetasoundFrontendVersionNumber)           Number                                                      ___ OFFSET(get<T>, {0x4, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMetasoundFrontendVersionNumber)           Number                                                      OFFSET(get<T>, {0x4, 8, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVertex
@@ -71,9 +71,9 @@ class FMetasoundFrontendVertex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     TypeName                                                    ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     VertexID                                                    ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGuid)                                     VertexID                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVertexHandle
@@ -84,8 +84,8 @@ class FMetasoundFrontendVertexHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     NodeId                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     VertexID                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     NodeId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     VertexID                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVertexLiteral
@@ -96,8 +96,8 @@ class FMetasoundFrontendVertexLiteral : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGuid)                                     VertexID                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMetasoundFrontendLiteral)                 Value                                                       ___ OFFSET(get<T>, {0x10, 88, 0, 0})
+	SMember(FGuid)                                     VertexID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FMetasoundFrontendLiteral)                 Value                                                       OFFSET(get<T>, {0x10, 88, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendLiteral
@@ -108,13 +108,13 @@ class FMetasoundFrontendLiteral : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(EMetasoundFrontendLiteralType)             Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   AsNumDefault                                                ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	CMember(TArray<bool>)                              AsBoolean                                                   ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<int32_t>)                           AsInteger                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<float>)                             AsFloat                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FString>)                           AsString                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<UObject*>)                          AsUObject                                                   ___ OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(EMetasoundFrontendLiteralType)             Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   AsNumDefault                                                OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(TArray<bool>)                              AsBoolean                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           AsInteger                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<float>)                             AsFloat                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FString>)                           AsString                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<UObject*>)                          AsUObject                                                   OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVariable
@@ -125,14 +125,14 @@ class FMetasoundFrontendVariable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     TypeName                                                    ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMetasoundFrontendLiteral)                 Literal                                                     ___ OFFSET(get<T>, {0x8, 88, 0, 0})
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FGuid)                                     VariableNodeID                                              ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FGuid)                                     MutatorNodeID                                               ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FGuid>)                             AccessorNodeIDs                                             ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TArray<FGuid>)                             DeferredAccessorNodeIDs                                     ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FMetasoundFrontendLiteral)                 Literal                                                     OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FGuid)                                     VariableNodeID                                              OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FGuid)                                     MutatorNodeID                                               OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FGuid>)                             AccessorNodeIDs                                             OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TArray<FGuid>)                             DeferredAccessorNodeIDs                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendNodeInterface
@@ -143,9 +143,9 @@ class FMetasoundFrontendNodeInterface : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FMetasoundFrontendVertex>)          Inputs                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendVertex>)          Outputs                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendVertex>)          Environment                                                 ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendVertex>)          Inputs                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendVertex>)          Outputs                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendVertex>)          Environment                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendNodeStyleDisplay
@@ -176,11 +176,11 @@ class FMetasoundFrontendNode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     ClassID                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FMetasoundFrontendNodeInterface)           Interface                                                   ___ OFFSET(get<T>, {0x28, 48, 0, 0})
-	CMember(TArray<FMetasoundFrontendVertexLiteral>)   InputLiterals                                               ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     ClassID                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FMetasoundFrontendNodeInterface)           Interface                                                   OFFSET(get<T>, {0x28, 48, 0, 0})
+	CMember(TArray<FMetasoundFrontendVertexLiteral>)   InputLiterals                                               OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendEdge
@@ -191,10 +191,10 @@ class FMetasoundFrontendEdge : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGuid)                                     FromNodeID                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     FromVertexID                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGuid)                                     ToNodeID                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FGuid)                                     ToVertexID                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FGuid)                                     FromNodeID                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     FromVertexID                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     ToNodeID                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FGuid)                                     ToVertexID                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendEdgeStyleLiteralColorPair
@@ -205,8 +205,8 @@ class FMetasoundFrontendEdgeStyleLiteralColorPair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMetasoundFrontendLiteral)                 Value                                                       ___ OFFSET(get<T>, {0x0, 88, 0, 0})
-	SMember(FLinearColor)                              Color                                                       ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FMetasoundFrontendLiteral)                 Value                                                       OFFSET(get<T>, {0x0, 88, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendEdgeStyle
@@ -217,9 +217,9 @@ class FMetasoundFrontendEdgeStyle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGuid)                                     NodeId                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     OutputName                                                  ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(TArray<FMetasoundFrontendEdgeStyleLiteralColorPair>) LiteralColorPairs                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FGuid)                                     NodeId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     OutputName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(TArray<FMetasoundFrontendEdgeStyleLiteralColorPair>) LiteralColorPairs                                 OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendGraphStyle
@@ -230,8 +230,8 @@ class FMetasoundFrontendGraphStyle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(bool)                                      bIsGraphEditable                                            ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(TArray<FMetasoundFrontendEdgeStyle>)       EdgeStyles                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(bool)                                      bIsGraphEditable                                            OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(TArray<FMetasoundFrontendEdgeStyle>)       EdgeStyles                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendGraph
@@ -242,9 +242,9 @@ class FMetasoundFrontendGraph : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FMetasoundFrontendNode>)            Nodes                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendEdge>)            Edges                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendVariable>)        Variables                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendNode>)            Nodes                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendEdge>)            Edges                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendVariable>)        Variables                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendVertexMetadata
@@ -265,8 +265,8 @@ class FMetasoundFrontendClassVertex : public FMetasoundFrontendVertex
 	static inline constexpr uint64_t __MDKClassSize = 44;
 
 public:
-	SMember(FGuid)                                     NodeId                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(EMetasoundFrontendVertexAccessType)        AccessType                                                  ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGuid)                                     NodeId                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(EMetasoundFrontendVertexAccessType)        AccessType                                                  OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassStyleDisplay
@@ -287,7 +287,7 @@ class FMetasoundFrontendClassInput : public FMetasoundFrontendClassVertex
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMetasoundFrontendLiteral)                 DefaultLiteral                                              ___ OFFSET(get<T>, {0x30, 88, 0, 0})
+	SMember(FMetasoundFrontendLiteral)                 DefaultLiteral                                              OFFSET(get<T>, {0x30, 88, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassVariable
@@ -298,7 +298,7 @@ class FMetasoundFrontendClassVariable : public FMetasoundFrontendClassVertex
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMetasoundFrontendLiteral)                 DefaultLiteral                                              ___ OFFSET(get<T>, {0x30, 88, 0, 0})
+	SMember(FMetasoundFrontendLiteral)                 DefaultLiteral                                              OFFSET(get<T>, {0x30, 88, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassOutput
@@ -319,9 +319,9 @@ class FMetasoundFrontendClassEnvironmentVariable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     TypeName                                                    ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bIsRequired                                                 ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bIsRequired                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendInterfaceStyle
@@ -342,10 +342,10 @@ class FMetasoundFrontendClassInterface : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FMetasoundFrontendClassInput>)      Inputs                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendClassOutput>)     Outputs                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendClassEnvironmentVariable>) Environment                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FGuid)                                     ChangeID                                                    ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendClassInput>)      Inputs                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendClassOutput>)     Outputs                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendClassEnvironmentVariable>) Environment                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FGuid)                                     ChangeID                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendInterfaceVertexBinding
@@ -356,8 +356,8 @@ class FMetasoundFrontendInterfaceVertexBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     OutputName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     InputName                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     OutputName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     InputName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendInterfaceBinding
@@ -368,10 +368,10 @@ class FMetasoundFrontendInterfaceBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FMetasoundFrontendVersion)                 OutputInterfaceVersion                                      ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FMetasoundFrontendVersion)                 InputInterfaceVersion                                       ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	DMember(int32_t)                                   BindingPriority                                             ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	CMember(TArray<FMetasoundFrontendInterfaceVertexBinding>) VertexBindings                                       ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FMetasoundFrontendVersion)                 OutputInterfaceVersion                                      OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMetasoundFrontendVersion)                 InputInterfaceVersion                                       OFFSET(get<T>, {0xC, 12, 0, 0})
+	DMember(int32_t)                                   BindingPriority                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	CMember(TArray<FMetasoundFrontendInterfaceVertexBinding>) VertexBindings                                       OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendInterfaceUClassOptions
@@ -382,9 +382,9 @@ class FMetasoundFrontendInterfaceUClassOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FTopLevelAssetPath)                        ClassPath                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(bool)                                      bIsModifiable                                               ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bIsDefault                                                  ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
+	SMember(FTopLevelAssetPath)                        ClassPath                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bIsModifiable                                               OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bIsDefault                                                  OFFSET(get<bool>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendInterface
@@ -395,8 +395,8 @@ class FMetasoundFrontendInterface : public FMetasoundFrontendClassInterface
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMetasoundFrontendVersion)                 Version                                                     ___ OFFSET(get<T>, {0x40, 12, 0, 0})
-	CMember(TArray<FMetasoundFrontendInterfaceUClassOptions>) UClassOptions                                        ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMetasoundFrontendVersion)                 Version                                                     OFFSET(get<T>, {0x40, 12, 0, 0})
+	CMember(TArray<FMetasoundFrontendInterfaceUClassOptions>) UClassOptions                                        OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassName
@@ -407,9 +407,9 @@ class FMetasoundFrontendClassName : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     Namespace                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     Variant                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Namespace                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Variant                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassMetadata
@@ -420,12 +420,12 @@ class FMetasoundFrontendClassMetadata : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FMetasoundFrontendClassName)               ClassName                                                   ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FMetasoundFrontendVersionNumber)           Version                                                     ___ OFFSET(get<T>, {0xC, 8, 0, 0})
-	CMember(EMetasoundFrontendClassType)               Type                                                        ___ OFFSET(get<T>, {0x14, 1, 0, 0})
-	DMember(bool)                                      bIsDeprecated                                               ___ OFFSET(get<bool>, {0x15, 1, 0, 0})
-	DMember(bool)                                      bAutoUpdateManagesInterface                                 ___ OFFSET(get<bool>, {0x16, 1, 0, 0})
-	SMember(FGuid)                                     ChangeID                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FMetasoundFrontendClassName)               ClassName                                                   OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMetasoundFrontendVersionNumber)           Version                                                     OFFSET(get<T>, {0xC, 8, 0, 0})
+	CMember(EMetasoundFrontendClassType)               Type                                                        OFFSET(get<T>, {0x14, 1, 0, 0})
+	DMember(bool)                                      bIsDeprecated                                               OFFSET(get<bool>, {0x15, 1, 0, 0})
+	DMember(bool)                                      bAutoUpdateManagesInterface                                 OFFSET(get<bool>, {0x16, 1, 0, 0})
+	SMember(FGuid)                                     ChangeID                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendClassStyle
@@ -446,9 +446,9 @@ class FMetasoundFrontendClass : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FMetasoundFrontendClassMetadata)           MetaData                                                    ___ OFFSET(get<T>, {0x18, 40, 0, 0})
-	SMember(FMetasoundFrontendClassInterface)          Interface                                                   ___ OFFSET(get<T>, {0x40, 64, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FMetasoundFrontendClassMetadata)           MetaData                                                    OFFSET(get<T>, {0x18, 40, 0, 0})
+	SMember(FMetasoundFrontendClassInterface)          Interface                                                   OFFSET(get<T>, {0x40, 64, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendGraphClassPresetOptions
@@ -459,8 +459,8 @@ class FMetasoundFrontendGraphClassPresetOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(bool)                                      bIsPreset                                                   ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(TSet<FName>)                               InputsInheritingDefault                                     ___ OFFSET(get<T>, {0x8, 80, 0, 0})
+	DMember(bool)                                      bIsPreset                                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
+	CMember(TSet<FName>)                               InputsInheritingDefault                                     OFFSET(get<T>, {0x8, 80, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendGraphClass
@@ -471,8 +471,8 @@ class FMetasoundFrontendGraphClass : public FMetasoundFrontendClass
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FMetasoundFrontendGraph)                   Graph                                                       ___ OFFSET(get<T>, {0x80, 48, 0, 0})
-	SMember(FMetasoundFrontendGraphClassPresetOptions) PresetOptions                                               ___ OFFSET(get<T>, {0xB0, 88, 0, 0})
+	SMember(FMetasoundFrontendGraph)                   Graph                                                       OFFSET(get<T>, {0x80, 48, 0, 0})
+	SMember(FMetasoundFrontendGraphClassPresetOptions) PresetOptions                                               OFFSET(get<T>, {0xB0, 88, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendDocumentMetadata
@@ -483,7 +483,7 @@ class FMetasoundFrontendDocumentMetadata : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FMetasoundFrontendVersion)                 Version                                                     ___ OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMetasoundFrontendVersion)                 Version                                                     OFFSET(get<T>, {0x0, 12, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetasoundFrontendDocument
@@ -494,13 +494,13 @@ class FMetasoundFrontendDocument : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FMetasoundFrontendDocumentMetadata)        MetaData                                                    ___ OFFSET(get<T>, {0x10, 12, 0, 0})
-	CMember(TSet<FMetasoundFrontendVersion>)           Interfaces                                                  ___ OFFSET(get<T>, {0x20, 80, 0, 0})
-	SMember(FMetasoundFrontendGraphClass)              RootGraph                                                   ___ OFFSET(get<T>, {0x70, 264, 0, 0})
-	CMember(TArray<FMetasoundFrontendGraphClass>)      Subgraphs                                                   ___ OFFSET(get<T>, {0x178, 16, 0, 0})
-	CMember(TArray<FMetasoundFrontendClass>)           Dependencies                                                ___ OFFSET(get<T>, {0x188, 16, 0, 0})
-	SMember(FMetasoundFrontendVersion)                 ArchetypeVersion                                            ___ OFFSET(get<T>, {0x198, 12, 0, 0})
-	CMember(TArray<FMetasoundFrontendVersion>)         InterfaceVersions                                           ___ OFFSET(get<T>, {0x1A8, 16, 0, 0})
+	SMember(FMetasoundFrontendDocumentMetadata)        MetaData                                                    OFFSET(get<T>, {0x10, 12, 0, 0})
+	CMember(TSet<FMetasoundFrontendVersion>)           Interfaces                                                  OFFSET(get<T>, {0x20, 80, 0, 0})
+	SMember(FMetasoundFrontendGraphClass)              RootGraph                                                   OFFSET(get<T>, {0x70, 264, 0, 0})
+	CMember(TArray<FMetasoundFrontendGraphClass>)      Subgraphs                                                   OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FMetasoundFrontendClass>)           Dependencies                                                OFFSET(get<T>, {0x188, 16, 0, 0})
+	SMember(FMetasoundFrontendVersion)                 ArchetypeVersion                                            OFFSET(get<T>, {0x198, 12, 0, 0})
+	CMember(TArray<FMetasoundFrontendVersion>)         InterfaceVersions                                           OFFSET(get<T>, {0x1A8, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundFrontend.MetaSoundFrontendDocumentBuilder
@@ -511,7 +511,7 @@ class FMetaSoundFrontendDocumentBuilder : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TScriptInterface<Class>)                   DocumentInterface                                           ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   DocumentInterface                                           OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/MetasoundFrontend.ESetParamResult

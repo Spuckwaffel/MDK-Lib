@@ -14,9 +14,9 @@ class FSolarisDebugMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(ESolarisDebugMessageClientId)              ClientId                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(ESolarisDebugMessageCommand)               Command                                                     ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(TArray<char>)                              MessageBodyUTF8                                             ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(ESolarisDebugMessageClientId)              ClientId                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(ESolarisDebugMessageCommand)               Command                                                     OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(TArray<char>)                              MessageBodyUTF8                                             OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/VerseInterface.ESolarisDebugMessageClientId

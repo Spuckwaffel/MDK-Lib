@@ -26,17 +26,48 @@ class UMotionControllerComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1760;
 
 public:
-	DMember(int32_t)                                   PlayerIndex                                                 ___ OFFSET(get<int32_t>, {0x568, 4, 0, 0})
-	SMember(FName)                                     MotionSource                                                ___ OFFSET(get<T>, {0x56C, 4, 0, 0})
-	DMember(bool)                                      bDisableLowLatencyUpdate                                    ___ OFFSET(get<bool>, {0x570, 1, 1, 0})
-	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       ___ OFFSET(get<T>, {0x574, 1, 0, 0})
-	DMember(bool)                                      bDisplayDeviceModel                                         ___ OFFSET(get<bool>, {0x575, 1, 0, 0})
-	SMember(FName)                                     DisplayModelSource                                          ___ OFFSET(get<T>, {0x578, 4, 0, 0})
-	CMember(UStaticMesh*)                              CustomDisplayMesh                                           ___ OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                ___ OFFSET(get<T>, {0x588, 16, 0, 0})
-	CMember(UPrimitiveComponent*)                      DisplayComponent                                            ___ OFFSET(get<T>, {0x598, 8, 0, 0})
+	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x568, 4, 0, 0})
+	SMember(FName)                                     MotionSource                                                OFFSET(get<T>, {0x56C, 4, 0, 0})
+	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
+	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x574, 1, 0, 0})
+	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x575, 1, 0, 0})
+	SMember(FName)                                     DisplayModelSource                                          OFFSET(get<T>, {0x578, 4, 0, 0})
+	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x580, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x588, 16, 0, 0})
+	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x598, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
+	// void SetTrackingSource(EControllerHand NewSource);                                                                       // [0x55526f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
+	// void SetTrackingMotionSource(FName NewSource);                                                                           // [0x5552648] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel
+	// void SetShowDeviceModel(bool bShowControllerModel);                                                                      // [0x55525a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource
+	// void SetDisplayModelSource(FName NewDisplayModelSource);                                                                 // [0x5552518] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh
+	// void SetCustomDisplayMesh(UStaticMesh* NewDisplayMesh);                                                                  // [0x5552440] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
+	// void SetAssociatedPlayerIndex(int32_t NewPlayer);                                                                        // [0x5552398] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated
+	// void OnMotionControllerUpdated();                                                                                        // [0x1ebf994] RequiredAPI|Event|Protected|BlueprintEvent 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.IsTracked
+	// bool IsTracked();                                                                                                        // [0x5552380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
+	// EControllerHand GetTrackingSource();                                                                                     // [0x5552348] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetParameterValue
+	// float GetParameterValue(FName InName, bool& bValueFound);                                                                // [0x5552250] Final|RequiredAPI|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearVelocity
+	// bool GetLinearVelocity(FVector& OutLinearVelocity);                                                                      // [0x5552158] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearAcceleration
+	// bool GetLinearAcceleration(FVector& OutLinearAcceleration);                                                              // [0x5552060] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
+	// FVector GetHandJointPosition(int32_t jointIndex, bool& bValueFound);                                                     // [0x5551f4c] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetAngularVelocity
+	// bool GetAngularVelocity(FRotator& OutAngularVelocity);                                                                   // [0x5551eb8] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/HeadMountedDisplay.XRHMDData
 /// Size: 0x0060 (0x000000 - 0x000060)
 class FXRHMDData : public MDKStruct
@@ -45,12 +76,12 @@ class FXRHMDData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(ETrackingStatus)                           TrackingStatus                                              ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x40, 32, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FName)                                     DeviceName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x18, 1, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/HeadMountedDisplay.XRMotionControllerData
@@ -61,22 +92,22 @@ class FXRMotionControllerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(EXRVisualType)                             DeviceVisualType                                            ___ OFFSET(get<T>, {0x18, 1, 0, 0})
-	CMember(EControllerHand)                           HandIndex                                                   ___ OFFSET(get<T>, {0x19, 1, 0, 0})
-	CMember(ETrackingStatus)                           TrackingStatus                                              ___ OFFSET(get<T>, {0x1A, 1, 0, 0})
-	SMember(FVector)                                   GripPosition                                                ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     GripRotation                                                ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FVector)                                   AimPosition                                                 ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FQuat)                                     AimRotation                                                 ___ OFFSET(get<T>, {0x80, 32, 0, 0})
-	SMember(FVector)                                   PalmPosition                                                ___ OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FQuat)                                     PalmRotation                                                ___ OFFSET(get<T>, {0xC0, 32, 0, 0})
-	CMember(TArray<FVector>)                           HandKeyPositions                                            ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<FQuat>)                             HandKeyRotations                                            ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	CMember(TArray<float>)                             HandKeyRadii                                                ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	DMember(bool)                                      bIsGrasped                                                  ___ OFFSET(get<bool>, {0x110, 1, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FName)                                     DeviceName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(EXRVisualType)                             DeviceVisualType                                            OFFSET(get<T>, {0x18, 1, 0, 0})
+	CMember(EControllerHand)                           HandIndex                                                   OFFSET(get<T>, {0x19, 1, 0, 0})
+	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x1A, 1, 0, 0})
+	SMember(FVector)                                   GripPosition                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     GripRotation                                                OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   AimPosition                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FQuat)                                     AimRotation                                                 OFFSET(get<T>, {0x80, 32, 0, 0})
+	SMember(FVector)                                   PalmPosition                                                OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FQuat)                                     PalmRotation                                                OFFSET(get<T>, {0xC0, 32, 0, 0})
+	CMember(TArray<FVector>)                           HandKeyPositions                                            OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<FQuat>)                             HandKeyRotations                                            OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(TArray<float>)                             HandKeyRadii                                                OFFSET(get<T>, {0x100, 16, 0, 0})
+	DMember(bool)                                      bIsGrasped                                                  OFFSET(get<bool>, {0x110, 1, 0, 0})
 };
 
 /// Struct /Script/HeadMountedDisplay.XRGestureConfig
@@ -87,12 +118,12 @@ class FXRGestureConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
 public:
-	DMember(bool)                                      bTap                                                        ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bHold                                                       ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	CMember(ESpatialInputGestureAxis)                  AxisGesture                                                 ___ OFFSET(get<T>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisX                                            ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisY                                            ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisZ                                            ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bTap                                                        OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bHold                                                       OFFSET(get<bool>, {0x1, 1, 0, 0})
+	CMember(ESpatialInputGestureAxis)                  AxisGesture                                                 OFFSET(get<T>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bNavigationAxisX                                            OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bNavigationAxisY                                            OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bNavigationAxisZ                                            OFFSET(get<bool>, {0x5, 1, 0, 0})
 };
 
 /// Struct /Script/HeadMountedDisplay.XRDeviceId
@@ -103,8 +134,8 @@ class FXRDeviceId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     SystemName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   DeviceID                                                    ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SystemName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Enum /Script/HeadMountedDisplay.EOrientPositionSelector

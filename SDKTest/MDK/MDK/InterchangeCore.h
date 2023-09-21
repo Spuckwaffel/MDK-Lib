@@ -15,9 +15,14 @@ class UInterchangeFactoryBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UInterchangeResultsContainer*)             Results                                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/InterchangeCore.InterchangeFactoryBase.GetFactoryClass
+	// UClass* GetFactoryClass();                                                                                               // [0x271cd04] Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/InterchangeCore.InterchangeSourceData
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UInterchangeSourceData : public UObject
@@ -26,9 +31,16 @@ class UInterchangeSourceData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   Filename                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/InterchangeCore.InterchangeSourceData.SetFilename
+	// bool SetFilename(FString InFilename);                                                                                    // [0xa4eef94] Final|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeSourceData.GetFilename
+	// FString GetFilename();                                                                                                   // [0xa4dd184] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/InterchangeCore.InterchangeWriterBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInterchangeWriterBase : public UObject
@@ -47,10 +59,31 @@ class UInterchangePipelineBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(UInterchangeResultsContainer*)             Results                                                     ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TMap<FName, FInterchangePipelinePropertyStates>) PropertiesStates                                      ___ OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TMap<FName, FInterchangePipelinePropertyStates>) PropertiesStates                                      OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedSetReimportSourceIndex
+	// void ScriptedSetReimportSourceIndex(UClass* ReimportObjectClass, int32_t SourceFileIndex);                               // [0xa4ecf44] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePreImportPipeline
+	// void ScriptedExecutePreImportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, TArray<UInterchangeSourceData*>& SourceDatas); // [0xa4ec864] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePostImportPipeline
+	// void ScriptedExecutePostImportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xa4ec114] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePostFactoryPipeline
+	// void ScriptedExecutePostFactoryPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xa4eb9c4] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePipeline
+	// void ScriptedExecutePipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, TArray<UInterchangeSourceData*>& SourceDatas); // [0xa4eb2e4] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecuteExportPipeline
+	// void ScriptedExecuteExportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer);                                    // [0x5ae1c34] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedCanExecuteOnAnyThread
+	// bool ScriptedCanExecuteOnAnyThread(EInterchangePipelineTask PipelineTask);                                               // [0xa4eb250] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.FindOrAddPropertyStates
+	// FInterchangePipelinePropertyStates FindOrAddPropertyStates(FName PropertyPath);                                          // [0xa4da268] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangePipelineBase.DoesPropertyStatesExist
+	// bool DoesPropertyStatesExist(FName PropertyPath);                                                                        // [0xa4da0c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/InterchangeCore.InterchangeResult
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UInterchangeResult : public UObject
@@ -59,10 +92,10 @@ class UInterchangeResult : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   SourceAssetName                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   DestinationAssetName                                        ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(UClass*)                                   AssetType                                                   ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FString)                                   InterchangeKey                                              ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   SourceAssetName                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   DestinationAssetName                                        OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(UClass*)                                   AssetType                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
+	SMember(FString)                                   InterchangeKey                                              OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultSuccess
@@ -103,7 +136,7 @@ class UInterchangeResultWarning_Generic : public UInterchangeResultWarning
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultError_Generic
@@ -114,7 +147,7 @@ class UInterchangeResultError_Generic : public UInterchangeResultError
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultError_ReimportFail
@@ -135,7 +168,7 @@ class UInterchangeResultDisplay_Generic : public UInterchangeResultSuccess
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultsContainer
@@ -146,7 +179,7 @@ class UInterchangeResultsContainer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<UInterchangeResult*>)               Results                                                     ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<UInterchangeResult*>)               Results                                                     OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeTranslatorBase
@@ -157,8 +190,8 @@ class UInterchangeTranslatorBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UInterchangeResultsContainer*)             Results                                                     ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UInterchangeSourceData*)                   SourceData                                                  ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UInterchangeSourceData*)                   SourceData                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeBaseNode
@@ -179,9 +212,42 @@ class UInterchangeBaseNodeContainer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	CMember(TMap<FString, UInterchangeBaseNode*>)      Nodes                                                       ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<FString, UInterchangeBaseNode*>)      Nodes                                                       OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.SetNodeParentUid
+	// bool SetNodeParentUid(FString NodeUniqueID, FString NewParentNodeUid);                                                   // [0xa4ef674] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.SaveToFile
+	// void SaveToFile(FString Filename);                                                                                       // [0xa4eab9c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ResetChildrenCache
+	// void ResetChildrenCache();                                                                                               // [0xa4eab88] Final|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ReplaceNode
+	// void ReplaceNode(FString NodeUniqueID, UInterchangeFactoryBaseNode* NewNode);                                            // [0xa4ea4a8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.LoadFromFile
+	// void LoadFromFile(FString Filename);                                                                                     // [0xa4e8304] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.IsNodeUidValid
+	// bool IsNodeUidValid(FString NodeUniqueID);                                                                               // [0xa4e7c54] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetRoots
+	// void GetRoots(TArray<FString>& RootNodes);                                                                               // [0xa4e09a4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodes
+	// void GetNodes(UClass* ClassNode, TArray<FString>& OutNodes);                                                             // [0xa4e0860] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenUids
+	// TArray<FString> GetNodeChildrenUids(FString NodeUniqueID);                                                               // [0xa4e0180] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenCount
+	// int32_t GetNodeChildrenCount(FString NodeUniqueID);                                                                      // [0xa4dfad0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildren
+	// UInterchangeBaseNode* GetNodeChildren(FString NodeUniqueID, int32_t ChildIndex);                                         // [0xa4df3fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNode
+	// UInterchangeBaseNode* GetNode(FString NodeUniqueID);                                                                     // [0xa4ded4c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetFactoryNode
+	// UInterchangeFactoryBaseNode* GetFactoryNode(FString NodeUniqueID);                                                       // [0xa4dcad4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ComputeChildrenCache
+	// void ComputeChildrenCache();                                                                                             // [0xa4d78dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.AddNode
+	// FString AddNode(UInterchangeBaseNode* Node);                                                                             // [0xa4d5d7c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 /// Class /Script/InterchangeCore.InterchangeFactoryBaseNode
 /// Size: 0x00E0 (0x000060 - 0x000140)
 class UInterchangeFactoryBaseNode : public UInterchangeBaseNode
@@ -220,7 +286,7 @@ class FInterchangePipelinePropertyStatePerContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bVisible                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/InterchangeCore.InterchangePipelinePropertyStates
@@ -231,9 +297,9 @@ class FInterchangePipelinePropertyStates : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
 public:
-	DMember(bool)                                      bLocked                                                     ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FInterchangePipelinePropertyStatePerContext) ImportStates                                              ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FInterchangePipelinePropertyStatePerContext) ReimportStates                                            ___ OFFSET(get<T>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bLocked                                                     OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FInterchangePipelinePropertyStatePerContext) ImportStates                                              OFFSET(get<T>, {0x1, 1, 0, 0})
+	SMember(FInterchangePipelinePropertyStatePerContext) ReimportStates                                            OFFSET(get<T>, {0x2, 1, 0, 0})
 };
 
 /// Struct /Script/InterchangeCore.InterchangeUserDefinedAttributeInfo
@@ -244,7 +310,7 @@ class FInterchangeUserDefinedAttributeInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/InterchangeCore.EInterchangeFactoryAssetType

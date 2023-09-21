@@ -17,7 +17,7 @@ class UResonanceAudioSoundfieldSettings : public USoundfieldEncodingSettingsBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EResonanceRenderMode)                      RenderMode                                                  ___ OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(EResonanceRenderMode)                      RenderMode                                                  OFFSET(get<T>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary
@@ -38,8 +38,8 @@ class AResonanceAudioDirectivityVisualizer : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	CMember(UMaterial*)                                Material                                                    ___ OFFSET(get<T>, {0x300, 8, 0, 0})
-	CMember(UResonanceAudioSpatializationSourceSettings*) Settings                                                 ___ OFFSET(get<T>, {0x308, 8, 0, 0})
+	CMember(UMaterial*)                                Material                                                    OFFSET(get<T>, {0x300, 8, 0, 0})
+	CMember(UResonanceAudioSpatializationSourceSettings*) Settings                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
 };
 
 /// Class /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset
@@ -50,9 +50,30 @@ class UResonanceAudioReverbPluginPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FResonanceAudioReverbPluginSettings)       Settings                                                    ___ OFFSET(get<T>, {0x100, 112, 0, 0})
+	SMember(FResonanceAudioReverbPluginSettings)       Settings                                                    OFFSET(get<T>, {0x100, 112, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomRotation
+	// void SetRoomRotation(FQuat& InRotation);                                                                                 // [0xa30bd04] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomPosition
+	// void SetRoomPosition(FVector& InPosition);                                                                               // [0xa30bc1c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomMaterials
+	// void SetRoomMaterials(TArray<ERaMaterialName>& InMaterials);                                                             // [0xa30b544] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomDimensions
+	// void SetRoomDimensions(FVector& InDimensions);                                                                           // [0xa30b45c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbTimeModifier
+	// void SetReverbTimeModifier(float InReverbTimeModifier);                                                                  // [0xa30b3cc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbGain
+	// void SetReverbGain(float InReverbGain);                                                                                  // [0xa30b33c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbBrightness
+	// void SetReverbBrightness(float InReverbBrightness);                                                                      // [0xa30b2ac] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReflectionScalar
+	// void SetReflectionScalar(float InReflectionScalar);                                                                      // [0xa30b21c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetEnableRoomEffects
+	// void SetEnableRoomEffects(bool bInEnableRoomEffects);                                                                    // [0xa30b088] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ResonanceAudio.ResonanceAudioSettings
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UResonanceAudioSettings : public UObject
@@ -61,10 +82,10 @@ class UResonanceAudioSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSoftObjectPath)                           OutputSubmix                                                ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	CMember(ERaQualityMode)                            QualityMode                                                 ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalReverbPreset                                          ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalSourcePreset                                          ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FSoftObjectPath)                           OutputSubmix                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(ERaQualityMode)                            QualityMode                                                 OFFSET(get<T>, {0x40, 1, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalReverbPreset                                          OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalSourcePreset                                          OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings
@@ -75,17 +96,24 @@ class UResonanceAudioSpatializationSourceSettings : public USpatializationPlugin
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(ERaSpatializationMethod)                   SpatializationMethod                                        ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	DMember(float)                                     Pattern                                                     ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Sharpness                                                   ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bToggleVisualization                                        ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     Spread                                                      ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	CMember(ERaDistanceRolloffModel)                   Rolloff                                                     ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	DMember(float)                                     MinDistance                                                 ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     MaxDistance                                                 ___ OFFSET(get<float>, {0x48, 4, 0, 0})
+	CMember(ERaSpatializationMethod)                   SpatializationMethod                                        OFFSET(get<T>, {0x28, 1, 0, 0})
+	DMember(float)                                     Pattern                                                     OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Sharpness                                                   OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bToggleVisualization                                        OFFSET(get<bool>, {0x34, 1, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     Spread                                                      OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(ERaDistanceRolloffModel)                   Rolloff                                                     OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(float)                                     MinDistance                                                 OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     MaxDistance                                                 OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceSpread
+	// void SetSoundSourceSpread(float InSpread);                                                                               // [0x5b35cf4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
+	// void SetSoundSourceDirectivity(float InPattern, float InSharpness);                                                      // [0xa30bd8c] Final|Native|Public|BlueprintCallable 
 /// Struct /Script/ResonanceAudio.ResonanceAudioReverbPluginSettings
 /// Size: 0x0070 (0x000000 - 0x000070)
 class FResonanceAudioReverbPluginSettings : public MDKStruct
@@ -94,21 +122,21 @@ class FResonanceAudioReverbPluginSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	DMember(bool)                                      bEnableRoomEffects                                          ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bGetTransformFromAudioVolume                                ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	SMember(FVector)                                   RoomPosition                                                ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     RoomRotation                                                ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   RoomDimensions                                              ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	CMember(ERaMaterialName)                           LeftWallMaterial                                            ___ OFFSET(get<T>, {0x58, 1, 0, 0})
-	CMember(ERaMaterialName)                           RightWallMaterial                                           ___ OFFSET(get<T>, {0x59, 1, 0, 0})
-	CMember(ERaMaterialName)                           FloorMaterial                                               ___ OFFSET(get<T>, {0x5A, 1, 0, 0})
-	CMember(ERaMaterialName)                           CeilingMaterial                                             ___ OFFSET(get<T>, {0x5B, 1, 0, 0})
-	CMember(ERaMaterialName)                           FrontWallMaterial                                           ___ OFFSET(get<T>, {0x5C, 1, 0, 0})
-	CMember(ERaMaterialName)                           BackWallMaterial                                            ___ OFFSET(get<T>, {0x5D, 1, 0, 0})
-	DMember(float)                                     ReflectionScalar                                            ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(float)                                     ReverbGain                                                  ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     ReverbTimeModifier                                          ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     ReverbBrightness                                            ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(bool)                                      bEnableRoomEffects                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bGetTransformFromAudioVolume                                OFFSET(get<bool>, {0x1, 1, 0, 0})
+	SMember(FVector)                                   RoomPosition                                                OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     RoomRotation                                                OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   RoomDimensions                                              OFFSET(get<T>, {0x40, 24, 0, 0})
+	CMember(ERaMaterialName)                           LeftWallMaterial                                            OFFSET(get<T>, {0x58, 1, 0, 0})
+	CMember(ERaMaterialName)                           RightWallMaterial                                           OFFSET(get<T>, {0x59, 1, 0, 0})
+	CMember(ERaMaterialName)                           FloorMaterial                                               OFFSET(get<T>, {0x5A, 1, 0, 0})
+	CMember(ERaMaterialName)                           CeilingMaterial                                             OFFSET(get<T>, {0x5B, 1, 0, 0})
+	CMember(ERaMaterialName)                           FrontWallMaterial                                           OFFSET(get<T>, {0x5C, 1, 0, 0})
+	CMember(ERaMaterialName)                           BackWallMaterial                                            OFFSET(get<T>, {0x5D, 1, 0, 0})
+	DMember(float)                                     ReflectionScalar                                            OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(float)                                     ReverbGain                                                  OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     ReverbTimeModifier                                          OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     ReverbBrightness                                            OFFSET(get<float>, {0x6C, 4, 0, 0})
 };
 
 /// Enum /Script/ResonanceAudio.ERaQualityMode

@@ -17,30 +17,71 @@ class UCreativeAudioComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	DMember(float)                                     StereoSpreadScaleFactor                                     ___ OFFSET(get<float>, {0xA0, 4, 0, 0})
-	DMember(float)                                     FadeInDuration                                              ___ OFFSET(get<float>, {0xA4, 4, 0, 0})
-	DMember(float)                                     FadeOutDuration                                             ___ OFFSET(get<float>, {0xA8, 4, 0, 0})
-	DMember(bool)                                      bSyncPlayerAudio                                            ___ OFFSET(get<bool>, {0xAC, 1, 0, 0})
-	DMember(bool)                                      bRestartAudioOnPlay                                         ___ OFFSET(get<bool>, {0xAD, 1, 0, 0})
-	CMember(ECreativeAudioPlayerTargetListener)        CanBeHeardBy                                                ___ OFFSET(get<T>, {0xAE, 1, 0, 0})
-	CMember(ECreativeAudioPlayerTargetLocation)        PlayLocation                                                ___ OFFSET(get<T>, {0xAF, 1, 0, 0})
-	CMember(EAutoplayOptions)                          AutoplayOptions                                             ___ OFFSET(get<T>, {0xB0, 1, 0, 0})
-	CMember(UFortMinigameProgressComponent*)           FortMinigameProgressComponent                               ___ OFFSET(get<T>, {0xB8, 8, 0, 0})
-	CMember(UCreativeProxyManagerComponent*)           CreativeProxyManager                                        ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(UCreativeRegisteredPlayersManagerComponent*) CreativeRegisteredPlayersManagerComponent                 ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	CMember(UAudioComponent*)                          AudioComponent                                              ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(TMap<FUniqueNetIdRepl, UAudioComponent*>)  PlayerAudioComponents                                       ___ OFFSET(get<T>, {0xD8, 80, 0, 0})
-	CMember(ACreativeAudioPlayerReplicationProxy*)     ClientCachedProxy                                           ___ OFFSET(get<T>, {0x128, 8, 0, 0})
-	CMember(USoundBase*)                               LastSoundPlayed                                             ___ OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FCreativeAudioPlayerData)                  ServerInstigatorData                                        ___ OFFSET(get<T>, {0x138, 64, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x178, 1, 0, 0})
-	DMember(bool)                                      bAudioLoaded                                                ___ OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FCreativeAudioPlayerData)                  CachedInstigatorData                                        ___ OFFSET(get<T>, {0x1A8, 64, 0, 0})
-	CMember(TArray<FUniqueNetIdRepl>)                  RegisteredPlayerIds                                         ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	CMember(TArray<FUniqueNetIdRepl>)                  NonRegisteredPlayerIds                                      ___ OFFSET(get<T>, {0x1F8, 16, 0, 0})
-	CMember(EAutoplayOptions)                          CurrentAutoplayState                                        ___ OFFSET(get<T>, {0x208, 1, 0, 0})
+	DMember(float)                                     StereoSpreadScaleFactor                                     OFFSET(get<float>, {0xA0, 4, 0, 0})
+	DMember(float)                                     FadeInDuration                                              OFFSET(get<float>, {0xA4, 4, 0, 0})
+	DMember(float)                                     FadeOutDuration                                             OFFSET(get<float>, {0xA8, 4, 0, 0})
+	DMember(bool)                                      bSyncPlayerAudio                                            OFFSET(get<bool>, {0xAC, 1, 0, 0})
+	DMember(bool)                                      bRestartAudioOnPlay                                         OFFSET(get<bool>, {0xAD, 1, 0, 0})
+	CMember(ECreativeAudioPlayerTargetListener)        CanBeHeardBy                                                OFFSET(get<T>, {0xAE, 1, 0, 0})
+	CMember(ECreativeAudioPlayerTargetLocation)        PlayLocation                                                OFFSET(get<T>, {0xAF, 1, 0, 0})
+	CMember(EAutoplayOptions)                          AutoplayOptions                                             OFFSET(get<T>, {0xB0, 1, 0, 0})
+	CMember(UFortMinigameProgressComponent*)           FortMinigameProgressComponent                               OFFSET(get<T>, {0xB8, 8, 0, 0})
+	CMember(UCreativeProxyManagerComponent*)           CreativeProxyManager                                        OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(UCreativeRegisteredPlayersManagerComponent*) CreativeRegisteredPlayersManagerComponent                 OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(TMap<FUniqueNetIdRepl, UAudioComponent*>)  PlayerAudioComponents                                       OFFSET(get<T>, {0xD8, 80, 0, 0})
+	CMember(ACreativeAudioPlayerReplicationProxy*)     ClientCachedProxy                                           OFFSET(get<T>, {0x128, 8, 0, 0})
+	CMember(USoundBase*)                               LastSoundPlayed                                             OFFSET(get<T>, {0x130, 8, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  ServerInstigatorData                                        OFFSET(get<T>, {0x138, 64, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x178, 1, 0, 0})
+	DMember(bool)                                      bAudioLoaded                                                OFFSET(get<bool>, {0x1A0, 1, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  CachedInstigatorData                                        OFFSET(get<T>, {0x1A8, 64, 0, 0})
+	CMember(TArray<FUniqueNetIdRepl>)                  RegisteredPlayerIds                                         OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	CMember(TArray<FUniqueNetIdRepl>)                  NonRegisteredPlayerIds                                      OFFSET(get<T>, {0x1F8, 16, 0, 0})
+	CMember(EAutoplayOptions)                          CurrentAutoplayState                                        OFFSET(get<T>, {0x208, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.StopAudio
+	// void StopAudio(AController* Player);                                                                                     // [0x56ba1a4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.SetProperties
+	// void SetProperties(TWeakObjectPtr<USoundBase*>& Audio, float Volume, float PlaybackSpeed, float NewFadeInDuration, float NewFadeOutDuration, bool bEnableVolumeAttenuation, bool bEnableSpatialization, float StereoSpread, EAttenuationDistanceModel DistanceModel, float AttenuationMinDistance, float AttenuationFalloffDistance, bool bNewSyncPlayerAudio, bool bNewRestartAudioOnPlay, int32_t NewCanBeHeardBy, int32_t NewPlayLocation, int32_t NewAutoplayOptions); // [0x9a8b974] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.RetryUpdateAutoplayStatusOnMinigameAdd
+	// void RetryUpdateAutoplayStatusOnMinigameAdd(AFortMinigame* Minigame);                                                    // [0x56ba1a4] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.RetryClientPlayAudio
+	// void RetryClientPlayAudio(FCreativeAudioPlayerData& InstigatorData);                                                     // [0x9a8b8a4] Final|Native|Private|HasOutParms 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.ResetDevice
+	// void ResetDevice();                                                                                                      // [0x9a8b4a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.PlayAudio
+	// void PlayAudio(AController* Player);                                                                                     // [0x56ba1a4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnRep_ServerInstigatorData
+	// void OnRep_ServerInstigatorData();                                                                                       // [0x9a8b820] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnRep_RegisteredPlayerIds
+	// void OnRep_RegisteredPlayerIds();                                                                                        // [0x9a8b80c] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnProxyDataChanged
+	// void OnProxyDataChanged(ACreativePlayerReplicationProxy* ProxyData);                                                     // [0x9a8b78c] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnPlayerUnregistered
+	// void OnPlayerUnregistered(AFortPlayerState* PlayerState);                                                                // [0x5fcf0ec] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnPlayerRemoved
+	// void OnPlayerRemoved(FUniqueNetIdRepl NetId, bool bIsLocalPlayer);                                                       // [0x9a8b4b4] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnPlayerRegistered
+	// void OnPlayerRegistered(AFortPlayerState* PlayerState);                                                                  // [0x5e361a4] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnPlayerAdded
+	// void OnPlayerAdded(FUniqueNetIdRepl NetId, bool bIsLocalPlayer);                                                         // [0x7533fc4] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnMinigameStateChanged
+	// void OnMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState NewMinigameState);                               // [0x7a6342c] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnMinigameStarted
+	// void OnMinigameStarted();                                                                                                // [0x2d79908] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnMinigameEnded
+	// void OnMinigameEnded();                                                                                                  // [0x9a8b4a0] Final|Native|Private 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnEnabledStateChanged
+	// void OnEnabledStateChanged(bool bIsEnabled);                                                                             // [0x56acda8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnAudioLoadComplete
+	// void OnAudioLoadComplete(FSoftObjectPath Audio);                                                                         // [0x9a8acfc] Final|Native|Private|HasDefaults 
+	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnAllPlayersUnregistered
+	// void OnAllPlayersUnregistered();                                                                                         // [0x2326950] Final|Native|Private 
 /// Class /Script/CRD_AudioPlayerRuntime.CreativeAudioPlayerReplicationProxy
 /// Size: 0x0040 (0x000298 - 0x0002D8)
 class ACreativeAudioPlayerReplicationProxy : public ACreativePlayerReplicationProxy
@@ -49,7 +90,7 @@ class ACreativeAudioPlayerReplicationProxy : public ACreativePlayerReplicationPr
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FCreativeAudioPlayerData)                  InstigatorData                                              ___ OFFSET(get<T>, {0x298, 64, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  InstigatorData                                              OFFSET(get<T>, {0x298, 64, 0, 0})
 };
 
 /// Struct /Script/CRD_AudioPlayerRuntime.CreativeAudioPlayerData
@@ -60,9 +101,9 @@ class FCreativeAudioPlayerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FUniqueNetIdRepl)                          NetId                                                       ___ OFFSET(get<T>, {0x0, 48, 0, 0})
-	CMember(APawn*)                                    Pawn                                                        ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(float)                                     ServerAudioStartTime                                        ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FUniqueNetIdRepl)                          NetId                                                       OFFSET(get<T>, {0x0, 48, 0, 0})
+	CMember(APawn*)                                    Pawn                                                        OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(float)                                     ServerAudioStartTime                                        OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Enum /Script/CRD_AudioPlayerRuntime.ECreativeAudioPlayerTargetListener

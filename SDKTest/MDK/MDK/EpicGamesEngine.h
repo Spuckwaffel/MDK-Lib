@@ -18,12 +18,19 @@ class UVerseUEInputComponentBase : public UEntityActorPlayerComponent
 	static inline constexpr uint64_t __MDKClassSize = 1088;
 
 public:
-	CMember(UInputComponent*)                          InputComponent                                              ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FVerseActionMappingArray)                  ReplicatedActionMappingArray                                ___ OFFSET(get<T>, {0xD8, 288, 0, 0})
-	SMember(FVerseAxisMappingArray)                    ReplicatedAxisMappingArray                                  ___ OFFSET(get<T>, {0x1F8, 288, 0, 0})
-	SMember(FVerseInputBindingArray)                   ReplicatedInputBindingArray                                 ___ OFFSET(get<T>, {0x318, 288, 0, 0})
+	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FVerseActionMappingArray)                  ReplicatedActionMappingArray                                OFFSET(get<T>, {0xD8, 288, 0, 0})
+	SMember(FVerseAxisMappingArray)                    ReplicatedAxisMappingArray                                  OFFSET(get<T>, {0x1F8, 288, 0, 0})
+	SMember(FVerseInputBindingArray)                   ReplicatedInputBindingArray                                 OFFSET(get<T>, {0x318, 288, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EpicGamesEngine.VerseUEInputComponentBase.ServerTriggerAxis
+	// void ServerTriggerAxis(FName AxisName, float Value);                                                                     // [0x96d03dc] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// Function /Script/EpicGamesEngine.VerseUEInputComponentBase.ServerTriggerAction
+	// void ServerTriggerAction(FName ActionName, TEnumAsByte<EInputEvent> InputEvent);                                         // [0x96d02f0] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 /// Struct /Script/EpicGamesEngine.VerseActionMapping
 /// Size: 0x0024 (0x00000C - 0x000030)
 class FVerseActionMapping : public FFastArraySerializerItem
@@ -32,9 +39,9 @@ class FVerseActionMapping : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FString)                                   UIText                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FKey>)                              Keys                                                        ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FString)                                   UIText                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FKey>)                              Keys                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/EpicGamesEngine.VerseActionMappingArray
@@ -45,8 +52,8 @@ class FVerseActionMappingArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FVerseActionMapping>)               ActionMappingArray                                          ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FVerseActionMapping>)               ActionMappingArray                                          OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Struct /Script/EpicGamesEngine.VerseAxisMapping
@@ -57,10 +64,10 @@ class FVerseAxisMapping : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     AxisName                                                    ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FString)                                   UIText                                                      ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FKey>)                              Keys                                                        ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FName)                                     AxisName                                                    OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
+	SMember(FString)                                   UIText                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FKey>)                              Keys                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/EpicGamesEngine.VerseAxisMappingArray
@@ -71,8 +78,8 @@ class FVerseAxisMappingArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FVerseAxisMapping>)                 AxisMappingArray                                            ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FVerseAxisMapping>)                 AxisMappingArray                                            OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Struct /Script/EpicGamesEngine.VerseInputBinding
@@ -83,8 +90,8 @@ class FVerseInputBinding : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	CMember(TEnumAsByte<EInputEvent>)                  InputEvent                                                  ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(TEnumAsByte<EInputEvent>)                  InputEvent                                                  OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/EpicGamesEngine.VerseInputBindingArray
@@ -95,7 +102,7 @@ class FVerseInputBindingArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FVerseInputBinding>)                InputBindingArray                                           ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             ___ OFFSET(get<T>, {0x118, 8, 0, 0})
+	CMember(TArray<FVerseInputBinding>)                InputBindingArray                                           OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(UVerseUEInputComponentBase*)               OwningComponent                                             OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 

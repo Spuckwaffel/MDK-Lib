@@ -25,7 +25,7 @@ class FCosmeticFlowData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<FName, FInstancedStruct>)             NamedData                                                   ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FName, FInstancedStruct>)             NamedData                                                   OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/CosmeticsFrameworkFlowgraph.OperationSequenceHandle

@@ -46,7 +46,7 @@ class UAnimNotify_PlayMontageNotify : public UAnimNotify
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     NotifyName                                                  ___ OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FName)                                     NotifyName                                                  OFFSET(get<T>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
@@ -57,7 +57,7 @@ class UAnimNotify_PlayMontageNotifyWindow : public UAnimNotifyState
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     NotifyName                                                  ___ OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     NotifyName                                                  OFFSET(get<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/AnimGraphRuntime.AnimSequencerInstance
@@ -128,13 +128,26 @@ class UPlayMontageCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCompleted                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnBlendOut                                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInterrupted                                               ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNotifyBegin                                               ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCompleted                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnBlendOut                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInterrupted                                               OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNotifyBegin                                               OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
+	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x5797ed4] Final|RequiredAPI|Native|Protected|HasOutParms 
+	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x5797df4] Final|RequiredAPI|Native|Protected|HasOutParms 
+	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
+	// void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);                                                           // [0x5797d2c] Final|RequiredAPI|Native|Protected 
+	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x5797c64] Final|RequiredAPI|Native|Protected 
+	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
+	// UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(USkeletalMeshComponent* InSkeletalMeshComponent, UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, FName StartingSection); // [0x277614c] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 /// Class /Script/AnimGraphRuntime.SequenceEvaluatorLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USequenceEvaluatorLibrary : public UBlueprintFunctionLibrary
@@ -183,12 +196,12 @@ class FAnimNode_BlendSpaceGraphBase : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FName)                                     GroupName                                                   ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   ___ OFFSET(get<T>, {0x1C, 1, 0, 0})
-	CMember(UBlendSpace*)                              BlendSpace                                                  ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(TArray<FPoseLink>)                         SamplePoseLinks                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x18, 4, 0, 0})
+	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   OFFSET(get<T>, {0x1C, 1, 0, 0})
+	CMember(UBlendSpace*)                              BlendSpace                                                  OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(TArray<FPoseLink>)                         SamplePoseLinks                                             OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendSpaceGraph
@@ -219,16 +232,16 @@ class FAnimNode_SkeletalControlBase : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FComponentSpacePoseLink)                   ComponentPose                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(float)                                     ActualAlpha                                                 ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x38, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0x84, 48, 0, 0})
+	SMember(FComponentSpacePoseLink)                   ComponentPose                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(float)                                     ActualAlpha                                                 OFFSET(get<float>, {0x24, 4, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x2C, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x38, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0x84, 48, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ModifyBone
@@ -239,16 +252,16 @@ class FAnimNode_ModifyBone : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FBoneReference)                            BoneToModify                                                ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x108, 24, 0, 0})
-	CMember(TEnumAsByte<EBoneModificationMode>)        TranslationMode                                             ___ OFFSET(get<T>, {0x120, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneModificationMode>)        RotationMode                                                ___ OFFSET(get<T>, {0x121, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneModificationMode>)        ScaleMode                                                   ___ OFFSET(get<T>, {0x122, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            TranslationSpace                                            ___ OFFSET(get<T>, {0x123, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            RotationSpace                                               ___ OFFSET(get<T>, {0x124, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            ScaleSpace                                                  ___ OFFSET(get<T>, {0x125, 1, 0, 0})
+	SMember(FBoneReference)                            BoneToModify                                                OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x108, 24, 0, 0})
+	CMember(TEnumAsByte<EBoneModificationMode>)        TranslationMode                                             OFFSET(get<T>, {0x120, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneModificationMode>)        RotationMode                                                OFFSET(get<T>, {0x121, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneModificationMode>)        ScaleMode                                                   OFFSET(get<T>, {0x122, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            TranslationSpace                                            OFFSET(get<T>, {0x123, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            RotationSpace                                               OFFSET(get<T>, {0x124, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            ScaleSpace                                                  OFFSET(get<T>, {0x125, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RefPose
@@ -279,11 +292,11 @@ class FAnimNode_RotationMultiplier : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneReference)                            SourceBone                                                  ___ OFFSET(get<T>, {0xD4, 12, 0, 0})
-	DMember(float)                                     Multiplier                                                  ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
-	CMember(TEnumAsByte<EBoneAxis>)                    RotationAxisToRefer                                         ___ OFFSET(get<T>, {0xE4, 1, 0, 0})
-	DMember(bool)                                      bIsAdditive                                                 ___ OFFSET(get<bool>, {0xE5, 1, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0xD4, 12, 0, 0})
+	DMember(float)                                     Multiplier                                                  OFFSET(get<float>, {0xE0, 4, 0, 0})
+	CMember(TEnumAsByte<EBoneAxis>)                    RotationAxisToRefer                                         OFFSET(get<T>, {0xE4, 1, 0, 0})
+	DMember(bool)                                      bIsAdditive                                                 OFFSET(get<bool>, {0xE5, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.BlendSpaceReference
@@ -304,21 +317,21 @@ class FRotationRetargetingInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FTransform)                                Source                                                      ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Target                                                      ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	CMember(ERotationComponent)                        RotationComponent                                           ___ OFFSET(get<T>, {0xD0, 1, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	DMember(bool)                                      bUseAbsoluteAngle                                           ___ OFFSET(get<bool>, {0xF0, 1, 0, 0})
-	DMember(float)                                     SourceMinimum                                               ___ OFFSET(get<float>, {0xF4, 4, 0, 0})
-	DMember(float)                                     SourceMaximum                                               ___ OFFSET(get<float>, {0xF8, 4, 0, 0})
-	DMember(float)                                     TargetMinimum                                               ___ OFFSET(get<float>, {0xFC, 4, 0, 0})
-	DMember(float)                                     TargetMaximum                                               ___ OFFSET(get<float>, {0x100, 4, 0, 0})
-	CMember(EEasingFuncType)                           EasingType                                                  ___ OFFSET(get<T>, {0x104, 1, 0, 0})
-	SMember(FRuntimeFloatCurve)                        CustomCurve                                                 ___ OFFSET(get<T>, {0x108, 136, 0, 0})
-	DMember(bool)                                      bFlipEasing                                                 ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	DMember(float)                                     EasingWeight                                                ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(bool)                                      bClamp                                                      ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FTransform)                                Source                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Target                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
+	CMember(ERotationComponent)                        RotationComponent                                           OFFSET(get<T>, {0xD0, 1, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0xD8, 24, 0, 0})
+	DMember(bool)                                      bUseAbsoluteAngle                                           OFFSET(get<bool>, {0xF0, 1, 0, 0})
+	DMember(float)                                     SourceMinimum                                               OFFSET(get<float>, {0xF4, 4, 0, 0})
+	DMember(float)                                     SourceMaximum                                               OFFSET(get<float>, {0xF8, 4, 0, 0})
+	DMember(float)                                     TargetMinimum                                               OFFSET(get<float>, {0xFC, 4, 0, 0})
+	DMember(float)                                     TargetMaximum                                               OFFSET(get<float>, {0x100, 4, 0, 0})
+	CMember(EEasingFuncType)                           EasingType                                                  OFFSET(get<T>, {0x104, 1, 0, 0})
+	SMember(FRuntimeFloatCurve)                        CustomCurve                                                 OFFSET(get<T>, {0x108, 136, 0, 0})
+	DMember(bool)                                      bFlipEasing                                                 OFFSET(get<bool>, {0x190, 1, 0, 0})
+	DMember(float)                                     EasingWeight                                                OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(bool)                                      bClamp                                                      OFFSET(get<bool>, {0x198, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.PositionHistory
@@ -329,8 +342,8 @@ class FPositionHistory : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<FVector>)                           Positions                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(float)                                     Range                                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(TArray<FVector>)                           Positions                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(float)                                     Range                                                       OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimationStateResultReference
@@ -361,7 +374,7 @@ class FAnimNode_BlendSpacePlayerBase : public FAnimNode_AssetPlayerBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(UBlendSpace*)                              PreviousBlendSpace                                          ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UBlendSpace*)                              PreviousBlendSpace                                          OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer
@@ -372,7 +385,7 @@ class FAnimNode_BlendSpacePlayer : public FAnimNode_BlendSpacePlayerBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(UBlendSpace*)                              BlendSpace                                                  ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UBlendSpace*)                              BlendSpace                                                  OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_AimOffsetLookAt
@@ -383,13 +396,13 @@ class FAnimNode_AimOffsetLookAt : public FAnimNode_BlendSpacePlayer
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FPoseLink)                                 BasePose                                                    ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x140, 4, 0, 0})
-	SMember(FName)                                     SourceSocketName                                            ___ OFFSET(get<T>, {0x144, 4, 0, 0})
-	SMember(FName)                                     PivotSocketName                                             ___ OFFSET(get<T>, {0x148, 4, 0, 0})
-	SMember(FVector)                                   LookAtLocation                                              ___ OFFSET(get<T>, {0x150, 24, 0, 0})
-	SMember(FVector)                                   SocketAxis                                                  ___ OFFSET(get<T>, {0x168, 24, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x180, 4, 0, 0})
+	SMember(FPoseLink)                                 BasePose                                                    OFFSET(get<T>, {0x130, 16, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x140, 4, 0, 0})
+	SMember(FName)                                     SourceSocketName                                            OFFSET(get<T>, {0x144, 4, 0, 0})
+	SMember(FName)                                     PivotSocketName                                             OFFSET(get<T>, {0x148, 4, 0, 0})
+	SMember(FVector)                                   LookAtLocation                                              OFFSET(get<T>, {0x150, 24, 0, 0})
+	SMember(FVector)                                   SocketAxis                                                  OFFSET(get<T>, {0x168, 24, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x180, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ApplyAdditive
@@ -400,16 +413,16 @@ class FAnimNode_ApplyAdditive : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FPoseLink)                                 base                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FPoseLink)                                 Additive                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x34, 8, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x40, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0x8C, 48, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0xC0, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0xC1, 1, 0, 0})
+	SMember(FPoseLink)                                 base                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 Additive                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x34, 8, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x40, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0x8C, 48, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0xC0, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0xC1, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.BlendBoneByChannelEntry
@@ -420,11 +433,11 @@ class FBlendBoneByChannelEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FBoneReference)                            SourceBone                                                  ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	DMember(bool)                                      bBlendTranslation                                           ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	DMember(bool)                                      bBlendRotation                                              ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
-	DMember(bool)                                      bBlendScale                                                 ___ OFFSET(get<bool>, {0x1A, 1, 0, 0})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0xC, 12, 0, 0})
+	DMember(bool)                                      bBlendTranslation                                           OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bBlendRotation                                              OFFSET(get<bool>, {0x19, 1, 0, 0})
+	DMember(bool)                                      bBlendScale                                                 OFFSET(get<bool>, {0x1A, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendBoneByChannel
@@ -435,12 +448,12 @@ class FAnimNode_BlendBoneByChannel : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FPoseLink)                                 A                                                           ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FPoseLink)                                 B                                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FBlendBoneByChannelEntry>)          BoneDefinitions                                             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            TransformsSpace                                             ___ OFFSET(get<T>, {0x60, 1, 0, 0})
+	SMember(FPoseLink)                                 A                                                           OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 B                                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FBlendBoneByChannelEntry>)          BoneDefinitions                                             OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x50, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            TransformsSpace                                             OFFSET(get<T>, {0x60, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendListBase
@@ -451,7 +464,7 @@ class FAnimNode_BlendListBase : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FPoseLink>)                         BlendPose                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FPoseLink>)                         BlendPose                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendListByBool
@@ -492,8 +505,8 @@ class FAnimNode_BlendSpaceEvaluator : public FAnimNode_BlendSpacePlayer
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(float)                                     NormalizedTime                                              ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(bool)                                      bTeleportToNormalizedTime                                   ___ OFFSET(get<bool>, {0x74, 1, 0, 0})
+	DMember(float)                                     NormalizedTime                                              OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(bool)                                      bTeleportToNormalizedTime                                   OFFSET(get<bool>, {0x74, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer_Standalone
@@ -504,17 +517,17 @@ class FAnimNode_BlendSpacePlayer_Standalone : public FAnimNode_BlendSpacePlayerB
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     GroupName                                                   ___ OFFSET(get<T>, {0x68, 4, 0, 0})
-	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   ___ OFFSET(get<T>, {0x6C, 1, 0, 0})
-	CMember(EAnimSyncMethod)                           Method                                                      ___ OFFSET(get<T>, {0x6D, 1, 0, 0})
-	DMember(bool)                                      bIgnoreForRelevancyTest                                     ___ OFFSET(get<bool>, {0x6E, 1, 0, 0})
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     PlayRate                                                    ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	DMember(bool)                                      bLoop                                                       ___ OFFSET(get<bool>, {0x7C, 1, 0, 0})
-	DMember(bool)                                      bResetPlayTimeWhenBlendSpaceChanges                         ___ OFFSET(get<bool>, {0x7D, 1, 0, 0})
-	DMember(float)                                     StartPosition                                               ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	CMember(UBlendSpace*)                              BlendSpace                                                  ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x68, 4, 0, 0})
+	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   OFFSET(get<T>, {0x6C, 1, 0, 0})
+	CMember(EAnimSyncMethod)                           Method                                                      OFFSET(get<T>, {0x6D, 1, 0, 0})
+	DMember(bool)                                      bIgnoreForRelevancyTest                                     OFFSET(get<bool>, {0x6E, 1, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x78, 4, 0, 0})
+	DMember(bool)                                      bLoop                                                       OFFSET(get<bool>, {0x7C, 1, 0, 0})
+	DMember(bool)                                      bResetPlayTimeWhenBlendSpaceChanges                         OFFSET(get<bool>, {0x7D, 1, 0, 0})
+	DMember(float)                                     StartPosition                                               OFFSET(get<float>, {0x80, 4, 0, 0})
+	CMember(UBlendSpace*)                              BlendSpace                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CallFunction
@@ -525,8 +538,8 @@ class FAnimNode_CallFunction : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(EAnimFunctionCallSite)                     CallSite                                                    ___ OFFSET(get<T>, {0x34, 4, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(EAnimFunctionCallSite)                     CallSite                                                    OFFSET(get<T>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CopyPoseFromMesh
@@ -537,12 +550,12 @@ class FAnimNode_CopyPoseFromMesh : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      bUseAttachedParent                                          ___ OFFSET(get<bool>, {0x18, 1, 1, 0})
-	DMember(bool)                                      bCopyCurves                                                 ___ OFFSET(get<bool>, {0x18, 1, 1, 1})
-	DMember(bool)                                      bCopyCustomAttributes                                       ___ OFFSET(get<bool>, {0x19, 1, 0, 0})
-	DMember(bool)                                      bUseMeshPose                                                ___ OFFSET(get<bool>, {0x1A, 1, 1, 0})
-	SMember(FName)                                     RootBoneToCopy                                              ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      bUseAttachedParent                                          OFFSET(get<bool>, {0x18, 1, 1, 0})
+	DMember(bool)                                      bCopyCurves                                                 OFFSET(get<bool>, {0x18, 1, 1, 1})
+	DMember(bool)                                      bCopyCustomAttributes                                       OFFSET(get<bool>, {0x19, 1, 0, 0})
+	DMember(bool)                                      bUseMeshPose                                                OFFSET(get<bool>, {0x1A, 1, 1, 0})
+	SMember(FName)                                     RootBoneToCopy                                              OFFSET(get<T>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CurveSource
@@ -553,10 +566,10 @@ class FAnimNode_CurveSource : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     SourceBinding                                               ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	CMember(TScriptInterface<Class>)                   CurveSource                                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     SourceBinding                                               OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x24, 4, 0, 0})
+	CMember(TScriptInterface<Class>)                   CurveSource                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend
@@ -567,20 +580,20 @@ class FAnimNode_LayeredBoneBlend : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FPoseLink)                                 BasePose                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FPoseLink>)                         BlendPoses                                                  ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(ELayeredBoneBlendMode)                     BlendMode                                                   ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(TArray<UBlendProfile*>)                    BlendMasks                                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FInputBlendPose>)                   LayerSetup                                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<float>)                             BlendWeights                                                ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	DMember(bool)                                      bMeshSpaceRotationBlend                                     ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
-	DMember(bool)                                      bMeshSpaceScaleBlend                                        ___ OFFSET(get<bool>, {0x69, 1, 0, 0})
-	CMember(TEnumAsByte<ECurveBlendOption>)            CurveBlendOption                                            ___ OFFSET(get<T>, {0x6A, 1, 0, 0})
-	DMember(bool)                                      bBlendRootMotionBasedOnRootBone                             ___ OFFSET(get<bool>, {0x6B, 1, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	CMember(TArray<FPerBoneBlendWeight>)               PerBoneBlendWeights                                         ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FGuid)                                     SkeletonGuid                                                ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FGuid)                                     VirtualBoneGuid                                             ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FPoseLink)                                 BasePose                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FPoseLink>)                         BlendPoses                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(ELayeredBoneBlendMode)                     BlendMode                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(TArray<UBlendProfile*>)                    BlendMasks                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FInputBlendPose>)                   LayerSetup                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<float>)                             BlendWeights                                                OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(bool)                                      bMeshSpaceRotationBlend                                     OFFSET(get<bool>, {0x68, 1, 0, 0})
+	DMember(bool)                                      bMeshSpaceScaleBlend                                        OFFSET(get<bool>, {0x69, 1, 0, 0})
+	CMember(TEnumAsByte<ECurveBlendOption>)            CurveBlendOption                                            OFFSET(get<T>, {0x6A, 1, 0, 0})
+	DMember(bool)                                      bBlendRootMotionBasedOnRootBone                             OFFSET(get<bool>, {0x6B, 1, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	CMember(TArray<FPerBoneBlendWeight>)               PerBoneBlendWeights                                         OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FGuid)                                     SkeletonGuid                                                OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FGuid)                                     VirtualBoneGuid                                             OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_MakeDynamicAdditive
@@ -591,9 +604,9 @@ class FAnimNode_MakeDynamicAdditive : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FPoseLink)                                 base                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FPoseLink)                                 Additive                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(bool)                                      bMeshSpaceAdditive                                          ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FPoseLink)                                 base                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 Additive                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(bool)                                      bMeshSpaceAdditive                                          OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_MirrorBase
@@ -604,7 +617,7 @@ class FAnimNode_MirrorBase : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Mirror
@@ -625,13 +638,13 @@ class FAnimNode_Mirror_Standalone : public FAnimNode_MirrorBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(bool)                                      bMirror                                                     ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	CMember(UMirrorDataTable*)                         MirrorDataTable                                             ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	DMember(float)                                     BlendTime                                                   ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(bool)                                      bResetChild                                                 ___ OFFSET(get<bool>, {0x5C, 1, 0, 0})
-	DMember(bool)                                      bBoneMirroring                                              ___ OFFSET(get<bool>, {0x5D, 1, 0, 0})
-	DMember(bool)                                      bCurveMirroring                                             ___ OFFSET(get<bool>, {0x5E, 1, 0, 0})
-	DMember(bool)                                      bAttributeMirroring                                         ___ OFFSET(get<bool>, {0x5F, 1, 0, 0})
+	DMember(bool)                                      bMirror                                                     OFFSET(get<bool>, {0x48, 1, 0, 0})
+	CMember(UMirrorDataTable*)                         MirrorDataTable                                             OFFSET(get<T>, {0x50, 8, 0, 0})
+	DMember(float)                                     BlendTime                                                   OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(bool)                                      bResetChild                                                 OFFSET(get<bool>, {0x5C, 1, 0, 0})
+	DMember(bool)                                      bBoneMirroring                                              OFFSET(get<bool>, {0x5D, 1, 0, 0})
+	DMember(bool)                                      bCurveMirroring                                             OFFSET(get<bool>, {0x5E, 1, 0, 0})
+	DMember(bool)                                      bAttributeMirroring                                         OFFSET(get<bool>, {0x5F, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ModifyCurve
@@ -642,12 +655,12 @@ class FAnimNode_ModifyCurve : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TMap<FName, float>)                        CurveMap                                                    ___ OFFSET(get<T>, {0x20, 80, 0, 0})
-	CMember(TArray<float>)                             CurveValues                                                 ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FName>)                             CurveNames                                                  ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x118, 4, 0, 0})
-	CMember(EModifyCurveApplyMode)                     ApplyMode                                                   ___ OFFSET(get<T>, {0x11C, 1, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TMap<FName, float>)                        CurveMap                                                    OFFSET(get<T>, {0x20, 80, 0, 0})
+	CMember(TArray<float>)                             CurveValues                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FName>)                             CurveNames                                                  OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x118, 4, 0, 0})
+	CMember(EModifyCurveApplyMode)                     ApplyMode                                                   OFFSET(get<T>, {0x11C, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_MultiWayBlend
@@ -658,11 +671,11 @@ class FAnimNode_MultiWayBlend : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FPoseLink>)                         Poses                                                       ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<float>)                             DesiredAlphas                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(bool)                                      bAdditiveNode                                               ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bNormalizeAlpha                                             ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
+	CMember(TArray<FPoseLink>)                         Poses                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<float>)                             DesiredAlphas                                               OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(bool)                                      bAdditiveNode                                               OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(bool)                                      bNormalizeAlpha                                             OFFSET(get<bool>, {0x49, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_PoseHandler
@@ -673,7 +686,7 @@ class FAnimNode_PoseHandler : public FAnimNode_AssetPlayerBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(UPoseAsset*)                               PoseAsset                                                   ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UPoseAsset*)                               PoseAsset                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_PoseBlendNode
@@ -684,9 +697,9 @@ class FAnimNode_PoseBlendNode : public FAnimNode_PoseHandler
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(EAlphaBlendOption)                         BlendOption                                                 ___ OFFSET(get<T>, {0xA8, 1, 0, 0})
-	CMember(UCurveFloat*)                              CustomCurve                                                 ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(EAlphaBlendOption)                         BlendOption                                                 OFFSET(get<T>, {0xA8, 1, 0, 0})
+	CMember(UCurveFloat*)                              CustomCurve                                                 OFFSET(get<T>, {0xB0, 8, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_PoseByName
@@ -697,8 +710,8 @@ class FAnimNode_PoseByName : public FAnimNode_PoseHandler
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FName)                                     PoseName                                                    ___ OFFSET(get<T>, {0x98, 4, 0, 0})
-	DMember(float)                                     PoseWeight                                                  ___ OFFSET(get<float>, {0x9C, 4, 0, 0})
+	SMember(FName)                                     PoseName                                                    OFFSET(get<T>, {0x98, 4, 0, 0})
+	DMember(float)                                     PoseWeight                                                  OFFSET(get<float>, {0x9C, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.PoseDriverTransform
@@ -709,8 +722,8 @@ class FPoseDriverTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   TargetTranslation                                           ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  TargetRotation                                              ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   TargetTranslation                                           OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  TargetRotation                                              OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.PoseDriverTarget
@@ -721,15 +734,15 @@ class FPoseDriverTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FPoseDriverTransform>)              BoneTransforms                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FRotator)                                  TargetRotation                                              ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	DMember(float)                                     TargetScale                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(ERBFDistanceMethod)                        DistanceMethod                                              ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	CMember(ERBFFunctionType)                          FunctionType                                                ___ OFFSET(get<T>, {0x2D, 1, 0, 0})
-	DMember(bool)                                      bApplyCustomCurve                                           ___ OFFSET(get<bool>, {0x2E, 1, 0, 0})
-	SMember(FRichCurve)                                CustomCurve                                                 ___ OFFSET(get<T>, {0x30, 128, 0, 0})
-	SMember(FName)                                     DrivenName                                                  ___ OFFSET(get<T>, {0xB0, 4, 0, 0})
-	DMember(bool)                                      bIsHidden                                                   ___ OFFSET(get<bool>, {0xBC, 1, 0, 0})
+	CMember(TArray<FPoseDriverTransform>)              BoneTransforms                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FRotator)                                  TargetRotation                                              OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(float)                                     TargetScale                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(ERBFDistanceMethod)                        DistanceMethod                                              OFFSET(get<T>, {0x2C, 1, 0, 0})
+	CMember(ERBFFunctionType)                          FunctionType                                                OFFSET(get<T>, {0x2D, 1, 0, 0})
+	DMember(bool)                                      bApplyCustomCurve                                           OFFSET(get<bool>, {0x2E, 1, 0, 0})
+	SMember(FRichCurve)                                CustomCurve                                                 OFFSET(get<T>, {0x30, 128, 0, 0})
+	SMember(FName)                                     DrivenName                                                  OFFSET(get<T>, {0xB0, 4, 0, 0})
+	DMember(bool)                                      bIsHidden                                                   OFFSET(get<bool>, {0xBC, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_PoseDriver
@@ -740,16 +753,16 @@ class FAnimNode_PoseDriver : public FAnimNode_PoseHandler
 	static inline constexpr uint64_t __MDKClassSize = 408;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TArray<FBoneReference>)                    SourceBones                                                 ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FBoneReference)                            EvalSpaceBone                                               ___ OFFSET(get<T>, {0xB8, 12, 0, 0})
-	DMember(bool)                                      bEvalFromRefPose                                            ___ OFFSET(get<bool>, {0xC4, 1, 0, 0})
-	CMember(TArray<FBoneReference>)                    OnlyDriveBones                                              ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	CMember(TArray<FPoseDriverTarget>)                 PoseTargets                                                 ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FRBFParams)                                RBFParams                                                   ___ OFFSET(get<T>, {0xE8, 56, 0, 0})
-	CMember(EPoseDriverSource)                         DriveSource                                                 ___ OFFSET(get<T>, {0x120, 1, 0, 0})
-	CMember(EPoseDriverOutput)                         DriveOutput                                                 ___ OFFSET(get<T>, {0x121, 1, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x164, 4, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TArray<FBoneReference>)                    SourceBones                                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FBoneReference)                            EvalSpaceBone                                               OFFSET(get<T>, {0xB8, 12, 0, 0})
+	DMember(bool)                                      bEvalFromRefPose                                            OFFSET(get<bool>, {0xC4, 1, 0, 0})
+	CMember(TArray<FBoneReference>)                    OnlyDriveBones                                              OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(TArray<FPoseDriverTarget>)                 PoseTargets                                                 OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FRBFParams)                                RBFParams                                                   OFFSET(get<T>, {0xE8, 56, 0, 0})
+	CMember(EPoseDriverSource)                         DriveSource                                                 OFFSET(get<T>, {0x120, 1, 0, 0})
+	CMember(EPoseDriverOutput)                         DriveOutput                                                 OFFSET(get<T>, {0x121, 1, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x164, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.RBFParams
@@ -760,18 +773,18 @@ class FRBFParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   TargetDimensions                                            ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(ERBFSolverType)                            SolverType                                                  ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bAutomaticRadius                                            ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	CMember(ERBFFunctionType)                          Function                                                    ___ OFFSET(get<T>, {0xD, 1, 0, 0})
-	CMember(ERBFDistanceMethod)                        DistanceMethod                                              ___ OFFSET(get<T>, {0xE, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneAxis>)                    TwistAxis                                                   ___ OFFSET(get<T>, {0xF, 1, 0, 0})
-	DMember(float)                                     WeightThreshold                                             ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	CMember(ERBFNormalizeMethod)                       NormalizeMethod                                             ___ OFFSET(get<T>, {0x14, 1, 0, 0})
-	SMember(FVector)                                   MedianReference                                             ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(float)                                     MedianMin                                                   ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     MedianMax                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(int32_t)                                   TargetDimensions                                            OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(ERBFSolverType)                            SolverType                                                  OFFSET(get<T>, {0x4, 1, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bAutomaticRadius                                            OFFSET(get<bool>, {0xC, 1, 0, 0})
+	CMember(ERBFFunctionType)                          Function                                                    OFFSET(get<T>, {0xD, 1, 0, 0})
+	CMember(ERBFDistanceMethod)                        DistanceMethod                                              OFFSET(get<T>, {0xE, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneAxis>)                    TwistAxis                                                   OFFSET(get<T>, {0xF, 1, 0, 0})
+	DMember(float)                                     WeightThreshold                                             OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(ERBFNormalizeMethod)                       NormalizeMethod                                             OFFSET(get<T>, {0x14, 1, 0, 0})
+	SMember(FVector)                                   MedianReference                                             OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(float)                                     MedianMin                                                   OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     MedianMax                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_PoseSnapshot
@@ -782,9 +795,9 @@ class FAnimNode_PoseSnapshot : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     SnapshotName                                                ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FPoseSnapshot)                             Snapshot                                                    ___ OFFSET(get<T>, {0x18, 48, 0, 0})
-	CMember(ESnapshotSourceMode)                       Mode                                                        ___ OFFSET(get<T>, {0x48, 1, 0, 0})
+	SMember(FName)                                     SnapshotName                                                OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FPoseSnapshot)                             Snapshot                                                    OFFSET(get<T>, {0x18, 48, 0, 0})
+	CMember(ESnapshotSourceMode)                       Mode                                                        OFFSET(get<T>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.RandomPlayerSequenceEntry
@@ -795,13 +808,13 @@ class FRandomPlayerSequenceEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(UAnimSequenceBase*)                        Sequence                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     ChanceToPlay                                                ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   MinLoopCount                                                ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   MaxLoopCount                                                ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(float)                                     MinPlayRate                                                 ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     MaxPlayRate                                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	SMember(FAlphaBlend)                               BlendIn                                                     ___ OFFSET(get<T>, {0x20, 48, 0, 0})
+	CMember(UAnimSequenceBase*)                        Sequence                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     ChanceToPlay                                                OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   MinLoopCount                                                OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   MaxLoopCount                                                OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(float)                                     MinPlayRate                                                 OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     MaxPlayRate                                                 OFFSET(get<float>, {0x18, 4, 0, 0})
+	SMember(FAlphaBlend)                               BlendIn                                                     OFFSET(get<T>, {0x20, 48, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RandomPlayer
@@ -812,9 +825,9 @@ class FAnimNode_RandomPlayer : public FAnimNode_AssetPlayerRelevancyBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TArray<FRandomPlayerSequenceEntry>)        Entries                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(float)                                     BlendWeight                                                 ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(bool)                                      bShuffleMode                                                ___ OFFSET(get<bool>, {0x74, 1, 0, 0})
+	CMember(TArray<FRandomPlayerSequenceEntry>)        Entries                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(float)                                     BlendWeight                                                 OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(bool)                                      bShuffleMode                                                OFFSET(get<bool>, {0x74, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RotateRootBone
@@ -825,13 +838,13 @@ class FAnimNode_RotateRootBone : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FPoseLink)                                 BasePose                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(float)                                     Pitch                                                       ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     Yaw                                                         ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      PitchScaleBiasClamp                                         ___ OFFSET(get<T>, {0x28, 48, 0, 0})
-	SMember(FInputScaleBiasClamp)                      YawScaleBiasClamp                                           ___ OFFSET(get<T>, {0x58, 48, 0, 0})
-	SMember(FRotator)                                  MeshToComponent                                             ___ OFFSET(get<T>, {0x88, 24, 0, 0})
-	DMember(bool)                                      bRotateRootMotionAttribute                                  ___ OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	SMember(FPoseLink)                                 BasePose                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(float)                                     Pitch                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Yaw                                                         OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      PitchScaleBiasClamp                                         OFFSET(get<T>, {0x28, 48, 0, 0})
+	SMember(FInputScaleBiasClamp)                      YawScaleBiasClamp                                           OFFSET(get<T>, {0x58, 48, 0, 0})
+	SMember(FRotator)                                  MeshToComponent                                             OFFSET(get<T>, {0x88, 24, 0, 0})
+	DMember(bool)                                      bRotateRootMotionAttribute                                  OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RotationOffsetBlendSpace
@@ -842,15 +855,15 @@ class FAnimNode_RotationOffsetBlendSpace : public FAnimNode_BlendSpacePlayer
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FPoseLink)                                 BasePose                                                    ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x80, 4, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x90, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0xD8, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0xDC, 48, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0x110, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0x111, 1, 0, 0})
+	SMember(FPoseLink)                                 BasePose                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x80, 4, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x84, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x90, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0xD8, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0xDC, 48, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x110, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x111, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RotationOffsetBlendSpaceGraph
@@ -861,15 +874,15 @@ class FAnimNode_RotationOffsetBlendSpaceGraph : public FAnimNode_BlendSpaceGraph
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FPoseLink)                                 BasePose                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	DMember(int32_t)                                   LODThreshold                                                ___ OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x80, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0xC8, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0xCC, 48, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0x100, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0x101, 1, 0, 0})
+	SMember(FPoseLink)                                 BasePose                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x74, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x80, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0xCC, 48, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x100, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x101, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_SequenceEvaluatorBase
@@ -900,16 +913,16 @@ class FAnimNode_SequenceEvaluator_Standalone : public FAnimNode_SequenceEvaluato
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     GroupName                                                   ___ OFFSET(get<T>, {0x40, 4, 0, 0})
-	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   ___ OFFSET(get<T>, {0x44, 1, 0, 0})
-	CMember(EAnimSyncMethod)                           Method                                                      ___ OFFSET(get<T>, {0x45, 1, 0, 0})
-	DMember(bool)                                      bIgnoreForRelevancyTest                                     ___ OFFSET(get<bool>, {0x46, 1, 0, 0})
-	CMember(UAnimSequenceBase*)                        Sequence                                                    ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	DMember(float)                                     ExplicitTime                                                ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(bool)                                      bShouldLoop                                                 ___ OFFSET(get<bool>, {0x54, 1, 0, 0})
-	DMember(bool)                                      bTeleportToExplicitTime                                     ___ OFFSET(get<bool>, {0x55, 1, 0, 0})
-	CMember(TEnumAsByte<ESequenceEvalReinit>)          ReinitializationBehavior                                    ___ OFFSET(get<T>, {0x56, 1, 0, 0})
-	DMember(float)                                     StartPosition                                               ___ OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x40, 4, 0, 0})
+	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   OFFSET(get<T>, {0x44, 1, 0, 0})
+	CMember(EAnimSyncMethod)                           Method                                                      OFFSET(get<T>, {0x45, 1, 0, 0})
+	DMember(bool)                                      bIgnoreForRelevancyTest                                     OFFSET(get<bool>, {0x46, 1, 0, 0})
+	CMember(UAnimSequenceBase*)                        Sequence                                                    OFFSET(get<T>, {0x48, 8, 0, 0})
+	DMember(float)                                     ExplicitTime                                                OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bShouldLoop                                                 OFFSET(get<bool>, {0x54, 1, 0, 0})
+	DMember(bool)                                      bTeleportToExplicitTime                                     OFFSET(get<bool>, {0x55, 1, 0, 0})
+	CMember(TEnumAsByte<ESequenceEvalReinit>)          ReinitializationBehavior                                    OFFSET(get<T>, {0x56, 1, 0, 0})
+	DMember(float)                                     StartPosition                                               OFFSET(get<float>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Slot
@@ -920,9 +933,9 @@ class FAnimNode_Slot : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     SlotName                                                    ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(bool)                                      bAlwaysUpdateSourcePose                                     ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(bool)                                      bAlwaysUpdateSourcePose                                     OFFSET(get<bool>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Sync
@@ -933,9 +946,9 @@ class FAnimNode_Sync : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     GroupName                                                   ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   ___ OFFSET(get<T>, {0x24, 1, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x20, 4, 0, 0})
+	CMember(TEnumAsByte<EAnimGroupRole>)               GroupRole                                                   OFFSET(get<T>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_TwoWayBlend
@@ -946,16 +959,16 @@ class FAnimNode_TwoWayBlend : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FPoseLink)                                 A                                                           ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FPoseLink)                                 B                                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(EAnimAlphaInputType)                       AlphaInputType                                              ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	DMember(bool)                                      bAlphaBoolEnabled                                           ___ OFFSET(get<bool>, {0x31, 1, 1, 0})
-	DMember(bool)                                      bResetChildOnActivation                                     ___ OFFSET(get<bool>, {0x31, 1, 1, 3})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              ___ OFFSET(get<T>, {0x40, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              ___ OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         ___ OFFSET(get<T>, {0x8C, 48, 0, 0})
+	SMember(FPoseLink)                                 A                                                           OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 B                                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x31, 1, 1, 0})
+	DMember(bool)                                      bResetChildOnActivation                                     OFFSET(get<bool>, {0x31, 1, 1, 3})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x40, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0x8C, 48, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimSequencerInstanceProxy
@@ -996,18 +1009,18 @@ class FAnimPhysConstraintSetup : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(AnimPhysLinearConstraintType)              LinearXLimitType                                            ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(AnimPhysLinearConstraintType)              LinearYLimitType                                            ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	CMember(AnimPhysLinearConstraintType)              LinearZLimitType                                            ___ OFFSET(get<T>, {0x2, 1, 0, 0})
-	SMember(FVector)                                   LinearAxesMin                                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   LinearAxesMax                                               ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(AnimPhysAngularConstraintType)             AngularConstraintType                                       ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	CMember(AnimPhysTwistAxis)                         TwistAxis                                                   ___ OFFSET(get<T>, {0x39, 1, 0, 0})
-	CMember(AnimPhysTwistAxis)                         AngularTargetAxis                                           ___ OFFSET(get<T>, {0x3A, 1, 0, 0})
-	DMember(float)                                     ConeAngle                                                   ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	SMember(FVector)                                   AngularLimitsMin                                            ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AngularLimitsMax                                            ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   AngularTarget                                               ___ OFFSET(get<T>, {0x70, 24, 0, 0})
+	CMember(AnimPhysLinearConstraintType)              LinearXLimitType                                            OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(AnimPhysLinearConstraintType)              LinearYLimitType                                            OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(AnimPhysLinearConstraintType)              LinearZLimitType                                            OFFSET(get<T>, {0x2, 1, 0, 0})
+	SMember(FVector)                                   LinearAxesMin                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   LinearAxesMax                                               OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(AnimPhysAngularConstraintType)             AngularConstraintType                                       OFFSET(get<T>, {0x38, 1, 0, 0})
+	CMember(AnimPhysTwistAxis)                         TwistAxis                                                   OFFSET(get<T>, {0x39, 1, 0, 0})
+	CMember(AnimPhysTwistAxis)                         AngularTargetAxis                                           OFFSET(get<T>, {0x3A, 1, 0, 0})
+	DMember(float)                                     ConeAngle                                                   OFFSET(get<float>, {0x3C, 4, 0, 0})
+	SMember(FVector)                                   AngularLimitsMin                                            OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AngularLimitsMax                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   AngularTarget                                               OFFSET(get<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimPhysPlanarLimit
@@ -1018,8 +1031,8 @@ class FAnimPhysPlanarLimit : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FBoneReference)                            DrivingBone                                                 ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FTransform)                                PlaneTransform                                              ___ OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FBoneReference)                            DrivingBone                                                 OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FTransform)                                PlaneTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimPhysSphericalLimit
@@ -1030,10 +1043,10 @@ class FAnimPhysSphericalLimit : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FBoneReference)                            DrivingBone                                                 ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector)                                   SphereLocalOffset                                           ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	DMember(float)                                     LimitRadius                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(ESphericalLimitType)                       LimitType                                                   ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
+	SMember(FBoneReference)                            DrivingBone                                                 OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FVector)                                   SphereLocalOffset                                           OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(float)                                     LimitRadius                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(ESphericalLimitType)                       LimitType                                                   OFFSET(get<T>, {0x2C, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimPhysBodyDefinition
@@ -1044,12 +1057,12 @@ class FAnimPhysBodyDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FBoneReference)                            BoundBone                                                   ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector)                                   BoxExtents                                                  ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   LocalJointOffset                                            ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FAnimPhysConstraintSetup)                  ConstraintSetup                                             ___ OFFSET(get<T>, {0x40, 136, 0, 0})
-	CMember(AnimPhysCollisionType)                     CollisionType                                               ___ OFFSET(get<T>, {0xC8, 1, 0, 0})
-	DMember(float)                                     SphereCollisionRadius                                       ___ OFFSET(get<float>, {0xCC, 4, 0, 0})
+	SMember(FBoneReference)                            BoundBone                                                   OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FVector)                                   BoxExtents                                                  OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   LocalJointOffset                                            OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FAnimPhysConstraintSetup)                  ConstraintSetup                                             OFFSET(get<T>, {0x40, 136, 0, 0})
+	CMember(AnimPhysCollisionType)                     CollisionType                                               OFFSET(get<T>, {0xC8, 1, 0, 0})
+	DMember(float)                                     SphereCollisionRadius                                       OFFSET(get<float>, {0xCC, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_AnimDynamics
@@ -1060,41 +1073,41 @@ class FAnimNode_AnimDynamics : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 1296;
 
 public:
-	DMember(float)                                     LinearDampingOverride                                       ___ OFFSET(get<float>, {0xC8, 4, 0, 0})
-	DMember(float)                                     AngularDampingOverride                                      ___ OFFSET(get<float>, {0xCC, 4, 0, 0})
-	SMember(FBoneReference)                            RelativeSpaceBone                                           ___ OFFSET(get<T>, {0x190, 12, 0, 0})
-	SMember(FBoneReference)                            BoundBone                                                   ___ OFFSET(get<T>, {0x19C, 12, 0, 0})
-	SMember(FBoneReference)                            ChainEnd                                                    ___ OFFSET(get<T>, {0x1A8, 12, 0, 0})
-	CMember(TArray<FAnimPhysBodyDefinition>)           PhysicsBodyDefinitions                                      ___ OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	DMember(float)                                     GravityScale                                                ___ OFFSET(get<float>, {0x1C8, 4, 0, 0})
-	SMember(FVector)                                   GravityOverride                                             ___ OFFSET(get<T>, {0x1D0, 24, 0, 0})
-	DMember(float)                                     LinearSpringConstant                                        ___ OFFSET(get<float>, {0x1E8, 4, 0, 0})
-	DMember(float)                                     AngularSpringConstant                                       ___ OFFSET(get<float>, {0x1EC, 4, 0, 0})
-	DMember(float)                                     WindScale                                                   ___ OFFSET(get<float>, {0x1F0, 4, 0, 0})
-	SMember(FVector)                                   ComponentLinearAccScale                                     ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearVelScale                                     ___ OFFSET(get<T>, {0x210, 24, 0, 0})
-	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              ___ OFFSET(get<T>, {0x228, 24, 0, 0})
-	DMember(float)                                     AngularBiasOverride                                         ___ OFFSET(get<float>, {0x240, 4, 0, 0})
-	DMember(int32_t)                                   NumSolverIterationsPreUpdate                                ___ OFFSET(get<int32_t>, {0x244, 4, 0, 0})
-	DMember(int32_t)                                   NumSolverIterationsPostUpdate                               ___ OFFSET(get<int32_t>, {0x248, 4, 0, 0})
-	CMember(TArray<FAnimPhysSphericalLimit>)           SphericalLimits                                             ___ OFFSET(get<T>, {0x250, 16, 0, 0})
-	SMember(FVector)                                   ExternalForce                                               ___ OFFSET(get<T>, {0x260, 24, 0, 0})
-	CMember(TArray<FAnimPhysPlanarLimit>)              PlanarLimits                                                ___ OFFSET(get<T>, {0x278, 16, 0, 0})
-	CMember(AnimPhysSimSpaceType)                      SimulationSpace                                             ___ OFFSET(get<T>, {0x288, 1, 0, 0})
-	DMember(bool)                                      bUseSphericalLimits                                         ___ OFFSET(get<bool>, {0x28B, 1, 1, 0})
-	DMember(bool)                                      bUsePlanarLimit                                             ___ OFFSET(get<bool>, {0x28B, 1, 1, 1})
-	DMember(bool)                                      bDoUpdate                                                   ___ OFFSET(get<bool>, {0x28B, 1, 1, 2})
-	DMember(bool)                                      bDoEval                                                     ___ OFFSET(get<bool>, {0x28B, 1, 1, 3})
-	DMember(bool)                                      bOverrideLinearDamping                                      ___ OFFSET(get<bool>, {0x28B, 1, 1, 4})
-	DMember(bool)                                      bOverrideAngularBias                                        ___ OFFSET(get<bool>, {0x28B, 1, 1, 5})
-	DMember(bool)                                      bOverrideAngularDamping                                     ___ OFFSET(get<bool>, {0x28B, 1, 1, 6})
-	DMember(bool)                                      bEnableWind                                                 ___ OFFSET(get<bool>, {0x28B, 1, 1, 7})
-	DMember(bool)                                      bUseGravityOverride                                         ___ OFFSET(get<bool>, {0x28C, 1, 1, 1})
-	DMember(bool)                                      bGravityOverrideInSimSpace                                  ___ OFFSET(get<bool>, {0x28C, 1, 1, 2})
-	DMember(bool)                                      bLinearSpring                                               ___ OFFSET(get<bool>, {0x28C, 1, 1, 3})
-	DMember(bool)                                      bAngularSpring                                              ___ OFFSET(get<bool>, {0x28C, 1, 1, 4})
-	DMember(bool)                                      bChain                                                      ___ OFFSET(get<bool>, {0x28C, 1, 1, 5})
-	SMember(FRotationRetargetingInfo)                  RetargetingSettings                                         ___ OFFSET(get<T>, {0x290, 416, 0, 0})
+	DMember(float)                                     LinearDampingOverride                                       OFFSET(get<float>, {0xC8, 4, 0, 0})
+	DMember(float)                                     AngularDampingOverride                                      OFFSET(get<float>, {0xCC, 4, 0, 0})
+	SMember(FBoneReference)                            RelativeSpaceBone                                           OFFSET(get<T>, {0x190, 12, 0, 0})
+	SMember(FBoneReference)                            BoundBone                                                   OFFSET(get<T>, {0x19C, 12, 0, 0})
+	SMember(FBoneReference)                            ChainEnd                                                    OFFSET(get<T>, {0x1A8, 12, 0, 0})
+	CMember(TArray<FAnimPhysBodyDefinition>)           PhysicsBodyDefinitions                                      OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	DMember(float)                                     GravityScale                                                OFFSET(get<float>, {0x1C8, 4, 0, 0})
+	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0x1D0, 24, 0, 0})
+	DMember(float)                                     LinearSpringConstant                                        OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	DMember(float)                                     AngularSpringConstant                                       OFFSET(get<float>, {0x1EC, 4, 0, 0})
+	DMember(float)                                     WindScale                                                   OFFSET(get<float>, {0x1F0, 4, 0, 0})
+	SMember(FVector)                                   ComponentLinearAccScale                                     OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearVelScale                                     OFFSET(get<T>, {0x210, 24, 0, 0})
+	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              OFFSET(get<T>, {0x228, 24, 0, 0})
+	DMember(float)                                     AngularBiasOverride                                         OFFSET(get<float>, {0x240, 4, 0, 0})
+	DMember(int32_t)                                   NumSolverIterationsPreUpdate                                OFFSET(get<int32_t>, {0x244, 4, 0, 0})
+	DMember(int32_t)                                   NumSolverIterationsPostUpdate                               OFFSET(get<int32_t>, {0x248, 4, 0, 0})
+	CMember(TArray<FAnimPhysSphericalLimit>)           SphericalLimits                                             OFFSET(get<T>, {0x250, 16, 0, 0})
+	SMember(FVector)                                   ExternalForce                                               OFFSET(get<T>, {0x260, 24, 0, 0})
+	CMember(TArray<FAnimPhysPlanarLimit>)              PlanarLimits                                                OFFSET(get<T>, {0x278, 16, 0, 0})
+	CMember(AnimPhysSimSpaceType)                      SimulationSpace                                             OFFSET(get<T>, {0x288, 1, 0, 0})
+	DMember(bool)                                      bUseSphericalLimits                                         OFFSET(get<bool>, {0x28B, 1, 1, 0})
+	DMember(bool)                                      bUsePlanarLimit                                             OFFSET(get<bool>, {0x28B, 1, 1, 1})
+	DMember(bool)                                      bDoUpdate                                                   OFFSET(get<bool>, {0x28B, 1, 1, 2})
+	DMember(bool)                                      bDoEval                                                     OFFSET(get<bool>, {0x28B, 1, 1, 3})
+	DMember(bool)                                      bOverrideLinearDamping                                      OFFSET(get<bool>, {0x28B, 1, 1, 4})
+	DMember(bool)                                      bOverrideAngularBias                                        OFFSET(get<bool>, {0x28B, 1, 1, 5})
+	DMember(bool)                                      bOverrideAngularDamping                                     OFFSET(get<bool>, {0x28B, 1, 1, 6})
+	DMember(bool)                                      bEnableWind                                                 OFFSET(get<bool>, {0x28B, 1, 1, 7})
+	DMember(bool)                                      bUseGravityOverride                                         OFFSET(get<bool>, {0x28C, 1, 1, 1})
+	DMember(bool)                                      bGravityOverrideInSimSpace                                  OFFSET(get<bool>, {0x28C, 1, 1, 2})
+	DMember(bool)                                      bLinearSpring                                               OFFSET(get<bool>, {0x28C, 1, 1, 3})
+	DMember(bool)                                      bAngularSpring                                              OFFSET(get<bool>, {0x28C, 1, 1, 4})
+	DMember(bool)                                      bChain                                                      OFFSET(get<bool>, {0x28C, 1, 1, 5})
+	SMember(FRotationRetargetingInfo)                  RetargetingSettings                                         OFFSET(get<T>, {0x290, 416, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AngularRangeLimit
@@ -1105,9 +1118,9 @@ class FAngularRangeLimit : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   LimitMin                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LimitMax                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FBoneReference)                            bone                                                        ___ OFFSET(get<T>, {0x30, 12, 0, 0})
+	SMember(FVector)                                   LimitMin                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LimitMax                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x30, 12, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ApplyLimits
@@ -1118,8 +1131,8 @@ class FAnimNode_ApplyLimits : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(TArray<FAngularRangeLimit>)                AngularRangeLimits                                          ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	CMember(TArray<FVector>)                           AngularOffsets                                              ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(TArray<FAngularRangeLimit>)                AngularRangeLimits                                          OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(TArray<FVector>)                           AngularOffsets                                              OFFSET(get<T>, {0xD8, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_BoneDrivenController
@@ -1130,28 +1143,28 @@ class FAnimNode_BoneDrivenController : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FBoneReference)                            SourceBone                                                  ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	CMember(UCurveFloat*)                              DrivingCurve                                                ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
-	DMember(float)                                     Multiplier                                                  ___ OFFSET(get<float>, {0xE0, 4, 0, 0})
-	DMember(double)                                    RangeMin                                                    ___ OFFSET(get<double>, {0xE8, 8, 0, 0})
-	DMember(double)                                    RangeMax                                                    ___ OFFSET(get<double>, {0xF0, 8, 0, 0})
-	DMember(double)                                    RemappedMin                                                 ___ OFFSET(get<double>, {0xF8, 8, 0, 0})
-	DMember(double)                                    RemappedMax                                                 ___ OFFSET(get<double>, {0x100, 8, 0, 0})
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x108, 4, 0, 0})
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0x10C, 12, 0, 0})
-	CMember(EDrivenDestinationMode)                    DestinationMode                                             ___ OFFSET(get<T>, {0x118, 1, 0, 0})
-	CMember(EDrivenBoneModificationMode)               ModificationMode                                            ___ OFFSET(get<T>, {0x119, 1, 0, 0})
-	CMember(TEnumAsByte<EComponentType>)               SourceComponent                                             ___ OFFSET(get<T>, {0x11A, 1, 0, 0})
-	DMember(bool)                                      bUseRange                                                   ___ OFFSET(get<bool>, {0x11B, 1, 1, 0})
-	DMember(bool)                                      bAffectTargetTranslationX                                   ___ OFFSET(get<bool>, {0x11B, 1, 1, 1})
-	DMember(bool)                                      bAffectTargetTranslationY                                   ___ OFFSET(get<bool>, {0x11B, 1, 1, 2})
-	DMember(bool)                                      bAffectTargetTranslationZ                                   ___ OFFSET(get<bool>, {0x11B, 1, 1, 3})
-	DMember(bool)                                      bAffectTargetRotationX                                      ___ OFFSET(get<bool>, {0x11B, 1, 1, 4})
-	DMember(bool)                                      bAffectTargetRotationY                                      ___ OFFSET(get<bool>, {0x11B, 1, 1, 5})
-	DMember(bool)                                      bAffectTargetRotationZ                                      ___ OFFSET(get<bool>, {0x11B, 1, 1, 6})
-	DMember(bool)                                      bAffectTargetScaleX                                         ___ OFFSET(get<bool>, {0x11B, 1, 1, 7})
-	DMember(bool)                                      bAffectTargetScaleY                                         ___ OFFSET(get<bool>, {0x11C, 1, 1, 0})
-	DMember(bool)                                      bAffectTargetScaleZ                                         ___ OFFSET(get<bool>, {0x11C, 1, 1, 1})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0xC8, 12, 0, 0})
+	CMember(UCurveFloat*)                              DrivingCurve                                                OFFSET(get<T>, {0xD8, 8, 0, 0})
+	DMember(float)                                     Multiplier                                                  OFFSET(get<float>, {0xE0, 4, 0, 0})
+	DMember(double)                                    RangeMin                                                    OFFSET(get<double>, {0xE8, 8, 0, 0})
+	DMember(double)                                    RangeMax                                                    OFFSET(get<double>, {0xF0, 8, 0, 0})
+	DMember(double)                                    RemappedMin                                                 OFFSET(get<double>, {0xF8, 8, 0, 0})
+	DMember(double)                                    RemappedMax                                                 OFFSET(get<double>, {0x100, 8, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x108, 4, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0x10C, 12, 0, 0})
+	CMember(EDrivenDestinationMode)                    DestinationMode                                             OFFSET(get<T>, {0x118, 1, 0, 0})
+	CMember(EDrivenBoneModificationMode)               ModificationMode                                            OFFSET(get<T>, {0x119, 1, 0, 0})
+	CMember(TEnumAsByte<EComponentType>)               SourceComponent                                             OFFSET(get<T>, {0x11A, 1, 0, 0})
+	DMember(bool)                                      bUseRange                                                   OFFSET(get<bool>, {0x11B, 1, 1, 0})
+	DMember(bool)                                      bAffectTargetTranslationX                                   OFFSET(get<bool>, {0x11B, 1, 1, 1})
+	DMember(bool)                                      bAffectTargetTranslationY                                   OFFSET(get<bool>, {0x11B, 1, 1, 2})
+	DMember(bool)                                      bAffectTargetTranslationZ                                   OFFSET(get<bool>, {0x11B, 1, 1, 3})
+	DMember(bool)                                      bAffectTargetRotationX                                      OFFSET(get<bool>, {0x11B, 1, 1, 4})
+	DMember(bool)                                      bAffectTargetRotationY                                      OFFSET(get<bool>, {0x11B, 1, 1, 5})
+	DMember(bool)                                      bAffectTargetRotationZ                                      OFFSET(get<bool>, {0x11B, 1, 1, 6})
+	DMember(bool)                                      bAffectTargetScaleX                                         OFFSET(get<bool>, {0x11B, 1, 1, 7})
+	DMember(bool)                                      bAffectTargetScaleY                                         OFFSET(get<bool>, {0x11C, 1, 1, 0})
+	DMember(bool)                                      bAffectTargetScaleZ                                         OFFSET(get<bool>, {0x11C, 1, 1, 1})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CCDIK
@@ -1162,16 +1175,16 @@ class FAnimNode_CCDIK : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FVector)                                   EffectorLocation                                            ___ OFFSET(get<T>, {0xC8, 24, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorLocationSpace                                       ___ OFFSET(get<T>, {0xE0, 1, 0, 0})
-	SMember(FBoneSocketTarget)                         EffectorTarget                                              ___ OFFSET(get<T>, {0xF0, 128, 0, 0})
-	SMember(FBoneReference)                            TipBone                                                     ___ OFFSET(get<T>, {0x170, 12, 0, 0})
-	SMember(FBoneReference)                            RootBone                                                    ___ OFFSET(get<T>, {0x17C, 12, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x18C, 4, 0, 0})
-	DMember(bool)                                      bStartFromTail                                              ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	DMember(bool)                                      bEnableRotationLimit                                        ___ OFFSET(get<bool>, {0x191, 1, 0, 0})
-	CMember(TArray<float>)                             RotationLimitPerJoints                                      ___ OFFSET(get<T>, {0x198, 16, 0, 0})
+	SMember(FVector)                                   EffectorLocation                                            OFFSET(get<T>, {0xC8, 24, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorLocationSpace                                       OFFSET(get<T>, {0xE0, 1, 0, 0})
+	SMember(FBoneSocketTarget)                         EffectorTarget                                              OFFSET(get<T>, {0xF0, 128, 0, 0})
+	SMember(FBoneReference)                            TipBone                                                     OFFSET(get<T>, {0x170, 12, 0, 0})
+	SMember(FBoneReference)                            RootBone                                                    OFFSET(get<T>, {0x17C, 12, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x18C, 4, 0, 0})
+	DMember(bool)                                      bStartFromTail                                              OFFSET(get<bool>, {0x190, 1, 0, 0})
+	DMember(bool)                                      bEnableRotationLimit                                        OFFSET(get<bool>, {0x191, 1, 0, 0})
+	CMember(TArray<float>)                             RotationLimitPerJoints                                      OFFSET(get<T>, {0x198, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.Constraint
@@ -1182,10 +1195,10 @@ class FConstraint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	CMember(EConstraintOffsetOption)                   OffsetOption                                                ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	CMember(ETransformConstraintType)                  TransformType                                               ___ OFFSET(get<T>, {0xD, 1, 0, 0})
-	SMember(FFilterOptionPerAxis)                      PerAxis                                                     ___ OFFSET(get<T>, {0xE, 3, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0x0, 12, 0, 0})
+	CMember(EConstraintOffsetOption)                   OffsetOption                                                OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(ETransformConstraintType)                  TransformType                                               OFFSET(get<T>, {0xD, 1, 0, 0})
+	SMember(FFilterOptionPerAxis)                      PerAxis                                                     OFFSET(get<T>, {0xE, 3, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Constraint
@@ -1196,9 +1209,9 @@ class FAnimNode_Constraint : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FBoneReference)                            BoneToModify                                                ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	CMember(TArray<FConstraint>)                       ConstraintSetup                                             ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
-	CMember(TArray<float>)                             ConstraintWeights                                           ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FBoneReference)                            BoneToModify                                                OFFSET(get<T>, {0xC8, 12, 0, 0})
+	CMember(TArray<FConstraint>)                       ConstraintSetup                                             OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(TArray<float>)                             ConstraintWeights                                           OFFSET(get<T>, {0xE8, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CopyBone
@@ -1209,12 +1222,12 @@ class FAnimNode_CopyBone : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FBoneReference)                            SourceBone                                                  ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0xD4, 12, 0, 0})
-	DMember(bool)                                      bCopyTranslation                                            ___ OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	DMember(bool)                                      bCopyRotation                                               ___ OFFSET(get<bool>, {0xE1, 1, 0, 0})
-	DMember(bool)                                      bCopyScale                                                  ___ OFFSET(get<bool>, {0xE2, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            ControlSpace                                                ___ OFFSET(get<T>, {0xE3, 1, 0, 0})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0xD4, 12, 0, 0})
+	DMember(bool)                                      bCopyTranslation                                            OFFSET(get<bool>, {0xE0, 1, 0, 0})
+	DMember(bool)                                      bCopyRotation                                               OFFSET(get<bool>, {0xE1, 1, 0, 0})
+	DMember(bool)                                      bCopyScale                                                  OFFSET(get<bool>, {0xE2, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            ControlSpace                                                OFFSET(get<T>, {0xE3, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_CopyBoneDelta
@@ -1225,15 +1238,15 @@ class FAnimNode_CopyBoneDelta : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FBoneReference)                            SourceBone                                                  ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneReference)                            TargetBone                                                  ___ OFFSET(get<T>, {0xD4, 12, 0, 0})
-	DMember(bool)                                      bCopyTranslation                                            ___ OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	DMember(bool)                                      bCopyRotation                                               ___ OFFSET(get<bool>, {0xE1, 1, 0, 0})
-	DMember(bool)                                      bCopyScale                                                  ___ OFFSET(get<bool>, {0xE2, 1, 0, 0})
-	CMember(CopyBoneDeltaMode)                         CopyMode                                                    ___ OFFSET(get<T>, {0xE3, 1, 0, 0})
-	DMember(float)                                     TranslationMultiplier                                       ___ OFFSET(get<float>, {0xE4, 4, 0, 0})
-	DMember(float)                                     RotationMultiplier                                          ___ OFFSET(get<float>, {0xE8, 4, 0, 0})
-	DMember(float)                                     ScaleMultiplier                                             ___ OFFSET(get<float>, {0xEC, 4, 0, 0})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneReference)                            TargetBone                                                  OFFSET(get<T>, {0xD4, 12, 0, 0})
+	DMember(bool)                                      bCopyTranslation                                            OFFSET(get<bool>, {0xE0, 1, 0, 0})
+	DMember(bool)                                      bCopyRotation                                               OFFSET(get<bool>, {0xE1, 1, 0, 0})
+	DMember(bool)                                      bCopyScale                                                  OFFSET(get<bool>, {0xE2, 1, 0, 0})
+	CMember(CopyBoneDeltaMode)                         CopyMode                                                    OFFSET(get<T>, {0xE3, 1, 0, 0})
+	DMember(float)                                     TranslationMultiplier                                       OFFSET(get<float>, {0xE4, 4, 0, 0})
+	DMember(float)                                     RotationMultiplier                                          OFFSET(get<float>, {0xE8, 4, 0, 0})
+	DMember(float)                                     ScaleMultiplier                                             OFFSET(get<float>, {0xEC, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Fabrik
@@ -1244,14 +1257,14 @@ class FAnimNode_Fabrik : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FTransform)                                EffectorTransform                                           ___ OFFSET(get<T>, {0xD0, 96, 0, 0})
-	SMember(FBoneSocketTarget)                         EffectorTarget                                              ___ OFFSET(get<T>, {0x130, 128, 0, 0})
-	SMember(FBoneReference)                            TipBone                                                     ___ OFFSET(get<T>, {0x1B0, 12, 0, 0})
-	SMember(FBoneReference)                            RootBone                                                    ___ OFFSET(get<T>, {0x1BC, 12, 0, 0})
-	DMember(float)                                     Precision                                                   ___ OFFSET(get<float>, {0x1C8, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0x1CC, 4, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorTransformSpace                                      ___ OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneRotationSource>)          EffectorRotationSource                                      ___ OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	SMember(FTransform)                                EffectorTransform                                           OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FBoneSocketTarget)                         EffectorTarget                                              OFFSET(get<T>, {0x130, 128, 0, 0})
+	SMember(FBoneReference)                            TipBone                                                     OFFSET(get<T>, {0x1B0, 12, 0, 0})
+	SMember(FBoneReference)                            RootBone                                                    OFFSET(get<T>, {0x1BC, 12, 0, 0})
+	DMember(float)                                     Precision                                                   OFFSET(get<float>, {0x1C8, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x1CC, 4, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorTransformSpace                                      OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneRotationSource>)          EffectorRotationSource                                      OFFSET(get<T>, {0x1D1, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_HandIKRetargeting
@@ -1262,12 +1275,12 @@ class FAnimNode_HandIKRetargeting : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FBoneReference)                            RightHandFK                                                 ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneReference)                            LeftHandFK                                                  ___ OFFSET(get<T>, {0xD4, 12, 0, 0})
-	SMember(FBoneReference)                            RightHandIK                                                 ___ OFFSET(get<T>, {0xE0, 12, 0, 0})
-	SMember(FBoneReference)                            LeftHandIK                                                  ___ OFFSET(get<T>, {0xEC, 12, 0, 0})
-	CMember(TArray<FBoneReference>)                    IKBonesToMove                                               ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
-	DMember(float)                                     HandFKWeight                                                ___ OFFSET(get<float>, {0x108, 4, 0, 0})
+	SMember(FBoneReference)                            RightHandFK                                                 OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneReference)                            LeftHandFK                                                  OFFSET(get<T>, {0xD4, 12, 0, 0})
+	SMember(FBoneReference)                            RightHandIK                                                 OFFSET(get<T>, {0xE0, 12, 0, 0})
+	SMember(FBoneReference)                            LeftHandIK                                                  OFFSET(get<T>, {0xEC, 12, 0, 0})
+	CMember(TArray<FBoneReference>)                    IKBonesToMove                                               OFFSET(get<T>, {0xF8, 16, 0, 0})
+	DMember(float)                                     HandFKWeight                                                OFFSET(get<float>, {0x108, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.IKChainLink
@@ -1298,15 +1311,15 @@ class FAnimLegIKDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FBoneReference)                            IKFootBone                                                  ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FBoneReference)                            FKFootBone                                                  ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	DMember(int32_t)                                   NumBonesInLimb                                              ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(float)                                     MinRotationAngle                                            ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        FootBoneForwardAxis                                         ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        HingeRotationAxis                                           ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bEnableRotationLimit                                        ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
-	DMember(bool)                                      bEnableKneeTwistCorrection                                  ___ OFFSET(get<bool>, {0x23, 1, 0, 0})
-	SMember(FName)                                     TwistOffsetCurveName                                        ___ OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FBoneReference)                            IKFootBone                                                  OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FBoneReference)                            FKFootBone                                                  OFFSET(get<T>, {0xC, 12, 0, 0})
+	DMember(int32_t)                                   NumBonesInLimb                                              OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(float)                                     MinRotationAngle                                            OFFSET(get<float>, {0x1C, 4, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        FootBoneForwardAxis                                         OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        HingeRotationAxis                                           OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bEnableRotationLimit                                        OFFSET(get<bool>, {0x22, 1, 0, 0})
+	DMember(bool)                                      bEnableKneeTwistCorrection                                  OFFSET(get<bool>, {0x23, 1, 0, 0})
+	SMember(FName)                                     TwistOffsetCurveName                                        OFFSET(get<T>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimLegIKData
@@ -1327,9 +1340,9 @@ class FAnimNode_LegIK : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	DMember(float)                                     ReachPrecision                                              ___ OFFSET(get<float>, {0xC8, 4, 0, 0})
-	DMember(int32_t)                                   MaxIterations                                               ___ OFFSET(get<int32_t>, {0xCC, 4, 0, 0})
-	CMember(TArray<FAnimLegIKDefinition>)              LegsDefinition                                              ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
+	DMember(float)                                     ReachPrecision                                              OFFSET(get<float>, {0xC8, 4, 0, 0})
+	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0xCC, 4, 0, 0})
+	CMember(TArray<FAnimLegIKDefinition>)              LegsDefinition                                              OFFSET(get<T>, {0xD0, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_LookAt
@@ -1340,16 +1353,16 @@ class FAnimNode_LookAt : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FBoneReference)                            BoneToModify                                                ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneSocketTarget)                         LookAtTarget                                                ___ OFFSET(get<T>, {0xE0, 128, 0, 0})
-	SMember(FVector)                                   LookAtLocation                                              ___ OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FAxis)                                     LookAt_Axis                                                 ___ OFFSET(get<T>, {0x178, 32, 0, 0})
-	DMember(bool)                                      bUseLookUpAxis                                              ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
-	CMember(TEnumAsByte<EInterpolationBlend>)          InterpolationType                                           ___ OFFSET(get<T>, {0x199, 1, 0, 0})
-	SMember(FAxis)                                     LookUp_Axis                                                 ___ OFFSET(get<T>, {0x1A0, 32, 0, 0})
-	DMember(float)                                     LookAtClamp                                                 ___ OFFSET(get<float>, {0x1C0, 4, 0, 0})
-	DMember(float)                                     InterpolationTime                                           ___ OFFSET(get<float>, {0x1C4, 4, 0, 0})
-	DMember(float)                                     InterpolationTriggerThreashold                              ___ OFFSET(get<float>, {0x1C8, 4, 0, 0})
+	SMember(FBoneReference)                            BoneToModify                                                OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneSocketTarget)                         LookAtTarget                                                OFFSET(get<T>, {0xE0, 128, 0, 0})
+	SMember(FVector)                                   LookAtLocation                                              OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FAxis)                                     LookAt_Axis                                                 OFFSET(get<T>, {0x178, 32, 0, 0})
+	DMember(bool)                                      bUseLookUpAxis                                              OFFSET(get<bool>, {0x198, 1, 0, 0})
+	CMember(TEnumAsByte<EInterpolationBlend>)          InterpolationType                                           OFFSET(get<T>, {0x199, 1, 0, 0})
+	SMember(FAxis)                                     LookUp_Axis                                                 OFFSET(get<T>, {0x1A0, 32, 0, 0})
+	DMember(float)                                     LookAtClamp                                                 OFFSET(get<float>, {0x1C0, 4, 0, 0})
+	DMember(float)                                     InterpolationTime                                           OFFSET(get<float>, {0x1C4, 4, 0, 0})
+	DMember(float)                                     InterpolationTriggerThreashold                              OFFSET(get<float>, {0x1C8, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ObserveBone
@@ -1360,12 +1373,12 @@ class FAnimNode_ObserveBone : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FBoneReference)                            BoneToObserve                                               ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            DisplaySpace                                                ___ OFFSET(get<T>, {0xD4, 1, 0, 0})
-	DMember(bool)                                      bRelativeToRefPose                                          ___ OFFSET(get<bool>, {0xD5, 1, 0, 0})
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FBoneReference)                            BoneToObserve                                               OFFSET(get<T>, {0xC8, 12, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            DisplaySpace                                                OFFSET(get<T>, {0xD4, 1, 0, 0})
+	DMember(bool)                                      bRelativeToRefPose                                          OFFSET(get<bool>, {0xD5, 1, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x108, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ResetRoot
@@ -1386,15 +1399,15 @@ class FSimSpaceSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(float)                                     WorldAlpha                                                  ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     VelocityScaleZ                                              ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MaxLinearVelocity                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MaxAngularVelocity                                          ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     MaxLinearAcceleration                                       ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     MaxAngularAcceleration                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FVector)                                   ExternalLinearDragV                                         ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   ExternalLinearVelocity                                      ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   ExternalAngularVelocity                                     ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	DMember(float)                                     WorldAlpha                                                  OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     VelocityScaleZ                                              OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MaxLinearVelocity                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MaxAngularVelocity                                          OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     MaxLinearAcceleration                                       OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     MaxAngularAcceleration                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FVector)                                   ExternalLinearDragV                                         OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   ExternalLinearVelocity                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   ExternalAngularVelocity                                     OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RigidBody
@@ -1405,27 +1418,27 @@ class FAnimNode_RigidBody : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 2384;
 
 public:
-	CMember(UPhysicsAsset*)                            OverridePhysicsAsset                                        ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FVector)                                   OverrideWorldGravity                                        ___ OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FVector)                                   ExternalForce                                               ___ OFFSET(get<T>, {0x210, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearAccScale                                     ___ OFFSET(get<T>, {0x228, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearVelScale                                     ___ OFFSET(get<T>, {0x240, 24, 0, 0})
-	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              ___ OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FSimSpaceSettings)                         SimSpaceSettings                                            ___ OFFSET(get<T>, {0x270, 96, 0, 0})
-	DMember(float)                                     CachedBoundsScale                                           ___ OFFSET(get<float>, {0x2D0, 4, 0, 0})
-	SMember(FBoneReference)                            BaseBoneRef                                                 ___ OFFSET(get<T>, {0x2D4, 12, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            OverlapChannel                                              ___ OFFSET(get<T>, {0x2E0, 1, 0, 0})
-	CMember(ESimulationSpace)                          SimulationSpace                                             ___ OFFSET(get<T>, {0x2E1, 1, 0, 0})
-	DMember(bool)                                      bForceDisableCollisionBetweenConstraintBodies               ___ OFFSET(get<bool>, {0x2E2, 1, 0, 0})
-	DMember(bool)                                      bUseExternalClothCollision                                  ___ OFFSET(get<bool>, {0x2E3, 1, 0, 0})
-	DMember(bool)                                      bEnableWorldGeometry                                        ___ OFFSET(get<bool>, {0x2E5, 1, 1, 0})
-	DMember(bool)                                      bOverrideWorldGravity                                       ___ OFFSET(get<bool>, {0x2E5, 1, 1, 1})
-	DMember(bool)                                      bTransferBoneVelocities                                     ___ OFFSET(get<bool>, {0x2E5, 1, 1, 2})
-	DMember(bool)                                      bFreezeIncomingPoseOnStart                                  ___ OFFSET(get<bool>, {0x2E5, 1, 1, 3})
-	DMember(bool)                                      bClampLinearTranslationLimitToRefPose                       ___ OFFSET(get<bool>, {0x2E5, 1, 1, 4})
-	DMember(float)                                     WorldSpaceMinimumScale                                      ___ OFFSET(get<float>, {0x2E8, 4, 0, 0})
-	DMember(float)                                     EvaluationResetTime                                         ___ OFFSET(get<float>, {0x2EC, 4, 0, 0})
-	CMember(ESimulationTiming)                         SimulationTiming                                            ___ OFFSET(get<T>, {0x2F1, 1, 0, 0})
+	CMember(UPhysicsAsset*)                            OverridePhysicsAsset                                        OFFSET(get<T>, {0xC8, 8, 0, 0})
+	SMember(FVector)                                   OverrideWorldGravity                                        OFFSET(get<T>, {0x1F8, 24, 0, 0})
+	SMember(FVector)                                   ExternalForce                                               OFFSET(get<T>, {0x210, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearAccScale                                     OFFSET(get<T>, {0x228, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearVelScale                                     OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              OFFSET(get<T>, {0x258, 24, 0, 0})
+	SMember(FSimSpaceSettings)                         SimSpaceSettings                                            OFFSET(get<T>, {0x270, 96, 0, 0})
+	DMember(float)                                     CachedBoundsScale                                           OFFSET(get<float>, {0x2D0, 4, 0, 0})
+	SMember(FBoneReference)                            BaseBoneRef                                                 OFFSET(get<T>, {0x2D4, 12, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            OverlapChannel                                              OFFSET(get<T>, {0x2E0, 1, 0, 0})
+	CMember(ESimulationSpace)                          SimulationSpace                                             OFFSET(get<T>, {0x2E1, 1, 0, 0})
+	DMember(bool)                                      bForceDisableCollisionBetweenConstraintBodies               OFFSET(get<bool>, {0x2E2, 1, 0, 0})
+	DMember(bool)                                      bUseExternalClothCollision                                  OFFSET(get<bool>, {0x2E3, 1, 0, 0})
+	DMember(bool)                                      bEnableWorldGeometry                                        OFFSET(get<bool>, {0x2E5, 1, 1, 0})
+	DMember(bool)                                      bOverrideWorldGravity                                       OFFSET(get<bool>, {0x2E5, 1, 1, 1})
+	DMember(bool)                                      bTransferBoneVelocities                                     OFFSET(get<bool>, {0x2E5, 1, 1, 2})
+	DMember(bool)                                      bFreezeIncomingPoseOnStart                                  OFFSET(get<bool>, {0x2E5, 1, 1, 3})
+	DMember(bool)                                      bClampLinearTranslationLimitToRefPose                       OFFSET(get<bool>, {0x2E5, 1, 1, 4})
+	DMember(float)                                     WorldSpaceMinimumScale                                      OFFSET(get<float>, {0x2E8, 4, 0, 0})
+	DMember(float)                                     EvaluationResetTime                                         OFFSET(get<float>, {0x2EC, 4, 0, 0})
+	CMember(ESimulationTiming)                         SimulationTiming                                            OFFSET(get<T>, {0x2F1, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ScaleChainLength
@@ -1436,14 +1449,14 @@ class FAnimNode_ScaleChainLength : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FPoseLink)                                 InputPose                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(float)                                     DefaultChainLength                                          ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FBoneReference)                            ChainStartBone                                              ___ OFFSET(get<T>, {0x24, 12, 0, 0})
-	SMember(FBoneReference)                            ChainEndBone                                                ___ OFFSET(get<T>, {0x30, 12, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	DMember(float)                                     Alpha                                                       ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(EScaleChainInitialLength)                  ChainInitialLength                                          ___ OFFSET(get<T>, {0x68, 1, 0, 0})
+	SMember(FPoseLink)                                 InputPose                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(float)                                     DefaultChainLength                                          OFFSET(get<float>, {0x20, 4, 0, 0})
+	SMember(FBoneReference)                            ChainStartBone                                              OFFSET(get<T>, {0x24, 12, 0, 0})
+	SMember(FBoneReference)                            ChainEndBone                                                OFFSET(get<T>, {0x30, 12, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(EScaleChainInitialLength)                  ChainInitialLength                                          OFFSET(get<T>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.SplineIKCachedBoneData
@@ -1454,8 +1467,8 @@ class FSplineIKCachedBoneData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FBoneReference)                            bone                                                        ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	DMember(int32_t)                                   RefSkeletonIndex                                            ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x0, 12, 0, 0})
+	DMember(int32_t)                                   RefSkeletonIndex                                            OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_SplineIK
@@ -1466,18 +1479,18 @@ class FAnimNode_SplineIK : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FBoneReference)                            StartBone                                                   ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	SMember(FBoneReference)                            EndBone                                                     ___ OFFSET(get<T>, {0xD4, 12, 0, 0})
-	CMember(ESplineBoneAxis)                           BoneAxis                                                    ___ OFFSET(get<T>, {0xE0, 1, 0, 0})
-	DMember(bool)                                      bAutoCalculateSpline                                        ___ OFFSET(get<bool>, {0xE1, 1, 0, 0})
-	DMember(int32_t)                                   PointCount                                                  ___ OFFSET(get<int32_t>, {0xE4, 4, 0, 0})
-	CMember(TArray<FTransform>)                        ControlPoints                                               ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	DMember(float)                                     Roll                                                        ___ OFFSET(get<float>, {0xF8, 4, 0, 0})
-	DMember(float)                                     TwistStart                                                  ___ OFFSET(get<float>, {0xFC, 4, 0, 0})
-	DMember(float)                                     TwistEnd                                                    ___ OFFSET(get<float>, {0x100, 4, 0, 0})
-	SMember(FAlphaBlend)                               TwistBlend                                                  ___ OFFSET(get<T>, {0x108, 48, 0, 0})
-	DMember(float)                                     Stretch                                                     ___ OFFSET(get<float>, {0x138, 4, 0, 0})
-	DMember(float)                                     Offset                                                      ___ OFFSET(get<float>, {0x13C, 4, 0, 0})
+	SMember(FBoneReference)                            StartBone                                                   OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FBoneReference)                            EndBone                                                     OFFSET(get<T>, {0xD4, 12, 0, 0})
+	CMember(ESplineBoneAxis)                           BoneAxis                                                    OFFSET(get<T>, {0xE0, 1, 0, 0})
+	DMember(bool)                                      bAutoCalculateSpline                                        OFFSET(get<bool>, {0xE1, 1, 0, 0})
+	DMember(int32_t)                                   PointCount                                                  OFFSET(get<int32_t>, {0xE4, 4, 0, 0})
+	CMember(TArray<FTransform>)                        ControlPoints                                               OFFSET(get<T>, {0xE8, 16, 0, 0})
+	DMember(float)                                     Roll                                                        OFFSET(get<float>, {0xF8, 4, 0, 0})
+	DMember(float)                                     TwistStart                                                  OFFSET(get<float>, {0xFC, 4, 0, 0})
+	DMember(float)                                     TwistEnd                                                    OFFSET(get<float>, {0x100, 4, 0, 0})
+	SMember(FAlphaBlend)                               TwistBlend                                                  OFFSET(get<T>, {0x108, 48, 0, 0})
+	DMember(float)                                     Stretch                                                     OFFSET(get<float>, {0x138, 4, 0, 0})
+	DMember(float)                                     Offset                                                      OFFSET(get<float>, {0x13C, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_SpringBone
@@ -1488,18 +1501,18 @@ class FAnimNode_SpringBone : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FBoneReference)                            SpringBone                                                  ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	DMember(double)                                    MaxDisplacement                                             ___ OFFSET(get<double>, {0xD8, 8, 0, 0})
-	DMember(double)                                    SpringStiffness                                             ___ OFFSET(get<double>, {0xE0, 8, 0, 0})
-	DMember(double)                                    SpringDamping                                               ___ OFFSET(get<double>, {0xE8, 8, 0, 0})
-	DMember(double)                                    ErrorResetThresh                                            ___ OFFSET(get<double>, {0xF0, 8, 0, 0})
-	DMember(bool)                                      bLimitDisplacement                                          ___ OFFSET(get<bool>, {0x164, 1, 1, 0})
-	DMember(bool)                                      bTranslateX                                                 ___ OFFSET(get<bool>, {0x164, 1, 1, 1})
-	DMember(bool)                                      bTranslateY                                                 ___ OFFSET(get<bool>, {0x164, 1, 1, 2})
-	DMember(bool)                                      bTranslateZ                                                 ___ OFFSET(get<bool>, {0x164, 1, 1, 3})
-	DMember(bool)                                      bRotateX                                                    ___ OFFSET(get<bool>, {0x164, 1, 1, 4})
-	DMember(bool)                                      bRotateY                                                    ___ OFFSET(get<bool>, {0x164, 1, 1, 5})
-	DMember(bool)                                      bRotateZ                                                    ___ OFFSET(get<bool>, {0x164, 1, 1, 6})
+	SMember(FBoneReference)                            SpringBone                                                  OFFSET(get<T>, {0xC8, 12, 0, 0})
+	DMember(double)                                    MaxDisplacement                                             OFFSET(get<double>, {0xD8, 8, 0, 0})
+	DMember(double)                                    SpringStiffness                                             OFFSET(get<double>, {0xE0, 8, 0, 0})
+	DMember(double)                                    SpringDamping                                               OFFSET(get<double>, {0xE8, 8, 0, 0})
+	DMember(double)                                    ErrorResetThresh                                            OFFSET(get<double>, {0xF0, 8, 0, 0})
+	DMember(bool)                                      bLimitDisplacement                                          OFFSET(get<bool>, {0x164, 1, 1, 0})
+	DMember(bool)                                      bTranslateX                                                 OFFSET(get<bool>, {0x164, 1, 1, 1})
+	DMember(bool)                                      bTranslateY                                                 OFFSET(get<bool>, {0x164, 1, 1, 2})
+	DMember(bool)                                      bTranslateZ                                                 OFFSET(get<bool>, {0x164, 1, 1, 3})
+	DMember(bool)                                      bRotateX                                                    OFFSET(get<bool>, {0x164, 1, 1, 4})
+	DMember(bool)                                      bRotateY                                                    OFFSET(get<bool>, {0x164, 1, 1, 5})
+	DMember(bool)                                      bRotateZ                                                    OFFSET(get<bool>, {0x164, 1, 1, 6})
 };
 
 /// Struct /Script/AnimGraphRuntime.RotationLimit
@@ -1510,8 +1523,8 @@ class FRotationLimit : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   LimitMin                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LimitMax                                                    ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   LimitMin                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LimitMax                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Trail
@@ -1522,26 +1535,26 @@ class FAnimNode_Trail : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FBoneReference)                            TrailBone                                                   ___ OFFSET(get<T>, {0x130, 12, 0, 0})
-	DMember(int32_t)                                   ChainLength                                                 ___ OFFSET(get<int32_t>, {0x13C, 4, 0, 0})
-	CMember(TEnumAsByte<EAxis>)                        ChainBoneAxis                                               ___ OFFSET(get<T>, {0x140, 1, 0, 0})
-	DMember(bool)                                      bInvertChainBoneAxis                                        ___ OFFSET(get<bool>, {0x141, 1, 1, 0})
-	DMember(bool)                                      bLimitStretch                                               ___ OFFSET(get<bool>, {0x141, 1, 1, 1})
-	DMember(bool)                                      bLimitRotation                                              ___ OFFSET(get<bool>, {0x141, 1, 1, 2})
-	DMember(bool)                                      bUsePlanarLimit                                             ___ OFFSET(get<bool>, {0x141, 1, 1, 3})
-	DMember(bool)                                      bActorSpaceFakeVel                                          ___ OFFSET(get<bool>, {0x141, 1, 1, 4})
-	DMember(bool)                                      bReorientParentToChild                                      ___ OFFSET(get<bool>, {0x141, 1, 1, 5})
-	DMember(float)                                     MaxDeltaTime                                                ___ OFFSET(get<float>, {0x144, 4, 0, 0})
-	DMember(float)                                     RelaxationSpeedScale                                        ___ OFFSET(get<float>, {0x148, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        TrailRelaxationSpeed                                        ___ OFFSET(get<T>, {0x150, 136, 0, 0})
-	SMember(FInputScaleBiasClamp)                      RelaxationSpeedScaleInputProcessor                          ___ OFFSET(get<T>, {0x1D8, 48, 0, 0})
-	CMember(TArray<FRotationLimit>)                    RotationLimits                                              ___ OFFSET(get<T>, {0x208, 16, 0, 0})
-	CMember(TArray<FVector>)                           RotationOffsets                                             ___ OFFSET(get<T>, {0x218, 16, 0, 0})
-	CMember(TArray<FAnimPhysPlanarLimit>)              PlanarLimits                                                ___ OFFSET(get<T>, {0x228, 16, 0, 0})
-	DMember(float)                                     StretchLimit                                                ___ OFFSET(get<float>, {0x238, 4, 0, 0})
-	SMember(FVector)                                   FakeVelocity                                                ___ OFFSET(get<T>, {0x240, 24, 0, 0})
-	SMember(FBoneReference)                            BaseJoint                                                   ___ OFFSET(get<T>, {0x258, 12, 0, 0})
-	DMember(float)                                     LastBoneRotationAnimAlphaBlend                              ___ OFFSET(get<float>, {0x264, 4, 0, 0})
+	SMember(FBoneReference)                            TrailBone                                                   OFFSET(get<T>, {0x130, 12, 0, 0})
+	DMember(int32_t)                                   ChainLength                                                 OFFSET(get<int32_t>, {0x13C, 4, 0, 0})
+	CMember(TEnumAsByte<EAxis>)                        ChainBoneAxis                                               OFFSET(get<T>, {0x140, 1, 0, 0})
+	DMember(bool)                                      bInvertChainBoneAxis                                        OFFSET(get<bool>, {0x141, 1, 1, 0})
+	DMember(bool)                                      bLimitStretch                                               OFFSET(get<bool>, {0x141, 1, 1, 1})
+	DMember(bool)                                      bLimitRotation                                              OFFSET(get<bool>, {0x141, 1, 1, 2})
+	DMember(bool)                                      bUsePlanarLimit                                             OFFSET(get<bool>, {0x141, 1, 1, 3})
+	DMember(bool)                                      bActorSpaceFakeVel                                          OFFSET(get<bool>, {0x141, 1, 1, 4})
+	DMember(bool)                                      bReorientParentToChild                                      OFFSET(get<bool>, {0x141, 1, 1, 5})
+	DMember(float)                                     MaxDeltaTime                                                OFFSET(get<float>, {0x144, 4, 0, 0})
+	DMember(float)                                     RelaxationSpeedScale                                        OFFSET(get<float>, {0x148, 4, 0, 0})
+	SMember(FRuntimeFloatCurve)                        TrailRelaxationSpeed                                        OFFSET(get<T>, {0x150, 136, 0, 0})
+	SMember(FInputScaleBiasClamp)                      RelaxationSpeedScaleInputProcessor                          OFFSET(get<T>, {0x1D8, 48, 0, 0})
+	CMember(TArray<FRotationLimit>)                    RotationLimits                                              OFFSET(get<T>, {0x208, 16, 0, 0})
+	CMember(TArray<FVector>)                           RotationOffsets                                             OFFSET(get<T>, {0x218, 16, 0, 0})
+	CMember(TArray<FAnimPhysPlanarLimit>)              PlanarLimits                                                OFFSET(get<T>, {0x228, 16, 0, 0})
+	DMember(float)                                     StretchLimit                                                OFFSET(get<float>, {0x238, 4, 0, 0})
+	SMember(FVector)                                   FakeVelocity                                                OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FBoneReference)                            BaseJoint                                                   OFFSET(get<T>, {0x258, 12, 0, 0})
+	DMember(float)                                     LastBoneRotationAnimAlphaBlend                              OFFSET(get<float>, {0x264, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.ReferenceBoneFrame
@@ -1552,8 +1565,8 @@ class FReferenceBoneFrame : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FBoneReference)                            bone                                                        ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FAxis)                                     Axis                                                        ___ OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FAxis)                                     Axis                                                        OFFSET(get<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_TwistCorrectiveNode
@@ -1564,13 +1577,13 @@ class FAnimNode_TwistCorrectiveNode : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FReferenceBoneFrame)                       BaseFrame                                                   ___ OFFSET(get<T>, {0xC8, 48, 0, 0})
-	SMember(FReferenceBoneFrame)                       TwistFrame                                                  ___ OFFSET(get<T>, {0xF8, 48, 0, 0})
-	SMember(FAxis)                                     TwistPlaneNormalAxis                                        ___ OFFSET(get<T>, {0x128, 32, 0, 0})
-	DMember(float)                                     RangeMax                                                    ___ OFFSET(get<float>, {0x148, 4, 0, 0})
-	DMember(float)                                     RemappedMin                                                 ___ OFFSET(get<float>, {0x14C, 4, 0, 0})
-	DMember(float)                                     RemappedMax                                                 ___ OFFSET(get<float>, {0x150, 4, 0, 0})
-	SMember(FName)                                     CurveName                                                   ___ OFFSET(get<T>, {0x154, 4, 0, 0})
+	SMember(FReferenceBoneFrame)                       BaseFrame                                                   OFFSET(get<T>, {0xC8, 48, 0, 0})
+	SMember(FReferenceBoneFrame)                       TwistFrame                                                  OFFSET(get<T>, {0xF8, 48, 0, 0})
+	SMember(FAxis)                                     TwistPlaneNormalAxis                                        OFFSET(get<T>, {0x128, 32, 0, 0})
+	DMember(float)                                     RangeMax                                                    OFFSET(get<float>, {0x148, 4, 0, 0})
+	DMember(float)                                     RemappedMin                                                 OFFSET(get<float>, {0x14C, 4, 0, 0})
+	DMember(float)                                     RemappedMax                                                 OFFSET(get<float>, {0x150, 4, 0, 0})
+	SMember(FName)                                     CurveName                                                   OFFSET(get<T>, {0x154, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_TwoBoneIK
@@ -1581,20 +1594,20 @@ class FAnimNode_TwoBoneIK : public FAnimNode_SkeletalControlBase
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FBoneReference)                            IKBone                                                      ___ OFFSET(get<T>, {0xC8, 12, 0, 0})
-	DMember(double)                                    StartStretchRatio                                           ___ OFFSET(get<double>, {0xD8, 8, 0, 0})
-	DMember(double)                                    MaxStretchScale                                             ___ OFFSET(get<double>, {0xE0, 8, 0, 0})
-	SMember(FVector)                                   EffectorLocation                                            ___ OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FBoneSocketTarget)                         EffectorTarget                                              ___ OFFSET(get<T>, {0x110, 128, 0, 0})
-	SMember(FVector)                                   JointTargetLocation                                         ___ OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FBoneSocketTarget)                         JointTarget                                                 ___ OFFSET(get<T>, {0x1B0, 128, 0, 0})
-	SMember(FAxis)                                     TwistAxis                                                   ___ OFFSET(get<T>, {0x230, 32, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorLocationSpace                                       ___ OFFSET(get<T>, {0x250, 1, 0, 0})
-	CMember(TEnumAsByte<EBoneControlSpace>)            JointTargetLocationSpace                                    ___ OFFSET(get<T>, {0x251, 1, 0, 0})
-	DMember(bool)                                      bAllowStretching                                            ___ OFFSET(get<bool>, {0x252, 1, 1, 0})
-	DMember(bool)                                      bTakeRotationFromEffectorSpace                              ___ OFFSET(get<bool>, {0x252, 1, 1, 1})
-	DMember(bool)                                      bMaintainEffectorRelRot                                     ___ OFFSET(get<bool>, {0x252, 1, 1, 2})
-	DMember(bool)                                      bAllowTwist                                                 ___ OFFSET(get<bool>, {0x252, 1, 1, 3})
+	SMember(FBoneReference)                            IKBone                                                      OFFSET(get<T>, {0xC8, 12, 0, 0})
+	DMember(double)                                    StartStretchRatio                                           OFFSET(get<double>, {0xD8, 8, 0, 0})
+	DMember(double)                                    MaxStretchScale                                             OFFSET(get<double>, {0xE0, 8, 0, 0})
+	SMember(FVector)                                   EffectorLocation                                            OFFSET(get<T>, {0xE8, 24, 0, 0})
+	SMember(FBoneSocketTarget)                         EffectorTarget                                              OFFSET(get<T>, {0x110, 128, 0, 0})
+	SMember(FVector)                                   JointTargetLocation                                         OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FBoneSocketTarget)                         JointTarget                                                 OFFSET(get<T>, {0x1B0, 128, 0, 0})
+	SMember(FAxis)                                     TwistAxis                                                   OFFSET(get<T>, {0x230, 32, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            EffectorLocationSpace                                       OFFSET(get<T>, {0x250, 1, 0, 0})
+	CMember(TEnumAsByte<EBoneControlSpace>)            JointTargetLocationSpace                                    OFFSET(get<T>, {0x251, 1, 0, 0})
+	DMember(bool)                                      bAllowStretching                                            OFFSET(get<bool>, {0x252, 1, 1, 0})
+	DMember(bool)                                      bTakeRotationFromEffectorSpace                              OFFSET(get<bool>, {0x252, 1, 1, 1})
+	DMember(bool)                                      bMaintainEffectorRelRot                                     OFFSET(get<bool>, {0x252, 1, 1, 2})
+	DMember(bool)                                      bAllowTwist                                                 OFFSET(get<bool>, {0x252, 1, 1, 3})
 };
 
 /// Struct /Script/AnimGraphRuntime.IKFootPelvisPullDownSolver
@@ -1605,11 +1618,11 @@ class FIKFootPelvisPullDownSolver : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVectorRK4SpringInterpolator)              PelvisAdjustmentInterp                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(double)                                    PelvisAdjustmentInterpAlpha                                 ___ OFFSET(get<double>, {0x60, 8, 0, 0})
-	DMember(double)                                    PelvisAdjustmentMaxDistance                                 ___ OFFSET(get<double>, {0x68, 8, 0, 0})
-	DMember(double)                                    PelvisAdjustmentErrorTolerance                              ___ OFFSET(get<double>, {0x70, 8, 0, 0})
-	DMember(int32_t)                                   PelvisAdjustmentMaxIter                                     ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	SMember(FVectorRK4SpringInterpolator)              PelvisAdjustmentInterp                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(double)                                    PelvisAdjustmentInterpAlpha                                 OFFSET(get<double>, {0x60, 8, 0, 0})
+	DMember(double)                                    PelvisAdjustmentMaxDistance                                 OFFSET(get<double>, {0x68, 8, 0, 0})
+	DMember(double)                                    PelvisAdjustmentErrorTolerance                              OFFSET(get<double>, {0x70, 8, 0, 0})
+	DMember(int32_t)                                   PelvisAdjustmentMaxIter                                     OFFSET(get<int32_t>, {0x78, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.WarpingVectorValue
@@ -1620,8 +1633,8 @@ class FWarpingVectorValue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(EWarpingVectorMode)                        Mode                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(EWarpingVectorMode)                        Mode                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.LayeredBoneBlendReference
@@ -1652,7 +1665,7 @@ class FRBFEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<float>)                             Values                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<float>)                             Values                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.RBFTarget
@@ -1663,11 +1676,11 @@ class FRBFTarget : public FRBFEntry
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(float)                                     ScaleFactor                                                 ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bApplyCustomCurve                                           ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FRichCurve)                                CustomCurve                                                 ___ OFFSET(get<T>, {0x18, 128, 0, 0})
-	CMember(ERBFDistanceMethod)                        DistanceMethod                                              ___ OFFSET(get<T>, {0x98, 1, 0, 0})
-	CMember(ERBFFunctionType)                          FunctionType                                                ___ OFFSET(get<T>, {0x99, 1, 0, 0})
+	DMember(float)                                     ScaleFactor                                                 OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bApplyCustomCurve                                           OFFSET(get<bool>, {0x14, 1, 0, 0})
+	SMember(FRichCurve)                                CustomCurve                                                 OFFSET(get<T>, {0x18, 128, 0, 0})
+	CMember(ERBFDistanceMethod)                        DistanceMethod                                              OFFSET(get<T>, {0x98, 1, 0, 0})
+	CMember(ERBFFunctionType)                          FunctionType                                                OFFSET(get<T>, {0x99, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.SequenceEvaluatorReference

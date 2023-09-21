@@ -35,7 +35,7 @@ class FElementID : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   IDValue                                                     ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   IDValue                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/MeshDescription.VertexID

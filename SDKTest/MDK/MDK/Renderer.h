@@ -16,16 +16,16 @@ class USparseVolumeTextureViewerComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	CMember(USparseVolumeTexture*)                     SparseVolumeTexturePreview                                  ___ OFFSET(get<T>, {0x568, 8, 0, 0})
-	DMember(bool)                                      bAnimate                                                    ___ OFFSET(get<bool>, {0x570, 1, 1, 0})
-	DMember(bool)                                      bReversePlayback                                            ___ OFFSET(get<bool>, {0x570, 1, 1, 1})
-	DMember(bool)                                      bBlockingStreamingRequests                                  ___ OFFSET(get<bool>, {0x570, 1, 1, 2})
-	DMember(float)                                     AnimationFrame                                              ___ OFFSET(get<float>, {0x574, 4, 0, 0})
-	DMember(float)                                     FrameRate                                                   ___ OFFSET(get<float>, {0x578, 4, 0, 0})
-	DMember(float)                                     AnimationTime                                               ___ OFFSET(get<float>, {0x57C, 4, 0, 0})
-	CMember(TEnumAsByte<ESparseVolumeTexturePreviewAttribute>) PreviewAttribute                                    ___ OFFSET(get<T>, {0x580, 1, 0, 0})
-	DMember(int32_t)                                   MipLevel                                                    ___ OFFSET(get<int32_t>, {0x584, 4, 0, 0})
-	DMember(float)                                     Extinction                                                  ___ OFFSET(get<float>, {0x588, 4, 0, 0})
+	CMember(USparseVolumeTexture*)                     SparseVolumeTexturePreview                                  OFFSET(get<T>, {0x568, 8, 0, 0})
+	DMember(bool)                                      bAnimate                                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
+	DMember(bool)                                      bReversePlayback                                            OFFSET(get<bool>, {0x570, 1, 1, 1})
+	DMember(bool)                                      bBlockingStreamingRequests                                  OFFSET(get<bool>, {0x570, 1, 1, 2})
+	DMember(float)                                     AnimationFrame                                              OFFSET(get<float>, {0x574, 4, 0, 0})
+	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x578, 4, 0, 0})
+	DMember(float)                                     AnimationTime                                               OFFSET(get<float>, {0x57C, 4, 0, 0})
+	CMember(TEnumAsByte<ESparseVolumeTexturePreviewAttribute>) PreviewAttribute                                    OFFSET(get<T>, {0x580, 1, 0, 0})
+	DMember(int32_t)                                   MipLevel                                                    OFFSET(get<int32_t>, {0x584, 4, 0, 0})
+	DMember(float)                                     Extinction                                                  OFFSET(get<float>, {0x588, 4, 0, 0})
 };
 
 /// Class /Script/Renderer.SparseVolumeTextureViewer
@@ -36,7 +36,7 @@ class ASparseVolumeTextureViewer : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(USparseVolumeTextureViewerComponent*)      SparseVolumeTextureViewerComponent                          ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USparseVolumeTextureViewerComponent*)      SparseVolumeTextureViewerComponent                          OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Enum /Script/Renderer.ESparseVolumeTexturePreviewAttribute

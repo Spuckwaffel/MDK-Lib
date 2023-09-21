@@ -26,15 +26,40 @@ class UProceduralMeshComponent : public UMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1568;
 
 public:
-	DMember(bool)                                      bUseComplexAsSimpleCollision                                ___ OFFSET(get<bool>, {0x5A8, 1, 0, 0})
-	DMember(bool)                                      bUseAsyncCooking                                            ___ OFFSET(get<bool>, {0x5A9, 1, 0, 0})
-	CMember(UBodySetup*)                               ProcMeshBodySetup                                           ___ OFFSET(get<T>, {0x5B0, 8, 0, 0})
-	CMember(TArray<FProcMeshSection>)                  ProcMeshSections                                            ___ OFFSET(get<T>, {0x5B8, 16, 0, 0})
-	CMember(TArray<FKConvexElem>)                      CollisionConvexElems                                        ___ OFFSET(get<T>, {0x5C8, 16, 0, 0})
-	SMember(FBoxSphereBounds)                          LocalBounds                                                 ___ OFFSET(get<T>, {0x5D8, 56, 0, 0})
-	CMember(TArray<UBodySetup*>)                       AsyncBodySetupQueue                                         ___ OFFSET(get<T>, {0x610, 16, 0, 0})
+	DMember(bool)                                      bUseComplexAsSimpleCollision                                OFFSET(get<bool>, {0x5A8, 1, 0, 0})
+	DMember(bool)                                      bUseAsyncCooking                                            OFFSET(get<bool>, {0x5A9, 1, 0, 0})
+	CMember(UBodySetup*)                               ProcMeshBodySetup                                           OFFSET(get<T>, {0x5B0, 8, 0, 0})
+	CMember(TArray<FProcMeshSection>)                  ProcMeshSections                                            OFFSET(get<T>, {0x5B8, 16, 0, 0})
+	CMember(TArray<FKConvexElem>)                      CollisionConvexElems                                        OFFSET(get<T>, {0x5C8, 16, 0, 0})
+	SMember(FBoxSphereBounds)                          LocalBounds                                                 OFFSET(get<T>, {0x5D8, 56, 0, 0})
+	CMember(TArray<UBodySetup*>)                       AsyncBodySetupQueue                                         OFFSET(get<T>, {0x610, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection_LinearColor
+	// void UpdateMeshSection_LinearColor(int32_t SectionIndex, TArray<FVector>& Vertices, TArray<FVector>& Normals, TArray<FVector2D>& UV0, TArray<FVector2D>& UV1, TArray<FVector2D>& UV2, TArray<FVector2D>& UV3, TArray<FLinearColor>& VertexColors, TArray<FProcMeshTangent>& Tangents, bool bSRGBConversion); // [0xa24394c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection
+	// void UpdateMeshSection(int32_t SectionIndex, TArray<FVector>& Vertices, TArray<FVector>& Normals, TArray<FVector2D>& UV0, TArray<FColor>& VertexColors, TArray<FProcMeshTangent>& Tangents); // [0xa242af4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.SetMeshSectionVisible
+	// void SetMeshSectionVisible(int32_t SectionIndex, bool bNewVisibility);                                                   // [0xa2423ec] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.IsMeshSectionVisible
+	// bool IsMeshSectionVisible(int32_t SectionIndex);                                                                         // [0xa242344] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.GetNumSections
+	// int32_t GetNumSections();                                                                                                // [0xa2404fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection_LinearColor
+	// void CreateMeshSection_LinearColor(int32_t SectionIndex, TArray<FVector>& Vertices, TArray<int32_t>& Triangles, TArray<FVector>& Normals, TArray<FVector2D>& UV0, TArray<FVector2D>& UV1, TArray<FVector2D>& UV2, TArray<FVector2D>& UV3, TArray<FLinearColor>& VertexColors, TArray<FProcMeshTangent>& Tangents, bool bCreateCollision, bool bSRGBConversion); // [0xa23e964] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection
+	// void CreateMeshSection(int32_t SectionIndex, TArray<FVector>& Vertices, TArray<int32_t>& Triangles, TArray<FVector>& Normals, TArray<FVector2D>& UV0, TArray<FColor>& VertexColors, TArray<FProcMeshTangent>& Tangents, bool bCreateCollision); // [0xa23d998] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearMeshSection
+	// void ClearMeshSection(int32_t SectionIndex);                                                                             // [0xa23cb24] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearCollisionConvexMeshes
+	// void ClearCollisionConvexMeshes();                                                                                       // [0xa23cb10] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.ClearAllMeshSections
+	// void ClearAllMeshSections();                                                                                             // [0xa23ca8c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.AddCollisionConvexMesh
+	// void AddCollisionConvexMesh(TArray<FVector> ConvexVerts);                                                                // [0xa23bbbc] Final|Native|Public|BlueprintCallable 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshTangent
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FProcMeshTangent : public MDKStruct
@@ -43,8 +68,8 @@ class FProcMeshTangent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   TangentX                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(bool)                                      bFlipTangentY                                               ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FVector)                                   TangentX                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bFlipTangentY                                               OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshVertex
@@ -55,14 +80,14 @@ class FProcMeshVertex : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FVector)                                   Position                                                    ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FProcMeshTangent)                          Tangent                                                     ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FColor)                                    Color                                                       ___ OFFSET(get<T>, {0x50, 4, 0, 0})
-	SMember(FVector2D)                                 UV0                                                         ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FVector2D)                                 UV1                                                         ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FVector2D)                                 UV2                                                         ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FVector2D)                                 UV3                                                         ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FProcMeshTangent)                          Tangent                                                     OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FColor)                                    Color                                                       OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FVector2D)                                 UV0                                                         OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 UV1                                                         OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FVector2D)                                 UV2                                                         OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FVector2D)                                 UV3                                                         OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/ProceduralMeshComponent.ProcMeshSection
@@ -73,11 +98,11 @@ class FProcMeshSection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FProcMeshVertex>)                   ProcVertexBuffer                                            ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<uint32_t>)                          ProcIndexBuffer                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FBox)                                      SectionLocalBox                                             ___ OFFSET(get<T>, {0x20, 56, 0, 0})
-	DMember(bool)                                      bEnableCollision                                            ___ OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(bool)                                      bSectionVisible                                             ___ OFFSET(get<bool>, {0x59, 1, 0, 0})
+	CMember(TArray<FProcMeshVertex>)                   ProcVertexBuffer                                            OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<uint32_t>)                          ProcIndexBuffer                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FBox)                                      SectionLocalBox                                             OFFSET(get<T>, {0x20, 56, 0, 0})
+	DMember(bool)                                      bEnableCollision                                            OFFSET(get<bool>, {0x58, 1, 0, 0})
+	DMember(bool)                                      bSectionVisible                                             OFFSET(get<bool>, {0x59, 1, 0, 0})
 };
 
 /// Enum /Script/ProceduralMeshComponent.EProcMeshSliceCapOption

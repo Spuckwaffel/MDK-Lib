@@ -47,7 +47,7 @@ class UAudioCaptureComponent : public USynthComponent
 	static inline constexpr uint64_t __MDKClassSize = 2496;
 
 public:
-	DMember(int32_t)                                   JitterLatencyFrames                                         ___ OFFSET(get<int32_t>, {0x900, 4, 0, 0})
+	DMember(int32_t)                                   JitterLatencyFrames                                         OFFSET(get<int32_t>, {0x900, 4, 0, 0})
 };
 
 /// Struct /Script/AudioCapture.AudioInputDeviceInfo
@@ -58,11 +58,11 @@ class FAudioInputDeviceInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   DeviceName                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DeviceID                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   InputChannels                                               ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   PreferredSampleRate                                         ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bSupportsHardwareAEC                                        ___ OFFSET(get<bool>, {0x28, 1, 1, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DeviceID                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   InputChannels                                               OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   PreferredSampleRate                                         OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bSupportsHardwareAEC                                        OFFSET(get<bool>, {0x28, 1, 1, 0})
 };
 
 /// Struct /Script/AudioCapture.AudioCaptureDeviceInfo
@@ -73,8 +73,8 @@ class FAudioCaptureDeviceInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     DeviceName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   NumInputChannels                                            ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   SampleRate                                                  ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	SMember(FName)                                     DeviceName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   NumInputChannels                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 

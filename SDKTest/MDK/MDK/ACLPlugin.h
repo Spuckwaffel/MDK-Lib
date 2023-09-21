@@ -16,11 +16,18 @@ class UAnimationCompressionLibraryDatabase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	CMember(TArray<char>)                              CookedCompressedBytes                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<uint64_t>)                          CookedAnimSequenceMappings                                  ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(uint32_t)                                  MaxStreamRequestSizeKB                                      ___ OFFSET(get<uint32_t>, {0x160, 4, 0, 0})
+	CMember(TArray<char>)                              CookedCompressedBytes                                       OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<uint64_t>)                          CookedAnimSequenceMappings                                  OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(uint32_t)                                  MaxStreamRequestSizeKB                                      OFFSET(get<uint32_t>, {0x160, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
+	// void SetVisualFidelity(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0xa36bbf8] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
+	// ACLVisualFidelity GetVisualFidelity(UAnimationCompressionLibraryDatabase* DatabaseAsset);                                // [0xa36bb78] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAnimBoneCompressionCodec_ACLBase : public UAnimBoneCompressionCodec
@@ -59,7 +66,7 @@ class UAnimBoneCompressionCodec_ACLDatabase : public UAnimBoneCompressionCodec_A
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UAnimationCompressionLibraryDatabase*)     DatabaseAsset                                               ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UAnimationCompressionLibraryDatabase*)     DatabaseAsset                                               OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLSafe

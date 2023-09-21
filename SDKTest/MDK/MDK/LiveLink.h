@@ -18,7 +18,7 @@ class ULiveLinkBasicFrameInterpolationProcessor : public ULiveLinkFrameInterpola
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bInterpolatePropertyValues                                  ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bInterpolatePropertyValues                                  OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationFrameInterpolationProcessor
@@ -39,7 +39,7 @@ class ULiveLinkAnimationVirtualSubject : public ULiveLinkVirtualSubject
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	DMember(bool)                                      bAppendSubjectNameToBones                                   ___ OFFSET(get<bool>, {0x159, 1, 0, 0})
+	DMember(bool)                                      bAppendSubjectNameToBones                                   OFFSET(get<bool>, {0x159, 1, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkBlueprintLibrary
@@ -60,9 +60,20 @@ class ULiveLinkComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtWorldTime
+	// void GetSubjectDataAtWorldTime(FName SubjectName, float WorldTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa1450e8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtSceneTime
+	// void GetSubjectDataAtSceneTime(FName SubjectName, FTimecode& SceneTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa144e8c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectData
+	// void GetSubjectData(FName SubjectName, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle);                         // [0xa144ce8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/LiveLink.LiveLinkComponent.GetAvailableSubjectNames
+	// void GetAvailableSubjectNames(TArray<FName>& SubjectNames);                                                              // [0xa1433c8] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/LiveLink.LiveLinkDrivenComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class ULiveLinkDrivenComponent : public UActorComponent
@@ -71,10 +82,10 @@ class ULiveLinkDrivenComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FLiveLinkSubjectName)                      SubjectName                                                 ___ OFFSET(get<T>, {0xA0, 4, 0, 0})
-	SMember(FName)                                     ActorTransformBone                                          ___ OFFSET(get<T>, {0xA4, 4, 0, 0})
-	DMember(bool)                                      bModifyActorTransform                                       ___ OFFSET(get<bool>, {0xA8, 1, 0, 0})
-	DMember(bool)                                      bSetRelativeLocation                                        ___ OFFSET(get<bool>, {0xA9, 1, 0, 0})
+	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(get<T>, {0xA0, 4, 0, 0})
+	SMember(FName)                                     ActorTransformBone                                          OFFSET(get<T>, {0xA4, 4, 0, 0})
+	DMember(bool)                                      bModifyActorTransform                                       OFFSET(get<bool>, {0xA8, 1, 0, 0})
+	DMember(bool)                                      bSetRelativeLocation                                        OFFSET(get<bool>, {0xA9, 1, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkMessageBusFinder
@@ -115,10 +126,21 @@ class ULiveLinkPreset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<FLiveLinkSourcePreset>)             Sources                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FLiveLinkSubjectPreset>)            Subjects                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FLiveLinkSourcePreset>)             Sources                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FLiveLinkSubjectPreset>)            Subjects                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/LiveLink.LiveLinkPreset.BuildFromClient
+	// void BuildFromClient();                                                                                                  // [0xa140ab8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LiveLink.LiveLinkPreset.ApplyToClientLatent
+	// void ApplyToClientLatent(UObject* WorldContextObject, FLatentActionInfo LatentInfo);                                     // [0xa140900] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LiveLink.LiveLinkPreset.ApplyToClient
+	// bool ApplyToClient();                                                                                                    // [0xa1408dc] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/LiveLink.LiveLinkPreset.AddToClient
+	// bool AddToClient(bool bRecreatePresets);                                                                                 // [0xa14084c] Final|Native|Public|BlueprintCallable|Const 
 /// Class /Script/LiveLink.LiveLinkUserSettings
 /// Size: 0x0010 (0x000028 - 0x000038)
 class ULiveLinkUserSettings : public UObject
@@ -127,7 +149,7 @@ class ULiveLinkUserSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FDirectoryPath)                            PresetSaveDir                                               ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FDirectoryPath)                            PresetSaveDir                                               OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkSettings
@@ -138,20 +160,20 @@ class ULiveLinkSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(TArray<FLiveLinkRoleProjectSetting>)       DefaultRoleSettings                                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(UClass*)                                   FrameInterpolationProcessor                                 ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(TWeakObjectPtr<ULiveLinkPreset*>)          DefaultLiveLinkPreset                                       ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	DMember(float)                                     ClockOffsetCorrectionStep                                   ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	CMember(ELiveLinkSourceMode)                       DefaultMessageBusSourceMode                                 ___ OFFSET(get<T>, {0x64, 1, 0, 0})
-	DMember(double)                                    MessageBusPingRequestFrequency                              ___ OFFSET(get<double>, {0x68, 8, 0, 0})
-	DMember(double)                                    MessageBusHeartbeatFrequency                                ___ OFFSET(get<double>, {0x70, 8, 0, 0})
-	DMember(double)                                    MessageBusHeartbeatTimeout                                  ___ OFFSET(get<double>, {0x78, 8, 0, 0})
-	DMember(double)                                    MessageBusTimeBeforeRemovingInactiveSource                  ___ OFFSET(get<double>, {0x80, 8, 0, 0})
-	DMember(double)                                    TimeWithoutFrameToBeConsiderAsInvalid                       ___ OFFSET(get<double>, {0x88, 8, 0, 0})
-	SMember(FLinearColor)                              ValidColor                                                  ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FLinearColor)                              InvalidColor                                                ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	DMember(char)                                      TextSizeSource                                              ___ OFFSET(get<char>, {0xB0, 1, 0, 0})
-	DMember(char)                                      TextSizeSubject                                             ___ OFFSET(get<char>, {0xB1, 1, 0, 0})
+	CMember(TArray<FLiveLinkRoleProjectSetting>)       DefaultRoleSettings                                         OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(UClass*)                                   FrameInterpolationProcessor                                 OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TWeakObjectPtr<ULiveLinkPreset*>)          DefaultLiveLinkPreset                                       OFFSET(get<T>, {0x40, 32, 0, 0})
+	DMember(float)                                     ClockOffsetCorrectionStep                                   OFFSET(get<float>, {0x60, 4, 0, 0})
+	CMember(ELiveLinkSourceMode)                       DefaultMessageBusSourceMode                                 OFFSET(get<T>, {0x64, 1, 0, 0})
+	DMember(double)                                    MessageBusPingRequestFrequency                              OFFSET(get<double>, {0x68, 8, 0, 0})
+	DMember(double)                                    MessageBusHeartbeatFrequency                                OFFSET(get<double>, {0x70, 8, 0, 0})
+	DMember(double)                                    MessageBusHeartbeatTimeout                                  OFFSET(get<double>, {0x78, 8, 0, 0})
+	DMember(double)                                    MessageBusTimeBeforeRemovingInactiveSource                  OFFSET(get<double>, {0x80, 8, 0, 0})
+	DMember(double)                                    TimeWithoutFrameToBeConsiderAsInvalid                       OFFSET(get<double>, {0x88, 8, 0, 0})
+	SMember(FLinearColor)                              ValidColor                                                  OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FLinearColor)                              InvalidColor                                                OFFSET(get<T>, {0xA0, 16, 0, 0})
+	DMember(char)                                      TextSizeSource                                              OFFSET(get<char>, {0xB0, 1, 0, 0})
+	DMember(char)                                      TextSizeSubject                                             OFFSET(get<char>, {0xB1, 1, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkTimecodeProvider
@@ -162,11 +184,11 @@ class ULiveLinkTimecodeProvider : public UTimecodeProvider
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FLiveLinkSubjectKey)                       SubjectKey                                                  ___ OFFSET(get<T>, {0x30, 20, 0, 0})
-	CMember(ELiveLinkTimecodeProviderEvaluationType)   Evaluation                                                  ___ OFFSET(get<T>, {0x44, 4, 0, 0})
-	DMember(bool)                                      bOverrideFrameRate                                          ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FFrameRate)                                OverrideFrameRate                                           ___ OFFSET(get<T>, {0x4C, 8, 0, 0})
-	DMember(int32_t)                                   BufferSize                                                  ___ OFFSET(get<int32_t>, {0x54, 4, 0, 0})
+	SMember(FLiveLinkSubjectKey)                       SubjectKey                                                  OFFSET(get<T>, {0x30, 20, 0, 0})
+	CMember(ELiveLinkTimecodeProviderEvaluationType)   Evaluation                                                  OFFSET(get<T>, {0x44, 4, 0, 0})
+	DMember(bool)                                      bOverrideFrameRate                                          OFFSET(get<bool>, {0x48, 1, 0, 0})
+	SMember(FFrameRate)                                OverrideFrameRate                                           OFFSET(get<T>, {0x4C, 8, 0, 0})
+	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x54, 4, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkTimeSynchronizationSource
@@ -177,7 +199,7 @@ class ULiveLinkTimeSynchronizationSource : public UTimeSynchronizationSource
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FLiveLinkSubjectName)                      SubjectName                                                 ___ OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(get<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkVirtualSubjectSourceSettings
@@ -188,7 +210,7 @@ class ULiveLinkVirtualSubjectSourceSettings : public ULiveLinkSourceSettings
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     SourceName                                                  ___ OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(get<T>, {0xA8, 4, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkTransformAxisSwitchPreProcessor
@@ -199,13 +221,13 @@ class ULiveLinkTransformAxisSwitchPreProcessor : public ULiveLinkFramePreProcess
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(ELiveLinkAxis)                             FrontAxis                                                   ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	CMember(ELiveLinkAxis)                             RightAxis                                                   ___ OFFSET(get<T>, {0x29, 1, 0, 0})
-	CMember(ELiveLinkAxis)                             UpAxis                                                      ___ OFFSET(get<T>, {0x2A, 1, 0, 0})
-	DMember(bool)                                      bUseOffsetPosition                                          ___ OFFSET(get<bool>, {0x2B, 1, 0, 0})
-	DMember(bool)                                      bUseOffsetOrientation                                       ___ OFFSET(get<bool>, {0x2C, 1, 0, 0})
-	SMember(FVector)                                   OffsetPosition                                              ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FRotator)                                  OffsetOrientation                                           ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	CMember(ELiveLinkAxis)                             FrontAxis                                                   OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(ELiveLinkAxis)                             RightAxis                                                   OFFSET(get<T>, {0x29, 1, 0, 0})
+	CMember(ELiveLinkAxis)                             UpAxis                                                      OFFSET(get<T>, {0x2A, 1, 0, 0})
+	DMember(bool)                                      bUseOffsetPosition                                          OFFSET(get<bool>, {0x2B, 1, 0, 0})
+	DMember(bool)                                      bUseOffsetOrientation                                       OFFSET(get<bool>, {0x2C, 1, 0, 0})
+	SMember(FVector)                                   OffsetPosition                                              OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FRotator)                                  OffsetOrientation                                           OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkAnimationAxisSwitchPreProcessor
@@ -226,7 +248,7 @@ class ULiveLinkAnimationRoleToTransform : public ULiveLinkFrameTranslator
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     BoneName                                                    ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/LiveLink.LiveLinkBlueprintVirtualSubject
@@ -257,10 +279,10 @@ class FProviderPollResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   MachineName                                                 ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(double)                                    MachineTimeOffset                                           ___ OFFSET(get<double>, {0x30, 8, 0, 0})
-	DMember(bool)                                      bIsValidProvider                                            ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   MachineName                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(double)                                    MachineTimeOffset                                           OFFSET(get<double>, {0x30, 8, 0, 0})
+	DMember(bool)                                      bIsValidProvider                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/LiveLink.LiveLinkRoleProjectSetting
@@ -271,10 +293,10 @@ class FLiveLinkRoleProjectSetting : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UClass*)                                   Role                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UClass*)                                   SettingClass                                                ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UClass*)                                   FrameInterpolationProcessor                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(TArray<UClass*>)                           FramePreProcessors                                          ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(UClass*)                                   Role                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   SettingClass                                                OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UClass*)                                   FrameInterpolationProcessor                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(TArray<UClass*>)                           FramePreProcessors                                          OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Enum /Script/LiveLink.ELiveLinkTimecodeProviderEvaluationType

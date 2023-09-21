@@ -15,8 +15,8 @@ class UOnlineISOConversionUtil : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<FOnlineISOLanguageInfo>)            Languages                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FOnlineISORegionInfo>)              Regions                                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FOnlineISOLanguageInfo>)            Languages                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FOnlineISORegionInfo>)              Regions                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineDiscoveryModeSetDef
@@ -27,9 +27,9 @@ class FOnlineDiscoveryModeSetDef : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FOnlineLinkId)                             ModeSetId                                                   ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   SubModeLinkType                                             ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<FOnlineLinkId>)                     SubModeLinkIds                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FOnlineLinkId)                             ModeSetId                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   SubModeLinkType                                             OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FOnlineLinkId>)                     SubModeLinkIds                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineDiscoverySurfaceDevelopmentLinkCodes
@@ -40,8 +40,8 @@ class FOnlineDiscoverySurfaceDevelopmentLinkCodes : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     SurfaceName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FString>)                           DevelopmentLinkCodes                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     SurfaceName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FString>)                           DevelopmentLinkCodes                                        OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineISOLanguageInfo
@@ -52,9 +52,9 @@ class FOnlineISOLanguageInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   LanguageId                                                  ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   BackendId                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   LanguageId                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   BackendId                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineISORegionInfo
@@ -65,9 +65,9 @@ class FOnlineISORegionInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   RegionId                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   BackendId                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   RegionId                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   BackendId                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationRequestLegacy
@@ -78,7 +78,7 @@ class FJsonToxicityEvaluationRequestLegacy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Text                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Text                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationRequestLegacy
@@ -89,7 +89,7 @@ class FJsonToxicityBulkEvaluationRequestLegacy : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FString>)                           texts                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           texts                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationRequest
@@ -100,7 +100,7 @@ class FJsonToxicityEvaluationRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Name                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationRequest
@@ -111,7 +111,7 @@ class FJsonToxicityBulkEvaluationRequest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FString>)                           Names                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           Names                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationResponse
@@ -122,7 +122,7 @@ class FJsonToxicityEvaluationResponse : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      toxic                                                       ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      toxic                                                       OFFSET(get<bool>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationResponse
@@ -133,7 +133,7 @@ class FJsonToxicityBulkEvaluationResponse : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<bool>)                              isToxic                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<bool>)                              isToxic                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/OnlineSubsystemMcp.ESocialCommsPermission

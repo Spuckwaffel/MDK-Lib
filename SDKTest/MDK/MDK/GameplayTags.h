@@ -38,9 +38,9 @@ class UEditableGameplayTagQuery : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FString)                                   UserDescription                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(UEditableGameplayTagQueryExpression*)      RootExpression                                              ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQueryExportText_Helper                                   ___ OFFSET(get<T>, {0x50, 72, 0, 0})
+	SMember(FString)                                   UserDescription                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(UEditableGameplayTagQueryExpression*)      RootExpression                                              OFFSET(get<T>, {0x48, 8, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryExportText_Helper                                   OFFSET(get<T>, {0x50, 72, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression
@@ -61,7 +61,7 @@ class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGamepla
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
@@ -72,7 +72,7 @@ class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGamepla
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
@@ -83,7 +83,7 @@ class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplay
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        ___ OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
@@ -94,7 +94,7 @@ class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGamepla
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
@@ -105,7 +105,7 @@ class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGamepla
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
@@ -116,7 +116,7 @@ class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplay
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UEditableGameplayTagQueryExpression*>) Expressions                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.GameplayTagsManager
@@ -127,8 +127,8 @@ class UGameplayTagsManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(TMap<FName, FGameplayTagSource>)           TagSources                                                  ___ OFFSET(get<T>, {0x188, 80, 0, 0})
-	CMember(TArray<UDataTable*>)                       GameplayTagTables                                           ___ OFFSET(get<T>, {0x288, 16, 0, 0})
+	CMember(TMap<FName, FGameplayTagSource>)           TagSources                                                  OFFSET(get<T>, {0x188, 80, 0, 0})
+	CMember(TArray<UDataTable*>)                       GameplayTagTables                                           OFFSET(get<T>, {0x288, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.GameplayTagsList
@@ -139,8 +139,8 @@ class UGameplayTagsList : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   ConfigFileName                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FGameplayTagTableRow>)              GameplayTagList                                             ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ConfigFileName                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FGameplayTagTableRow>)              GameplayTagList                                             OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.RestrictedGameplayTagsList
@@ -151,8 +151,8 @@ class URestrictedGameplayTagsList : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   ConfigFileName                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FRestrictedGameplayTagTableRow>)    RestrictedGameplayTagList                                   ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ConfigFileName                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FRestrictedGameplayTagTableRow>)    RestrictedGameplayTagList                                   OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.GameplayTagsSettings
@@ -163,20 +163,20 @@ class UGameplayTagsSettings : public UGameplayTagsList
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	DMember(bool)                                      ImportTagsFromConfig                                        ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      WarnOnInvalidTags                                           ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
-	DMember(bool)                                      ClearInvalidTags                                            ___ OFFSET(get<bool>, {0x4A, 1, 0, 0})
-	DMember(bool)                                      AllowEditorTagUnloading                                     ___ OFFSET(get<bool>, {0x4B, 1, 0, 0})
-	DMember(bool)                                      AllowGameTagUnloading                                       ___ OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	DMember(bool)                                      FastReplication                                             ___ OFFSET(get<bool>, {0x4D, 1, 0, 0})
-	SMember(FString)                                   InvalidTagCharacters                                        ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<FGameplayTagCategoryRemap>)         CategoryRemapping                                           ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<FSoftObjectPath>)                   GameplayTagTableList                                        ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(TArray<FGameplayTagRedirect>)              GameplayTagRedirects                                        ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FName>)                             CommonlyReplicatedTags                                      ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	DMember(int32_t)                                   NumBitsForContainerSize                                     ___ OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
-	DMember(int32_t)                                   NetIndexFirstBitSegment                                     ___ OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
-	CMember(TArray<FRestrictedConfigInfo>)             RestrictedConfigFiles                                       ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
+	DMember(bool)                                      ImportTagsFromConfig                                        OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(bool)                                      WarnOnInvalidTags                                           OFFSET(get<bool>, {0x49, 1, 0, 0})
+	DMember(bool)                                      ClearInvalidTags                                            OFFSET(get<bool>, {0x4A, 1, 0, 0})
+	DMember(bool)                                      AllowEditorTagUnloading                                     OFFSET(get<bool>, {0x4B, 1, 0, 0})
+	DMember(bool)                                      AllowGameTagUnloading                                       OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	DMember(bool)                                      FastReplication                                             OFFSET(get<bool>, {0x4D, 1, 0, 0})
+	SMember(FString)                                   InvalidTagCharacters                                        OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FGameplayTagCategoryRemap>)         CategoryRemapping                                           OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   GameplayTagTableList                                        OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(TArray<FGameplayTagRedirect>)              GameplayTagRedirects                                        OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(TArray<FName>)                             CommonlyReplicatedTags                                      OFFSET(get<T>, {0x90, 16, 0, 0})
+	DMember(int32_t)                                   NumBitsForContainerSize                                     OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
+	DMember(int32_t)                                   NetIndexFirstBitSegment                                     OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
+	CMember(TArray<FRestrictedConfigInfo>)             RestrictedConfigFiles                                       OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTags.GameplayTagsDeveloperSettings
@@ -187,8 +187,8 @@ class UGameplayTagsDeveloperSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   DeveloperConfigName                                         ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FName)                                     FavoriteTagSource                                           ___ OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FString)                                   DeveloperConfigName                                         OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FName)                                     FavoriteTagSource                                           OFFSET(get<T>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTag
@@ -199,7 +199,7 @@ class FGameplayTag : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     TagName                                                     ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TagName                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagContainer
@@ -210,8 +210,8 @@ class FGameplayTagContainer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FGameplayTag>)                      GameplayTags                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FGameplayTag>)                      ParentTags                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FGameplayTag>)                      GameplayTags                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayTag>)                      ParentTags                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagQuery
@@ -222,11 +222,11 @@ class FGameplayTagQuery : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(int32_t)                                   TokenStreamVersion                                          ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(TArray<FGameplayTag>)                      TagDictionary                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<char>)                              QueryTokenStream                                            ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   UserDescription                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   AutoDescription                                             ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(int32_t)                                   TokenStreamVersion                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(TArray<FGameplayTag>)                      TagDictionary                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<char>)                              QueryTokenStream                                            OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   UserDescription                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   AutoDescription                                             OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagContainerNetSerializerSerializationHelper
@@ -237,7 +237,7 @@ class FGameplayTagContainerNetSerializerSerializationHelper : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FGameplayTag>)                      GameplayTags                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FGameplayTag>)                      GameplayTags                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagCreationWidgetHelper
@@ -278,8 +278,8 @@ class FGameplayTagRedirect : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     OldTagName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     NewTagName                                                  ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     OldTagName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     NewTagName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagTableRow
@@ -290,8 +290,8 @@ class FGameplayTagTableRow : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     tag                                                         ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FString)                                   DevComment                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FString)                                   DevComment                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.RestrictedGameplayTagTableRow
@@ -302,7 +302,7 @@ class FRestrictedGameplayTagTableRow : public FGameplayTagTableRow
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bAllowNonRestrictedChildren                                 ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bAllowNonRestrictedChildren                                 OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagSource
@@ -313,10 +313,10 @@ class FGameplayTagSource : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     SourceName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EGameplayTagSourceType)                    SourceType                                                  ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	CMember(UGameplayTagsList*)                        SourceTagList                                               ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(URestrictedGameplayTagsList*)              SourceRestrictedTagList                                     ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EGameplayTagSourceType)                    SourceType                                                  OFFSET(get<T>, {0x4, 1, 0, 0})
+	CMember(UGameplayTagsList*)                        SourceTagList                                               OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(URestrictedGameplayTagsList*)              SourceRestrictedTagList                                     OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.GameplayTagNode
@@ -337,8 +337,8 @@ class FGameplayTagCategoryRemap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   BaseCategory                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FString>)                           RemapCategories                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   BaseCategory                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           RemapCategories                                             OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayTags.RestrictedConfigInfo
@@ -349,8 +349,8 @@ class FRestrictedConfigInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   RestrictedConfigName                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FString>)                           Owners                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   RestrictedConfigName                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           Owners                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Enum /Script/GameplayTags.EGameplayContainerMatchType

@@ -18,12 +18,21 @@ class UStateTreeComponent : public UBrainComponent
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStateTreeRunStatusChanged                                 ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FStateTreeReference)                       StateTreeRef                                                ___ OFFSET(get<T>, {0x110, 24, 0, 0})
-	DMember(bool)                                      bStartLogicAutomatically                                    ___ OFFSET(get<bool>, {0x128, 1, 0, 0})
-	SMember(FStateTreeInstanceData)                    InstanceData                                                ___ OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStateTreeRunStatusChanged                                 OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FStateTreeReference)                       StateTreeRef                                                OFFSET(get<T>, {0x110, 24, 0, 0})
+	DMember(bool)                                      bStartLogicAutomatically                                    OFFSET(get<bool>, {0x128, 1, 0, 0})
+	SMember(FStateTreeInstanceData)                    InstanceData                                                OFFSET(get<T>, {0x130, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayStateTreeModule.StateTreeComponent.SetStartLogicAutomatically
+	// void SetStartLogicAutomatically(bool bInStartLogicAutomatically);                                                        // [0x9b675e4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayStateTreeModule.StateTreeComponent.SendStateTreeEvent
+	// void SendStateTreeEvent(FStateTreeEvent& Event);                                                                         // [0x9b674f8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayStateTreeModule.StateTreeComponent.GetStateTreeRunStatus
+	// EStateTreeRunStatus GetStateTreeRunStatus();                                                                             // [0x9b674c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/GameplayStateTreeModule.StateTreeComponentSchema
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UStateTreeComponentSchema : public UStateTreeSchema
@@ -32,7 +41,7 @@ class UStateTreeComponentSchema : public UStateTreeSchema
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UClass*)                                   ContextActorClass                                           ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FStateTreeExternalDataDesc)                ContextActorDataDesc                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UClass*)                                   ContextActorClass                                           OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FStateTreeExternalDataDesc)                ContextActorDataDesc                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 

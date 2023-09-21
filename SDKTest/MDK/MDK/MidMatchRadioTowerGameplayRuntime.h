@@ -17,7 +17,7 @@ class ARadioTowerTerminal : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2432;
 
 public:
-	DMember(float)                                     MaxInteractHalfAngle                                        ___ OFFSET(get<float>, {0x978, 4, 0, 0})
+	DMember(float)                                     MaxInteractHalfAngle                                        OFFSET(get<float>, {0x978, 4, 0, 0})
 };
 
 /// Class /Script/MidMatchRadioTowerGameplayRuntime.RemoveFoliageBoxComponent
@@ -38,6 +38,11 @@ class ABuildingGameplayActorRadioTower : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2464;
 
 public:
-	SMember(FScalableFloat)                            MarkLinkedRadioTowerTerminal                                ___ OFFSET(get<T>, {0x978, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkLinkedRadioTowerTerminal                                OFFSET(get<T>, {0x978, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MidMatchRadioTowerGameplayRuntime.BuildingGameplayActorRadioTower.GetLinkedRadioTowerTerminal
+	// ARadioTowerTerminal* GetLinkedRadioTowerTerminal();                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent|Const 

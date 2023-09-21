@@ -18,13 +18,13 @@ class UGeometryCache : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TArray<UMaterialInterface*>)               Materials                                                   ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FName>)                             MaterialSlotNames                                           ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<UGeometryCacheTrack*>)              Tracks                                                      ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	DMember(int32_t)                                   StartFrame                                                  ___ OFFSET(get<int32_t>, {0x80, 4, 0, 0})
-	DMember(int32_t)                                   EndFrame                                                    ___ OFFSET(get<int32_t>, {0x84, 4, 0, 0})
-	DMember(uint64_t)                                  Hash                                                        ___ OFFSET(get<uint64_t>, {0x88, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               Materials                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             MaterialSlotNames                                           OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UGeometryCacheTrack*>)              Tracks                                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x60, 16, 0, 0})
+	DMember(int32_t)                                   StartFrame                                                  OFFSET(get<int32_t>, {0x80, 4, 0, 0})
+	DMember(int32_t)                                   EndFrame                                                    OFFSET(get<int32_t>, {0x84, 4, 0, 0})
+	DMember(uint64_t)                                  Hash                                                        OFFSET(get<uint64_t>, {0x88, 8, 0, 0})
 };
 
 /// Class /Script/GeometryCache.GeometryCacheActor
@@ -35,9 +35,14 @@ class AGeometryCacheActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UGeometryCacheComponent*)                  GeometryCacheComponent                                      ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UGeometryCacheComponent*)                  GeometryCacheComponent                                      OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
+	// UGeometryCacheComponent* GetGeometryCacheComponent();                                                                    // [0x57069a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/GeometryCache.GeometryCacheCodecBase
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UGeometryCacheCodecBase : public UObject
@@ -46,7 +51,7 @@ class UGeometryCacheCodecBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<int32_t>)                           TopologyRanges                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<int32_t>)                           TopologyRanges                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/GeometryCache.GeometryCacheCodecRaw
@@ -57,7 +62,7 @@ class UGeometryCacheCodecRaw : public UGeometryCacheCodecBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(int32_t)                                   DummyProperty                                               ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	DMember(int32_t)                                   DummyProperty                                               OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/GeometryCache.GeometryCacheCodecV1
@@ -78,21 +83,80 @@ class UGeometryCacheComponent : public UMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
-	CMember(UGeometryCache*)                           GeometryCache                                               ___ OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	DMember(bool)                                      bRunning                                                    ___ OFFSET(get<bool>, {0x5A8, 1, 0, 0})
-	DMember(bool)                                      bLooping                                                    ___ OFFSET(get<bool>, {0x5A9, 1, 0, 0})
-	DMember(bool)                                      bExtrapolateFrames                                          ___ OFFSET(get<bool>, {0x5AA, 1, 0, 0})
-	DMember(float)                                     StartTimeOffset                                             ___ OFFSET(get<float>, {0x5AC, 4, 0, 0})
-	DMember(float)                                     PlaybackSpeed                                               ___ OFFSET(get<float>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     MotionVectorScale                                           ___ OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	DMember(int32_t)                                   NumTracks                                                   ___ OFFSET(get<int32_t>, {0x5B8, 4, 0, 0})
-	DMember(float)                                     ElapsedTime                                                 ___ OFFSET(get<float>, {0x5BC, 4, 0, 0})
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x60C, 4, 0, 0})
-	DMember(bool)                                      bManualTick                                                 ___ OFFSET(get<bool>, {0x610, 1, 0, 0})
-	DMember(bool)                                      bOverrideWireframeColor                                     ___ OFFSET(get<bool>, {0x611, 1, 0, 0})
-	SMember(FLinearColor)                              WireframeOverrideColor                                      ___ OFFSET(get<T>, {0x614, 16, 0, 0})
+	CMember(UGeometryCache*)                           GeometryCache                                               OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	DMember(bool)                                      bRunning                                                    OFFSET(get<bool>, {0x5A8, 1, 0, 0})
+	DMember(bool)                                      bLooping                                                    OFFSET(get<bool>, {0x5A9, 1, 0, 0})
+	DMember(bool)                                      bExtrapolateFrames                                          OFFSET(get<bool>, {0x5AA, 1, 0, 0})
+	DMember(float)                                     StartTimeOffset                                             OFFSET(get<float>, {0x5AC, 4, 0, 0})
+	DMember(float)                                     PlaybackSpeed                                               OFFSET(get<float>, {0x5B0, 4, 0, 0})
+	DMember(float)                                     MotionVectorScale                                           OFFSET(get<float>, {0x5B4, 4, 0, 0})
+	DMember(int32_t)                                   NumTracks                                                   OFFSET(get<int32_t>, {0x5B8, 4, 0, 0})
+	DMember(float)                                     ElapsedTime                                                 OFFSET(get<float>, {0x5BC, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x60C, 4, 0, 0})
+	DMember(bool)                                      bManualTick                                                 OFFSET(get<bool>, {0x610, 1, 0, 0})
+	DMember(bool)                                      bOverrideWireframeColor                                     OFFSET(get<bool>, {0x611, 1, 0, 0})
+	SMember(FLinearColor)                              WireframeOverrideColor                                      OFFSET(get<T>, {0x614, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GeometryCache.GeometryCacheComponent.TickAtThisTime
+	// void TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping);                                // [0x9cc4474] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.Stop
+	// void Stop();                                                                                                             // [0x9cc445c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetWireframeOverrideColor
+	// void SetWireframeOverrideColor(FLinearColor Color);                                                                      // [0x9cc430c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetStartTimeOffset
+	// void SetStartTimeOffset(float NewStartTimeOffset);                                                                       // [0x9cc4268] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
+	// void SetPlaybackSpeed(float NewPlaybackSpeed);                                                                           // [0x9cc41d8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetOverrideWireframeColor
+	// void SetOverrideWireframeColor(bool bOverride);                                                                          // [0x9cc4158] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetMotionVectorScale
+	// void SetMotionVectorScale(float NewMotionVectorScale);                                                                   // [0x9cc40c8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetLooping
+	// void SetLooping(bool bNewLooping);                                                                                       // [0x9cc3f90] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetGeometryCache
+	// bool SetGeometryCache(UGeometryCache* NewGeomCache);                                                                     // [0x9cc3f00] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.SetExtrapolateFrames
+	// void SetExtrapolateFrames(bool bNewExtrapolating);                                                                       // [0x9cc3e80] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversedFromEnd
+	// void PlayReversedFromEnd();                                                                                              // [0x9cc3e30] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.PlayReversed
+	// void PlayReversed();                                                                                                     // [0x9cc3dec] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.PlayFromStart
+	// void PlayFromStart();                                                                                                    // [0x9cc3da4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.Play
+	// void Play();                                                                                                             // [0x9cc3d60] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.Pause
+	// void Pause();                                                                                                            // [0x9cc3d40] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlayingReversed
+	// bool IsPlayingReversed();                                                                                                // [0x9cc3d0c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.IsPlaying
+	// bool IsPlaying();                                                                                                        // [0x9cc3cf4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.IsLooping
+	// bool IsLooping();                                                                                                        // [0x9cc3cdc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.IsExtrapolatingFrames
+	// bool IsExtrapolatingFrames();                                                                                            // [0x9cc3cc4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetWireframeOverrideColor
+	// FLinearColor GetWireframeOverrideColor();                                                                                // [0x9cc3ca8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetStartTimeOffset
+	// float GetStartTimeOffset();                                                                                              // [0x9cc3c90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
+	// float GetPlaybackSpeed();                                                                                                // [0x9cc3c64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetPlaybackDirection
+	// float GetPlaybackDirection();                                                                                            // [0x9cc3c4c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetOverrideWireframeColor
+	// bool GetOverrideWireframeColor();                                                                                        // [0x9cc3c34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetNumberOfFrames
+	// int32_t GetNumberOfFrames();                                                                                             // [0x9cc3c00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetMotionVectorScale
+	// float GetMotionVectorScale();                                                                                            // [0x9cc3bd4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetDuration
+	// float GetDuration();                                                                                                     // [0x9cc3bbc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/GeometryCache.GeometryCacheComponent.GetAnimationTime
+	// float GetAnimationTime();                                                                                                // [0x9cc3b88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/GeometryCache.GeometryCacheTrack
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UGeometryCacheTrack : public UObject
@@ -101,7 +165,7 @@ class UGeometryCacheTrack : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(float)                                     Duration                                                    ___ OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack_FlipbookAnimation
@@ -112,9 +176,14 @@ class UGeometryCacheTrack_FlipbookAnimation : public UGeometryCacheTrack
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(uint32_t)                                  NumMeshSamples                                              ___ OFFSET(get<uint32_t>, {0x58, 4, 0, 0})
+	DMember(uint32_t)                                  NumMeshSamples                                              OFFSET(get<uint32_t>, {0x58, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
+	// void AddMeshSample(FGeometryCacheMeshData& MeshData, float SampleTime);                                                  // [0x9cc39c8] Final|Native|Public|HasOutParms 
 /// Class /Script/GeometryCache.GeometryCacheTrackStreamable
 /// Size: 0x0080 (0x000058 - 0x0000D8)
 class UGeometryCacheTrackStreamable : public UGeometryCacheTrack
@@ -123,8 +192,8 @@ class UGeometryCacheTrackStreamable : public UGeometryCacheTrack
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(UGeometryCacheCodecBase*)                  Codec                                                       ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	DMember(float)                                     StartSampleTime                                             ___ OFFSET(get<float>, {0xC8, 4, 0, 0})
+	CMember(UGeometryCacheCodecBase*)                  Codec                                                       OFFSET(get<T>, {0x58, 8, 0, 0})
+	DMember(float)                                     StartSampleTime                                             OFFSET(get<float>, {0xC8, 4, 0, 0})
 };
 
 /// Class /Script/GeometryCache.GeometryCacheTrack_TransformAnimation
@@ -155,20 +224,20 @@ class UNiagaraGeometryCacheRendererProperties : public UNiagaraRendererPropertie
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	CMember(TArray<FNiagaraGeometryCacheReference>)    GeometryCaches                                              ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(ENiagaraRendererSourceDataMode)            SourceMode                                                  ___ OFFSET(get<T>, {0xC0, 1, 0, 0})
-	DMember(bool)                                      bIsLooping                                                  ___ OFFSET(get<bool>, {0xC1, 1, 0, 0})
-	DMember(uint32_t)                                  ComponentCountLimit                                         ___ OFFSET(get<uint32_t>, {0xC4, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             ___ OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RotationBinding                                             ___ OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                ___ OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ElapsedTimeBinding                                          ___ OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              ___ OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ArrayIndexBinding                                           ___ OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                ___ OFFSET(get<T>, {0x1B8, 40, 0, 0})
-	DMember(int32_t)                                   RendererVisibility                                          ___ OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
-	DMember(bool)                                      bAssignComponentsOnParticleID                               ___ OFFSET(get<bool>, {0x1E4, 1, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          ___ OFFSET(get<T>, {0x1E8, 80, 0, 0})
+	CMember(TArray<FNiagaraGeometryCacheReference>)    GeometryCaches                                              OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(ENiagaraRendererSourceDataMode)            SourceMode                                                  OFFSET(get<T>, {0xC0, 1, 0, 0})
+	DMember(bool)                                      bIsLooping                                                  OFFSET(get<bool>, {0xC1, 1, 0, 0})
+	DMember(uint32_t)                                  ComponentCountLimit                                         OFFSET(get<uint32_t>, {0xC4, 4, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0xC8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RotationBinding                                             OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(get<T>, {0x118, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ElapsedTimeBinding                                          OFFSET(get<T>, {0x140, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(get<T>, {0x168, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ArrayIndexBinding                                           OFFSET(get<T>, {0x190, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x1B8, 40, 0, 0})
+	DMember(int32_t)                                   RendererVisibility                                          OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
+	DMember(bool)                                      bAssignComponentsOnParticleID                               OFFSET(get<bool>, {0x1E4, 1, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x1E8, 80, 0, 0})
 };
 
 /// Struct /Script/GeometryCache.TrackRenderData
@@ -219,8 +288,8 @@ class FNiagaraGeometryCacheMICOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UMaterialInterface*)                       OriginalMaterial                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UMaterialInstanceConstant*)                ReplacementMaterial                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UMaterialInterface*)                       OriginalMaterial                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UMaterialInstanceConstant*)                ReplacementMaterial                                         OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/GeometryCache.NiagaraGeometryCacheReference
@@ -231,9 +300,9 @@ class FNiagaraGeometryCacheReference : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UGeometryCache*)                           GeometryCache                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              GeometryCacheUserParamBinding                               ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FNiagaraGeometryCacheMICOverride>)  MICOverrideMaterials                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UGeometryCache*)                           GeometryCache                                               OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              GeometryCacheUserParamBinding                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FNiagaraGeometryCacheMICOverride>)  MICOverrideMaterials                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 

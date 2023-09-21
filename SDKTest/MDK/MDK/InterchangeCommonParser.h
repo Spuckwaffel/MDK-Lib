@@ -14,15 +14,15 @@ class FInterchangeCurveKey : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	CMember(EInterchangeCurveInterpMode)               InterpMode                                                  ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EInterchangeCurveTangentMode)              TangentMode                                                 ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	CMember(EInterchangeCurveTangentWeightMode)        TangentWeightMode                                           ___ OFFSET(get<T>, {0x2, 1, 0, 0})
-	DMember(float)                                     Time                                                        ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     ArriveTangent                                               ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     ArriveTangentWeight                                         ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     LeaveTangent                                                ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     LeaveTangentWeight                                          ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	CMember(EInterchangeCurveInterpMode)               InterpMode                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EInterchangeCurveTangentMode)              TangentMode                                                 OFFSET(get<T>, {0x1, 1, 0, 0})
+	CMember(EInterchangeCurveTangentWeightMode)        TangentWeightMode                                           OFFSET(get<T>, {0x2, 1, 0, 0})
+	DMember(float)                                     Time                                                        OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     ArriveTangent                                               OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     ArriveTangentWeight                                         OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     LeaveTangent                                                OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     LeaveTangentWeight                                          OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/InterchangeCommonParser.InterchangeCurve
@@ -33,7 +33,7 @@ class FInterchangeCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FInterchangeCurveKey>)              Keys                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FInterchangeCurveKey>)              Keys                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/InterchangeCommonParser.InterchangeStepCurve
@@ -44,7 +44,7 @@ class FInterchangeStepCurve : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<float>)                             KeyTimes                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<float>)                             KeyTimes                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/InterchangeCommonParser.EInterchangeCurveInterpMode

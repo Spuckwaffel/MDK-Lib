@@ -16,9 +16,22 @@ class AElectraDataChannelPlayer : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTerminalError                                             ___ OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTerminalError                                             OFFSET(get<T>, {0x290, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.UseTimeFromMediaPlayer
+	// void UseTimeFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                // [0x9ab5dc8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromStateStreamServer
+	// void PlayFromStateStreamServer(FString InStatePlaylistURL);                                                              // [0x9ab4998] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromMediaPlayer
+	// void PlayFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                   // [0x9ab4918] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromFile
+	// void PlayFromFile(FString InFilename);                                                                                   // [0x9ab4264] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.EndPlayback
+	// void EndPlayback();                                                                                                      // [0x9ab423c] Final|Native|Public|BlueprintCallable 
 /// Class /Script/ElectraDataChannelRuntime.ElectraDataChannelRecorder
 /// Size: 0x0038 (0x000290 - 0x0002C8)
 class AElectraDataChannelRecorder : public AActor

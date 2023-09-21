@@ -16,7 +16,7 @@ class AImagePlate : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UImagePlateComponent*)                     ImagePlate                                                  ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UImagePlateComponent*)                     ImagePlate                                                  OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Class /Script/ImagePlate.ImagePlateComponent
@@ -27,9 +27,18 @@ class UImagePlateComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1728;
 
 public:
-	SMember(FImagePlateParameters)                     Plate                                                       ___ OFFSET(get<T>, {0x568, 64, 0, 0})
+	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(get<T>, {0x568, 64, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/ImagePlate.ImagePlateComponent.SetImagePlate
+	// void SetImagePlate(FImagePlateParameters Plate);                                                                         // [0xa00876c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/ImagePlate.ImagePlateComponent.OnRenderTextureChanged
+	// void OnRenderTextureChanged();                                                                                           // [0xa008758] Final|Native|Public  
+	// Function /Script/ImagePlate.ImagePlateComponent.GetPlate
+	// FImagePlateParameters GetPlate();                                                                                        // [0xa008718] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/ImagePlate.ImagePlateSettings
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UImagePlateSettings : public UObject
@@ -38,7 +47,7 @@ class UImagePlateSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   ProxyName                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   ProxyName                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ImagePlate.ImagePlateFileSequence
@@ -49,9 +58,9 @@ class UImagePlateFileSequence : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FDirectoryPath)                            SequencePath                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   FileWildcard                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(float)                                     FrameRate                                                   ___ OFFSET(get<float>, {0x48, 4, 0, 0})
+	SMember(FDirectoryPath)                            SequencePath                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   FileWildcard                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
 /// Class /Script/ImagePlate.ImagePlateFrustumComponent
@@ -72,12 +81,12 @@ class FImagePlateParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UMaterialInterface*)                       Material                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     TextureParameterName                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(bool)                                      bFillScreen                                                 ___ OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FVector2D)                                 FillScreenAmount                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 FixedSize                                                   ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(UTexture*)                                 RenderTexture                                               ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(UMaterialInstanceDynamic*)                 DynamicMaterial                                             ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     TextureParameterName                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(bool)                                      bFillScreen                                                 OFFSET(get<bool>, {0xC, 1, 0, 0})
+	SMember(FVector2D)                                 FillScreenAmount                                            OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 FixedSize                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(UTexture*)                                 RenderTexture                                               OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMaterialInstanceDynamic*)                 DynamicMaterial                                             OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 

@@ -25,9 +25,9 @@ class FPurchaseFlowItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ItemId                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   EntitlementId                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ValidationInfo                                              ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ItemId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   EntitlementId                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ValidationInfo                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/PurchaseFlow.PurchaseFlowOffer
@@ -38,10 +38,10 @@ class FPurchaseFlowOffer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   OfferNamespace                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   OfferId                                                     ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   Quantity                                                    ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	CMember(TArray<FPurchaseFlowItem>)                 Items                                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   OfferNamespace                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   OfferId                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   Quantity                                                    OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	CMember(TArray<FPurchaseFlowItem>)                 Items                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/PurchaseFlow.PurchaseFlowReceiptParam
@@ -52,8 +52,8 @@ class FPurchaseFlowReceiptParam : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   TransactionId                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   TransactionState                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FPurchaseFlowOffer>)                Offers                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   TransactionId                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TransactionState                                            OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FPurchaseFlowOffer>)                Offers                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 

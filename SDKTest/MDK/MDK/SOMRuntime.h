@@ -28,15 +28,15 @@ class AFortScriptedObjectMovement_WorldPhaseSite : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 1112;
 
 public:
-	CMember(TArray<FFortScriptedObjectMovementPhaseData>) Phases                                                   ___ OFFSET(get<T>, {0x298, 16, 0, 0})
-	SMember(FScalableFloat)                            NumSimulatenousMovingObjects                                ___ OFFSET(get<T>, {0x2A8, 40, 0, 0})
-	SMember(FScalableFloat)                            PhaseIntervalSeconds                                        ___ OFFSET(get<T>, {0x2D0, 40, 0, 0})
-	SMember(FScriptedObjectMovement_Grid)              BaseGrid                                                    ___ OFFSET(get<T>, {0x318, 200, 0, 0})
-	SMember(FScriptedObjectMovement_DynamicPathContext) InProgressPath                                             ___ OFFSET(get<T>, {0x3E0, 56, 0, 0})
-	CMember(TArray<UFortScriptedObjectMovement_Slot*>) LeavingSlotStack                                            ___ OFFSET(get<T>, {0x418, 16, 0, 0})
-	CMember(TArray<UFortScriptedObjectMovement_Slot*>) DestinationSlotStack                                        ___ OFFSET(get<T>, {0x428, 16, 0, 0})
-	CMember(TArray<UFortScriptedObjectMovement_Slot*>) OverflowSlotStack                                           ___ OFFSET(get<T>, {0x438, 16, 0, 0})
-	CMember(TArray<AFortScriptedObjectMovement_MovableObjectBase*>) CurrentlyMovingObjects                         ___ OFFSET(get<T>, {0x448, 16, 0, 0})
+	CMember(TArray<FFortScriptedObjectMovementPhaseData>) Phases                                                   OFFSET(get<T>, {0x298, 16, 0, 0})
+	SMember(FScalableFloat)                            NumSimulatenousMovingObjects                                OFFSET(get<T>, {0x2A8, 40, 0, 0})
+	SMember(FScalableFloat)                            PhaseIntervalSeconds                                        OFFSET(get<T>, {0x2D0, 40, 0, 0})
+	SMember(FScriptedObjectMovement_Grid)              BaseGrid                                                    OFFSET(get<T>, {0x318, 200, 0, 0})
+	SMember(FScriptedObjectMovement_DynamicPathContext) InProgressPath                                             OFFSET(get<T>, {0x3E0, 56, 0, 0})
+	CMember(TArray<UFortScriptedObjectMovement_Slot*>) LeavingSlotStack                                            OFFSET(get<T>, {0x418, 16, 0, 0})
+	CMember(TArray<UFortScriptedObjectMovement_Slot*>) DestinationSlotStack                                        OFFSET(get<T>, {0x428, 16, 0, 0})
+	CMember(TArray<UFortScriptedObjectMovement_Slot*>) OverflowSlotStack                                           OFFSET(get<T>, {0x438, 16, 0, 0})
+	CMember(TArray<AFortScriptedObjectMovement_MovableObjectBase*>) CurrentlyMovingObjects                         OFFSET(get<T>, {0x448, 16, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_SlotDefinition
@@ -47,8 +47,8 @@ class UFortScriptedObjectMovement_SlotDefinition : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UClass*)                                   ScriptedObjectClass                                         ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(float)                                     ObjectScale                                                 ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	CMember(UClass*)                                   ScriptedObjectClass                                         OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(float)                                     ObjectScale                                                 OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_Slot
@@ -59,9 +59,9 @@ class UFortScriptedObjectMovement_Slot : public UStaticMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1600;
 
 public:
-	CMember(UFortScriptedObjectMovement_SlotDefinition*) SlotDefinition                                            ___ OFFSET(get<T>, {0x620, 8, 0, 0})
-	DMember(int32_t)                                   ObjectRemoveOrder                                           ___ OFFSET(get<int32_t>, {0x628, 4, 0, 0})
-	CMember(AFortScriptedObjectMovement_MovableObjectBase*) SlottedObject                                          ___ OFFSET(get<T>, {0x630, 8, 0, 0})
+	CMember(UFortScriptedObjectMovement_SlotDefinition*) SlotDefinition                                            OFFSET(get<T>, {0x620, 8, 0, 0})
+	DMember(int32_t)                                   ObjectRemoveOrder                                           OFFSET(get<int32_t>, {0x628, 4, 0, 0})
+	CMember(AFortScriptedObjectMovement_MovableObjectBase*) SlottedObject                                          OFFSET(get<T>, {0x630, 8, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_Structure
@@ -72,8 +72,8 @@ class AFortScriptedObjectMovement_Structure : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	CMember(TArray<UFortScriptedObjectMovement_Slot*>) CachedObjectSlots                                           ___ OFFSET(get<T>, {0x290, 16, 0, 0})
-	CMember(TArray<UFortScriptedObjectMovement_SlotDefinition*>) CachedSlotDefinitions                             ___ OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	CMember(TArray<UFortScriptedObjectMovement_Slot*>) CachedObjectSlots                                           OFFSET(get<T>, {0x290, 16, 0, 0})
+	CMember(TArray<UFortScriptedObjectMovement_SlotDefinition*>) CachedSlotDefinitions                             OFFSET(get<T>, {0x2A0, 16, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.FortGameStateComponent_ScriptedObjectMovementManager
@@ -84,12 +84,17 @@ class UFortGameStateComponent_ScriptedObjectMovementManager : public UFortGameSt
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	CMember(TArray<AFortScriptedObjectMovement_WorldPhaseSite*>) WorldPhaseSites                                   ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	CMember(TArray<AScriptedObjectMovement_StaticPath*>) RegisteredStaticPaths                                     ___ OFFSET(get<T>, {0x150, 16, 0, 0})
-	CMember(AScriptedObjectMovement_StaticPath*)       CurrentlyMovingStaticPath                                   ___ OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FScalableFloat)                            StaticPathCooldownBetweenMoves                              ___ OFFSET(get<T>, {0x190, 40, 0, 0})
+	CMember(TArray<AFortScriptedObjectMovement_WorldPhaseSite*>) WorldPhaseSites                                   OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(TArray<AScriptedObjectMovement_StaticPath*>) RegisteredStaticPaths                                     OFFSET(get<T>, {0x150, 16, 0, 0})
+	CMember(AScriptedObjectMovement_StaticPath*)       CurrentlyMovingStaticPath                                   OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FScalableFloat)                            StaticPathCooldownBetweenMoves                              OFFSET(get<T>, {0x190, 40, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SOMRuntime.FortGameStateComponent_ScriptedObjectMovementManager.HandleCurrentPlaylistReady
+	// void HandleCurrentPlaylistReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x998c40c] Final|Native|Private|HasOutParms 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase
 /// Size: 0x0218 (0x000978 - 0x000B90)
 class AFortScriptedObjectMovement_MovableObjectBase : public ABuildingGameplayActor
@@ -98,18 +103,57 @@ class AFortScriptedObjectMovement_MovableObjectBase : public ABuildingGameplayAc
 	static inline constexpr uint64_t __MDKClassSize = 2960;
 
 public:
-	DMember(int32_t)                                   Editor_SkipMasterPathIndex                                  ___ OFFSET(get<int32_t>, {0x9F0, 4, 0, 0})
-	DMember(int32_t)                                   Editor_SkipSubPathIndex                                     ___ OFFSET(get<int32_t>, {0x9F4, 4, 0, 0})
-	DMember(int32_t)                                   Editor_NumStepsPerClick                                     ___ OFFSET(get<int32_t>, {0x9F8, 4, 0, 0})
-	CMember(UFortScriptedObjectMovement_SlotDefinition*) AssignedSlotDefinition                                    ___ OFFSET(get<T>, {0xA20, 8, 0, 0})
-	SMember(FScriptedObjectMovement_DynamicPathContext) MovementPath                                               ___ OFFSET(get<T>, {0xA28, 56, 0, 0})
-	CMember(UStaticMesh*)                              ScriptedObjectMesh                                          ___ OFFSET(get<T>, {0xA68, 8, 0, 0})
-	DMember(bool)                                      bDebugStaticMovement                                        ___ OFFSET(get<bool>, {0xA88, 1, 0, 0})
-	DMember(bool)                                      bWaitingForBeginPlaySkip                                    ___ OFFSET(get<bool>, {0xA89, 1, 0, 0})
-	CMember(AScriptedObjectMovement_StaticPath*)       StaticFollowPath                                            ___ OFFSET(get<T>, {0xA90, 8, 0, 0})
-	SMember(FScriptedObjectMovement_StaticPathStepData) CurrentStepData                                            ___ OFFSET(get<T>, {0xAA0, 240, 0, 0})
+	DMember(int32_t)                                   Editor_SkipMasterPathIndex                                  OFFSET(get<int32_t>, {0x9F0, 4, 0, 0})
+	DMember(int32_t)                                   Editor_SkipSubPathIndex                                     OFFSET(get<int32_t>, {0x9F4, 4, 0, 0})
+	DMember(int32_t)                                   Editor_NumStepsPerClick                                     OFFSET(get<int32_t>, {0x9F8, 4, 0, 0})
+	CMember(UFortScriptedObjectMovement_SlotDefinition*) AssignedSlotDefinition                                    OFFSET(get<T>, {0xA20, 8, 0, 0})
+	SMember(FScriptedObjectMovement_DynamicPathContext) MovementPath                                               OFFSET(get<T>, {0xA28, 56, 0, 0})
+	CMember(UStaticMesh*)                              ScriptedObjectMesh                                          OFFSET(get<T>, {0xA68, 8, 0, 0})
+	DMember(bool)                                      bDebugStaticMovement                                        OFFSET(get<bool>, {0xA88, 1, 0, 0})
+	DMember(bool)                                      bWaitingForBeginPlaySkip                                    OFFSET(get<bool>, {0xA89, 1, 0, 0})
+	CMember(AScriptedObjectMovement_StaticPath*)       StaticFollowPath                                            OFFSET(get<T>, {0xA90, 8, 0, 0})
+	SMember(FScriptedObjectMovement_StaticPathStepData) CurrentStepData                                            OFFSET(get<T>, {0xAA0, 240, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.SetCanEverAffectNavigation
+	// void SetCanEverAffectNavigation(bool bCanEverAffectNavigation, UActorComponent* TargetActorComponent);                   // [0x998c688] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.OnRep_CurrentStepData
+	// void OnRep_CurrentStepData();                                                                                            // [0x998c674] Final|Native|Private 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.NotifyStaticPathStepComplete
+	// void NotifyStaticPathStepComplete(bool bReachedBeginPlaySkipStep);                                                       // [0x998c5f4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.HandleSlotDefinitionSlotted
+	// void HandleSlotDefinitionSlotted(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition);                            // [0x998c53c] Native|Event|Public|BlueprintEvent 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetStaticPathZOffsetHeight
+	// float GetStaticPathZOffsetHeight();                                                                                      // [0x998a580] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetStaticPathTravelingBounds
+	// void GetStaticPathTravelingBounds(FVector& OutBoxExtent);                                                                // [0x998a494] Native|Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetScriptedObjectStaticMeshComponent
+	// UStaticMeshComponent* GetScriptedObjectStaticMeshComponent();                                                            // [0x998a46c] Native|Event|Public|BlueprintEvent 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_TryJumpToStartStep
+	// void Editor_TryJumpToStartStep();                                                                                        // [0x998a444] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_ResetObject
+	// void Editor_ResetObject();                                                                                               // [0x998a3d4] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_PreviousStep
+	// void Editor_PreviousStep();                                                                                              // [0x2d79908] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_NextStep
+	// void Editor_NextStep();                                                                                                  // [0x2d79908] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_DebugLogStaticPathTravelIndex
+	// void Editor_DebugLogStaticPathTravelIndex();                                                                             // [0x998a3c0] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_ClearResetObjectLocation
+	// void Editor_ClearResetObjectLocation();                                                                                  // [0x998a39c] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.ConfigureStaticMeshToSlotDefinition
+	// void ConfigureStaticMeshToSlotDefinition(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition, UStaticMeshComponent* StaticMeshComponent); // [0x998a2c8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.CheatDrawKeyframes
+	// void CheatDrawKeyframes();                                                                                               // [0x2d79908] Final|Native|Public  
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Cheat_NetMulticast_SendDebugTimerInfo
+	// void Cheat_NetMulticast_SendDebugTimerInfo(float ServerTimeWhenQueryInvoked, float RemainingTime);                       // [0x998a200] Net|NetReliableNative|Event|NetMulticast|Public 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.BlockOverlappingStaticPathSteps
+	// bool BlockOverlappingStaticPathSteps();                                                                                  // [0x998a1d8] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.BeginMovingToStaticPathNode
+	// void BeginMovingToStaticPathNode(FScriptedObjectMovement_StaticPathStepData& StepData);                                  // [0x998a118] Native|Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/SOMRuntime.ScriptedObjectMovement_CalendarCheatDefinition
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UScriptedObjectMovement_CalendarCheatDefinition : public UPrimaryDataAsset
@@ -118,7 +162,7 @@ class UScriptedObjectMovement_CalendarCheatDefinition : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FScriptedObjectMovement_StaticPathCalendarCheatDefinitionData>) CheatCalendarEvents             ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FScriptedObjectMovement_StaticPathCalendarCheatDefinitionData>) CheatCalendarEvents             OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.ScriptedObjectMovement_StaticPath
@@ -129,18 +173,33 @@ class AScriptedObjectMovement_StaticPath : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 1248;
 
 public:
-	CMember(USplineComponent*)                         MasterSplinePath                                            ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(TArray<FScriptedObjectMovement_StaticPathTravelerData>) PathTravelers                                  ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	CMember(TArray<FScriptedObjectMovement_StaticPathSplineInputKeyData>) SplineData                               ___ OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	DMember(float)                                     StepSpacingDistance                                         ___ OFFSET(get<float>, {0x2D0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UScriptedObjectMovement_CalendarCheatDefinition*>) CheatCalendarEventDefinition         ___ OFFSET(get<T>, {0x2D8, 32, 0, 0})
-	SMember(FGameplayTag)                              MovementStyleTag                                            ___ OFFSET(get<T>, {0x2F8, 4, 0, 0})
-	SMember(FString)                                   EnterSplineCalendarEvent                                    ___ OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FString)                                   ExitSplineCalendarEvent                                     ___ OFFSET(get<T>, {0x388, 16, 0, 0})
-	CMember(TArray<FStaticPathCalendarSplinePointGroup>) OrderedCalendarEventPointGroups                           ___ OFFSET(get<T>, {0x398, 16, 0, 0})
-	CMember(UFortAsyncAction_CalendarMultiEventWatcher*) CalendarWatcherAction                                     ___ OFFSET(get<T>, {0x4D0, 8, 0, 0})
+	CMember(USplineComponent*)                         MasterSplinePath                                            OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(TArray<FScriptedObjectMovement_StaticPathTravelerData>) PathTravelers                                  OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	CMember(TArray<FScriptedObjectMovement_StaticPathSplineInputKeyData>) SplineData                               OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	DMember(float)                                     StepSpacingDistance                                         OFFSET(get<float>, {0x2D0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UScriptedObjectMovement_CalendarCheatDefinition*>) CheatCalendarEventDefinition         OFFSET(get<T>, {0x2D8, 32, 0, 0})
+	SMember(FGameplayTag)                              MovementStyleTag                                            OFFSET(get<T>, {0x2F8, 4, 0, 0})
+	SMember(FString)                                   EnterSplineCalendarEvent                                    OFFSET(get<T>, {0x378, 16, 0, 0})
+	SMember(FString)                                   ExitSplineCalendarEvent                                     OFFSET(get<T>, {0x388, 16, 0, 0})
+	CMember(TArray<FStaticPathCalendarSplinePointGroup>) OrderedCalendarEventPointGroups                           OFFSET(get<T>, {0x398, 16, 0, 0})
+	CMember(UFortAsyncAction_CalendarMultiEventWatcher*) CalendarWatcherAction                                     OFFSET(get<T>, {0x4D0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.UnlockAllPathsFromBeingRegenerated
+	// void UnlockAllPathsFromBeingRegenerated();                                                                               // [0x998c74c] Final|Native|Public  
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.LockAllPathNodesFromBeingRegenerated
+	// void LockAllPathNodesFromBeingRegenerated();                                                                             // [0x998c5c0] Final|Native|Public  
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventUpdated
+	// void HandleCalendarEventUpdated(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x998b9ec] Native|Protected|HasDefaults 
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventEnded
+	// void HandleCalendarEventEnded(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x998afcc] Native|Protected|HasDefaults 
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventActive
+	// void HandleCalendarEventActive(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x998a5ac] Native|Protected|HasDefaults 
+	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.GeneratePathData
+	// void GeneratePathData();                                                                                                 // [0x998a458] Final|Native|Public  
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_AStarGraphWrapper
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FScriptedObjectMovement_AStarGraphWrapper : public MDKStruct
@@ -159,9 +218,9 @@ class FScriptedObjectMovement_DynamicPathContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UFortScriptedObjectMovement_Slot*)         SourceSlot                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UFortScriptedObjectMovement_Slot*)         DestinationSlot                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TScriptInterface<Class>)                   GridProvider                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(UFortScriptedObjectMovement_Slot*)         SourceSlot                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UFortScriptedObjectMovement_Slot*)         DestinationSlot                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TScriptInterface<Class>)                   GridProvider                                                OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_Grid
@@ -172,7 +231,7 @@ class FScriptedObjectMovement_Grid : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FVector)                                   CellSize                                                    ___ OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   CellSize                                                    OFFSET(get<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.FortScriptedObjectMovementPhaseData
@@ -183,7 +242,7 @@ class FFortScriptedObjectMovementPhaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<AFortScriptedObjectMovement_Structure*>) Structures                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<AFortScriptedObjectMovement_Structure*>) Structures                                             OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovementCalendarEventData
@@ -204,9 +263,9 @@ class FScriptedObjectMovement_StaticPathCalendarCheatDefinitionData : public MDK
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   EventName                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(float)                                     DurationTimeSeconds                                         ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     DelayStartTimeSeconds                                       ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	SMember(FString)                                   EventName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(float)                                     DurationTimeSeconds                                         OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     DelayStartTimeSeconds                                       OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_StaticPathStepData
@@ -217,15 +276,15 @@ class FScriptedObjectMovement_StaticPathStepData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FTransform)                                StartWorldTransform                                         ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FTransform)                                EndWorldTransform                                           ___ OFFSET(get<T>, {0x60, 96, 0, 0})
-	DMember(int32_t)                                   MasterPathStartSplinePoint                                  ___ OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
-	DMember(int32_t)                                   SubSplineStartPoint                                         ___ OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
-	DMember(float)                                     MoveAtServerTimeSecs                                        ___ OFFSET(get<float>, {0xC8, 4, 0, 0})
-	CMember(AFortScriptedObjectMovement_MovableObjectBase*) PathTraveler                                           ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FGameplayTag)                              MoveStyleTag                                                ___ OFFSET(get<T>, {0xE0, 4, 0, 0})
-	DMember(bool)                                      bTeleport                                                   ___ OFFSET(get<bool>, {0xE4, 1, 0, 0})
-	DMember(bool)                                      bIsSkipStep                                                 ___ OFFSET(get<bool>, {0xE5, 1, 0, 0})
+	SMember(FTransform)                                StartWorldTransform                                         OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                EndWorldTransform                                           OFFSET(get<T>, {0x60, 96, 0, 0})
+	DMember(int32_t)                                   MasterPathStartSplinePoint                                  OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
+	DMember(int32_t)                                   SubSplineStartPoint                                         OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
+	DMember(float)                                     MoveAtServerTimeSecs                                        OFFSET(get<float>, {0xC8, 4, 0, 0})
+	CMember(AFortScriptedObjectMovement_MovableObjectBase*) PathTraveler                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FGameplayTag)                              MoveStyleTag                                                OFFSET(get<T>, {0xE0, 4, 0, 0})
+	DMember(bool)                                      bTeleport                                                   OFFSET(get<bool>, {0xE4, 1, 0, 0})
+	DMember(bool)                                      bIsSkipStep                                                 OFFSET(get<bool>, {0xE5, 1, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.StaticPathCalendarSplinePointGroup
@@ -246,9 +305,9 @@ class FScriptedObjectMovement_StaticPathSplineInputKeyData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bLockGeneratedData                                          ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FString)                                   CalendarEvent                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   PauseCalendarEvent                                          ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bLockGeneratedData                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
+	SMember(FString)                                   CalendarEvent                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   PauseCalendarEvent                                          OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_StepMetaData
@@ -259,7 +318,7 @@ class FScriptedObjectMovement_StepMetaData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bSkipStep                                                   ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bSkipStep                                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_StaticPathTravelerData
@@ -270,16 +329,16 @@ class FScriptedObjectMovement_StaticPathTravelerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<USplineComponent*>)                 GeneratedSplinesArray                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FScriptedObjectMovement_StepMetaData>) StepMetaData                                             ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(USplineComponent*)                         EnterSpline                                                 ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(USplineComponent*)                         ExitSpline                                                  ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(AFortScriptedObjectMovement_MovableObjectBase*) PathTraveler                                           ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(int32_t)                                   TravelOrder                                                 ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	DMember(float)                                     LateralOffset                                               ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(bool)                                      bLocked                                                     ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	DMember(bool)                                      bLockEnterSpline                                            ___ OFFSET(get<bool>, {0x41, 1, 0, 0})
-	DMember(bool)                                      bLockExitSpline                                             ___ OFFSET(get<bool>, {0x42, 1, 0, 0})
-	SMember(FVector)                                   TravelerBounds                                              ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	CMember(TArray<USplineComponent*>)                 GeneratedSplinesArray                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FScriptedObjectMovement_StepMetaData>) StepMetaData                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(USplineComponent*)                         EnterSpline                                                 OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(USplineComponent*)                         ExitSpline                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(AFortScriptedObjectMovement_MovableObjectBase*) PathTraveler                                           OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(int32_t)                                   TravelOrder                                                 OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	DMember(float)                                     LateralOffset                                               OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(bool)                                      bLocked                                                     OFFSET(get<bool>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bLockEnterSpline                                            OFFSET(get<bool>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bLockExitSpline                                             OFFSET(get<bool>, {0x42, 1, 0, 0})
+	SMember(FVector)                                   TravelerBounds                                              OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 

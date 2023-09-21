@@ -15,7 +15,7 @@ class UWorldConditionSchema : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FWorldConditionContextDataDesc>)    ContextDataDescs                                            ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FWorldConditionContextDataDesc>)    ContextDataDescs                                            OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionQueryDefinition
@@ -26,7 +26,7 @@ class FWorldConditionQueryDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UClass*)                                   SchemaClass                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UClass*)                                   SchemaClass                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionBase
@@ -37,9 +37,9 @@ class FWorldConditionBase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0xB, 1, 1, 2})
-	CMember(EWorldConditionOperator)                   Operator                                                    ___ OFFSET(get<T>, {0xC, 1, 0, 0})
-	DMember(char)                                      NextExpressionDepth                                         ___ OFFSET(get<char>, {0xD, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0xB, 1, 1, 2})
+	CMember(EWorldConditionOperator)                   Operator                                                    OFFSET(get<T>, {0xC, 1, 0, 0})
+	DMember(char)                                      NextExpressionDepth                                         OFFSET(get<char>, {0xD, 1, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionCommonBase
@@ -80,8 +80,8 @@ class FWorldConditionQuerySharedDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStructContainer)                 Conditions                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(UClass*)                                   SchemaClass                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FInstancedStructContainer)                 Conditions                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(UClass*)                                   SchemaClass                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionItem
@@ -102,7 +102,7 @@ class FWorldConditionStateObject : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UObject*)                                  Object                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionQueryState
@@ -113,7 +113,7 @@ class FWorldConditionQueryState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UObject*)                                  Owner                                                       ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UObject*)                                  Owner                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionQuery
@@ -124,8 +124,8 @@ class FWorldConditionQuery : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FWorldConditionQueryDefinition)            QueryDefinition                                             ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FWorldConditionQueryState)                 QueryState                                                  ___ OFFSET(get<T>, {0x18, 48, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            QueryDefinition                                             OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(get<T>, {0x18, 48, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionResult
@@ -136,8 +136,8 @@ class FWorldConditionResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
 public:
-	CMember(EWorldConditionResultValue)                Value                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bCanBeCached                                                ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
+	CMember(EWorldConditionResultValue)                Value                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bCanBeCached                                                OFFSET(get<bool>, {0x1, 1, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionContextDataDesc
@@ -148,9 +148,9 @@ class FWorldConditionContextDataDesc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UStruct*)                                  Struct                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(EWorldConditionContextDataType)            Type                                                        ___ OFFSET(get<T>, {0xC, 1, 0, 0})
+	CMember(UStruct*)                                  Struct                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(EWorldConditionContextDataType)            Type                                                        OFFSET(get<T>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionContextDataRef
@@ -161,8 +161,8 @@ class FWorldConditionContextDataRef : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(char)                                      Index                                                       ___ OFFSET(get<char>, {0x4, 1, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(char)                                      Index                                                       OFFSET(get<char>, {0x4, 1, 0, 0})
 };
 
 /// Enum /Script/WorldConditions.EWorldConditionResultValue

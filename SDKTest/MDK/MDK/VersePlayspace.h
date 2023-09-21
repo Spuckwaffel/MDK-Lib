@@ -28,6 +28,6 @@ class UPlayspaceConfigComponent : public UPlayspaceComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(UClass*)                                   PlayerComponentClass                                        ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UClass*)                                   PlayerComponentClass                                        OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 

@@ -38,8 +38,8 @@ class UEntityFortniteStormControllerComponent : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(UClass*)                                   StormSpawnerClass                                           ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(AEntityFortniteStormSpawner*)              StormSpawner                                                ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UClass*)                                   StormSpawnerClass                                           OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(AEntityFortniteStormSpawner*)              StormSpawner                                                OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Class /Script/EntityFortnite.EntityFortniteStormSpawner
@@ -50,9 +50,20 @@ class AEntityFortniteStormSpawner : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(USceneComponent*)                          SceneComponent                                              ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EntityFortnite.EntityFortniteStormSpawner.Stop
+	// void Stop();                                                                                                             // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/EntityFortnite.EntityFortniteStormSpawner.Start
+	// void Start(float StartRadius, float BoundsRadius, TArray<FEntityFortniteStormPhase>& Phases);                            // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/EntityFortnite.EntityFortniteStormSpawner.Pause
+	// void Pause();                                                                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/EntityFortnite.EntityFortniteStormSpawner.Exists
+	// bool Exists();                                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent|Const 
 /// Struct /Script/EntityFortnite.EntityFortniteStormPhase
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FEntityFortniteStormPhase : public MDKStruct
@@ -61,16 +72,16 @@ class FEntityFortniteStormPhase : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	DMember(float)                                     WaitTime                                                    ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     ShrinkTime                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     EndRadius                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     EndRadiusPercentage                                         ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(int32_t)                                   DamageIndex                                                 ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bMoves                                                      ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(float)                                     MinMovementDistance                                         ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     MaxMovementDistance                                         ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     MinMovementDistancePercentage                               ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     MaxMovementDistancePercentage                               ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector4)                                  EndLocation                                                 ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(float)                                     WaitTime                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     ShrinkTime                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     EndRadius                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     EndRadiusPercentage                                         OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   DamageIndex                                                 OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bMoves                                                      OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(float)                                     MinMovementDistance                                         OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     MaxMovementDistance                                         OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     MinMovementDistancePercentage                               OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     MaxMovementDistancePercentage                               OFFSET(get<float>, {0x24, 4, 0, 0})
+	SMember(FVector4)                                  EndLocation                                                 OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 

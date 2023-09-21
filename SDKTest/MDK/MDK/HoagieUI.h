@@ -18,6 +18,11 @@ class UFortHoagieVehicleReticle : public UFortAthenaVehicleDashboardWidget
 	static inline constexpr uint64_t __MDKClassSize = 1160;
 
 public:
-	CMember(AFortHoagieVehicle*)                       OwningHoagieVehicle                                         ___ OFFSET(get<T>, {0x480, 8, 0, 0})
+	CMember(AFortHoagieVehicle*)                       OwningHoagieVehicle                                         OFFSET(get<T>, {0x480, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/HoagieUI.FortHoagieVehicleReticle.OnSetupComplete
+	// void OnSetupComplete(bool bVehicleUsesFuelSystem);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 

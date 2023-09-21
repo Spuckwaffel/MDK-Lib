@@ -17,11 +17,11 @@ class UCommonInputActionDomain : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(ECommonInputEventFlowBehavior)             Behavior                                                    ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	CMember(ECommonInputEventFlowBehavior)             InnerBehavior                                               ___ OFFSET(get<T>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bUseActionDomainDesiredInputConfig                          ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	CMember(ECommonInputMode)                          InputMode                                                   ___ OFFSET(get<T>, {0x39, 1, 0, 0})
-	CMember(EMouseCaptureMode)                         MouseCaptureMode                                            ___ OFFSET(get<T>, {0x3A, 1, 0, 0})
+	CMember(ECommonInputEventFlowBehavior)             Behavior                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	CMember(ECommonInputEventFlowBehavior)             InnerBehavior                                               OFFSET(get<T>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bUseActionDomainDesiredInputConfig                          OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(ECommonInputMode)                          InputMode                                                   OFFSET(get<T>, {0x39, 1, 0, 0})
+	CMember(EMouseCaptureMode)                         MouseCaptureMode                                            OFFSET(get<T>, {0x3A, 1, 0, 0})
 };
 
 /// Class /Script/CommonInput.CommonInputActionDomainTable
@@ -32,9 +32,9 @@ class UCommonInputActionDomainTable : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(TArray<UCommonInputActionDomain*>)         ActionDomains                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(ECommonInputMode)                          InputMode                                                   ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	CMember(EMouseCaptureMode)                         MouseCaptureMode                                            ___ OFFSET(get<T>, {0x41, 1, 0, 0})
+	CMember(TArray<UCommonInputActionDomain*>)         ActionDomains                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(ECommonInputMode)                          InputMode                                                   OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(EMouseCaptureMode)                         MouseCaptureMode                                            OFFSET(get<T>, {0x41, 1, 0, 0})
 };
 
 /// Class /Script/CommonInput.CommonUIInputData
@@ -45,11 +45,11 @@ class UCommonUIInputData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FDataTableRowHandle)                       DefaultClickAction                                          ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       DefaultBackAction                                           ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   DefaultHoldData                                             ___ OFFSET(get<T>, {0x48, 32, 0, 0})
-	CMember(UInputAction*)                             EnhancedInputClickAction                                    ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	CMember(UInputAction*)                             EnhancedInputBackAction                                     ___ OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FDataTableRowHandle)                       DefaultClickAction                                          OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       DefaultBackAction                                           OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   DefaultHoldData                                             OFFSET(get<T>, {0x48, 32, 0, 0})
+	CMember(UInputAction*)                             EnhancedInputClickAction                                    OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UInputAction*)                             EnhancedInputBackAction                                     OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
 /// Class /Script/CommonInput.CommonUIHoldData
@@ -60,9 +60,9 @@ class UCommonUIHoldData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FInputHoldData)                            KeyboardAndMouse                                            ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FInputHoldData)                            Gamepad                                                     ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FInputHoldData)                            Touch                                                       ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FInputHoldData)                            KeyboardAndMouse                                            OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FInputHoldData)                            Gamepad                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FInputHoldData)                            Touch                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/CommonInput.CommonInputBaseControllerData
@@ -73,18 +73,23 @@ class UCommonInputBaseControllerData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(ECommonInputType)                          InputType                                                   ___ OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FName)                                     GamepadName                                                 ___ OFFSET(get<T>, {0x2C, 4, 0, 0})
-	SMember(FText)                                     GamepadDisplayName                                          ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FText)                                     GamepadCategory                                             ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FText)                                     GamepadPlatformName                                         ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	CMember(TArray<FInputDeviceIdentifierPair>)        GamepadHardwareIdMapping                                    ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TWeakObjectPtr<UTexture2D*>)               ControllerTexture                                           ___ OFFSET(get<T>, {0x88, 32, 0, 0})
-	CMember(TWeakObjectPtr<UTexture2D*>)               ControllerButtonMaskTexture                                 ___ OFFSET(get<T>, {0xA8, 32, 0, 0})
-	CMember(TArray<FCommonInputKeyBrushConfiguration>) InputBrushDataMap                                           ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	CMember(TArray<FCommonInputKeySetBrushConfiguration>) InputBrushKeySets                                        ___ OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(ECommonInputType)                          InputType                                                   OFFSET(get<T>, {0x28, 1, 0, 0})
+	SMember(FName)                                     GamepadName                                                 OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FText)                                     GamepadDisplayName                                          OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     GamepadCategory                                             OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FText)                                     GamepadPlatformName                                         OFFSET(get<T>, {0x60, 24, 0, 0})
+	CMember(TArray<FInputDeviceIdentifierPair>)        GamepadHardwareIdMapping                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TWeakObjectPtr<UTexture2D*>)               ControllerTexture                                           OFFSET(get<T>, {0x88, 32, 0, 0})
+	CMember(TWeakObjectPtr<UTexture2D*>)               ControllerButtonMaskTexture                                 OFFSET(get<T>, {0xA8, 32, 0, 0})
+	CMember(TArray<FCommonInputKeyBrushConfiguration>) InputBrushDataMap                                           OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(TArray<FCommonInputKeySetBrushConfiguration>) InputBrushKeySets                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads
+	// TArray<FName> GetRegisteredGamepads();                                                                                   // [0x662ba3c] Final|Native|Static|Public 
 /// Class /Script/CommonInput.CommonInputPlatformSettings
 /// Size: 0x0030 (0x000040 - 0x000070)
 class UCommonInputPlatformSettings : public UPlatformSettings
@@ -93,14 +98,14 @@ class UCommonInputPlatformSettings : public UPlatformSettings
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(ECommonInputType)                          DefaultInputType                                            ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	DMember(bool)                                      bSupportsMouseAndKeyboard                                   ___ OFFSET(get<bool>, {0x41, 1, 0, 0})
-	DMember(bool)                                      bSupportsTouch                                              ___ OFFSET(get<bool>, {0x42, 1, 0, 0})
-	DMember(bool)                                      bSupportsGamepad                                            ___ OFFSET(get<bool>, {0x43, 1, 0, 0})
-	SMember(FName)                                     DefaultGamepadName                                          ___ OFFSET(get<T>, {0x44, 4, 0, 0})
-	DMember(bool)                                      bCanChangeGamepadType                                       ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    ControllerData                                              ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<UClass*>)                           ControllerDataClasses                                       ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(ECommonInputType)                          DefaultInputType                                            OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bSupportsMouseAndKeyboard                                   OFFSET(get<bool>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bSupportsTouch                                              OFFSET(get<bool>, {0x42, 1, 0, 0})
+	DMember(bool)                                      bSupportsGamepad                                            OFFSET(get<bool>, {0x43, 1, 0, 0})
+	SMember(FName)                                     DefaultGamepadName                                          OFFSET(get<T>, {0x44, 4, 0, 0})
+	DMember(bool)                                      bCanChangeGamepadType                                       OFFSET(get<bool>, {0x48, 1, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    ControllerData                                              OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ControllerDataClasses                                       OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/CommonInput.CommonInputSettings
@@ -111,21 +116,26 @@ class UCommonInputSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   InputData                                                   ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FPerPlatformSettings)                      PlatformInput                                               ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TMap<FName, FCommonInputPlatformBaseData>) CommonInputPlatformData                                     ___ OFFSET(get<T>, {0x60, 80, 0, 0})
-	DMember(bool)                                      bEnableInputMethodThrashingProtection                       ___ OFFSET(get<bool>, {0xB0, 1, 0, 0})
-	DMember(int32_t)                                   InputMethodThrashingLimit                                   ___ OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
-	DMember(double)                                    InputMethodThrashingWindowInSeconds                         ___ OFFSET(get<double>, {0xB8, 8, 0, 0})
-	DMember(double)                                    InputMethodThrashingCooldownInSeconds                       ___ OFFSET(get<double>, {0xC0, 8, 0, 0})
-	DMember(bool)                                      bAllowOutOfFocusDeviceInput                                 ___ OFFSET(get<bool>, {0xC8, 1, 0, 0})
-	DMember(bool)                                      bEnableDefaultInputConfig                                   ___ OFFSET(get<bool>, {0xC9, 1, 0, 0})
-	DMember(bool)                                      bEnableEnhancedInputSupport                                 ___ OFFSET(get<bool>, {0xCA, 1, 0, 0})
-	CMember(TWeakObjectPtr<UCommonInputActionDomainTable*>) ActionDomainTable                                      ___ OFFSET(get<T>, {0xD0, 32, 0, 0})
-	CMember(UClass*)                                   InputDataClass                                              ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	CMember(UCommonInputActionDomainTable*)            ActionDomainTablePtr                                        ___ OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   InputData                                                   OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FPerPlatformSettings)                      PlatformInput                                               OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TMap<FName, FCommonInputPlatformBaseData>) CommonInputPlatformData                                     OFFSET(get<T>, {0x60, 80, 0, 0})
+	DMember(bool)                                      bEnableInputMethodThrashingProtection                       OFFSET(get<bool>, {0xB0, 1, 0, 0})
+	DMember(int32_t)                                   InputMethodThrashingLimit                                   OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
+	DMember(double)                                    InputMethodThrashingWindowInSeconds                         OFFSET(get<double>, {0xB8, 8, 0, 0})
+	DMember(double)                                    InputMethodThrashingCooldownInSeconds                       OFFSET(get<double>, {0xC0, 8, 0, 0})
+	DMember(bool)                                      bAllowOutOfFocusDeviceInput                                 OFFSET(get<bool>, {0xC8, 1, 0, 0})
+	DMember(bool)                                      bEnableDefaultInputConfig                                   OFFSET(get<bool>, {0xC9, 1, 0, 0})
+	DMember(bool)                                      bEnableEnhancedInputSupport                                 OFFSET(get<bool>, {0xCA, 1, 0, 0})
+	CMember(TWeakObjectPtr<UCommonInputActionDomainTable*>) ActionDomainTable                                      OFFSET(get<T>, {0xD0, 32, 0, 0})
+	CMember(UClass*)                                   InputDataClass                                              OFFSET(get<T>, {0xF8, 8, 0, 0})
+	CMember(UCommonInputActionDomainTable*)            ActionDomainTablePtr                                        OFFSET(get<T>, {0x100, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CommonInput.CommonInputSettings.IsEnhancedInputSupportEnabled
+	// bool IsEnhancedInputSupportEnabled();                                                                                    // [0x662ba68] Final|Native|Static|Public 
 /// Class /Script/CommonInput.CommonInputSubsystem
 /// Size: 0x00D8 (0x000030 - 0x000108)
 class UCommonInputSubsystem : public ULocalPlayerSubsystem
@@ -134,18 +144,39 @@ class UCommonInputSubsystem : public ULocalPlayerSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnInputMethodChanged                                        ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(int32_t)                                   NumberOfInputMethodChangesRecently                          ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(double)                                    LastInputMethodChangeTime                                   ___ OFFSET(get<double>, {0x80, 8, 0, 0})
-	DMember(double)                                    LastTimeInputMethodThrashingBegan                           ___ OFFSET(get<double>, {0x88, 8, 0, 0})
-	CMember(ECommonInputType)                          LastInputType                                               ___ OFFSET(get<T>, {0x90, 1, 0, 0})
-	CMember(ECommonInputType)                          CurrentInputType                                            ___ OFFSET(get<T>, {0x91, 1, 0, 0})
-	SMember(FName)                                     GamepadInputType                                            ___ OFFSET(get<T>, {0x94, 4, 0, 0})
-	CMember(TMap<FName, ECommonInputType>)             CurrentInputLocks                                           ___ OFFSET(get<T>, {0x98, 80, 0, 0})
-	CMember(UCommonInputActionDomainTable*)            ActionDomainTable                                           ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
-	DMember(bool)                                      bIsGamepadSimulatedClick                                    ___ OFFSET(get<bool>, {0xF8, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInputMethodChanged                                        OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(int32_t)                                   NumberOfInputMethodChangesRecently                          OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	DMember(double)                                    LastInputMethodChangeTime                                   OFFSET(get<double>, {0x80, 8, 0, 0})
+	DMember(double)                                    LastTimeInputMethodThrashingBegan                           OFFSET(get<double>, {0x88, 8, 0, 0})
+	CMember(ECommonInputType)                          LastInputType                                               OFFSET(get<T>, {0x90, 1, 0, 0})
+	CMember(ECommonInputType)                          CurrentInputType                                            OFFSET(get<T>, {0x91, 1, 0, 0})
+	SMember(FName)                                     GamepadInputType                                            OFFSET(get<T>, {0x94, 4, 0, 0})
+	CMember(TMap<FName, ECommonInputType>)             CurrentInputLocks                                           OFFSET(get<T>, {0x98, 80, 0, 0})
+	CMember(UCommonInputActionDomainTable*)            ActionDomainTable                                           OFFSET(get<T>, {0xF0, 8, 0, 0})
+	DMember(bool)                                      bIsGamepadSimulatedClick                                    OFFSET(get<bool>, {0xF8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CommonInput.CommonInputSubsystem.ShouldShowInputKeys
+	// bool ShouldShowInputKeys();                                                                                              // [0x662bc4c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.SetGamepadInputType
+	// void SetGamepadInputType(FName InGamepadInputType);                                                                      // [0x662bbcc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CommonInput.CommonInputSubsystem.SetCurrentInputType
+	// void SetCurrentInputType(ECommonInputType NewInputType);                                                                 // [0x662bb4c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CommonInput.CommonInputSubsystem.IsUsingPointerInput
+	// bool IsUsingPointerInput();                                                                                              // [0x662bb1c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.IsInputMethodActive
+	// bool IsInputMethodActive(ECommonInputType InputMethod);                                                                  // [0x662ba8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.GetDefaultInputType
+	// ECommonInputType GetDefaultInputType();                                                                                  // [0x662ba14] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.GetCurrentInputType
+	// ECommonInputType GetCurrentInputType();                                                                                  // [0x29c3118] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.GetCurrentGamepadName
+	// FName GetCurrentGamepadName();                                                                                           // [0x3405268] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CommonInput.CommonInputSubsystem.BroadcastInputMethodChanged
+	// void BroadcastInputMethodChanged();                                                                                      // [0x662ba00] Final|Native|Protected 
 /// Struct /Script/CommonInput.CommonInputKeyBrushConfiguration
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
 class FCommonInputKeyBrushConfiguration : public MDKStruct
@@ -154,8 +185,8 @@ class FCommonInputKeyBrushConfiguration : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FKey)                                      Key                                                         ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSlateBrush)                               KeyBrush                                                    ___ OFFSET(get<T>, {0x20, 192, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSlateBrush)                               KeyBrush                                                    OFFSET(get<T>, {0x20, 192, 0, 0})
 };
 
 /// Struct /Script/CommonInput.CommonInputKeySetBrushConfiguration
@@ -166,8 +197,8 @@ class FCommonInputKeySetBrushConfiguration : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TArray<FKey>)                              Keys                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSlateBrush)                               KeyBrush                                                    ___ OFFSET(get<T>, {0x10, 192, 0, 0})
+	CMember(TArray<FKey>)                              Keys                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSlateBrush)                               KeyBrush                                                    OFFSET(get<T>, {0x10, 192, 0, 0})
 };
 
 /// Struct /Script/CommonInput.InputDeviceIdentifierPair
@@ -178,8 +209,8 @@ class FInputDeviceIdentifierPair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     InputDeviceName                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   HardwareDeviceIdentifier                                    ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     InputDeviceName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   HardwareDeviceIdentifier                                    OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/CommonInput.InputHoldData
@@ -190,8 +221,8 @@ class FInputHoldData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     HoldTime                                                    ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     HoldRollbackTime                                            ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     HoldTime                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     HoldRollbackTime                                            OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CommonInput.CommonInputPlatformBaseData
@@ -202,14 +233,14 @@ class FCommonInputPlatformBaseData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(ECommonInputType)                          DefaultInputType                                            ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	DMember(bool)                                      bSupportsMouseAndKeyboard                                   ___ OFFSET(get<bool>, {0x9, 1, 0, 0})
-	DMember(bool)                                      bSupportsGamepad                                            ___ OFFSET(get<bool>, {0xA, 1, 0, 0})
-	SMember(FName)                                     DefaultGamepadName                                          ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bCanChangeGamepadType                                       ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bSupportsTouch                                              ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    ControllerData                                              ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<UClass*>)                           ControllerDataClasses                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(ECommonInputType)                          DefaultInputType                                            OFFSET(get<T>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bSupportsMouseAndKeyboard                                   OFFSET(get<bool>, {0x9, 1, 0, 0})
+	DMember(bool)                                      bSupportsGamepad                                            OFFSET(get<bool>, {0xA, 1, 0, 0})
+	SMember(FName)                                     DefaultGamepadName                                          OFFSET(get<T>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bCanChangeGamepadType                                       OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bSupportsTouch                                              OFFSET(get<bool>, {0x11, 1, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    ControllerData                                              OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ControllerDataClasses                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Enum /Script/CommonInput.ECommonInputType

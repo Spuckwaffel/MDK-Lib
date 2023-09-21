@@ -26,10 +26,10 @@ class FEpicMediaScheduleScheduleEntryHourly : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   Minutes                                                     ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   VUID                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   DurationSeconds                                             ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	CMember(ULevelSequence*)                           Sequence                                                    ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(int32_t)                                   Minutes                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleEntryDaily
@@ -40,11 +40,11 @@ class FEpicMediaScheduleScheduleEntryDaily : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   Hours                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Minutes                                                     ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FString)                                   VUID                                                        ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(int32_t)                                   DurationSeconds                                             ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	CMember(ULevelSequence*)                           Sequence                                                    ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(int32_t)                                   Hours                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Minutes                                                     OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleEntryAbsolute
@@ -55,10 +55,10 @@ class FEpicMediaScheduleScheduleEntryAbsolute : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   IsoStartTime                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   VUID                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(int32_t)                                   DurationSeconds                                             ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	CMember(ULevelSequence*)                           Sequence                                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FString)                                   IsoStartTime                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleInfo
@@ -69,10 +69,10 @@ class FEpicMediaScheduleScheduleInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FDateTime)                                 StartTime                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTimespan)                                 RelativeStartTime                                           ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FString)                                   VUID                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(ULevelSequence*)                           Sequence                                                    ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FDateTime)                                 StartTime                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTimespan)                                 RelativeStartTime                                           OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Enum /Script/EpicMediaSchedule.EEpicMediaScheduleRepeat

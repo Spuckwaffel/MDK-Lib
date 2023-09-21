@@ -46,17 +46,17 @@ class UConstantQNRTSettings : public UAudioSynesthesiaNRTSettings
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(float)                                     StartingFrequency                                           ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   NumBands                                                    ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	DMember(float)                                     NumBandsPerOctave                                           ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     AnalysisPeriod                                              ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bDownmixToMono                                              ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	CMember(EConstantQFFTSizeEnum)                     FFTSize                                                     ___ OFFSET(get<T>, {0x39, 1, 0, 0})
-	CMember(EFFTWindowType)                            WindowType                                                  ___ OFFSET(get<T>, {0x3A, 1, 0, 0})
-	CMember(EAudioSpectrumType)                        SpectrumType                                                ___ OFFSET(get<T>, {0x3B, 1, 0, 0})
-	DMember(float)                                     BandWidthStretch                                            ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	CMember(EConstantQNormalizationEnum)               CQTNormalization                                            ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	DMember(float)                                     NoiseFloorDb                                                ___ OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     StartingFrequency                                           OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   NumBands                                                    OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(float)                                     NumBandsPerOctave                                           OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     AnalysisPeriod                                              OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bDownmixToMono                                              OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(EConstantQFFTSizeEnum)                     FFTSize                                                     OFFSET(get<T>, {0x39, 1, 0, 0})
+	CMember(EFFTWindowType)                            WindowType                                                  OFFSET(get<T>, {0x3A, 1, 0, 0})
+	CMember(EAudioSpectrumType)                        SpectrumType                                                OFFSET(get<T>, {0x3B, 1, 0, 0})
+	DMember(float)                                     BandWidthStretch                                            OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(EConstantQNormalizationEnum)               CQTNormalization                                            OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(float)                                     NoiseFloorDb                                                OFFSET(get<float>, {0x44, 4, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.ConstantQNRT
@@ -67,9 +67,16 @@ class UConstantQNRT : public UAudioSynesthesiaNRT
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(UConstantQNRTSettings*)                    Settings                                                    ___ OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(UConstantQNRTSettings*)                    Settings                                                    OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
+	// void GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);               // [0x9830b90] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
+	// void GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);                         // [0x98306bc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AudioSynesthesia.LoudnessSettings
 /// Size: 0x0018 (0x000028 - 0x000040)
 class ULoudnessSettings : public UAudioSynesthesiaSettings
@@ -78,12 +85,12 @@ class ULoudnessSettings : public UAudioSynesthesiaSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     AnalysisPeriod                                              ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     MinimumFrequency                                            ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     MaximumFrequency                                            ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	CMember(ELoudnessCurveTypeEnum)                    CurveType                                                   ___ OFFSET(get<T>, {0x34, 1, 0, 0})
-	DMember(float)                                     NoiseFloorDb                                                ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     ExpectedMaxLoudness                                         ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     AnalysisPeriod                                              OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     MinimumFrequency                                            OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     MaximumFrequency                                            OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(ELoudnessCurveTypeEnum)                    CurveType                                                   OFFSET(get<T>, {0x34, 1, 0, 0})
+	DMember(float)                                     NoiseFloorDb                                                OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     ExpectedMaxLoudness                                         OFFSET(get<float>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessAnalyzer
@@ -94,11 +101,11 @@ class ULoudnessAnalyzer : public UAudioAnalyzer
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(ULoudnessSettings*)                        Settings                                                    ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(ULoudnessSettings*)                        Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           OFFSET(get<T>, {0xC8, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRTSettings
@@ -109,11 +116,11 @@ class ULoudnessNRTSettings : public UAudioSynesthesiaNRTSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     AnalysisPeriod                                              ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     MinimumFrequency                                            ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     MaximumFrequency                                            ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	CMember(ELoudnessNRTCurveTypeEnum)                 CurveType                                                   ___ OFFSET(get<T>, {0x34, 1, 0, 0})
-	DMember(float)                                     NoiseFloorDb                                                ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     AnalysisPeriod                                              OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     MinimumFrequency                                            OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     MaximumFrequency                                            OFFSET(get<float>, {0x30, 4, 0, 0})
+	CMember(ELoudnessNRTCurveTypeEnum)                 CurveType                                                   OFFSET(get<T>, {0x34, 1, 0, 0})
+	DMember(float)                                     NoiseFloorDb                                                OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRT
@@ -124,9 +131,20 @@ class ULoudnessNRT : public UAudioSynesthesiaNRT
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(ULoudnessNRTSettings*)                     Settings                                                    ___ OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(ULoudnessNRTSettings*)                     Settings                                                    OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime
+	// void GetNormalizedLoudnessAtTime(float InSeconds, float& OutLoudness);                                                   // [0x9830f90] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime
+	// void GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                         // [0x9830cb8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime
+	// void GetLoudnessAtTime(float InSeconds, float& OutLoudness);                                                             // [0x9830abc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
+	// void GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                                   // [0x98307e4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AudioSynesthesia.MeterSettings
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UMeterSettings : public UAudioSynesthesiaSettings
@@ -135,12 +153,12 @@ class UMeterSettings : public UAudioSynesthesiaSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     AnalysisPeriod                                              ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(EMeterPeakType)                            PeakMode                                                    ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	DMember(int32_t)                                   MeterAttackTime                                             ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(int32_t)                                   MeterReleaseTime                                            ___ OFFSET(get<int32_t>, {0x34, 4, 0, 0})
-	DMember(int32_t)                                   PeakHoldTime                                                ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	DMember(float)                                     ClippingThreshold                                           ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     AnalysisPeriod                                              OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(EMeterPeakType)                            PeakMode                                                    OFFSET(get<T>, {0x2C, 1, 0, 0})
+	DMember(int32_t)                                   MeterAttackTime                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(int32_t)                                   MeterReleaseTime                                            OFFSET(get<int32_t>, {0x34, 4, 0, 0})
+	DMember(int32_t)                                   PeakHoldTime                                                OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	DMember(float)                                     ClippingThreshold                                           OFFSET(get<float>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.MeterAnalyzer
@@ -151,11 +169,11 @@ class UMeterAnalyzer : public UAudioAnalyzer
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	CMember(UMeterSettings*)                           Settings                                                    ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UMeterSettings*)                           Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.OnsetNRTSettings
@@ -166,11 +184,11 @@ class UOnsetNRTSettings : public UAudioSynesthesiaNRTSettings
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(bool)                                      bDownmixToMono                                              ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(float)                                     GranularityInSeconds                                        ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Sensitivity                                                 ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     MinimumFrequency                                            ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     MaximumFrequency                                            ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(bool)                                      bDownmixToMono                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     GranularityInSeconds                                        OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Sensitivity                                                 OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     MinimumFrequency                                            OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     MaximumFrequency                                            OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.OnsetNRT
@@ -181,9 +199,16 @@ class UOnsetNRT : public UAudioSynesthesiaNRT
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(UOnsetNRTSettings*)                        Settings                                                    ___ OFFSET(get<T>, {0x78, 8, 0, 0})
+	CMember(UOnsetNRTSettings*)                        Settings                                                    OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
+	// void GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x9830dbc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
+	// void GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x98308e8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
 /// Size: 0x0008 (0x000028 - 0x000030)
 class USynesthesiaSpectrumAnalysisSettings : public UAudioSynesthesiaSettings
@@ -192,11 +217,11 @@ class USynesthesiaSpectrumAnalysisSettings : public UAudioSynesthesiaSettings
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     AnalysisPeriod                                              ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(EFFTSize)                                  FFTSize                                                     ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	CMember(EAudioSpectrumType)                        SpectrumType                                                ___ OFFSET(get<T>, {0x2D, 1, 0, 0})
-	CMember(EFFTWindowType)                            WindowType                                                  ___ OFFSET(get<T>, {0x2E, 1, 0, 0})
-	DMember(bool)                                      bDownmixToMono                                              ___ OFFSET(get<bool>, {0x2F, 1, 0, 0})
+	DMember(float)                                     AnalysisPeriod                                              OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(EFFTSize)                                  FFTSize                                                     OFFSET(get<T>, {0x2C, 1, 0, 0})
+	CMember(EAudioSpectrumType)                        SpectrumType                                                OFFSET(get<T>, {0x2D, 1, 0, 0})
+	CMember(EFFTWindowType)                            WindowType                                                  OFFSET(get<T>, {0x2E, 1, 0, 0})
+	DMember(bool)                                      bDownmixToMono                                              OFFSET(get<bool>, {0x2F, 1, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer
@@ -207,11 +232,18 @@ class USynesthesiaSpectrumAnalyzer : public UAudioAnalyzer
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(USynesthesiaSpectrumAnalysisSettings*)     Settings                                                    ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(USynesthesiaSpectrumAnalysisSettings*)     Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
+	// int32_t GetNumCenterFrequencies();                                                                                       // [0x9831064] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
+	// void GetCenterFrequencies(float InSampleRate, TArray<float>& OutCenterFrequencies);                                      // [0x98305d8] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Struct /Script/AudioSynesthesia.LoudnessResults
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FLoudnessResults : public MDKStruct
@@ -220,10 +252,10 @@ class FLoudnessResults : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Loudness                                                    ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     NormalizedLoudness                                          ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     PerceptualEnergy                                            ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     TimeSeconds                                                 ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     Loudness                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     NormalizedLoudness                                          OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     PerceptualEnergy                                            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     TimeSeconds                                                 OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/AudioSynesthesia.MeterResults
@@ -234,11 +266,11 @@ class FMeterResults : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(float)                                     TimeSeconds                                                 ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     MeterValue                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     PeakValue                                                   ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   NumSamplesClipping                                          ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(float)                                     ClippingValue                                               ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     TimeSeconds                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     MeterValue                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     PeakValue                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   NumSamplesClipping                                          OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(float)                                     ClippingValue                                               OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/AudioSynesthesia.SynesthesiaSpectrumResults
@@ -249,8 +281,8 @@ class FSynesthesiaSpectrumResults : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     TimeSeconds                                                 ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(TArray<float>)                             SpectrumValues                                              ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(float)                                     TimeSeconds                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(TArray<float>)                             SpectrumValues                                              OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/AudioSynesthesia.EConstantQNormalizationEnum

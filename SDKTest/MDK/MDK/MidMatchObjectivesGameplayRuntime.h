@@ -18,6 +18,11 @@ class UFortGameStateComponent_MidMatchObjectiveParent : public UFortGameStateCom
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FName)                                     ObjectiveCompletedStatName                                  ___ OFFSET(get<T>, {0xA0, 4, 0, 0})
+	SMember(FName)                                     ObjectiveCompletedStatName                                  OFFSET(get<T>, {0xA0, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/MidMatchObjectivesGameplayRuntime.FortGameStateComponent_MidMatchObjectiveParent.SetObjectiveCompletedStat
+	// void SetObjectiveCompletedStat(char SquadId);                                                                            // [0x875a5b0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 

@@ -27,11 +27,22 @@ class ADynamicUIDirectorBase : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	CMember(TArray<UDynamicUIScene*>)                  DefaultScenes                                               ___ OFFSET(get<T>, {0x290, 16, 0, 0})
-	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	DMember(bool)                                      bEnabledDuringReplay                                        ___ OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	CMember(TArray<UDynamicUIScene*>)                  DefaultScenes                                               OFFSET(get<T>, {0x290, 16, 0, 0})
+	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	DMember(bool)                                      bEnabledDuringReplay                                        OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/DynamicUI.DynamicUIDirectorBase.RemoveScene
+	// void RemoveScene(UDynamicUIScene* Scene);                                                                                // [0x6bcb430] Final|Native|Public|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIDirectorBase.GetOwningLocalPlayerController
+	// APlayerController* GetOwningLocalPlayerController();                                                                     // [0x2f01734] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/DynamicUI.DynamicUIDirectorBase.GetOwningLocalPlayer
+	// ULocalPlayer* GetOwningLocalPlayer();                                                                                    // [0x6bcb408] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/DynamicUI.DynamicUIDirectorBase.AddScene
+	// void AddScene(UDynamicUIScene* Scene);                                                                                   // [0x14336a0] Final|Native|Public|BlueprintCallable 
 /// Class /Script/DynamicUI.DynamicUIConstraintBase
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UDynamicUIConstraintBase : public UObject
@@ -40,10 +51,10 @@ class UDynamicUIConstraintBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector2D)                                 Offset                                                      ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(UDynamicUIConstraintOverrideBase*)         ConstraintOverride                                          ___ OFFSET(get<T>, {0x60, 8, 0, 0})
-	DMember(bool)                                      bUseOffset                                                  ___ OFFSET(get<bool>, {0x68, 1, 1, 0})
-	DMember(bool)                                      bUseOverride                                                ___ OFFSET(get<bool>, {0x68, 1, 1, 1})
+	SMember(FVector2D)                                 Offset                                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(UDynamicUIConstraintOverrideBase*)         ConstraintOverride                                          OFFSET(get<T>, {0x60, 8, 0, 0})
+	DMember(bool)                                      bUseOffset                                                  OFFSET(get<bool>, {0x68, 1, 1, 0})
+	DMember(bool)                                      bUseOverride                                                OFFSET(get<bool>, {0x68, 1, 1, 1})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintPosition
@@ -54,9 +65,9 @@ class UDynamicUIConstraintPosition : public UDynamicUIConstraintBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector2D)                                 Position                                                    ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(EDynamicUIAnchor)                          Anchor                                                      ___ OFFSET(get<T>, {0x80, 4, 0, 0})
-	DMember(bool)                                      bUseSafeZone                                                ___ OFFSET(get<bool>, {0x84, 1, 1, 0})
+	SMember(FVector2D)                                 Position                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(EDynamicUIAnchor)                          Anchor                                                      OFFSET(get<T>, {0x80, 4, 0, 0})
+	DMember(bool)                                      bUseSafeZone                                                OFFSET(get<bool>, {0x84, 1, 1, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintAlignment
@@ -67,12 +78,12 @@ class UDynamicUIConstraintAlignment : public UDynamicUIConstraintBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         ___ OFFSET(get<T>, {0x70, 1, 0, 0})
-	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           ___ OFFSET(get<T>, {0x71, 1, 0, 0})
-	CMember(EDynamicUIAnchor)                          Anchor                                                      ___ OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FDynamicUIAspectRatio)                     MaxAspectRatio                                              ___ OFFSET(get<T>, {0x78, 8, 0, 0})
-	DMember(bool)                                      bUseSafeZone                                                ___ OFFSET(get<bool>, {0x80, 1, 1, 0})
-	DMember(bool)                                      bUseMaxAspectRatio                                          ___ OFFSET(get<bool>, {0x80, 1, 1, 1})
+	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x70, 1, 0, 0})
+	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x71, 1, 0, 0})
+	CMember(EDynamicUIAnchor)                          Anchor                                                      OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FDynamicUIAspectRatio)                     MaxAspectRatio                                              OFFSET(get<T>, {0x78, 8, 0, 0})
+	DMember(bool)                                      bUseSafeZone                                                OFFSET(get<bool>, {0x80, 1, 1, 0})
+	DMember(bool)                                      bUseMaxAspectRatio                                          OFFSET(get<bool>, {0x80, 1, 1, 1})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintWidget
@@ -83,12 +94,12 @@ class UDynamicUIConstraintWidget : public UDynamicUIConstraintBase
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	CMember(EDynamicUIAnchor)                          Anchor                                                      ___ OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                ___ OFFSET(get<T>, {0x78, 96, 0, 0})
-	CMember(EDynamicUIAnchor)                          TargetAnchor                                                ___ OFFSET(get<T>, {0xD8, 4, 0, 0})
-	CMember(TArray<UDynamicUIConstraintBase*>)         Fallbacks                                                   ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	DMember(bool)                                      bConstrainToUnallowedWidgets                                ___ OFFSET(get<bool>, {0xF0, 1, 1, 0})
-	DMember(bool)                                      bUseFallbacks                                               ___ OFFSET(get<bool>, {0xF0, 1, 1, 1})
+	CMember(EDynamicUIAnchor)                          Anchor                                                      OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                OFFSET(get<T>, {0x78, 96, 0, 0})
+	CMember(EDynamicUIAnchor)                          TargetAnchor                                                OFFSET(get<T>, {0xD8, 4, 0, 0})
+	CMember(TArray<UDynamicUIConstraintBase*>)         Fallbacks                                                   OFFSET(get<T>, {0xE0, 16, 0, 0})
+	DMember(bool)                                      bConstrainToUnallowedWidgets                                OFFSET(get<bool>, {0xF0, 1, 1, 0})
+	DMember(bool)                                      bUseFallbacks                                               OFFSET(get<bool>, {0xF0, 1, 1, 1})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintContainer
@@ -99,9 +110,9 @@ class UDynamicUIConstraintContainer : public UDynamicUIConstraintBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TArray<FDynamicUIWidgetTarget>)            WidgetsToContain                                            ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FMargin)                                   Padding                                                     ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	DMember(bool)                                      bMustMatchAllWidgets                                        ___ OFFSET(get<bool>, {0x90, 1, 1, 0})
+	CMember(TArray<FDynamicUIWidgetTarget>)            WidgetsToContain                                            OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x80, 16, 0, 0})
+	DMember(bool)                                      bMustMatchAllWidgets                                        OFFSET(get<bool>, {0x90, 1, 1, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintReplace
@@ -112,9 +123,9 @@ class UDynamicUIConstraintReplace : public UDynamicUIConstraintBase
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                ___ OFFSET(get<T>, {0x70, 96, 0, 0})
-	CMember(TArray<UDynamicUIConstraintBase*>)         Fallbacks                                                   ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	DMember(bool)                                      bUseFallbacks                                               ___ OFFSET(get<bool>, {0xE0, 1, 1, 0})
+	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	CMember(TArray<UDynamicUIConstraintBase*>)         Fallbacks                                                   OFFSET(get<T>, {0xD0, 16, 0, 0})
+	DMember(bool)                                      bUseFallbacks                                               OFFSET(get<bool>, {0xE0, 1, 1, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintOverrideBase
@@ -135,8 +146,8 @@ class UDynamicUIConstraintPlatformOverride : public UDynamicUIConstraintOverride
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TMap<FName, UDynamicUIConstraintBase*>)    PlatformVisibilityControls                                  ___ OFFSET(get<T>, {0x28, 80, 0, 0})
-	CMember(TMap<ECommonInputType, UDynamicUIConstraintBase*>) InputTypeVisibilityControls                         ___ OFFSET(get<T>, {0x78, 80, 0, 0})
+	CMember(TMap<FName, UDynamicUIConstraintBase*>)    PlatformVisibilityControls                                  OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<ECommonInputType, UDynamicUIConstraintBase*>) InputTypeVisibilityControls                         OFFSET(get<T>, {0x78, 80, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIManager
@@ -147,9 +158,24 @@ class UDynamicUIManager : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TMap<TWeakObjectPtr, FDynamicUIPlayerData>) PlayerDataMap                                              ___ OFFSET(get<T>, {0x48, 80, 0, 0})
+	CMember(TMap<TWeakObjectPtr, FDynamicUIPlayerData>) PlayerDataMap                                              OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/DynamicUI.DynamicUIManager.RemoveScenes
+	// void RemoveScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                          // [0x6bcbd70] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIManager.RemoveSceneFromFirstLocalPlayer
+	// void RemoveSceneFromFirstLocalPlayer(UDynamicUIScene* Scene);                                                            // [0x6bcb92c] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIManager.RemoveScene
+	// void RemoveScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                    // [0x6bcb4b0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIManager.AddSceneToFirstLocalPlayer
+	// void AddSceneToFirstLocalPlayer(UDynamicUIScene* Scene);                                                                 // [0x6bcaed0] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIManager.AddScenes
+	// void AddScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                             // [0x6bcb2e0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// Function /Script/DynamicUI.DynamicUIManager.AddScene
+	// void AddScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                       // [0x6bcaa88] Final|Native|Protected|HasOutParms|BlueprintCallable 
 /// Class /Script/DynamicUI.DynamicUIScene
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UDynamicUIScene : public UDataAsset
@@ -158,10 +184,10 @@ class UDynamicUIScene : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	DMember(char)                                      LayerID                                                     ___ OFFSET(get<char>, {0x30, 1, 0, 0})
-	CMember(TArray<FDynamicUIAllowed>)                 Allowed                                                     ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<UDynamicUIUnallowBase*>)            Unallow                                                     ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FDynamicUIPreload>)                 Preload                                                     ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(char)                                      LayerID                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
+	CMember(TArray<FDynamicUIAllowed>)                 Allowed                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<UDynamicUIUnallowBase*>)            Unallow                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FDynamicUIPreload>)                 Preload                                                     OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeBase
@@ -172,9 +198,9 @@ class UDynamicUISizeBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(UDynamicUISizeOverrideBase*)               SizeOverride                                                ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	DMember(bool)                                      bUseOverride                                                ___ OFFSET(get<bool>, {0x58, 1, 1, 0})
-	DMember(bool)                                      bUseRenderTransform                                         ___ OFFSET(get<bool>, {0x58, 1, 1, 1})
+	CMember(UDynamicUISizeOverrideBase*)               SizeOverride                                                OFFSET(get<T>, {0x50, 8, 0, 0})
+	DMember(bool)                                      bUseOverride                                                OFFSET(get<bool>, {0x58, 1, 1, 0})
+	DMember(bool)                                      bUseRenderTransform                                         OFFSET(get<bool>, {0x58, 1, 1, 1})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeFixed
@@ -185,7 +211,7 @@ class UDynamicUISizeFixed : public UDynamicUISizeBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector2f)                                 Size                                                        ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FVector2f)                                 Size                                                        OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeScale
@@ -196,7 +222,7 @@ class UDynamicUISizeScale : public UDynamicUISizeBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector2f)                                 Scale                                                       ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FVector2f)                                 Scale                                                       OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeMatchWidget
@@ -207,10 +233,10 @@ class UDynamicUISizeMatchWidget : public UDynamicUISizeBase
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                ___ OFFSET(get<T>, {0x60, 96, 0, 0})
-	CMember(EDynamicUISizeMatch)                       MatchType                                                   ___ OFFSET(get<T>, {0xC0, 4, 0, 0})
-	CMember(TArray<UDynamicUISizeBase*>)               Fallbacks                                                   ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
-	DMember(bool)                                      bUseFallbacks                                               ___ OFFSET(get<bool>, {0xD8, 1, 1, 0})
+	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                OFFSET(get<T>, {0x60, 96, 0, 0})
+	CMember(EDynamicUISizeMatch)                       MatchType                                                   OFFSET(get<T>, {0xC0, 4, 0, 0})
+	CMember(TArray<UDynamicUISizeBase*>)               Fallbacks                                                   OFFSET(get<T>, {0xC8, 16, 0, 0})
+	DMember(bool)                                      bUseFallbacks                                               OFFSET(get<bool>, {0xD8, 1, 1, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeOverrideBase
@@ -231,8 +257,8 @@ class UDynamicUISizeOverridePlatform : public UDynamicUISizeOverrideBase
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TMap<FName, UDynamicUISizeBase*>)          PlatformOverrides                                           ___ OFFSET(get<T>, {0x28, 80, 0, 0})
-	CMember(TMap<ECommonInputType, UDynamicUISizeBase*>) InputTypeOverrides                                        ___ OFFSET(get<T>, {0x78, 80, 0, 0})
+	CMember(TMap<FName, UDynamicUISizeBase*>)          PlatformOverrides                                           OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<ECommonInputType, UDynamicUISizeBase*>) InputTypeOverrides                                        OFFSET(get<T>, {0x78, 80, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIUnallowBase
@@ -243,7 +269,7 @@ class UDynamicUIUnallowBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EDynamicUIUnallowedBehavior)               Behavior                                                    ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	CMember(EDynamicUIUnallowedBehavior)               Behavior                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIUnallowWidget
@@ -254,8 +280,8 @@ class UDynamicUIUnallowWidget : public UDynamicUIUnallowBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FDynamicUIWidgetTarget)                    Widget                                                      ___ OFFSET(get<T>, {0x30, 96, 0, 0})
-	DMember(bool)                                      bTargetAll                                                  ___ OFFSET(get<bool>, {0x90, 1, 1, 0})
+	SMember(FDynamicUIWidgetTarget)                    Widget                                                      OFFSET(get<T>, {0x30, 96, 0, 0})
+	DMember(bool)                                      bTargetAll                                                  OFFSET(get<bool>, {0x90, 1, 1, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIUnallowLayer
@@ -266,8 +292,8 @@ class UDynamicUIUnallowLayer : public UDynamicUIUnallowBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(char)                                      LayerID                                                     ___ OFFSET(get<char>, {0x30, 1, 0, 0})
-	CMember(EDynamicUIUnallowLayerComparison)          Comparison                                                  ___ OFFSET(get<T>, {0x31, 1, 0, 0})
+	DMember(char)                                      LayerID                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
+	CMember(EDynamicUIUnallowLayerComparison)          Comparison                                                  OFFSET(get<T>, {0x31, 1, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUIVisualizerWidget
@@ -278,8 +304,8 @@ class UDynamicUIVisualizerWidget : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	CMember(TArray<UDynamicUIScene*>)                  Scenes                                                      ___ OFFSET(get<T>, {0x2A8, 16, 0, 0})
-	DMember(bool)                                      bRefresh                                                    ___ OFFSET(get<bool>, {0x2B8, 1, 0, 0})
+	CMember(TArray<UDynamicUIScene*>)                  Scenes                                                      OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	DMember(bool)                                      bRefresh                                                    OFFSET(get<bool>, {0x2B8, 1, 0, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIUnallowed
@@ -290,11 +316,11 @@ class FDynamicUIUnallowed : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FName)                                     UniqueID                                                    ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	CMember(EDynamicUIUnallowedBehavior)               Behavior                                                    ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bTargetAll                                                  ___ OFFSET(get<bool>, {0x28, 1, 1, 0})
-	DMember(bool)                                      bUseUniqueID                                                ___ OFFSET(get<bool>, {0x28, 1, 1, 1})
+	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FName)                                     UniqueID                                                    OFFSET(get<T>, {0x20, 4, 0, 0})
+	CMember(EDynamicUIUnallowedBehavior)               Behavior                                                    OFFSET(get<T>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bTargetAll                                                  OFFSET(get<bool>, {0x28, 1, 1, 0})
+	DMember(bool)                                      bUseUniqueID                                                OFFSET(get<bool>, {0x28, 1, 1, 1})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIManagerDebug
@@ -325,17 +351,17 @@ class FDynamicUIAllowed : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(EDynamicUIZOrder)                          ZOrder                                                      ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   CustomZOrder                                                ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	SMember(FName)                                     UniqueID                                                    ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	CMember(TWeakObjectPtr<UCommonInputActionDomain*>) ActionDomain                                                ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	CMember(UDynamicUIConstraintBase*)                 LayoutConstraint                                            ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(UDynamicUISizeBase*)                       SizeModifier                                                ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	DMember(char)                                      LayerIDOverride                                             ___ OFFSET(get<char>, {0x60, 1, 0, 0})
-	DMember(bool)                                      bIsUnique                                                   ___ OFFSET(get<bool>, {0x61, 1, 1, 0})
-	DMember(bool)                                      bUseActionDomain                                            ___ OFFSET(get<bool>, {0x61, 1, 1, 1})
-	DMember(bool)                                      bUseLayerOverride                                           ___ OFFSET(get<bool>, {0x61, 1, 1, 2})
+	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(EDynamicUIZOrder)                          ZOrder                                                      OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   CustomZOrder                                                OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	SMember(FName)                                     UniqueID                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
+	CMember(TWeakObjectPtr<UCommonInputActionDomain*>) ActionDomain                                                OFFSET(get<T>, {0x30, 32, 0, 0})
+	CMember(UDynamicUIConstraintBase*)                 LayoutConstraint                                            OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UDynamicUISizeBase*)                       SizeModifier                                                OFFSET(get<T>, {0x58, 8, 0, 0})
+	DMember(char)                                      LayerIDOverride                                             OFFSET(get<char>, {0x60, 1, 0, 0})
+	DMember(bool)                                      bIsUnique                                                   OFFSET(get<bool>, {0x61, 1, 1, 0})
+	DMember(bool)                                      bUseActionDomain                                            OFFSET(get<bool>, {0x61, 1, 1, 1})
+	DMember(bool)                                      bUseLayerOverride                                           OFFSET(get<bool>, {0x61, 1, 1, 2})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIAspectRatio
@@ -346,8 +372,8 @@ class FDynamicUIAspectRatio : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(EDynamicUIAspectRatioType)                 AspectRatio                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     CustomAspectRatio                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(EDynamicUIAspectRatioType)                 AspectRatio                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     CustomAspectRatio                                           OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIPreload
@@ -358,7 +384,7 @@ class FDynamicUIPreload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   Widget                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUISceneData
@@ -379,8 +405,8 @@ class FDynamicUIDirectorData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   DirectorClass                                               ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   Instance                                                    ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   DirectorClass                                               OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   Instance                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIPlayerData
@@ -391,7 +417,7 @@ class FDynamicUIPlayerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(TMap<FString, FDynamicUIDirectorData>)     ActiveDirectors                                             ___ OFFSET(get<T>, {0x40, 80, 0, 0})
+	CMember(TMap<FString, FDynamicUIDirectorData>)     ActiveDirectors                                             OFFSET(get<T>, {0x40, 80, 0, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIWidgetTarget
@@ -402,10 +428,10 @@ class FDynamicUIWidgetTarget : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     WidgetPath                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   WidgetClass                                                 ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FName)                                     UniqueID                                                    ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	DMember(bool)                                      bUseUniqueID                                                ___ OFFSET(get<bool>, {0x2C, 1, 1, 0})
+	SMember(FName)                                     WidgetPath                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   WidgetClass                                                 OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FName)                                     UniqueID                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
+	DMember(bool)                                      bUseUniqueID                                                OFFSET(get<bool>, {0x2C, 1, 1, 0})
 };
 
 /// Enum /Script/DynamicUI.EDynamicUIStrength

@@ -18,10 +18,19 @@ class AEmeraldGlassIceWallChunk : public ABuildingProp
 	static inline constexpr uint64_t __MDKClassSize = 3024;
 
 public:
-	CMember(TWeakObjectPtr<AEmeraldGlassIceWallChunk*>) ParentChunk                                                ___ OFFSET(get<T>, {0xBB8, 8, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    IceWallActorClassDenyList                                   ___ OFFSET(get<T>, {0xBC0, 16, 0, 0})
+	CMember(TWeakObjectPtr<AEmeraldGlassIceWallChunk*>) ParentChunk                                                OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    IceWallActorClassDenyList                                   OFFSET(get<T>, {0xBC0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EmeraldGlass_DRuntime.EmeraldGlassIceWallChunk.IsIceWallAllowedToOverlapActor
+	// bool IsIceWallAllowedToOverlapActor(AActor* Actor);                                                                      // [0x2a4d04c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/EmeraldGlass_DRuntime.EmeraldGlassIceWallChunk.FindSupportingActors
+	// void FindSupportingActors(TArray<AActor*>& InOutSupportingActors, bool bAllowIceWallsAsSupportingActors, TArray<AEmeraldGlassIceWallChunk*>& ChunksInMyWall); // [0x9b637e0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EmeraldGlass_DRuntime.EmeraldGlassIceWallChunk.AttachActors
+	// void AttachActors(TArray<AEmeraldGlassIceWallChunk*>& ChunksInMyWall, TArray<AActor*>& SupportingActors, AActor* DirectBase); // [0x9b62fb4] Final|Native|Public|HasOutParms|BlueprintCallable 
 /// Class /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UFortControllerComponent_SereneYard : public UControllerComponent
@@ -30,9 +39,20 @@ class UFortControllerComponent_SereneYard : public UControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(TArray<TWeakObjectPtr>)                    TrackedInstances                                            ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    TrackedInstances                                            OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard.RemoveOldestTrackedInstance
+	// void RemoveOldestTrackedInstance();                                                                                      // [0x9b66050] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard.GetTrackedInstanceCount
+	// int32_t GetTrackedInstanceCount();                                                                                       // [0x315ad40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard.GetOldestTrackedInstance
+	// ABuildingGameplayActor* GetOldestTrackedInstance();                                                                      // [0x9b64754] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard.AddTrackedInstance
+	// void AddTrackedInstance(ABuildingGameplayActor* TrackedInstance);                                                        // [0x9b62e84] Final|Native|Public|BlueprintCallable 
 /// Class /Script/EmeraldGlass_DRuntime.SereneYardFunctionLibraryNative
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USereneYardFunctionLibraryNative : public UBlueprintFunctionLibrary
@@ -51,44 +71,44 @@ class FSereneYardWeaponData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(TWeakObjectPtr<AFortPlayerPawnAthena*>)    Player                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TWeakObjectPtr<AFortWeaponRangedDual*>)    Weapon                                                      ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bPreviewing                                                 ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     PreviewDistance                                             ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     MaxDistance                                                 ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     MinDistance                                                 ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     MinDistFromIndestructible                                   ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(bool)                                      bEnableBlockedByIndestructibles                             ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
-	DMember(float)                                     PlayerForwardVectorScale                                    ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     InitialTracePullbackDist                                    ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     DownwardTraceDistanceNear                                   ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     DownwardTraceDistanceNearUp                                 ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     DownwardTraceDistanceFar                                    ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(bool)                                      bStopped                                                    ___ OFFSET(get<bool>, {0x3C, 1, 0, 0})
-	CMember(TArray<UClass*>)                           ClassesToIgnoreWhenTracing                                  ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<UClass*>)                           ClassesToIgnoreWhenTracingIfTooSmall                        ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(float)                                     DebugDrawTime                                               ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	CMember(TArray<FTransform>)                        IceRelativeTransforms                                       ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(float)                                     IceRelativeRightVectorScale                                 ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	DMember(float)                                     GroundFindStartOffset                                       ___ OFFSET(get<float>, {0x7C, 4, 0, 0})
-	DMember(float)                                     GroundFindEndOffset                                         ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	DMember(float)                                     GroundFindDistanceOffset                                    ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	DMember(float)                                     MaxSpawnDistBelowPlayer                                     ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	CMember(TArray<UStaticMeshComponent*>)             PreviewMeshesTEMP                                           ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(UMaterialInterface*)                       IceMaterial                                                 ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(UMaterialInterface*)                       IceMaterialBlocked                                          ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	DMember(float)                                     IceBlockPitch                                               ___ OFFSET(get<float>, {0xB0, 4, 0, 0})
-	DMember(float)                                     BlockingIndestructibleObjectDist                            ___ OFFSET(get<float>, {0xB4, 4, 0, 0})
-	DMember(float)                                     MaxVerticalChunkSpacing                                     ___ OFFSET(get<float>, {0xB8, 4, 0, 0})
-	DMember(float)                                     MinSupportingPropSize                                       ___ OFFSET(get<float>, {0xBC, 4, 0, 0})
-	DMember(float)                                     TooCloseForHeightDistStep                                   ___ OFFSET(get<float>, {0xC0, 4, 0, 0})
-	DMember(int32_t)                                   TooCloseForHeightMaxIterations                              ___ OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
-	DMember(float)                                     TooCloseForHeightMinHeightAbovePlayer                       ___ OFFSET(get<float>, {0xC8, 4, 0, 0})
-	DMember(float)                                     TooCloseForHeightMaxHeightAbovePlayer                       ___ OFFSET(get<float>, {0xCC, 4, 0, 0})
-	DMember(float)                                     TooCloseForHeightMinDistFromPlayer                          ___ OFFSET(get<float>, {0xD0, 4, 0, 0})
-	DMember(float)                                     SphereTraceRadius                                           ___ OFFSET(get<float>, {0xD4, 4, 0, 0})
-	DMember(bool)                                      bAllowUnwalkableTargets                                     ___ OFFSET(get<bool>, {0xD8, 1, 0, 0})
-	DMember(float)                                     TryCloserOnInvalidTargetDist                                ___ OFFSET(get<float>, {0xDC, 4, 0, 0})
+	CMember(TWeakObjectPtr<AFortPlayerPawnAthena*>)    Player                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TWeakObjectPtr<AFortWeaponRangedDual*>)    Weapon                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bPreviewing                                                 OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     PreviewDistance                                             OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     MaxDistance                                                 OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     MinDistance                                                 OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     MinDistFromIndestructible                                   OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(bool)                                      bEnableBlockedByIndestructibles                             OFFSET(get<bool>, {0x24, 1, 0, 0})
+	DMember(float)                                     PlayerForwardVectorScale                                    OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     InitialTracePullbackDist                                    OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     DownwardTraceDistanceNear                                   OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     DownwardTraceDistanceNearUp                                 OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     DownwardTraceDistanceFar                                    OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(bool)                                      bStopped                                                    OFFSET(get<bool>, {0x3C, 1, 0, 0})
+	CMember(TArray<UClass*>)                           ClassesToIgnoreWhenTracing                                  OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ClassesToIgnoreWhenTracingIfTooSmall                        OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(float)                                     DebugDrawTime                                               OFFSET(get<float>, {0x60, 4, 0, 0})
+	CMember(TArray<FTransform>)                        IceRelativeTransforms                                       OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(float)                                     IceRelativeRightVectorScale                                 OFFSET(get<float>, {0x78, 4, 0, 0})
+	DMember(float)                                     GroundFindStartOffset                                       OFFSET(get<float>, {0x7C, 4, 0, 0})
+	DMember(float)                                     GroundFindEndOffset                                         OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(float)                                     GroundFindDistanceOffset                                    OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(float)                                     MaxSpawnDistBelowPlayer                                     OFFSET(get<float>, {0x88, 4, 0, 0})
+	CMember(TArray<UStaticMeshComponent*>)             PreviewMeshesTEMP                                           OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(UMaterialInterface*)                       IceMaterial                                                 OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(UMaterialInterface*)                       IceMaterialBlocked                                          OFFSET(get<T>, {0xA8, 8, 0, 0})
+	DMember(float)                                     IceBlockPitch                                               OFFSET(get<float>, {0xB0, 4, 0, 0})
+	DMember(float)                                     BlockingIndestructibleObjectDist                            OFFSET(get<float>, {0xB4, 4, 0, 0})
+	DMember(float)                                     MaxVerticalChunkSpacing                                     OFFSET(get<float>, {0xB8, 4, 0, 0})
+	DMember(float)                                     MinSupportingPropSize                                       OFFSET(get<float>, {0xBC, 4, 0, 0})
+	DMember(float)                                     TooCloseForHeightDistStep                                   OFFSET(get<float>, {0xC0, 4, 0, 0})
+	DMember(int32_t)                                   TooCloseForHeightMaxIterations                              OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
+	DMember(float)                                     TooCloseForHeightMinHeightAbovePlayer                       OFFSET(get<float>, {0xC8, 4, 0, 0})
+	DMember(float)                                     TooCloseForHeightMaxHeightAbovePlayer                       OFFSET(get<float>, {0xCC, 4, 0, 0})
+	DMember(float)                                     TooCloseForHeightMinDistFromPlayer                          OFFSET(get<float>, {0xD0, 4, 0, 0})
+	DMember(float)                                     SphereTraceRadius                                           OFFSET(get<float>, {0xD4, 4, 0, 0})
+	DMember(bool)                                      bAllowUnwalkableTargets                                     OFFSET(get<bool>, {0xD8, 1, 0, 0})
+	DMember(float)                                     TryCloserOnInvalidTargetDist                                OFFSET(get<float>, {0xDC, 4, 0, 0})
 };
 
 /// Enum /Script/EmeraldGlass_DRuntime.ESereneYardTargetingFailedReason

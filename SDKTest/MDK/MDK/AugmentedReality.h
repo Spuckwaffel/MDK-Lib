@@ -56,10 +56,15 @@ class UARSaveWorldAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProx
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy.ARSaveWorld
+	// UARSaveWorldAsyncTaskBlueprintProxy* ARSaveWorld(UObject* WorldContextObject);                                           // [0xa030a38] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy
 /// Size: 0x0060 (0x000050 - 0x0000B0)
 class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
@@ -68,10 +73,15 @@ class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlue
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy.ARGetCandidateObject
+	// UARGetCandidateObjectAsyncTaskBlueprintProxy* ARGetCandidateObject(UObject* WorldContextObject, FVector Location, FVector Extent); // [0xa030754] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARComponent
 /// Size: 0x0080 (0x0002A0 - 0x000320)
 class UARComponent : public USceneComponent
@@ -80,14 +90,27 @@ class UARComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FGuid)                                     NativeID                                                    ___ OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	DMember(bool)                                      bUseDefaultReplication                                      ___ OFFSET(get<bool>, {0x2E0, 1, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UMRMeshComponent*)                         MRMeshComponent                                             ___ OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	CMember(UARTrackedGeometry*)                       MyTrackedGeometry                                           ___ OFFSET(get<T>, {0x300, 8, 0, 0})
+	SMember(FGuid)                                     NativeID                                                    OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	DMember(bool)                                      bUseDefaultReplication                                      OFFSET(get<bool>, {0x2E0, 1, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UMRMeshComponent*)                         MRMeshComponent                                             OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(UARTrackedGeometry*)                       MyTrackedGeometry                                           OFFSET(get<T>, {0x300, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARComponent.UpdateVisualization
+	// void UpdateVisualization();                                                                                              // [0x5b59e94] Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARComponent.SetNativeID
+	// void SetNativeID(FGuid NativeID);                                                                                        // [0xa03b288] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARComponent.ReceiveRemove
+	// void ReceiveRemove();                                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARComponent.OnRep_Payload
+	// void OnRep_Payload();                                                                                                    // [0x8774a80] Native|Protected     
+	// Function /Script/AugmentedReality.ARComponent.GetMRMesh
+	// UMRMeshComponent* GetMRMesh();                                                                                           // [0xa035a70] Final|Native|Public|BlueprintCallable|BlueprintPure 
 /// Class /Script/AugmentedReality.ARPlaneComponent
 /// Size: 0x00D0 (0x000320 - 0x0003F0)
 class UARPlaneComponent : public UARComponent
@@ -96,9 +119,24 @@ class UARPlaneComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FARPlaneUpdatePayload)                     ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 208, 0, 0})
+	SMember(FARPlaneUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 208, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARPlaneComponent.SetPlaneComponentDebugMode
+	// void SetPlaneComponentDebugMode(EPlaneComponentDebugMode NewDebugMode);                                                  // [0xa03b4b8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARPlaneComponent.SetObjectClassificationDebugColors
+	// void SetObjectClassificationDebugColors(TMap<EARObjectClassification, FLinearColor>& InColors);                          // [0xa03b3e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARPlaneComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARPlaneUpdatePayload NewPayload);                                                              // [0xa038fec] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARPlaneComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARPlaneUpdatePayload& Payload);                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARPlaneComponent.ReceiveAdd
+	// void ReceiveAdd(FARPlaneUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARPlaneComponent.GetObjectClassificationDebugColors
+	// TMap<EARObjectClassification, FLinearColor> GetObjectClassificationDebugColors();                                        // [0xa0361a8] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 /// Class /Script/AugmentedReality.ARPointComponent
 /// Size: 0x0010 (0x000320 - 0x000330)
 class UARPointComponent : public UARComponent
@@ -107,9 +145,18 @@ class UARPointComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FARPointUpdatePayload)                     ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 1, 0, 0})
+	SMember(FARPointUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARPointComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARPointUpdatePayload NewPayload);                                                              // [0xa0391a4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARPointComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARPointUpdatePayload& Payload);                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARPointComponent.ReceiveAdd
+	// void ReceiveAdd(FARPointUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARFaceComponent
 /// Size: 0x0090 (0x000320 - 0x0003B0)
 class UARFaceComponent : public UARComponent
@@ -118,12 +165,23 @@ class UARFaceComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	CMember(EARFaceTransformMixing)                    TransformSetting                                            ___ OFFSET(get<T>, {0x320, 1, 0, 0})
-	DMember(bool)                                      bUpdateVertexNormal                                         ___ OFFSET(get<bool>, {0x321, 1, 0, 0})
-	DMember(bool)                                      bFaceOutOfScreen                                            ___ OFFSET(get<bool>, {0x322, 1, 0, 0})
-	SMember(FARFaceUpdatePayload)                      ReplicatedPayload                                           ___ OFFSET(get<T>, {0x328, 96, 0, 0})
+	CMember(EARFaceTransformMixing)                    TransformSetting                                            OFFSET(get<T>, {0x320, 1, 0, 0})
+	DMember(bool)                                      bUpdateVertexNormal                                         OFFSET(get<bool>, {0x321, 1, 0, 0})
+	DMember(bool)                                      bFaceOutOfScreen                                            OFFSET(get<bool>, {0x322, 1, 0, 0})
+	SMember(FARFaceUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x328, 96, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARFaceComponent.SetFaceComponentDebugMode
+	// void SetFaceComponentDebugMode(EFaceComponentDebugMode NewDebugMode);                                                    // [0xa03a970] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARFaceComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARFaceUpdatePayload NewPayload);                                                               // [0xa038904] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARFaceComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARFaceUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARFaceComponent.ReceiveAdd
+	// void ReceiveAdd(FARFaceUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARImageComponent
 /// Size: 0x00A0 (0x000320 - 0x0003C0)
 class UARImageComponent : public UARComponent
@@ -132,9 +190,20 @@ class UARImageComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FARImageUpdatePayload)                     ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 160, 0, 0})
+	SMember(FARImageUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARImageComponent.SetImageComponentDebugMode
+	// void SetImageComponentDebugMode(EImageComponentDebugMode NewDebugMode);                                                  // [0xa03b20c] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARImageComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARImageUpdatePayload NewPayload);                                                              // [0xa038c48] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARImageComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARImageUpdatePayload& Payload);                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARImageComponent.ReceiveAdd
+	// void ReceiveAdd(FARImageUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARQRCodeComponent
 /// Size: 0x00B0 (0x000320 - 0x0003D0)
 class UARQRCodeComponent : public UARComponent
@@ -143,9 +212,20 @@ class UARQRCodeComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
-	SMember(FARQRCodeUpdatePayload)                    ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 176, 0, 0})
+	SMember(FARQRCodeUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 176, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARQRCodeComponent.SetQRCodeComponentDebugMode
+	// void SetQRCodeComponentDebugMode(EQRCodeComponentDebugMode NewDebugMode);                                                // [0xa03b6a0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARQRCodeComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARQRCodeUpdatePayload NewPayload);                                                             // [0xa03951c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARQRCodeComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARQRCodeUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARQRCodeComponent.ReceiveAdd
+	// void ReceiveAdd(FARQRCodeUpdatePayload& Payload);                                                                        // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARPoseComponent
 /// Size: 0x0070 (0x000320 - 0x000390)
 class UARPoseComponent : public UARComponent
@@ -154,9 +234,20 @@ class UARPoseComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FARPoseUpdatePayload)                      ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 112, 0, 0})
+	SMember(FARPoseUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 112, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARPoseComponent.SetPoseComponentDebugMode
+	// void SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode);                                                    // [0xa03b534] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARPoseComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARPoseUpdatePayload NewPayload);                                                               // [0xa03931c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARPoseComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARPoseUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARPoseComponent.ReceiveAdd
+	// void ReceiveAdd(FARPoseUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.AREnvironmentProbeComponent
 /// Size: 0x0060 (0x000320 - 0x000380)
 class UAREnvironmentProbeComponent : public UARComponent
@@ -165,9 +256,18 @@ class UAREnvironmentProbeComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FAREnvironmentProbeUpdatePayload)          ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 96, 0, 0})
+	SMember(FAREnvironmentProbeUpdatePayload)          ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FAREnvironmentProbeUpdatePayload NewPayload);                                                   // [0xa038720] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ReceiveUpdate
+	// void ReceiveUpdate(FAREnvironmentProbeUpdatePayload& Payload);                                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ReceiveAdd
+	// void ReceiveAdd(FAREnvironmentProbeUpdatePayload& Payload);                                                              // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARObjectComponent
 /// Size: 0x0060 (0x000320 - 0x000380)
 class UARObjectComponent : public UARComponent
@@ -176,9 +276,18 @@ class UARObjectComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FARObjectUpdatePayload)                    ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 96, 0, 0})
+	SMember(FARObjectUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARObjectComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARObjectUpdatePayload NewPayload);                                                             // [0xa038720] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARObjectComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARObjectUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARObjectComponent.ReceiveAdd
+	// void ReceiveAdd(FARObjectUpdatePayload& Payload);                                                                        // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARMeshComponent
 /// Size: 0x0090 (0x000320 - 0x0003B0)
 class UARMeshComponent : public UARComponent
@@ -187,9 +296,18 @@ class UARMeshComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FARMeshUpdatePayload)                      ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 144, 0, 0})
+	SMember(FARMeshUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 144, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARMeshComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARMeshUpdatePayload NewPayload);                                                               // [0xa038df4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARMeshComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARMeshUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARMeshComponent.ReceiveAdd
+	// void ReceiveAdd(FARMeshUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARGeoAnchorComponent
 /// Size: 0x00A0 (0x000320 - 0x0003C0)
 class UARGeoAnchorComponent : public UARComponent
@@ -198,9 +316,20 @@ class UARGeoAnchorComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FARGeoAnchorUpdatePayload)                 ReplicatedPayload                                           ___ OFFSET(get<T>, {0x320, 160, 0, 0})
+	SMember(FARGeoAnchorUpdatePayload)                 ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARGeoAnchorComponent.SetGeoAnchorComponentDebugMode
+	// void SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode);                                          // [0xa03b190] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ServerUpdatePayload
+	// void ServerUpdatePayload(FARGeoAnchorUpdatePayload NewPayload);                                                          // [0xa038a90] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ReceiveUpdate
+	// void ReceiveUpdate(FARGeoAnchorUpdatePayload& Payload);                                                                  // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ReceiveAdd
+	// void ReceiveAdd(FARGeoAnchorUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARDependencyHandler
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UARDependencyHandler : public UObject
@@ -229,10 +358,19 @@ class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy : public UARBaseAsync
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.GeoTrackingAvailabilityDelegate__DelegateSignature
+	// void GeoTrackingAvailabilityDelegate__DelegateSignature(bool bIsAvailable, FString Error);                               // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailabilityAtLocation
+	// UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* CheckGeoTrackingAvailabilityAtLocation(UObject* WorldContextObject, float Longitude, float Latitude); // [0xa0334c8] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailability
+	// UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* CheckGeoTrackingAvailability(UObject* WorldContextObject);         // [0xa03342c] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy
 /// Size: 0x0058 (0x000050 - 0x0000A8)
 class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
@@ -241,10 +379,17 @@ class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintP
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationDelegate__DelegateSignature
+	// void GetGeoLocationDelegate__DelegateSignature(float Longitude, float Latitude, float Altitude, FString Error);          // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationAtWorldPosition
+	// UGetGeoLocationAsyncTaskBlueprintProxy* GetGeoLocationAtWorldPosition(UObject* WorldContextObject, FVector& WorldPosition); // [0xa0353ac] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARLifeCycleComponent
 /// Size: 0x0030 (0x0002A0 - 0x0002D0)
 class UARLifeCycleComponent : public USceneComponent
@@ -253,10 +398,21 @@ class UARLifeCycleComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnARActorSpawnedDelegate                                    ___ OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARActorToBeDestroyedDelegate                              ___ OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARActorSpawnedDelegate                                    OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARActorToBeDestroyedDelegate                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARLifeCycleComponent.ServerSpawnARActor
+	// void ServerSpawnARActor(UClass* ComponentClass, FGuid NativeID);                                                         // [0xa03853c] Final|Net|NetReliableNative|Event|Private|NetServer|HasDefaults|NetValidate 
+	// Function /Script/AugmentedReality.ARLifeCycleComponent.ServerDestroyARActor
+	// void ServerDestroyARActor(AARActor* Actor);                                                                              // [0xa038450] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// Function /Script/AugmentedReality.ARLifeCycleComponent.InstanceARActorToBeDestroyedDelegate__DelegateSignature
+	// void InstanceARActorToBeDestroyedDelegate__DelegateSignature(AARActor* Actor);                                           // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/AugmentedReality.ARLifeCycleComponent.InstanceARActorSpawnedDelegate__DelegateSignature
+	// void InstanceARActorSpawnedDelegate__DelegateSignature(UClass* ComponentClass, FGuid NativeID, AARActor* SpawnedActor);  // [0x1ebf994] MulticastDelegate|Public|Delegate|HasDefaults 
 /// Class /Script/AugmentedReality.ARLightEstimate
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UARLightEstimate : public UObject
@@ -275,11 +431,20 @@ class UARBasicLightEstimate : public UARLightEstimate
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     AmbientIntensityLumens                                      ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     AmbientColorTemperatureKelvin                               ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FLinearColor)                              AmbientColor                                                ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(float)                                     AmbientIntensityLumens                                      OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     AmbientColorTemperatureKelvin                               OFFSET(get<float>, {0x2C, 4, 0, 0})
+	SMember(FLinearColor)                              AmbientColor                                                OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientIntensityLumens
+	// float GetAmbientIntensityLumens();                                                                                       // [0x5ffe568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientColorTemperatureKelvin
+	// float GetAmbientColorTemperatureKelvin();                                                                                // [0x5ffe6ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientColor
+	// FLinearColor GetAmbientColor();                                                                                          // [0xa034e38] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.AROriginActor
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AAROriginActor : public AActor
@@ -298,15 +463,32 @@ class UARPin : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(USceneComponent*)                          PinnedComponent                                             ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FTransform)                                LocalToTrackingTransform                                    ___ OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FTransform)                                LocalToAlignedTrackingTransform                             ___ OFFSET(get<T>, {0xA0, 96, 0, 0})
-	CMember(EARTrackingState)                          TrackingState                                               ___ OFFSET(get<T>, {0x100, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARTrackingStateChanged                                    ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARTransformUpdated                                        ___ OFFSET(get<T>, {0x130, 16, 0, 0})
+	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(USceneComponent*)                          PinnedComponent                                             OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(get<T>, {0xA0, 96, 0, 0})
+	CMember(EARTrackingState)                          TrackingState                                               OFFSET(get<T>, {0x100, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARTrackingStateChanged                                    OFFSET(get<T>, {0x120, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARTransformUpdated                                        OFFSET(get<T>, {0x130, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARPin.GetTrackingState
+	// EARTrackingState GetTrackingState();                                                                                     // [0x9765db8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.GetTrackedGeometry
+	// UARTrackedGeometry* GetTrackedGeometry();                                                                                // [0x950aa68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.GetPinnedComponent
+	// USceneComponent* GetPinnedComponent();                                                                                   // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.GetLocalToWorldTransform
+	// FTransform GetLocalToWorldTransform();                                                                                   // [0xa035798] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.GetLocalToTrackingTransform
+	// FTransform GetLocalToTrackingTransform();                                                                                // [0xa035650] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.GetDebugName
+	// FName GetDebugName();                                                                                                    // [0xa0351cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPin.DebugDraw
+	// void DebugDraw(UWorld* World, FLinearColor& Color, float Scale, float PersistForSeconds);                                // [0xa0338d8] Native|Public|HasOutParms|HasDefaults|Const 
 /// Class /Script/AugmentedReality.ARSessionConfig
 /// Size: 0x00E0 (0x000030 - 0x000110)
 class UARSessionConfig : public UDataAsset
@@ -315,55 +497,128 @@ class UARSessionConfig : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	DMember(bool)                                      bGenerateMeshDataFromTrackedGeometry                        ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
-	DMember(bool)                                      bGenerateCollisionForMeshData                               ___ OFFSET(get<bool>, {0x31, 1, 0, 0})
-	DMember(bool)                                      bGenerateNavMeshForMeshData                                 ___ OFFSET(get<bool>, {0x32, 1, 0, 0})
-	DMember(bool)                                      bUseMeshDataForOcclusion                                    ___ OFFSET(get<bool>, {0x33, 1, 0, 0})
-	DMember(bool)                                      bRenderMeshDataInWireframe                                  ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	DMember(bool)                                      bTrackSceneObjects                                          ___ OFFSET(get<bool>, {0x35, 1, 0, 0})
-	DMember(bool)                                      bUsePersonSegmentationForOcclusion                          ___ OFFSET(get<bool>, {0x36, 1, 0, 0})
-	DMember(bool)                                      bUseSceneDepthForOcclusion                                  ___ OFFSET(get<bool>, {0x37, 1, 0, 0})
-	DMember(bool)                                      bUseAutomaticImageScaleEstimation                           ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bUseStandardOnboardingUX                                    ___ OFFSET(get<bool>, {0x39, 1, 0, 0})
-	CMember(EARWorldAlignment)                         WorldAlignment                                              ___ OFFSET(get<T>, {0x3A, 1, 0, 0})
-	CMember(EARSessionType)                            SessionType                                                 ___ OFFSET(get<T>, {0x3B, 1, 0, 0})
-	CMember(EARPlaneDetectionMode)                     PlaneDetectionMode                                          ___ OFFSET(get<T>, {0x3C, 1, 0, 0})
-	DMember(bool)                                      bHorizontalPlaneDetection                                   ___ OFFSET(get<bool>, {0x3D, 1, 0, 0})
-	DMember(bool)                                      bVerticalPlaneDetection                                     ___ OFFSET(get<bool>, {0x3E, 1, 0, 0})
-	DMember(bool)                                      bEnableAutoFocus                                            ___ OFFSET(get<bool>, {0x3F, 1, 0, 0})
-	CMember(EARLightEstimationMode)                    LightEstimationMode                                         ___ OFFSET(get<T>, {0x40, 1, 0, 0})
-	CMember(EARFrameSyncMode)                          FrameSyncMode                                               ___ OFFSET(get<T>, {0x41, 1, 0, 0})
-	DMember(bool)                                      bEnableAutomaticCameraOverlay                               ___ OFFSET(get<bool>, {0x42, 1, 0, 0})
-	DMember(bool)                                      bEnableAutomaticCameraTracking                              ___ OFFSET(get<bool>, {0x43, 1, 0, 0})
-	DMember(bool)                                      bResetCameraTracking                                        ___ OFFSET(get<bool>, {0x44, 1, 0, 0})
-	DMember(bool)                                      bResetTrackedObjects                                        ___ OFFSET(get<bool>, {0x45, 1, 0, 0})
-	CMember(TArray<UARCandidateImage*>)                CandidateImages                                             ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	DMember(int32_t)                                   MaxNumSimultaneousImagesTracked                             ___ OFFSET(get<int32_t>, {0x58, 4, 0, 0})
-	CMember(EAREnvironmentCaptureProbeType)            EnvironmentCaptureProbeType                                 ___ OFFSET(get<T>, {0x5C, 1, 0, 0})
-	CMember(TArray<char>)                              WorldMapData                                                ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<UARCandidateObject*>)               CandidateObjects                                            ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FARVideoFormat)                            DesiredVideoFormat                                          ___ OFFSET(get<T>, {0x80, 12, 0, 0})
-	DMember(bool)                                      bUseOptimalVideoFormat                                      ___ OFFSET(get<bool>, {0x8C, 1, 0, 0})
-	CMember(EARFaceTrackingDirection)                  FaceTrackingDirection                                       ___ OFFSET(get<T>, {0x8D, 1, 0, 0})
-	CMember(EARFaceTrackingUpdate)                     FaceTrackingUpdate                                          ___ OFFSET(get<T>, {0x8E, 1, 0, 0})
-	DMember(int32_t)                                   MaxNumberOfTrackedFaces                                     ___ OFFSET(get<int32_t>, {0x90, 4, 0, 0})
-	CMember(TArray<char>)                              SerializedARCandidateImageDatabase                          ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(EARSessionTrackingFeature)                 EnabledSessionTrackingFeature                               ___ OFFSET(get<T>, {0xA8, 1, 0, 0})
-	CMember(EARSceneReconstruction)                    SceneReconstructionMethod                                   ___ OFFSET(get<T>, {0xA9, 1, 0, 0})
-	CMember(UClass*)                                   PlaneComponentClass                                         ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	CMember(UClass*)                                   PointComponentClass                                         ___ OFFSET(get<T>, {0xB8, 8, 0, 0})
-	CMember(UClass*)                                   FaceComponentClass                                          ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(UClass*)                                   ImageComponentClass                                         ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	CMember(UClass*)                                   QRCodeComponentClass                                        ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(UClass*)                                   PoseComponentClass                                          ___ OFFSET(get<T>, {0xD8, 8, 0, 0})
-	CMember(UClass*)                                   EnvironmentProbeComponentClass                              ___ OFFSET(get<T>, {0xE0, 8, 0, 0})
-	CMember(UClass*)                                   ObjectComponentClass                                        ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(UClass*)                                   MeshComponentClass                                          ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
-	CMember(UClass*)                                   GeoAnchorComponentClass                                     ___ OFFSET(get<T>, {0xF8, 8, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                ___ OFFSET(get<T>, {0x108, 8, 0, 0})
+	DMember(bool)                                      bGenerateMeshDataFromTrackedGeometry                        OFFSET(get<bool>, {0x30, 1, 0, 0})
+	DMember(bool)                                      bGenerateCollisionForMeshData                               OFFSET(get<bool>, {0x31, 1, 0, 0})
+	DMember(bool)                                      bGenerateNavMeshForMeshData                                 OFFSET(get<bool>, {0x32, 1, 0, 0})
+	DMember(bool)                                      bUseMeshDataForOcclusion                                    OFFSET(get<bool>, {0x33, 1, 0, 0})
+	DMember(bool)                                      bRenderMeshDataInWireframe                                  OFFSET(get<bool>, {0x34, 1, 0, 0})
+	DMember(bool)                                      bTrackSceneObjects                                          OFFSET(get<bool>, {0x35, 1, 0, 0})
+	DMember(bool)                                      bUsePersonSegmentationForOcclusion                          OFFSET(get<bool>, {0x36, 1, 0, 0})
+	DMember(bool)                                      bUseSceneDepthForOcclusion                                  OFFSET(get<bool>, {0x37, 1, 0, 0})
+	DMember(bool)                                      bUseAutomaticImageScaleEstimation                           OFFSET(get<bool>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bUseStandardOnboardingUX                                    OFFSET(get<bool>, {0x39, 1, 0, 0})
+	CMember(EARWorldAlignment)                         WorldAlignment                                              OFFSET(get<T>, {0x3A, 1, 0, 0})
+	CMember(EARSessionType)                            SessionType                                                 OFFSET(get<T>, {0x3B, 1, 0, 0})
+	CMember(EARPlaneDetectionMode)                     PlaneDetectionMode                                          OFFSET(get<T>, {0x3C, 1, 0, 0})
+	DMember(bool)                                      bHorizontalPlaneDetection                                   OFFSET(get<bool>, {0x3D, 1, 0, 0})
+	DMember(bool)                                      bVerticalPlaneDetection                                     OFFSET(get<bool>, {0x3E, 1, 0, 0})
+	DMember(bool)                                      bEnableAutoFocus                                            OFFSET(get<bool>, {0x3F, 1, 0, 0})
+	CMember(EARLightEstimationMode)                    LightEstimationMode                                         OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(EARFrameSyncMode)                          FrameSyncMode                                               OFFSET(get<T>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bEnableAutomaticCameraOverlay                               OFFSET(get<bool>, {0x42, 1, 0, 0})
+	DMember(bool)                                      bEnableAutomaticCameraTracking                              OFFSET(get<bool>, {0x43, 1, 0, 0})
+	DMember(bool)                                      bResetCameraTracking                                        OFFSET(get<bool>, {0x44, 1, 0, 0})
+	DMember(bool)                                      bResetTrackedObjects                                        OFFSET(get<bool>, {0x45, 1, 0, 0})
+	CMember(TArray<UARCandidateImage*>)                CandidateImages                                             OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(int32_t)                                   MaxNumSimultaneousImagesTracked                             OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	CMember(EAREnvironmentCaptureProbeType)            EnvironmentCaptureProbeType                                 OFFSET(get<T>, {0x5C, 1, 0, 0})
+	CMember(TArray<char>)                              WorldMapData                                                OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<UARCandidateObject*>)               CandidateObjects                                            OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FARVideoFormat)                            DesiredVideoFormat                                          OFFSET(get<T>, {0x80, 12, 0, 0})
+	DMember(bool)                                      bUseOptimalVideoFormat                                      OFFSET(get<bool>, {0x8C, 1, 0, 0})
+	CMember(EARFaceTrackingDirection)                  FaceTrackingDirection                                       OFFSET(get<T>, {0x8D, 1, 0, 0})
+	CMember(EARFaceTrackingUpdate)                     FaceTrackingUpdate                                          OFFSET(get<T>, {0x8E, 1, 0, 0})
+	DMember(int32_t)                                   MaxNumberOfTrackedFaces                                     OFFSET(get<int32_t>, {0x90, 4, 0, 0})
+	CMember(TArray<char>)                              SerializedARCandidateImageDatabase                          OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(EARSessionTrackingFeature)                 EnabledSessionTrackingFeature                               OFFSET(get<T>, {0xA8, 1, 0, 0})
+	CMember(EARSceneReconstruction)                    SceneReconstructionMethod                                   OFFSET(get<T>, {0xA9, 1, 0, 0})
+	CMember(UClass*)                                   PlaneComponentClass                                         OFFSET(get<T>, {0xB0, 8, 0, 0})
+	CMember(UClass*)                                   PointComponentClass                                         OFFSET(get<T>, {0xB8, 8, 0, 0})
+	CMember(UClass*)                                   FaceComponentClass                                          OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(UClass*)                                   ImageComponentClass                                         OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(UClass*)                                   QRCodeComponentClass                                        OFFSET(get<T>, {0xD0, 8, 0, 0})
+	CMember(UClass*)                                   PoseComponentClass                                          OFFSET(get<T>, {0xD8, 8, 0, 0})
+	CMember(UClass*)                                   EnvironmentProbeComponentClass                              OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UClass*)                                   ObjectComponentClass                                        OFFSET(get<T>, {0xE8, 8, 0, 0})
+	CMember(UClass*)                                   MeshComponentClass                                          OFFSET(get<T>, {0xF0, 8, 0, 0})
+	CMember(UClass*)                                   GeoAnchorComponentClass                                     OFFSET(get<T>, {0xF8, 8, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x108, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARSessionConfig.ShouldResetTrackedObjects
+	// bool ShouldResetTrackedObjects();                                                                                        // [0xa03ba40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.ShouldResetCameraTracking
+	// bool ShouldResetCameraTracking();                                                                                        // [0xa03ba2c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.ShouldRenderCameraOverlay
+	// bool ShouldRenderCameraOverlay();                                                                                        // [0xa03ba18] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.ShouldEnableCameraTracking
+	// bool ShouldEnableCameraTracking();                                                                                       // [0xa03ba04] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.ShouldEnableAutoFocus
+	// bool ShouldEnableAutoFocus();                                                                                            // [0xa03b9f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetWorldMapData
+	// void SetWorldMapData(TArray<char> WorldMapData);                                                                         // [0xa03b90c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetSessionTrackingFeatureToEnable
+	// void SetSessionTrackingFeatureToEnable(EARSessionTrackingFeature InSessionTrackingFeature);                              // [0xa03b890] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetSceneReconstructionMethod
+	// void SetSceneReconstructionMethod(EARSceneReconstruction InSceneReconstructionMethod);                                   // [0xa03b814] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetResetTrackedObjects
+	// void SetResetTrackedObjects(bool bNewValue);                                                                             // [0xa03b798] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetResetCameraTracking
+	// void SetResetCameraTracking(bool bNewValue);                                                                             // [0xa03b71c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetFaceTrackingUpdate
+	// void SetFaceTrackingUpdate(EARFaceTrackingUpdate InUpdate);                                                              // [0xa03aa68] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetFaceTrackingDirection
+	// void SetFaceTrackingDirection(EARFaceTrackingDirection InDirection);                                                     // [0xa03a9ec] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetEnableAutoFocus
+	// void SetEnableAutoFocus(bool bNewValue);                                                                                 // [0xa03a7bc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetDesiredVideoFormat
+	// void SetDesiredVideoFormat(FARVideoFormat NewFormat);                                                                    // [0xa03a658] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.SetCandidateObjectList
+	// void SetCandidateObjectList(TArray<UARCandidateObject*>& InCandidateObjects);                                            // [0xa039f68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.RemoveCandidateImageAtIndex
+	// void RemoveCandidateImageAtIndex(int32_t Index);                                                                         // [0xa037f6c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.RemoveCandidateImage
+	// void RemoveCandidateImage(UARCandidateImage* CandidateImage);                                                            // [0xa037ee4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetWorldMapData
+	// TArray<char> GetWorldMapData();                                                                                          // [0xa036560] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetWorldAlignment
+	// EARWorldAlignment GetWorldAlignment();                                                                                   // [0xa03654c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetSessionType
+	// EARSessionType GetSessionType();                                                                                         // [0xa03627c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetSceneReconstructionMethod
+	// EARSceneReconstruction GetSceneReconstructionMethod();                                                                   // [0xa036240] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetPlaneDetectionMode
+	// EARPlaneDetectionMode GetPlaneDetectionMode();                                                                           // [0xa0361dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetMaxNumSimultaneousImagesTracked
+	// int32_t GetMaxNumSimultaneousImagesTracked();                                                                            // [0x5c34634] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetLightEstimationMode
+	// EARLightEstimationMode GetLightEstimationMode();                                                                         // [0x81edbe4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetFrameSyncMode
+	// EARFrameSyncMode GetFrameSyncMode();                                                                                     // [0xa03537c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetFaceTrackingUpdate
+	// EARFaceTrackingUpdate GetFaceTrackingUpdate();                                                                           // [0xa035364] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetFaceTrackingDirection
+	// EARFaceTrackingDirection GetFaceTrackingDirection();                                                                     // [0xa03534c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetEnvironmentCaptureProbeType
+	// EAREnvironmentCaptureProbeType GetEnvironmentCaptureProbeType();                                                         // [0xa0352e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetEnabledSessionTrackingFeature
+	// EARSessionTrackingFeature GetEnabledSessionTrackingFeature();                                                            // [0xa0352d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetDesiredVideoFormat
+	// FARVideoFormat GetDesiredVideoFormat();                                                                                  // [0xa0351e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetCandidateObjectList
+	// TArray<UARCandidateObject*> GetCandidateObjectList();                                                                    // [0xa035108] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.GetCandidateImageList
+	// TArray<UARCandidateImage*> GetCandidateImageList();                                                                      // [0x9ce372c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARSessionConfig.ClearCandidateImages
+	// void ClearCandidateImages();                                                                                             // [0xa0335c0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.AddCandidateObject
+	// void AddCandidateObject(UARCandidateObject* CandidateObject);                                                            // [0xa030c9c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSessionConfig.AddCandidateImage
+	// void AddCandidateImage(UARCandidateImage* NewCandidateImage);                                                            // [0xa030c1c] Final|Native|Public|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARSharedWorldGameMode
 /// Size: 0x0068 (0x000378 - 0x0003E0)
 class AARSharedWorldGameMode : public AGameMode
@@ -372,9 +627,20 @@ class AARSharedWorldGameMode : public AGameMode
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	DMember(int32_t)                                   BufferSizePerChunk                                          ___ OFFSET(get<int32_t>, {0x378, 4, 0, 0})
+	DMember(int32_t)                                   BufferSizePerChunk                                          OFFSET(get<int32_t>, {0x378, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetPreviewImageData
+	// void SetPreviewImageData(TArray<char> ImageData);                                                                        // [0xa03b5b0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetARWorldSharingIsReady
+	// void SetARWorldSharingIsReady();                                                                                         // [0xa039cd8] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSharedWorldGameMode.SetARSharedWorldData
+	// void SetARSharedWorldData(TArray<char> ARWorldData);                                                                     // [0xa0396d4] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARSharedWorldGameMode.GetARSharedWorldGameState
+	// AARSharedWorldGameState* GetARSharedWorldGameState();                                                                    // [0x9ad9618] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARSharedWorldGameState
 /// Size: 0x0038 (0x000300 - 0x000338)
 class AARSharedWorldGameState : public AGameState
@@ -383,14 +649,19 @@ class AARSharedWorldGameState : public AGameState
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	CMember(TArray<char>)                              PreviewImageData                                            ___ OFFSET(get<T>, {0x300, 16, 0, 0})
-	CMember(TArray<char>)                              ARWorldData                                                 ___ OFFSET(get<T>, {0x310, 16, 0, 0})
-	DMember(int32_t)                                   PreviewImageBytesTotal                                      ___ OFFSET(get<int32_t>, {0x320, 4, 0, 0})
-	DMember(int32_t)                                   ARWorldBytesTotal                                           ___ OFFSET(get<int32_t>, {0x324, 4, 0, 0})
-	DMember(int32_t)                                   PreviewImageBytesDelivered                                  ___ OFFSET(get<int32_t>, {0x328, 4, 0, 0})
-	DMember(int32_t)                                   ARWorldBytesDelivered                                       ___ OFFSET(get<int32_t>, {0x32C, 4, 0, 0})
+	CMember(TArray<char>)                              PreviewImageData                                            OFFSET(get<T>, {0x300, 16, 0, 0})
+	CMember(TArray<char>)                              ARWorldData                                                 OFFSET(get<T>, {0x310, 16, 0, 0})
+	DMember(int32_t)                                   PreviewImageBytesTotal                                      OFFSET(get<int32_t>, {0x320, 4, 0, 0})
+	DMember(int32_t)                                   ARWorldBytesTotal                                           OFFSET(get<int32_t>, {0x324, 4, 0, 0})
+	DMember(int32_t)                                   PreviewImageBytesDelivered                                  OFFSET(get<int32_t>, {0x328, 4, 0, 0})
+	DMember(int32_t)                                   ARWorldBytesDelivered                                       OFFSET(get<int32_t>, {0x32C, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARSharedWorldGameState.K2_OnARWorldMapIsReady
+	// void K2_OnARWorldMapIsReady();                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
 /// Class /Script/AugmentedReality.ARSharedWorldPlayerController
 /// Size: 0x0008 (0x000850 - 0x000858)
 class AARSharedWorldPlayerController : public APlayerController
@@ -409,9 +680,14 @@ class AARSkyLight : public ASkyLight
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	CMember(UAREnvironmentCaptureProbe*)               CaptureProbe                                                ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(UAREnvironmentCaptureProbe*)               CaptureProbe                                                OFFSET(get<T>, {0x2A0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARSkyLight.SetEnvironmentCaptureProbe
+	// void SetEnvironmentCaptureProbe(UAREnvironmentCaptureProbe* InCaptureProbe);                                             // [0xa03a8a8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/AugmentedReality.ARTexture
 /// Size: 0x0020 (0x000138 - 0x000158)
 class UARTexture : public UTexture
@@ -420,10 +696,10 @@ class UARTexture : public UTexture
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	CMember(EARTextureType)                            TextureType                                                 ___ OFFSET(get<T>, {0x138, 1, 0, 0})
-	DMember(float)                                     Timestamp                                                   ___ OFFSET(get<float>, {0x13C, 4, 0, 0})
-	SMember(FGuid)                                     ExternalTextureGuid                                         ___ OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FVector2f)                                 Size                                                        ___ OFFSET(get<T>, {0x150, 8, 0, 0})
+	CMember(EARTextureType)                            TextureType                                                 OFFSET(get<T>, {0x138, 1, 0, 0})
+	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0x13C, 4, 0, 0})
+	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(get<T>, {0x140, 16, 0, 0})
+	SMember(FVector2f)                                 Size                                                        OFFSET(get<T>, {0x150, 8, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTextureCameraImage
@@ -444,9 +720,9 @@ class UARTextureCameraDepth : public UARTexture
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	CMember(EARDepthQuality)                           DepthQuality                                                ___ OFFSET(get<T>, {0x158, 1, 0, 0})
-	CMember(EARDepthAccuracy)                          DepthAccuracy                                               ___ OFFSET(get<T>, {0x159, 1, 0, 0})
-	DMember(bool)                                      bIsTemporallySmoothed                                       ___ OFFSET(get<bool>, {0x15A, 1, 0, 0})
+	CMember(EARDepthQuality)                           DepthQuality                                                OFFSET(get<T>, {0x158, 1, 0, 0})
+	CMember(EARDepthAccuracy)                          DepthAccuracy                                               OFFSET(get<T>, {0x159, 1, 0, 0})
+	DMember(bool)                                      bIsTemporallySmoothed                                       OFFSET(get<bool>, {0x15A, 1, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbeTexture
@@ -457,10 +733,10 @@ class UAREnvironmentCaptureProbeTexture : public UTextureCube
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	CMember(EARTextureType)                            TextureType                                                 ___ OFFSET(get<T>, {0x140, 1, 0, 0})
-	DMember(float)                                     Timestamp                                                   ___ OFFSET(get<float>, {0x144, 4, 0, 0})
-	SMember(FGuid)                                     ExternalTextureGuid                                         ___ OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FVector2f)                                 Size                                                        ___ OFFSET(get<T>, {0x158, 8, 0, 0})
+	CMember(EARTextureType)                            TextureType                                                 OFFSET(get<T>, {0x140, 1, 0, 0})
+	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0x144, 4, 0, 0})
+	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(FVector2f)                                 Size                                                        OFFSET(get<T>, {0x158, 8, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTraceResultDummy
@@ -481,17 +757,42 @@ class UARTrackedGeometry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FGuid)                                     UniqueID                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FTransform)                                LocalToTrackingTransform                                    ___ OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FTransform)                                LocalToAlignedTrackingTransform                             ___ OFFSET(get<T>, {0xA0, 96, 0, 0})
-	CMember(EARTrackingState)                          TrackingState                                               ___ OFFSET(get<T>, {0x100, 1, 0, 0})
-	CMember(UMRMeshComponent*)                         UnderlyingMesh                                              ___ OFFSET(get<T>, {0x110, 8, 0, 0})
-	CMember(EARObjectClassification)                   ObjectClassification                                        ___ OFFSET(get<T>, {0x118, 1, 0, 0})
-	CMember(EARSpatialMeshUsageFlags)                  SpatialMeshUsageFlags                                       ___ OFFSET(get<T>, {0x119, 1, 0, 0})
-	DMember(int32_t)                                   LastUpdateFrameNumber                                       ___ OFFSET(get<int32_t>, {0x130, 4, 0, 0})
-	SMember(FName)                                     DebugName                                                   ___ OFFSET(get<T>, {0x140, 4, 0, 0})
+	SMember(FGuid)                                     UniqueID                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(get<T>, {0xA0, 96, 0, 0})
+	CMember(EARTrackingState)                          TrackingState                                               OFFSET(get<T>, {0x100, 1, 0, 0})
+	CMember(UMRMeshComponent*)                         UnderlyingMesh                                              OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0x118, 1, 0, 0})
+	CMember(EARSpatialMeshUsageFlags)                  SpatialMeshUsageFlags                                       OFFSET(get<T>, {0x119, 1, 0, 0})
+	DMember(int32_t)                                   LastUpdateFrameNumber                                       OFFSET(get<int32_t>, {0x130, 4, 0, 0})
+	SMember(FName)                                     DebugName                                                   OFFSET(get<T>, {0x140, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARTrackedGeometry.IsTracked
+	// bool IsTracked();                                                                                                        // [0xa036b8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.HasSpatialMeshUsageFlag
+	// bool HasSpatialMeshUsageFlag(EARSpatialMeshUsageFlags InFlag);                                                           // [0xa03667c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetUnderlyingMesh
+	// UMRMeshComponent* GetUnderlyingMesh();                                                                                   // [0x98fddcc] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetTrackingState
+	// EARTrackingState GetTrackingState();                                                                                     // [0x9765db8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetObjectClassification
+	// EARObjectClassification GetObjectClassification();                                                                       // [0x58166fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetName
+	// FString GetName();                                                                                                       // [0xa035a88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLocalToWorldTransform
+	// FTransform GetLocalToWorldTransform();                                                                                   // [0xa035904] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLocalToTrackingTransform
+	// FTransform GetLocalToTrackingTransform();                                                                                // [0xa035650] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLastUpdateTimestamp
+	// float GetLastUpdateTimestamp();                                                                                          // [0xa035550] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetLastUpdateFrameNumber
+	// int32_t GetLastUpdateFrameNumber();                                                                                      // [0xa035538] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARTrackedGeometry.GetDebugName
+	// FName GetDebugName();                                                                                                    // [0x7e58e20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARPlaneGeometry
 /// Size: 0x0050 (0x000160 - 0x0001B0)
 class UARPlaneGeometry : public UARTrackedGeometry
@@ -500,13 +801,26 @@ class UARPlaneGeometry : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(EARPlaneOrientation)                       Orientation                                                 ___ OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   Extent                                                      ___ OFFSET(get<T>, {0x178, 24, 0, 0})
-	CMember(TArray<FVector>)                           BoundaryPolygon                                             ___ OFFSET(get<T>, {0x190, 16, 0, 0})
-	CMember(UARPlaneGeometry*)                         SubsumedBy                                                  ___ OFFSET(get<T>, {0x1A0, 8, 0, 0})
+	CMember(EARPlaneOrientation)                       Orientation                                                 OFFSET(get<T>, {0x158, 1, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x178, 24, 0, 0})
+	CMember(TArray<FVector>)                           BoundaryPolygon                                             OFFSET(get<T>, {0x190, 16, 0, 0})
+	CMember(UARPlaneGeometry*)                         SubsumedBy                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARPlaneGeometry.GetSubsumedBy
+	// UARPlaneGeometry* GetSubsumedBy();                                                                                       // [0xa036290] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPlaneGeometry.GetOrientation
+	// EARPlaneOrientation GetOrientation();                                                                                    // [0xa0361c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPlaneGeometry.GetExtent
+	// FVector GetExtent();                                                                                                     // [0xa035324] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPlaneGeometry.GetCenter
+	// FVector GetCenter();                                                                                                     // [0xa035180] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARPlaneGeometry.GetBoundaryPolygonInLocalSpace
+	// TArray<FVector> GetBoundaryPolygonInLocalSpace();                                                                        // [0xa034f7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARTrackedPoint
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARTrackedPoint : public UARTrackedGeometry
@@ -525,10 +839,17 @@ class UARTrackedImage : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	CMember(UARCandidateImage*)                        DetectedImage                                               ___ OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(FVector2D)                                 EstimatedSize                                               ___ OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(UARCandidateImage*)                        DetectedImage                                               OFFSET(get<T>, {0x158, 8, 0, 0})
+	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(get<T>, {0x160, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARTrackedImage.GetEstimateSize
+	// FVector2D GetEstimateSize();                                                                                             // [0x8223c2c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/AugmentedReality.ARTrackedImage.GetDetectedImage
+	// UARCandidateImage* GetDetectedImage();                                                                                   // [0x2fe0980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARTrackedQRCode
 /// Size: 0x0020 (0x000170 - 0x000190)
 class UARTrackedQRCode : public UARTrackedImage
@@ -537,8 +858,8 @@ class UARTrackedQRCode : public UARTrackedImage
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FString)                                   QRCode                                                      ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x180, 4, 0, 0})
+	SMember(FString)                                   QRCode                                                      OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x180, 4, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARFaceGeometry
@@ -549,13 +870,24 @@ class UARFaceGeometry : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FVector)                                   LookAtTarget                                                ___ OFFSET(get<T>, {0x158, 24, 0, 0})
-	DMember(bool)                                      bIsTracked                                                  ___ OFFSET(get<bool>, {0x170, 1, 0, 0})
-	CMember(TMap<EARFaceBlendShape, float>)            BlendShapes                                                 ___ OFFSET(get<T>, {0x178, 80, 0, 0})
-	SMember(FTransform)                                LeftEyeTransform                                            ___ OFFSET(get<T>, {0x200, 96, 0, 0})
-	SMember(FTransform)                                RightEyeTransform                                           ___ OFFSET(get<T>, {0x260, 96, 0, 0})
+	SMember(FVector)                                   LookAtTarget                                                OFFSET(get<T>, {0x158, 24, 0, 0})
+	DMember(bool)                                      bIsTracked                                                  OFFSET(get<bool>, {0x170, 1, 0, 0})
+	CMember(TMap<EARFaceBlendShape, float>)            BlendShapes                                                 OFFSET(get<T>, {0x178, 80, 0, 0})
+	SMember(FTransform)                                LeftEyeTransform                                            OFFSET(get<T>, {0x200, 96, 0, 0})
+	SMember(FTransform)                                RightEyeTransform                                           OFFSET(get<T>, {0x260, 96, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARFaceGeometry.GetWorldSpaceEyeTransform
+	// FTransform GetWorldSpaceEyeTransform(EAREye Eye);                                                                        // [0xa0365a0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARFaceGeometry.GetLocalSpaceEyeTransform
+	// FTransform GetLocalSpaceEyeTransform(EAREye Eye);                                                                        // [0xa035588] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARFaceGeometry.GetBlendShapeValue
+	// float GetBlendShapeValue(EARFaceBlendShape BlendShape);                                                                  // [0xa034e50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARFaceGeometry.GetBlendShapes
+	// TMap<EARFaceBlendShape, float> GetBlendShapes();                                                                         // [0xa034ee0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbe
 /// Size: 0x0020 (0x000160 - 0x000180)
 class UAREnvironmentCaptureProbe : public UARTrackedGeometry
@@ -564,10 +896,17 @@ class UAREnvironmentCaptureProbe : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FVector)                                   Extent                                                      ___ OFFSET(get<T>, {0x158, 24, 0, 0})
-	CMember(UAREnvironmentCaptureProbeTexture*)        EnvironmentCaptureTexture                                   ___ OFFSET(get<T>, {0x170, 8, 0, 0})
+	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x158, 24, 0, 0})
+	CMember(UAREnvironmentCaptureProbeTexture*)        EnvironmentCaptureTexture                                   OFFSET(get<T>, {0x170, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetExtent
+	// FVector GetExtent();                                                                                                     // [0xa0352fc] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetEnvironmentCaptureTexture
+	// UAREnvironmentCaptureProbeTexture* GetEnvironmentCaptureTexture();                                                       // [0x83a9c6c] Final|Native|Public|BlueprintCallable|BlueprintPure 
 /// Class /Script/AugmentedReality.ARTrackedObject
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARTrackedObject : public UARTrackedGeometry
@@ -578,6 +917,11 @@ class UARTrackedObject : public UARTrackedGeometry
 public:
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARTrackedObject.GetDetectedObject
+	// UARCandidateObject* GetDetectedObject();                                                                                 // [0x2fe0980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARTrackedPose
 /// Size: 0x0050 (0x000160 - 0x0001B0)
 class UARTrackedPose : public UARTrackedGeometry
@@ -586,9 +930,14 @@ class UARTrackedPose : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FARPose3D)                                 TrackedPose                                                 ___ OFFSET(get<T>, {0x158, 80, 0, 0})
+	SMember(FARPose3D)                                 TrackedPose                                                 OFFSET(get<T>, {0x158, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARTrackedPose.GetTrackedPoseData
+	// FARPose3D GetTrackedPoseData();                                                                                          // [0xa0364e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARMeshGeometry
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARMeshGeometry : public UARTrackedGeometry
@@ -617,27 +966,27 @@ class UARTrackableNotifyComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedGeometry                                        ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedGeometry                                     ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedGeometry                                     ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedPlane                                           ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPlane                                        ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPlane                                        ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedPoint                                           ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPoint                                        ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPoint                                        ___ OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedImage                                           ___ OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedImage                                        ___ OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedImage                                        ___ OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedFace                                            ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedFace                                         ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedFace                                         ___ OFFSET(get<T>, {0x180, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedEnvProbe                                        ___ OFFSET(get<T>, {0x190, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedEnvProbe                                     ___ OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedEnvProbe                                     ___ OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedObject                                          ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedObject                                       ___ OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedObject                                       ___ OFFSET(get<T>, {0x1E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedGeometry                                        OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedGeometry                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedGeometry                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedPlane                                           OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPlane                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPlane                                        OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedPoint                                           OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPoint                                        OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPoint                                        OFFSET(get<T>, {0x120, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedImage                                           OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedImage                                        OFFSET(get<T>, {0x140, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedImage                                        OFFSET(get<T>, {0x150, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedFace                                            OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedFace                                         OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedFace                                         OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedEnvProbe                                        OFFSET(get<T>, {0x190, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedEnvProbe                                     OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedEnvProbe                                     OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedObject                                          OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedObject                                       OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedObject                                       OFFSET(get<T>, {0x1E0, 16, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTypesDummyClass
@@ -658,13 +1007,26 @@ class UARCandidateImage : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UTexture2D*)                               CandidateTexture                                            ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FString)                                   FriendlyName                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(float)                                     Width                                                       ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     Height                                                      ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	CMember(EARCandidateImageOrientation)              Orientation                                                 ___ OFFSET(get<T>, {0x50, 1, 0, 0})
+	CMember(UTexture2D*)                               CandidateTexture                                            OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FString)                                   FriendlyName                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
+	CMember(EARCandidateImageOrientation)              Orientation                                                 OFFSET(get<T>, {0x50, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARCandidateImage.GetPhysicalWidth
+	// float GetPhysicalWidth();                                                                                                // [0x327b0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateImage.GetPhysicalHeight
+	// float GetPhysicalHeight();                                                                                               // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateImage.GetOrientation
+	// EARCandidateImageOrientation GetOrientation();                                                                           // [0x5960460] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateImage.GetFriendlyName
+	// FString GetFriendlyName();                                                                                               // [0x9020f98] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateImage.GetCandidateTexture
+	// UTexture2D* GetCandidateTexture();                                                                                       // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/AugmentedReality.ARCandidateObject
 /// Size: 0x0058 (0x000030 - 0x000088)
 class UARCandidateObject : public UDataAsset
@@ -673,11 +1035,26 @@ class UARCandidateObject : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(TArray<char>)                              CandidateObjectData                                         ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   FriendlyName                                                ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FBox)                                      BoundingBox                                                 ___ OFFSET(get<T>, {0x50, 56, 0, 0})
+	CMember(TArray<char>)                              CandidateObjectData                                         OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   FriendlyName                                                OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FBox)                                      BoundingBox                                                 OFFSET(get<T>, {0x50, 56, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AugmentedReality.ARCandidateObject.SetFriendlyName
+	// void SetFriendlyName(FString NewName);                                                                                   // [0xa03aae4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARCandidateObject.SetCandidateObjectData
+	// void SetCandidateObjectData(TArray<char>& InCandidateObject);                                                            // [0xa039ec8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARCandidateObject.SetBoundingBox
+	// void SetBoundingBox(FBox& InBoundingBox);                                                                                // [0xa039e20] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/AugmentedReality.ARCandidateObject.GetFriendlyName
+	// FString GetFriendlyName();                                                                                               // [0xa035390] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateObject.GetCandidateObjectData
+	// TArray<char> GetCandidateObjectData();                                                                                   // [0xa0350ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AugmentedReality.ARCandidateObject.GetBoundingBox
+	// FBox GetBoundingBox();                                                                                                   // [0xa035010] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/AugmentedReality.TrackedGeometryGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FTrackedGeometryGroup : public MDKStruct
@@ -686,9 +1063,9 @@ class FTrackedGeometryGroup : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(AARActor*)                                 ARActor                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UARComponent*)                             ARComponent                                                 ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(AARActor*)                                 ARActor                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UARComponent*)                             ARComponent                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSessionPayload
@@ -699,9 +1076,9 @@ class FARSessionPayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int32_t)                                   ConfigFlags                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(int32_t)                                   ConfigFlags                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPlaneUpdatePayload
@@ -712,12 +1089,12 @@ class FARPlaneUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   Extents                                                     ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	CMember(TArray<FVector>)                           BoundaryVertices                                            ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(EARObjectClassification)                   ObjectClassification                                        ___ OFFSET(get<T>, {0xC0, 1, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   Extents                                                     OFFSET(get<T>, {0x98, 24, 0, 0})
+	CMember(TArray<FVector>)                           BoundaryVertices                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0xC0, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPointUpdatePayload
@@ -738,10 +1115,10 @@ class FARFaceUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LeftEyePosition                                             ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   RightEyePosition                                            ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   LookAtTarget                                                ___ OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LeftEyePosition                                             OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   RightEyePosition                                            OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   LookAtTarget                                                OFFSET(get<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARImageUpdatePayload
@@ -752,10 +1129,10 @@ class FARImageUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	CMember(UARCandidateImage*)                        DetectedImage                                               ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FVector2D)                                 EstimatedSize                                               ___ OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	CMember(UARCandidateImage*)                        DetectedImage                                               OFFSET(get<T>, {0x80, 8, 0, 0})
+	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(get<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARQRCodeUpdatePayload
@@ -766,10 +1143,10 @@ class FARQRCodeUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FVector)                                   Extents                                                     ___ OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FString)                                   QRCode                                                      ___ OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Extents                                                     OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FString)                                   QRCode                                                      OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPoseUpdatePayload
@@ -780,8 +1157,8 @@ class FARPoseUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x0, 96, 0, 0})
-	CMember(TArray<FTransform>)                        JointTransforms                                             ___ OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	CMember(TArray<FTransform>)                        JointTransforms                                             OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.AREnvironmentProbeUpdatePayload
@@ -792,7 +1169,7 @@ class FAREnvironmentProbeUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARObjectUpdatePayload
@@ -803,7 +1180,7 @@ class FARObjectUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARMeshUpdatePayload
@@ -814,9 +1191,9 @@ class FARMeshUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	CMember(EARObjectClassification)                   ObjectClassification                                        ___ OFFSET(get<T>, {0x80, 1, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0x80, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARGeoAnchorUpdatePayload
@@ -827,13 +1204,13 @@ class FARGeoAnchorUpdatePayload : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	DMember(float)                                     Longitude                                                   ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	DMember(float)                                     Latitude                                                    ___ OFFSET(get<float>, {0x84, 4, 0, 0})
-	DMember(float)                                     AltitudeMeters                                              ___ OFFSET(get<float>, {0x88, 4, 0, 0})
-	CMember(EARAltitudeSource)                         AltitudeSource                                              ___ OFFSET(get<T>, {0x8C, 1, 0, 0})
-	SMember(FString)                                   AnchorName                                                  ___ OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	DMember(float)                                     Longitude                                                   OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(float)                                     Latitude                                                    OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(float)                                     AltitudeMeters                                              OFFSET(get<float>, {0x88, 4, 0, 0})
+	CMember(EARAltitudeSource)                         AltitudeSource                                              OFFSET(get<T>, {0x8C, 1, 0, 0})
+	SMember(FString)                                   AnchorName                                                  OFFSET(get<T>, {0x90, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSharedWorldReplicationState
@@ -844,8 +1221,8 @@ class FARSharedWorldReplicationState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   PreviewImageOffset                                          ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   ARWorldOffset                                               ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   PreviewImageOffset                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   ARWorldOffset                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARTraceResult
@@ -856,10 +1233,10 @@ class FARTraceResult : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(float)                                     DistanceFromCamera                                          ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	CMember(EARLineTraceChannels)                      TraceChannel                                                ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              ___ OFFSET(get<T>, {0x10, 96, 0, 0})
-	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             ___ OFFSET(get<T>, {0x70, 8, 0, 0})
+	DMember(float)                                     DistanceFromCamera                                          OFFSET(get<float>, {0x0, 4, 0, 0})
+	CMember(EARLineTraceChannels)                      TraceChannel                                                OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSessionStatus
@@ -870,8 +1247,8 @@ class FARSessionStatus : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   AdditionalInfo                                              ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(EARSessionStatus)                          Status                                                      ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FString)                                   AdditionalInfo                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(EARSessionStatus)                          Status                                                      OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARVideoFormat
@@ -882,9 +1259,9 @@ class FARVideoFormat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   FPS                                                         ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Width                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Height                                                      ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   FPS                                                         OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Width                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Height                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSkeletonDefinition
@@ -895,9 +1272,9 @@ class FARSkeletonDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   NumJoints                                                   ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(TArray<FName>)                             JointNames                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ParentIndices                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(int32_t)                                   NumJoints                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(TArray<FName>)                             JointNames                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPose2D
@@ -908,9 +1285,9 @@ class FARPose2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	CMember(TArray<FVector2D>)                         JointLocations                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<bool>)                              IsJointTracked                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(get<T>, {0x0, 40, 0, 0})
+	CMember(TArray<FVector2D>)                         JointLocations                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<bool>)                              IsJointTracked                                              OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPose3D
@@ -921,10 +1298,10 @@ class FARPose3D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	CMember(TArray<FTransform>)                        JointTransforms                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<bool>)                              IsJointTracked                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(EARJointTransformSpace)                    JointTransformSpace                                         ___ OFFSET(get<T>, {0x48, 1, 0, 0})
+	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(get<T>, {0x0, 40, 0, 0})
+	CMember(TArray<FTransform>)                        JointTransforms                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<bool>)                              IsJointTracked                                              OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(EARJointTransformSpace)                    JointTransformSpace                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARCameraIntrinsics
@@ -935,9 +1312,9 @@ class FARCameraIntrinsics : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FIntPoint)                                 ImageResolution                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector2D)                                 FocalLength                                                 ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 PrincipalPoint                                              ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FIntPoint)                                 ImageResolution                                             OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FVector2D)                                 FocalLength                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 PrincipalPoint                                              OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Enum /Script/AugmentedReality.EARTrackingState

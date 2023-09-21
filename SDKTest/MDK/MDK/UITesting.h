@@ -16,6 +16,6 @@ class UInScreenWidget_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	CMember(UImage*)                                   InScreenMedia                                               ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UImage*)                                   InScreenMedia                                               OFFSET(get<T>, {0x2A8, 8, 0, 0})
 };
 

@@ -18,6 +18,13 @@ class UKeyPlayerInfoWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FGameplayTag)                              KeyStatusTag                                                ___ OFFSET(get<T>, {0x318, 4, 0, 0})
+	SMember(FGameplayTag)                              KeyStatusTag                                                OFFSET(get<T>, {0x318, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/KeysAndLocksUI.KeyPlayerInfoWidget.OnKeyStatusActivated
+	// void OnKeyStatusActivated(AFortPlayerStateAthena* InPlayerState, bool bActivated);                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/KeysAndLocksUI.KeyPlayerInfoWidget.HandleGameplayTagEvent
+	// void HandleGameplayTagEvent(FGameplayTag UpdatedTag, int32_t TagCount);                                                  // [0x9bcbd74] Final|Native|Protected 

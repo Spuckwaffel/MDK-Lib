@@ -27,9 +27,9 @@ class UMassEntitySettings : public UMassModuleSettings
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FString)                                   DumpDependencyGraphFileName                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      ___ OFFSET(get<T>, {0x38, 192, 0, 0})
-	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FString)                                   DumpDependencyGraphFileName                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      OFFSET(get<T>, {0x38, 192, 0, 0})
+	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0xF8, 16, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassEntitySubsystem
@@ -50,11 +50,11 @@ class UMassProcessor : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	DMember(int32_t)                                   ExecutionFlags                                              ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	CMember(EMassProcessingPhase)                      ProcessingPhase                                             ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
-	SMember(FMassProcessorExecutionOrder)              ExecutionOrder                                              ___ OFFSET(get<T>, {0x30, 40, 0, 0})
-	DMember(bool)                                      bAutoRegisterWithProcessingPhases                           ___ OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(bool)                                      bRequiresGameThreadExecution                                ___ OFFSET(get<bool>, {0x5B, 1, 0, 0})
+	DMember(int32_t)                                   ExecutionFlags                                              OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	CMember(EMassProcessingPhase)                      ProcessingPhase                                             OFFSET(get<T>, {0x2C, 1, 0, 0})
+	SMember(FMassProcessorExecutionOrder)              ExecutionOrder                                              OFFSET(get<T>, {0x30, 40, 0, 0})
+	DMember(bool)                                      bAutoRegisterWithProcessingPhases                           OFFSET(get<bool>, {0x58, 1, 0, 0})
+	DMember(bool)                                      bRequiresGameThreadExecution                                OFFSET(get<bool>, {0x5B, 1, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassObserverProcessor
@@ -65,8 +65,8 @@ class UMassObserverProcessor : public UMassProcessor
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	DMember(bool)                                      bAutoRegisterWithObserverRegistry                           ___ OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	CMember(UScriptStruct*)                            ObservedType                                                ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
+	DMember(bool)                                      bAutoRegisterWithObserverRegistry                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	CMember(UScriptStruct*)                            ObservedType                                                OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassObserverRegistry
@@ -77,8 +77,8 @@ class UMassObserverRegistry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FMassEntityObserverClassesMap)             FragmentObservers                                           ___ OFFSET(get<T>, {0x28, 160, 0, 0})
-	SMember(FMassEntityObserverClassesMap)             TagObservers                                                ___ OFFSET(get<T>, {0xC8, 160, 0, 0})
+	SMember(FMassEntityObserverClassesMap)             FragmentObservers                                           OFFSET(get<T>, {0x28, 160, 0, 0})
+	SMember(FMassEntityObserverClassesMap)             TagObservers                                                OFFSET(get<T>, {0xC8, 160, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassCompositeProcessor
@@ -89,8 +89,8 @@ class UMassCompositeProcessor : public UMassProcessor
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMassRuntimePipeline)                      ChildPipeline                                               ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FName)                                     GroupName                                                   ___ OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FMassRuntimePipeline)                      ChildPipeline                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0xC8, 4, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassSettings
@@ -101,7 +101,7 @@ class UMassSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<FName, UMassModuleSettings*>)         ModuleSettings                                              ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<FName, UMassModuleSettings*>)         ModuleSettings                                              OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassFragmentRequirements
@@ -172,8 +172,8 @@ class FMassEntityHandle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   Index                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   SerialNumber                                                ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   SerialNumber                                                OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassEntityView
@@ -194,7 +194,7 @@ class FMassObserversMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<UScriptStruct*, FMassRuntimePipeline>) Container                                                  ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<UScriptStruct*, FMassRuntimePipeline>) Container                                                  OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassRuntimePipeline
@@ -205,7 +205,7 @@ class FMassRuntimePipeline : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UMassProcessor*>)                   Processors                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UMassProcessor*>)                   Processors                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassObserverManager
@@ -216,8 +216,8 @@ class FMassObserverManager : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FMassObserversMap)                         FragmentObservers                                           ___ OFFSET(get<T>, {0x80, 160, 0, 0})
-	SMember(FMassObserversMap)                         TagObservers                                                ___ OFFSET(get<T>, {0x120, 160, 0, 0})
+	SMember(FMassObserversMap)                         FragmentObservers                                           OFFSET(get<T>, {0x80, 160, 0, 0})
+	SMember(FMassObserversMap)                         TagObservers                                                OFFSET(get<T>, {0x120, 160, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassProcessorClassCollection
@@ -228,7 +228,7 @@ class FMassProcessorClassCollection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<UClass*>)                           ClassCollection                                             ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ClassCollection                                             OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassEntityObserverClassesMap
@@ -239,7 +239,7 @@ class FMassEntityObserverClassesMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TMap<UScriptStruct*, FMassProcessorClassCollection>) Container                                         ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<UScriptStruct*, FMassProcessorClassCollection>) Container                                         OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassProcessingPhaseConfig
@@ -250,9 +250,9 @@ class FMassProcessingPhaseConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PhaseName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UClass*)                                   PhaseGroupClass                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     PhaseName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UClass*)                                   PhaseGroupClass                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.ProcessorAuxDataBase
@@ -273,9 +273,9 @@ class FMassProcessingContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     DeltaSeconds                                                ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FInstancedStruct)                          AuxData                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	DMember(bool)                                      bFlushCommandBuffer                                         ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(float)                                     DeltaSeconds                                                OFFSET(get<float>, {0x10, 4, 0, 0})
+	SMember(FInstancedStruct)                          AuxData                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	DMember(bool)                                      bFlushCommandBuffer                                         OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassProcessorExecutionOrder
@@ -286,9 +286,9 @@ class FMassProcessorExecutionOrder : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     ExecuteInGroup                                              ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FName>)                             ExecuteBefore                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	CMember(TArray<FName>)                             ExecuteAfter                                                ___ OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FName)                                     ExecuteInGroup                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FName>)                             ExecuteBefore                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TArray<FName>)                             ExecuteAfter                                                OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassSubsystemRequirements

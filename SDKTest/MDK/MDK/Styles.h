@@ -8,6 +8,16 @@
 /// dependency: CommonUI
 /// dependency: CoreUObject
 
+/// Class /FortUILibrary/Styles/Typography/_TextStyle_Legal._TextStyle_Legal_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class U_TextStyle_Legal_C : public UCommonTextStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
 /// Class /FortUILibrary/Styles/Typography/_TextStyle_TagNormal._TextStyle_TagNormal_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class U_TextStyle_TagNormal_C : public UCommonTextStyle
@@ -84,16 +94,6 @@ class U_BorderStyle_ModalHeader_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
-
-public:
-};
-
-/// Class /FortUILibrary/Styles/Typography/_TextStyle_Legal._TextStyle_Legal_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class U_TextStyle_Legal_C : public UCommonTextStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 };

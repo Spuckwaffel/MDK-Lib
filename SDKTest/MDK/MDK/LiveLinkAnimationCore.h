@@ -18,6 +18,13 @@ class ULiveLinkInstance : public UAnimInstance
 public:
 };
 
+
+
+	/// Functions
+	// Function /Script/LiveLinkAnimationCore.LiveLinkInstance.SetSubject
+	// void SetSubject(FLiveLinkSubjectName SubjectName);                                                                       // [0xa00dc54] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LiveLinkAnimationCore.LiveLinkInstance.SetRetargetAsset
+	// void SetRetargetAsset(UClass* RetargetAsset);                                                                            // [0xa00db94] Final|Native|Public|BlueprintCallable 
 /// Class /Script/LiveLinkAnimationCore.LiveLinkRetargetAsset
 /// Size: 0x0000 (0x000028 - 0x000028)
 class ULiveLinkRetargetAsset : public UObject
@@ -46,10 +53,10 @@ class FAnimNode_LiveLinkPose : public FAnimNode_Base
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FPoseLink)                                 InputPose                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FLiveLinkSubjectName)                      LiveLinkSubjectName                                         ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	CMember(UClass*)                                   RetargetAsset                                               ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(ULiveLinkRetargetAsset*)                   CurrentRetargetAsset                                        ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FPoseLink)                                 InputPose                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FLiveLinkSubjectName)                      LiveLinkSubjectName                                         OFFSET(get<T>, {0x20, 4, 0, 0})
+	CMember(UClass*)                                   RetargetAsset                                               OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(ULiveLinkRetargetAsset*)                   CurrentRetargetAsset                                        OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/LiveLinkAnimationCore.LiveLinkInstanceProxy
@@ -60,6 +67,6 @@ class FLiveLinkInstanceProxy : public FAnimInstanceProxy
 	static inline constexpr uint64_t __MDKClassSize = 1856;
 
 public:
-	SMember(FAnimNode_LiveLinkPose)                    PoseNode                                                    ___ OFFSET(get<T>, {0x6F8, 72, 0, 0})
+	SMember(FAnimNode_LiveLinkPose)                    PoseNode                                                    OFFSET(get<T>, {0x6F8, 72, 0, 0})
 };
 

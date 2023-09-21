@@ -26,6 +26,6 @@ class UForwardingChannelsSubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(TArray<TScriptInterface>)                  ForwardingChannelFactories                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<TScriptInterface>)                  ForwardingChannelFactories                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 

@@ -27,14 +27,14 @@ class UAssembledMeshSchema : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FGameplayTag)                              MeshSchemaTag                                               ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	CMember(TWeakObjectPtr<UCustomizableObjectInstance*>) CustomizableObjectInstance                               ___ OFFSET(get<T>, {0x38, 32, 0, 0})
-	CMember(TWeakObjectPtr<UCustomizableObject*>)      CustomizableObject                                          ___ OFFSET(get<T>, {0x58, 32, 0, 0})
-	CMember(TMap<FString, FString>)                    SelectedIntParams                                           ___ OFFSET(get<T>, {0x78, 80, 0, 0})
-	CMember(TMap<FString, float>)                      SelectedFloatParams                                         ___ OFFSET(get<T>, {0xC8, 80, 0, 0})
-	SMember(FAssembledMeshAttachmentRules)             AttachmentRules                                             ___ OFFSET(get<T>, {0x118, 80, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   AnimClass                                                   ___ OFFSET(get<T>, {0x168, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SoundLibraryTags                                            ___ OFFSET(get<T>, {0x188, 32, 0, 0})
+	SMember(FGameplayTag)                              MeshSchemaTag                                               OFFSET(get<T>, {0x30, 4, 0, 0})
+	CMember(TWeakObjectPtr<UCustomizableObjectInstance*>) CustomizableObjectInstance                               OFFSET(get<T>, {0x38, 32, 0, 0})
+	CMember(TWeakObjectPtr<UCustomizableObject*>)      CustomizableObject                                          OFFSET(get<T>, {0x58, 32, 0, 0})
+	CMember(TMap<FString, FString>)                    SelectedIntParams                                           OFFSET(get<T>, {0x78, 80, 0, 0})
+	CMember(TMap<FString, float>)                      SelectedFloatParams                                         OFFSET(get<T>, {0xC8, 80, 0, 0})
+	SMember(FAssembledMeshAttachmentRules)             AttachmentRules                                             OFFSET(get<T>, {0x118, 80, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   AnimClass                                                   OFFSET(get<T>, {0x168, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SoundLibraryTags                                            OFFSET(get<T>, {0x188, 32, 0, 0})
 };
 
 /// Class /Script/AssembledMeshSystem.AssembledMeshUserComponent
@@ -45,11 +45,26 @@ class UAssembledMeshUserComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(TArray<UAssembledMeshSchema*>)             MeshParts                                                   ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(TArray<FAssembledComponentReferences>)     MeshPartComponents                                          ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	DMember(bool)                                      bAssignMeshPartsOnBeginPlay                                 ___ OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	CMember(TArray<UAssembledMeshSchema*>)             MeshParts                                                   OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FAssembledComponentReferences>)     MeshPartComponents                                          OFFSET(get<T>, {0xC0, 16, 0, 0})
+	DMember(bool)                                      bAssignMeshPartsOnBeginPlay                                 OFFSET(get<bool>, {0xD0, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.SetMeshPart
+	// void SetMeshPart(UAssembledMeshSchema* InMeshPart);                                                                      // [0x56ba1a4] Final|Native|Private|BlueprintCallable 
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.OnRep_MeshParts
+	// void OnRep_MeshParts();                                                                                                  // [0x65fec08] Final|Native|Private 
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GetMeshPart
+	// UAssembledMeshSchema* GetMeshPart();                                                                                     // [0x5cdc07c] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GetAttachToComponent
+	// USkeletalMeshComponent* GetAttachToComponent();                                                                          // [0x65feae8] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GatherAndAssignAssembledMeshParts
+	// void GatherAndAssignAssembledMeshParts();                                                                                // [0x1284298] Native|Public        
+	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.CustomizationCompleted
+	// void CustomizationCompleted(int32_t PartIndex);                                                                          // [0x65fea68] Final|Native|Private 
 /// Struct /Script/AssembledMeshSystem.AssembledMeshAttachmentRules
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FAssembledMeshAttachmentRules : public MDKStruct
@@ -58,10 +73,10 @@ class FAssembledMeshAttachmentRules : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     AttachSocketName                                            ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   AttachOffset                                                ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  AttachRotation                                              ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   AttachScale                                                 ___ OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   AttachOffset                                                OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  AttachRotation                                              OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   AttachScale                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.BaseParamData
@@ -72,7 +87,7 @@ class FBaseParamData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   ParamName                                                   ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParamName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.IntParamData
@@ -83,7 +98,7 @@ class FIntParamData : public FBaseParamData
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(TArray<FString>)                           ParamOptions                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FString>)                           ParamOptions                                                OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.FloatParamData
@@ -94,9 +109,9 @@ class FFloatParamData : public FBaseParamData
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(float)                                     FloatValue                                                  ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     MinFloatValue                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     MaxFloatValue                                               ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     MinFloatValue                                               OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     MaxFloatValue                                               OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.AssembledComponentReferences
@@ -107,7 +122,7 @@ class FAssembledComponentReferences : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(USkeletalMeshComponent*)                   SkeletalMeshComponent                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UCustomizableSkeletalComponent*)           CustomizableComponent                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(USkeletalMeshComponent*)                   SkeletalMeshComponent                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UCustomizableSkeletalComponent*)           CustomizableComponent                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 

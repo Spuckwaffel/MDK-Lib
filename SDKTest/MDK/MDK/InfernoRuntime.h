@@ -40,19 +40,19 @@ class UFortCurieVoxelFirePropagationManagerConfig : public UFortCurieFirePropaga
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	SMember(FFortCurieVoxelPropagationProperties)      DefaultPropagationProperties                                ___ OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FName)                                     PropagationPropertiesRegistry                               ___ OFFSET(get<T>, {0x148, 4, 0, 0})
-	DMember(float)                                     PropagationNoiseMinimum                                     ___ OFFSET(get<float>, {0x14C, 4, 0, 0})
-	DMember(float)                                     PropagationNoiseMaximum                                     ___ OFFSET(get<float>, {0x150, 4, 0, 0})
-	DMember(float)                                     PropagationSpeedNoiseRange                                  ___ OFFSET(get<float>, {0x154, 4, 0, 0})
-	DMember(float)                                     PropagationMinimumSpeed                                     ___ OFFSET(get<float>, {0x158, 4, 0, 0})
-	DMember(float)                                     PropagationMinimumTime                                      ___ OFFSET(get<float>, {0x15C, 4, 0, 0})
-	DMember(float)                                     VoxelOverlapExpansionFactor                                 ___ OFFSET(get<float>, {0x160, 4, 0, 0})
-	DMember(bool)                                      bAllowPerMaterialPropagationProperties                      ___ OFFSET(get<bool>, {0x164, 1, 0, 0})
-	DMember(float)                                     ActorPropagationInteractMagnitude                           ___ OFFSET(get<float>, {0x168, 4, 0, 0})
-	DMember(float)                                     MovedActorGrassIgnitionDelay                                ___ OFFSET(get<float>, {0x16C, 4, 0, 0})
-	DMember(float)                                     MovedActorGrassGridCellZExpansion                           ___ OFFSET(get<float>, {0x170, 4, 0, 0})
-	DMember(float)                                     MovedActorGroundTraceZRange                                 ___ OFFSET(get<float>, {0x174, 4, 0, 0})
+	SMember(FFortCurieVoxelPropagationProperties)      DefaultPropagationProperties                                OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FName)                                     PropagationPropertiesRegistry                               OFFSET(get<T>, {0x148, 4, 0, 0})
+	DMember(float)                                     PropagationNoiseMinimum                                     OFFSET(get<float>, {0x14C, 4, 0, 0})
+	DMember(float)                                     PropagationNoiseMaximum                                     OFFSET(get<float>, {0x150, 4, 0, 0})
+	DMember(float)                                     PropagationSpeedNoiseRange                                  OFFSET(get<float>, {0x154, 4, 0, 0})
+	DMember(float)                                     PropagationMinimumSpeed                                     OFFSET(get<float>, {0x158, 4, 0, 0})
+	DMember(float)                                     PropagationMinimumTime                                      OFFSET(get<float>, {0x15C, 4, 0, 0})
+	DMember(float)                                     VoxelOverlapExpansionFactor                                 OFFSET(get<float>, {0x160, 4, 0, 0})
+	DMember(bool)                                      bAllowPerMaterialPropagationProperties                      OFFSET(get<bool>, {0x164, 1, 0, 0})
+	DMember(float)                                     ActorPropagationInteractMagnitude                           OFFSET(get<float>, {0x168, 4, 0, 0})
+	DMember(float)                                     MovedActorGrassIgnitionDelay                                OFFSET(get<float>, {0x16C, 4, 0, 0})
+	DMember(float)                                     MovedActorGrassGridCellZExpansion                           OFFSET(get<float>, {0x170, 4, 0, 0})
+	DMember(float)                                     MovedActorGroundTraceZRange                                 OFFSET(get<float>, {0x174, 4, 0, 0})
 };
 
 /// Class /Script/InfernoRuntime.FortCurieVoxelFirePropagationManager
@@ -63,8 +63,8 @@ class UFortCurieVoxelFirePropagationManager : public UFortCurieManagerComponent
 	static inline constexpr uint64_t __MDKClassSize = 1664;
 
 public:
-	SMember(FFortCurieVoxelFirePropagationManagerTickFunction) PrimaryTickFunction                                 ___ OFFSET(get<T>, {0x40, 48, 0, 0})
-	CMember(UFortCurieVoxelFirePropagationManagerConfig*) InternalManagerConfig                                    ___ OFFSET(get<T>, {0x668, 8, 0, 0})
+	SMember(FFortCurieVoxelFirePropagationManagerTickFunction) PrimaryTickFunction                                 OFFSET(get<T>, {0x40, 48, 0, 0})
+	CMember(UFortCurieVoxelFirePropagationManagerConfig*) InternalManagerConfig                                    OFFSET(get<T>, {0x668, 8, 0, 0})
 };
 
 /// Class /Script/InfernoRuntime.FortCurieVoxelFireDebugParticleDataInterface
@@ -95,21 +95,21 @@ class UFortCurieVoxelFireNativeFXHandlerConfig : public UFortCurieNativeFXHandle
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	CMember(UNiagaraSystem*)                           WorldFireSystem                                             ___ OFFSET(get<T>, {0x168, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           WorldFireDebugSystem                                        ___ OFFSET(get<T>, {0x170, 8, 0, 0})
-	CMember(UTextureRenderTarget2D*)                   LandscapeCharRenderTarget                                   ___ OFFSET(get<T>, {0x178, 8, 0, 0})
-	CMember(UMaterialParameterCollection*)             MaterialParameterCollection                                 ___ OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(FName)                                     PlayerWorldFireSystemLightScalabilityParamName              ___ OFFSET(get<T>, {0x188, 4, 0, 0})
-	SMember(FName)                                     LandscapeBiasParameterName                                  ___ OFFSET(get<T>, {0x18C, 4, 0, 0})
-	SMember(FName)                                     LandscapeDivisorParameterName                               ___ OFFSET(get<T>, {0x190, 4, 0, 0})
-	DMember(float)                                     LandscapeFireRandomLocationRadius                           ___ OFFSET(get<float>, {0x194, 4, 0, 0})
-	DMember(float)                                     MinLandscapeFireSphericalBounds                             ___ OFFSET(get<float>, {0x198, 4, 0, 0})
-	DMember(float)                                     MaxLandscapeFireSphericalBounds                             ___ OFFSET(get<float>, {0x19C, 4, 0, 0})
-	DMember(float)                                     LandscapeCharInterpSpeed                                    ___ OFFSET(get<float>, {0x1A0, 4, 0, 0})
-	DMember(float)                                     LandscapeIgnitionParticleMovementSpeed                      ___ OFFSET(get<float>, {0x1A4, 4, 0, 0})
-	DMember(bool)                                      bUseVoxelFireAmbientAudio                                   ___ OFFSET(get<bool>, {0x1A8, 1, 0, 0})
-	CMember(USoundBase*)                               StructureFireAmbientSound                                   ___ OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	CMember(USoundBase*)                               GrassFireAmbientSound                                       ___ OFFSET(get<T>, {0x1B8, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           WorldFireSystem                                             OFFSET(get<T>, {0x168, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           WorldFireDebugSystem                                        OFFSET(get<T>, {0x170, 8, 0, 0})
+	CMember(UTextureRenderTarget2D*)                   LandscapeCharRenderTarget                                   OFFSET(get<T>, {0x178, 8, 0, 0})
+	CMember(UMaterialParameterCollection*)             MaterialParameterCollection                                 OFFSET(get<T>, {0x180, 8, 0, 0})
+	SMember(FName)                                     PlayerWorldFireSystemLightScalabilityParamName              OFFSET(get<T>, {0x188, 4, 0, 0})
+	SMember(FName)                                     LandscapeBiasParameterName                                  OFFSET(get<T>, {0x18C, 4, 0, 0})
+	SMember(FName)                                     LandscapeDivisorParameterName                               OFFSET(get<T>, {0x190, 4, 0, 0})
+	DMember(float)                                     LandscapeFireRandomLocationRadius                           OFFSET(get<float>, {0x194, 4, 0, 0})
+	DMember(float)                                     MinLandscapeFireSphericalBounds                             OFFSET(get<float>, {0x198, 4, 0, 0})
+	DMember(float)                                     MaxLandscapeFireSphericalBounds                             OFFSET(get<float>, {0x19C, 4, 0, 0})
+	DMember(float)                                     LandscapeCharInterpSpeed                                    OFFSET(get<float>, {0x1A0, 4, 0, 0})
+	DMember(float)                                     LandscapeIgnitionParticleMovementSpeed                      OFFSET(get<float>, {0x1A4, 4, 0, 0})
+	DMember(bool)                                      bUseVoxelFireAmbientAudio                                   OFFSET(get<bool>, {0x1A8, 1, 0, 0})
+	CMember(USoundBase*)                               StructureFireAmbientSound                                   OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	CMember(USoundBase*)                               GrassFireAmbientSound                                       OFFSET(get<T>, {0x1B8, 8, 0, 0})
 };
 
 /// Class /Script/InfernoRuntime.FortCurieVoxelFireNativeFXHandler
@@ -120,27 +120,32 @@ class UFortCurieVoxelFireNativeFXHandler : public UFortCurieNativeFXHandler
 	static inline constexpr uint64_t __MDKClassSize = 872;
 
 public:
-	CMember(TSet<UFortCurieComponent*>)                PendingUpdateComponents                                     ___ OFFSET(get<T>, {0x70, 80, 0, 0})
-	CMember(TSet<UFortCurieComponent*>)                PendingRemoveComponents                                     ___ OFFSET(get<T>, {0xC0, 80, 0, 0})
-	CMember(TArray<UFortCurieWorldNiagaraComponent*>)  WorldFireNiagaraSystems                                     ___ OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<UFortCurieWorldNiagaraComponent*>)  WorldFireDebugNiagaraSystems                                ___ OFFSET(get<T>, {0x170, 16, 0, 0})
-	DMember(float)                                     WorldSystemFireParticleSignificanceRequirement              ___ OFFSET(get<float>, {0x180, 4, 0, 0})
-	DMember(float)                                     WorldSystemIgnitionParticleSignificanceRequirement          ___ OFFSET(get<float>, {0x184, 4, 0, 0})
-	DMember(float)                                     AudioGrassFireSignificanceRequirement                       ___ OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(float)                                     AudioActorFireSignificanceRequirement                       ___ OFFSET(get<float>, {0x18C, 4, 0, 0})
-	SMember(FRandomStream)                             RandomStream                                                ___ OFFSET(get<T>, {0x190, 8, 0, 0})
-	SMember(FBox)                                      GrassFireBounds                                             ___ OFFSET(get<T>, {0x198, 56, 0, 0})
-	DMember(float)                                     LandscapeCharInterpSpeed                                    ___ OFFSET(get<float>, {0x1D0, 4, 0, 0})
-	DMember(float)                                     TimeSinceAudioUpdate                                        ___ OFFSET(get<float>, {0x1D4, 4, 0, 0})
-	CMember(TArray<FFortCurieVoxelFireParticleGrassData>) CachedFireParticleGrassData                              ___ OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	CMember(TArray<FFortCurieFireParticleActorData>)   CachedFireParticleActorData                                 ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	CMember(TSet<FFortSpatialCellIndex>)               CachedBurningGrassGridCells                                 ___ OFFSET(get<T>, {0x258, 80, 0, 0})
-	CMember(TMap<FFortSpatialCellIndex, UAudioComponent*>) GrassAudioMap                                           ___ OFFSET(get<T>, {0x2A8, 80, 0, 0})
-	CMember(TArray<UAudioComponent*>)                  PreallocatedAudioComponents                                 ___ OFFSET(get<T>, {0x348, 16, 0, 0})
-	SMember(FTimerHandle)                              AudioComponentCleanupTimerHandle                            ___ OFFSET(get<T>, {0x358, 8, 0, 0})
-	DMember(double)                                    PreviousLandscapeCharTickTime                               ___ OFFSET(get<double>, {0x360, 8, 0, 0})
+	CMember(TSet<UFortCurieComponent*>)                PendingUpdateComponents                                     OFFSET(get<T>, {0x70, 80, 0, 0})
+	CMember(TSet<UFortCurieComponent*>)                PendingRemoveComponents                                     OFFSET(get<T>, {0xC0, 80, 0, 0})
+	CMember(TArray<UFortCurieWorldNiagaraComponent*>)  WorldFireNiagaraSystems                                     OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<UFortCurieWorldNiagaraComponent*>)  WorldFireDebugNiagaraSystems                                OFFSET(get<T>, {0x170, 16, 0, 0})
+	DMember(float)                                     WorldSystemFireParticleSignificanceRequirement              OFFSET(get<float>, {0x180, 4, 0, 0})
+	DMember(float)                                     WorldSystemIgnitionParticleSignificanceRequirement          OFFSET(get<float>, {0x184, 4, 0, 0})
+	DMember(float)                                     AudioGrassFireSignificanceRequirement                       OFFSET(get<float>, {0x188, 4, 0, 0})
+	DMember(float)                                     AudioActorFireSignificanceRequirement                       OFFSET(get<float>, {0x18C, 4, 0, 0})
+	SMember(FRandomStream)                             RandomStream                                                OFFSET(get<T>, {0x190, 8, 0, 0})
+	SMember(FBox)                                      GrassFireBounds                                             OFFSET(get<T>, {0x198, 56, 0, 0})
+	DMember(float)                                     LandscapeCharInterpSpeed                                    OFFSET(get<float>, {0x1D0, 4, 0, 0})
+	DMember(float)                                     TimeSinceAudioUpdate                                        OFFSET(get<float>, {0x1D4, 4, 0, 0})
+	CMember(TArray<FFortCurieVoxelFireParticleGrassData>) CachedFireParticleGrassData                              OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	CMember(TArray<FFortCurieFireParticleActorData>)   CachedFireParticleActorData                                 OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	CMember(TSet<FFortSpatialCellIndex>)               CachedBurningGrassGridCells                                 OFFSET(get<T>, {0x258, 80, 0, 0})
+	CMember(TMap<FFortSpatialCellIndex, UAudioComponent*>) GrassAudioMap                                           OFFSET(get<T>, {0x2A8, 80, 0, 0})
+	CMember(TArray<UAudioComponent*>)                  PreallocatedAudioComponents                                 OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FTimerHandle)                              AudioComponentCleanupTimerHandle                            OFFSET(get<T>, {0x358, 8, 0, 0})
+	DMember(double)                                    PreviousLandscapeCharTickTime                               OFFSET(get<double>, {0x360, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/InfernoRuntime.FortCurieVoxelFireNativeFXHandler.OnUserSettingsEffectQualityChanged
+	// void OnUserSettingsEffectQualityChanged();                                                                               // [0x9be5ad4] Final|Native|Private 
 /// Class /Script/InfernoRuntime.FortCurieVoxelFireParticleDataInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortCurieVoxelFireParticleDataInterface : public UInterface
@@ -189,10 +194,10 @@ class FFortCurieVoxelPropagationProperties : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     PropagationZDirectionDownMultiplier                         ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     PropagationZDirectionUpMultiplier                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     PropagationBaseDelay                                        ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     PropagationBaseSpeed                                        ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     PropagationZDirectionDownMultiplier                         OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     PropagationZDirectionUpMultiplier                           OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     PropagationBaseDelay                                        OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     PropagationBaseSpeed                                        OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/InfernoRuntime.FortCurieVoxelFirePropagationManagerTickFunction

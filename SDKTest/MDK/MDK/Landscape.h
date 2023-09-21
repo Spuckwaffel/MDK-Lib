@@ -17,7 +17,7 @@ class UControlPointMeshComponent : public UStaticMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
-	DMember(float)                                     VirtualTextureMainPassMaxDrawDistance                       ___ OFFSET(get<float>, {0x620, 4, 0, 0})
+	DMember(float)                                     VirtualTextureMainPassMaxDrawDistance                       OFFSET(get<float>, {0x620, 4, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSplineInterface
@@ -38,71 +38,94 @@ class ALandscapeProxy : public APartitionActor
 	static inline constexpr uint64_t __MDKClassSize = 1552;
 
 public:
-	CMember(ULandscapeSplinesComponent*)               SplineComponent                                             ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(FGuid)                                     LandscapeGuid                                               ___ OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	DMember(bool)                                      bEnableNanite                                               ___ OFFSET(get<bool>, {0x2C0, 1, 0, 0})
-	CMember(TArray<FLandscapePerLODMaterialOverride>)  PerLODOverrideMaterials                                     ___ OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(FIntPoint)                                 LandscapeSectionOffset                                      ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	DMember(int32_t)                                   MaxLODLevel                                                 ___ OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
-	DMember(float)                                     ComponentScreenSizeToUseSubSections                         ___ OFFSET(get<float>, {0x2E4, 4, 0, 0})
-	DMember(float)                                     LOD0ScreenSize                                              ___ OFFSET(get<float>, {0x2E8, 4, 0, 0})
-	DMember(uint32_t)                                  LODGroupKey                                                 ___ OFFSET(get<uint32_t>, {0x2EC, 4, 0, 0})
-	DMember(float)                                     LOD0DistributionSetting                                     ___ OFFSET(get<float>, {0x2F0, 4, 0, 0})
-	DMember(float)                                     LODDistributionSetting                                      ___ OFFSET(get<float>, {0x2F4, 4, 0, 0})
-	DMember(int32_t)                                   StaticLightingLOD                                           ___ OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
-	CMember(UPhysicalMaterial*)                        DefaultPhysMaterial                                         ___ OFFSET(get<T>, {0x300, 8, 0, 0})
-	DMember(float)                                     StreamingDistanceMultiplier                                 ___ OFFSET(get<float>, {0x308, 4, 0, 0})
-	CMember(UMaterialInterface*)                       LandscapeMaterial                                           ___ OFFSET(get<T>, {0x310, 8, 0, 0})
-	CMember(UMaterialInterface*)                       LandscapeHoleMaterial                                       ___ OFFSET(get<T>, {0x338, 8, 0, 0})
-	CMember(TArray<URuntimeVirtualTexture*>)           RuntimeVirtualTextures                                      ___ OFFSET(get<T>, {0x340, 16, 0, 0})
-	DMember(bool)                                      bSetCreateRuntimeVirtualTextureVolumes                      ___ OFFSET(get<bool>, {0x350, 1, 0, 0})
-	DMember(bool)                                      bVirtualTextureRenderWithQuad                               ___ OFFSET(get<bool>, {0x351, 1, 0, 0})
-	DMember(bool)                                      bVirtualTextureRenderWithQuadHQ                             ___ OFFSET(get<bool>, {0x352, 1, 0, 0})
-	DMember(int32_t)                                   VirtualTextureNumLods                                       ___ OFFSET(get<int32_t>, {0x354, 4, 0, 0})
-	DMember(int32_t)                                   VirtualTextureLodBias                                       ___ OFFSET(get<int32_t>, {0x358, 4, 0, 0})
-	CMember(ERuntimeVirtualTextureMainPassType)        VirtualTextureRenderPassType                                ___ OFFSET(get<T>, {0x35C, 1, 0, 0})
-	DMember(float)                                     NegativeZBoundsExtension                                    ___ OFFSET(get<float>, {0x360, 4, 0, 0})
-	DMember(float)                                     PositiveZBoundsExtension                                    ___ OFFSET(get<float>, {0x364, 4, 0, 0})
-	CMember(TArray<ULandscapeComponent*>)              LandscapeComponents                                         ___ OFFSET(get<T>, {0x368, 16, 0, 0})
-	CMember(TArray<ULandscapeHeightfieldCollisionComponent*>) CollisionComponents                                  ___ OFFSET(get<T>, {0x378, 16, 0, 0})
-	CMember(TArray<UHierarchicalInstancedStaticMeshComponent*>) FoliageComponents                                  ___ OFFSET(get<T>, {0x388, 16, 0, 0})
-	CMember(ULandscapeNaniteComponent*)                NaniteComponent                                             ___ OFFSET(get<T>, {0x398, 8, 0, 0})
-	CMember(TArray<ULandscapeNaniteComponent*>)        NaniteComponents                                            ___ OFFSET(get<T>, {0x3A0, 16, 0, 0})
-	DMember(bool)                                      bHasLandscapeGrass                                          ___ OFFSET(get<bool>, {0x414, 1, 0, 0})
-	DMember(float)                                     StaticLightingResolution                                    ___ OFFSET(get<float>, {0x418, 4, 0, 0})
-	DMember(bool)                                      CastShadow                                                  ___ OFFSET(get<bool>, {0x41C, 1, 1, 0})
-	DMember(bool)                                      bCastDynamicShadow                                          ___ OFFSET(get<bool>, {0x41C, 1, 1, 1})
-	DMember(bool)                                      bCastStaticShadow                                           ___ OFFSET(get<bool>, {0x41C, 1, 1, 2})
-	CMember(EShadowCacheInvalidationBehavior)          ShadowCacheInvalidationBehavior                             ___ OFFSET(get<T>, {0x41D, 1, 0, 0})
-	DMember(bool)                                      bCastContactShadow                                          ___ OFFSET(get<bool>, {0x41E, 1, 1, 0})
-	DMember(bool)                                      bCastFarShadow                                              ___ OFFSET(get<bool>, {0x420, 1, 1, 0})
-	DMember(bool)                                      bCastHiddenShadow                                           ___ OFFSET(get<bool>, {0x424, 1, 1, 0})
-	DMember(bool)                                      bCastShadowAsTwoSided                                       ___ OFFSET(get<bool>, {0x428, 1, 1, 0})
-	DMember(bool)                                      bAffectDistanceFieldLighting                                ___ OFFSET(get<bool>, {0x42C, 1, 1, 0})
-	SMember(FLightingChannels)                         LightingChannels                                            ___ OFFSET(get<T>, {0x42D, 1, 0, 0})
-	DMember(bool)                                      bUseMaterialPositionOffsetInStaticLighting                  ___ OFFSET(get<bool>, {0x430, 1, 1, 0})
-	DMember(bool)                                      bRenderCustomDepth                                          ___ OFFSET(get<bool>, {0x430, 1, 1, 1})
-	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 ___ OFFSET(get<T>, {0x434, 1, 0, 0})
-	DMember(int32_t)                                   CustomDepthStencilValue                                     ___ OFFSET(get<int32_t>, {0x438, 4, 0, 0})
-	DMember(float)                                     LDMaxDrawDistance                                           ___ OFFSET(get<float>, {0x43C, 4, 0, 0})
-	SMember(FLightmassPrimitiveSettings)               LightmassSettings                                           ___ OFFSET(get<T>, {0x440, 24, 0, 0})
-	DMember(int32_t)                                   CollisionMipLevel                                           ___ OFFSET(get<int32_t>, {0x458, 4, 0, 0})
-	DMember(int32_t)                                   SimpleCollisionMipLevel                                     ___ OFFSET(get<int32_t>, {0x45C, 4, 0, 0})
-	SMember(FBodyInstance)                             BodyInstance                                                ___ OFFSET(get<T>, {0x468, 392, 0, 0})
-	DMember(bool)                                      bGenerateOverlapEvents                                      ___ OFFSET(get<bool>, {0x5F0, 1, 1, 0})
-	DMember(bool)                                      bBakeMaterialPositionOffsetIntoCollision                    ___ OFFSET(get<bool>, {0x5F0, 1, 1, 1})
-	DMember(int32_t)                                   ComponentSizeQuads                                          ___ OFFSET(get<int32_t>, {0x5F4, 4, 0, 0})
-	DMember(int32_t)                                   SubsectionSizeQuads                                         ___ OFFSET(get<int32_t>, {0x5F8, 4, 0, 0})
-	DMember(int32_t)                                   NumSubsections                                              ___ OFFSET(get<int32_t>, {0x5FC, 4, 0, 0})
-	DMember(bool)                                      bUsedForNavigation                                          ___ OFFSET(get<bool>, {0x600, 1, 1, 0})
-	DMember(bool)                                      bFillCollisionUnderLandscapeForNavmesh                      ___ OFFSET(get<bool>, {0x600, 1, 1, 1})
-	CMember(ENavDataGatheringMode)                     NavigationGeometryGatheringMode                             ___ OFFSET(get<T>, {0x604, 1, 0, 0})
-	DMember(bool)                                      bUseDynamicMaterialInstance                                 ___ OFFSET(get<bool>, {0x605, 1, 0, 0})
-	DMember(bool)                                      bUseLandscapeForCullingInvisibleHLODVertices                ___ OFFSET(get<bool>, {0x606, 1, 0, 0})
-	DMember(bool)                                      bHasLayersContent                                           ___ OFFSET(get<bool>, {0x607, 1, 0, 0})
-	DMember(bool)                                      bUseCompressedHeightmapStorage                              ___ OFFSET(get<bool>, {0x608, 1, 0, 0})
+	CMember(ULandscapeSplinesComponent*)               SplineComponent                                             OFFSET(get<T>, {0x298, 8, 0, 0})
+	SMember(FGuid)                                     LandscapeGuid                                               OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	DMember(bool)                                      bEnableNanite                                               OFFSET(get<bool>, {0x2C0, 1, 0, 0})
+	CMember(TArray<FLandscapePerLODMaterialOverride>)  PerLODOverrideMaterials                                     OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	SMember(FIntPoint)                                 LandscapeSectionOffset                                      OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	DMember(int32_t)                                   MaxLODLevel                                                 OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
+	DMember(float)                                     ComponentScreenSizeToUseSubSections                         OFFSET(get<float>, {0x2E4, 4, 0, 0})
+	DMember(float)                                     LOD0ScreenSize                                              OFFSET(get<float>, {0x2E8, 4, 0, 0})
+	DMember(uint32_t)                                  LODGroupKey                                                 OFFSET(get<uint32_t>, {0x2EC, 4, 0, 0})
+	DMember(float)                                     LOD0DistributionSetting                                     OFFSET(get<float>, {0x2F0, 4, 0, 0})
+	DMember(float)                                     LODDistributionSetting                                      OFFSET(get<float>, {0x2F4, 4, 0, 0})
+	DMember(int32_t)                                   StaticLightingLOD                                           OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
+	CMember(UPhysicalMaterial*)                        DefaultPhysMaterial                                         OFFSET(get<T>, {0x300, 8, 0, 0})
+	DMember(float)                                     StreamingDistanceMultiplier                                 OFFSET(get<float>, {0x308, 4, 0, 0})
+	CMember(UMaterialInterface*)                       LandscapeMaterial                                           OFFSET(get<T>, {0x310, 8, 0, 0})
+	CMember(UMaterialInterface*)                       LandscapeHoleMaterial                                       OFFSET(get<T>, {0x338, 8, 0, 0})
+	CMember(TArray<URuntimeVirtualTexture*>)           RuntimeVirtualTextures                                      OFFSET(get<T>, {0x340, 16, 0, 0})
+	DMember(bool)                                      bSetCreateRuntimeVirtualTextureVolumes                      OFFSET(get<bool>, {0x350, 1, 0, 0})
+	DMember(bool)                                      bVirtualTextureRenderWithQuad                               OFFSET(get<bool>, {0x351, 1, 0, 0})
+	DMember(bool)                                      bVirtualTextureRenderWithQuadHQ                             OFFSET(get<bool>, {0x352, 1, 0, 0})
+	DMember(int32_t)                                   VirtualTextureNumLods                                       OFFSET(get<int32_t>, {0x354, 4, 0, 0})
+	DMember(int32_t)                                   VirtualTextureLodBias                                       OFFSET(get<int32_t>, {0x358, 4, 0, 0})
+	CMember(ERuntimeVirtualTextureMainPassType)        VirtualTextureRenderPassType                                OFFSET(get<T>, {0x35C, 1, 0, 0})
+	DMember(float)                                     NegativeZBoundsExtension                                    OFFSET(get<float>, {0x360, 4, 0, 0})
+	DMember(float)                                     PositiveZBoundsExtension                                    OFFSET(get<float>, {0x364, 4, 0, 0})
+	CMember(TArray<ULandscapeComponent*>)              LandscapeComponents                                         OFFSET(get<T>, {0x368, 16, 0, 0})
+	CMember(TArray<ULandscapeHeightfieldCollisionComponent*>) CollisionComponents                                  OFFSET(get<T>, {0x378, 16, 0, 0})
+	CMember(TArray<UHierarchicalInstancedStaticMeshComponent*>) FoliageComponents                                  OFFSET(get<T>, {0x388, 16, 0, 0})
+	CMember(ULandscapeNaniteComponent*)                NaniteComponent                                             OFFSET(get<T>, {0x398, 8, 0, 0})
+	CMember(TArray<ULandscapeNaniteComponent*>)        NaniteComponents                                            OFFSET(get<T>, {0x3A0, 16, 0, 0})
+	DMember(bool)                                      bHasLandscapeGrass                                          OFFSET(get<bool>, {0x414, 1, 0, 0})
+	DMember(float)                                     StaticLightingResolution                                    OFFSET(get<float>, {0x418, 4, 0, 0})
+	DMember(bool)                                      CastShadow                                                  OFFSET(get<bool>, {0x41C, 1, 1, 0})
+	DMember(bool)                                      bCastDynamicShadow                                          OFFSET(get<bool>, {0x41C, 1, 1, 1})
+	DMember(bool)                                      bCastStaticShadow                                           OFFSET(get<bool>, {0x41C, 1, 1, 2})
+	CMember(EShadowCacheInvalidationBehavior)          ShadowCacheInvalidationBehavior                             OFFSET(get<T>, {0x41D, 1, 0, 0})
+	DMember(bool)                                      bCastContactShadow                                          OFFSET(get<bool>, {0x41E, 1, 1, 0})
+	DMember(bool)                                      bCastFarShadow                                              OFFSET(get<bool>, {0x420, 1, 1, 0})
+	DMember(bool)                                      bCastHiddenShadow                                           OFFSET(get<bool>, {0x424, 1, 1, 0})
+	DMember(bool)                                      bCastShadowAsTwoSided                                       OFFSET(get<bool>, {0x428, 1, 1, 0})
+	DMember(bool)                                      bAffectDistanceFieldLighting                                OFFSET(get<bool>, {0x42C, 1, 1, 0})
+	SMember(FLightingChannels)                         LightingChannels                                            OFFSET(get<T>, {0x42D, 1, 0, 0})
+	DMember(bool)                                      bUseMaterialPositionOffsetInStaticLighting                  OFFSET(get<bool>, {0x430, 1, 1, 0})
+	DMember(bool)                                      bRenderCustomDepth                                          OFFSET(get<bool>, {0x430, 1, 1, 1})
+	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 OFFSET(get<T>, {0x434, 1, 0, 0})
+	DMember(int32_t)                                   CustomDepthStencilValue                                     OFFSET(get<int32_t>, {0x438, 4, 0, 0})
+	DMember(float)                                     LDMaxDrawDistance                                           OFFSET(get<float>, {0x43C, 4, 0, 0})
+	SMember(FLightmassPrimitiveSettings)               LightmassSettings                                           OFFSET(get<T>, {0x440, 24, 0, 0})
+	DMember(int32_t)                                   CollisionMipLevel                                           OFFSET(get<int32_t>, {0x458, 4, 0, 0})
+	DMember(int32_t)                                   SimpleCollisionMipLevel                                     OFFSET(get<int32_t>, {0x45C, 4, 0, 0})
+	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(get<T>, {0x468, 392, 0, 0})
+	DMember(bool)                                      bGenerateOverlapEvents                                      OFFSET(get<bool>, {0x5F0, 1, 1, 0})
+	DMember(bool)                                      bBakeMaterialPositionOffsetIntoCollision                    OFFSET(get<bool>, {0x5F0, 1, 1, 1})
+	DMember(int32_t)                                   ComponentSizeQuads                                          OFFSET(get<int32_t>, {0x5F4, 4, 0, 0})
+	DMember(int32_t)                                   SubsectionSizeQuads                                         OFFSET(get<int32_t>, {0x5F8, 4, 0, 0})
+	DMember(int32_t)                                   NumSubsections                                              OFFSET(get<int32_t>, {0x5FC, 4, 0, 0})
+	DMember(bool)                                      bUsedForNavigation                                          OFFSET(get<bool>, {0x600, 1, 1, 0})
+	DMember(bool)                                      bFillCollisionUnderLandscapeForNavmesh                      OFFSET(get<bool>, {0x600, 1, 1, 1})
+	CMember(ENavDataGatheringMode)                     NavigationGeometryGatheringMode                             OFFSET(get<T>, {0x604, 1, 0, 0})
+	DMember(bool)                                      bUseDynamicMaterialInstance                                 OFFSET(get<bool>, {0x605, 1, 0, 0})
+	DMember(bool)                                      bUseLandscapeForCullingInvisibleHLODVertices                OFFSET(get<bool>, {0x606, 1, 0, 0})
+	DMember(bool)                                      bHasLayersContent                                           OFFSET(get<bool>, {0x607, 1, 0, 0})
+	DMember(bool)                                      bUseCompressedHeightmapStorage                              OFFSET(get<bool>, {0x608, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Landscape.LandscapeProxy.SetVirtualTextureRenderPassType
+	// void SetVirtualTextureRenderPassType(ERuntimeVirtualTextureMainPassType InType);                                         // [0x56ba63c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue
+	// void SetLandscapeMaterialVectorParameterValue(FName ParameterName, FLinearColor Value);                                  // [0x56ba49c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue
+	// void SetLandscapeMaterialTextureParameterValue(FName ParameterName, UTexture* Value);                                    // [0x56ba3d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue
+	// void SetLandscapeMaterialScalarParameterValue(FName ParameterName, float Value);                                         // [0x56ba314] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.LandscapeExportHeightmapToRenderTarget
+	// bool LandscapeExportHeightmapToRenderTarget(UTextureRenderTarget2D* InRenderTarget, bool InExportHeightIntoRGChannel, bool InExportLandscapeProxies); // [0x56ba230] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.GetLandscapeActor
+	// ALandscape* GetLandscapeActor();                                                                                         // [0x56ba208] Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.EditorSetLandscapeMaterial
+	// void EditorSetLandscapeMaterial(UMaterialInterface* NewLandscapeMaterial);                                               // [0x56ba1a4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.EditorApplySpline
+	// void EditorApplySpline(USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32_t NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, ULandscapeLayerInfoObject* PaintLayer, FName EditLayerName); // [0x56b9ea8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.ChangeLODDistanceFactor
+	// void ChangeLODDistanceFactor(float InLODDistanceFactor);                                                                 // [0x56b9e24] Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
+	// void ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections);                             // [0x56b9da0] Native|Public|BlueprintCallable 
 /// Class /Script/Landscape.Landscape
 /// Size: 0x0000 (0x000610 - 0x000610)
 class ALandscape : public ALandscapeProxy
@@ -131,43 +154,56 @@ class ULandscapeComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1888;
 
 public:
-	DMember(int32_t)                                   SectionBaseX                                                ___ OFFSET(get<int32_t>, {0x568, 4, 0, 0})
-	DMember(int32_t)                                   SectionBaseY                                                ___ OFFSET(get<int32_t>, {0x56C, 4, 0, 0})
-	DMember(int32_t)                                   ComponentSizeQuads                                          ___ OFFSET(get<int32_t>, {0x570, 4, 0, 0})
-	DMember(int32_t)                                   SubsectionSizeQuads                                         ___ OFFSET(get<int32_t>, {0x574, 4, 0, 0})
-	DMember(int32_t)                                   NumSubsections                                              ___ OFFSET(get<int32_t>, {0x578, 4, 0, 0})
-	CMember(UMaterialInterface*)                       OverrideMaterial                                            ___ OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(UMaterialInterface*)                       OverrideHoleMaterial                                        ___ OFFSET(get<T>, {0x588, 8, 0, 0})
-	CMember(TArray<UMaterialInstanceConstant*>)        MaterialInstances                                           ___ OFFSET(get<T>, {0x590, 16, 0, 0})
-	CMember(TArray<UMaterialInstanceDynamic*>)         MaterialInstancesDynamic                                    ___ OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	CMember(TArray<int8_t>)                            LODIndexToMaterialIndex                                     ___ OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	CMember(UTexture2D*)                               XYOffsetmapTexture                                          ___ OFFSET(get<T>, {0x5C0, 8, 0, 0})
-	SMember(FVector4)                                  WeightmapScaleBias                                          ___ OFFSET(get<T>, {0x5D0, 32, 0, 0})
-	DMember(float)                                     WeightmapSubsectionOffset                                   ___ OFFSET(get<float>, {0x5F0, 4, 0, 0})
-	SMember(FVector4)                                  HeightmapScaleBias                                          ___ OFFSET(get<T>, {0x600, 32, 0, 0})
-	SMember(FBox)                                      CachedLocalBox                                              ___ OFFSET(get<T>, {0x620, 56, 0, 0})
-	CMember(ULandscapeHeightfieldCollisionComponent*)  CollisionComponentRef                                       ___ OFFSET(get<T>, {0x658, 8, 0, 0})
-	DMember(bool)                                      bUserTriggeredChangeRequested                               ___ OFFSET(get<bool>, {0x660, 1, 0, 0})
-	DMember(bool)                                      bNaniteActive                                               ___ OFFSET(get<bool>, {0x661, 1, 0, 0})
-	CMember(UTexture2D*)                               HeightmapTexture                                            ___ OFFSET(get<T>, {0x668, 8, 0, 0})
-	CMember(TArray<FWeightmapLayerAllocationInfo>)     WeightmapLayerAllocations                                   ___ OFFSET(get<T>, {0x670, 16, 0, 0})
-	CMember(TArray<UTexture2D*>)                       WeightmapTextures                                           ___ OFFSET(get<T>, {0x680, 16, 0, 0})
-	CMember(TArray<FLandscapePerLODMaterialOverride>)  PerLODOverrideMaterials                                     ___ OFFSET(get<T>, {0x690, 16, 0, 0})
-	SMember(FGuid)                                     MapBuildDataId                                              ___ OFFSET(get<T>, {0x6A0, 16, 0, 0})
-	DMember(int32_t)                                   CollisionMipLevel                                           ___ OFFSET(get<int32_t>, {0x6B0, 4, 0, 0})
-	DMember(int32_t)                                   SimpleCollisionMipLevel                                     ___ OFFSET(get<int32_t>, {0x6B4, 4, 0, 0})
-	DMember(float)                                     NegativeZBoundsExtension                                    ___ OFFSET(get<float>, {0x6B8, 4, 0, 0})
-	DMember(float)                                     PositiveZBoundsExtension                                    ___ OFFSET(get<float>, {0x6BC, 4, 0, 0})
-	DMember(float)                                     StaticLightingResolution                                    ___ OFFSET(get<float>, {0x6C0, 4, 0, 0})
-	DMember(int32_t)                                   ForcedLOD                                                   ___ OFFSET(get<int32_t>, {0x6C4, 4, 0, 0})
-	DMember(int32_t)                                   LODBias                                                     ___ OFFSET(get<int32_t>, {0x6C8, 4, 0, 0})
-	SMember(FGuid)                                     StateId                                                     ___ OFFSET(get<T>, {0x6CC, 16, 0, 0})
-	CMember(UMaterialInterface*)                       MobileMaterialInterface                                     ___ OFFSET(get<T>, {0x700, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               MobileMaterialInterfaces                                    ___ OFFSET(get<T>, {0x708, 16, 0, 0})
-	CMember(TArray<UTexture2D*>)                       MobileWeightmapTextures                                     ___ OFFSET(get<T>, {0x718, 16, 0, 0})
-	CMember(TArray<FWeightmapLayerAllocationInfo>)     MobileWeightmapLayerAllocations                             ___ OFFSET(get<T>, {0x728, 16, 0, 0})
+	DMember(int32_t)                                   SectionBaseX                                                OFFSET(get<int32_t>, {0x568, 4, 0, 0})
+	DMember(int32_t)                                   SectionBaseY                                                OFFSET(get<int32_t>, {0x56C, 4, 0, 0})
+	DMember(int32_t)                                   ComponentSizeQuads                                          OFFSET(get<int32_t>, {0x570, 4, 0, 0})
+	DMember(int32_t)                                   SubsectionSizeQuads                                         OFFSET(get<int32_t>, {0x574, 4, 0, 0})
+	DMember(int32_t)                                   NumSubsections                                              OFFSET(get<int32_t>, {0x578, 4, 0, 0})
+	CMember(UMaterialInterface*)                       OverrideMaterial                                            OFFSET(get<T>, {0x580, 8, 0, 0})
+	CMember(UMaterialInterface*)                       OverrideHoleMaterial                                        OFFSET(get<T>, {0x588, 8, 0, 0})
+	CMember(TArray<UMaterialInstanceConstant*>)        MaterialInstances                                           OFFSET(get<T>, {0x590, 16, 0, 0})
+	CMember(TArray<UMaterialInstanceDynamic*>)         MaterialInstancesDynamic                                    OFFSET(get<T>, {0x5A0, 16, 0, 0})
+	CMember(TArray<int8_t>)                            LODIndexToMaterialIndex                                     OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	CMember(UTexture2D*)                               XYOffsetmapTexture                                          OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	SMember(FVector4)                                  WeightmapScaleBias                                          OFFSET(get<T>, {0x5D0, 32, 0, 0})
+	DMember(float)                                     WeightmapSubsectionOffset                                   OFFSET(get<float>, {0x5F0, 4, 0, 0})
+	SMember(FVector4)                                  HeightmapScaleBias                                          OFFSET(get<T>, {0x600, 32, 0, 0})
+	SMember(FBox)                                      CachedLocalBox                                              OFFSET(get<T>, {0x620, 56, 0, 0})
+	CMember(ULandscapeHeightfieldCollisionComponent*)  CollisionComponentRef                                       OFFSET(get<T>, {0x658, 8, 0, 0})
+	DMember(bool)                                      bUserTriggeredChangeRequested                               OFFSET(get<bool>, {0x660, 1, 0, 0})
+	DMember(bool)                                      bNaniteActive                                               OFFSET(get<bool>, {0x661, 1, 0, 0})
+	CMember(UTexture2D*)                               HeightmapTexture                                            OFFSET(get<T>, {0x668, 8, 0, 0})
+	CMember(TArray<FWeightmapLayerAllocationInfo>)     WeightmapLayerAllocations                                   OFFSET(get<T>, {0x670, 16, 0, 0})
+	CMember(TArray<UTexture2D*>)                       WeightmapTextures                                           OFFSET(get<T>, {0x680, 16, 0, 0})
+	CMember(TArray<FLandscapePerLODMaterialOverride>)  PerLODOverrideMaterials                                     OFFSET(get<T>, {0x690, 16, 0, 0})
+	SMember(FGuid)                                     MapBuildDataId                                              OFFSET(get<T>, {0x6A0, 16, 0, 0})
+	DMember(int32_t)                                   CollisionMipLevel                                           OFFSET(get<int32_t>, {0x6B0, 4, 0, 0})
+	DMember(int32_t)                                   SimpleCollisionMipLevel                                     OFFSET(get<int32_t>, {0x6B4, 4, 0, 0})
+	DMember(float)                                     NegativeZBoundsExtension                                    OFFSET(get<float>, {0x6B8, 4, 0, 0})
+	DMember(float)                                     PositiveZBoundsExtension                                    OFFSET(get<float>, {0x6BC, 4, 0, 0})
+	DMember(float)                                     StaticLightingResolution                                    OFFSET(get<float>, {0x6C0, 4, 0, 0})
+	DMember(int32_t)                                   ForcedLOD                                                   OFFSET(get<int32_t>, {0x6C4, 4, 0, 0})
+	DMember(int32_t)                                   LODBias                                                     OFFSET(get<int32_t>, {0x6C8, 4, 0, 0})
+	SMember(FGuid)                                     StateId                                                     OFFSET(get<T>, {0x6CC, 16, 0, 0})
+	CMember(UMaterialInterface*)                       MobileMaterialInterface                                     OFFSET(get<T>, {0x700, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               MobileMaterialInterfaces                                    OFFSET(get<T>, {0x708, 16, 0, 0})
+	CMember(TArray<UTexture2D*>)                       MobileWeightmapTextures                                     OFFSET(get<T>, {0x718, 16, 0, 0})
+	CMember(TArray<FWeightmapLayerAllocationInfo>)     MobileWeightmapLayerAllocations                             OFFSET(get<T>, {0x728, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Landscape.LandscapeComponent.SetLODBias
+	// void SetLODBias(int32_t InLODBias);                                                                                      // [0x56a4a5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeComponent.SetForcedLOD
+	// void SetForcedLOD(int32_t InForcedLOD);                                                                                  // [0x56a49dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeComponent.GetMaterialInstanceDynamic
+	// UMaterialInstanceDynamic* GetMaterialInstanceDynamic(int32_t InIndex);                                                   // [0x56a46c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/Landscape.LandscapeComponent.EditorGetPaintLayerWeightByNameAtLocation
+	// float EditorGetPaintLayerWeightByNameAtLocation(FVector& InLocation, FName InPaintLayerName);                            // [0x56a453c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation
+	// float EditorGetPaintLayerWeightAtLocation(FVector& InLocation, ULandscapeLayerInfoObject* PaintLayer);                   // [0x56a43b8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 /// Class /Script/Landscape.LandscapeGizmoActor
 /// Size: 0x0000 (0x000290 - 0x000290)
 class ALandscapeGizmoActor : public AActor
@@ -206,15 +242,15 @@ class ULandscapeGrassType : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<FGrassVariety>)                     GrassVarieties                                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(bool)                                      bEnableDensityScaling                                       ___ OFFSET(get<bool>, {0x38, 1, 1, 0})
-	CMember(UStaticMesh*)                              GrassMesh                                                   ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(float)                                     GrassDensity                                                ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     PlacementJitter                                             ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(int32_t)                                   StartCullDistance                                           ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-	DMember(int32_t)                                   EndCullDistance                                             ___ OFFSET(get<int32_t>, {0x54, 4, 0, 0})
-	DMember(bool)                                      RandomRotation                                              ___ OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(bool)                                      AlignToSurface                                              ___ OFFSET(get<bool>, {0x59, 1, 0, 0})
+	CMember(TArray<FGrassVariety>)                     GrassVarieties                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bEnableDensityScaling                                       OFFSET(get<bool>, {0x38, 1, 1, 0})
+	CMember(UStaticMesh*)                              GrassMesh                                                   OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(float)                                     GrassDensity                                                OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     PlacementJitter                                             OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(int32_t)                                   StartCullDistance                                           OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	DMember(int32_t)                                   EndCullDistance                                             OFFSET(get<int32_t>, {0x54, 4, 0, 0})
+	DMember(bool)                                      RandomRotation                                              OFFSET(get<bool>, {0x58, 1, 0, 0})
+	DMember(bool)                                      AlignToSurface                                              OFFSET(get<bool>, {0x59, 1, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeHeightfieldCollisionComponent
@@ -225,19 +261,24 @@ class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	CMember(TArray<ULandscapeLayerInfoObject*>)        ComponentLayerInfos                                         ___ OFFSET(get<T>, {0x568, 16, 0, 0})
-	DMember(int32_t)                                   SectionBaseX                                                ___ OFFSET(get<int32_t>, {0x578, 4, 0, 0})
-	DMember(int32_t)                                   SectionBaseY                                                ___ OFFSET(get<int32_t>, {0x57C, 4, 0, 0})
-	DMember(int32_t)                                   CollisionSizeQuads                                          ___ OFFSET(get<int32_t>, {0x580, 4, 0, 0})
-	DMember(float)                                     CollisionScale                                              ___ OFFSET(get<float>, {0x584, 4, 0, 0})
-	DMember(int32_t)                                   SimpleCollisionSizeQuads                                    ___ OFFSET(get<int32_t>, {0x588, 4, 0, 0})
-	CMember(TArray<char>)                              CollisionQuadFlags                                          ___ OFFSET(get<T>, {0x590, 16, 0, 0})
-	SMember(FGuid)                                     HeightfieldGuid                                             ___ OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(FBox)                                      CachedLocalBox                                              ___ OFFSET(get<T>, {0x5B0, 56, 0, 0})
-	CMember(ULandscapeComponent*)                      RenderComponentRef                                          ___ OFFSET(get<T>, {0x5E8, 8, 0, 0})
-	CMember(TArray<UPhysicalMaterial*>)                CookedPhysicalMaterials                                     ___ OFFSET(get<T>, {0x600, 16, 0, 0})
+	CMember(TArray<ULandscapeLayerInfoObject*>)        ComponentLayerInfos                                         OFFSET(get<T>, {0x568, 16, 0, 0})
+	DMember(int32_t)                                   SectionBaseX                                                OFFSET(get<int32_t>, {0x578, 4, 0, 0})
+	DMember(int32_t)                                   SectionBaseY                                                OFFSET(get<int32_t>, {0x57C, 4, 0, 0})
+	DMember(int32_t)                                   CollisionSizeQuads                                          OFFSET(get<int32_t>, {0x580, 4, 0, 0})
+	DMember(float)                                     CollisionScale                                              OFFSET(get<float>, {0x584, 4, 0, 0})
+	DMember(int32_t)                                   SimpleCollisionSizeQuads                                    OFFSET(get<int32_t>, {0x588, 4, 0, 0})
+	CMember(TArray<char>)                              CollisionQuadFlags                                          OFFSET(get<T>, {0x590, 16, 0, 0})
+	SMember(FGuid)                                     HeightfieldGuid                                             OFFSET(get<T>, {0x5A0, 16, 0, 0})
+	SMember(FBox)                                      CachedLocalBox                                              OFFSET(get<T>, {0x5B0, 56, 0, 0})
+	CMember(ULandscapeComponent*)                      RenderComponentRef                                          OFFSET(get<T>, {0x5E8, 8, 0, 0})
+	CMember(TArray<UPhysicalMaterial*>)                CookedPhysicalMaterials                                     OFFSET(get<T>, {0x600, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
+	// ULandscapeComponent* GetRenderComponent();                                                                               // [0x56a4774] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/Landscape.LandscapeLayerInfoObject
 /// Size: 0x0028 (0x000028 - 0x000050)
 class ULandscapeLayerInfoObject : public UObject
@@ -246,10 +287,10 @@ class ULandscapeLayerInfoObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     LayerName                                                   ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	CMember(UPhysicalMaterial*)                        PhysMaterial                                                ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	DMember(float)                                     Hardness                                                    ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FLinearColor)                              LayerUsageDebugColor                                        ___ OFFSET(get<T>, {0x3C, 16, 0, 0})
+	SMember(FName)                                     LayerName                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
+	CMember(UPhysicalMaterial*)                        PhysMaterial                                                OFFSET(get<T>, {0x30, 8, 0, 0})
+	DMember(float)                                     Hardness                                                    OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FLinearColor)                              LayerUsageDebugColor                                        OFFSET(get<T>, {0x3C, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeMaterialInstanceConstant
@@ -260,11 +301,11 @@ class ULandscapeMaterialInstanceConstant : public UMaterialInstanceConstant
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	CMember(TArray<FLandscapeMaterialTextureStreamingInfo>) TextureStreamingInfo                                   ___ OFFSET(get<T>, {0x248, 16, 0, 0})
-	DMember(bool)                                      bIsLayerThumbnail                                           ___ OFFSET(get<bool>, {0x258, 1, 1, 0})
-	DMember(bool)                                      bDisableTessellation                                        ___ OFFSET(get<bool>, {0x258, 1, 1, 1})
-	DMember(bool)                                      bMobile                                                     ___ OFFSET(get<bool>, {0x258, 1, 1, 2})
-	DMember(bool)                                      bEditorToolUsage                                            ___ OFFSET(get<bool>, {0x258, 1, 1, 3})
+	CMember(TArray<FLandscapeMaterialTextureStreamingInfo>) TextureStreamingInfo                                   OFFSET(get<T>, {0x248, 16, 0, 0})
+	DMember(bool)                                      bIsLayerThumbnail                                           OFFSET(get<bool>, {0x258, 1, 1, 0})
+	DMember(bool)                                      bDisableTessellation                                        OFFSET(get<bool>, {0x258, 1, 1, 1})
+	DMember(bool)                                      bMobile                                                     OFFSET(get<bool>, {0x258, 1, 1, 2})
+	DMember(bool)                                      bEditorToolUsage                                            OFFSET(get<bool>, {0x258, 1, 1, 3})
 };
 
 /// Class /Script/Landscape.LandscapeMeshCollisionComponent
@@ -275,7 +316,7 @@ class ULandscapeMeshCollisionComponent : public ULandscapeHeightfieldCollisionCo
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FGuid)                                     MeshGuid                                                    ___ OFFSET(get<T>, {0x650, 16, 0, 0})
+	SMember(FGuid)                                     MeshGuid                                                    OFFSET(get<T>, {0x650, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeMeshProxyActor
@@ -286,7 +327,7 @@ class ALandscapeMeshProxyActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(ULandscapeMeshProxyComponent*)             LandscapeMeshProxyComponent                                 ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(ULandscapeMeshProxyComponent*)             LandscapeMeshProxyComponent                                 OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeMeshProxyComponent
@@ -297,10 +338,10 @@ class ULandscapeMeshProxyComponent : public UStaticMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	SMember(FGuid)                                     LandscapeGuid                                               ___ OFFSET(get<T>, {0x620, 16, 0, 0})
-	CMember(TArray<FIntPoint>)                         ProxyComponentBases                                         ___ OFFSET(get<T>, {0x630, 16, 0, 0})
-	DMember(int8_t)                                    ProxyLOD                                                    ___ OFFSET(get<int8_t>, {0x640, 1, 0, 0})
-	DMember(uint32_t)                                  LODGroupKey                                                 ___ OFFSET(get<uint32_t>, {0x644, 4, 0, 0})
+	SMember(FGuid)                                     LandscapeGuid                                               OFFSET(get<T>, {0x620, 16, 0, 0})
+	CMember(TArray<FIntPoint>)                         ProxyComponentBases                                         OFFSET(get<T>, {0x630, 16, 0, 0})
+	DMember(int8_t)                                    ProxyLOD                                                    OFFSET(get<int8_t>, {0x640, 1, 0, 0})
+	DMember(uint32_t)                                  LODGroupKey                                                 OFFSET(get<uint32_t>, {0x644, 4, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSettings
@@ -311,16 +352,16 @@ class ULandscapeSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	DMember(int32_t)                                   MaxNumberOfLayers                                           ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(int32_t)                                   MaxComponents                                               ___ OFFSET(get<int32_t>, {0x34, 4, 0, 0})
-	DMember(uint32_t)                                  MaxImageImportCacheSizeMegaBytes                            ___ OFFSET(get<uint32_t>, {0x38, 4, 0, 0})
-	DMember(float)                                     PaintStrengthGamma                                          ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(bool)                                      bDisablePaintingStartupSlowdown                             ___ OFFSET(get<bool>, {0x40, 1, 0, 0})
-	CMember(ELandscapeDirtyingMode)                    LandscapeDirtyingMode                                       ___ OFFSET(get<T>, {0x41, 1, 0, 0})
-	DMember(int32_t)                                   SideResolutionLimit                                         ___ OFFSET(get<int32_t>, {0x44, 4, 0, 0})
-	CMember(TWeakObjectPtr<UMaterialInterface*>)       DefaultLandscapeMaterial                                    ___ OFFSET(get<T>, {0x48, 32, 0, 0})
-	CMember(TWeakObjectPtr<ULandscapeLayerInfoObject*>) DefaultLayerInfoObject                                     ___ OFFSET(get<T>, {0x68, 32, 0, 0})
-	DMember(bool)                                      bRestrictiveMode                                            ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(int32_t)                                   MaxNumberOfLayers                                           OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(int32_t)                                   MaxComponents                                               OFFSET(get<int32_t>, {0x34, 4, 0, 0})
+	DMember(uint32_t)                                  MaxImageImportCacheSizeMegaBytes                            OFFSET(get<uint32_t>, {0x38, 4, 0, 0})
+	DMember(float)                                     PaintStrengthGamma                                          OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(bool)                                      bDisablePaintingStartupSlowdown                             OFFSET(get<bool>, {0x40, 1, 0, 0})
+	CMember(ELandscapeDirtyingMode)                    LandscapeDirtyingMode                                       OFFSET(get<T>, {0x41, 1, 0, 0})
+	DMember(int32_t)                                   SideResolutionLimit                                         OFFSET(get<int32_t>, {0x44, 4, 0, 0})
+	CMember(TWeakObjectPtr<UMaterialInterface*>)       DefaultLandscapeMaterial                                    OFFSET(get<T>, {0x48, 32, 0, 0})
+	CMember(TWeakObjectPtr<ULandscapeLayerInfoObject*>) DefaultLayerInfoObject                                     OFFSET(get<T>, {0x68, 32, 0, 0})
+	DMember(bool)                                      bRestrictiveMode                                            OFFSET(get<bool>, {0x88, 1, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSplinesComponent
@@ -331,11 +372,16 @@ class ULandscapeSplinesComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	CMember(TArray<ULandscapeSplineControlPoint*>)     ControlPoints                                               ___ OFFSET(get<T>, {0x568, 16, 0, 0})
-	CMember(TArray<ULandscapeSplineSegment*>)          Segments                                                    ___ OFFSET(get<T>, {0x578, 16, 0, 0})
-	CMember(TArray<UMeshComponent*>)                   CookedForeignMeshComponents                                 ___ OFFSET(get<T>, {0x588, 16, 0, 0})
+	CMember(TArray<ULandscapeSplineControlPoint*>)     ControlPoints                                               OFFSET(get<T>, {0x568, 16, 0, 0})
+	CMember(TArray<ULandscapeSplineSegment*>)          Segments                                                    OFFSET(get<T>, {0x578, 16, 0, 0})
+	CMember(TArray<UMeshComponent*>)                   CookedForeignMeshComponents                                 OFFSET(get<T>, {0x588, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
+	// TArray<USplineMeshComponent*> GetSplineMeshComponents();                                                                 // [0x56a5008] Final|Native|Public|BlueprintCallable 
 /// Class /Script/Landscape.LandscapeSplineControlPoint
 /// Size: 0x00B0 (0x000028 - 0x0000D8)
 class ULandscapeSplineControlPoint : public UObject
@@ -344,20 +390,20 @@ class ULandscapeSplineControlPoint : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FVector)                                   Location                                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	DMember(float)                                     Width                                                       ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     LayerWidthRatio                                             ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     SideFalloff                                                 ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(float)                                     LeftSideFalloffFactor                                       ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     RightSideFalloffFactor                                      ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     LeftSideLayerFalloffFactor                                  ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	DMember(float)                                     RightSideLayerFalloffFactor                                 ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     EndFalloff                                                  ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	CMember(TArray<FLandscapeSplineConnection>)        ConnectedSegments                                           ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	CMember(TArray<FLandscapeSplineInterpPoint>)       Points                                                      ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FBox)                                      Bounds                                                      ___ OFFSET(get<T>, {0x98, 56, 0, 0})
-	CMember(UControlPointMeshComponent*)               LocalMeshComponent                                          ___ OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     LayerWidthRatio                                             OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     SideFalloff                                                 OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(float)                                     LeftSideFalloffFactor                                       OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     RightSideFalloffFactor                                      OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     LeftSideLayerFalloffFactor                                  OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     RightSideLayerFalloffFactor                                 OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     EndFalloff                                                  OFFSET(get<float>, {0x74, 4, 0, 0})
+	CMember(TArray<FLandscapeSplineConnection>)        ConnectedSegments                                           OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(TArray<FLandscapeSplineInterpPoint>)       Points                                                      OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FBox)                                      Bounds                                                      OFFSET(get<T>, {0x98, 56, 0, 0})
+	CMember(UControlPointMeshComponent*)               LocalMeshComponent                                          OFFSET(get<T>, {0xD0, 8, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSplineSegment
@@ -368,11 +414,11 @@ class ULandscapeSplineSegment : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FLandscapeSplineSegmentConnection)         Connections                                                 ___ OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FInterpCurveVector)                        SplineInfo                                                  ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	CMember(TArray<FLandscapeSplineInterpPoint>)       Points                                                      ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FBox)                                      Bounds                                                      ___ OFFSET(get<T>, {0x70, 56, 0, 0})
-	CMember(TArray<USplineMeshComponent*>)             LocalMeshComponents                                         ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FLandscapeSplineSegmentConnection)         Connections                                                 OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FInterpCurveVector)                        SplineInfo                                                  OFFSET(get<T>, {0x48, 24, 0, 0})
+	CMember(TArray<FLandscapeSplineInterpPoint>)       Points                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FBox)                                      Bounds                                                      OFFSET(get<T>, {0x70, 56, 0, 0})
+	CMember(TArray<USplineMeshComponent*>)             LocalMeshComponents                                         OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeStreamingProxy
@@ -383,8 +429,8 @@ class ALandscapeStreamingProxy : public ALandscapeProxy
 	static inline constexpr uint64_t __MDKClassSize = 1664;
 
 public:
-	CMember(TWeakObjectPtr<ALandscape*>)               LandscapeActorRef                                           ___ OFFSET(get<T>, {0x610, 32, 0, 0})
-	CMember(TSet<FString>)                             OverriddenSharedProperties                                  ___ OFFSET(get<T>, {0x630, 80, 0, 0})
+	CMember(TWeakObjectPtr<ALandscape*>)               LandscapeActorRef                                           OFFSET(get<T>, {0x610, 32, 0, 0})
+	CMember(TSet<FString>)                             OverriddenSharedProperties                                  OFFSET(get<T>, {0x630, 80, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeWeightmapUsage
@@ -395,8 +441,8 @@ class ULandscapeWeightmapUsage : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(ULandscapeComponent*)                      ChannelUsage                                                ___ OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FGuid)                                     LayerGuid                                                   ___ OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(ULandscapeComponent*)                      ChannelUsage                                                OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGuid)                                     LayerGuid                                                   OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeGrassOutput
@@ -407,7 +453,7 @@ class UMaterialExpressionLandscapeGrassOutput : public UMaterialExpressionCustom
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FGrassInput>)                       GrassTypes                                                  ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FGrassInput>)                       GrassTypes                                                  OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerBlend
@@ -418,7 +464,7 @@ class UMaterialExpressionLandscapeLayerBlend : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FLayerBlendInput>)                  Layers                                                      ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FLayerBlendInput>)                  Layers                                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerCoords
@@ -429,12 +475,12 @@ class UMaterialExpressionLandscapeLayerCoords : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	CMember(TEnumAsByte<ETerrainCoordMappingType>)     MappingType                                                 ___ OFFSET(get<T>, {0xB0, 1, 0, 0})
-	CMember(TEnumAsByte<ELandscapeCustomizedCoordType>) CustomUVType                                               ___ OFFSET(get<T>, {0xB1, 1, 0, 0})
-	DMember(float)                                     MappingScale                                                ___ OFFSET(get<float>, {0xB4, 4, 0, 0})
-	DMember(float)                                     MappingRotation                                             ___ OFFSET(get<float>, {0xB8, 4, 0, 0})
-	DMember(float)                                     MappingPanU                                                 ___ OFFSET(get<float>, {0xBC, 4, 0, 0})
-	DMember(float)                                     MappingPanV                                                 ___ OFFSET(get<float>, {0xC0, 4, 0, 0})
+	CMember(TEnumAsByte<ETerrainCoordMappingType>)     MappingType                                                 OFFSET(get<T>, {0xB0, 1, 0, 0})
+	CMember(TEnumAsByte<ELandscapeCustomizedCoordType>) CustomUVType                                               OFFSET(get<T>, {0xB1, 1, 0, 0})
+	DMember(float)                                     MappingScale                                                OFFSET(get<float>, {0xB4, 4, 0, 0})
+	DMember(float)                                     MappingRotation                                             OFFSET(get<float>, {0xB8, 4, 0, 0})
+	DMember(float)                                     MappingPanU                                                 OFFSET(get<float>, {0xBC, 4, 0, 0})
+	DMember(float)                                     MappingPanV                                                 OFFSET(get<float>, {0xC0, 4, 0, 0})
 };
 
 /// Class /Script/Landscape.ControlPointMeshActor
@@ -445,7 +491,7 @@ class AControlPointMeshActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UControlPointMeshComponent*)               ControlPointMeshComponent                                   ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UControlPointMeshComponent*)               ControlPointMeshComponent                                   OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeBlueprintBrushBase
@@ -476,13 +522,13 @@ class ULandscapeInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	CMember(TWeakObjectPtr<ALandscape*>)               LandscapeActor                                              ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FGuid)                                     LandscapeGuid                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(int32_t)                                   ComponentSizeQuads                                          ___ OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	DMember(int32_t)                                   SubsectionSizeQuads                                         ___ OFFSET(get<int32_t>, {0x44, 4, 0, 0})
-	DMember(int32_t)                                   ComponentNumSubsections                                     ___ OFFSET(get<int32_t>, {0x48, 4, 0, 0})
-	SMember(FVector)                                   DrawScale                                                   ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    StreamingProxies                                            ___ OFFSET(get<T>, {0x118, 16, 0, 0})
+	CMember(TWeakObjectPtr<ALandscape*>)               LandscapeActor                                              OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FGuid)                                     LandscapeGuid                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(int32_t)                                   ComponentSizeQuads                                          OFFSET(get<int32_t>, {0x40, 4, 0, 0})
+	DMember(int32_t)                                   SubsectionSizeQuads                                         OFFSET(get<int32_t>, {0x44, 4, 0, 0})
+	DMember(int32_t)                                   ComponentNumSubsections                                     OFFSET(get<int32_t>, {0x48, 4, 0, 0})
+	SMember(FVector)                                   DrawScale                                                   OFFSET(get<T>, {0x50, 24, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    StreamingProxies                                            OFFSET(get<T>, {0x118, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeInfoMap
@@ -503,8 +549,8 @@ class ULandscapeNaniteComponent : public UStaticMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1600;
 
 public:
-	SMember(FGuid)                                     ProxyContentId                                              ___ OFFSET(get<T>, {0x620, 16, 0, 0})
-	DMember(bool)                                      bEnabled                                                    ___ OFFSET(get<bool>, {0x630, 1, 0, 0})
+	SMember(FGuid)                                     ProxyContentId                                              OFFSET(get<T>, {0x620, 16, 0, 0})
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x630, 1, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSplineActor
@@ -515,7 +561,7 @@ class ALandscapeSplineActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 680;
 
 public:
-	SMember(FGuid)                                     LandscapeGuid                                               ___ OFFSET(get<T>, {0x298, 16, 0, 0})
+	SMember(FGuid)                                     LandscapeGuid                                               OFFSET(get<T>, {0x298, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSplineMeshesActor
@@ -526,7 +572,7 @@ class ALandscapeSplineMeshesActor : public APartitionActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	CMember(TArray<UStaticMeshComponent*>)             StaticMeshComponents                                        ___ OFFSET(get<T>, {0x290, 16, 0, 0})
+	CMember(TArray<UStaticMeshComponent*>)             StaticMeshComponents                                        OFFSET(get<T>, {0x290, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.LandscapeSubsystem
@@ -557,8 +603,8 @@ class UMaterialExpressionLandscapeLayerSample : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0xB0, 4, 0, 0})
-	DMember(float)                                     PreviewWeight                                               ___ OFFSET(get<float>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0xB0, 4, 0, 0})
+	DMember(float)                                     PreviewWeight                                               OFFSET(get<float>, {0xB4, 4, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerSwitch
@@ -569,10 +615,10 @@ class UMaterialExpressionLandscapeLayerSwitch : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FExpressionInput)                          LayerUsed                                                   ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          LayerNotUsed                                                ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x100, 4, 0, 0})
-	DMember(bool)                                      PreviewUsed                                                 ___ OFFSET(get<bool>, {0x104, 1, 1, 0})
+	SMember(FExpressionInput)                          LayerUsed                                                   OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          LayerNotUsed                                                OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x100, 4, 0, 0})
+	DMember(bool)                                      PreviewUsed                                                 OFFSET(get<bool>, {0x104, 1, 1, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeLayerWeight
@@ -583,11 +629,11 @@ class UMaterialExpressionLandscapeLayerWeight : public UMaterialExpression
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FExpressionInput)                          base                                                        ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FExpressionInput)                          Layer                                                       ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x100, 4, 0, 0})
-	DMember(float)                                     PreviewWeight                                               ___ OFFSET(get<float>, {0x104, 4, 0, 0})
-	SMember(FVector)                                   ConstBase                                                   ___ OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FExpressionInput)                          base                                                        OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FExpressionInput)                          Layer                                                       OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x100, 4, 0, 0})
+	DMember(float)                                     PreviewWeight                                               OFFSET(get<float>, {0x104, 4, 0, 0})
+	SMember(FVector)                                   ConstBase                                                   OFFSET(get<T>, {0x108, 24, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapePhysicalMaterialOutput
@@ -598,7 +644,7 @@ class UMaterialExpressionLandscapePhysicalMaterialOutput : public UMaterialExpre
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FPhysicalMaterialInput>)            Inputs                                                      ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FPhysicalMaterialInput>)            Inputs                                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Class /Script/Landscape.MaterialExpressionLandscapeVisibilityMask
@@ -629,15 +675,15 @@ class FLandscapeLayer : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGuid)                                     Guid                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bVisible                                                    ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(bool)                                      bLocked                                                     ___ OFFSET(get<bool>, {0x15, 1, 0, 0})
-	DMember(float)                                     HeightmapAlpha                                              ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     WeightmapAlpha                                              ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	CMember(TEnumAsByte<ELandscapeBlendMode>)          BlendMode                                                   ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(TArray<FLandscapeLayerBrush>)              Brushes                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TMap<ULandscapeLayerInfoObject*, bool>)    WeightmapLayerAllocationBlend                               ___ OFFSET(get<T>, {0x38, 80, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(bool)                                      bLocked                                                     OFFSET(get<bool>, {0x15, 1, 0, 0})
+	DMember(float)                                     HeightmapAlpha                                              OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     WeightmapAlpha                                              OFFSET(get<float>, {0x1C, 4, 0, 0})
+	CMember(TEnumAsByte<ELandscapeBlendMode>)          BlendMode                                                   OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(TArray<FLandscapeLayerBrush>)              Brushes                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TMap<ULandscapeLayerInfoObject*, bool>)    WeightmapLayerAllocationBlend                               OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeEditToolRenderData
@@ -648,15 +694,15 @@ class FLandscapeEditToolRenderData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UMaterialInterface*)                       ToolMaterial                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UMaterialInterface*)                       GizmoMaterial                                               ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(int32_t)                                   SelectedType                                                ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   DebugChannelR                                               ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	DMember(int32_t)                                   DebugChannelG                                               ___ OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	DMember(int32_t)                                   DebugChannelB                                               ___ OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	CMember(UTexture2D*)                               DataTexture                                                 ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(UTexture2D*)                               LayerContributionTexture                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UTexture2D*)                               DirtyTexture                                                ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMaterialInterface*)                       ToolMaterial                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UMaterialInterface*)                       GizmoMaterial                                               OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   SelectedType                                                OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   DebugChannelR                                               OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   DebugChannelG                                               OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(int32_t)                                   DebugChannelB                                               OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
+	CMember(UTexture2D*)                               DataTexture                                                 OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(UTexture2D*)                               LayerContributionTexture                                    OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UTexture2D*)                               DirtyTexture                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.WeightmapLayerAllocationInfo
@@ -667,9 +713,9 @@ class FWeightmapLayerAllocationInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ULandscapeLayerInfoObject*)                LayerInfo                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(char)                                      WeightmapTextureIndex                                       ___ OFFSET(get<char>, {0x8, 1, 0, 0})
-	DMember(char)                                      WeightmapTextureChannel                                     ___ OFFSET(get<char>, {0x9, 1, 0, 0})
+	CMember(ULandscapeLayerInfoObject*)                LayerInfo                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(char)                                      WeightmapTextureIndex                                       OFFSET(get<char>, {0x8, 1, 0, 0})
+	DMember(char)                                      WeightmapTextureChannel                                     OFFSET(get<char>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeComponentMaterialOverride
@@ -680,8 +726,8 @@ class FLandscapeComponentMaterialOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FPerPlatformInt)                           LODIndex                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UMaterialInterface*)                       Material                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FPerPlatformInt)                           LODIndex                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapePerLODMaterialOverride
@@ -692,8 +738,8 @@ class FLandscapePerLODMaterialOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   LODIndex                                                    ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	CMember(UMaterialInterface*)                       Material                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(int32_t)                                   LODIndex                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.WeightmapData
@@ -704,9 +750,9 @@ class FWeightmapData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(TArray<UTexture2D*>)                       Textures                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FWeightmapLayerAllocationInfo>)     LayerAllocations                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<ULandscapeWeightmapUsage*>)         TextureUsages                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<UTexture2D*>)                       Textures                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FWeightmapLayerAllocationInfo>)     LayerAllocations                                            OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<ULandscapeWeightmapUsage*>)         TextureUsages                                               OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/Landscape.HeightmapData
@@ -717,7 +763,7 @@ class FHeightmapData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(UTexture2D*)                               Texture                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UTexture2D*)                               Texture                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeLayerComponentData
@@ -728,8 +774,8 @@ class FLandscapeLayerComponentData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FHeightmapData)                            HeightmapData                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FWeightmapData)                            WeightmapData                                               ___ OFFSET(get<T>, {0x8, 48, 0, 0})
+	SMember(FHeightmapData)                            HeightmapData                                               OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FWeightmapData)                            WeightmapData                                               OFFSET(get<T>, {0x8, 48, 0, 0})
 };
 
 /// Struct /Script/Landscape.GizmoSelectData
@@ -750,32 +796,32 @@ class FGrassVariety : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	CMember(UStaticMesh*)                              GrassMesh                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FPerPlatformFloat)                         GrassDensity                                                ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FPerQualityLevelFloat)                     GrassDensityQuality                                         ___ OFFSET(get<T>, {0x20, 104, 0, 0})
-	DMember(bool)                                      bUseGrid                                                    ___ OFFSET(get<bool>, {0x88, 1, 0, 0})
-	DMember(float)                                     PlacementJitter                                             ___ OFFSET(get<float>, {0x8C, 4, 0, 0})
-	SMember(FPerPlatformInt)                           StartCullDistance                                           ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FPerQualityLevelInt)                       StartCullDistanceQuality                                    ___ OFFSET(get<T>, {0x98, 104, 0, 0})
-	SMember(FPerPlatformInt)                           EndCullDistance                                             ___ OFFSET(get<T>, {0x100, 4, 0, 0})
-	SMember(FPerQualityLevelInt)                       EndCullDistanceQuality                                      ___ OFFSET(get<T>, {0x108, 104, 0, 0})
-	DMember(int32_t)                                   MinLOD                                                      ___ OFFSET(get<int32_t>, {0x170, 4, 0, 0})
-	CMember(EGrassScaling)                             Scaling                                                     ___ OFFSET(get<T>, {0x174, 1, 0, 0})
-	SMember(FFloatInterval)                            ScaleX                                                      ___ OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(FFloatInterval)                            ScaleY                                                      ___ OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(FFloatInterval)                            ScaleZ                                                      ___ OFFSET(get<T>, {0x188, 8, 0, 0})
-	DMember(bool)                                      RandomRotation                                              ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	DMember(bool)                                      AlignToSurface                                              ___ OFFSET(get<bool>, {0x191, 1, 0, 0})
-	DMember(bool)                                      bUseLandscapeLightmap                                       ___ OFFSET(get<bool>, {0x192, 1, 0, 0})
-	SMember(FLightingChannels)                         LightingChannels                                            ___ OFFSET(get<T>, {0x193, 1, 0, 0})
-	DMember(bool)                                      bReceivesDecals                                             ___ OFFSET(get<bool>, {0x194, 1, 0, 0})
-	DMember(bool)                                      bAffectDistanceFieldLighting                                ___ OFFSET(get<bool>, {0x195, 1, 0, 0})
-	DMember(bool)                                      bCastDynamicShadow                                          ___ OFFSET(get<bool>, {0x196, 1, 0, 0})
-	DMember(bool)                                      bCastContactShadow                                          ___ OFFSET(get<bool>, {0x197, 1, 0, 0})
-	DMember(bool)                                      bKeepInstanceBufferCPUCopy                                  ___ OFFSET(get<bool>, {0x198, 1, 0, 0})
-	DMember(uint32_t)                                  InstanceWorldPositionOffsetDisableDistance                  ___ OFFSET(get<uint32_t>, {0x19C, 4, 0, 0})
-	CMember(EShadowCacheInvalidationBehavior)          ShadowCacheInvalidationBehavior                             ___ OFFSET(get<T>, {0x1A0, 1, 0, 0})
+	CMember(UStaticMesh*)                              GrassMesh                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FPerPlatformFloat)                         GrassDensity                                                OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FPerQualityLevelFloat)                     GrassDensityQuality                                         OFFSET(get<T>, {0x20, 104, 0, 0})
+	DMember(bool)                                      bUseGrid                                                    OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(float)                                     PlacementJitter                                             OFFSET(get<float>, {0x8C, 4, 0, 0})
+	SMember(FPerPlatformInt)                           StartCullDistance                                           OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FPerQualityLevelInt)                       StartCullDistanceQuality                                    OFFSET(get<T>, {0x98, 104, 0, 0})
+	SMember(FPerPlatformInt)                           EndCullDistance                                             OFFSET(get<T>, {0x100, 4, 0, 0})
+	SMember(FPerQualityLevelInt)                       EndCullDistanceQuality                                      OFFSET(get<T>, {0x108, 104, 0, 0})
+	DMember(int32_t)                                   MinLOD                                                      OFFSET(get<int32_t>, {0x170, 4, 0, 0})
+	CMember(EGrassScaling)                             Scaling                                                     OFFSET(get<T>, {0x174, 1, 0, 0})
+	SMember(FFloatInterval)                            ScaleX                                                      OFFSET(get<T>, {0x178, 8, 0, 0})
+	SMember(FFloatInterval)                            ScaleY                                                      OFFSET(get<T>, {0x180, 8, 0, 0})
+	SMember(FFloatInterval)                            ScaleZ                                                      OFFSET(get<T>, {0x188, 8, 0, 0})
+	DMember(bool)                                      RandomRotation                                              OFFSET(get<bool>, {0x190, 1, 0, 0})
+	DMember(bool)                                      AlignToSurface                                              OFFSET(get<bool>, {0x191, 1, 0, 0})
+	DMember(bool)                                      bUseLandscapeLightmap                                       OFFSET(get<bool>, {0x192, 1, 0, 0})
+	SMember(FLightingChannels)                         LightingChannels                                            OFFSET(get<T>, {0x193, 1, 0, 0})
+	DMember(bool)                                      bReceivesDecals                                             OFFSET(get<bool>, {0x194, 1, 0, 0})
+	DMember(bool)                                      bAffectDistanceFieldLighting                                OFFSET(get<bool>, {0x195, 1, 0, 0})
+	DMember(bool)                                      bCastDynamicShadow                                          OFFSET(get<bool>, {0x196, 1, 0, 0})
+	DMember(bool)                                      bCastContactShadow                                          OFFSET(get<bool>, {0x197, 1, 0, 0})
+	DMember(bool)                                      bKeepInstanceBufferCPUCopy                                  OFFSET(get<bool>, {0x198, 1, 0, 0})
+	DMember(uint32_t)                                  InstanceWorldPositionOffsetDisableDistance                  OFFSET(get<uint32_t>, {0x19C, 4, 0, 0})
+	CMember(EShadowCacheInvalidationBehavior)          ShadowCacheInvalidationBehavior                             OFFSET(get<T>, {0x1A0, 1, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeMaterialTextureStreamingInfo
@@ -786,8 +832,8 @@ class FLandscapeMaterialTextureStreamingInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     TextureName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     TexelFactor                                                 ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FName)                                     TextureName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     TexelFactor                                                 OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeSplineConnection
@@ -798,8 +844,8 @@ class FLandscapeSplineConnection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ULandscapeSplineSegment*)                  Segment                                                     ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(bool)                                      End                                                         ___ OFFSET(get<bool>, {0x8, 1, 1, 0})
+	CMember(ULandscapeSplineSegment*)                  Segment                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      End                                                         OFFSET(get<bool>, {0x8, 1, 1, 0})
 };
 
 /// Struct /Script/Landscape.ForeignControlPointData
@@ -840,16 +886,16 @@ class FLandscapeSplineInterpPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Left                                                        ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Right                                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   FalloffLeft                                                 ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   FalloffRight                                                ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   LayerLeft                                                   ___ OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FVector)                                   LayerRight                                                  ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector)                                   LayerFalloffLeft                                            ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FVector)                                   LayerFalloffRight                                           ___ OFFSET(get<T>, {0xC0, 24, 0, 0})
-	DMember(float)                                     StartEndFalloff                                             ___ OFFSET(get<float>, {0xD8, 4, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Left                                                        OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Right                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   FalloffLeft                                                 OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   FalloffRight                                                OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   LayerLeft                                                   OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   LayerRight                                                  OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   LayerFalloffLeft                                            OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   LayerFalloffRight                                           OFFSET(get<T>, {0xC0, 24, 0, 0})
+	DMember(float)                                     StartEndFalloff                                             OFFSET(get<float>, {0xD8, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeSplineSegmentConnection
@@ -860,9 +906,9 @@ class FLandscapeSplineSegmentConnection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ULandscapeSplineControlPoint*)             ControlPoint                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     TangentLen                                                  ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FName)                                     SocketName                                                  ___ OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(ULandscapeSplineControlPoint*)             ControlPoint                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     TangentLen                                                  OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeSplineMeshEntry
@@ -873,15 +919,15 @@ class FLandscapeSplineMeshEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UStaticMesh*)                              Mesh                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               MaterialOverrides                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	DMember(bool)                                      bCenterH                                                    ___ OFFSET(get<bool>, {0x18, 1, 1, 0})
-	SMember(FVector2D)                                 CenterAdjust                                                ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(bool)                                      bScaleToWidth                                               ___ OFFSET(get<bool>, {0x30, 1, 1, 0})
-	SMember(FVector)                                   Scale                                                       ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	CMember(TEnumAsByte<LandscapeSplineMeshOrientation>) Orientation                                               ___ OFFSET(get<T>, {0x50, 1, 0, 0})
-	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardAxis                                                 ___ OFFSET(get<T>, {0x51, 1, 0, 0})
-	CMember(TEnumAsByte<ESplineMeshAxis>)              UpAxis                                                      ___ OFFSET(get<T>, {0x52, 1, 0, 0})
+	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               MaterialOverrides                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	DMember(bool)                                      bCenterH                                                    OFFSET(get<bool>, {0x18, 1, 1, 0})
+	SMember(FVector2D)                                 CenterAdjust                                                OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(bool)                                      bScaleToWidth                                               OFFSET(get<bool>, {0x30, 1, 1, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x38, 24, 0, 0})
+	CMember(TEnumAsByte<LandscapeSplineMeshOrientation>) Orientation                                               OFFSET(get<T>, {0x50, 1, 0, 0})
+	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardAxis                                                 OFFSET(get<T>, {0x51, 1, 0, 0})
+	CMember(TEnumAsByte<ESplineMeshAxis>)              UpAxis                                                      OFFSET(get<T>, {0x52, 1, 0, 0})
 };
 
 /// Struct /Script/Landscape.GrassInput
@@ -892,9 +938,9 @@ class FGrassInput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(ULandscapeGrassType*)                      GrassType                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0x10, 40, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(ULandscapeGrassType*)                      GrassType                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0x10, 40, 0, 0})
 };
 
 /// Struct /Script/Landscape.LayerBlendInput
@@ -905,13 +951,13 @@ class FLayerBlendInput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     LayerName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TEnumAsByte<ELandscapeLayerBlendType>)     BlendType                                                   ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FExpressionInput)                          LayerInput                                                  ___ OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FExpressionInput)                          HeightInput                                                 ___ OFFSET(get<T>, {0x30, 40, 0, 0})
-	DMember(float)                                     PreviewWeight                                               ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FVector)                                   ConstLayerInput                                             ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	DMember(float)                                     ConstHeightInput                                            ___ OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FName)                                     LayerName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TEnumAsByte<ELandscapeLayerBlendType>)     BlendType                                                   OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FExpressionInput)                          LayerInput                                                  OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FExpressionInput)                          HeightInput                                                 OFFSET(get<T>, {0x30, 40, 0, 0})
+	DMember(float)                                     PreviewWeight                                               OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FVector)                                   ConstLayerInput                                             OFFSET(get<T>, {0x60, 24, 0, 0})
+	DMember(float)                                     ConstHeightInput                                            OFFSET(get<float>, {0x78, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeBrushParameters
@@ -922,9 +968,9 @@ class FLandscapeBrushParameters : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(ELandscapeToolTargetType)                  LayerType                                                   ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(UTextureRenderTarget2D*)                   CombinedResult                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     WeightmapLayerName                                          ___ OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(ELandscapeToolTargetType)                  LayerType                                                   OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(UTextureRenderTarget2D*)                   CombinedResult                                              OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     WeightmapLayerName                                          OFFSET(get<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeInfoLayerSettings
@@ -935,8 +981,8 @@ class FLandscapeInfoLayerSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(ULandscapeLayerInfoObject*)                LayerInfoObj                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     LayerName                                                   ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(ULandscapeLayerInfoObject*)                LayerInfoObj                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     LayerName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeEditorLayerSettings
@@ -957,7 +1003,7 @@ class FLandscapeLayerStruct : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(ULandscapeLayerInfoObject*)                LayerInfoObj                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(ULandscapeLayerInfoObject*)                LayerInfoObj                                                OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeImportLayerInfo
@@ -978,8 +1024,8 @@ class FLandscapeProxyMaterialOverride : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FPerPlatformInt)                           LODIndex                                                    ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UMaterialInterface*)                       Material                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FPerPlatformInt)                           LODIndex                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Landscape.LandscapeTexture2DMipMap
@@ -990,9 +1036,9 @@ class FLandscapeTexture2DMipMap : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   SizeX                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   SizeY                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bCompressed                                                 ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(int32_t)                                   SizeX                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   SizeY                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bCompressed                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/Landscape.PhysicalMaterialInput
@@ -1003,8 +1049,8 @@ class FPhysicalMaterialInput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0x8, 40, 0, 0})
+	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0x8, 40, 0, 0})
 };
 
 /// Enum /Script/Landscape.ELandscapeSetupErrors

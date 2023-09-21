@@ -14,12 +14,12 @@ class UObject : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(void**)                                    vtable                                                      ___ OFFSET(get<void**>, {0x0, 8, 0, 0})
-	CMember(EObjectFlags)                              ObjectFlags                                                 ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	DMember(int)                                       InternalIndex                                               ___ OFFSET(get<int>, {0xC, 4, 0, 0})
-	CMember(UClass*)                                   ClassPrivate                                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     NamePrivate                                                 ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(UObject*)                                  OuterPrivate                                                ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	DMember(void**)                                    vtable                                                      OFFSET(get<void**>, {0x0, 8, 0, 0})
+	CMember(EObjectFlags)                              ObjectFlags                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(int)                                       InternalIndex                                               OFFSET(get<int>, {0xC, 4, 0, 0})
+	CMember(UClass*)                                   ClassPrivate                                                OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     NamePrivate                                                 OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(UObject*)                                  OuterPrivate                                                OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Class /Script/CoreUObject.GCObjectReferencer
@@ -50,7 +50,7 @@ class UField : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UField*)                                   Next                                                        ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UField*)                                   Next                                                        OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/CoreUObject.Struct
@@ -61,8 +61,8 @@ class UStruct : public UField
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(UStruct*)                                  SuperStruct                                                 ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(UField*)                                   Children                                                    ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UStruct*)                                  SuperStruct                                                 OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UField*)                                   Children                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/CoreUObject.ScriptStruct
@@ -593,16 +593,16 @@ class FARFilter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(TArray<FName>)                             PackageNames                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FName>)                             PackagePaths                                                ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FSoftObjectPath>)                   SoftObjectPaths                                             ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FName>)                             ClassNames                                                  ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FTopLevelAssetPath>)                ClassPaths                                                  ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TSet<FName>)                               RecursiveClassesExclusionSet                                ___ OFFSET(get<T>, {0xA0, 80, 0, 0})
-	CMember(TSet<FTopLevelAssetPath>)                  RecursiveClassPathsExclusionSet                             ___ OFFSET(get<T>, {0xF0, 80, 0, 0})
-	DMember(bool)                                      bRecursivePaths                                             ___ OFFSET(get<bool>, {0x140, 1, 0, 0})
-	DMember(bool)                                      bRecursiveClasses                                           ___ OFFSET(get<bool>, {0x141, 1, 0, 0})
-	DMember(bool)                                      bIncludeOnlyOnDiskAssets                                    ___ OFFSET(get<bool>, {0x142, 1, 0, 0})
+	CMember(TArray<FName>)                             PackageNames                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FName>)                             PackagePaths                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FSoftObjectPath>)                   SoftObjectPaths                                             OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(TArray<FName>)                             ClassNames                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FTopLevelAssetPath>)                ClassPaths                                                  OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TSet<FName>)                               RecursiveClassesExclusionSet                                OFFSET(get<T>, {0xA0, 80, 0, 0})
+	CMember(TSet<FTopLevelAssetPath>)                  RecursiveClassPathsExclusionSet                             OFFSET(get<T>, {0xF0, 80, 0, 0})
+	DMember(bool)                                      bRecursivePaths                                             OFFSET(get<bool>, {0x140, 1, 0, 0})
+	DMember(bool)                                      bRecursiveClasses                                           OFFSET(get<bool>, {0x141, 1, 0, 0})
+	DMember(bool)                                      bIncludeOnlyOnDiskAssets                                    OFFSET(get<bool>, {0x142, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.TopLevelAssetPath
@@ -613,8 +613,8 @@ class FTopLevelAssetPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     PackageName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     AssetName                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     PackageName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     AssetName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.SoftObjectPath
@@ -625,8 +625,8 @@ class FSoftObjectPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FTopLevelAssetPath)                        AssetPath                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FString)                                   SubPathString                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FTopLevelAssetPath)                        AssetPath                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FString)                                   SubPathString                                               OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.AssetBundleData
@@ -637,7 +637,7 @@ class FAssetBundleData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FAssetBundleEntry>)                 Bundles                                                     ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FAssetBundleEntry>)                 Bundles                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.AssetBundleEntry
@@ -648,8 +648,8 @@ class FAssetBundleEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     BundleName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FTopLevelAssetPath>)                AssetPaths                                                  ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     BundleName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FTopLevelAssetPath>)                AssetPaths                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.AssetData
@@ -660,11 +660,11 @@ class FAssetData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     PackageName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PackagePath                                                 ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     AssetName                                                   ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     AssetClass                                                  ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FTopLevelAssetPath)                        AssetClassPath                                              ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     PackageName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PackagePath                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     AssetName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     AssetClass                                                  OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FTopLevelAssetPath)                        AssetClassPath                                              OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.AutomationEvent
@@ -675,10 +675,10 @@ class FAutomationEvent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(EAutomationEventType)                      Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FString)                                   Message                                                     ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Context                                                     ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FGuid)                                     Artifact                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(EAutomationEventType)                      Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FString)                                   Message                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Context                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FGuid)                                     Artifact                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Guid
@@ -689,10 +689,10 @@ class FGuid : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   A                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   B                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   C                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   D                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   A                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   B                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   C                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   D                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.AutomationExecutionEntry
@@ -703,10 +703,10 @@ class FAutomationExecutionEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FAutomationEvent)                          Event                                                       ___ OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FString)                                   Filename                                                    ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(int32_t)                                   LineNumber                                                  ___ OFFSET(get<int32_t>, {0x48, 4, 0, 0})
-	SMember(FDateTime)                                 Timestamp                                                   ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FAutomationEvent)                          Event                                                       OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(int32_t)                                   LineNumber                                                  OFFSET(get<int32_t>, {0x48, 4, 0, 0})
+	SMember(FDateTime)                                 Timestamp                                                   OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.DateTime
@@ -727,9 +727,9 @@ class FBox : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   min                                                         ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   max                                                         ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(bool)                                      IsValid                                                     ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FVector)                                   min                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   max                                                         OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(bool)                                      IsValid                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector
@@ -740,9 +740,9 @@ class FVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Box2D
@@ -753,9 +753,9 @@ class FBox2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector2D)                                 min                                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 max                                                         ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	DMember(bool)                                      bIsValid                                                    ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FVector2D)                                 min                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 max                                                         OFFSET(get<T>, {0x10, 16, 0, 0})
+	DMember(bool)                                      bIsValid                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector2D
@@ -766,8 +766,8 @@ class FVector2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Box2f
@@ -778,9 +778,9 @@ class FBox2f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FVector2f)                                 min                                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector2f)                                 max                                                         ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(bool)                                      bIsValid                                                    ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FVector2f)                                 min                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FVector2f)                                 max                                                         OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(bool)                                      bIsValid                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector2f
@@ -791,8 +791,8 @@ class FVector2f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Box3d
@@ -803,9 +803,9 @@ class FBox3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector3d)                                 min                                                         ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector3d)                                 max                                                         ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(bool)                                      IsValid                                                     ___ OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FVector3d)                                 min                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector3d)                                 max                                                         OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(bool)                                      IsValid                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector3d
@@ -816,9 +816,9 @@ class FVector3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Box3f
@@ -829,9 +829,9 @@ class FBox3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FVector3f)                                 min                                                         ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector3f)                                 max                                                         ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	DMember(bool)                                      IsValid                                                     ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FVector3f)                                 min                                                         OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FVector3f)                                 max                                                         OFFSET(get<T>, {0xC, 12, 0, 0})
+	DMember(bool)                                      IsValid                                                     OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector3f
@@ -842,9 +842,9 @@ class FVector3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Z                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.BoxSphereBounds
@@ -855,9 +855,9 @@ class FBoxSphereBounds : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Origin                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   BoxExtent                                                   ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(double)                                    SphereRadius                                                ___ OFFSET(get<double>, {0x30, 8, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   BoxExtent                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(double)                                    SphereRadius                                                OFFSET(get<double>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.BoxSphereBounds3d
@@ -868,9 +868,9 @@ class FBoxSphereBounds3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector3d)                                 Origin                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector3d)                                 BoxExtent                                                   ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(double)                                    SphereRadius                                                ___ OFFSET(get<double>, {0x30, 8, 0, 0})
+	SMember(FVector3d)                                 Origin                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector3d)                                 BoxExtent                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(double)                                    SphereRadius                                                OFFSET(get<double>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.BoxSphereBounds3f
@@ -881,9 +881,9 @@ class FBoxSphereBounds3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FVector3f)                                 Origin                                                      ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector3f)                                 BoxExtent                                                   ___ OFFSET(get<T>, {0xC, 12, 0, 0})
-	DMember(float)                                     SphereRadius                                                ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	SMember(FVector3f)                                 Origin                                                      OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FVector3f)                                 BoxExtent                                                   OFFSET(get<T>, {0xC, 12, 0, 0})
+	DMember(float)                                     SphereRadius                                                OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Color
@@ -894,10 +894,10 @@ class FColor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(char)                                      B                                                           ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	DMember(char)                                      G                                                           ___ OFFSET(get<char>, {0x1, 1, 0, 0})
-	DMember(char)                                      R                                                           ___ OFFSET(get<char>, {0x2, 1, 0, 0})
-	DMember(char)                                      A                                                           ___ OFFSET(get<char>, {0x3, 1, 0, 0})
+	DMember(char)                                      B                                                           OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      G                                                           OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(char)                                      R                                                           OFFSET(get<char>, {0x2, 1, 0, 0})
+	DMember(char)                                      A                                                           OFFSET(get<char>, {0x3, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.DirectoryPath
@@ -908,7 +908,7 @@ class FDirectoryPath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Path                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Path                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.DoubleRange
@@ -919,8 +919,8 @@ class FDoubleRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDoubleRangeBound)                         LowerBound                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FDoubleRangeBound)                         UpperBound                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDoubleRangeBound)                         LowerBound                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDoubleRangeBound)                         UpperBound                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.DoubleRangeBound
@@ -931,8 +931,8 @@ class FDoubleRangeBound : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(double)                                    Value                                                       ___ OFFSET(get<double>, {0x8, 8, 0, 0})
+	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FallbackStruct
@@ -953,7 +953,7 @@ class FFilePath : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   FilePath                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FloatInterval
@@ -964,8 +964,8 @@ class FFloatInterval : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(float)                                     min                                                         ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     max                                                         ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     min                                                         OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     max                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FloatRange
@@ -976,8 +976,8 @@ class FFloatRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FFloatRangeBound)                          LowerBound                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFloatRangeBound)                          UpperBound                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FFloatRangeBound)                          LowerBound                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFloatRangeBound)                          UpperBound                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FloatRangeBound
@@ -988,8 +988,8 @@ class FFloatRangeBound : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FrameNumber
@@ -1000,7 +1000,7 @@ class FFrameNumber : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRange
@@ -1011,8 +1011,8 @@ class FFrameNumberRange : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FFrameNumberRangeBound)                    LowerBound                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFrameNumberRangeBound)                    UpperBound                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FFrameNumberRangeBound)                    LowerBound                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFrameNumberRangeBound)                    UpperBound                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FrameNumberRangeBound
@@ -1023,8 +1023,8 @@ class FFrameNumberRangeBound : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FFrameNumber)                              Value                                                       ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FFrameNumber)                              Value                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FrameRate
@@ -1035,8 +1035,8 @@ class FFrameRate : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   Numerator                                                   ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Denominator                                                 ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Numerator                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Denominator                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.FrameTime
@@ -1047,8 +1047,8 @@ class FFrameTime : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FFrameNumber)                              FrameNumber                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     SubFrame                                                    ___ OFFSET(get<float>, {0x4, 4, 0, 0})
+	SMember(FFrameNumber)                              FrameNumber                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     SubFrame                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InputDeviceId
@@ -1059,7 +1059,7 @@ class FInputDeviceId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   InternalId                                                  ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   InternalId                                                  OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Interval
@@ -1070,8 +1070,8 @@ class FInt32Interval : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   min                                                         ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   max                                                         ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   min                                                         OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   max                                                         OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Point
@@ -1082,8 +1082,8 @@ class FInt32Point : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Range
@@ -1094,8 +1094,8 @@ class FInt32Range : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FInt32RangeBound)                          LowerBound                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FInt32RangeBound)                          UpperBound                                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FInt32RangeBound)                          LowerBound                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FInt32RangeBound)                          UpperBound                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32RangeBound
@@ -1106,8 +1106,8 @@ class FInt32RangeBound : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(TEnumAsByte<ERangeBoundTypes>)             Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Vector
@@ -1118,9 +1118,9 @@ class FInt32Vector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Z                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Z                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Vector2
@@ -1131,8 +1131,8 @@ class FInt32Vector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int32Vector4
@@ -1143,10 +1143,10 @@ class FInt32Vector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Z                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   W                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Z                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   W                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int64Point
@@ -1157,8 +1157,8 @@ class FInt64Point : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int64_t)                                   X                                                           ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Y                                                           ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   X                                                           OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Y                                                           OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int64Vector
@@ -1169,9 +1169,9 @@ class FInt64Vector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int64_t)                                   X                                                           ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Y                                                           ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
-	DMember(int64_t)                                   Z                                                           ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int64_t)                                   X                                                           OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Y                                                           OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   Z                                                           OFFSET(get<int64_t>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int64Vector2
@@ -1182,8 +1182,8 @@ class FInt64Vector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int64_t)                                   X                                                           ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Y                                                           ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   X                                                           OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Y                                                           OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Int64Vector4
@@ -1194,10 +1194,10 @@ class FInt64Vector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int64_t)                                   X                                                           ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Y                                                           ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
-	DMember(int64_t)                                   Z                                                           ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	DMember(int64_t)                                   W                                                           ___ OFFSET(get<int64_t>, {0x18, 8, 0, 0})
+	DMember(int64_t)                                   X                                                           OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Y                                                           OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   Z                                                           OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int64_t)                                   W                                                           OFFSET(get<int64_t>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveFloat
@@ -1208,9 +1208,9 @@ class FInterpCurveFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointFloat>)            Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointFloat>)            Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointFloat
@@ -1221,11 +1221,11 @@ class FInterpCurvePointFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     OutVal                                                      ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     ArriveTangent                                               ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     LeaveTangent                                                ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     OutVal                                                      OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     ArriveTangent                                               OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     LeaveTangent                                                OFFSET(get<float>, {0xC, 4, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveLinearColor
@@ -1236,9 +1236,9 @@ class FInterpCurveLinearColor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointLinearColor>)      Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointLinearColor>)      Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointLinearColor
@@ -1249,11 +1249,11 @@ class FInterpCurvePointLinearColor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FLinearColor)                              OutVal                                                      ___ OFFSET(get<T>, {0x4, 16, 0, 0})
-	SMember(FLinearColor)                              ArriveTangent                                               ___ OFFSET(get<T>, {0x14, 16, 0, 0})
-	SMember(FLinearColor)                              LeaveTangent                                                ___ OFFSET(get<T>, {0x24, 16, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x34, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FLinearColor)                              OutVal                                                      OFFSET(get<T>, {0x4, 16, 0, 0})
+	SMember(FLinearColor)                              ArriveTangent                                               OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FLinearColor)                              LeaveTangent                                                OFFSET(get<T>, {0x24, 16, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x34, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.LinearColor
@@ -1264,10 +1264,10 @@ class FLinearColor : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     R                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     G                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     B                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     A                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     R                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     G                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     B                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     A                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointQuat
@@ -1278,11 +1278,11 @@ class FInterpCurvePointQuat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FQuat)                                     OutVal                                                      ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     ArriveTangent                                               ___ OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     LeaveTangent                                                ___ OFFSET(get<T>, {0x50, 32, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x70, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FQuat)                                     OutVal                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     ArriveTangent                                               OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     LeaveTangent                                                OFFSET(get<T>, {0x50, 32, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Quat
@@ -1293,10 +1293,10 @@ class FQuat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointTwoVectors
@@ -1307,11 +1307,11 @@ class FInterpCurvePointTwoVectors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FTwoVectors)                               OutVal                                                      ___ OFFSET(get<T>, {0x8, 48, 0, 0})
-	SMember(FTwoVectors)                               ArriveTangent                                               ___ OFFSET(get<T>, {0x38, 48, 0, 0})
-	SMember(FTwoVectors)                               LeaveTangent                                                ___ OFFSET(get<T>, {0x68, 48, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x98, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FTwoVectors)                               OutVal                                                      OFFSET(get<T>, {0x8, 48, 0, 0})
+	SMember(FTwoVectors)                               ArriveTangent                                               OFFSET(get<T>, {0x38, 48, 0, 0})
+	SMember(FTwoVectors)                               LeaveTangent                                                OFFSET(get<T>, {0x68, 48, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x98, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.TwoVectors
@@ -1322,8 +1322,8 @@ class FTwoVectors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   v1                                                          ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   v2                                                          ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   v1                                                          OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   v2                                                          OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector
@@ -1334,11 +1334,11 @@ class FInterpCurvePointVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   OutVal                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   ArriveTangent                                               ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   LeaveTangent                                                ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x50, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   OutVal                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   ArriveTangent                                               OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   LeaveTangent                                                OFFSET(get<T>, {0x38, 24, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x50, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurvePointVector2D
@@ -1349,11 +1349,11 @@ class FInterpCurvePointVector2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     InVal                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 OutVal                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 ArriveTangent                                               ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FVector2D)                                 LeaveTangent                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  ___ OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(float)                                     InVal                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 OutVal                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 ArriveTangent                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 LeaveTangent                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TEnumAsByte<EInterpCurveMode>)             InterpMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveQuat
@@ -1364,9 +1364,9 @@ class FInterpCurveQuat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointQuat>)             Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointQuat>)             Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveTwoVectors
@@ -1377,9 +1377,9 @@ class FInterpCurveTwoVectors : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointTwoVectors>)       Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointTwoVectors>)       Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector
@@ -1390,9 +1390,9 @@ class FInterpCurveVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointVector>)           Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointVector>)           Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.InterpCurveVector2D
@@ -1403,9 +1403,9 @@ class FInterpCurveVector2D : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<FInterpCurvePointVector2D>)         Points                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bIsLooped                                                   ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(float)                                     LoopKeyOffset                                               ___ OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<FInterpCurvePointVector2D>)         Points                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bIsLooped                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(float)                                     LoopKeyOffset                                               OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.IntPoint
@@ -1416,8 +1416,8 @@ class FIntPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.IntVector
@@ -1428,9 +1428,9 @@ class FIntVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Z                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Z                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.IntVector2
@@ -1441,8 +1441,8 @@ class FIntVector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.IntVector4
@@ -1453,10 +1453,10 @@ class FIntVector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Z                                                           ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   W                                                           ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Z                                                           OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   W                                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Matrix
@@ -1467,10 +1467,10 @@ class FMatrix : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FPlane)                                    XPlane                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FPlane)                                    YPlane                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FPlane)                                    ZPlane                                                      ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FPlane)                                    WPlane                                                      ___ OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FPlane)                                    XPlane                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FPlane)                                    YPlane                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FPlane)                                    ZPlane                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FPlane)                                    WPlane                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Plane
@@ -1481,7 +1481,7 @@ class FPlane : public FVector
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Matrix44d
@@ -1492,10 +1492,10 @@ class FMatrix44d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FPlane4d)                                  XPlane                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FPlane4d)                                  YPlane                                                      ___ OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FPlane4d)                                  ZPlane                                                      ___ OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FPlane4d)                                  WPlane                                                      ___ OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FPlane4d)                                  XPlane                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FPlane4d)                                  YPlane                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FPlane4d)                                  ZPlane                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FPlane4d)                                  WPlane                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Plane4d
@@ -1506,7 +1506,7 @@ class FPlane4d : public FVector3d
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Matrix44f
@@ -1517,10 +1517,10 @@ class FMatrix44f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FPlane4f)                                  XPlane                                                      ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FPlane4f)                                  YPlane                                                      ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FPlane4f)                                  ZPlane                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FPlane4f)                                  WPlane                                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FPlane4f)                                  XPlane                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FPlane4f)                                  YPlane                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPlane4f)                                  ZPlane                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FPlane4f)                                  WPlane                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Plane4f
@@ -1531,7 +1531,7 @@ class FPlane4f : public FVector3f
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     W                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     W                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.OrientedBox
@@ -1542,13 +1542,13 @@ class FOrientedBox : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   AxisX                                                       ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AxisY                                                       ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   AxisZ                                                       ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	DMember(double)                                    ExtentX                                                     ___ OFFSET(get<double>, {0x60, 8, 0, 0})
-	DMember(double)                                    ExtentY                                                     ___ OFFSET(get<double>, {0x68, 8, 0, 0})
-	DMember(double)                                    ExtentZ                                                     ___ OFFSET(get<double>, {0x70, 8, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   AxisX                                                       OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AxisY                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   AxisZ                                                       OFFSET(get<T>, {0x48, 24, 0, 0})
+	DMember(double)                                    ExtentX                                                     OFFSET(get<double>, {0x60, 8, 0, 0})
+	DMember(double)                                    ExtentY                                                     OFFSET(get<double>, {0x68, 8, 0, 0})
+	DMember(double)                                    ExtentZ                                                     OFFSET(get<double>, {0x70, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PackedNormal
@@ -1559,10 +1559,10 @@ class FPackedNormal : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(char)                                      X                                                           ___ OFFSET(get<char>, {0x0, 1, 0, 0})
-	DMember(char)                                      Y                                                           ___ OFFSET(get<char>, {0x1, 1, 0, 0})
-	DMember(char)                                      Z                                                           ___ OFFSET(get<char>, {0x2, 1, 0, 0})
-	DMember(char)                                      W                                                           ___ OFFSET(get<char>, {0x3, 1, 0, 0})
+	DMember(char)                                      X                                                           OFFSET(get<char>, {0x0, 1, 0, 0})
+	DMember(char)                                      Y                                                           OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(char)                                      Z                                                           OFFSET(get<char>, {0x2, 1, 0, 0})
+	DMember(char)                                      W                                                           OFFSET(get<char>, {0x3, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PackedRGB10A2N
@@ -1573,7 +1573,7 @@ class FPackedRGB10A2N : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   Packed                                                      ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Packed                                                      OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PackedRGBA16N
@@ -1584,8 +1584,8 @@ class FPackedRGBA16N : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   XY                                                          ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   ZW                                                          ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   XY                                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   ZW                                                          OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PlatformInputDeviceState
@@ -1596,8 +1596,8 @@ class FPlatformInputDeviceState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FPlatformUserId)                           OwningPlatformUser                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EInputDeviceConnectionState)               ConnectionState                                             ___ OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FPlatformUserId)                           OwningPlatformUser                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EInputDeviceConnectionState)               ConnectionState                                             OFFSET(get<T>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PlatformUserId
@@ -1608,7 +1608,7 @@ class FPlatformUserId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   InternalId                                                  ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   InternalId                                                  OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PolyglotTextData
@@ -1619,14 +1619,14 @@ class FPolyglotTextData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	CMember(ELocalizedTextSourceCategory)              category                                                    ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FString)                                   NativeCulture                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Namespace                                                   ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Key                                                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   NativeString                                                ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    LocalizedStrings                                            ___ OFFSET(get<T>, {0x48, 80, 0, 0})
-	DMember(bool)                                      bIsMinimalPatch                                             ___ OFFSET(get<bool>, {0x98, 1, 0, 0})
-	SMember(FText)                                     CachedText                                                  ___ OFFSET(get<T>, {0xA0, 24, 0, 0})
+	CMember(ELocalizedTextSourceCategory)              category                                                    OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FString)                                   NativeCulture                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Namespace                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   NativeString                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    LocalizedStrings                                            OFFSET(get<T>, {0x48, 80, 0, 0})
+	DMember(bool)                                      bIsMinimalPatch                                             OFFSET(get<bool>, {0x98, 1, 0, 0})
+	SMember(FText)                                     CachedText                                                  OFFSET(get<T>, {0xA0, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PrimaryAssetId
@@ -1637,8 +1637,8 @@ class FPrimaryAssetId : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FPrimaryAssetType)                         PrimaryAssetType                                            ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PrimaryAssetName                                            ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FPrimaryAssetType)                         PrimaryAssetType                                            OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PrimaryAssetName                                            OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.PrimaryAssetType
@@ -1649,7 +1649,7 @@ class FPrimaryAssetType : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.QualifiedFrameTime
@@ -1660,8 +1660,8 @@ class FQualifiedFrameTime : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FFrameTime)                                Time                                                        ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFrameRate)                                Rate                                                        ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FFrameTime)                                Time                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFrameRate)                                Rate                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Quat4d
@@ -1672,10 +1672,10 @@ class FQuat4d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Quat4f
@@ -1686,10 +1686,10 @@ class FQuat4f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Z                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     W                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     W                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.RandomStream
@@ -1700,8 +1700,8 @@ class FRandomStream : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   InitialSeed                                                 ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Seed                                                        ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   InitialSeed                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Seed                                                        OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Ray
@@ -1712,8 +1712,8 @@ class FRay : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   Origin                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Ray3d
@@ -1724,8 +1724,8 @@ class FRay3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector3d)                                 Origin                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector3d)                                 Direction                                                   ___ OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector3d)                                 Origin                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector3d)                                 Direction                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Ray3f
@@ -1736,8 +1736,8 @@ class FRay3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector3f)                                 Origin                                                      ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector3f)                                 Direction                                                   ___ OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FVector3f)                                 Origin                                                      OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FVector3f)                                 Direction                                                   OFFSET(get<T>, {0xC, 12, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Rotator
@@ -1748,9 +1748,9 @@ class FRotator : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Pitch                                                       ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Yaw                                                         ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Roll                                                        ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Yaw                                                         OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Roll                                                        OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Rotator3d
@@ -1761,9 +1761,9 @@ class FRotator3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Pitch                                                       ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Yaw                                                         ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Roll                                                        ___ OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    Pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Yaw                                                         OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Roll                                                        OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Rotator3f
@@ -1774,9 +1774,9 @@ class FRotator3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     Pitch                                                       ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Yaw                                                         ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Roll                                                        ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Pitch                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Yaw                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Roll                                                        OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.SoftClassPath
@@ -1797,8 +1797,8 @@ class FSphere : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Sphere3d
@@ -1809,8 +1809,8 @@ class FSphere3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector3d)                                 Center                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	SMember(FVector3d)                                 Center                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Sphere3f
@@ -1821,8 +1821,8 @@ class FSphere3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FVector3f)                                 Center                                                      ___ OFFSET(get<T>, {0x0, 12, 0, 0})
-	DMember(float)                                     W                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	SMember(FVector3f)                                 Center                                                      OFFSET(get<T>, {0x0, 12, 0, 0})
+	DMember(float)                                     W                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.TemplateString
@@ -1833,7 +1833,7 @@ class FTemplateString : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Template                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Template                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.TestUndeclaredScriptStructObjectReferencesTest
@@ -1844,10 +1844,10 @@ class FTestUndeclaredScriptStructObjectReferencesTest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(UObject*)                                  StrongObjectPointer                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  SoftObjectPointer                                           ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FSoftObjectPath)                           SoftObjectPath                                              ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  WeakObjectPointer                                           ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(UObject*)                                  StrongObjectPointer                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  SoftObjectPointer                                           OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FSoftObjectPath)                           SoftObjectPath                                              OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  WeakObjectPointer                                           OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.TestUninitializedScriptStructMembersTest
@@ -1858,9 +1858,9 @@ class FTestUninitializedScriptStructMembersTest : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UObject*)                                  UninitializedObjectReference                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UObject*)                                  InitializedObjectReference                                  ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     UnusedValue                                                 ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(UObject*)                                  UninitializedObjectReference                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UObject*)                                  InitializedObjectReference                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     UnusedValue                                                 OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Timecode
@@ -1871,11 +1871,11 @@ class FTimecode : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	DMember(int32_t)                                   Hours                                                       ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Minutes                                                     ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int32_t)                                   Seconds                                                     ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   Frames                                                      ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	DMember(bool)                                      bDropFrameFormat                                            ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   Hours                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Minutes                                                     OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   Seconds                                                     OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Frames                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	DMember(bool)                                      bDropFrameFormat                                            OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Timespan
@@ -1896,9 +1896,9 @@ class FTransform : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     Rotation                                                    ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   Translation                                                 ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Scale3D                                                     ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Scale3D                                                     OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Transform3d
@@ -1909,9 +1909,9 @@ class FTransform3d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat4d)                                   Rotation                                                    ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector3d)                                 Translation                                                 ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector3d)                                 Scale3D                                                     ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FQuat4d)                                   Rotation                                                    OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FVector3d)                                 Translation                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector3d)                                 Scale3D                                                     OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Transform3f
@@ -1922,9 +1922,9 @@ class FTransform3f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat4f)                                   Rotation                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector3f)                                 Translation                                                 ___ OFFSET(get<T>, {0x10, 12, 0, 0})
-	SMember(FVector3f)                                 Scale3D                                                     ___ OFFSET(get<T>, {0x20, 12, 0, 0})
+	SMember(FQuat4f)                                   Rotation                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector3f)                                 Translation                                                 OFFSET(get<T>, {0x10, 12, 0, 0})
+	SMember(FVector3f)                                 Scale3D                                                     OFFSET(get<T>, {0x20, 12, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint32Point
@@ -1935,8 +1935,8 @@ class FUint32Point : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint32Vector
@@ -1947,9 +1947,9 @@ class FUint32Vector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint32_t)                                  Z                                                           ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  Z                                                           OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint32Vector2
@@ -1960,8 +1960,8 @@ class FUint32Vector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint32Vector4
@@ -1972,10 +1972,10 @@ class FUint32Vector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint32_t)                                  Z                                                           ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
-	DMember(uint32_t)                                  W                                                           ___ OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  Z                                                           OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  W                                                           OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint64Point
@@ -1986,8 +1986,8 @@ class FUint64Point : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int64_t)                                   X                                                           ___ OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	DMember(int64_t)                                   Y                                                           ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(int64_t)                                   X                                                           OFFSET(get<int64_t>, {0x0, 8, 0, 0})
+	DMember(int64_t)                                   Y                                                           OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint64Vector
@@ -1998,9 +1998,9 @@ class FUint64Vector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(uint64_t)                                  X                                                           ___ OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
-	DMember(uint64_t)                                  Y                                                           ___ OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
-	DMember(uint64_t)                                  Z                                                           ___ OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
+	DMember(uint64_t)                                  X                                                           OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
+	DMember(uint64_t)                                  Y                                                           OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
+	DMember(uint64_t)                                  Z                                                           OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint64Vector2
@@ -2011,8 +2011,8 @@ class FUint64Vector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(uint64_t)                                  X                                                           ___ OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
-	DMember(uint64_t)                                  Y                                                           ___ OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
+	DMember(uint64_t)                                  X                                                           OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
+	DMember(uint64_t)                                  Y                                                           OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Uint64Vector4
@@ -2023,10 +2023,10 @@ class FUint64Vector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(uint64_t)                                  X                                                           ___ OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
-	DMember(uint64_t)                                  Y                                                           ___ OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
-	DMember(uint64_t)                                  Z                                                           ___ OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
-	DMember(uint64_t)                                  W                                                           ___ OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
+	DMember(uint64_t)                                  X                                                           OFFSET(get<uint64_t>, {0x0, 8, 0, 0})
+	DMember(uint64_t)                                  Y                                                           OFFSET(get<uint64_t>, {0x8, 8, 0, 0})
+	DMember(uint64_t)                                  Z                                                           OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
+	DMember(uint64_t)                                  W                                                           OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.UintPoint
@@ -2037,8 +2037,8 @@ class FUintPoint : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(int32_t)                                   X                                                           ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Y                                                           ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.UintVector
@@ -2049,9 +2049,9 @@ class FUintVector : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint32_t)                                  Z                                                           ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  Z                                                           OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.UintVector2
@@ -2062,8 +2062,8 @@ class FUintVector2 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.UintVector4
@@ -2074,10 +2074,10 @@ class FUintVector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(uint32_t)                                  X                                                           ___ OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
-	DMember(uint32_t)                                  Y                                                           ___ OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
-	DMember(uint32_t)                                  Z                                                           ___ OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
-	DMember(uint32_t)                                  W                                                           ___ OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
+	DMember(uint32_t)                                  X                                                           OFFSET(get<uint32_t>, {0x0, 4, 0, 0})
+	DMember(uint32_t)                                  Y                                                           OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
+	DMember(uint32_t)                                  Z                                                           OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
+	DMember(uint32_t)                                  W                                                           OFFSET(get<uint32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector4
@@ -2088,10 +2088,10 @@ class FVector4 : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector4d
@@ -2102,10 +2102,10 @@ class FVector4d : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(double)                                    X                                                           ___ OFFSET(get<double>, {0x0, 8, 0, 0})
-	DMember(double)                                    Y                                                           ___ OFFSET(get<double>, {0x8, 8, 0, 0})
-	DMember(double)                                    Z                                                           ___ OFFSET(get<double>, {0x10, 8, 0, 0})
-	DMember(double)                                    W                                                           ___ OFFSET(get<double>, {0x18, 8, 0, 0})
+	DMember(double)                                    X                                                           OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    Y                                                           OFFSET(get<double>, {0x8, 8, 0, 0})
+	DMember(double)                                    Z                                                           OFFSET(get<double>, {0x10, 8, 0, 0})
+	DMember(double)                                    W                                                           OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/CoreUObject.Vector4f
@@ -2116,10 +2116,10 @@ class FVector4f : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     X                                                           ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Y                                                           ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     Z                                                           ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     W                                                           ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     X                                                           OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     Y                                                           OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     W                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Enum /Script/CoreUObject.EAutomationEventType

@@ -16,7 +16,12 @@ class UBP_ControllerRequirement_CheckLivingWorldManagerBudget_C : public UFortCo
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(int32_t)                                   RequiredBudget                                              ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       EventRowHandle                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	DMember(int32_t)                                   RequiredBudget                                              OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	SMember(FDataTableRowHandle)                       EventRowHandle                                              OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Lager/Requirements/BP_ControllerRequirement_CheckLivingWorldManagerBudget.BP_ControllerRequirement_CheckLivingWorldManagerBudget_C.IsRequirementMetInternal
+	// bool IsRequirementMetInternal(FControllerRequirementTestContext& RequestContext);                                        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 

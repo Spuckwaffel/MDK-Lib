@@ -25,7 +25,7 @@ class UPropertyBag : public UScriptStruct
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(TArray<FPropertyBagPropertyDesc>)          PropertyDescs                                               ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(TArray<FPropertyBagPropertyDesc>)          PropertyDescs                                               OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
 
 /// Struct /Script/StructUtils.InstancedStruct
@@ -66,8 +66,8 @@ class FPropertyBagPropertyDescMetaData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Key                                                         ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StructUtils.PropertyBagPropertyDesc
@@ -78,11 +78,11 @@ class FPropertyBagPropertyDesc : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UObject*)                                  ValueTypeObject                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGuid)                                     ID                                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	CMember(EPropertyBagPropertyType)                  ValueType                                                   ___ OFFSET(get<T>, {0x1C, 1, 0, 0})
-	SMember(FPropertyBagContainerTypes)                ContainerTypes                                              ___ OFFSET(get<T>, {0x1D, 3, 0, 0})
+	CMember(UObject*)                                  ValueTypeObject                                             OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x18, 4, 0, 0})
+	CMember(EPropertyBagPropertyType)                  ValueType                                                   OFFSET(get<T>, {0x1C, 1, 0, 0})
+	SMember(FPropertyBagContainerTypes)                ContainerTypes                                              OFFSET(get<T>, {0x1D, 3, 0, 0})
 };
 
 /// Struct /Script/StructUtils.InstancedPropertyBag
@@ -93,7 +93,7 @@ class FInstancedPropertyBag : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FInstancedStruct)                          Value                                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStruct)                          Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StructUtils.PropertyBagMissingStruct

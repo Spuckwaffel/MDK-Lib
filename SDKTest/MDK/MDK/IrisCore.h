@@ -26,7 +26,7 @@ class UDataStreamDefinitions : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FDataStreamDefinition>)             DataStreamDefinitions                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FDataStreamDefinition>)             DataStreamDefinitions                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/IrisCore.DataStreamManager
@@ -47,7 +47,7 @@ class UNetObjectFilterConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(ENetFilterType)                            FilterType                                                  ___ OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(ENetFilterType)                            FilterType                                                  OFFSET(get<T>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/IrisCore.FilterOutNetObjectFilterConfig
@@ -128,7 +128,7 @@ class UNetBlobHandlerDefinitions : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FNetBlobHandlerDefinition>)         NetBlobHandlerDefinitions                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FNetBlobHandlerDefinition>)         NetBlobHandlerDefinitions                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectBlobHandler
@@ -149,7 +149,7 @@ class UNetObjectConnectionFilterConfig : public UNetObjectFilterConfig
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(uint16_t)                                  MaxObjectCount                                              ___ OFFSET(get<uint16_t>, {0x30, 2, 0, 0})
+	DMember(uint16_t)                                  MaxObjectCount                                              OFFSET(get<uint16_t>, {0x30, 2, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectConnectionFilter
@@ -180,11 +180,11 @@ class UNetObjectCountLimiterConfig : public UNetObjectPrioritizerConfig
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(ENetObjectCountLimiterMode)                Mode                                                        ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	DMember(uint32_t)                                  MaxObjectCount                                              ___ OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Priority                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     OwningConnectionPriority                                    ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(bool)                                      bEnableOwnedObjectsFastLane                                 ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
+	CMember(ENetObjectCountLimiterMode)                Mode                                                        OFFSET(get<T>, {0x28, 4, 0, 0})
+	DMember(uint32_t)                                  MaxObjectCount                                              OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Priority                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     OwningConnectionPriority                                    OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(bool)                                      bEnableOwnedObjectsFastLane                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectCountLimiter
@@ -205,7 +205,7 @@ class UNetObjectFilterDefinitions : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FNetObjectFilterDefinition>)        NetObjectFilterDefinitions                                  ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FNetObjectFilterDefinition>)        NetObjectFilterDefinitions                                  OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectGridFilterConfig
@@ -216,13 +216,13 @@ class UNetObjectGridFilterConfig : public UNetObjectFilterConfig
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(uint32_t)                                  ViewPosRelevancyFrameCount                                  ___ OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
-	DMember(float)                                     CellSizeX                                                   ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     CellSizeY                                                   ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     MaxCullDistance                                             ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     DefaultCullDistance                                         ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   MinPos                                                      ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   MaxPos                                                      ___ OFFSET(get<T>, {0x60, 24, 0, 0})
+	DMember(uint32_t)                                  ViewPosRelevancyFrameCount                                  OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
+	DMember(float)                                     CellSizeX                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     CellSizeY                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     MaxCullDistance                                             OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     DefaultCullDistance                                         OFFSET(get<float>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   MinPos                                                      OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   MaxPos                                                      OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectGridFilter
@@ -263,7 +263,7 @@ class UNetObjectPrioritizerDefinitions : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FNetObjectPrioritizerDefinition>)   NetObjectPrioritizerDefinitions                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FNetObjectPrioritizerDefinition>)   NetObjectPrioritizerDefinitions                             OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetRPCHandler
@@ -334,12 +334,12 @@ class UObjectReplicationBridgeConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(TArray<FObjectReplicationBridgePollConfig>) PollConfigs                                                ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FObjectReplicationBridgeFilterConfig>) FilterConfigs                                            ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<FObjectReplicationBridgePrioritizerConfig>) PrioritizerConfigs                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FObjectReplicationBridgeDeltaCompressionConfig>) DeltaCompressionConfigs                        ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FName)                                     DefaultSpatialFilterName                                    ___ OFFSET(get<T>, {0x68, 4, 0, 0})
-	SMember(FName)                                     RequiredNetDriverChannelClassName                           ___ OFFSET(get<T>, {0x6C, 4, 0, 0})
+	CMember(TArray<FObjectReplicationBridgePollConfig>) PollConfigs                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FObjectReplicationBridgeFilterConfig>) FilterConfigs                                            OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<FObjectReplicationBridgePrioritizerConfig>) PrioritizerConfigs                                  OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<FObjectReplicationBridgeDeltaCompressionConfig>) DeltaCompressionConfigs                        OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FName)                                     DefaultSpatialFilterName                                    OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     RequiredNetDriverChannelClassName                           OFFSET(get<T>, {0x6C, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.SequentialPartialNetBlobHandlerConfig
@@ -350,8 +350,8 @@ class USequentialPartialNetBlobHandlerConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(uint32_t)                                  MaxPartBitCount                                             ___ OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
-	DMember(uint32_t)                                  MaxPartCount                                                ___ OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
+	DMember(uint32_t)                                  MaxPartBitCount                                             OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
+	DMember(uint32_t)                                  MaxPartCount                                                OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.PartialNetObjectAttachmentHandlerConfig
@@ -362,7 +362,7 @@ class UPartialNetObjectAttachmentHandlerConfig : public USequentialPartialNetBlo
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(uint32_t)                                  BitCountSplitThreshold                                      ___ OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
+	DMember(uint32_t)                                  BitCountSplitThreshold                                      OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.SequentialPartialNetBlobHandler
@@ -403,7 +403,7 @@ class UReplicationSystem : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UReplicationBridge*)                       ReplicationBridge                                           ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UReplicationBridge*)                       ReplicationBridge                                           OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/IrisCore.SphereNetObjectPrioritizerConfig
@@ -414,11 +414,11 @@ class USphereNetObjectPrioritizerConfig : public UNetObjectPrioritizerConfig
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(float)                                     InnerRadius                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     OuterRadius                                                 ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     InnerPriority                                               ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     OuterPriority                                               ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     OutsidePriority                                             ___ OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     InnerRadius                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     OuterRadius                                                 OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     InnerPriority                                               OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     OuterPriority                                               OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     OutsidePriority                                             OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.SphereNetObjectPrioritizer
@@ -439,7 +439,7 @@ class USphereWithOwnerBoostNetObjectPrioritizerConfig : public USphereNetObjectP
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	DMember(float)                                     OwnerPriorityBoost                                          ___ OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     OwnerPriorityBoost                                          OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.SphereWithOwnerBoostNetObjectPrioritizer
@@ -460,7 +460,7 @@ class UReplicationStateDescriptorConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FSupportsStructNetSerializerConfig>) SupportsStructNetSerializerList                            ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FSupportsStructNetSerializerConfig>) SupportsStructNetSerializerList                            OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/IrisCore.DataStreamDefinition
@@ -471,11 +471,11 @@ class FDataStreamDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     DataStreamName                                              ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(UClass*)                                   Class                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(EDataStreamSendStatus)                     DefaultSendStatus                                           ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bAutoCreate                                                 ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
+	SMember(FName)                                     DataStreamName                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(EDataStreamSendStatus)                     DefaultSendStatus                                           OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bAutoCreate                                                 OFFSET(get<bool>, {0x11, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetSerializerConfig
@@ -506,9 +506,9 @@ class FEnumInt8NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int8_t)                                    LowerBound                                                  ___ OFFSET(get<int8_t>, {0x10, 1, 0, 0})
-	DMember(int8_t)                                    UpperBound                                                  ___ OFFSET(get<int8_t>, {0x11, 1, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x12, 1, 0, 0})
+	DMember(int8_t)                                    LowerBound                                                  OFFSET(get<int8_t>, {0x10, 1, 0, 0})
+	DMember(int8_t)                                    UpperBound                                                  OFFSET(get<int8_t>, {0x11, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x12, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumInt16NetSerializerConfig
@@ -519,9 +519,9 @@ class FEnumInt16NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int16_t)                                   LowerBound                                                  ___ OFFSET(get<int16_t>, {0x10, 2, 0, 0})
-	DMember(int16_t)                                   UpperBound                                                  ___ OFFSET(get<int16_t>, {0x12, 2, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x14, 1, 0, 0})
+	DMember(int16_t)                                   LowerBound                                                  OFFSET(get<int16_t>, {0x10, 2, 0, 0})
+	DMember(int16_t)                                   UpperBound                                                  OFFSET(get<int16_t>, {0x12, 2, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumInt32NetSerializerConfig
@@ -532,9 +532,9 @@ class FEnumInt32NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   LowerBound                                                  ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   UpperBound                                                  ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(int32_t)                                   LowerBound                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   UpperBound                                                  OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumInt64NetSerializerConfig
@@ -545,9 +545,9 @@ class FEnumInt64NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int64_t)                                   LowerBound                                                  ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	DMember(int64_t)                                   UpperBound                                                  ___ OFFSET(get<int64_t>, {0x18, 8, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x20, 1, 0, 0})
+	DMember(int64_t)                                   LowerBound                                                  OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int64_t)                                   UpperBound                                                  OFFSET(get<int64_t>, {0x18, 8, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumUint8NetSerializerConfig
@@ -558,9 +558,9 @@ class FEnumUint8NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(char)                                      LowerBound                                                  ___ OFFSET(get<char>, {0x10, 1, 0, 0})
-	DMember(char)                                      UpperBound                                                  ___ OFFSET(get<char>, {0x11, 1, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x12, 1, 0, 0})
+	DMember(char)                                      LowerBound                                                  OFFSET(get<char>, {0x10, 1, 0, 0})
+	DMember(char)                                      UpperBound                                                  OFFSET(get<char>, {0x11, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x12, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumUint16NetSerializerConfig
@@ -571,9 +571,9 @@ class FEnumUint16NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(uint16_t)                                  LowerBound                                                  ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(uint16_t)                                  UpperBound                                                  ___ OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x14, 1, 0, 0})
+	DMember(uint16_t)                                  LowerBound                                                  OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(uint16_t)                                  UpperBound                                                  OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumUint32NetSerializerConfig
@@ -584,9 +584,9 @@ class FEnumUint32NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(uint32_t)                                  LowerBound                                                  ___ OFFSET(get<uint32_t>, {0x10, 4, 0, 0})
-	DMember(uint32_t)                                  UpperBound                                                  ___ OFFSET(get<uint32_t>, {0x14, 4, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(uint32_t)                                  LowerBound                                                  OFFSET(get<uint32_t>, {0x10, 4, 0, 0})
+	DMember(uint32_t)                                  UpperBound                                                  OFFSET(get<uint32_t>, {0x14, 4, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.EnumUint64NetSerializerConfig
@@ -597,9 +597,9 @@ class FEnumUint64NetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(uint64_t)                                  LowerBound                                                  ___ OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
-	DMember(uint64_t)                                  UpperBound                                                  ___ OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x20, 1, 0, 0})
+	DMember(uint64_t)                                  LowerBound                                                  OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
+	DMember(uint64_t)                                  UpperBound                                                  OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.FloatNetSerializerConfig
@@ -640,7 +640,7 @@ class FBitfieldNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      BitMask                                                     ___ OFFSET(get<char>, {0x10, 1, 0, 0})
+	DMember(char)                                      BitMask                                                     OFFSET(get<char>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ArrayPropertyNetSerializerConfig
@@ -651,8 +651,8 @@ class FArrayPropertyNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	DMember(uint16_t)                                  MaxElementCount                                             ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(uint16_t)                                  ElementCountBitCount                                        ___ OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
+	DMember(uint16_t)                                  MaxElementCount                                             OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(uint16_t)                                  ElementCountBitCount                                        OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
 };
 
 /// Struct /Script/IrisCore.LastResortPropertyNetSerializerConfig
@@ -663,7 +663,7 @@ class FLastResortPropertyNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(uint32_t)                                  MaxAllowedObjectReferences                                  ___ OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
+	DMember(uint32_t)                                  MaxAllowedObjectReferences                                  OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetRoleNetSerializerConfig
@@ -674,13 +674,13 @@ class FNetRoleNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int32_t)                                   RelativeInternalOffsetToOtherRole                           ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   RelativeExternalOffsetToOtherRole                           ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	DMember(char)                                      LowerBound                                                  ___ OFFSET(get<char>, {0x18, 1, 0, 0})
-	DMember(char)                                      UpperBound                                                  ___ OFFSET(get<char>, {0x19, 1, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x1A, 1, 0, 0})
-	DMember(char)                                      AutonomousProxyValue                                        ___ OFFSET(get<char>, {0x1B, 1, 0, 0})
-	DMember(char)                                      SimulatedProxyValue                                         ___ OFFSET(get<char>, {0x1C, 1, 0, 0})
+	DMember(int32_t)                                   RelativeInternalOffsetToOtherRole                           OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   RelativeExternalOffsetToOtherRole                           OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(char)                                      LowerBound                                                  OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(char)                                      UpperBound                                                  OFFSET(get<char>, {0x19, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x1A, 1, 0, 0})
+	DMember(char)                                      AutonomousProxyValue                                        OFFSET(get<char>, {0x1B, 1, 0, 0})
+	DMember(char)                                      SimulatedProxyValue                                         OFFSET(get<char>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.FieldPathNetSerializerConfig
@@ -701,8 +701,8 @@ class FFieldPathNetSerializerSerializationHelper : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TWeakObjectPtr<UStruct*>)                  Owner                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(TArray<FName>)                             PropertyPath                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	CMember(TWeakObjectPtr<UStruct*>)                  Owner                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(TArray<FName>)                             PropertyPath                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/IrisCore.IntNetSerializerConfig
@@ -713,7 +713,7 @@ class FIntNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x10, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Int8RangeNetSerializerConfig
@@ -724,9 +724,9 @@ class FInt8RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int8_t)                                    LowerBound                                                  ___ OFFSET(get<int8_t>, {0x10, 1, 0, 0})
-	DMember(int8_t)                                    UpperBound                                                  ___ OFFSET(get<int8_t>, {0x11, 1, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x12, 1, 0, 0})
+	DMember(int8_t)                                    LowerBound                                                  OFFSET(get<int8_t>, {0x10, 1, 0, 0})
+	DMember(int8_t)                                    UpperBound                                                  OFFSET(get<int8_t>, {0x11, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x12, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Int16RangeNetSerializerConfig
@@ -737,9 +737,9 @@ class FInt16RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(int16_t)                                   LowerBound                                                  ___ OFFSET(get<int16_t>, {0x10, 2, 0, 0})
-	DMember(int16_t)                                   UpperBound                                                  ___ OFFSET(get<int16_t>, {0x12, 2, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x14, 1, 0, 0})
+	DMember(int16_t)                                   LowerBound                                                  OFFSET(get<int16_t>, {0x10, 2, 0, 0})
+	DMember(int16_t)                                   UpperBound                                                  OFFSET(get<int16_t>, {0x12, 2, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Int32RangeNetSerializerConfig
@@ -750,9 +750,9 @@ class FInt32RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(int32_t)                                   LowerBound                                                  ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(int32_t)                                   UpperBound                                                  ___ OFFSET(get<int32_t>, {0x14, 4, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(int32_t)                                   LowerBound                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(int32_t)                                   UpperBound                                                  OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Int64RangeNetSerializerConfig
@@ -763,9 +763,9 @@ class FInt64RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(int64_t)                                   LowerBound                                                  ___ OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	DMember(int64_t)                                   UpperBound                                                  ___ OFFSET(get<int64_t>, {0x18, 8, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x20, 1, 0, 0})
+	DMember(int64_t)                                   LowerBound                                                  OFFSET(get<int64_t>, {0x10, 8, 0, 0})
+	DMember(int64_t)                                   UpperBound                                                  OFFSET(get<int64_t>, {0x18, 8, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.IrisFastArraySerializer
@@ -776,7 +776,7 @@ class FIrisFastArraySerializer : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	DMember(uint32_t)                                  ChangeMaskStorage                                           ___ OFFSET(get<uint32_t>, {0x10C, 16, 0, 0})
+	DMember(uint32_t)                                  ChangeMaskStorage                                           OFFSET(get<uint32_t>, {0x10C, 16, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetBlobHandlerDefinition
@@ -787,7 +787,7 @@ class FNetBlobHandlerDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetObjectFilterDefinition
@@ -798,9 +798,9 @@ class FNetObjectFilterDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     FilterName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     ConfigClassName                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     FilterName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ConfigClassName                                             OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetObjectPrioritizerDefinition
@@ -811,11 +811,11 @@ class FNetObjectPrioritizerDefinition : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PrioritizerName                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(UClass*)                                   Class                                                       ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     ConfigClassName                                             ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	CMember(UClass*)                                   ConfigClass                                                 ___ OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FName)                                     PrioritizerName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     ConfigClassName                                             OFFSET(get<T>, {0x10, 4, 0, 0})
+	CMember(UClass*)                                   ConfigClass                                                 OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/IrisCore.BoolNetSerializerConfig
@@ -876,7 +876,7 @@ class FScriptInterfaceNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UClass*)                                   InterfaceClass                                              ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UClass*)                                   InterfaceClass                                              OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgePollConfig
@@ -887,9 +887,9 @@ class FObjectReplicationBridgePollConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     PollFrequency                                               ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bIncludeSubclasses                                          ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     PollFrequency                                               OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bIncludeSubclasses                                          OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgeFilterConfig
@@ -900,8 +900,8 @@ class FObjectReplicationBridgeFilterConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     DynamicFilterName                                           ___ OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     DynamicFilterName                                           OFFSET(get<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgePrioritizerConfig
@@ -912,9 +912,9 @@ class FObjectReplicationBridgePrioritizerConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PrioritizerName                                             ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	DMember(bool)                                      bForceEnableOnAllInstances                                  ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PrioritizerName                                             OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bForceEnableOnAllInstances                                  OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgeDeltaCompressionConfig
@@ -925,8 +925,8 @@ class FObjectReplicationBridgeDeltaCompressionConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ClassName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bEnableDeltaCompression                                     ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bEnableDeltaCompression                                     OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.PackedInt64NetSerializerConfig
@@ -1147,7 +1147,7 @@ class FUintNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x10, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Uint8RangeNetSerializerConfig
@@ -1158,9 +1158,9 @@ class FUint8RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      LowerBound                                                  ___ OFFSET(get<char>, {0x10, 1, 0, 0})
-	DMember(char)                                      UpperBound                                                  ___ OFFSET(get<char>, {0x11, 1, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x12, 1, 0, 0})
+	DMember(char)                                      LowerBound                                                  OFFSET(get<char>, {0x10, 1, 0, 0})
+	DMember(char)                                      UpperBound                                                  OFFSET(get<char>, {0x11, 1, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x12, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Uint16RangeNetSerializerConfig
@@ -1171,9 +1171,9 @@ class FUint16RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(uint16_t)                                  LowerBound                                                  ___ OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	DMember(uint16_t)                                  UpperBound                                                  ___ OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x14, 1, 0, 0})
+	DMember(uint16_t)                                  LowerBound                                                  OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
+	DMember(uint16_t)                                  UpperBound                                                  OFFSET(get<uint16_t>, {0x12, 2, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Uint32RangeNetSerializerConfig
@@ -1184,9 +1184,9 @@ class FUint32RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	DMember(uint32_t)                                  LowerBound                                                  ___ OFFSET(get<uint32_t>, {0x10, 4, 0, 0})
-	DMember(uint32_t)                                  UpperBound                                                  ___ OFFSET(get<uint32_t>, {0x14, 4, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x18, 1, 0, 0})
+	DMember(uint32_t)                                  LowerBound                                                  OFFSET(get<uint32_t>, {0x10, 4, 0, 0})
+	DMember(uint32_t)                                  UpperBound                                                  OFFSET(get<uint32_t>, {0x14, 4, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.Uint64RangeNetSerializerConfig
@@ -1197,9 +1197,9 @@ class FUint64RangeNetSerializerConfig : public FNetSerializerConfig
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(uint64_t)                                  LowerBound                                                  ___ OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
-	DMember(uint64_t)                                  UpperBound                                                  ___ OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
-	DMember(char)                                      BitCount                                                    ___ OFFSET(get<char>, {0x20, 1, 0, 0})
+	DMember(uint64_t)                                  LowerBound                                                  OFFSET(get<uint64_t>, {0x10, 8, 0, 0})
+	DMember(uint64_t)                                  UpperBound                                                  OFFSET(get<uint64_t>, {0x18, 8, 0, 0})
+	DMember(char)                                      BitCount                                                    OFFSET(get<char>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.VectorNetSerializerConfig
@@ -1240,8 +1240,8 @@ class FSupportsStructNetSerializerConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     StructName                                                  ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bCanUseStructNetSerializer                                  ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FName)                                     StructName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bCanUseStructNetSerializer                                  OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Enum /Script/IrisCore.EDataStreamSendStatus

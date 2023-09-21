@@ -65,7 +65,7 @@ class UAudioCodecEncoderSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(int32_t)                                   Version                                                     ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/AudioExtensions.AudioEndpointSettingsBase
@@ -136,7 +136,7 @@ class USoundfieldEffectBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(USoundfieldEffectSettingsBase*)            Settings                                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(USoundfieldEffectSettingsBase*)            Settings                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/AudioExtensions.WaveformTransformationBase
@@ -157,7 +157,7 @@ class UWaveformTransformationChain : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<UWaveformTransformationBase*>)      Transformations                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<UWaveformTransformationBase*>)      Transformations                                             OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/AudioExtensions.SoundGeneratorOutput
@@ -168,7 +168,7 @@ class FSoundGeneratorOutput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/AudioExtensions.AudioParameter
@@ -179,19 +179,19 @@ class FAudioParameter : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     ParamName                                                   ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     FloatParam                                                  ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(bool)                                      BoolParam                                                   ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(int32_t)                                   IntParam                                                    ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	CMember(UObject*)                                  ObjectParam                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FString)                                   StringParam                                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<float>)                             ArrayFloatParam                                             ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<bool>)                              ArrayBoolParam                                              ___ OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<int32_t>)                           ArrayIntParam                                               ___ OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<UObject*>)                          ArrayObjectParam                                            ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FString>)                           ArrayStringParam                                            ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(EAudioParameterType)                       ParamType                                                   ___ OFFSET(get<T>, {0x78, 1, 0, 0})
-	SMember(FName)                                     TypeName                                                    ___ OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     ParamName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     FloatParam                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(bool)                                      BoolParam                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(int32_t)                                   IntParam                                                    OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	CMember(UObject*)                                  ObjectParam                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FString)                                   StringParam                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<float>)                             ArrayFloatParam                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<bool>)                              ArrayBoolParam                                              OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<int32_t>)                           ArrayIntParam                                               OFFSET(get<T>, {0x48, 16, 0, 0})
+	CMember(TArray<UObject*>)                          ArrayObjectParam                                            OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FString>)                           ArrayStringParam                                            OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(EAudioParameterType)                       ParamType                                                   OFFSET(get<T>, {0x78, 1, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x7C, 4, 0, 0})
 };
 
 /// Enum /Script/AudioExtensions.EAudioParameterType

@@ -35,8 +35,8 @@ class FNiagaraVariableCommonReference : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(UObject*)                                  UnderlyingType                                              ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(UObject*)                                  UnderlyingType                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/NiagaraCore.NiagaraCompileHash
@@ -47,7 +47,7 @@ class FNiagaraCompileHash : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<char>)                              DataHash                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<char>)                              DataHash                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/NiagaraCore.ENiagaraIterationSource

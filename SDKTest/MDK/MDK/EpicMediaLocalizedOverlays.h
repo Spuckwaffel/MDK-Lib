@@ -16,6 +16,6 @@ class UEpicMediaDownloadLocalizedOverlays : public ULocalizedOverlays
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(UMediaPlayer*)                             MediaPlayer                                                 ___ OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 

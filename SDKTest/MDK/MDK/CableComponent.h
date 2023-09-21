@@ -16,7 +16,7 @@ class ACableActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	CMember(UCableComponent*)                          CableComponent                                              ___ OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UCableComponent*)                          CableComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
 };
 
 /// Class /Script/CableComponent.CableComponent
@@ -27,25 +27,38 @@ class UCableComponent : public UMeshComponent
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	DMember(bool)                                      bAttachStart                                                ___ OFFSET(get<bool>, {0x5A0, 1, 0, 0})
-	DMember(bool)                                      bAttachEnd                                                  ___ OFFSET(get<bool>, {0x5A1, 1, 0, 0})
-	SMember(FComponentReference)                       AttachEndTo                                                 ___ OFFSET(get<T>, {0x5A8, 40, 0, 0})
-	SMember(FName)                                     AttachEndToSocketName                                       ___ OFFSET(get<T>, {0x5D0, 4, 0, 0})
-	SMember(FVector)                                   EndLocation                                                 ___ OFFSET(get<T>, {0x5D8, 24, 0, 0})
-	DMember(float)                                     CableLength                                                 ___ OFFSET(get<float>, {0x5F0, 4, 0, 0})
-	DMember(int32_t)                                   NumSegments                                                 ___ OFFSET(get<int32_t>, {0x5F4, 4, 0, 0})
-	DMember(float)                                     SubstepTime                                                 ___ OFFSET(get<float>, {0x5F8, 4, 0, 0})
-	DMember(int32_t)                                   SolverIterations                                            ___ OFFSET(get<int32_t>, {0x5FC, 4, 0, 0})
-	DMember(bool)                                      bEnableStiffness                                            ___ OFFSET(get<bool>, {0x600, 1, 0, 0})
-	DMember(bool)                                      bUseSubstepping                                             ___ OFFSET(get<bool>, {0x601, 1, 0, 0})
-	DMember(bool)                                      bSkipCableUpdateWhenNotVisible                              ___ OFFSET(get<bool>, {0x602, 1, 0, 0})
-	DMember(bool)                                      bSkipCableUpdateWhenNotOwnerRecentlyRendered                ___ OFFSET(get<bool>, {0x603, 1, 0, 0})
-	DMember(bool)                                      bEnableCollision                                            ___ OFFSET(get<bool>, {0x604, 1, 0, 0})
-	DMember(float)                                     CollisionFriction                                           ___ OFFSET(get<float>, {0x608, 4, 0, 0})
-	SMember(FVector)                                   CableForce                                                  ___ OFFSET(get<T>, {0x610, 24, 0, 0})
-	DMember(float)                                     CableGravityScale                                           ___ OFFSET(get<float>, {0x628, 4, 0, 0})
-	DMember(float)                                     CableWidth                                                  ___ OFFSET(get<float>, {0x62C, 4, 0, 0})
-	DMember(int32_t)                                   NumSides                                                    ___ OFFSET(get<int32_t>, {0x630, 4, 0, 0})
-	DMember(float)                                     TileMaterial                                                ___ OFFSET(get<float>, {0x634, 4, 0, 0})
+	DMember(bool)                                      bAttachStart                                                OFFSET(get<bool>, {0x5A0, 1, 0, 0})
+	DMember(bool)                                      bAttachEnd                                                  OFFSET(get<bool>, {0x5A1, 1, 0, 0})
+	SMember(FComponentReference)                       AttachEndTo                                                 OFFSET(get<T>, {0x5A8, 40, 0, 0})
+	SMember(FName)                                     AttachEndToSocketName                                       OFFSET(get<T>, {0x5D0, 4, 0, 0})
+	SMember(FVector)                                   EndLocation                                                 OFFSET(get<T>, {0x5D8, 24, 0, 0})
+	DMember(float)                                     CableLength                                                 OFFSET(get<float>, {0x5F0, 4, 0, 0})
+	DMember(int32_t)                                   NumSegments                                                 OFFSET(get<int32_t>, {0x5F4, 4, 0, 0})
+	DMember(float)                                     SubstepTime                                                 OFFSET(get<float>, {0x5F8, 4, 0, 0})
+	DMember(int32_t)                                   SolverIterations                                            OFFSET(get<int32_t>, {0x5FC, 4, 0, 0})
+	DMember(bool)                                      bEnableStiffness                                            OFFSET(get<bool>, {0x600, 1, 0, 0})
+	DMember(bool)                                      bUseSubstepping                                             OFFSET(get<bool>, {0x601, 1, 0, 0})
+	DMember(bool)                                      bSkipCableUpdateWhenNotVisible                              OFFSET(get<bool>, {0x602, 1, 0, 0})
+	DMember(bool)                                      bSkipCableUpdateWhenNotOwnerRecentlyRendered                OFFSET(get<bool>, {0x603, 1, 0, 0})
+	DMember(bool)                                      bEnableCollision                                            OFFSET(get<bool>, {0x604, 1, 0, 0})
+	DMember(float)                                     CollisionFriction                                           OFFSET(get<float>, {0x608, 4, 0, 0})
+	SMember(FVector)                                   CableForce                                                  OFFSET(get<T>, {0x610, 24, 0, 0})
+	DMember(float)                                     CableGravityScale                                           OFFSET(get<float>, {0x628, 4, 0, 0})
+	DMember(float)                                     CableWidth                                                  OFFSET(get<float>, {0x62C, 4, 0, 0})
+	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x630, 4, 0, 0})
+	DMember(float)                                     TileMaterial                                                OFFSET(get<float>, {0x634, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/CableComponent.CableComponent.SetAttachEndToComponent
+	// void SetAttachEndToComponent(USceneComponent* Component, FName SocketName);                                              // [0x7215f3c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CableComponent.CableComponent.SetAttachEndTo
+	// void SetAttachEndTo(AActor* Actor, FName ComponentProperty, FName SocketName);                                           // [0x7215da8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/CableComponent.CableComponent.GetCableParticleLocations
+	// void GetCableParticleLocations(TArray<FVector>& Locations);                                                              // [0x7215d0c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CableComponent.CableComponent.GetAttachedComponent
+	// USceneComponent* GetAttachedComponent();                                                                                 // [0x7215cac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/CableComponent.CableComponent.GetAttachedActor
+	// AActor* GetAttachedActor();                                                                                              // [0x7215c84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 

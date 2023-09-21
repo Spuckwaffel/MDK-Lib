@@ -2,37 +2,70 @@
 //
 
 #include <iostream>
-
-
+#include <cstdint>
+#include <Windows.h>
+#include <tlhelp32.h>
 #include "MDK/MDKImports.h"
 
+#include "Memory.h"
 
 
-#include "clas1.h"
-
-struct s
-{
-    int e = 12;
-    char unk1[0x08C0] = { 0 };
-};
-
-void f(int i = 0)
-{
-	
-}
 
 int main()
 {
+    Memory::Memory();
 
-    f();
-    s d{};
-    printf("base pointer: %p\n", &d);
-    MDKHandler::newFrame();
-    AFortWeapon world = MDKHandler::get<AFortWeapon>(&d);
-    printf("%d\n", world.bIsReloadingWeapon());
+    Memory::load("FortniteClient-Win64-Shipping.exe");
+
+    printf("base: 0x%llX\n", Memory::getBaseAddress());
+
+    if (Memory::getStatus() != Memory::loaded)
+        DebugBreak();
+
+    while(true)
+    {
+	    //cheat logic
+
+        //first make a new frame
+
+        MDKHandler::newFrame();
+
+        //get UWorld, obviously we need to read the address in the .data section fist ._.
+        UWorld world = MDKHandler::get<UWorld>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0xE762638));
+
+        if (!world)
+        {
+            puts("world not initialized!");
+            DebugBreak();
+        }
+        //dDO NOT write anything into the function parameters, they are there for other purposes
+        //(check write logic if you really wanna know)
+        printf("VTable: %p\n", world.vtable());
+
+        //follow the function to see the type the sdk defined
+        //the type in these CMember or DMember or SMember
+        //ignore these macros, they are there for the MDK
+        const auto gameInstancePtr = world.OwningGameInstance<UGameInstance*>();
+        printf("gameinstance: %p\n", gameInstancePtr);
+        if(gameInstancePtr)
+        {
+            UGameInstance gameInstance = MDKHandler::get<UGameInstance>(gameInstancePtr);
+            TArray<ULocalPlayer*> localPlayer = gameInstance.LocalPlayers<TArray<ULocalPlayer*>>();
+            printf("Localplayer count: %d\n", localPlayer.Count);
+            printf("Data: %p\n", localPlayer.Data);
+        }
+
+        getchar();
+    }
+    
+    
+
+    
+    
+    
     //UWorld world = MDKHandler::get<UWorld>(&d);
     //
-    //printf("%d\n", world.bAreConstraintsDirty());
+    //
     //
     //MDKHandler::write<UWorld, bool>(world, &UWorld::bAreConstraintsDirty, true);
     //MDKHandler::write<UWorld, int>(world, &UWorld::StreamingLevelsToConsider, 333);

@@ -16,9 +16,9 @@ class UOptimusSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(EOptimusDefaultDeformerMode)               DefaultMode                                                 ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	CMember(TWeakObjectPtr<UMeshDeformer*>)            DefaultDeformer                                             ___ OFFSET(get<T>, {0x38, 32, 0, 0})
-	CMember(TWeakObjectPtr<UMeshDeformer*>)            DefaultRecomputeTangentDeformer                             ___ OFFSET(get<T>, {0x58, 32, 0, 0})
+	CMember(EOptimusDefaultDeformerMode)               DefaultMode                                                 OFFSET(get<T>, {0x30, 1, 0, 0})
+	CMember(TWeakObjectPtr<UMeshDeformer*>)            DefaultDeformer                                             OFFSET(get<T>, {0x38, 32, 0, 0})
+	CMember(TWeakObjectPtr<UMeshDeformer*>)            DefaultRecomputeTangentDeformer                             OFFSET(get<T>, {0x58, 32, 0, 0})
 };
 
 /// Enum /Script/OptimusSettings.EOptimusDefaultDeformerMode

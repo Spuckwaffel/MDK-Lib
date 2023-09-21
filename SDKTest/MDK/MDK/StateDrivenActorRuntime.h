@@ -18,15 +18,56 @@ class UFortActorComponent_StateDriven : public UFortActorComponent_FortInteractE
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	DMember(float)                                     OverlapRadius                                               ___ OFFSET(get<float>, {0xB0, 4, 0, 0})
-	SMember(FVector)                                   SlottedItemPopOffset                                        ___ OFFSET(get<T>, {0xB8, 24, 0, 0})
-	CMember(TArray<FGameplayTagQuery>)                 VariableTagQueries                                          ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<float>)                             VariableFloats                                              ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TWeakObjectPtr<UStaticMeshComponent*>)     MeshComponentPtr                                            ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	CMember(TWeakObjectPtr<USphereComponent*>)         OverlapComponentPtr                                         ___ OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FFortItemEntry)                            SlottedItemEntry                                            ___ OFFSET(get<T>, {0x1E0, 408, 0, 0})
+	DMember(float)                                     OverlapRadius                                               OFFSET(get<float>, {0xB0, 4, 0, 0})
+	SMember(FVector)                                   SlottedItemPopOffset                                        OFFSET(get<T>, {0xB8, 24, 0, 0})
+	CMember(TArray<FGameplayTagQuery>)                 VariableTagQueries                                          OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<float>)                             VariableFloats                                              OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TWeakObjectPtr<UStaticMeshComponent*>)     MeshComponentPtr                                            OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(TWeakObjectPtr<USphereComponent*>)         OverlapComponentPtr                                         OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	SMember(FFortItemEntry)                            SlottedItemEntry                                            OFFSET(get<T>, {0x1E0, 408, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.TriggerCustomEvent
+	// void TriggerCustomEvent(FGameplayTag& EventTag);                                                                         // [0x7b7766c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.SetCurrentState
+	// void SetCurrentState(FStateDrivenState& InCurrentState);                                                                 // [0x9e5d504] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.PopSlottedItem
+	// void PopSlottedItem();                                                                                                   // [0x2d79908] Final|Native|Public|BlueprintCallable 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.PlayBurstGameplayCue
+	// void PlayBurstGameplayCue(FGameplayTag GameplayCueTag);                                                                  // [0x9e5d3b0] Final|Native|Public|BlueprintCallable|Const 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnSetupOverlapEventSettings
+	// void OnSetupOverlapEventSettings();                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnSetupInteractionEventSettings
+	// void OnSetupInteractionEventSettings();                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnSetupDamageEventSettings
+	// void OnSetupDamageEventSettings();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnResetCollisionSettings
+	// void OnResetCollisionSettings();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnMulticastStateTreeEvent
+	// void OnMulticastStateTreeEvent(FGameplayTag TransitionTag, FGameplayCueTag BurstGameplayCueTag);                         // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.OnHandleStateTreeEvent
+	// void OnHandleStateTreeEvent(FGameplayTag TransitionTag, FGameplayCueTag BurstGameplayCueTag);                            // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.HandleInteraction
+	// void HandleInteraction(ABuildingActor* SelfActor, AFortPawn* InteractingPawn);                                           // [0x5fd7ee0] Final|Native|Private 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.HandleEndOverlap
+	// void HandleEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x7544858] Final|Native|Private 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.HandleDied
+	// void HandleDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x7a60c8c] Final|Native|Private|HasDefaults 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.HandleDamaged
+	// void HandleDamaged(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x7a60c8c] Final|Native|Private|HasDefaults 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.HandleBeginOverlap
+	// void HandleBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x7544454] Final|Native|Private|HasOutParms 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.GetSlottedItemEntry
+	// FFortItemEntry GetSlottedItemEntry();                                                                                    // [0x9e5d394] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.GetSlottedItemDisplayName
+	// FText GetSlottedItemDisplayName();                                                                                       // [0x9e5d350] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.GetInteractionString
+	// FText GetInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x9e5d26c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.GetFailedInteractionString
+	// FText GetFailedInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x9e5d188] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenStateTransitions
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FStateDrivenStateTransitions : public MDKStruct
@@ -35,8 +76,8 @@ class FStateDrivenStateTransitions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              TransitionTag                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  TransitionEvents                                            ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayTag)                              TransitionTag                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  TransitionEvents                                            OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenState
@@ -47,16 +88,16 @@ class FStateDrivenState : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FString)                                   DevNotes                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(UStaticMesh*)                              StaticMesh                                                  ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	DMember(bool)                                      bApplyMeshTransform                                         ___ OFFSET(get<bool>, {0x18, 1, 0, 0})
-	SMember(FTransform)                                StaticMeshTransform                                         ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    MaterialInstances                                           ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FGameplayCueTag)                           LoopingGameplayCueTag                                       ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	DMember(float)                                     OverlapRadius                                               ___ OFFSET(get<float>, {0x94, 4, 0, 0})
-	SMember(FText)                                     InteractionStringOverride                                   ___ OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FText)                                     InteractionFailedStringOverride                             ___ OFFSET(get<T>, {0xB0, 24, 0, 0})
-	CMember(TArray<FStateDrivenStateTransitions>)      Transitions                                                 ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FString)                                   DevNotes                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(UStaticMesh*)                              StaticMesh                                                  OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(bool)                                      bApplyMeshTransform                                         OFFSET(get<bool>, {0x18, 1, 0, 0})
+	SMember(FTransform)                                StaticMeshTransform                                         OFFSET(get<T>, {0x20, 96, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    MaterialInstances                                           OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FGameplayCueTag)                           LoopingGameplayCueTag                                       OFFSET(get<T>, {0x90, 4, 0, 0})
+	DMember(float)                                     OverlapRadius                                               OFFSET(get<float>, {0x94, 4, 0, 0})
+	SMember(FText)                                     InteractionStringOverride                                   OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FText)                                     InteractionFailedStringOverride                             OFFSET(get<T>, {0xB0, 24, 0, 0})
+	CMember(TArray<FStateDrivenStateTransitions>)      Transitions                                                 OFFSET(get<T>, {0xC8, 16, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent
@@ -67,9 +108,9 @@ class FStateDrivenEvent : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayCueTag)                           BurstGameplayCue                                            ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	CMember(UClass*)                                   GameplayEffect                                              ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	CMember(UFortActorComponent_StateDriven*)          StateDrivenOwner                                            ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FGameplayCueTag)                           BurstGameplayCue                                            OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(UClass*)                                   GameplayEffect                                              OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(UFortActorComponent_StateDriven*)          StateDrivenOwner                                            OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_BeginOverlap
@@ -80,7 +121,7 @@ class FStateDrivenEvent_BeginOverlap : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FStateDrivenTagQuery)                      OverlappingActorTagQuery                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      OverlappingActorTagQuery                                    OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenTagQuery
@@ -91,7 +132,7 @@ class FStateDrivenTagQuery : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FInstancedStruct)                          InstancedTagQuery                                           ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FInstancedStruct)                          InstancedTagQuery                                           OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_InteractionBase
@@ -102,8 +143,8 @@ class FStateDrivenEvent_InteractionBase : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FStateDrivenTagQuery)                      PlayerTagQuery                                              ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FText)                                     InteractionStringOverride                                   ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      PlayerTagQuery                                              OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     InteractionStringOverride                                   OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_Conversation
@@ -114,8 +155,8 @@ class FStateDrivenEvent_Conversation : public FStateDrivenEvent_InteractionBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGameplayTag)                              ConversationEntryTag                                        ___ OFFSET(get<T>, {0x58, 4, 0, 0})
-	CMember(TWeakObjectPtr<UFortNonPlayerConversationParticipantComponent*>) ConversationComponentPtr              ___ OFFSET(get<T>, {0x5C, 8, 0, 0})
+	SMember(FGameplayTag)                              ConversationEntryTag                                        OFFSET(get<T>, {0x58, 4, 0, 0})
+	CMember(TWeakObjectPtr<UFortNonPlayerConversationParticipantComponent*>) ConversationComponentPtr              OFFSET(get<T>, {0x5C, 8, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_CustomEvent
@@ -126,7 +167,7 @@ class FStateDrivenEvent_CustomEvent : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              EventTag                                                    ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_DamageInstance
@@ -137,9 +178,9 @@ class FStateDrivenEvent_DamageInstance : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FStateDrivenTagQuery)                      InstigatorTagQuery                                          ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FStateDrivenTagQuery)                      DamageInstanceTagQuery                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	DMember(float)                                     MinimumInstanceDamage                                       ___ OFFSET(get<float>, {0x58, 4, 0, 0})
+	SMember(FStateDrivenTagQuery)                      InstigatorTagQuery                                          OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      DamageInstanceTagQuery                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	DMember(float)                                     MinimumInstanceDamage                                       OFFSET(get<float>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_DepositResource
@@ -150,8 +191,8 @@ class FStateDrivenEvent_DepositResource : public FStateDrivenEvent_InteractionBa
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TWeakObjectPtr<UFortItemDefinition*>)      DepositItem                                                 ___ OFFSET(get<T>, {0x58, 32, 0, 0})
-	DMember(int32_t)                                   DepositAmount                                               ___ OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	CMember(TWeakObjectPtr<UFortItemDefinition*>)      DepositItem                                                 OFFSET(get<T>, {0x58, 32, 0, 0})
+	DMember(int32_t)                                   DepositAmount                                               OFFSET(get<int32_t>, {0x78, 4, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_Destroy
@@ -162,8 +203,8 @@ class FStateDrivenEvent_Destroy : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FStateDrivenTagQuery)                      InstigatorTagQuery                                          ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FStateDrivenTagQuery)                      DamageInstanceTagQuery                                      ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      InstigatorTagQuery                                          OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      DamageInstanceTagQuery                                      OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_EndOverlap
@@ -174,7 +215,7 @@ class FStateDrivenEvent_EndOverlap : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FStateDrivenTagQuery)                      OverlappingActorTagQuery                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      OverlappingActorTagQuery                                    OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_InsertItem
@@ -185,7 +226,7 @@ class FStateDrivenEvent_InsertItem : public FStateDrivenEvent_InteractionBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FStateDrivenTagQuery)                      EquippedItemTagQuery                                        ___ OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FStateDrivenTagQuery)                      EquippedItemTagQuery                                        OFFSET(get<T>, {0x58, 24, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_Interaction
@@ -216,8 +257,8 @@ class FStateDrivenEvent_Timer : public FStateDrivenEvent
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FStateDrivenFloat)                         Duration                                                    ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FTimerHandle)                              TimerTransitionEventHandle                                  ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FStateDrivenFloat)                         Duration                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FTimerHandle)                              TimerTransitionEventHandle                                  OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenFloat
@@ -228,7 +269,7 @@ class FStateDrivenFloat : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FInstancedStruct)                          InstancedFloat                                              ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FInstancedStruct)                          InstancedFloat                                              OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenEvent_WithdrawItem
@@ -259,7 +300,7 @@ class FStateDrivenFloat_Simple : public FStateDrivenFloat_Base
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenFloat_Variable
@@ -270,7 +311,7 @@ class FStateDrivenFloat_Variable : public FStateDrivenFloat_Base
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   VariableIndex                                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   VariableIndex                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenTagQuery_Base
@@ -291,7 +332,7 @@ class FStateDrivenTagQuery_Simple : public FStateDrivenTagQuery_Base
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagQuery)                         Query                                                       ___ OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         Query                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
 };
 
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenTagQuery_Variable
@@ -302,7 +343,7 @@ class FStateDrivenTagQuery_Variable : public FStateDrivenTagQuery_Base
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   VariableIndex                                               ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   VariableIndex                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Enum /Script/StateDrivenActorRuntime.EStateDrivenStateID

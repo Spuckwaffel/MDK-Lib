@@ -25,7 +25,7 @@ class UBasicOverlays : public UOverlays
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FOverlayItem>)                      Overlays                                                    ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FOverlayItem>)                      Overlays                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/Overlay.LocalizedOverlays
@@ -36,8 +36,8 @@ class ULocalizedOverlays : public UOverlays
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(UBasicOverlays*)                           DefaultOverlays                                             ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TMap<FString, UBasicOverlays*>)            LocaleToOverlaysMap                                         ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(UBasicOverlays*)                           DefaultOverlays                                             OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(TMap<FString, UBasicOverlays*>)            LocaleToOverlaysMap                                         OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/Overlay.OverlayItem
@@ -48,9 +48,9 @@ class FOverlayItem : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FTimespan)                                 StartTime                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTimespan)                                 EndTime                                                     ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FString)                                   Text                                                        ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 Position                                                    ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FTimespan)                                 StartTime                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FTimespan)                                 EndTime                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FString)                                   Text                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 Position                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 

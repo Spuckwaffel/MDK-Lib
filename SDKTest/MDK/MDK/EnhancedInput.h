@@ -17,12 +17,41 @@ class UEnhancedPlayerMappableKeyProfile : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FGameplayTag)                              ProfileIdentifier                                           ___ OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FPlatformUserId)                           OwningUserId                                                ___ OFFSET(get<T>, {0x2C, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	CMember(TMap<FName, FKeyMappingRow>)               PlayerMappedKeys                                            ___ OFFSET(get<T>, {0x48, 80, 0, 0})
+	SMember(FGameplayTag)                              ProfileIdentifier                                           OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FPlatformUserId)                           OwningUserId                                                OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
+	CMember(TMap<FName, FKeyMappingRow>)               PlayerMappedKeys                                            OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.ToString
+	// FString ToString();                                                                                                      // [0x6628430] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.SetDisplayName
+	// void SetDisplayName(FText& NewDisplayName);                                                                              // [0x6627ca0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.ResetToDefault
+	// void ResetToDefault();                                                                                                   // [0x5ab4678] Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.ResetMappingToDefault
+	// void ResetMappingToDefault(FName InMappingName);                                                                         // [0x6627c20] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.QueryPlayerMappedKeys
+	// int32_t QueryPlayerMappedKeys(FPlayerMappableKeyQueryOptions& Options, TArray<FKey>& OutKeys);                           // [0x6626fe0] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.K2_FindKeyMapping
+	// void K2_FindKeyMapping(FPlayerKeyMapping& OutKeyMapping, FMapPlayerKeyArgs& InArgs);                                     // [0x6624be4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.GetProfileIdentifer
+	// FGameplayTag GetProfileIdentifer();                                                                                      // [0x5ffe568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.GetProfileDisplayName
+	// FText GetProfileDisplayName();                                                                                           // [0x6623830] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.GetPlayerMappingRows
+	// TMap<FName, FKeyMappingRow> GetPlayerMappingRows();                                                                      // [0x66237a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappingNamesForKey
+	// int32_t GetMappingNamesForKey(FKey& InKey, TArray<FName>& OutMappingNames);                                              // [0x6623508] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappedKeysInRow
+	// int32_t GetMappedKeysInRow(FName MappingName, TArray<FKey>& OutKeys);                                                    // [0x6623174] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.DumpProfileToLog
+	// void DumpProfileToLog();                                                                                                 // [0x599a338] Native|Public|BlueprintCallable|Const 
+	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.DoesMappingPassQueryOptions
+	// bool DoesMappingPassQueryOptions(FPlayerKeyMapping& PlayerMapping, FPlayerMappableKeyQueryOptions& Options);             // [0x6622974] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/EnhancedInput.EnhancedInputUserSettings
 /// Size: 0x00F8 (0x000028 - 0x000120)
 class UEnhancedInputUserSettings : public USaveGame
@@ -31,14 +60,61 @@ class UEnhancedInputUserSettings : public USaveGame
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSettingsChanged                                           ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSettingsApplied                                           ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FGameplayTag)                              CurrentProfileIdentifier                                    ___ OFFSET(get<T>, {0x70, 4, 0, 0})
-	CMember(TMap<FGameplayTag, UEnhancedPlayerMappableKeyProfile*>) SavedKeyProfiles                               ___ OFFSET(get<T>, {0x78, 80, 0, 0})
-	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	CMember(TSet<UInputMappingContext*>)               RegisteredMappingContexts                                   ___ OFFSET(get<T>, {0xD0, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSettingsChanged                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSettingsApplied                                           OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FGameplayTag)                              CurrentProfileIdentifier                                    OFFSET(get<T>, {0x70, 4, 0, 0})
+	CMember(TMap<FGameplayTag, UEnhancedPlayerMappableKeyProfile*>) SavedKeyProfiles                               OFFSET(get<T>, {0x78, 80, 0, 0})
+	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(TSet<UInputMappingContext*>)               RegisteredMappingContexts                                   OFFSET(get<T>, {0xD0, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContexts
+	// bool UnregisterInputMappingContexts(TSet<UInputMappingContext*>& MappingContexts);                                       // [0x662893c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContext
+	// bool UnregisterInputMappingContext(UInputMappingContext* IMC);                                                           // [0x66288a8] Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.UnMapPlayerKey
+	// void UnMapPlayerKey(FMapPlayerKeyArgs& InArgs, FGameplayTagContainer& FailureReason);                                    // [0x6628474] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.SetKeyProfile
+	// bool SetKeyProfile(FGameplayTag& InProfileId);                                                                           // [0x6627d40] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.SaveSettings
+	// void SaveSettings();                                                                                                     // [0x19b1658] Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.ResetKeyProfileToDefault
+	// void ResetKeyProfileToDefault(FGameplayTag& ProfileId, FGameplayTagContainer& FailureReason);                            // [0x6627b10] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.ResetAllPlayerKeysInRow
+	// void ResetAllPlayerKeysInRow(FMapPlayerKeyArgs& InArgs, FGameplayTagContainer& FailureReason);                           // [0x66279e4] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContexts
+	// bool RegisterInputMappingContexts(TSet<UInputMappingContext*>& MappingContexts);                                         // [0x6627220] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContext
+	// bool RegisterInputMappingContext(UInputMappingContext* IMC);                                                             // [0x662718c] Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.MapPlayerKey
+	// void MapPlayerKey(FMapPlayerKeyArgs& InArgs, FGameplayTagContainer& FailureReason);                                      // [0x662548c] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.MappingContextRegisteredWithSettings__DelegateSignature
+	// void MappingContextRegisteredWithSettings__DelegateSignature(UInputMappingContext* IMC);                                 // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.MappableKeyProfileChanged__DelegateSignature
+	// void MappableKeyProfileChanged__DelegateSignature(UEnhancedPlayerMappableKeyProfile* NewProfile);                        // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.IsMappingContextRegistered
+	// bool IsMappingContextRegistered(UInputMappingContext* IMC);                                                              // [0x6624828] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.GetKeyProfileWithIdentifier
+	// UEnhancedPlayerMappableKeyProfile* GetKeyProfileWithIdentifier(FGameplayTag& ProfileId);                                 // [0x6622fdc] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.GetCurrentKeyProfileIdentifier
+	// FGameplayTag GetCurrentKeyProfileIdentifier();                                                                           // [0x6622f64] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.GetCurrentKeyProfile
+	// UEnhancedPlayerMappableKeyProfile* GetCurrentKeyProfile();                                                               // [0x6622f40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.FindMappingsInRow
+	// TSet<FPlayerKeyMapping> FindMappingsInRow(FName MappingName);                                                            // [0x6622a98] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.EnhancedInputUserSettingsChanged__DelegateSignature
+	// void EnhancedInputUserSettingsChanged__DelegateSignature(UEnhancedInputUserSettings* Settings);                          // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.EnhancedInputUserSettingsApplied__DelegateSignature
+	// void EnhancedInputUserSettingsApplied__DelegateSignature();                                                              // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.CreateNewKeyProfile
+	// UEnhancedPlayerMappableKeyProfile* CreateNewKeyProfile(FPlayerMappableKeyProfileCreationArgs& InArgs);                   // [0x66228c4] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.AsyncSaveSettings
+	// void AsyncSaveSettings();                                                                                                // [0xd30dac] Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputUserSettings.ApplySettings
+	// void ApplySettings();                                                                                                    // [0x599a338] Native|Public|BlueprintCallable 
 /// Class /Script/EnhancedInput.EnhancedInputActionDelegateBinding
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UEnhancedInputActionDelegateBinding : public UInputDelegateBinding
@@ -47,7 +123,7 @@ class UEnhancedInputActionDelegateBinding : public UInputDelegateBinding
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FBlueprintEnhancedInputActionBinding>) InputActionDelegateBindings                              ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FBlueprintEnhancedInputActionBinding>) InputActionDelegateBindings                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.EnhancedInputActionValueBinding
@@ -58,7 +134,7 @@ class UEnhancedInputActionValueBinding : public UInputDelegateBinding
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FBlueprintEnhancedInputActionBinding>) InputActionValueBindings                                 ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FBlueprintEnhancedInputActionBinding>) InputActionValueBindings                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.EnhancedInputComponent
@@ -79,19 +155,19 @@ class UEnhancedInputDeveloperSettings : public UDeveloperSettingsBackedByCVars
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	CMember(TArray<FDefaultContextSetting>)            DefaultMappingContexts                                      ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FDefaultContextSetting>)            DefaultWorldSubsystemMappingContexts                        ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FPerPlatformSettings)                      PlatformSettings                                            ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   UserSettingsClass                                           ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   DefaultPlayerMappableKeyProfileClass                        ___ OFFSET(get<T>, {0x80, 32, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   DefaultWorldInputClass                                      ___ OFFSET(get<T>, {0xA0, 32, 0, 0})
-	DMember(bool)                                      bSendTriggeredEventsWhenInputIsFlushed                      ___ OFFSET(get<bool>, {0xC0, 1, 1, 0})
-	DMember(bool)                                      bEnableUserSettings                                         ___ OFFSET(get<bool>, {0xC0, 1, 1, 1})
-	DMember(bool)                                      bEnableDefaultMappingContexts                               ___ OFFSET(get<bool>, {0xC0, 1, 1, 2})
-	DMember(bool)                                      bShouldOnlyTriggerLastActionInChord                         ___ OFFSET(get<bool>, {0xC0, 1, 1, 3})
-	DMember(bool)                                      bLogOnDeprecatedConfigUsed                                  ___ OFFSET(get<bool>, {0xC0, 1, 1, 4})
-	DMember(bool)                                      bEnableWorldSubsystem                                       ___ OFFSET(get<bool>, {0xC0, 1, 1, 5})
-	DMember(bool)                                      bShouldLogAllWorldSubsystemInputs                           ___ OFFSET(get<bool>, {0xC0, 1, 1, 6})
+	CMember(TArray<FDefaultContextSetting>)            DefaultMappingContexts                                      OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FDefaultContextSetting>)            DefaultWorldSubsystemMappingContexts                        OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FPerPlatformSettings)                      PlatformSettings                                            OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   UserSettingsClass                                           OFFSET(get<T>, {0x60, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   DefaultPlayerMappableKeyProfileClass                        OFFSET(get<T>, {0x80, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   DefaultWorldInputClass                                      OFFSET(get<T>, {0xA0, 32, 0, 0})
+	DMember(bool)                                      bSendTriggeredEventsWhenInputIsFlushed                      OFFSET(get<bool>, {0xC0, 1, 1, 0})
+	DMember(bool)                                      bEnableUserSettings                                         OFFSET(get<bool>, {0xC0, 1, 1, 1})
+	DMember(bool)                                      bEnableDefaultMappingContexts                               OFFSET(get<bool>, {0xC0, 1, 1, 2})
+	DMember(bool)                                      bShouldOnlyTriggerLastActionInChord                         OFFSET(get<bool>, {0xC0, 1, 1, 3})
+	DMember(bool)                                      bLogOnDeprecatedConfigUsed                                  OFFSET(get<bool>, {0xC0, 1, 1, 4})
+	DMember(bool)                                      bEnableWorldSubsystem                                       OFFSET(get<bool>, {0xC0, 1, 1, 5})
+	DMember(bool)                                      bShouldLogAllWorldSubsystemInputs                           OFFSET(get<bool>, {0xC0, 1, 1, 6})
 };
 
 /// Class /Script/EnhancedInput.EnhancedInputLibrary
@@ -112,9 +188,14 @@ class UEnhancedInputPlatformData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<UInputMappingContext*, UInputMappingContext*>) MappingContextRedirects                            ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<UInputMappingContext*, UInputMappingContext*>) MappingContextRedirects                            OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.EnhancedInputPlatformData.GetContextRedirect
+	// UInputMappingContext* GetContextRedirect(UInputMappingContext* InContext);                                               // [0x6622e64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/EnhancedInput.EnhancedInputPlatformSettings
 /// Size: 0x0028 (0x000040 - 0x000068)
 class UEnhancedInputPlatformSettings : public UPlatformSettings
@@ -123,9 +204,9 @@ class UEnhancedInputPlatformSettings : public UPlatformSettings
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TArray<TWeakObjectPtr>)                    InputData                                                   ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	CMember(TArray<UClass*>)                           InputDataClasses                                            ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(bool)                                      bShouldLogMappingContextRedirects                           ___ OFFSET(get<bool>, {0x60, 1, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    InputData                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UClass*>)                           InputDataClasses                                            OFFSET(get<T>, {0x50, 16, 0, 0})
+	DMember(bool)                                      bShouldLogMappingContextRedirects                           OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.EnhancedInputSubsystemInterface
@@ -146,8 +227,8 @@ class UEnhancedInputLocalPlayerSubsystem : public ULocalPlayerSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FMulticastInlineDelegate)                  ControlMappingsRebuiltDelegate                              ___ OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	CMember(UEnhancedInputUserSettings*)               UserSettings                                                ___ OFFSET(get<T>, {0x1E0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ControlMappingsRebuiltDelegate                              OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	CMember(UEnhancedInputUserSettings*)               UserSettings                                                OFFSET(get<T>, {0x1E0, 8, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.EnhancedInputWorldSubsystem
@@ -158,10 +239,17 @@ class UEnhancedInputWorldSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	CMember(UEnhancedPlayerInput*)                     PlayerInput                                                 ___ OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    CurrentInputStack                                           ___ OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	CMember(UEnhancedPlayerInput*)                     PlayerInput                                                 OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    CurrentInputStack                                           OFFSET(get<T>, {0x1E8, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.EnhancedInputWorldSubsystem.RemoveActorInputComponent
+	// bool RemoveActorInputComponent(AActor* Actor);                                                                           // [0x6627308] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.EnhancedInputWorldSubsystem.AddActorInputComponent
+	// void AddActorInputComponent(AActor* Actor);                                                                              // [0x6621868] Final|Native|Public|BlueprintCallable 
 /// Class /Script/EnhancedInput.EnhancedPlayerInput
 /// Size: 0x0350 (0x000498 - 0x0007E8)
 class UEnhancedPlayerInput : public UPlayerInput
@@ -170,13 +258,13 @@ class UEnhancedPlayerInput : public UPlayerInput
 	static inline constexpr uint64_t __MDKClassSize = 2024;
 
 public:
-	CMember(TMap<UInputAction*, FKeyConsumptionOptions>) KeyConsumptionData                                        ___ OFFSET(get<T>, {0x498, 80, 0, 0})
-	CMember(TMap<UInputMappingContext*, int32_t>)      AppliedInputContexts                                        ___ OFFSET(get<T>, {0x4E8, 80, 0, 0})
-	CMember(TArray<FEnhancedActionKeyMapping>)         EnhancedActionMappings                                      ___ OFFSET(get<T>, {0x538, 16, 0, 0})
-	CMember(TMap<UInputAction*, FInputActionInstance>) ActionInstanceData                                          ___ OFFSET(get<T>, {0x598, 80, 0, 0})
-	CMember(TMap<FKey, FVector>)                       KeysPressedThisTick                                         ___ OFFSET(get<T>, {0x688, 80, 0, 0})
-	CMember(TMap<UInputAction*, FInjectedInputArray>)  InputsInjectedThisTick                                      ___ OFFSET(get<T>, {0x6D8, 80, 0, 0})
-	CMember(TSet<UInputAction*>)                       LastInjectedActions                                         ___ OFFSET(get<T>, {0x728, 80, 0, 0})
+	CMember(TMap<UInputAction*, FKeyConsumptionOptions>) KeyConsumptionData                                        OFFSET(get<T>, {0x498, 80, 0, 0})
+	CMember(TMap<UInputMappingContext*, int32_t>)      AppliedInputContexts                                        OFFSET(get<T>, {0x4E8, 80, 0, 0})
+	CMember(TArray<FEnhancedActionKeyMapping>)         EnhancedActionMappings                                      OFFSET(get<T>, {0x538, 16, 0, 0})
+	CMember(TMap<UInputAction*, FInputActionInstance>) ActionInstanceData                                          OFFSET(get<T>, {0x598, 80, 0, 0})
+	CMember(TMap<FKey, FVector>)                       KeysPressedThisTick                                         OFFSET(get<T>, {0x688, 80, 0, 0})
+	CMember(TMap<UInputAction*, FInjectedInputArray>)  InputsInjectedThisTick                                      OFFSET(get<T>, {0x6D8, 80, 0, 0})
+	CMember(TSet<UInputAction*>)                       LastInjectedActions                                         OFFSET(get<T>, {0x728, 80, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputAction
@@ -187,17 +275,17 @@ class UInputAction : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FText)                                     ActionDescription                                           ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(bool)                                      bTriggerWhenPaused                                          ___ OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bConsumeInput                                               ___ OFFSET(get<bool>, {0x49, 1, 0, 0})
-	DMember(bool)                                      bConsumesActionAndAxisMappings                              ___ OFFSET(get<bool>, {0x4A, 1, 0, 0})
-	DMember(bool)                                      bReserveAllMappings                                         ___ OFFSET(get<bool>, {0x4B, 1, 0, 0})
-	DMember(int32_t)                                   TriggerEventsThatConsumeLegacyKeys                          ___ OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	CMember(EInputActionValueType)                     ValueType                                                   ___ OFFSET(get<T>, {0x50, 1, 0, 0})
-	CMember(EInputActionAccumulationBehavior)          AccumulationBehavior                                        ___ OFFSET(get<T>, {0x51, 1, 0, 0})
-	CMember(TArray<UInputTrigger*>)                    Triggers                                                    ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<UInputModifier*>)                   Modifiers                                                   ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	CMember(UPlayerMappableKeySettings*)               PlayerMappableKeySettings                                   ___ OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FText)                                     ActionDescription                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(bool)                                      bTriggerWhenPaused                                          OFFSET(get<bool>, {0x48, 1, 0, 0})
+	DMember(bool)                                      bConsumeInput                                               OFFSET(get<bool>, {0x49, 1, 0, 0})
+	DMember(bool)                                      bConsumesActionAndAxisMappings                              OFFSET(get<bool>, {0x4A, 1, 0, 0})
+	DMember(bool)                                      bReserveAllMappings                                         OFFSET(get<bool>, {0x4B, 1, 0, 0})
+	DMember(int32_t)                                   TriggerEventsThatConsumeLegacyKeys                          OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	CMember(EInputActionValueType)                     ValueType                                                   OFFSET(get<T>, {0x50, 1, 0, 0})
+	CMember(EInputActionAccumulationBehavior)          AccumulationBehavior                                        OFFSET(get<T>, {0x51, 1, 0, 0})
+	CMember(TArray<UInputTrigger*>)                    Triggers                                                    OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<UInputModifier*>)                   Modifiers                                                   OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(UPlayerMappableKeySettings*)               PlayerMappableKeySettings                                   OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputDebugKeyDelegateBinding
@@ -208,7 +296,7 @@ class UInputDebugKeyDelegateBinding : public UInputDelegateBinding
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TArray<FBlueprintInputDebugKeyDelegateBinding>) InputDebugKeyDelegateBindings                          ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TArray<FBlueprintInputDebugKeyDelegateBinding>) InputDebugKeyDelegateBindings                          OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputMappingContext
@@ -219,10 +307,23 @@ class UInputMappingContext : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TArray<FEnhancedActionKeyMapping>)         Mappings                                                    ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FText)                                     ContextDescription                                          ___ OFFSET(get<T>, {0x40, 24, 0, 0})
+	CMember(TArray<FEnhancedActionKeyMapping>)         Mappings                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FText)                                     ContextDescription                                          OFFSET(get<T>, {0x40, 24, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.InputMappingContext.UnmapKey
+	// void UnmapKey(UInputAction* Action, FKey Key);                                                                           // [0x6628664] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.InputMappingContext.UnmapAllKeysFromAction
+	// void UnmapAllKeysFromAction(UInputAction* Action);                                                                       // [0x66285a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.InputMappingContext.UnmapAll
+	// void UnmapAll();                                                                                                         // [0x6628620] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.InputMappingContext.UnmapAction
+	// void UnmapAction(UInputAction* Action);                                                                                  // [0x66285a0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.InputMappingContext.MapKey
+	// FEnhancedActionKeyMapping MapKey(UInputAction* Action, FKey ToKey);                                                      // [0x6625230] Final|Native|Public|BlueprintCallable 
 /// Class /Script/EnhancedInput.InputModifier
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInputModifier : public UObject
@@ -241,9 +342,9 @@ class UInputModifierDeadZone : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(float)                                     LowerThreshold                                              ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     UpperThreshold                                              ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	CMember(EDeadZoneType)                             Type                                                        ___ OFFSET(get<T>, {0x30, 1, 0, 0})
+	DMember(float)                                     LowerThreshold                                              OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     UpperThreshold                                              OFFSET(get<float>, {0x2C, 4, 0, 0})
+	CMember(EDeadZoneType)                             Type                                                        OFFSET(get<T>, {0x30, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierScalar
@@ -254,7 +355,7 @@ class UInputModifierScalar : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Scalar                                                      ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Scalar                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierScaleByDeltaTime
@@ -275,9 +376,9 @@ class UInputModifierNegate : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(bool)                                      bX                                                          ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
-	DMember(bool)                                      bY                                                          ___ OFFSET(get<bool>, {0x29, 1, 0, 0})
-	DMember(bool)                                      bZ                                                          ___ OFFSET(get<bool>, {0x2A, 1, 0, 0})
+	DMember(bool)                                      bX                                                          OFFSET(get<bool>, {0x28, 1, 0, 0})
+	DMember(bool)                                      bY                                                          OFFSET(get<bool>, {0x29, 1, 0, 0})
+	DMember(bool)                                      bZ                                                          OFFSET(get<bool>, {0x2A, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierSmooth
@@ -298,7 +399,7 @@ class UInputModifierResponseCurveExponential : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   CurveExponent                                               ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   CurveExponent                                               OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierResponseCurveUser
@@ -309,9 +410,9 @@ class UInputModifierResponseCurveUser : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UCurveFloat*)                              ResponseX                                                   ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UCurveFloat*)                              ResponseY                                                   ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(UCurveFloat*)                              ResponseZ                                                   ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UCurveFloat*)                              ResponseX                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UCurveFloat*)                              ResponseY                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UCurveFloat*)                              ResponseZ                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierFOVScaling
@@ -322,8 +423,8 @@ class UInputModifierFOVScaling : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	DMember(float)                                     FOVScale                                                    ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	CMember(EFOVScalingType)                           FOVScalingType                                              ___ OFFSET(get<T>, {0x2C, 1, 0, 0})
+	DMember(float)                                     FOVScale                                                    OFFSET(get<float>, {0x28, 4, 0, 0})
+	CMember(EFOVScalingType)                           FOVScalingType                                              OFFSET(get<T>, {0x2C, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputModifierToWorldSpace
@@ -344,7 +445,7 @@ class UInputModifierSwizzleAxis : public UInputModifier
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EInputAxisSwizzle)                         Order                                                       ___ OFFSET(get<T>, {0x28, 1, 0, 0})
+	CMember(EInputAxisSwizzle)                         Order                                                       OFFSET(get<T>, {0x28, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTrigger
@@ -355,11 +456,20 @@ class UInputTrigger : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	DMember(float)                                     ActuationThreshold                                          ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(bool)                                      bShouldAlwaysTick                                           ___ OFFSET(get<bool>, {0x2C, 1, 0, 0})
-	SMember(FInputActionValue)                         LastValue                                                   ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(float)                                     ActuationThreshold                                          OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(bool)                                      bShouldAlwaysTick                                           OFFSET(get<bool>, {0x2C, 1, 0, 0})
+	SMember(FInputActionValue)                         LastValue                                                   OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.InputTrigger.UpdateState
+	// ETriggerState UpdateState(UEnhancedPlayerInput* PlayerInput, FInputActionValue ModifiedValue, float DeltaTime);          // [0x6628a24] Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Script/EnhancedInput.InputTrigger.IsActuated
+	// bool IsActuated(FInputActionValue& ForValue);                                                                            // [0x662476c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.InputTrigger.GetTriggerType
+	// ETriggerType GetTriggerType();                                                                                           // [0x2d779a4] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 /// Class /Script/EnhancedInput.InputTriggerTimedBase
 /// Size: 0x0008 (0x000050 - 0x000058)
 class UInputTriggerTimedBase : public UInputTrigger
@@ -368,8 +478,8 @@ class UInputTriggerTimedBase : public UInputTrigger
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(float)                                     HeldDuration                                                ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(bool)                                      bAffectedByTimeDilation                                     ___ OFFSET(get<bool>, {0x54, 1, 0, 0})
+	DMember(float)                                     HeldDuration                                                OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bAffectedByTimeDilation                                     OFFSET(get<bool>, {0x54, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerDown
@@ -410,8 +520,8 @@ class UInputTriggerHold : public UInputTriggerTimedBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	DMember(float)                                     HoldTimeThreshold                                           ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(bool)                                      bIsOneShot                                                  ___ OFFSET(get<bool>, {0x60, 1, 0, 0})
+	DMember(float)                                     HoldTimeThreshold                                           OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(bool)                                      bIsOneShot                                                  OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerHoldAndRelease
@@ -422,7 +532,7 @@ class UInputTriggerHoldAndRelease : public UInputTriggerTimedBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(float)                                     HoldTimeThreshold                                           ___ OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     HoldTimeThreshold                                           OFFSET(get<float>, {0x58, 4, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerTap
@@ -433,7 +543,7 @@ class UInputTriggerTap : public UInputTriggerTimedBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	DMember(float)                                     TapReleaseTimeThreshold                                     ___ OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     TapReleaseTimeThreshold                                     OFFSET(get<float>, {0x58, 4, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerPulse
@@ -444,9 +554,9 @@ class UInputTriggerPulse : public UInputTriggerTimedBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	DMember(bool)                                      bTriggerOnStart                                             ___ OFFSET(get<bool>, {0x5C, 1, 0, 0})
-	DMember(float)                                     Interval                                                    ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   TriggerLimit                                                ___ OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	DMember(bool)                                      bTriggerOnStart                                             OFFSET(get<bool>, {0x5C, 1, 0, 0})
+	DMember(float)                                     Interval                                                    OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   TriggerLimit                                                OFFSET(get<int32_t>, {0x64, 4, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerChordAction
@@ -457,7 +567,7 @@ class UInputTriggerChordAction : public UInputTrigger
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UInputAction*)                             ChordAction                                                 ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UInputAction*)                             ChordAction                                                 OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.InputTriggerChordBlocker
@@ -478,10 +588,10 @@ class UInputTriggerCombo : public UInputTrigger
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(int32_t)                                   CurrentComboStepIndex                                       ___ OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-	DMember(float)                                     CurrentTimeBetweenComboSteps                                ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	CMember(TArray<FInputComboStepData>)               ComboActions                                                ___ OFFSET(get<T>, {0x58, 16, 0, 0})
-	CMember(TArray<FInputCancelAction>)                InputCancelActions                                          ___ OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(int32_t)                                   CurrentComboStepIndex                                       OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	DMember(float)                                     CurrentTimeBetweenComboSteps                                OFFSET(get<float>, {0x54, 4, 0, 0})
+	CMember(TArray<FInputComboStepData>)               ComboActions                                                OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FInputCancelAction>)                InputCancelActions                                          OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Class /Script/EnhancedInput.PlayerMappableInputConfig
@@ -492,13 +602,34 @@ class UPlayerMappableInputConfig : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     ConfigName                                                  ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FText)                                     ConfigDisplayName                                           ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	DMember(bool)                                      bIsDeprecated                                               ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	CMember(UObject*)                                  MetaData                                                    ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(TMap<UInputMappingContext*, int32_t>)      Contexts                                                    ___ OFFSET(get<T>, {0x60, 80, 0, 0})
+	SMember(FName)                                     ConfigName                                                  OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FText)                                     ConfigDisplayName                                           OFFSET(get<T>, {0x38, 24, 0, 0})
+	DMember(bool)                                      bIsDeprecated                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
+	CMember(UObject*)                                  MetaData                                                    OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(TMap<UInputMappingContext*, int32_t>)      Contexts                                                    OFFSET(get<T>, {0x60, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.ResetToDefault
+	// void ResetToDefault();                                                                                                   // [0x2d79908] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.IsDeprecated
+	// bool IsDeprecated();                                                                                                     // [0x5960460] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetPlayerMappableKeys
+	// TArray<FEnhancedActionKeyMapping> GetPlayerMappableKeys();                                                               // [0x6623764] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetMetadata
+	// UObject* GetMetadata();                                                                                                  // [0x6623694] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetMappingContexts
+	// TMap<UInputMappingContext*, int32_t> GetMappingContexts();                                                               // [0x66233b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetMappingByName
+	// FEnhancedActionKeyMapping GetMappingByName(FName MappingName);                                                           // [0x6623300] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetKeysBoundToAction
+	// TArray<FEnhancedActionKeyMapping> GetKeysBoundToAction(UInputAction* InAction);                                          // [0x662307c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetDisplayName
+	// FText GetDisplayName();                                                                                                  // [0x6622f90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetConfigName
+	// FName GetConfigName();                                                                                                   // [0x597e8bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/EnhancedInput.PlayerMappableKeySettings
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UPlayerMappableKeySettings : public UObject
@@ -507,11 +638,11 @@ class UPlayerMappableKeySettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	CMember(UObject*)                                  MetaData                                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FText)                                     DisplayCategory                                             ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     SupportedKeyProfiles                                        ___ OFFSET(get<T>, {0x68, 32, 0, 0})
+	CMember(UObject*)                                  MetaData                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FText)                                     DisplayCategory                                             OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     SupportedKeyProfiles                                        OFFSET(get<T>, {0x68, 32, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.InputActionValue
@@ -532,11 +663,11 @@ class FPlayerMappableKeyProfileCreationArgs : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UClass*)                                   ProfileType                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              ProfileIdentifier                                           ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FPlatformUserId)                           UserId                                                      ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	DMember(bool)                                      bSetAsCurrentProfile                                        ___ OFFSET(get<bool>, {0x28, 1, 1, 0})
+	CMember(UClass*)                                   ProfileType                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              ProfileIdentifier                                           OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FPlatformUserId)                           UserId                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	DMember(bool)                                      bSetAsCurrentProfile                                        OFFSET(get<bool>, {0x28, 1, 1, 0})
 };
 
 /// Struct /Script/EnhancedInput.PlayerKeyMapping
@@ -547,15 +678,15 @@ class FPlayerKeyMapping : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     MappingName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FText)                                     DisplayCategory                                             ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	CMember(EPlayerMappableKeySlot)                    Slot                                                        ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bIsDirty                                                    ___ OFFSET(get<bool>, {0x39, 1, 1, 0})
-	SMember(FKey)                                      DefaultKey                                                  ___ OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FKey)                                      CurrentKey                                                  ___ OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FHardwareDeviceIdentifier)                 HardwareDeviceId                                            ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(UInputAction*)                             AssociatedInputAction                                       ___ OFFSET(get<T>, {0x80, 8, 0, 0})
+	SMember(FName)                                     MappingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     DisplayCategory                                             OFFSET(get<T>, {0x20, 24, 0, 0})
+	CMember(EPlayerMappableKeySlot)                    Slot                                                        OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bIsDirty                                                    OFFSET(get<bool>, {0x39, 1, 1, 0})
+	SMember(FKey)                                      DefaultKey                                                  OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FKey)                                      CurrentKey                                                  OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FHardwareDeviceIdentifier)                 HardwareDeviceId                                            OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(UInputAction*)                             AssociatedInputAction                                       OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.MapPlayerKeyArgs
@@ -566,13 +697,13 @@ class FMapPlayerKeyArgs : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     MappingName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(EPlayerMappableKeySlot)                    Slot                                                        ___ OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FKey)                                      NewKey                                                      ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FName)                                     HardwareDeviceId                                            ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FGameplayTag)                              ProfileId                                                   ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bCreateMatchingSlotIfNeeded                                 ___ OFFSET(get<bool>, {0x28, 1, 1, 0})
-	DMember(bool)                                      bDeferOnSettingsChangedBroadcast                            ___ OFFSET(get<bool>, {0x28, 1, 1, 1})
+	SMember(FName)                                     MappingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(EPlayerMappableKeySlot)                    Slot                                                        OFFSET(get<T>, {0x4, 1, 0, 0})
+	SMember(FKey)                                      NewKey                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     HardwareDeviceId                                            OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              ProfileId                                                   OFFSET(get<T>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bCreateMatchingSlotIfNeeded                                 OFFSET(get<bool>, {0x28, 1, 1, 0})
+	DMember(bool)                                      bDeferOnSettingsChangedBroadcast                            OFFSET(get<bool>, {0x28, 1, 1, 1})
 };
 
 /// Struct /Script/EnhancedInput.InputActionInstance
@@ -583,13 +714,13 @@ class FInputActionInstance : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(UInputAction*)                             SourceAction                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(ETriggerEvent)                             TriggerEvent                                                ___ OFFSET(get<T>, {0x13, 1, 0, 0})
-	DMember(float)                                     LastTriggeredWorldTime                                      ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	CMember(TArray<UInputTrigger*>)                    Triggers                                                    ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(TArray<UInputModifier*>)                   Modifiers                                                   ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(float)                                     ElapsedProcessedTime                                        ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     ElapsedTriggeredTime                                        ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
+	CMember(UInputAction*)                             SourceAction                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(ETriggerEvent)                             TriggerEvent                                                OFFSET(get<T>, {0x13, 1, 0, 0})
+	DMember(float)                                     LastTriggeredWorldTime                                      OFFSET(get<float>, {0x14, 4, 0, 0})
+	CMember(TArray<UInputTrigger*>)                    Triggers                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<UInputModifier*>)                   Modifiers                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(float)                                     ElapsedProcessedTime                                        OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     ElapsedTriggeredTime                                        OFFSET(get<float>, {0x5C, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.KeyMappingRow
@@ -600,7 +731,7 @@ class FKeyMappingRow : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TSet<FPlayerKeyMapping>)                   Mappings                                                    ___ OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TSet<FPlayerKeyMapping>)                   Mappings                                                    OFFSET(get<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.PlayerMappableKeyQueryOptions
@@ -611,13 +742,13 @@ class FPlayerMappableKeyQueryOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     MappingName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FKey)                                      KeyToMatch                                                  ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(EPlayerMappableKeySlot)                    SlotToMatch                                                 ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bMatchBasicKeyTypes                                         ___ OFFSET(get<bool>, {0x21, 1, 1, 0})
-	DMember(bool)                                      bMatchKeyAxisType                                           ___ OFFSET(get<bool>, {0x21, 1, 1, 1})
-	CMember(EHardwareDevicePrimaryType)                RequiredDeviceType                                          ___ OFFSET(get<T>, {0x22, 1, 0, 0})
-	DMember(int32_t)                                   RequiredDeviceFlags                                         ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	SMember(FName)                                     MappingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FKey)                                      KeyToMatch                                                  OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(EPlayerMappableKeySlot)                    SlotToMatch                                                 OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bMatchBasicKeyTypes                                         OFFSET(get<bool>, {0x21, 1, 1, 0})
+	DMember(bool)                                      bMatchKeyAxisType                                           OFFSET(get<bool>, {0x21, 1, 1, 1})
+	CMember(EHardwareDevicePrimaryType)                RequiredDeviceType                                          OFFSET(get<T>, {0x22, 1, 0, 0})
+	DMember(int32_t)                                   RequiredDeviceFlags                                         OFFSET(get<int32_t>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.MappingQueryIssue
@@ -628,9 +759,9 @@ class FMappingQueryIssue : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(EMappingQueryIssue)                        Issue                                                       ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(UInputMappingContext*)                     BlockingContext                                             ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	CMember(UInputAction*)                             BlockingAction                                              ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(EMappingQueryIssue)                        Issue                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(UInputMappingContext*)                     BlockingContext                                             OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UInputAction*)                             BlockingAction                                              OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.PlayerMappableKeySlot
@@ -641,7 +772,7 @@ class FPlayerMappableKeySlot : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(int32_t)                                   SlotNumber                                                  ___ OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   SlotNumber                                                  OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.PlayerMappableKeyOptions
@@ -652,10 +783,10 @@ class FPlayerMappableKeyOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UObject*)                                  MetaData                                                    ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 ___ OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FText)                                     DisplayCategory                                             ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	CMember(UObject*)                                  MetaData                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FText)                                     DisplayCategory                                             OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.EnhancedActionKeyMapping
@@ -666,13 +797,13 @@ class FEnhancedActionKeyMapping : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TArray<UInputTrigger*>)                    Triggers                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<UInputModifier*>)                   Modifiers                                                   ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(UInputAction*)                             Action                                                      ___ OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FKey)                                      Key                                                         ___ OFFSET(get<T>, {0x28, 24, 0, 0})
-	DMember(bool)                                      bShouldBeIgnored                                            ___ OFFSET(get<bool>, {0x40, 1, 1, 0})
-	CMember(EPlayerMappableKeySettingBehaviors)        SettingBehavior                                             ___ OFFSET(get<T>, {0x41, 1, 0, 0})
-	CMember(UPlayerMappableKeySettings*)               PlayerMappableKeySettings                                   ___ OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(TArray<UInputTrigger*>)                    Triggers                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<UInputModifier*>)                   Modifiers                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(UInputAction*)                             Action                                                      OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x28, 24, 0, 0})
+	DMember(bool)                                      bShouldBeIgnored                                            OFFSET(get<bool>, {0x40, 1, 1, 0})
+	CMember(EPlayerMappableKeySettingBehaviors)        SettingBehavior                                             OFFSET(get<T>, {0x41, 1, 0, 0})
+	CMember(UPlayerMappableKeySettings*)               PlayerMappableKeySettings                                   OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.BlueprintEnhancedInputActionBinding
@@ -683,9 +814,9 @@ class FBlueprintEnhancedInputActionBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UInputAction*)                             InputAction                                                 ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(ETriggerEvent)                             TriggerEvent                                                ___ OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FName)                                     FunctionNameToBind                                          ___ OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(UInputAction*)                             InputAction                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(ETriggerEvent)                             TriggerEvent                                                OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(FName)                                     FunctionNameToBind                                          OFFSET(get<T>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.DefaultContextSetting
@@ -696,8 +827,8 @@ class FDefaultContextSetting : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TWeakObjectPtr<UInputMappingContext*>)     InputMappingContext                                         ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	DMember(int32_t)                                   Priority                                                    ___ OFFSET(get<int32_t>, {0x20, 4, 0, 0})
+	CMember(TWeakObjectPtr<UInputMappingContext*>)     InputMappingContext                                         OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.ModifyContextOptions
@@ -708,9 +839,9 @@ class FModifyContextOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	DMember(bool)                                      bIgnoreAllPressedKeysUntilRelease                           ___ OFFSET(get<bool>, {0x0, 1, 1, 0})
-	DMember(bool)                                      bForceImmediately                                           ___ OFFSET(get<bool>, {0x0, 1, 1, 1})
-	DMember(bool)                                      bNotifyUserSettings                                         ___ OFFSET(get<bool>, {0x0, 1, 1, 2})
+	DMember(bool)                                      bIgnoreAllPressedKeysUntilRelease                           OFFSET(get<bool>, {0x0, 1, 1, 0})
+	DMember(bool)                                      bForceImmediately                                           OFFSET(get<bool>, {0x0, 1, 1, 1})
+	DMember(bool)                                      bNotifyUserSettings                                         OFFSET(get<bool>, {0x0, 1, 1, 2})
 };
 
 /// Struct /Script/EnhancedInput.KeyConsumptionOptions
@@ -741,10 +872,10 @@ class FBlueprintInputDebugKeyDelegateBinding : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FInputChord)                               InputChord                                                  ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	CMember(TEnumAsByte<EInputEvent>)                  InputKeyEvent                                               ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FName)                                     FunctionNameToBind                                          ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	DMember(bool)                                      bExecuteWhenPaused                                          ___ OFFSET(get<bool>, {0x28, 1, 0, 0})
+	SMember(FInputChord)                               InputChord                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TEnumAsByte<EInputEvent>)                  InputKeyEvent                                               OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FName)                                     FunctionNameToBind                                          OFFSET(get<T>, {0x24, 4, 0, 0})
+	DMember(bool)                                      bExecuteWhenPaused                                          OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.InputComboStepData
@@ -755,9 +886,9 @@ class FInputComboStepData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UInputAction*)                             ComboStepAction                                             ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(char)                                      ComboStepCompletionStates                                   ___ OFFSET(get<char>, {0x8, 1, 0, 0})
-	DMember(float)                                     TimeToPressKey                                              ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	CMember(UInputAction*)                             ComboStepAction                                             OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(char)                                      ComboStepCompletionStates                                   OFFSET(get<char>, {0x8, 1, 0, 0})
+	DMember(float)                                     TimeToPressKey                                              OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/EnhancedInput.InputCancelAction
@@ -768,8 +899,8 @@ class FInputCancelAction : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(UInputAction*)                             CancelAction                                                ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(char)                                      CancellationStates                                          ___ OFFSET(get<char>, {0x8, 1, 0, 0})
+	CMember(UInputAction*)                             CancelAction                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(char)                                      CancellationStates                                          OFFSET(get<char>, {0x8, 1, 0, 0})
 };
 
 /// Enum /Script/EnhancedInput.EPlayerMappableKeySlot

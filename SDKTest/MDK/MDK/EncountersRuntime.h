@@ -24,7 +24,7 @@ class AEncounterMobAnchor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	SMember(FGameplayTagContainer)                     FilterTags                                                  ___ OFFSET(get<T>, {0x290, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FilterTags                                                  OFFSET(get<T>, {0x290, 32, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterMobManagerComponent
@@ -35,20 +35,51 @@ class UEncounterMobManagerComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	CMember(TArray<FEncounterMobInstance>)             SpawnedMobs                                                 ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TArray<FEncounterMobSpawnData>)            MobEncounterSpawnData                                       ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FEncounterMobSpawnInfo)                    DefaultMobSpawnInfo                                         ___ OFFSET(get<T>, {0xC0, 160, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityWeight                                            ___ OFFSET(get<T>, {0x160, 40, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityRange                                             ___ OFFSET(get<T>, {0x188, 40, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterStarted                                          ___ OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterPaused                                           ___ OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterResumed                                          ___ OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterActorSpawned                                     ___ OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterActorDead                                        ___ OFFSET(get<T>, {0x1F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterEnded                                            ___ OFFSET(get<T>, {0x200, 16, 0, 0})
-	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          ___ OFFSET(get<T>, {0x210, 8, 0, 0})
+	CMember(TArray<FEncounterMobInstance>)             SpawnedMobs                                                 OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FEncounterMobSpawnData>)            MobEncounterSpawnData                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FEncounterMobSpawnInfo)                    DefaultMobSpawnInfo                                         OFFSET(get<T>, {0xC0, 160, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(get<T>, {0x160, 40, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(get<T>, {0x188, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterStarted                                          OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterPaused                                           OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterResumed                                          OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterActorSpawned                                     OFFSET(get<T>, {0x1E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterActorDead                                        OFFSET(get<T>, {0x1F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterEnded                                            OFFSET(get<T>, {0x200, 16, 0, 0})
+	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          OFFSET(get<T>, {0x210, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.StartMobEncounter
+	// bool StartMobEncounter(FGameplayTag& MobIdentifier);                                                                     // [0x9b79e90] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.ResumeMobEncounter
+	// void ResumeMobEncounter(FGameplayTag& MobIdentifier);                                                                    // [0x9b79e04] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.PauseMobEncounter
+	// void PauseMobEncounter(FGameplayTag& MobIdentifier);                                                                     // [0x9b79cf4] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnMobPawnEndPlay
+	// void OnMobPawnEndPlay(AActor* Mob, TEnumAsByte<EEndPlayReason> EndPlayReason);                                           // [0x9b799f0] Final|Native|Private 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnMobActorSpawn
+	// void OnMobActorSpawn(AActor* SpawnedActor);                                                                              // [0x9b7955c] Final|Native|Private 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnMobActorDied
+	// void OnMobActorDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* HitComponent, FName BoneName, FVector Momentum); // [0x9b78a38] Final|Native|Private|HasDefaults 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterStarted__DelegateSignature
+	// void OnEncounterStarted__DelegateSignature(FGameplayTag MobIdentifier);                                                  // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterResumed__DelegateSignature
+	// void OnEncounterResumed__DelegateSignature(FGameplayTag MobIdentifier);                                                  // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterPaused__DelegateSignature
+	// void OnEncounterPaused__DelegateSignature(FGameplayTag MobIdentifier);                                                   // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterEnded__DelegateSignature
+	// void OnEncounterEnded__DelegateSignature(FGameplayTag MobIdentifier);                                                    // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterActorSpawned__DelegateSignature
+	// void OnEncounterActorSpawned__DelegateSignature(FGameplayTag MobIdentifier, AActor* SpawnedActor);                       // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.OnEncounterActorDead__DelegateSignature
+	// void OnEncounterActorDead__DelegateSignature(FGameplayTag MobIdentifier, AActor* DamagedActor, AActor* DamageCauser);    // [0x1ebf994] MulticastDelegate|Public|Delegate 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.EndMobEncounter
+	// void EndMobEncounter(FGameplayTag& MobIdentifier);                                                                       // [0x9b78370] Final|RequiredAPI|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.EndAndCleanupAllMobEncounters
+	// void EndAndCleanupAllMobEncounters();                                                                                    // [0x9b7835c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 /// Class /Script/EncountersRuntime.StartLWMEncounterDelegateHandler
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UStartLWMEncounterDelegateHandler : public UObject
@@ -67,7 +98,7 @@ class UEncounterActorSpawnerData : public UFortAthenaActorSpawnerData
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FEncounterPrefabEntry)                     EncounterEntry                                              ___ OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FEncounterPrefabEntry)                     EncounterEntry                                              OFFSET(get<T>, {0x50, 56, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterBlueprintLibrary
@@ -88,11 +119,18 @@ class AEncounterGameplayVolume : public AGameplayVolume
 	static inline constexpr uint64_t __MDKClassSize = 936;
 
 public:
-	DMember(bool)                                      bShouldPersist                                              ___ OFFSET(get<bool>, {0x348, 1, 0, 0})
-	SMember(FGuid)                                     SavedActorGuid                                              ___ OFFSET(get<T>, {0x368, 16, 0, 0})
-	CMember(UEncounterStateTreeComponent*)             EncounterStateTreeComponent                                 ___ OFFSET(get<T>, {0x378, 8, 0, 0})
+	DMember(bool)                                      bShouldPersist                                              OFFSET(get<bool>, {0x348, 1, 0, 0})
+	SMember(FGuid)                                     SavedActorGuid                                              OFFSET(get<T>, {0x368, 16, 0, 0})
+	CMember(UEncounterStateTreeComponent*)             EncounterStateTreeComponent                                 OFFSET(get<T>, {0x378, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EncountersRuntime.EncounterGameplayVolume.OnCleanup
+	// void OnCleanup();                                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Script/EncountersRuntime.EncounterGameplayVolume.IsDoneCleaningUp
+	// bool IsDoneCleaningUp();                                                                                                 // [0x986e4c8] Native|Event|Public|BlueprintEvent|Const 
 /// Class /Script/EncountersRuntime.EncounterItem
 /// Size: 0x0020 (0x000088 - 0x0000A8)
 class UEncounterItem : public UFortItem
@@ -101,9 +139,9 @@ class UEncounterItem : public UFortItem
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(UEncounterItemDefinition*)                 EncounterItemDefinition                                     ___ OFFSET(get<T>, {0x88, 8, 0, 0})
-	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	CMember(TWeakObjectPtr<UEncounterManagerComponent*>) EncounterManager                                          ___ OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(UEncounterItemDefinition*)                 EncounterItemDefinition                                     OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(TWeakObjectPtr<UEncounterManagerComponent*>) EncounterManager                                          OFFSET(get<T>, {0x98, 8, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterItemDefinition
@@ -114,22 +152,22 @@ class UEncounterItemDefinition : public UFortItemDefinition
 	static inline constexpr uint64_t __MDKClassSize = 1200;
 
 public:
-	DMember(bool)                                      bAutoHandleSuccessFailure                                   ___ OFFSET(get<bool>, {0x378, 1, 0, 0})
-	CMember(TWeakObjectPtr<UWorld*>)                   Level                                                       ___ OFFSET(get<T>, {0x380, 32, 0, 0})
-	CMember(UStateTree*)                               StateTreeOverride                                           ___ OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	SMember(FGameplayCueTag)                           ProximityGameplayCueTag                                     ___ OFFSET(get<T>, {0x3A8, 4, 0, 0})
-	SMember(FGameplayCueTag)                           ActorCleanupGameplayCueTag                                  ___ OFFSET(get<T>, {0x3AC, 4, 0, 0})
-	CMember(TArray<FName>)                             SuccessRewards                                              ___ OFFSET(get<T>, {0x3B0, 16, 0, 0})
-	SMember(FEncounterRewardBehavior)                  SuccessRewardBehavior                                       ___ OFFSET(get<T>, {0x3C0, 56, 0, 0})
-	SMember(FGameplayCueTag)                           ActorSuccessGameplayCueTag                                  ___ OFFSET(get<T>, {0x3F8, 4, 0, 0})
-	SMember(FGameplayCueTag)                           PlayerSuccessGameplayCueTag                                 ___ OFFSET(get<T>, {0x3FC, 4, 0, 0})
-	CMember(TArray<FName>)                             FailureRewards                                              ___ OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(FEncounterRewardBehavior)                  FailureRewardBehavior                                       ___ OFFSET(get<T>, {0x410, 56, 0, 0})
-	SMember(FGameplayCueTag)                           ActorFailureGameplayCueTag                                  ___ OFFSET(get<T>, {0x448, 4, 0, 0})
-	SMember(FGameplayCueTag)                           PlayerFailureGameplayCueTag                                 ___ OFFSET(get<T>, {0x44C, 4, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityWeight                                            ___ OFFSET(get<T>, {0x450, 40, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityRange                                             ___ OFFSET(get<T>, {0x478, 40, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  Vars                                                        ___ OFFSET(get<T>, {0x4A0, 16, 0, 0})
+	DMember(bool)                                      bAutoHandleSuccessFailure                                   OFFSET(get<bool>, {0x378, 1, 0, 0})
+	CMember(TWeakObjectPtr<UWorld*>)                   Level                                                       OFFSET(get<T>, {0x380, 32, 0, 0})
+	CMember(UStateTree*)                               StateTreeOverride                                           OFFSET(get<T>, {0x3A0, 8, 0, 0})
+	SMember(FGameplayCueTag)                           ProximityGameplayCueTag                                     OFFSET(get<T>, {0x3A8, 4, 0, 0})
+	SMember(FGameplayCueTag)                           ActorCleanupGameplayCueTag                                  OFFSET(get<T>, {0x3AC, 4, 0, 0})
+	CMember(TArray<FName>)                             SuccessRewards                                              OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	SMember(FEncounterRewardBehavior)                  SuccessRewardBehavior                                       OFFSET(get<T>, {0x3C0, 56, 0, 0})
+	SMember(FGameplayCueTag)                           ActorSuccessGameplayCueTag                                  OFFSET(get<T>, {0x3F8, 4, 0, 0})
+	SMember(FGameplayCueTag)                           PlayerSuccessGameplayCueTag                                 OFFSET(get<T>, {0x3FC, 4, 0, 0})
+	CMember(TArray<FName>)                             FailureRewards                                              OFFSET(get<T>, {0x400, 16, 0, 0})
+	SMember(FEncounterRewardBehavior)                  FailureRewardBehavior                                       OFFSET(get<T>, {0x410, 56, 0, 0})
+	SMember(FGameplayCueTag)                           ActorFailureGameplayCueTag                                  OFFSET(get<T>, {0x448, 4, 0, 0})
+	SMember(FGameplayCueTag)                           PlayerFailureGameplayCueTag                                 OFFSET(get<T>, {0x44C, 4, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(get<T>, {0x450, 40, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(get<T>, {0x478, 40, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  Vars                                                        OFFSET(get<T>, {0x4A0, 16, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterManagerComponent
@@ -140,12 +178,39 @@ class UEncounterManagerComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(TWeakObjectPtr<AEncounterGameplayVolume*>) EncounterVolume                                             ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   CenterActorOverride                                         ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	CMember(TSet<APlayerController*>)                  ExplicitContributors                                        ___ OFFSET(get<T>, {0xB0, 80, 0, 0})
-	CMember(TWeakObjectPtr<UEncounterItem*>)           EncounterItem                                               ___ OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(TWeakObjectPtr<AEncounterGameplayVolume*>) EncounterVolume                                             OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   CenterActorOverride                                         OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(TSet<APlayerController*>)                  ExplicitContributors                                        OFFSET(get<T>, {0xB0, 80, 0, 0})
+	CMember(TWeakObjectPtr<UEncounterItem*>)           EncounterItem                                               OFFSET(get<T>, {0x100, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.RemoveExplicitContributor
+	// void RemoveExplicitContributor(APlayerController* Contributor);                                                          // [0x9b79d80] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.OnStateTreeStatusChanged
+	// void OnStateTreeStatusChanged(EStateTreeRunStatus Status);                                                               // [0x9b79c74] Final|Native|Private 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.HandleEncounterSuccess
+	// void HandleEncounterSuccess(int32_t RewardIndex);                                                                        // [0x9b789b8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.HandleEncounterFailure
+	// void HandleEncounterFailure(int32_t RewardIndex);                                                                        // [0x9b78938] Final|Native|Public|BlueprintCallable 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_TagQuery
+	// FGameplayTagQuery GetVariable_TagQuery(FGameplayTag& VarName);                                                           // [0x9b78880] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_LWMEncounter
+	// UFortAthenaLivingWorldEncounter* GetVariable_LWMEncounter(FGameplayTag& VarName);                                        // [0x9b787e8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_ItemDefinition
+	// UFortWorldItemDefinition* GetVariable_ItemDefinition(FGameplayTag& VarName);                                             // [0x9b78750] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_Int
+	// int32_t GetVariable_Int(FGameplayTag& VarName);                                                                          // [0x9b786b8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_GameplayTag
+	// FGameplayTag GetVariable_GameplayTag(FGameplayTag& VarName);                                                             // [0x9b78628] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_Float
+	// float GetVariable_Float(FGameplayTag& VarName);                                                                          // [0x9b7858c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.GetVariable_Bool
+	// bool GetVariable_Bool(FGameplayTag& VarName);                                                                            // [0x9b784f4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/EncountersRuntime.EncounterManagerComponent.AddExplicitContributor
+	// void AddExplicitContributor(APlayerController* Contributor);                                                             // [0x9b782d8] Final|Native|Public|BlueprintCallable 
 /// Class /Script/EncountersRuntime.EncounterStateTreeComponent
 /// Size: 0x0000 (0x000148 - 0x000148)
 class UEncounterStateTreeComponent : public UStateTreeComponent
@@ -164,11 +229,16 @@ class ALivingWorldEncounterPrefab : public AFortAthenaLivingWorldPrefab
 	static inline constexpr uint64_t __MDKClassSize = 2424;
 
 public:
-	CMember(TArray<FEncounterPrefabEntry>)             EncounterEntries                                            ___ OFFSET(get<T>, {0x958, 16, 0, 0})
-	CMember(UEncounterItem*)                           EncounterItem                                               ___ OFFSET(get<T>, {0x968, 8, 0, 0})
-	CMember(TWeakObjectPtr<UEncounterItemDefinition*>) EncounterDefinition                                         ___ OFFSET(get<T>, {0x970, 8, 0, 0})
+	CMember(TArray<FEncounterPrefabEntry>)             EncounterEntries                                            OFFSET(get<T>, {0x958, 16, 0, 0})
+	CMember(UEncounterItem*)                           EncounterItem                                               OFFSET(get<T>, {0x968, 8, 0, 0})
+	CMember(TWeakObjectPtr<UEncounterItemDefinition*>) EncounterDefinition                                         OFFSET(get<T>, {0x970, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/EncountersRuntime.LivingWorldEncounterPrefab.OnRep_EncounterDefinition
+	// void OnRep_EncounterDefinition();                                                                                        // [0x9b79c40] Final|Native|Private 
 /// Struct /Script/EncountersRuntime.EncounterMobSpawnInfo
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
 class FEncounterMobSpawnInfo : public MDKStruct
@@ -177,14 +247,14 @@ class FEncounterMobSpawnInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FScalableFloat)                            LeashRadiusInner                                            ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusOuter                                            ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	CMember(TWeakObjectPtr<AEncounterMobAnchor*>)      EncounterAnchorPoint                                        ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(EEncounterMobSpawnType)                    MobSpawnType                                                ___ OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     PointProviderFilterTags                                     ___ OFFSET(get<T>, {0x60, 32, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    StaticPointProviders                                        ___ OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(UEnvQuery*)                                PointProviderEQS                                            ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	CMember(UClass*)                                   PointProviderVolumeClass                                    ___ OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(get<T>, {0x28, 40, 0, 0})
+	CMember(TWeakObjectPtr<AEncounterMobAnchor*>)      EncounterAnchorPoint                                        OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(EEncounterMobSpawnType)                    MobSpawnType                                                OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     PointProviderFilterTags                                     OFFSET(get<T>, {0x60, 32, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    StaticPointProviders                                        OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(UEnvQuery*)                                PointProviderEQS                                            OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(UClass*)                                   PointProviderVolumeClass                                    OFFSET(get<T>, {0x98, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterMobSpawnData
@@ -195,12 +265,12 @@ class FEncounterMobSpawnData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FString)                                   DevNotes                                                    ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGameplayTag)                              MobIdentifier                                               ___ OFFSET(get<T>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bActiveOnStart                                              ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) MobEncounterData                                     ___ OFFSET(get<T>, {0x18, 32, 0, 0})
-	DMember(bool)                                      bOverrideDefaultSpawnInfo                                   ___ OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FEncounterMobSpawnInfo)                    MobSpawnInfo                                                ___ OFFSET(get<T>, {0x40, 160, 0, 0})
+	SMember(FString)                                   DevNotes                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bActiveOnStart                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
+	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) MobEncounterData                                     OFFSET(get<T>, {0x18, 32, 0, 0})
+	DMember(bool)                                      bOverrideDefaultSpawnInfo                                   OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FEncounterMobSpawnInfo)                    MobSpawnInfo                                                OFFSET(get<T>, {0x40, 160, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterMobInstance
@@ -211,8 +281,8 @@ class FEncounterMobInstance : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(AFortAthenaLivingWorldVolume*)             VolumePointProvider                                         ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(TArray<TScriptInterface>)                  CurrentPointProviders                                       ___ OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(AFortAthenaLivingWorldVolume*)             VolumePointProvider                                         OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(TArray<TScriptInterface>)                  CurrentPointProviders                                       OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableBoolStateTreeTaskInstanceData
@@ -223,9 +293,9 @@ class FEncounterGetVariableBoolStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bValue                                                      ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bValue                                                      OFFSET(get<bool>, {0x4, 1, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableBoolStateTreeTask
@@ -246,9 +316,9 @@ class FEncounterGetVariableFloatStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableFloatStateTreeTask
@@ -269,9 +339,9 @@ class FEncounterGetVariableGameplayTagStateTreeTaskInstanceData : public MDKStru
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              Value                                                       ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              Value                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableGameplayTagStateTreeTask
@@ -292,9 +362,9 @@ class FEncounterGetVariableIntStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableIntStateTreeTask
@@ -315,9 +385,9 @@ class FEncounterGetVariableItemDefinitionStateTreeTaskInstanceData : public MDKS
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) Value                                                       ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableItemDefinitionStateTreeTask
@@ -338,9 +408,9 @@ class FEncounterGetVariableLWMEncounterStateTreeTaskInstanceData : public MDKStr
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) Value                                                ___ OFFSET(get<T>, {0x8, 32, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) Value                                                OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableLWMEncounterStateTreeTask
@@ -361,9 +431,9 @@ class FEncounterGetVariableTagQueryStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         Value                                                       ___ OFFSET(get<T>, {0x8, 72, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableTagQueryStateTreeTask
@@ -384,9 +454,9 @@ class FEncounterPrefabEntry : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UEncounterItemDefinition*)                 EncounterDefinition                                         ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              EncounterIdentifierTag                                      ___ OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FScalableFloat)                            Weight                                                      ___ OFFSET(get<T>, {0x10, 40, 0, 0})
+	CMember(UEncounterItemDefinition*)                 EncounterDefinition                                         OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              EncounterIdentifierTag                                      OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FScalableFloat)                            Weight                                                      OFFSET(get<T>, {0x10, 40, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable
@@ -397,7 +467,7 @@ class FEncounterVariable : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VarName                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              VarName                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Boolean
@@ -408,7 +478,7 @@ class FEncounterVariable_Boolean : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Float
@@ -419,7 +489,7 @@ class FEncounterVariable_Float : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_GameplayTag
@@ -430,7 +500,7 @@ class FEncounterVariable_GameplayTag : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Integer
@@ -441,7 +511,7 @@ class FEncounterVariable_Integer : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_ItemDefinition
@@ -452,7 +522,7 @@ class FEncounterVariable_ItemDefinition : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_LWMEncounter
@@ -463,7 +533,7 @@ class FEncounterVariable_LWMEncounter : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_TagQuery
@@ -474,7 +544,7 @@ class FEncounterVariable_TagQuery : public FEncounterVariable
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_Boolean
@@ -485,7 +555,7 @@ class FEncounterVarRow_Boolean : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(bool)                                      bValue                                                      ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	DMember(bool)                                      bValue                                                      OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_Float
@@ -496,7 +566,7 @@ class FEncounterVarRow_Float : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Value                                                       ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_GameplayTag
@@ -507,7 +577,7 @@ class FEncounterVarRow_GameplayTag : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              Value                                                       ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              Value                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_Integer
@@ -518,7 +588,7 @@ class FEncounterVarRow_Integer : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(int32_t)                                   Value                                                       ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_ItemDefinition
@@ -529,7 +599,7 @@ class FEncounterVarRow_ItemDefinition : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) Value                                                       ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_LWMEncounter
@@ -540,7 +610,7 @@ class FEncounterVarRow_LWMEncounter : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) Value                                                ___ OFFSET(get<T>, {0x8, 32, 0, 0})
+	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) Value                                                OFFSET(get<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_TagQuery
@@ -551,7 +621,7 @@ class FEncounterVarRow_TagQuery : public FTableRowBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagQuery)                         Value                                                       ___ OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EndAllMobEncountersStateTreeTaskInstanceData
@@ -562,7 +632,7 @@ class FEndAllMobEncountersStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EndAllMobEncountersStateTreeTask
@@ -583,8 +653,8 @@ class FPauseMobEncounterStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.PauseMobEncounterStateTreeTask
@@ -605,8 +675,8 @@ class FResumeMobEncounterStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.ResumeMobEncounterStateTreeTask
@@ -627,16 +697,16 @@ class FStartLWMEncounterStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) LWMEncounter                                         ___ OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         PointProviderTagQuery                                       ___ OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         AnchorPointTagQuery                                         ___ OFFSET(get<T>, {0x68, 72, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusInner                                            ___ OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusOuter                                            ___ OFFSET(get<T>, {0xD8, 40, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(UStartLWMEncounterDelegateHandler*)        DelegateHandler                                             ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounterInstance*>) LWMInstance                                  ___ OFFSET(get<T>, {0x110, 8, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    SpawnedMobPawns                                             ___ OFFSET(get<T>, {0x118, 16, 0, 0})
-	CMember(TWeakObjectPtr<AEncounterMobAnchor*>)      EncounterAnchorPoint                                        ___ OFFSET(get<T>, {0x128, 8, 0, 0})
+	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) LWMEncounter                                         OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         PointProviderTagQuery                                       OFFSET(get<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         AnchorPointTagQuery                                         OFFSET(get<T>, {0x68, 72, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(get<T>, {0xD8, 40, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(UStartLWMEncounterDelegateHandler*)        DelegateHandler                                             OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounterInstance*>) LWMInstance                                  OFFSET(get<T>, {0x110, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    SpawnedMobPawns                                             OFFSET(get<T>, {0x118, 16, 0, 0})
+	CMember(TWeakObjectPtr<AEncounterMobAnchor*>)      EncounterAnchorPoint                                        OFFSET(get<T>, {0x128, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.StartLWMEncounterStateTreeTask
@@ -657,8 +727,8 @@ class FStartMobEncounterStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.StartMobEncounterStateTreeTask
@@ -669,7 +739,7 @@ class FStartMobEncounterStateTreeTask : public FStateTreeTaskCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bStopEncounterOnExit                                        ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bStopEncounterOnExit                                        OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.StopMobEncounterStateTreeTaskInstanceData
@@ -680,8 +750,8 @@ class FStopMobEncounterStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.StopMobEncounterStateTreeTask
@@ -702,10 +772,10 @@ class FEncounterRewardBehavior : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   RewardOffset                                                ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   RewardDirection                                             ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	DMember(float)                                     RewardConeAngle                                             ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     RewardFlingMagnitude                                        ___ OFFSET(get<float>, {0x34, 4, 0, 0})
+	SMember(FVector)                                   RewardOffset                                                OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   RewardDirection                                             OFFSET(get<T>, {0x18, 24, 0, 0})
+	DMember(float)                                     RewardConeAngle                                             OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     RewardFlingMagnitude                                        OFFSET(get<float>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterObjectiveFilterCache
@@ -726,7 +796,7 @@ class FEncounterVerbTransitionStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVerbTransitionStateTreeTask
@@ -737,9 +807,9 @@ class FEncounterVerbTransitionStateTreeTask : public FStateTreeTaskCommonBase
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FStateTreeStateLink)                       TransitionTo                                                ___ OFFSET(get<T>, {0x20, 2, 0, 0})
-	CMember(TArray<FInstancedStruct>)                  Verbs                                                       ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	DMember(int32_t)                                   ValueThreshold                                              ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	SMember(FStateTreeStateLink)                       TransitionTo                                                OFFSET(get<T>, {0x20, 2, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  Verbs                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
+	DMember(int32_t)                                   ValueThreshold                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 };
 
 /// Enum /Script/EncountersRuntime.EEncounterMobSpawnType

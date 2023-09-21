@@ -26,7 +26,7 @@ class FArrayOfWaterMeshWaterBlueprintPairs : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FWaterMeshAssetsToReplace>)         ArrayOfPairedMeshesandBlueprints_3_66DC153A4804C5BFDF6D5187A0EEF992 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FWaterMeshAssetsToReplace>)         ArrayOfPairedMeshesandBlueprints_3_66DC153A4804C5BFDF6D5187A0EEF992 OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Game/WaterAndWind/Blueprint/PlayerWindParticleEmitters.PlayerWindParticleEmitters

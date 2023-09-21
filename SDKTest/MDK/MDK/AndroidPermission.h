@@ -16,7 +16,7 @@ class UAndroidPermissionCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPermissionsGrantedDynamicDelegate                         ___ OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPermissionsGrantedDynamicDelegate                         OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/AndroidPermission.AndroidPermissionFunctionLibrary

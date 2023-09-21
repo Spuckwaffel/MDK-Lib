@@ -15,13 +15,13 @@ class USidecarDss : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(TMap<FString, FSidecarFileInfo>)           FileInfoMap                                                 ___ OFFSET(get<T>, {0x28, 80, 0, 0})
-	SMember(FString)                                   DssDownloadUrl                                              ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   DssCheckoutUrl                                              ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   DssUploadUrl                                                ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   DssRestoreUrl                                               ___ OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   DssCheckinUrl                                               ___ OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FString)                                   DssListFilesUrl                                             ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(TMap<FString, FSidecarFileInfo>)           FileInfoMap                                                 OFFSET(get<T>, {0x28, 80, 0, 0})
+	SMember(FString)                                   DssDownloadUrl                                              OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   DssCheckoutUrl                                              OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   DssUploadUrl                                                OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   DssRestoreUrl                                               OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   DssCheckinUrl                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   DssListFilesUrl                                             OFFSET(get<T>, {0xC8, 16, 0, 0})
 };
 
 /// Class /Script/SidecarSys.SidecarInventorySys
@@ -32,9 +32,9 @@ class USidecarInventorySys : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FString)                                   InventoryDownloadUrl                                        ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   InventoryLockUrl                                            ___ OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   ItemUpdateUrl                                               ___ OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   InventoryDownloadUrl                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   InventoryLockUrl                                            OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   ItemUpdateUrl                                               OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/SidecarSys.SidecarSys
@@ -45,8 +45,8 @@ class USidecarSys : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(USidecarDss*)                              SidecarDss                                                  ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(USidecarInventorySys*)                     SidecarInventory                                            ___ OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(USidecarDss*)                              SidecarDss                                                  OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(USidecarInventorySys*)                     SidecarInventory                                            OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Struct /Script/SidecarSys.SidecarFileInfo
@@ -57,9 +57,9 @@ class FSidecarFileInfo : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TMap<FString, FString>)                    meta                                                        ___ OFFSET(get<T>, {0x0, 80, 0, 0})
-	DMember(bool)                                      bIsCheckedOut                                               ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bOperationPending                                           ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
-	SMember(FString)                                   CheckoutGuid                                                ___ OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    meta                                                        OFFSET(get<T>, {0x0, 80, 0, 0})
+	DMember(bool)                                      bIsCheckedOut                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bOperationPending                                           OFFSET(get<bool>, {0x51, 1, 0, 0})
+	SMember(FString)                                   CheckoutGuid                                                OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 

@@ -17,29 +17,48 @@ class AFortAthenaMutator_SplitStorm : public AFortAthenaMutator_GameModeBase
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	CMember(UClass*)                                   SafeZoneProxyClass                                          ___ OFFSET(get<T>, {0x490, 8, 0, 0})
-	SMember(FScalableFloat)                            ProxyUpdateFrequency                                        ___ OFFSET(get<T>, {0x498, 40, 0, 0})
-	SMember(FScalableFloat)                            SplitParallelTravelDistance                                 ___ OFFSET(get<T>, {0x4C0, 40, 0, 0})
-	SMember(FScalableFloat)                            JoinParallelTravelDistance                                  ___ OFFSET(get<T>, {0x4E8, 40, 0, 0})
-	SMember(FScalableFloat)                            SplitPerpendicularTravelDistance                            ___ OFFSET(get<T>, {0x510, 40, 0, 0})
-	SMember(FScalableFloat)                            JoinAngleFromParallelDegrees                                ___ OFFSET(get<T>, {0x538, 40, 0, 0})
-	SMember(FScalableFloat)                            PhaseToSplitStorm                                           ___ OFFSET(get<T>, {0x560, 40, 0, 0})
-	SMember(FLinearColor)                              ProxyMapCircleColor                                         ___ OFFSET(get<T>, {0x588, 16, 0, 0})
-	DMember(float)                                     ProxyMapCircleLineThickness                                 ___ OFFSET(get<float>, {0x598, 4, 0, 0})
-	DMember(int32_t)                                   ProxyMapCircleLineSegments                                  ___ OFFSET(get<int32_t>, {0x59C, 4, 0, 0})
-	CMember(AActor*)                                   SafeZoneProxy                                               ___ OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	CMember(ESplitStormProxyPhase)                     CurrentProxyPhase                                           ___ OFFSET(get<T>, {0x5A8, 1, 0, 0})
-	DMember(float)                                     MoveToHoldWaitDuration                                      ___ OFFSET(get<float>, {0x5AC, 4, 0, 0})
-	DMember(float)                                     MoveToHoldDuration                                          ___ OFFSET(get<float>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     MoveToEndWaitDuration                                       ___ OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	DMember(float)                                     MoveToEndDuration                                           ___ OFFSET(get<float>, {0x5B8, 4, 0, 0})
-	DMember(float)                                     MoveStartTime                                               ___ OFFSET(get<float>, {0x5BC, 4, 0, 0})
-	SMember(FSplitStormProxyCircle)                    ProxyStartCircle                                            ___ OFFSET(get<T>, {0x5C0, 32, 0, 0})
-	SMember(FSplitStormProxyCircle)                    ProxyEndCircle                                              ___ OFFSET(get<T>, {0x5E0, 32, 0, 0})
-	SMember(FSplitStormProxyCircle)                    ProxyHoldCircle                                             ___ OFFSET(get<T>, {0x600, 32, 0, 0})
-	SMember(FSplitStormProxyCircle)                    CurrentProxyCircle                                          ___ OFFSET(get<T>, {0x620, 32, 0, 0})
+	CMember(UClass*)                                   SafeZoneProxyClass                                          OFFSET(get<T>, {0x490, 8, 0, 0})
+	SMember(FScalableFloat)                            ProxyUpdateFrequency                                        OFFSET(get<T>, {0x498, 40, 0, 0})
+	SMember(FScalableFloat)                            SplitParallelTravelDistance                                 OFFSET(get<T>, {0x4C0, 40, 0, 0})
+	SMember(FScalableFloat)                            JoinParallelTravelDistance                                  OFFSET(get<T>, {0x4E8, 40, 0, 0})
+	SMember(FScalableFloat)                            SplitPerpendicularTravelDistance                            OFFSET(get<T>, {0x510, 40, 0, 0})
+	SMember(FScalableFloat)                            JoinAngleFromParallelDegrees                                OFFSET(get<T>, {0x538, 40, 0, 0})
+	SMember(FScalableFloat)                            PhaseToSplitStorm                                           OFFSET(get<T>, {0x560, 40, 0, 0})
+	SMember(FLinearColor)                              ProxyMapCircleColor                                         OFFSET(get<T>, {0x588, 16, 0, 0})
+	DMember(float)                                     ProxyMapCircleLineThickness                                 OFFSET(get<float>, {0x598, 4, 0, 0})
+	DMember(int32_t)                                   ProxyMapCircleLineSegments                                  OFFSET(get<int32_t>, {0x59C, 4, 0, 0})
+	CMember(AActor*)                                   SafeZoneProxy                                               OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	CMember(ESplitStormProxyPhase)                     CurrentProxyPhase                                           OFFSET(get<T>, {0x5A8, 1, 0, 0})
+	DMember(float)                                     MoveToHoldWaitDuration                                      OFFSET(get<float>, {0x5AC, 4, 0, 0})
+	DMember(float)                                     MoveToHoldDuration                                          OFFSET(get<float>, {0x5B0, 4, 0, 0})
+	DMember(float)                                     MoveToEndWaitDuration                                       OFFSET(get<float>, {0x5B4, 4, 0, 0})
+	DMember(float)                                     MoveToEndDuration                                           OFFSET(get<float>, {0x5B8, 4, 0, 0})
+	DMember(float)                                     MoveStartTime                                               OFFSET(get<float>, {0x5BC, 4, 0, 0})
+	SMember(FSplitStormProxyCircle)                    ProxyStartCircle                                            OFFSET(get<T>, {0x5C0, 32, 0, 0})
+	SMember(FSplitStormProxyCircle)                    ProxyEndCircle                                              OFFSET(get<T>, {0x5E0, 32, 0, 0})
+	SMember(FSplitStormProxyCircle)                    ProxyHoldCircle                                             OFFSET(get<T>, {0x600, 32, 0, 0})
+	SMember(FSplitStormProxyCircle)                    CurrentProxyCircle                                          OFFSET(get<T>, {0x620, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.UpdateProxyCenterAndRadius
+	// void UpdateProxyCenterAndRadius();                                                                                       // [0x2d79908] Final|Native|Private 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.StartProxyUpdateTimer
+	// void StartProxyUpdateTimer();                                                                                            // [0x2d79908] Final|Native|Private 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.SetSafeZoneProxyPhase
+	// void SetSafeZoneProxyPhase(ESplitStormProxyPhase NewPhase);                                                              // [0x7542028] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.SetProxyRadius
+	// void SetProxyRadius(float NewRadius);                                                                                    // [0x9e60104] Native|Event|Protected|BlueprintEvent 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.SetProxyCenter
+	// void SetProxyCenter(FVector NewCenter);                                                                                  // [0x9e5ff94] Native|Event|Protected|HasDefaults|BlueprintEvent 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.OnSafeZonePhaseChanged
+	// void OnSafeZonePhaseChanged();                                                                                           // [0x2d79908] Final|Native|Private 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.OnSafeZoneIndicatorSpawned
+	// void OnSafeZoneIndicatorSpawned(FFortSafeZoneIndicatorUpdatedEvent& Event);                                              // [0x754208c] Final|Native|Private|HasOutParms 
+	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.OnRep_CurrentProxyCircle
+	// void OnRep_CurrentProxyCircle();                                                                                         // [0x9e5ff00] Final|Native|Private 
 /// Struct /Script/StormShieldModifierRuntime.SplitStormProxyCircle
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FSplitStormProxyCircle : public MDKStruct
@@ -48,8 +67,8 @@ class FSplitStormProxyCircle : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Center                                                      ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(float)                                     Radius                                                      ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Enum /Script/StormShieldModifierRuntime.ESplitStormProxyPhase

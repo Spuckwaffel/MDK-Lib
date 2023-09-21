@@ -19,7 +19,7 @@ class UGameplayInteractionSmartObjectBehaviorDefinition : public USmartObjectBeh
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FStateTreeReference)                       StateTreeReference                                          ___ OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FStateTreeReference)                       StateTreeReference                                          OFFSET(get<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/GameplayInteractionsModule.AITask_UseGameplayInteraction
@@ -30,16 +30,25 @@ class UAITask_UseGameplayInteraction : public UAITask
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinished                                                  ___ OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSucceeded                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    ___ OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMoveToFailed                                              ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FGameplayInteractionContext)               GameplayInteractionContext                                  ___ OFFSET(get<T>, {0xA8, 104, 0, 0})
-	CMember(UAITask_MoveTo*)                           MoveToTask                                                  ___ OFFSET(get<T>, {0x110, 8, 0, 0})
-	SMember(FSmartObjectClaimHandle)                   ClaimedHandle                                               ___ OFFSET(get<T>, {0x118, 32, 0, 0})
-	SMember(FGameplayInteractionAbortContext)          AbortContext                                                ___ OFFSET(get<T>, {0x138, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSucceeded                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMoveToFailed                                              OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FGameplayInteractionContext)               GameplayInteractionContext                                  OFFSET(get<T>, {0xA8, 104, 0, 0})
+	CMember(UAITask_MoveTo*)                           MoveToTask                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
+	SMember(FSmartObjectClaimHandle)                   ClaimedHandle                                               OFFSET(get<T>, {0x118, 32, 0, 0})
+	SMember(FGameplayInteractionAbortContext)          AbortContext                                                OFFSET(get<T>, {0x138, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayInteractionsModule.AITask_UseGameplayInteraction.UseSmartObjectWithGameplayInteraction
+	// UAITask_UseGameplayInteraction* UseSmartObjectWithGameplayInteraction(AAIController* Controller, FSmartObjectClaimHandle ClaimHandle, bool bLockAILogic); // [0x74712ac] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayInteractionsModule.AITask_UseGameplayInteraction.RequestAbort
+	// void RequestAbort();                                                                                                     // [0x7471298] Final|Native|Public|BlueprintCallable 
+	// Function /Script/GameplayInteractionsModule.AITask_UseGameplayInteraction.MoveToAndUseSmartObjectWithGameplayInteraction
+	// UAITask_UseGameplayInteraction* MoveToAndUseSmartObjectWithGameplayInteraction(AAIController* Controller, FSmartObjectClaimHandle ClaimHandle, bool bLockAILogic); // [0x7470e08] Final|Native|Static|Public|BlueprintCallable 
 /// Class /Script/GameplayInteractionsModule.GameplayInteractionStateTreeSchema
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UGameplayInteractionStateTreeSchema : public UStateTreeSchema
@@ -48,9 +57,9 @@ class UGameplayInteractionStateTreeSchema : public UStateTreeSchema
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(UClass*)                                   ContextActorClass                                           ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UClass*)                                   SmartObjectActorClass                                       ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TArray<FStateTreeExternalDataDesc>)        ContextDataDescs                                            ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(UClass*)                                   ContextActorClass                                           OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UClass*)                                   SmartObjectActorClass                                       OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(TArray<FStateTreeExternalDataDesc>)        ContextDataDescs                                            OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/GameplayInteractionsModule.StateTreeTask_PlayContextualAnim_InstanceData
@@ -61,23 +70,30 @@ class UStateTreeTask_PlayContextualAnim_InstanceData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(AActor*)                                   PrimaryActor                                                ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(AActor*)                                   SecondaryActor                                              ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FName)                                     SecondaryRole                                               ___ OFFSET(get<T>, {0x38, 4, 0, 0})
-	CMember(AActor*)                                   TertiaryActor                                               ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	SMember(FName)                                     TertiaryRole                                                ___ OFFSET(get<T>, {0x48, 4, 0, 0})
-	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FName)                                     SectionName                                                 ___ OFFSET(get<T>, {0x58, 4, 0, 0})
-	CMember(EPlayContextualAnimExecutionMethod)        ExecutionMethod                                             ___ OFFSET(get<T>, {0x5C, 1, 0, 0})
-	DMember(bool)                                      bWaitForNotifyEventToEnd                                    ___ OFFSET(get<bool>, {0x5D, 1, 0, 0})
-	SMember(FName)                                     NotifyEventNameToEnd                                        ___ OFFSET(get<T>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   LoopsToRun                                                  ___ OFFSET(get<int32_t>, {0x64, 4, 0, 0})
-	DMember(bool)                                      bLoopForever                                                ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
-	DMember(float)                                     DelayBetweenLoops                                           ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	DMember(float)                                     RandomDeviationBetweenLoops                                 ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         WarpTargets                                                 ___ OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(AActor*)                                   PrimaryActor                                                OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(AActor*)                                   SecondaryActor                                              OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FName)                                     SecondaryRole                                               OFFSET(get<T>, {0x38, 4, 0, 0})
+	CMember(AActor*)                                   TertiaryActor                                               OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FName)                                     TertiaryRole                                                OFFSET(get<T>, {0x48, 4, 0, 0})
+	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FName)                                     SectionName                                                 OFFSET(get<T>, {0x58, 4, 0, 0})
+	CMember(EPlayContextualAnimExecutionMethod)        ExecutionMethod                                             OFFSET(get<T>, {0x5C, 1, 0, 0})
+	DMember(bool)                                      bWaitForNotifyEventToEnd                                    OFFSET(get<bool>, {0x5D, 1, 0, 0})
+	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(get<T>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   LoopsToRun                                                  OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	DMember(bool)                                      bLoopForever                                                OFFSET(get<bool>, {0x68, 1, 0, 0})
+	DMember(float)                                     DelayBetweenLoops                                           OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     RandomDeviationBetweenLoops                                 OFFSET(get<float>, {0x70, 4, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         WarpTargets                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/GameplayInteractionsModule.StateTreeTask_PlayContextualAnim_InstanceData.OnNotifyBeginReceived
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x74711b8] Final|Native|Public|HasOutParms 
+	// Function /Script/GameplayInteractionsModule.StateTreeTask_PlayContextualAnim_InstanceData.OnMontageEnded
+	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x74710f0] Final|Native|Public  
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionContext
 /// Size: 0x0068 (0x000000 - 0x000068)
 class FGameplayInteractionContext : public MDKStruct
@@ -86,13 +102,13 @@ class FGameplayInteractionContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FStateTreeInstanceData)                    StateTreeInstanceData                                       ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSmartObjectClaimHandle)                   ClaimedHandle                                               ___ OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FSmartObjectSlotEntranceHandle)            SlotEntranceHandle                                          ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FGameplayInteractionAbortContext)          AbortContext                                                ___ OFFSET(get<T>, {0x48, 1, 0, 0})
-	CMember(AActor*)                                   ContextActor                                                ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(AActor*)                                   SmartObjectActor                                            ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	CMember(UGameplayInteractionSmartObjectBehaviorDefinition*) Definition                                         ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FStateTreeInstanceData)                    StateTreeInstanceData                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectClaimHandle)                   ClaimedHandle                                               OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FSmartObjectSlotEntranceHandle)            SlotEntranceHandle                                          OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FGameplayInteractionAbortContext)          AbortContext                                                OFFSET(get<T>, {0x48, 1, 0, 0})
+	CMember(AActor*)                                   ContextActor                                                OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(AActor*)                                   SmartObjectActor                                            OFFSET(get<T>, {0x58, 8, 0, 0})
+	CMember(UGameplayInteractionSmartObjectBehaviorDefinition*) Definition                                         OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionAbortContext
@@ -103,7 +119,7 @@ class FGameplayInteractionAbortContext : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
-	CMember(EGameplayInteractionAbortReason)           Reason                                                      ___ OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EGameplayInteractionAbortReason)           Reason                                                      OFFSET(get<T>, {0x0, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSlotUserData
@@ -144,8 +160,8 @@ class FGameplayInteractionMatchSlotTagsConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    Slot                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     TagsToMatch                                                 ___ OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    Slot                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsToMatch                                                 OFFSET(get<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSlotTagsMatchCondition
@@ -156,10 +172,10 @@ class FGameplayInteractionSlotTagsMatchCondition : public FGameplayInteractionSt
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(EGameplayInteractionMatchSlotTagSource)    Source                                                      ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(EGameplayContainerMatchType)               MatchType                                                   ___ OFFSET(get<T>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bExactMatch                                                 ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x23, 1, 0, 0})
+	CMember(EGameplayInteractionMatchSlotTagSource)    Source                                                      OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(EGameplayContainerMatchType)               MatchType                                                   OFFSET(get<T>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bExactMatch                                                 OFFSET(get<bool>, {0x22, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x23, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionQuerySlotTagsConditionInstanceData
@@ -170,7 +186,7 @@ class FGameplayInteractionQuerySlotTagsConditionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    Slot                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    Slot                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionQuerySlotTagCondition
@@ -181,9 +197,9 @@ class FGameplayInteractionQuerySlotTagCondition : public FGameplayInteractionSta
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(EGameplayInteractionMatchSlotTagSource)    Source                                                      ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQuery                                                    ___ OFFSET(get<T>, {0x28, 72, 0, 0})
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x70, 1, 0, 0})
+	CMember(EGameplayInteractionMatchSlotTagSource)    Source                                                      OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x28, 72, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionIsSlotHandleValidConditionInstanceData
@@ -194,7 +210,7 @@ class FGameplayInteractionIsSlotHandleValidConditionInstanceData : public MDKStr
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    Slot                                                        ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    Slot                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionIsSlotHandleValidCondition
@@ -205,7 +221,7 @@ class FGameplayInteractionIsSlotHandleValidCondition : public FGameplayInteracti
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bInvert                                                     ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bInvert                                                     OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionFindSlotTaskInstanceData
@@ -216,8 +232,8 @@ class FGameplayInteractionFindSlotTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    ReferenceSlot                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSmartObjectSlotHandle)                    ResultSlot                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    ReferenceSlot                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    ResultSlot                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionFindSlotTask
@@ -228,8 +244,8 @@ class FGameplayInteractionFindSlotTask : public FGameplayInteractionStateTreeTas
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EGameplayInteractionSlotReferenceType)     ReferenceType                                               ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FGameplayTag)                              FindByTag                                                   ___ OFFSET(get<T>, {0x24, 4, 0, 0})
+	CMember(EGameplayInteractionSlotReferenceType)     ReferenceType                                               OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FGameplayTag)                              FindByTag                                                   OFFSET(get<T>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionGetSlotActorTaskInstanceData
@@ -240,8 +256,8 @@ class FGameplayInteractionGetSlotActorTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(AActor*)                                   ResultActor                                                 ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(AActor*)                                   ResultActor                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionGetSlotActorTask
@@ -252,7 +268,7 @@ class FGameplayInteractionGetSlotActorTask : public FGameplayInteractionStateTre
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bFailIfNotFound                                             ___ OFFSET(get<bool>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bFailIfNotFound                                             OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionListenSlotEventsTaskInstanceData
@@ -263,7 +279,7 @@ class FGameplayInteractionListenSlotEventsTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionListenSlotEventsTask
@@ -284,8 +300,8 @@ class FGameplayInteractionModifySlotTagTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bTagRemoved                                                 ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bTagRemoved                                                 OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionModifySlotTagTask
@@ -296,10 +312,10 @@ class FGameplayInteractionModifySlotTagTask : public FGameplayInteractionStateTr
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(EGameplayInteractionTaskModify)            Modify                                                      ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bHandleExternalStopAsFailure                                ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	CMember(EGameplayInteractionModifyGameplayTagOperation) Operation                                              ___ OFFSET(get<T>, {0x22, 1, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         ___ OFFSET(get<T>, {0x24, 4, 0, 0})
+	CMember(EGameplayInteractionTaskModify)            Modify                                                      OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bHandleExternalStopAsFailure                                OFFSET(get<bool>, {0x21, 1, 0, 0})
+	CMember(EGameplayInteractionModifyGameplayTagOperation) Operation                                              OFFSET(get<T>, {0x22, 1, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSendSlotEventTaskInstanceData
@@ -310,7 +326,7 @@ class FGameplayInteractionSendSlotEventTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSendSlotEventTask
@@ -321,11 +337,11 @@ class FGameplayInteractionSendSlotEventTask : public FGameplayInteractionStateTr
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayTag)                              EventTag                                                    ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FInstancedStruct)                          Payload                                                     ___ OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(EGameplayInteractionTaskTrigger)           Trigger                                                     ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bHandleExternalStopAsFailure                                ___ OFFSET(get<bool>, {0x39, 1, 0, 0})
-	DMember(bool)                                      bShouldTriggerOnReselect                                    ___ OFFSET(get<bool>, {0x3A, 1, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FInstancedStruct)                          Payload                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(EGameplayInteractionTaskTrigger)           Trigger                                                     OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(bool)                                      bHandleExternalStopAsFailure                                OFFSET(get<bool>, {0x39, 1, 0, 0})
+	DMember(bool)                                      bShouldTriggerOnReselect                                    OFFSET(get<bool>, {0x3A, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSetSlotEnabledInstanceData
@@ -336,8 +352,8 @@ class FGameplayInteractionSetSlotEnabledInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bInitialState                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bInitialState                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSetSlotEnabledTask
@@ -348,9 +364,9 @@ class FGameplayInteractionSetSlotEnabledTask : public FGameplayInteractionStateT
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(EGameplayInteractionTaskModify)            Modify                                                      ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bHandleExternalStopAsFailure                                ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bEnableSlot                                                 ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
+	CMember(EGameplayInteractionTaskModify)            Modify                                                      OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bHandleExternalStopAsFailure                                OFFSET(get<bool>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bEnableSlot                                                 OFFSET(get<bool>, {0x22, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSyncSlotTagStateInstanceData
@@ -361,7 +377,7 @@ class FGameplayInteractionSyncSlotTagStateInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSyncSlotTagStateTask
@@ -372,8 +388,8 @@ class FGameplayInteractionSyncSlotTagStateTask : public FGameplayInteractionStat
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              TagToMonitor                                                ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FGameplayTag)                              BreakEventTag                                               ___ OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FGameplayTag)                              TagToMonitor                                                OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              BreakEventTag                                               OFFSET(get<T>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSyncSlotTagTransitionInstanceData
@@ -384,7 +400,7 @@ class FGameplayInteractionSyncSlotTagTransitionInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  ___ OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    TargetSlot                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionSyncSlotTagTransitionTask
@@ -395,9 +411,9 @@ class FGameplayInteractionSyncSlotTagTransitionTask : public FGameplayInteractio
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              TransitionFromTag                                           ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FGameplayTag)                              TransitionToTag                                             ___ OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FGameplayTag)                              TransitionEventTag                                          ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              TransitionFromTag                                           OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              TransitionToTag                                             OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FGameplayTag)                              TransitionEventTag                                          OFFSET(get<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.PlayMontageStateTreeTaskInstanceData
@@ -408,9 +424,9 @@ class FPlayMontageStateTreeTaskInstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(AActor*)                                   Actor                                                       ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     ComputedDuration                                            ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Time                                                        ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     ComputedDuration                                            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     Time                                                        OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.PlayMontageStateTreeTask
@@ -421,7 +437,7 @@ class FPlayMontageStateTreeTask : public FGameplayInteractionStateTreeTask
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(UAnimMontage*)                             Montage                                                     ___ OFFSET(get<T>, {0x20, 8, 0, 0})
+	CMember(UAnimMontage*)                             Montage                                                     OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.StateTreeTask_FindSlotEntranceLocation_InstanceData
@@ -432,10 +448,10 @@ class FStateTreeTask_FindSlotEntranceLocation_InstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(AActor*)                                   UserActor                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSmartObjectSlotHandle)                    ReferenceSlot                                               ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FTransform)                                EntryTransform                                              ___ OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FGameplayTagContainer)                     EntranceTags                                                ___ OFFSET(get<T>, {0x80, 32, 0, 0})
+	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    ReferenceSlot                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FTransform)                                EntryTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FGameplayTagContainer)                     EntranceTags                                                OFFSET(get<T>, {0x80, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.StateTreeTask_FindSlotEntranceLocation
@@ -446,15 +462,15 @@ class FStateTreeTask_FindSlotEntranceLocation : public FGameplayInteractionState
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSmartObjectSlotEntrySelectionMethod)      SelectMethod                                                ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bProjectNavigationLocation                                  ___ OFFSET(get<bool>, {0x21, 1, 0, 0})
-	DMember(bool)                                      bTraceGroundLocation                                        ___ OFFSET(get<bool>, {0x22, 1, 0, 0})
-	DMember(bool)                                      bCheckTransitionTrajectory                                  ___ OFFSET(get<bool>, {0x23, 1, 0, 0})
-	DMember(bool)                                      bCheckEntranceLocationOverlap                               ___ OFFSET(get<bool>, {0x24, 1, 0, 0})
-	DMember(bool)                                      bCheckSlotLocationOverlap                                   ___ OFFSET(get<bool>, {0x25, 1, 0, 0})
-	DMember(bool)                                      bUseSlotLocationAsFallbackCandidate                         ___ OFFSET(get<bool>, {0x26, 1, 0, 0})
-	CMember(ESmartObjectSlotNavigationLocationType)    LocationType                                                ___ OFFSET(get<T>, {0x27, 1, 0, 0})
-	CMember(UClass*)                                   ValidationFilter                                            ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FSmartObjectSlotEntrySelectionMethod)      SelectMethod                                                OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bProjectNavigationLocation                                  OFFSET(get<bool>, {0x21, 1, 0, 0})
+	DMember(bool)                                      bTraceGroundLocation                                        OFFSET(get<bool>, {0x22, 1, 0, 0})
+	DMember(bool)                                      bCheckTransitionTrajectory                                  OFFSET(get<bool>, {0x23, 1, 0, 0})
+	DMember(bool)                                      bCheckEntranceLocationOverlap                               OFFSET(get<bool>, {0x24, 1, 0, 0})
+	DMember(bool)                                      bCheckSlotLocationOverlap                                   OFFSET(get<bool>, {0x25, 1, 0, 0})
+	DMember(bool)                                      bUseSlotLocationAsFallbackCandidate                         OFFSET(get<bool>, {0x26, 1, 0, 0})
+	CMember(ESmartObjectSlotNavigationLocationType)    LocationType                                                OFFSET(get<T>, {0x27, 1, 0, 0})
+	CMember(UClass*)                                   ValidationFilter                                            OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.StateTreeTask_GetSlotEntranceLocation_InstanceData
@@ -465,8 +481,8 @@ class FStateTreeTask_GetSlotEntranceLocation_InstanceData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSmartObjectSlotEntranceHandle)            SlotEntranceHandle                                          ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     EntranceTags                                                ___ OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FSmartObjectSlotEntranceHandle)            SlotEntranceHandle                                          OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     EntranceTags                                                OFFSET(get<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Script/GameplayInteractionsModule.StateTreeTask_GetSlotEntranceLocation

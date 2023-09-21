@@ -25,7 +25,7 @@ class UClientPilotBlackboardManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UClientPilotBlackboard*)                   PilotBlackboard                                             ___ OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UClientPilotBlackboard*)                   PilotBlackboard                                             OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/ClientPilot.ClientPilotComponent

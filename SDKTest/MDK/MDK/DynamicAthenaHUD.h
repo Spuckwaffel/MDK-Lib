@@ -17,9 +17,18 @@ class ADynamicAthenaHUDDirector : public ADynamicUIDirectorBase
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	CMember(UDynamicUIScene*)                          VehicleHUDScene                                             ___ OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UDynamicUIScene*)                          CreativeQuickbarScene                                       ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(UDynamicUIScene*)                          TournamentScene                                             ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(UDynamicUIScene*)                          ArenaTournamentScene                                        ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(UDynamicUIScene*)                          VehicleHUDScene                                             OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UDynamicUIScene*)                          CreativeQuickbarScene                                       OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(UDynamicUIScene*)                          TournamentScene                                             OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UDynamicUIScene*)                          ArenaTournamentScene                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/DynamicAthenaHUD.DynamicAthenaHUDDirector.HandleExitingVehicle
+	// void HandleExitingVehicle();                                                                                             // [0x9b57f28] Final|Native|Private 
+	// Function /Script/DynamicAthenaHUD.DynamicAthenaHUDDirector.HandleEnteringVehicle
+	// void HandleEnteringVehicle();                                                                                            // [0x9b57f14] Final|Native|Private 
+	// Function /Script/DynamicAthenaHUD.DynamicAthenaHUDDirector.HandleCreativeQuickbarEquippedChanged
+	// void HandleCreativeQuickbarEquippedChanged(bool bIsQuickbarEquipped);                                                    // [0x9b57e94] Final|Native|Private 

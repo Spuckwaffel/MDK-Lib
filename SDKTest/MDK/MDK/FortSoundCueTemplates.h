@@ -98,16 +98,16 @@ class UFortSoundCueTemplateDefaults : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(USoundClass*)                              SoundClass                                                  ___ OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(USoundAttenuation*)                        Attenuation                                                 ___ OFFSET(get<T>, {0x38, 8, 0, 0})
-	CMember(USoundConcurrency*)                        Concurrency                                                 ___ OFFSET(get<T>, {0x40, 8, 0, 0})
-	DMember(float)                                     VolumeMultiplier                                            ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     PitchMultiplier                                             ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	CMember(TArray<FFortSubmixPair>)                   SubmixSends                                                 ___ OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(TArray<FFortBusPair>)                      PreEffectBusSends                                           ___ OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(TArray<FFortBusPair>)                      PostEffectBusSends                                          ___ OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(USoundWave*)                               LicensedTrackAlternative                                    ___ OFFSET(get<T>, {0x80, 8, 0, 0})
-	CMember(USoundSubmixBase*)                         LicensedSubmix                                              ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	CMember(USoundClass*)                              SoundClass                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(USoundAttenuation*)                        Attenuation                                                 OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(USoundConcurrency*)                        Concurrency                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
+	DMember(float)                                     VolumeMultiplier                                            OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     PitchMultiplier                                             OFFSET(get<float>, {0x4C, 4, 0, 0})
+	CMember(TArray<FFortSubmixPair>)                   SubmixSends                                                 OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<FFortBusPair>)                      PreEffectBusSends                                           OFFSET(get<T>, {0x60, 16, 0, 0})
+	CMember(TArray<FFortBusPair>)                      PostEffectBusSends                                          OFFSET(get<T>, {0x70, 16, 0, 0})
+	CMember(USoundWave*)                               LicensedTrackAlternative                                    OFFSET(get<T>, {0x80, 8, 0, 0})
+	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.FortSoundCueTemplateDefaultSettings
@@ -118,9 +118,14 @@ class UFortSoundCueTemplateDefaultSettings : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(TMap<UClass*, UFortSoundCueTemplateDefaults*>) TemplateDefaults                                        ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<UClass*, UFortSoundCueTemplateDefaults*>) TemplateDefaults                                        OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/FortSoundCueTemplates.FortSoundCueTemplateDefaultSettings.GetSettingsForTemplateType
+	// UFortSoundCueTemplateDefaults* GetSettingsForTemplateType(UClass* TemplateType);                                         // [0xa246090] Final|Native|Public  
 /// Class /Script/FortSoundCueTemplates.FortSoundCueTemplateSettings
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UFortSoundCueTemplateSettings : public UDeveloperSettings
@@ -129,9 +134,14 @@ class UFortSoundCueTemplateSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(TWeakObjectPtr<UFortSoundCueTemplateDefaultSettings*>) DefaultTemplateSettings                         ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	CMember(TWeakObjectPtr<UFortSoundCueTemplateDefaultSettings*>) DefaultTemplateSettings                         OFFSET(get<T>, {0x30, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/FortSoundCueTemplates.FortSoundCueTemplateSettings.GetDefaultSettingsForTemplateType
+	// UFortSoundCueTemplateDefaults* GetDefaultSettingsForTemplateType(UClass* TemplateType);                                  // [0xa245fec] Final|Native|Public|Const 
 /// Class /Script/FortSoundCueTemplates.FortSoundCueTemplateSimple
 /// Size: 0x0000 (0x000560 - 0x000560)
 class UFortSoundCueTemplateSimple : public UFortSoundCueTemplateBase
@@ -150,10 +160,10 @@ class UGliderThrustSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FGliderThrustData)                         Forward                                                     ___ OFFSET(get<T>, {0x90, 88, 0, 0})
-	SMember(FGliderThrustData)                         Sideways                                                    ___ OFFSET(get<T>, {0xE8, 88, 0, 0})
-	SMember(FGliderThrustData)                         Backwards                                                   ___ OFFSET(get<T>, {0x140, 88, 0, 0})
-	SMember(FGliderThrustData)                         AnyDirection                                                ___ OFFSET(get<T>, {0x198, 88, 0, 0})
+	SMember(FGliderThrustData)                         Forward                                                     OFFSET(get<T>, {0x90, 88, 0, 0})
+	SMember(FGliderThrustData)                         Sideways                                                    OFFSET(get<T>, {0xE8, 88, 0, 0})
+	SMember(FGliderThrustData)                         Backwards                                                   OFFSET(get<T>, {0x140, 88, 0, 0})
+	SMember(FGliderThrustData)                         AnyDirection                                                OFFSET(get<T>, {0x198, 88, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.GliderThrustLoop
@@ -214,11 +224,11 @@ class UPhysicsStateSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FName)                                     SpeedParameterName                                          ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FPhysicsStateData)                         Rolling                                                     ___ OFFSET(get<T>, {0x98, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Sliding                                                     ___ OFFSET(get<T>, {0x128, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Flying                                                      ___ OFFSET(get<T>, {0x1B8, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Floating                                                    ___ OFFSET(get<T>, {0x248, 144, 0, 0})
+	SMember(FName)                                     SpeedParameterName                                          OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FPhysicsStateData)                         Rolling                                                     OFFSET(get<T>, {0x98, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Sliding                                                     OFFSET(get<T>, {0x128, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Flying                                                      OFFSET(get<T>, {0x1B8, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Floating                                                    OFFSET(get<T>, {0x248, 144, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.PhysicsStateLoop
@@ -239,11 +249,11 @@ class UPhysicsImpactSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FName)                                     ImpactTypeParameterName                                     ___ OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FName)                                     StrengthParameterName                                       ___ OFFSET(get<T>, {0x94, 4, 0, 0})
-	SMember(FPhysicsImpactData)                        Light                                                       ___ OFFSET(get<T>, {0x98, 88, 0, 0})
-	SMember(FPhysicsImpactData)                        Medium                                                      ___ OFFSET(get<T>, {0xF0, 88, 0, 0})
-	SMember(FPhysicsImpactData)                        Heavy                                                       ___ OFFSET(get<T>, {0x148, 88, 0, 0})
+	SMember(FName)                                     ImpactTypeParameterName                                     OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     StrengthParameterName                                       OFFSET(get<T>, {0x94, 4, 0, 0})
+	SMember(FPhysicsImpactData)                        Light                                                       OFFSET(get<T>, {0x98, 88, 0, 0})
+	SMember(FPhysicsImpactData)                        Medium                                                      OFFSET(get<T>, {0xF0, 88, 0, 0})
+	SMember(FPhysicsImpactData)                        Heavy                                                       OFFSET(get<T>, {0x148, 88, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.PhysicsImpact
@@ -264,9 +274,9 @@ class UPickaxeSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	CMember(USoundAttenuation*)                        CloseAttenuation                                            ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	CMember(USoundAttenuation*)                        DistantAttenuation                                          ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(TArray<USoundWave*>)                       DistantVariations                                           ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(USoundAttenuation*)                        CloseAttenuation                                            OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(USoundAttenuation*)                        DistantAttenuation                                          OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(TArray<USoundWave*>)                       DistantVariations                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.PickaxeBase
@@ -317,14 +327,14 @@ class UPlayerFoleyDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(USoundClass*)                              LocalPlayerSoundClass                                       ___ OFFSET(get<T>, {0x90, 8, 0, 0})
-	CMember(USoundClass*)                              TeammateSoundClass                                          ___ OFFSET(get<T>, {0x98, 8, 0, 0})
-	CMember(USoundClass*)                              HostileSoundClass                                           ___ OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(USoundAttenuation*)                        LocalPlayerAttenuation                                      ___ OFFSET(get<T>, {0xA8, 8, 0, 0})
-	CMember(USoundAttenuation*)                        AboveAttenuation                                            ___ OFFSET(get<T>, {0xB0, 8, 0, 0})
-	CMember(USoundAttenuation*)                        BelowAttenuation                                            ___ OFFSET(get<T>, {0xB8, 8, 0, 0})
-	CMember(USoundAttenuation*)                        ParallelAttenuation                                         ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(TArray<FDistanceDatum>)                    ElevationCrossfadeDistances                                 ___ OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(USoundClass*)                              LocalPlayerSoundClass                                       OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(USoundClass*)                              TeammateSoundClass                                          OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(USoundClass*)                              HostileSoundClass                                           OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(USoundAttenuation*)                        LocalPlayerAttenuation                                      OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(USoundAttenuation*)                        AboveAttenuation                                            OFFSET(get<T>, {0xB0, 8, 0, 0})
+	CMember(USoundAttenuation*)                        BelowAttenuation                                            OFFSET(get<T>, {0xB8, 8, 0, 0})
+	CMember(USoundAttenuation*)                        ParallelAttenuation                                         OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(TArray<FDistanceDatum>)                    ElevationCrossfadeDistances                                 OFFSET(get<T>, {0xC8, 16, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.WeaponLowAmmo
@@ -405,10 +415,10 @@ class FFortContinuousModulatorConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector2D)                                 VolumeRange                                                 ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 PitchRange                                                  ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TEnumAsByte<ModulationParamMode>)          VolumeMode                                                  ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	CMember(TEnumAsByte<ModulationParamMode>)          PitchMode                                                   ___ OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FVector2D)                                 VolumeRange                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 PitchRange                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TEnumAsByte<ModulationParamMode>)          VolumeMode                                                  OFFSET(get<T>, {0x20, 1, 0, 0})
+	CMember(TEnumAsByte<ModulationParamMode>)          PitchMode                                                   OFFSET(get<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.FortSubmixPair
@@ -419,8 +429,8 @@ class FFortSubmixPair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(USoundSubmixBase*)                         Submix                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     SendAmount                                                  ___ OFFSET(get<float>, {0x8, 4, 0, 0})
+	CMember(USoundSubmixBase*)                         Submix                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     SendAmount                                                  OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.FortBusPair
@@ -431,9 +441,9 @@ class FFortBusPair : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(USoundSourceBus*)                          SourceBus                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UAudioBus*)                                AudioBus                                                    ___ OFFSET(get<T>, {0x8, 8, 0, 0})
-	DMember(float)                                     SendAmount                                                  ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+	CMember(USoundSourceBus*)                          SourceBus                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+	DMember(float)                                     SendAmount                                                  OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.GliderThrustData
@@ -444,11 +454,11 @@ class FGliderThrustData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 VolumeOutput                                                ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	CMember(USoundWave*)                               sound                                                       ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    ___ OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(USoundWave*)                               sound                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x30, 40, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.PhysicsStateData
@@ -459,14 +469,14 @@ class FPhysicsStateData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     ParameterName                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 VolumeOutput                                                ___ OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 ___ OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FDistanceDatum)                            CrossfadeInputSlow                                          ___ OFFSET(get<T>, {0x50, 20, 0, 0})
-	CMember(USoundWave*)                               SlowLoop                                                    ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FDistanceDatum)                            CrossfadeInputFast                                          ___ OFFSET(get<T>, {0x70, 20, 0, 0})
-	CMember(USoundWave*)                               FastLoop                                                    ___ OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FDistanceDatum)                            CrossfadeInputSlow                                          OFFSET(get<T>, {0x50, 20, 0, 0})
+	CMember(USoundWave*)                               SlowLoop                                                    OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FDistanceDatum)                            CrossfadeInputFast                                          OFFSET(get<T>, {0x70, 20, 0, 0})
+	CMember(USoundWave*)                               FastLoop                                                    OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.PhysicsImpactData
@@ -477,9 +487,9 @@ class FPhysicsImpactData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector2D)                                 VolumeOutput                                                ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    ___ OFFSET(get<T>, {0x20, 40, 0, 0})
-	CMember(TArray<USoundWave*>)                       Variations                                                  ___ OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x20, 40, 0, 0})
+	CMember(TArray<USoundWave*>)                       Variations                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 

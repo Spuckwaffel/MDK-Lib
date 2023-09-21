@@ -16,7 +16,7 @@ class UMaterialExpressionPhysicalMaterialOutput : public UMaterialExpressionCust
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(TArray<FPhysicalMaterialTraceInput>)       Inputs                                                      ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FPhysicalMaterialTraceInput>)       Inputs                                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Struct /Script/RenderTrace.PhysicalMaterialTraceInput
@@ -27,7 +27,7 @@ class FPhysicalMaterialTraceInput : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FExpressionInput)                          Input                                                       ___ OFFSET(get<T>, {0x8, 40, 0, 0})
+	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0x8, 40, 0, 0})
 };
 

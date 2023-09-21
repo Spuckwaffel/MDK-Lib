@@ -56,7 +56,7 @@ class ULiveEditObjectSubsystemState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 632;
 
 public:
-	CMember(TArray<ULiveEditObjectConnection*>)        Connections                                                 ___ OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(TArray<ULiveEditObjectConnection*>)        Connections                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/LiveEditObject.LiveEditObjectSubsystem
@@ -67,9 +67,9 @@ class ULiveEditObjectSubsystem : public UEngineSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	DMember(int32_t)                                   MaxBytesQueuedForReplication                                ___ OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	DMember(int32_t)                                   NumPackageMapBunchesToDelayTickFor                          ___ OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-	CMember(TArray<ULiveEditObjectSubsystemState*>)    NetDriverStates                                             ___ OFFSET(get<T>, {0x40, 16, 0, 0})
+	DMember(int32_t)                                   MaxBytesQueuedForReplication                                OFFSET(get<int32_t>, {0x38, 4, 0, 0})
+	DMember(int32_t)                                   NumPackageMapBunchesToDelayTickFor                          OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
+	CMember(TArray<ULiveEditObjectSubsystemState*>)    NetDriverStates                                             OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/LiveEditObject.LiveEditObjectTestObject
@@ -80,8 +80,8 @@ class ULiveEditObjectTestObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(int32_t)                                   int32                                                       ___ OFFSET(get<int32_t>, {0x28, 12, 0, 0})
-	SMember(FLiveEditObjectTestStruct)                 StructProperty                                              ___ OFFSET(get<T>, {0x38, 328, 0, 0})
+	DMember(int32_t)                                   int32                                                       OFFSET(get<int32_t>, {0x28, 12, 0, 0})
+	SMember(FLiveEditObjectTestStruct)                 StructProperty                                              OFFSET(get<T>, {0x38, 328, 0, 0})
 };
 
 /// Struct /Script/LiveEditObject.LiveEditObjectTestStruct
@@ -92,23 +92,23 @@ class FLiveEditObjectTestStruct : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	DMember(bool)                                      bool_                                                       ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(int8_t)                                    Int8                                                        ___ OFFSET(get<int8_t>, {0x1, 1, 0, 0})
-	DMember(int16_t)                                   Int16                                                       ___ OFFSET(get<int16_t>, {0x2, 2, 0, 0})
-	DMember(int32_t)                                   int32                                                       ___ OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	DMember(int64_t)                                   Int64                                                       ___ OFFSET(get<int64_t>, {0x8, 8, 0, 0})
-	DMember(float)                                     float_                                                      ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(double)                                    Double                                                      ___ OFFSET(get<double>, {0x18, 8, 0, 0})
-	SMember(FString)                                   String                                                      ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FText)                                     Text                                                        ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x48, 4, 0, 0})
-	CMember(UObject*)                                  RawObjectPtr                                                ___ OFFSET(get<T>, {0x50, 8, 0, 0})
-	CMember(UObject*)                                  ObjectPtr                                                   ___ OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FSoftObjectPath)                           SoftObjectPath                                              ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector2D)                                 Struct                                                      ___ OFFSET(get<T>, {0x78, 16, 0, 0})
-	DMember(int32_t)                                   FixedArray                                                  ___ OFFSET(get<int32_t>, {0x88, 16, 0, 0})
-	CMember(TArray<int32_t>)                           DynamicArray                                                ___ OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TSet<int32_t>)                             Set                                                         ___ OFFSET(get<T>, {0xA8, 80, 0, 0})
-	CMember(TMap<int32_t, int32_t>)                    Map                                                         ___ OFFSET(get<T>, {0xF8, 80, 0, 0})
+	DMember(bool)                                      bool_                                                       OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(int8_t)                                    Int8                                                        OFFSET(get<int8_t>, {0x1, 1, 0, 0})
+	DMember(int16_t)                                   Int16                                                       OFFSET(get<int16_t>, {0x2, 2, 0, 0})
+	DMember(int32_t)                                   int32                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(int64_t)                                   Int64                                                       OFFSET(get<int64_t>, {0x8, 8, 0, 0})
+	DMember(float)                                     float_                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(double)                                    Double                                                      OFFSET(get<double>, {0x18, 8, 0, 0})
+	SMember(FString)                                   String                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x48, 4, 0, 0})
+	CMember(UObject*)                                  RawObjectPtr                                                OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UObject*)                                  ObjectPtr                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FSoftObjectPath)                           SoftObjectPath                                              OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector2D)                                 Struct                                                      OFFSET(get<T>, {0x78, 16, 0, 0})
+	DMember(int32_t)                                   FixedArray                                                  OFFSET(get<int32_t>, {0x88, 16, 0, 0})
+	CMember(TArray<int32_t>)                           DynamicArray                                                OFFSET(get<T>, {0x98, 16, 0, 0})
+	CMember(TSet<int32_t>)                             Set                                                         OFFSET(get<T>, {0xA8, 80, 0, 0})
+	CMember(TMap<int32_t, int32_t>)                    Map                                                         OFFSET(get<T>, {0xF8, 80, 0, 0})
 };
 

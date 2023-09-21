@@ -26,11 +26,11 @@ class FImageWriteOptions : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(EDesiredImageFormat)                       Format                                                      ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FDelegateProperty)                         OnComplete                                                  ___ OFFSET(get<T>, {0x4, 12, 0, 0})
-	DMember(int32_t)                                   CompressionQuality                                          ___ OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bOverwriteFile                                              ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(bool)                                      bAsync                                                      ___ OFFSET(get<bool>, {0x15, 1, 0, 0})
+	CMember(EDesiredImageFormat)                       Format                                                      OFFSET(get<T>, {0x0, 1, 0, 0})
+	SMember(FDelegateProperty)                         OnComplete                                                  OFFSET(get<T>, {0x4, 12, 0, 0})
+	DMember(int32_t)                                   CompressionQuality                                          OFFSET(get<int32_t>, {0x10, 4, 0, 0})
+	DMember(bool)                                      bOverwriteFile                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(bool)                                      bAsync                                                      OFFSET(get<bool>, {0x15, 1, 0, 0})
 };
 
 /// Enum /Script/ImageWriteQueue.EDesiredImageFormat

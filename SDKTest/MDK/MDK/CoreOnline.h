@@ -14,13 +14,13 @@ class FJoinabilitySettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     SessionName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bPublicSearchable                                           ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bAllowInvites                                               ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
-	DMember(bool)                                      bJoinViaPresence                                            ___ OFFSET(get<bool>, {0x6, 1, 0, 0})
-	DMember(bool)                                      bJoinViaPresenceFriendsOnly                                 ___ OFFSET(get<bool>, {0x7, 1, 0, 0})
-	DMember(int32_t)                                   MaxPlayers                                                  ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	DMember(int32_t)                                   MaxPartySize                                                ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+	SMember(FName)                                     SessionName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bPublicSearchable                                           OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bAllowInvites                                               OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bJoinViaPresence                                            OFFSET(get<bool>, {0x6, 1, 0, 0})
+	DMember(bool)                                      bJoinViaPresenceFriendsOnly                                 OFFSET(get<bool>, {0x7, 1, 0, 0})
+	DMember(int32_t)                                   MaxPlayers                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   MaxPartySize                                                OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/CoreOnline.UniqueNetIdWrapper

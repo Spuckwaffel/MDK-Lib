@@ -17,9 +17,9 @@ class UTemplateSequence : public UMovieSceneSequence
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	CMember(UMovieScene*)                              MovieScene                                                  ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   BoundActorClass                                             ___ OFFSET(get<T>, {0x70, 32, 0, 0})
-	CMember(TMap<FGuid, FName>)                        BoundActorComponents                                        ___ OFFSET(get<T>, {0x90, 80, 0, 0})
+	CMember(UMovieScene*)                              MovieScene                                                  OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   BoundActorClass                                             OFFSET(get<T>, {0x70, 32, 0, 0})
+	CMember(TMap<FGuid, FName>)                        BoundActorComponents                                        OFFSET(get<T>, {0x90, 80, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSequence
@@ -40,17 +40,17 @@ class UCameraAnimationSequenceCameraStandIn : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 2096;
 
 public:
-	DMember(float)                                     FieldOfView                                                 ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(bool)                                      bConstrainAspectRatio                                       ___ OFFSET(get<bool>, {0x2C, 1, 1, 0})
-	DMember(float)                                     AspectRatio                                                 ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FPostProcessSettings)                      PostProcessSettings                                         ___ OFFSET(get<T>, {0x40, 1760, 0, 0})
-	DMember(float)                                     PostProcessBlendWeight                                      ___ OFFSET(get<float>, {0x720, 4, 0, 0})
-	SMember(FCameraFilmbackSettings)                   Filmback                                                    ___ OFFSET(get<T>, {0x724, 12, 0, 0})
-	SMember(FCameraLensSettings)                       LensSettings                                                ___ OFFSET(get<T>, {0x730, 28, 0, 0})
-	SMember(FCameraFocusSettings)                      FocusSettings                                               ___ OFFSET(get<T>, {0x750, 88, 0, 0})
-	DMember(float)                                     CurrentFocalLength                                          ___ OFFSET(get<float>, {0x7A8, 4, 0, 0})
-	DMember(float)                                     CurrentAperture                                             ___ OFFSET(get<float>, {0x7AC, 4, 0, 0})
-	DMember(float)                                     CurrentFocusDistance                                        ___ OFFSET(get<float>, {0x7B0, 4, 0, 0})
+	DMember(float)                                     FieldOfView                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(bool)                                      bConstrainAspectRatio                                       OFFSET(get<bool>, {0x2C, 1, 1, 0})
+	DMember(float)                                     AspectRatio                                                 OFFSET(get<float>, {0x30, 4, 0, 0})
+	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(get<T>, {0x40, 1760, 0, 0})
+	DMember(float)                                     PostProcessBlendWeight                                      OFFSET(get<float>, {0x720, 4, 0, 0})
+	SMember(FCameraFilmbackSettings)                   Filmback                                                    OFFSET(get<T>, {0x724, 12, 0, 0})
+	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(get<T>, {0x730, 28, 0, 0})
+	SMember(FCameraFocusSettings)                      FocusSettings                                               OFFSET(get<T>, {0x750, 88, 0, 0})
+	DMember(float)                                     CurrentFocalLength                                          OFFSET(get<float>, {0x7A8, 4, 0, 0})
+	DMember(float)                                     CurrentAperture                                             OFFSET(get<float>, {0x7AC, 4, 0, 0})
+	DMember(float)                                     CurrentFocusDistance                                        OFFSET(get<float>, {0x7B0, 4, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSequencePlayer
@@ -61,9 +61,9 @@ class UCameraAnimationSequencePlayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	CMember(UObject*)                                  BoundObjectOverride                                         ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UMovieSceneSequence*)                      Sequence                                                    ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        ___ OFFSET(get<T>, {0x2A8, 136, 0, 0})
+	CMember(UObject*)                                  BoundObjectOverride                                         OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UMovieSceneSequence*)                      Sequence                                                    OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(get<T>, {0x2A8, 136, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSpawnableSystem
@@ -104,7 +104,7 @@ class UCameraAnimationSequenceSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	CMember(UMovieSceneEntitySystemLinker*)            Linker                                                      ___ OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMovieSceneEntitySystemLinker*)            Linker                                                      OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceSection
@@ -115,7 +115,7 @@ class UTemplateSequenceSection : public UMovieSceneSubSection
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	CMember(TArray<FTemplateSectionPropertyScale>)     PropertyScales                                              ___ OFFSET(get<T>, {0x138, 16, 0, 0})
+	CMember(TArray<FTemplateSectionPropertyScale>)     PropertyScales                                              OFFSET(get<T>, {0x138, 16, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.SequenceCameraShakePattern
@@ -126,15 +126,15 @@ class USequenceCameraShakePattern : public UCameraShakePattern
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(UCameraAnimationSequence*)                 Sequence                                                    ___ OFFSET(get<T>, {0x28, 8, 0, 0})
-	DMember(float)                                     PlayRate                                                    ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     Scale                                                       ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     BlendInTime                                                 ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     BlendOutTime                                                ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     RandomSegmentDuration                                       ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(bool)                                      bRandomSegment                                              ___ OFFSET(get<bool>, {0x44, 1, 0, 0})
-	CMember(UCameraAnimationSequencePlayer*)           Player                                                      ___ OFFSET(get<T>, {0x48, 8, 0, 0})
-	CMember(UCameraAnimationSequenceCameraStandIn*)    CameraStandIn                                               ___ OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(UCameraAnimationSequence*)                 Sequence                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
+	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     BlendInTime                                                 OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     BlendOutTime                                                OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     RandomSegmentDuration                                       OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(bool)                                      bRandomSegment                                              OFFSET(get<bool>, {0x44, 1, 0, 0})
+	CMember(UCameraAnimationSequencePlayer*)           Player                                                      OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(UCameraAnimationSequenceCameraStandIn*)    CameraStandIn                                               OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceSystem
@@ -175,12 +175,25 @@ class ATemplateSequenceActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            ___ OFFSET(get<T>, {0x298, 32, 0, 0})
-	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FSoftObjectPath)                           TemplateSequence                                            ___ OFFSET(get<T>, {0x2C0, 24, 0, 0})
-	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             ___ OFFSET(get<T>, {0x2D8, 12, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(get<T>, {0x298, 32, 0, 0})
+	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(get<T>, {0x2C0, 24, 0, 0})
+	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(get<T>, {0x2D8, 12, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/TemplateSequence.TemplateSequenceActor.SetSequence
+	// void SetSequence(UTemplateSequence* InSequence);                                                                         // [0x6c7101c] Final|Native|Public|BlueprintCallable 
+	// Function /Script/TemplateSequence.TemplateSequenceActor.SetBinding
+	// void SetBinding(AActor* Actor, bool bOverridesDefault);                                                                  // [0x6c70e84] Final|Native|Public|BlueprintCallable 
+	// Function /Script/TemplateSequence.TemplateSequenceActor.LoadSequence
+	// UTemplateSequence* LoadSequence();                                                                                       // [0x6c70e60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequencePlayer
+	// UTemplateSequencePlayer* GetSequencePlayer();                                                                            // [0x6c70e34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
+	// UTemplateSequence* GetSequence();                                                                                        // [0x6c70e10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Class /Script/TemplateSequence.TemplateSequencePlayer
 /// Size: 0x0008 (0x0004C8 - 0x0004D0)
 class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
@@ -219,10 +232,10 @@ class FTemplateSectionPropertyScale : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FGuid)                                     ObjectBinding                                               ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             ___ OFFSET(get<T>, {0x10, 12, 0, 0})
-	CMember(ETemplateSectionPropertyScaleType)         PropertyScaleType                                           ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                ___ OFFSET(get<T>, {0x20, 272, 0, 0})
+	SMember(FGuid)                                     ObjectBinding                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             OFFSET(get<T>, {0x10, 12, 0, 0})
+	CMember(ETemplateSectionPropertyScaleType)         PropertyScaleType                                           OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                OFFSET(get<T>, {0x20, 272, 0, 0})
 };
 
 /// Struct /Script/TemplateSequence.TemplateSequenceBindingOverrideData
@@ -233,8 +246,8 @@ class FTemplateSequenceBindingOverrideData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      ___ OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(bool)                                      bOverridesDefault                                           ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bOverridesDefault                                           OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Enum /Script/TemplateSequence.ETemplateSectionPropertyScaleType

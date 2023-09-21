@@ -14,6 +14,6 @@ class FFortReleaseVersion : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     VersionName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     VersionName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
 };
 

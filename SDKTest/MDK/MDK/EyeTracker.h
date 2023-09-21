@@ -26,14 +26,14 @@ class FEyeTrackerGazeData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   GazeOrigin                                                  ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   GazeDirection                                               ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   FixationPoint                                               ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	DMember(float)                                     ConfidenceValue                                             ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(bool)                                      bIsLeftEyeBlink                                             ___ OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	DMember(bool)                                      bIsRightEyeBlink                                            ___ OFFSET(get<bool>, {0x4D, 1, 0, 0})
-	DMember(float)                                     LeftPupilDiameter                                           ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     RightPupilDiameter                                          ___ OFFSET(get<float>, {0x54, 4, 0, 0})
+	SMember(FVector)                                   GazeOrigin                                                  OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   GazeDirection                                               OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   FixationPoint                                               OFFSET(get<T>, {0x30, 24, 0, 0})
+	DMember(float)                                     ConfidenceValue                                             OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(bool)                                      bIsLeftEyeBlink                                             OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	DMember(bool)                                      bIsRightEyeBlink                                            OFFSET(get<bool>, {0x4D, 1, 0, 0})
+	DMember(float)                                     LeftPupilDiameter                                           OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     RightPupilDiameter                                          OFFSET(get<float>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/EyeTracker.EyeTrackerStereoGazeData
@@ -44,12 +44,12 @@ class FEyeTrackerStereoGazeData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   LeftEyeOrigin                                               ___ OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LeftEyeDirection                                            ___ OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   RightEyeOrigin                                              ___ OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   RightEyeDirection                                           ___ OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   FixationPoint                                               ___ OFFSET(get<T>, {0x60, 24, 0, 0})
-	DMember(float)                                     ConfidenceValue                                             ___ OFFSET(get<float>, {0x78, 4, 0, 0})
+	SMember(FVector)                                   LeftEyeOrigin                                               OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LeftEyeDirection                                            OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   RightEyeOrigin                                              OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   RightEyeDirection                                           OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   FixationPoint                                               OFFSET(get<T>, {0x60, 24, 0, 0})
+	DMember(float)                                     ConfidenceValue                                             OFFSET(get<float>, {0x78, 4, 0, 0})
 };
 
 /// Enum /Script/EyeTracker.EEyeTrackerStatus

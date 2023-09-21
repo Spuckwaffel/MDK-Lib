@@ -16,7 +16,7 @@ class ULiveLinkComponentSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	CMember(TMap<UClass*, UClass*>)                    DefaultControllerForRole                                    ___ OFFSET(get<T>, {0x28, 80, 0, 0})
+	CMember(TMap<UClass*, UClass*>)                    DefaultControllerForRole                                    OFFSET(get<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkControllerBase
@@ -27,7 +27,7 @@ class ULiveLinkControllerBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FComponentReference)                       ComponentPicker                                             ___ OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FComponentReference)                       ComponentPicker                                             OFFSET(get<T>, {0x28, 40, 0, 0})
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkLightController
@@ -48,7 +48,7 @@ class ULiveLinkTransformController : public ULiveLinkControllerBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FLiveLinkTransformControllerData)          TransformData                                               ___ OFFSET(get<T>, {0x68, 6, 0, 0})
+	SMember(FLiveLinkTransformControllerData)          TransformData                                               OFFSET(get<T>, {0x68, 6, 0, 0})
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkComponentController
@@ -59,16 +59,23 @@ class ULiveLinkComponentController : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FLiveLinkSubjectRepresentation)            SubjectRepresentation                                       ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TMap<UClass*, ULiveLinkControllerBase*>)   ControllerMap                                               ___ OFFSET(get<T>, {0xB0, 80, 0, 0})
-	DMember(bool)                                      bUpdateInEditor                                             ___ OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           ___ OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerMapUpdatedDelegate                              ___ OFFSET(get<T>, {0x118, 16, 0, 0})
-	DMember(bool)                                      bDisableEvaluateLiveLinkWhenSpawnable                       ___ OFFSET(get<bool>, {0x128, 1, 0, 0})
-	DMember(bool)                                      bEvaluateLiveLink                                           ___ OFFSET(get<bool>, {0x129, 1, 0, 0})
-	DMember(bool)                                      bUpdateInPreviewEditor                                      ___ OFFSET(get<bool>, {0x12A, 1, 0, 0})
+	SMember(FLiveLinkSubjectRepresentation)            SubjectRepresentation                                       OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TMap<UClass*, ULiveLinkControllerBase*>)   ControllerMap                                               OFFSET(get<T>, {0xB0, 80, 0, 0})
+	DMember(bool)                                      bUpdateInEditor                                             OFFSET(get<bool>, {0x100, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           OFFSET(get<T>, {0x108, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerMapUpdatedDelegate                              OFFSET(get<T>, {0x118, 16, 0, 0})
+	DMember(bool)                                      bDisableEvaluateLiveLinkWhenSpawnable                       OFFSET(get<bool>, {0x128, 1, 0, 0})
+	DMember(bool)                                      bEvaluateLiveLink                                           OFFSET(get<bool>, {0x129, 1, 0, 0})
+	DMember(bool)                                      bUpdateInPreviewEditor                                      OFFSET(get<bool>, {0x12A, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/LiveLinkComponents.LiveLinkComponentController.SetSubjectRepresentation
+	// void SetSubjectRepresentation(FLiveLinkSubjectRepresentation InSubjectRepresentation);                                   // [0xa148844] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LiveLinkComponents.LiveLinkComponentController.GetSubjectRepresentation
+	// FLiveLinkSubjectRepresentation GetSubjectRepresentation();                                                               // [0xa148828] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 /// Struct /Script/LiveLinkComponents.LiveLinkTransformControllerData
 /// Size: 0x0006 (0x000000 - 0x000006)
 class FLiveLinkTransformControllerData : public MDKStruct
@@ -77,11 +84,11 @@ class FLiveLinkTransformControllerData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
 public:
-	DMember(bool)                                      bWorldTransform                                             ___ OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bUseLocation                                                ___ OFFSET(get<bool>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bUseRotation                                                ___ OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bUseScale                                                   ___ OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bSweep                                                      ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bTeleport                                                   ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bWorldTransform                                             OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(bool)                                      bUseLocation                                                OFFSET(get<bool>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bUseRotation                                                OFFSET(get<bool>, {0x2, 1, 0, 0})
+	DMember(bool)                                      bUseScale                                                   OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bSweep                                                      OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bTeleport                                                   OFFSET(get<bool>, {0x5, 1, 0, 0})
 };
 

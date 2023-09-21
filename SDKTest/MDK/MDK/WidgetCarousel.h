@@ -15,9 +15,9 @@ class FWidgetCarouselNavigationButtonStyle : public FSlateWidgetStyle
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	SMember(FButtonStyle)                              InnerButtonStyle                                            ___ OFFSET(get<T>, {0x10, 944, 0, 0})
-	SMember(FSlateBrush)                               NavigationButtonLeftImage                                   ___ OFFSET(get<T>, {0x3C0, 192, 0, 0})
-	SMember(FSlateBrush)                               NavigationButtonRightImage                                  ___ OFFSET(get<T>, {0x480, 192, 0, 0})
+	SMember(FButtonStyle)                              InnerButtonStyle                                            OFFSET(get<T>, {0x10, 944, 0, 0})
+	SMember(FSlateBrush)                               NavigationButtonLeftImage                                   OFFSET(get<T>, {0x3C0, 192, 0, 0})
+	SMember(FSlateBrush)                               NavigationButtonRightImage                                  OFFSET(get<T>, {0x480, 192, 0, 0})
 };
 
 /// Struct /Script/WidgetCarousel.WidgetCarouselNavigationBarStyle
@@ -28,9 +28,9 @@ class FWidgetCarouselNavigationBarStyle : public FSlateWidgetStyle
 	static inline constexpr uint64_t __MDKClassSize = 3040;
 
 public:
-	SMember(FSlateBrush)                               HighlightBrush                                              ___ OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FButtonStyle)                              LeftButtonStyle                                             ___ OFFSET(get<T>, {0xD0, 944, 0, 0})
-	SMember(FButtonStyle)                              CenterButtonStyle                                           ___ OFFSET(get<T>, {0x480, 944, 0, 0})
-	SMember(FButtonStyle)                              RightButtonStyle                                            ___ OFFSET(get<T>, {0x830, 944, 0, 0})
+	SMember(FSlateBrush)                               HighlightBrush                                              OFFSET(get<T>, {0x10, 192, 0, 0})
+	SMember(FButtonStyle)                              LeftButtonStyle                                             OFFSET(get<T>, {0xD0, 944, 0, 0})
+	SMember(FButtonStyle)                              CenterButtonStyle                                           OFFSET(get<T>, {0x480, 944, 0, 0})
+	SMember(FButtonStyle)                              RightButtonStyle                                            OFFSET(get<T>, {0x830, 944, 0, 0})
 };
 

@@ -16,9 +16,9 @@ class UActorMetricsSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	CMember(TArray<FName>)                             ExcludedPaths                                               ___ OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<FName>)                             ExcludedPackages                                            ___ OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TArray<UClass*>)                           ClassIgnoreList                                             ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	CMember(TSet<UClass*>)                             ClassIgnoreListSet                                          ___ OFFSET(get<T>, {0x100, 80, 0, 0})
+	CMember(TArray<FName>)                             ExcludedPaths                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FName>)                             ExcludedPackages                                            OFFSET(get<T>, {0x90, 16, 0, 0})
+	CMember(TArray<UClass*>)                           ClassIgnoreList                                             OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(TSet<UClass*>)                             ClassIgnoreListSet                                          OFFSET(get<T>, {0x100, 80, 0, 0})
 };
 

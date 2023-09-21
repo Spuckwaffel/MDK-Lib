@@ -18,13 +18,32 @@ class UVoteBroadcasterComponent : public UMeshNetworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 1296;
 
 public:
-	CMember(TArray<FVoteSessionSettings>)              VoteSessionSettingsList                                     ___ OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FVoteSessionRuntimeArray)                  VoteSessionRuntimeList                                      ___ OFFSET(get<T>, {0x160, 288, 0, 0})
-	SMember(FVoteRuntimeArray)                         VoteRuntimeList                                             ___ OFFSET(get<T>, {0x280, 288, 0, 0})
-	SMember(FVoteSelectionResultsArray)                VoteResultsList                                             ___ OFFSET(get<T>, {0x3A0, 288, 0, 0})
-	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        ___ OFFSET(get<T>, {0x4C0, 80, 0, 0})
+	CMember(TArray<FVoteSessionSettings>)              VoteSessionSettingsList                                     OFFSET(get<T>, {0x150, 16, 0, 0})
+	SMember(FVoteSessionRuntimeArray)                  VoteSessionRuntimeList                                      OFFSET(get<T>, {0x160, 288, 0, 0})
+	SMember(FVoteRuntimeArray)                         VoteRuntimeList                                             OFFSET(get<T>, {0x280, 288, 0, 0})
+	SMember(FVoteSelectionResultsArray)                VoteResultsList                                             OFFSET(get<T>, {0x3A0, 288, 0, 0})
+	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        OFFSET(get<T>, {0x4C0, 80, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteStart
+	// void VoteStart(FName VoteSessionId, FName VoteId);                                                                       // [0xa22f4c0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteSetup
+	// void VoteSetup(FName VoteSessionId, FName VoteId);                                                                       // [0xa22f400] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteSessionShutdown
+	// void VoteSessionShutdown(FName VoteSessionId);                                                                           // [0xa22f380] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteSessionSetup
+	// void VoteSessionSetup(FName VoteSessionId, FName StartingVoteId, EVoteSessionNetworkType NetworkType);                   // [0xa22f288] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteSessionComplete
+	// void VoteSessionComplete(FName VoteSessionId);                                                                           // [0xa22f208] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.VoteEnd
+	// void VoteEnd(FName VoteSessionId, FName VoteId, FName WinningVoteSelectionId);                                           // [0xa22f114] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.ServerSubmitVotesAggregated
+	// void ServerSubmitVotesAggregated(FName VoteSessionId, FName VoteId, FName VoteSelectionId, int32_t VoteDelta);           // [0xa22efa4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/VotingFramework.VoteBroadcasterComponent.OnVoteCasted
+	// void OnVoteCasted(FUniqueNetIdRepl& UserNetId, FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& VoteSelectionId); // [0xa22defc] Final|Native|Protected|HasOutParms 
 /// Class /Script/VotingFramework.VoteDispatchSubsystem
 /// Size: 0x00A0 (0x000030 - 0x0000D0)
 class UVoteDispatchSubsystem : public UGameInstanceSubsystem
@@ -33,7 +52,7 @@ class UVoteDispatchSubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(TArray<FVoteSelectionResults>)             VotingResults                                               ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(TArray<FVoteSelectionResults>)             VotingResults                                               OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
 
 /// Class /Script/VotingFramework.VoteInitiationActor
@@ -44,7 +63,7 @@ class AVoteInitiationActor : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	CMember(UVoteBroadcasterComponent*)                VoteBroadcasterComponent                                    ___ OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UVoteBroadcasterComponent*)                VoteBroadcasterComponent                                    OFFSET(get<T>, {0x298, 8, 0, 0})
 };
 
 /// Class /Script/VotingFramework.VoteListenerComponent
@@ -55,19 +74,38 @@ class UVoteListenerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnVoteSessionSetupEvent                                     ___ OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteSessionVotingEvent                                    ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteSetupEvent                                            ___ OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteStartEvent                                            ___ OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteChangeEvent                                           ___ OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteEndEvent                                              ___ OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteSessionCompleteEvent                                  ___ OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVoteSessionShutdownEvent                                  ___ OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     RequestedVoteSessionIds                                     ___ OFFSET(get<T>, {0x120, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     RequestedVoteIds                                            ___ OFFSET(get<T>, {0x140, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     RequestedVoteSelectionIds                                   ___ OFFSET(get<T>, {0x160, 32, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteSessionSetupEvent                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteSessionVotingEvent                                    OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteSetupEvent                                            OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteStartEvent                                            OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteChangeEvent                                           OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteEndEvent                                              OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteSessionCompleteEvent                                  OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVoteSessionShutdownEvent                                  OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     RequestedVoteSessionIds                                     OFFSET(get<T>, {0x120, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     RequestedVoteIds                                            OFFSET(get<T>, {0x140, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     RequestedVoteSelectionIds                                   OFFSET(get<T>, {0x160, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteStart
+	// void OnVoteStart(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, EVoteState VoteState);                               // [0xa22eb24] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteSetup
+	// void OnVoteSetup(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, EVoteState VoteState);                               // [0xa22e998] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteSessionVoting
+	// void OnVoteSessionVoting(FGameplayTag& VoteSessionId, FGameplayTag& StartingVoteId, EVoteSessionState SessionState);     // [0xa22e80c] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteSessionShutdown
+	// void OnVoteSessionShutdown(FGameplayTag& VoteSessionId);                                                                 // [0xa22e77c] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteSessionSetup
+	// void OnVoteSessionSetup(FGameplayTag& VoteSessionId, FGameplayTag& StartingVoteId, EVoteSessionNetworkType NetworkType, EVoteSessionState SessionState); // [0xa22e554] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteSessionComplete
+	// void OnVoteSessionComplete(FGameplayTag& VoteSessionId);                                                                 // [0xa22e4c4] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteEnd
+	// void OnVoteEnd(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& WinningVoteSelectionId, EVoteState VoteState); // [0xa22e2e8] Native|Protected|HasOutParms 
+	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteChange
+	// void OnVoteChange(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& VoteSelectionId, int32_t ServerVoteTotal, int32_t AllServersVoteTotal); // [0xa22e068] Native|Protected|HasOutParms 
 /// Class /Script/VotingFramework.VoteResponderComponent
 /// Size: 0x0070 (0x000180 - 0x0001F0)
 class UVoteResponderComponent : public UVoteListenerComponent
@@ -76,13 +114,24 @@ class UVoteResponderComponent : public UVoteListenerComponent
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	CMember(TArray<FVoteSelection>)                    SupportedVoteSelections                                     ___ OFFSET(get<T>, {0x180, 16, 0, 0})
-	DMember(bool)                                      bShouldLockVotingAfterCasted                                ___ OFFSET(get<bool>, {0x190, 1, 0, 0})
-	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        ___ OFFSET(get<T>, {0x198, 80, 0, 0})
-	SMember(FName)                                     ActiveVoteSessionId                                         ___ OFFSET(get<T>, {0x1E8, 4, 0, 0})
-	SMember(FName)                                     ActiveVoteId                                                ___ OFFSET(get<T>, {0x1EC, 4, 0, 0})
+	CMember(TArray<FVoteSelection>)                    SupportedVoteSelections                                     OFFSET(get<T>, {0x180, 16, 0, 0})
+	DMember(bool)                                      bShouldLockVotingAfterCasted                                OFFSET(get<bool>, {0x190, 1, 0, 0})
+	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        OFFSET(get<T>, {0x198, 80, 0, 0})
+	SMember(FName)                                     ActiveVoteSessionId                                         OFFSET(get<T>, {0x1E8, 4, 0, 0})
+	SMember(FName)                                     ActiveVoteId                                                OFFSET(get<T>, {0x1EC, 4, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VotingFramework.VoteResponderComponent.ServerCastVoteSelection
+	// void ServerCastVoteSelection(FUniqueNetIdRepl InUserId, FCastedVote CastedVote);                                         // [0xa22ecb0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/VotingFramework.VoteResponderComponent.CastManualVoteSelectionAtIndex
+	// void CastManualVoteSelectionAtIndex(APlayerState* InPlayerState, int32_t SelectionIndex);                                // [0xa22de38] Final|Native|Public|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteResponderComponent.CastManualVoteSelection
+	// void CastManualVoteSelection(APlayerState* InPlayerState, FGameplayTag& VoteSelection);                                  // [0xa22dd68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/VotingFramework.VoteResponderComponent.CastDefaultVoteSelection
+	// void CastDefaultVoteSelection(APlayerState* InPlayerState);                                                              // [0xa22dce4] Final|Native|Public|BlueprintCallable 
 /// Struct /Script/VotingFramework.CastedVote
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FCastedVote : public MDKStruct
@@ -91,9 +140,9 @@ class FCastedVote : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     VoteSessionId                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     VoteId                                                      ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     VoteSelectionId                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     VoteSessionId                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     VoteId                                                      OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     VoteSelectionId                                             OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSelection
@@ -104,9 +153,9 @@ class FVoteSelection : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FGameplayTag)                              VoteSessionId                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              VoteId                                                      ___ OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGameplayTag)                              VoteSelectionId                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              VoteSessionId                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VoteId                                                      OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              VoteSelectionId                                             OFFSET(get<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSelectionSettings
@@ -117,8 +166,8 @@ class FVoteSelectionSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGameplayTag)                              VoteSelectionId                                             ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     VoteSelectionText                                           ___ OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FGameplayTag)                              VoteSelectionId                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     VoteSelectionText                                           OFFSET(get<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSettings
@@ -129,10 +178,10 @@ class FVoteSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              VoteId                                                      ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	DMember(bool)                                      bLocksSelection                                             ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
-	SMember(FText)                                     VoteText                                                    ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(TArray<FVoteSelectionSettings>)            VoteSelections                                              ___ OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FGameplayTag)                              VoteId                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bLocksSelection                                             OFFSET(get<bool>, {0x4, 1, 0, 0})
+	SMember(FText)                                     VoteText                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TArray<FVoteSelectionSettings>)            VoteSelections                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSessionSettings
@@ -143,10 +192,10 @@ class FVoteSessionSettings : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGameplayTag)                              VoteSessionId                                               ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     VoteSessionText                                             ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	CMember(TArray<FVoteSettings>)                     VoteSettingsList                                            ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(EVoteSessionNetworkType)                   NetworkType                                                 ___ OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FGameplayTag)                              VoteSessionId                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     VoteSessionText                                             OFFSET(get<T>, {0x8, 24, 0, 0})
+	CMember(TArray<FVoteSettings>)                     VoteSettingsList                                            OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(EVoteSessionNetworkType)                   NetworkType                                                 OFFSET(get<T>, {0x30, 1, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSelectionResults
@@ -157,14 +206,14 @@ class FVoteSelectionResults : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     VoteSessionId                                               ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     VoteId                                                      ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	SMember(FName)                                     VoteSelectionId                                             ___ OFFSET(get<T>, {0x20, 4, 0, 0})
-	DMember(int32_t)                                   ServerVoteTotal                                             ___ OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	DMember(int32_t)                                   AllServersVoteTotal                                         ___ OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	DMember(int32_t)                                   Shadow_ServerVoteTotal                                      ___ OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	DMember(int32_t)                                   Shadow_AllServersVoteTotal                                  ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     VoteSessionId                                               OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     VoteId                                                      OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     VoteSelectionId                                             OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(int32_t)                                   ServerVoteTotal                                             OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	DMember(int32_t)                                   AllServersVoteTotal                                         OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   Shadow_ServerVoteTotal                                      OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	DMember(int32_t)                                   Shadow_AllServersVoteTotal                                  OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSelectionResultsArray
@@ -175,8 +224,8 @@ class FVoteSelectionResultsArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(TArray<FVoteSelectionResults>)             VoteSelectionResults                                        ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TArray<FVoteSelectionResults>)             VoteSelectionResults                                        OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteRuntime
@@ -187,14 +236,14 @@ class FVoteRuntime : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     VoteSessionId                                               ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     VoteId                                                      ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	CMember(TArray<FName>)                             VoteSelectionIds                                            ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(EVoteState)                                VoteState                                                   ___ OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FName)                                     VoteSelectionWinningResult                                  ___ OFFSET(get<T>, {0x34, 4, 0, 0})
-	SMember(FName)                                     Shadow_VoteSelectionWinningResult                           ___ OFFSET(get<T>, {0x38, 4, 0, 0})
-	CMember(EVoteState)                                Shadow_VoteState                                            ___ OFFSET(get<T>, {0x3C, 1, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     VoteSessionId                                               OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     VoteId                                                      OFFSET(get<T>, {0x1C, 4, 0, 0})
+	CMember(TArray<FName>)                             VoteSelectionIds                                            OFFSET(get<T>, {0x20, 16, 0, 0})
+	CMember(EVoteState)                                VoteState                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
+	SMember(FName)                                     VoteSelectionWinningResult                                  OFFSET(get<T>, {0x34, 4, 0, 0})
+	SMember(FName)                                     Shadow_VoteSelectionWinningResult                           OFFSET(get<T>, {0x38, 4, 0, 0})
+	CMember(EVoteState)                                Shadow_VoteState                                            OFFSET(get<T>, {0x3C, 1, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteRuntimeArray
@@ -205,8 +254,8 @@ class FVoteRuntimeArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(TArray<FVoteRuntime>)                      VotingResults                                               ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TArray<FVoteRuntime>)                      VotingResults                                               OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSessionRuntime
@@ -217,12 +266,12 @@ class FVoteSessionRuntime : public FFastArraySerializerItem
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     VoteSessionId                                               ___ OFFSET(get<T>, {0xC, 4, 0, 0})
-	CMember(EVoteSessionNetworkType)                   NetworkType                                                 ___ OFFSET(get<T>, {0x10, 1, 0, 0})
-	CMember(EVoteSessionState)                         VoteSessionState                                            ___ OFFSET(get<T>, {0x11, 1, 0, 0})
-	SMember(FName)                                     CurrentVoteId                                               ___ OFFSET(get<T>, {0x14, 4, 0, 0})
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x18, 8, 0, 0})
-	CMember(EVoteSessionState)                         Shadow_VoteSessionState                                     ___ OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FName)                                     VoteSessionId                                               OFFSET(get<T>, {0xC, 4, 0, 0})
+	CMember(EVoteSessionNetworkType)                   NetworkType                                                 OFFSET(get<T>, {0x10, 1, 0, 0})
+	CMember(EVoteSessionState)                         VoteSessionState                                            OFFSET(get<T>, {0x11, 1, 0, 0})
+	SMember(FName)                                     CurrentVoteId                                               OFFSET(get<T>, {0x14, 4, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x18, 8, 0, 0})
+	CMember(EVoteSessionState)                         Shadow_VoteSessionState                                     OFFSET(get<T>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/VotingFramework.VoteSessionRuntimeArray
@@ -233,8 +282,8 @@ class FVoteSessionRuntimeArray : public FFastArraySerializer
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(UWorld*)                                   WorldRef                                                    ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	CMember(TArray<FVoteSessionRuntime>)               VotingSessions                                              ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UWorld*)                                   WorldRef                                                    OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TArray<FVoteSessionRuntime>)               VotingSessions                                              OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Enum /Script/VotingFramework.EVoteState

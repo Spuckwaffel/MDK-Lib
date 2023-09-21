@@ -16,11 +16,11 @@ class UTextureImportSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(int32_t)                                   AutoVTSize                                                  ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bEnableNormalizeNormals                                     ___ OFFSET(get<bool>, {0x34, 1, 0, 0})
-	DMember(bool)                                      bEnableFastMipFilter                                        ___ OFFSET(get<bool>, {0x35, 1, 0, 0})
-	CMember(ETextureImportFloatingPointFormat)         CompressedFormatForFloatTextures                            ___ OFFSET(get<T>, {0x36, 1, 0, 0})
-	CMember(ETextureImportPNGInfill)                   PNGInfill                                                   ___ OFFSET(get<T>, {0x37, 1, 0, 0})
+	DMember(int32_t)                                   AutoVTSize                                                  OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bEnableNormalizeNormals                                     OFFSET(get<bool>, {0x34, 1, 0, 0})
+	DMember(bool)                                      bEnableFastMipFilter                                        OFFSET(get<bool>, {0x35, 1, 0, 0})
+	CMember(ETextureImportFloatingPointFormat)         CompressedFormatForFloatTextures                            OFFSET(get<T>, {0x36, 1, 0, 0})
+	CMember(ETextureImportPNGInfill)                   PNGInfill                                                   OFFSET(get<T>, {0x37, 1, 0, 0})
 };
 
 /// Enum /Script/TextureUtilitiesCommon.ETextureImportFloatingPointFormat

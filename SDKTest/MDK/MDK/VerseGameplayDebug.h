@@ -14,7 +14,7 @@ class FVerseGameplayStringDebugMessage : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        ___ OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   String                                                      ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   String                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

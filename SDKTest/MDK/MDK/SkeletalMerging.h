@@ -26,13 +26,13 @@ class FSkeletalMeshMergeParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	CMember(TArray<FSkelMeshMergeSectionMapping>)      MeshSectionMappings                                         ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	CMember(TArray<FSkelMeshMergeMeshUVTransforms>)    UVTransformsPerMesh                                         ___ OFFSET(get<T>, {0x10, 16, 0, 0})
-	CMember(TArray<USkeletalMesh*>)                    MeshesToMerge                                               ___ OFFSET(get<T>, {0x20, 16, 0, 0})
-	DMember(int32_t)                                   StripTopLODS                                                ___ OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bNeedsCpuAccess                                             ___ OFFSET(get<bool>, {0x34, 1, 1, 0})
-	DMember(bool)                                      bSkeletonBefore                                             ___ OFFSET(get<bool>, {0x34, 1, 1, 1})
-	CMember(USkeleton*)                                Skeleton                                                    ___ OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(TArray<FSkelMeshMergeSectionMapping>)      MeshSectionMappings                                         OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FSkelMeshMergeMeshUVTransforms>)    UVTransformsPerMesh                                         OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TArray<USkeletalMesh*>)                    MeshesToMerge                                               OFFSET(get<T>, {0x20, 16, 0, 0})
+	DMember(int32_t)                                   StripTopLODS                                                OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	DMember(bool)                                      bNeedsCpuAccess                                             OFFSET(get<bool>, {0x34, 1, 1, 0})
+	DMember(bool)                                      bSkeletonBefore                                             OFFSET(get<bool>, {0x34, 1, 1, 1})
+	CMember(USkeleton*)                                Skeleton                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/SkeletalMerging.SkeletonMergeParams
@@ -43,12 +43,12 @@ class FSkeletonMergeParams : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(TArray<USkeleton*>)                        SkeletonsToMerge                                            ___ OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(bool)                                      bMergeSockets                                               ___ OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bMergeVirtualBones                                          ___ OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(bool)                                      bMergeCurveNames                                            ___ OFFSET(get<bool>, {0x12, 1, 0, 0})
-	DMember(bool)                                      bMergeBlendProfiles                                         ___ OFFSET(get<bool>, {0x13, 1, 0, 0})
-	DMember(bool)                                      bMergeAnimSlotGroups                                        ___ OFFSET(get<bool>, {0x14, 1, 0, 0})
-	DMember(bool)                                      bCheckSkeletonsCompatibility                                ___ OFFSET(get<bool>, {0x15, 1, 0, 0})
+	CMember(TArray<USkeleton*>)                        SkeletonsToMerge                                            OFFSET(get<T>, {0x0, 16, 0, 0})
+	DMember(bool)                                      bMergeSockets                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
+	DMember(bool)                                      bMergeVirtualBones                                          OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bMergeCurveNames                                            OFFSET(get<bool>, {0x12, 1, 0, 0})
+	DMember(bool)                                      bMergeBlendProfiles                                         OFFSET(get<bool>, {0x13, 1, 0, 0})
+	DMember(bool)                                      bMergeAnimSlotGroups                                        OFFSET(get<bool>, {0x14, 1, 0, 0})
+	DMember(bool)                                      bCheckSkeletonsCompatibility                                OFFSET(get<bool>, {0x15, 1, 0, 0})
 };
 

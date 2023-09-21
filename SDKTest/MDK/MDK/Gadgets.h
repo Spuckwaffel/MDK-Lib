@@ -17,43 +17,78 @@ class ABP_ZipLine_Athena_Harness_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              ___ OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 P_Zipline_AttachedToPlayer                                  ___ OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     SM_Zipline_Magnet                                           ___ OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow                                                       ___ OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 P_Zipline_Pulley_SpeedLines                                 ___ OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     SM_Zipline_Motor                                            ___ OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(USceneComponent*)                          Scene                                                       ___ OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(UParticleSystem*)                          SpawnFX                                                     ___ OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(UParticleSystem*)                          DestroyFX                                                   ___ OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(UParticleSystem*)                          CollideDestroyVFX                                           ___ OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(USoundBase*)                               SpawnSound                                                  ___ OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	CMember(USoundBase*)                               UnSpawnSound                                                ___ OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          AttachedPlayer                                              ___ OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	DMember(bool)                                      HasHitAnotherPlayer                                         ___ OFFSET(get<bool>, {0x2F8, 1, 0, 0})
-	DMember(double)                                    ZiplineChimeVisualUpdate                                    ___ OFFSET(get<double>, {0x300, 8, 0, 0})
-	SMember(FTimerHandle)                              ChimeTimer                                                  ___ OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(FVector)                                   ZiplineDirection                                            ___ OFFSET(get<T>, {0x310, 24, 0, 0})
-	CMember(ABP_Athena_Environmental_ZipLine_Spline_C*) EnvZiplineSpline                                           ___ OFFSET(get<T>, {0x328, 8, 0, 0})
-	DMember(double)                                    SplineRotationUpdateSeconds                                 ___ OFFSET(get<double>, {0x330, 8, 0, 0})
-	SMember(FTimerHandle)                              MotorUpdateTimer                                            ___ OFFSET(get<T>, {0x338, 8, 0, 0})
-	CMember(AFortAthenaZipline*)                       AttachedZipline                                             ___ OFFSET(get<T>, {0x340, 8, 0, 0})
-	DMember(bool)                                      debugOutput                                                 ___ OFFSET(get<bool>, {0x348, 1, 0, 0})
-	DMember(bool)                                      IsReversingMomentum                                         ___ OFFSET(get<bool>, {0x349, 1, 0, 0})
-	DMember(bool)                                      bIsTravelingUphill                                          ___ OFFSET(get<bool>, {0x34A, 1, 0, 0})
-	DMember(bool)                                      bIsTravelingDownhill                                        ___ OFFSET(get<bool>, {0x34B, 1, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_Travel                                               ___ OFFSET(get<T>, {0x34C, 4, 0, 0})
-	CMember(USoundBase*)                               TravelSound                                                 ___ OFFSET(get<T>, {0x350, 8, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_HighSpeed                                            ___ OFFSET(get<T>, {0x358, 4, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_ZiplineBraking                                       ___ OFFSET(get<T>, {0x35C, 4, 0, 0})
-	DMember(bool)                                      bLoopingDownhillGCN                                         ___ OFFSET(get<bool>, {0x360, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               DownhillTravelGE                                            ___ OFFSET(get<T>, {0x364, 8, 0, 0})
-	DMember(bool)                                      UseMeshAttachment                                           ___ OFFSET(get<bool>, {0x36C, 1, 0, 0})
-	SMember(FVector)                                   CurrentDesired_Zipline_Offset                               ___ OFFSET(get<T>, {0x370, 24, 0, 0})
-	CMember(APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C*) DynamicZiplineSpline                                   ___ OFFSET(get<T>, {0x388, 8, 0, 0})
-	CMember(USplineComponent*)                         NewVar                                                      ___ OFFSET(get<T>, {0x390, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 P_Zipline_AttachedToPlayer                                  OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     SM_Zipline_Magnet                                           OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 P_Zipline_Pulley_SpeedLines                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     SM_Zipline_Motor                                            OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UParticleSystem*)                          SpawnFX                                                     OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(UParticleSystem*)                          DestroyFX                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(UParticleSystem*)                          CollideDestroyVFX                                           OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(USoundBase*)                               SpawnSound                                                  OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(USoundBase*)                               UnSpawnSound                                                OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          AttachedPlayer                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	DMember(bool)                                      HasHitAnotherPlayer                                         OFFSET(get<bool>, {0x2F8, 1, 0, 0})
+	DMember(double)                                    ZiplineChimeVisualUpdate                                    OFFSET(get<double>, {0x300, 8, 0, 0})
+	SMember(FTimerHandle)                              ChimeTimer                                                  OFFSET(get<T>, {0x308, 8, 0, 0})
+	SMember(FVector)                                   ZiplineDirection                                            OFFSET(get<T>, {0x310, 24, 0, 0})
+	CMember(ABP_Athena_Environmental_ZipLine_Spline_C*) EnvZiplineSpline                                           OFFSET(get<T>, {0x328, 8, 0, 0})
+	DMember(double)                                    SplineRotationUpdateSeconds                                 OFFSET(get<double>, {0x330, 8, 0, 0})
+	SMember(FTimerHandle)                              MotorUpdateTimer                                            OFFSET(get<T>, {0x338, 8, 0, 0})
+	CMember(AFortAthenaZipline*)                       AttachedZipline                                             OFFSET(get<T>, {0x340, 8, 0, 0})
+	DMember(bool)                                      debugOutput                                                 OFFSET(get<bool>, {0x348, 1, 0, 0})
+	DMember(bool)                                      IsReversingMomentum                                         OFFSET(get<bool>, {0x349, 1, 0, 0})
+	DMember(bool)                                      bIsTravelingUphill                                          OFFSET(get<bool>, {0x34A, 1, 0, 0})
+	DMember(bool)                                      bIsTravelingDownhill                                        OFFSET(get<bool>, {0x34B, 1, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_Travel                                               OFFSET(get<T>, {0x34C, 4, 0, 0})
+	CMember(USoundBase*)                               TravelSound                                                 OFFSET(get<T>, {0x350, 8, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_HighSpeed                                            OFFSET(get<T>, {0x358, 4, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_ZiplineBraking                                       OFFSET(get<T>, {0x35C, 4, 0, 0})
+	DMember(bool)                                      bLoopingDownhillGCN                                         OFFSET(get<bool>, {0x360, 1, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               DownhillTravelGE                                            OFFSET(get<T>, {0x364, 8, 0, 0})
+	DMember(bool)                                      UseMeshAttachment                                           OFFSET(get<bool>, {0x36C, 1, 0, 0})
+	SMember(FVector)                                   CurrentDesired_Zipline_Offset                               OFFSET(get<T>, {0x370, 24, 0, 0})
+	CMember(APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C*) DynamicZiplineSpline                                   OFFSET(get<T>, {0x388, 8, 0, 0})
+	CMember(USplineComponent*)                         NewVar                                                      OFFSET(get<T>, {0x390, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OnRep_AttachedPlayer
+	// void OnRep_AttachedPlayer();                                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Update Audio and VFXParams
+	// void Update Audio and VFXParams();                                                                                       // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Start Travel Audio
+	// void Start Travel Audio();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Stop Travel Audio
+	// void Stop Travel Audio();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveDestroyed
+	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.HandleOnDied
+	// void HandleOnDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Chime Visual
+	// void Chime Visual();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OrientMotorForZipline
+	// void OrientMotorForZipline(AFortAthenaZiplineBase* Zipline, FVector DesiredZiplineOffset);                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.RotateToZiplineDirection
+	// void RotateToZiplineDirection();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateMotorToSpline
+	// void UpdateMotorToSpline();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateParamsForAudioAndVFX
+	// void UpdateParamsForAudioAndVFX();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Cleanup On DownhillGCN
+	// void Cleanup On DownhillGCN();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateZiplineOffsetLocation
+	// void UpdateZiplineOffsetLocation();                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateMotorToDynSpline
+	// void UpdateMotorToDynSpline();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness
+	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C
 /// Size: 0x0048 (0x000398 - 0x0003E0)
 class ABP_ZipLine_Athena_Harness_Yellow_C : public ABP_ZipLine_Athena_Harness_C
@@ -62,19 +97,40 @@ class ABP_ZipLine_Athena_Harness_Yellow_C : public ABP_ZipLine_Athena_Harness_C
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              ___ OFFSET(get<T>, {0x398, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NS_Zipline_Pulley_SpeedLines_Converted                      ___ OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NS_Zipline_Speedline                                        ___ OFFSET(get<T>, {0x3A8, 8, 0, 0})
-	DMember(float)                                     Alpha_NewTrack_0_AF34CA1D47D28FE19CCA3C98688125DE           ___ OFFSET(get<float>, {0x3B0, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Alpha__Direction_AF34CA1D47D28FE19CCA3C98688125DE           ___ OFFSET(get<T>, {0x3B4, 1, 0, 0})
-	CMember(UTimelineComponent*)                       Alpha                                                       ___ OFFSET(get<T>, {0x3B8, 8, 0, 0})
-	DMember(float)                                     Spark_NewTrack_0_A812B2F04CB78DDF352B84A578861501           ___ OFFSET(get<float>, {0x3C0, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Spark__Direction_A812B2F04CB78DDF352B84A578861501           ___ OFFSET(get<T>, {0x3C4, 1, 0, 0})
-	CMember(UTimelineComponent*)                       spark                                                       ___ OFFSET(get<T>, {0x3C8, 8, 0, 0})
-	DMember(double)                                    BeginLocation_z                                             ___ OFFSET(get<double>, {0x3D0, 8, 0, 0})
-	DMember(double)                                    Location                                                    ___ OFFSET(get<double>, {0x3D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x398, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NS_Zipline_Pulley_SpeedLines_Converted                      OFFSET(get<T>, {0x3A0, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NS_Zipline_Speedline                                        OFFSET(get<T>, {0x3A8, 8, 0, 0})
+	DMember(float)                                     Alpha_NewTrack_0_AF34CA1D47D28FE19CCA3C98688125DE           OFFSET(get<float>, {0x3B0, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Alpha__Direction_AF34CA1D47D28FE19CCA3C98688125DE           OFFSET(get<T>, {0x3B4, 1, 0, 0})
+	CMember(UTimelineComponent*)                       Alpha                                                       OFFSET(get<T>, {0x3B8, 8, 0, 0})
+	DMember(float)                                     Spark_NewTrack_0_A812B2F04CB78DDF352B84A578861501           OFFSET(get<float>, {0x3C0, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Spark__Direction_A812B2F04CB78DDF352B84A578861501           OFFSET(get<T>, {0x3C4, 1, 0, 0})
+	CMember(UTimelineComponent*)                       spark                                                       OFFSET(get<T>, {0x3C8, 8, 0, 0})
+	DMember(double)                                    BeginLocation_z                                             OFFSET(get<double>, {0x3D0, 8, 0, 0})
+	DMember(double)                                    Location                                                    OFFSET(get<double>, {0x3D8, 8, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Spark__FinishedFunc
+	// void Spark__FinishedFunc();                                                                                              // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Spark__UpdateFunc
+	// void Spark__UpdateFunc();                                                                                                // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Alpha__FinishedFunc
+	// void Alpha__FinishedFunc();                                                                                              // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Alpha__UpdateFunc
+	// void Alpha__UpdateFunc();                                                                                                // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.UpdateZiplineFX
+	// void UpdateZiplineFX();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Update Begin Z
+	// void Update Begin Z();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ResetBlue
+	// void ResetBlue();                                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow
+	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow(int32_t EntryPoint);                                              // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Gadgets/Assets/VinderTech_GliderChute/Glider_Bistro_Monster_Female/Scripts/VariantScript_Glider_BistroAstronaut_Style.VariantScript_Glider_BistroAstronaut_Style_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVariantScript_Glider_BistroAstronaut_Style_C : public UFortLoadoutTagDrivenVariantScript
@@ -93,13 +149,20 @@ class UFringe_Plank_AnimBP_C : public UAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 3536;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              ___ OFFSET(get<T>, {0x350, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       ___ OFFSET(get<T>, {0x358, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 ___ OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          ___ OFFSET(get<T>, {0x368, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               ___ OFFSET(get<T>, {0x388, 176, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     ___ OFFSET(get<T>, {0x440, 2384, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         ___ OFFSET(get<T>, {0xD90, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         ___ OFFSET(get<T>, {0xDB0, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x350, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x358, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x360, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x368, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x388, 176, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x440, 2384, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0xD90, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0xDB0, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C.ExecuteUbergraph_Fringe_Plank_AnimBP
+	// void ExecuteUbergraph_Fringe_Plank_AnimBP(int32_t EntryPoint);                                                           // [0x1ebf994] Final                

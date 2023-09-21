@@ -18,9 +18,9 @@ class UAthenaCollectionScreenMapBase : public UAthenaCollectionScreenBase
 	static inline constexpr uint64_t __MDKClassSize = 1720;
 
 public:
-	CMember(UAthenaFullScreenMapBase*)                 MapWidget                                                   ___ OFFSET(get<T>, {0x630, 8, 0, 0})
-	CMember(UClass*)                                   CollectionIconType                                          ___ OFFSET(get<T>, {0x640, 8, 0, 0})
-	CMember(TMap<FGameplayTag, UAthenaMapCollectionIcon*>) MapCollectionIcons                                      ___ OFFSET(get<T>, {0x648, 80, 0, 0})
+	CMember(UAthenaFullScreenMapBase*)                 MapWidget                                                   OFFSET(get<T>, {0x630, 8, 0, 0})
+	CMember(UClass*)                                   CollectionIconType                                          OFFSET(get<T>, {0x640, 8, 0, 0})
+	CMember(TMap<FGameplayTag, UAthenaMapCollectionIcon*>) MapCollectionIcons                                      OFFSET(get<T>, {0x648, 80, 0, 0})
 };
 
 /// Class /Script/CollectionMapShared.AthenaMapCollectionIcon

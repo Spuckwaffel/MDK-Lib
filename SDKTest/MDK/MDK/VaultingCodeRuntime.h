@@ -18,14 +18,21 @@ class UFortMovementMode_ExtLogicHurdle : public UFortMovementMode_BaseExtLogic
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     MontageStartSectionName                                     ___ OFFSET(get<T>, {0x60, 4, 0, 0})
-	CMember(UClass*)                                   CameraMode                                                  ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FGameplayTag)                              CameraModeTag                                               ___ OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HurdleTag                                                   ___ OFFSET(get<T>, {0x78, 32, 0, 0})
-	SMember(FGameplayTag)                              HurdleStartedTag                                            ___ OFFSET(get<T>, {0x98, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HurdleFinishedTag                                           ___ OFFSET(get<T>, {0xA0, 32, 0, 0})
+	SMember(FName)                                     MontageStartSectionName                                     OFFSET(get<T>, {0x60, 4, 0, 0})
+	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FGameplayTag)                              CameraModeTag                                               OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     HurdleTag                                                   OFFSET(get<T>, {0x78, 32, 0, 0})
+	SMember(FGameplayTag)                              HurdleStartedTag                                            OFFSET(get<T>, {0x98, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     HurdleFinishedTag                                           OFFSET(get<T>, {0xA0, 32, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle.IsContextualActionPrototypeActive
+	// bool IsContextualActionPrototypeActive();                                                                                // [0x9e6b860] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle.BP_GetAnimationMontageInformation
+	// void BP_GetAnimationMontageInformation(FSynchedActionInfo SynchedActionInfo, EHurdleType Type, UAnimMontage*& AnimMontage, FName& StartSectionName, FName& MontageMiddleSectionName); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 /// Class /Script/VaultingCodeRuntime.HurdleCameraMode
 /// Size: 0x0200 (0x001B50 - 0x001D50)
 class UHurdleCameraMode : public UFortCameraMode_ThirdPerson
@@ -34,16 +41,16 @@ class UHurdleCameraMode : public UFortCameraMode_ThirdPerson
 	static inline constexpr uint64_t __MDKClassSize = 7504;
 
 public:
-	SMember(FVector)                                   StartCameraOriginInterpSpeed                                ___ OFFSET(get<T>, {0x1B50, 24, 0, 0})
-	SMember(FVector)                                   ApexCameraOriginInterpSpeed                                 ___ OFFSET(get<T>, {0x1B68, 24, 0, 0})
-	SMember(FVector)                                   EndCameraOriginInterpSpeed                                  ___ OFFSET(get<T>, {0x1B80, 24, 0, 0})
-	DMember(float)                                     ConstantSpeedCameraTrackInterpolationExponent               ___ OFFSET(get<float>, {0x1B98, 4, 0, 0})
-	DMember(float)                                     CameraOriginVerticalThreshold                               ___ OFFSET(get<float>, {0x1B9C, 4, 0, 0})
-	DMember(float)                                     FallingVerticalInterpSpeed                                  ___ OFFSET(get<float>, {0x1BA0, 4, 0, 0})
-	DMember(float)                                     FallSpeedThreshold                                          ___ OFFSET(get<float>, {0x1BA4, 4, 0, 0})
-	DMember(float)                                     NonSprintFOV                                                ___ OFFSET(get<float>, {0x1BA8, 4, 0, 0})
-	DMember(bool)                                      bOverrideSpectatorCamera                                    ___ OFFSET(get<bool>, {0x1BAC, 1, 0, 0})
-	SMember(FHurdleTargetingData)                      HurdleTargetingData                                         ___ OFFSET(get<T>, {0x1BB0, 304, 0, 0})
+	SMember(FVector)                                   StartCameraOriginInterpSpeed                                OFFSET(get<T>, {0x1B50, 24, 0, 0})
+	SMember(FVector)                                   ApexCameraOriginInterpSpeed                                 OFFSET(get<T>, {0x1B68, 24, 0, 0})
+	SMember(FVector)                                   EndCameraOriginInterpSpeed                                  OFFSET(get<T>, {0x1B80, 24, 0, 0})
+	DMember(float)                                     ConstantSpeedCameraTrackInterpolationExponent               OFFSET(get<float>, {0x1B98, 4, 0, 0})
+	DMember(float)                                     CameraOriginVerticalThreshold                               OFFSET(get<float>, {0x1B9C, 4, 0, 0})
+	DMember(float)                                     FallingVerticalInterpSpeed                                  OFFSET(get<float>, {0x1BA0, 4, 0, 0})
+	DMember(float)                                     FallSpeedThreshold                                          OFFSET(get<float>, {0x1BA4, 4, 0, 0})
+	DMember(float)                                     NonSprintFOV                                                OFFSET(get<float>, {0x1BA8, 4, 0, 0})
+	DMember(bool)                                      bOverrideSpectatorCamera                                    OFFSET(get<bool>, {0x1BAC, 1, 0, 0})
+	SMember(FHurdleTargetingData)                      HurdleTargetingData                                         OFFSET(get<T>, {0x1BB0, 304, 0, 0})
 };
 
 /// Class /Script/VaultingCodeRuntime.HurdleComponent
@@ -54,17 +61,56 @@ class UHurdleComponent : public UFortPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 2528;
 
 public:
-	SMember(FHurdleInputConfig)                        HurdleInputConfig                                           ___ OFFSET(get<T>, {0xB0, 1328, 0, 0})
-	SMember(FHurdleInputConfigCache)                   HurdleInputConfigCache                                      ___ OFFSET(get<T>, {0x5E0, 140, 0, 0})
-	CMember(UClass*)                                   MovementModeExtension                                       ___ OFFSET(get<T>, {0x670, 8, 0, 0})
-	SMember(FScalableFloat)                            HurdleEnabled                                               ___ OFFSET(get<T>, {0x680, 40, 0, 0})
-	SMember(FScalableFloat)                            AutoHurdleEnabled                                           ___ OFFSET(get<T>, {0x6A8, 40, 0, 0})
-	SMember(FReplicatedHurdleTargetingData)            ReplayHurdleTargetingData                                   ___ OFFSET(get<T>, {0x808, 112, 0, 0})
-	DMember(double)                                    LastTeleportTime                                            ___ OFFSET(get<double>, {0x878, 8, 0, 0})
-	SMember(FHurdleTargetingData)                      ParallelTargetingData                                       ___ OFFSET(get<T>, {0x880, 304, 0, 0})
-	CMember(EHurdleState)                              ReplicatedHurdleState                                       ___ OFFSET(get<T>, {0x9B1, 1, 0, 0})
+	SMember(FHurdleInputConfig)                        HurdleInputConfig                                           OFFSET(get<T>, {0xB0, 1328, 0, 0})
+	SMember(FHurdleInputConfigCache)                   HurdleInputConfigCache                                      OFFSET(get<T>, {0x5E0, 140, 0, 0})
+	CMember(UClass*)                                   MovementModeExtension                                       OFFSET(get<T>, {0x670, 8, 0, 0})
+	SMember(FScalableFloat)                            HurdleEnabled                                               OFFSET(get<T>, {0x680, 40, 0, 0})
+	SMember(FScalableFloat)                            AutoHurdleEnabled                                           OFFSET(get<T>, {0x6A8, 40, 0, 0})
+	SMember(FReplicatedHurdleTargetingData)            ReplayHurdleTargetingData                                   OFFSET(get<T>, {0x808, 112, 0, 0})
+	DMember(double)                                    LastTeleportTime                                            OFFSET(get<double>, {0x878, 8, 0, 0})
+	SMember(FHurdleTargetingData)                      ParallelTargetingData                                       OFFSET(get<T>, {0x880, 304, 0, 0})
+	CMember(EHurdleState)                              ReplicatedHurdleState                                       OFFSET(get<T>, {0x9B1, 1, 0, 0})
 };
 
+
+
+	/// Functions
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.UnregisterMutatorUpdatedDelegate
+	// void UnregisterMutatorUpdatedDelegate();                                                                                 // [0x989f010] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.ShouldShowHurdleIndicator
+	// bool ShouldShowHurdleIndicator();                                                                                        // [0x9e6c1e8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.ServerStartHurdle
+	// void ServerStartHurdle(FReplicatedHurdleTargetingData InReplicatedTargetingData, double ClientLastTeleportTime);         // [0x9e6bea8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.RegisterMutatorUpdatedDelegate
+	// void RegisterMutatorUpdatedDelegate(APawn* AffectedPawn);                                                                // [0x9e6bc7c] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnRep_ReplicatedLastTeleportTime
+	// void OnRep_ReplicatedLastTeleportTime();                                                                                 // [0x9e6ba08] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnRep_ReplicatedHurdleState
+	// void OnRep_ReplicatedHurdleState();                                                                                      // [0x9e6b9e0] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnPlayerStatePawnSet
+	// void OnPlayerStatePawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                         // [0x9e6b8e8] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnMutatorUpdated
+	// void OnMutatorUpdated();                                                                                                 // [0x9e6b8d4] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.IsContextualActionPrototypeActive
+	// bool IsContextualActionPrototypeActive();                                                                                // [0x9e6b8b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleTargetingDataValid
+	// void HandleTargetingDataValid(FHurdleTargetingData& TargetingData);                                                      // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleTargetingDataInvalid
+	// void HandleTargetingDataInvalid();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerTeleported
+	// void HandleOwnerTeleported(AFortPawn* TeleportedOwner);                                                                  // [0x9e6b7e0] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerMovementModeChanged
+	// void HandleOwnerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x9e6b6d8] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerJumpInput
+	// void HandleOwnerJumpInput(bool bPressed);                                                                                // [0x9e6b658] Final|Native|Protected 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleSpringJump
+	// void BP_HandleSpringJump();                                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleHurdleStarted
+	// void BP_HandleHurdleStarted(FHurdleTargetingData& TargetingData, FSynchedActionInfo& SynchedActionInfo);                 // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleHurdleEnded
+	// void BP_HandleHurdleEnded();                                                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_CanStartHurdle
+	// void BP_CanStartHurdle(bool& OutCanStartHurdle);                                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
 /// Class /Script/VaultingCodeRuntime.HurdleLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UHurdleLibrary : public UBlueprintFunctionLibrary
@@ -83,11 +129,11 @@ class FFortMovementMode_HurdleRuntimeData : public FFortMovementMode_BaseExtRunt
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	CMember(UAnimMontage*)                             HurdleMontage                                               ___ OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     MontageStartSectionName                                     ___ OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     MontageMiddleSectionName                                    ___ OFFSET(get<T>, {0x1C, 4, 0, 0})
-	CMember(EHurdleType)                               Type                                                        ___ OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(UAnimMontage*)                             HurdleMontage                                               OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FName)                                     MontageStartSectionName                                     OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     MontageMiddleSectionName                                    OFFSET(get<T>, {0x1C, 4, 0, 0})
+	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.FortMovementMode_HurdleCreationData
@@ -98,15 +144,15 @@ class FFortMovementMode_HurdleCreationData : public FFortMovementMode_BaseExtCre
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FSynchedActionInfo)                        SynchedActionInfo                                           ___ OFFSET(get<T>, {0x8, 48, 0, 0})
-	CMember(EHurdleType)                               Type                                                        ___ OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  ___ OFFSET(get<T>, {0x40, 80, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FRotator)                                  TargetRotation                                              ___ OFFSET(get<T>, {0xA8, 24, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   RefActor                                                    ___ OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(TWeakObjectPtr<UActorComponent*>)          RefActorComponent                                           ___ OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FName)                                     RefActorBoneName                                            ___ OFFSET(get<T>, {0xD0, 4, 0, 0})
-	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             ___ OFFSET(get<T>, {0xD4, 1, 0, 0})
+	SMember(FSynchedActionInfo)                        SynchedActionInfo                                           OFFSET(get<T>, {0x8, 48, 0, 0})
+	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x38, 1, 0, 0})
+	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  OFFSET(get<T>, {0x40, 80, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FRotator)                                  TargetRotation                                              OFFSET(get<T>, {0xA8, 24, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   RefActor                                                    OFFSET(get<T>, {0xC0, 8, 0, 0})
+	CMember(TWeakObjectPtr<UActorComponent*>)          RefActorComponent                                           OFFSET(get<T>, {0xC8, 8, 0, 0})
+	SMember(FName)                                     RefActorBoneName                                            OFFSET(get<T>, {0xD0, 4, 0, 0})
+	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             OFFSET(get<T>, {0xD4, 1, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.HurdleInputConfig
@@ -117,39 +163,39 @@ class FHurdleInputConfig : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 1328;
 
 public:
-	SMember(FScalableFloat)                            CastRadius                                                  ___ OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxAllowedFallDistance                                      ___ OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FScalableFloat)                            ForwardCastIndicatorDistance_Phase1                         ___ OFFSET(get<T>, {0x50, 40, 0, 0})
-	SMember(FScalableFloat)                            ForwardCastDistance_Phase1                                  ___ OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FScalableFloat)                            ForwardCastDistance_Phase1_HurdleFromJog                    ___ OFFSET(get<T>, {0xA0, 40, 0, 0})
-	SMember(FScalableFloat)                            ForwardCastDistance_Phase1_ManualHurdle                     ___ OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase1_WallAngleToleranceFlat                               ___ OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase1_SweepGroundBufferHeight                              ___ OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase1_SweepGroundMaxHeight                                 ___ OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase1_Floor_WallOffset                                     ___ OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase1_Floor_MinHeightForHurlde                             ___ OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase2_UpAngleTolerance                                     ___ OFFSET(get<T>, {0x1E0, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase2_Floor_MaxHeightForHurlde                             ___ OFFSET(get<T>, {0x208, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase3_CapsuleOffset                                        ___ OFFSET(get<T>, {0x258, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase3_ClearanceCapsuleSize                                 ___ OFFSET(get<T>, {0x280, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase3_ForwardCastDistance                                  ___ OFFSET(get<T>, {0x2A8, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase3_MinTopClearanceForHurdleOn                           ___ OFFSET(get<T>, {0x2D0, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase4_MaxDownDistance                                      ___ OFFSET(get<T>, {0x2F8, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase4_UpAngleTolerance                                     ___ OFFSET(get<T>, {0x320, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase4_HurdleOnZTolerance                                   ___ OFFSET(get<T>, {0x348, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase5_CapsuleOffset                                        ___ OFFSET(get<T>, {0x370, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase5_ClearanceCapsuleSize                                 ___ OFFSET(get<T>, {0x398, 40, 0, 0})
-	SMember(FScalableFloat)                            FinalResult_GroundAimOffset                                 ___ OFFSET(get<T>, {0x3C0, 40, 0, 0})
-	SMember(FScalableFloat)                            SlideBufferTime                                             ___ OFFSET(get<T>, {0x3E8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinimumSpeedToHurdle                                        ___ OFFSET(get<T>, {0x410, 40, 0, 0})
-	SMember(FScalableFloat)                            MinimumForwardStickDeflection                               ___ OFFSET(get<T>, {0x438, 40, 0, 0})
-	SMember(FScalableFloat)                            RangeToIgnoreMinimumSpeedThreshold                          ___ OFFSET(get<T>, {0x460, 40, 0, 0})
-	SMember(FScalableFloat)                            MaximumCapsuleRadius                                        ___ OFFSET(get<T>, {0x488, 40, 0, 0})
-	SMember(FScalableFloat)                            MaximumCapsuleHalfHeight                                    ___ OFFSET(get<T>, {0x4B0, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase0_HorizontalSweepBreadth                               ___ OFFSET(get<T>, {0x4D8, 40, 0, 0})
-	SMember(FScalableFloat)                            Phase0_HorizontalSweepHeight                                ___ OFFSET(get<T>, {0x500, 40, 0, 0})
-	SMember(FFortReleaseVersion)                       ContextualActionPrototypeVersion                            ___ OFFSET(get<T>, {0x528, 4, 0, 0})
-	SMember(FFortReleaseVersion)                       MovementModeExtensionVersion                                ___ OFFSET(get<T>, {0x52C, 4, 0, 0})
+	SMember(FScalableFloat)                            CastRadius                                                  OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAllowedFallDistance                                      OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            ForwardCastIndicatorDistance_Phase1                         OFFSET(get<T>, {0x50, 40, 0, 0})
+	SMember(FScalableFloat)                            ForwardCastDistance_Phase1                                  OFFSET(get<T>, {0x78, 40, 0, 0})
+	SMember(FScalableFloat)                            ForwardCastDistance_Phase1_HurdleFromJog                    OFFSET(get<T>, {0xA0, 40, 0, 0})
+	SMember(FScalableFloat)                            ForwardCastDistance_Phase1_ManualHurdle                     OFFSET(get<T>, {0xC8, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase1_WallAngleToleranceFlat                               OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase1_SweepGroundBufferHeight                              OFFSET(get<T>, {0x118, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase1_SweepGroundMaxHeight                                 OFFSET(get<T>, {0x140, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase1_Floor_WallOffset                                     OFFSET(get<T>, {0x168, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase1_Floor_MinHeightForHurlde                             OFFSET(get<T>, {0x190, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase2_UpAngleTolerance                                     OFFSET(get<T>, {0x1E0, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase2_Floor_MaxHeightForHurlde                             OFFSET(get<T>, {0x208, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase3_CapsuleOffset                                        OFFSET(get<T>, {0x258, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase3_ClearanceCapsuleSize                                 OFFSET(get<T>, {0x280, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase3_ForwardCastDistance                                  OFFSET(get<T>, {0x2A8, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase3_MinTopClearanceForHurdleOn                           OFFSET(get<T>, {0x2D0, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase4_MaxDownDistance                                      OFFSET(get<T>, {0x2F8, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase4_UpAngleTolerance                                     OFFSET(get<T>, {0x320, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase4_HurdleOnZTolerance                                   OFFSET(get<T>, {0x348, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase5_CapsuleOffset                                        OFFSET(get<T>, {0x370, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase5_ClearanceCapsuleSize                                 OFFSET(get<T>, {0x398, 40, 0, 0})
+	SMember(FScalableFloat)                            FinalResult_GroundAimOffset                                 OFFSET(get<T>, {0x3C0, 40, 0, 0})
+	SMember(FScalableFloat)                            SlideBufferTime                                             OFFSET(get<T>, {0x3E8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinimumSpeedToHurdle                                        OFFSET(get<T>, {0x410, 40, 0, 0})
+	SMember(FScalableFloat)                            MinimumForwardStickDeflection                               OFFSET(get<T>, {0x438, 40, 0, 0})
+	SMember(FScalableFloat)                            RangeToIgnoreMinimumSpeedThreshold                          OFFSET(get<T>, {0x460, 40, 0, 0})
+	SMember(FScalableFloat)                            MaximumCapsuleRadius                                        OFFSET(get<T>, {0x488, 40, 0, 0})
+	SMember(FScalableFloat)                            MaximumCapsuleHalfHeight                                    OFFSET(get<T>, {0x4B0, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase0_HorizontalSweepBreadth                               OFFSET(get<T>, {0x4D8, 40, 0, 0})
+	SMember(FScalableFloat)                            Phase0_HorizontalSweepHeight                                OFFSET(get<T>, {0x500, 40, 0, 0})
+	SMember(FFortReleaseVersion)                       ContextualActionPrototypeVersion                            OFFSET(get<T>, {0x528, 4, 0, 0})
+	SMember(FFortReleaseVersion)                       MovementModeExtensionVersion                                OFFSET(get<T>, {0x52C, 4, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.HurdleInputConfigCache
@@ -160,41 +206,41 @@ class FHurdleInputConfigCache : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 140;
 
 public:
-	DMember(float)                                     CastRadius                                                  ___ OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     MaxAllowedFallDistance                                      ___ OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     ForwardCastIndicatorDistance_Phase1                         ___ OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     ForwardCastDistance_Phase1                                  ___ OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     ForwardCastDistance_Phase1_HurdleFromJog                    ___ OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     ForwardCastDistance_Phase1_ManualHurdle                     ___ OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     Phase1_WallAngleToleranceFlat                               ___ OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     Phase1_SweepGroundBufferHeight                              ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     Phase1_SweepGroundMaxHeight                                 ___ OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     Phase1_Floor_WallOffset                                     ___ OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     Phase1_Floor_MinHeightForHurlde                             ___ OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     Phase1_Floor_MaxFloorSearchHeight                           ___ OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     Phase2_UpAngleTolerance                                     ___ OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     Phase2_Floor_MaxHeightForHurlde                             ___ OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     Phase2_Floor_HeightCorrectionMinFloorAngle                  ___ OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     Phase3_CapsuleOffset                                        ___ OFFSET(get<float>, {0x3C, 4, 0, 0})
-	DMember(float)                                     Phase3_ClearanceCapsuleSize                                 ___ OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     Phase3_ForwardCastDistance                                  ___ OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     Phase3_MinTopClearanceForHurdleOn                           ___ OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     Phase4_MaxDownDistance                                      ___ OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     Phase4_UpAngleTolerance                                     ___ OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(float)                                     Phase4_HurdleOnZTolerance                                   ___ OFFSET(get<float>, {0x54, 4, 0, 0})
-	DMember(float)                                     Phase5_CapsuleOffset                                        ___ OFFSET(get<float>, {0x58, 4, 0, 0})
-	DMember(float)                                     Phase5_ClearanceCapsuleSize                                 ___ OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     FinalResult_GroundAimOffset                                 ___ OFFSET(get<float>, {0x60, 4, 0, 0})
-	DMember(float)                                     SlideBufferTime                                             ___ OFFSET(get<float>, {0x64, 4, 0, 0})
-	DMember(float)                                     MinimumSpeedToHurdle                                        ___ OFFSET(get<float>, {0x68, 4, 0, 0})
-	DMember(float)                                     MinimumForwardStickDeflection                               ___ OFFSET(get<float>, {0x6C, 4, 0, 0})
-	DMember(float)                                     RangeToIgnoreMinimumSpeedThreshold                          ___ OFFSET(get<float>, {0x70, 4, 0, 0})
-	DMember(float)                                     MaximumCapsuleRadius                                        ___ OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     MaximumCapsuleHalfHeight                                    ___ OFFSET(get<float>, {0x78, 4, 0, 0})
-	DMember(float)                                     Phase0_HorizontalSweepBreadth                               ___ OFFSET(get<float>, {0x7C, 4, 0, 0})
-	DMember(float)                                     Phase0_HorizontalSweepHeight                                ___ OFFSET(get<float>, {0x80, 4, 0, 0})
-	SMember(FFortReleaseVersion)                       ContextualActionPrototypeVersion                            ___ OFFSET(get<T>, {0x84, 4, 0, 0})
-	SMember(FFortReleaseVersion)                       MovementModeExtensionVersion                                ___ OFFSET(get<T>, {0x88, 4, 0, 0})
+	DMember(float)                                     CastRadius                                                  OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     MaxAllowedFallDistance                                      OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     ForwardCastIndicatorDistance_Phase1                         OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     ForwardCastDistance_Phase1                                  OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     ForwardCastDistance_Phase1_HurdleFromJog                    OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     ForwardCastDistance_Phase1_ManualHurdle                     OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     Phase1_WallAngleToleranceFlat                               OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     Phase1_SweepGroundBufferHeight                              OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     Phase1_SweepGroundMaxHeight                                 OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     Phase1_Floor_WallOffset                                     OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     Phase1_Floor_MinHeightForHurlde                             OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     Phase1_Floor_MaxFloorSearchHeight                           OFFSET(get<float>, {0x2C, 4, 0, 0})
+	DMember(float)                                     Phase2_UpAngleTolerance                                     OFFSET(get<float>, {0x30, 4, 0, 0})
+	DMember(float)                                     Phase2_Floor_MaxHeightForHurlde                             OFFSET(get<float>, {0x34, 4, 0, 0})
+	DMember(float)                                     Phase2_Floor_HeightCorrectionMinFloorAngle                  OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     Phase3_CapsuleOffset                                        OFFSET(get<float>, {0x3C, 4, 0, 0})
+	DMember(float)                                     Phase3_ClearanceCapsuleSize                                 OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     Phase3_ForwardCastDistance                                  OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     Phase3_MinTopClearanceForHurdleOn                           OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     Phase4_MaxDownDistance                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     Phase4_UpAngleTolerance                                     OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(float)                                     Phase4_HurdleOnZTolerance                                   OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     Phase5_CapsuleOffset                                        OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(float)                                     Phase5_ClearanceCapsuleSize                                 OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     FinalResult_GroundAimOffset                                 OFFSET(get<float>, {0x60, 4, 0, 0})
+	DMember(float)                                     SlideBufferTime                                             OFFSET(get<float>, {0x64, 4, 0, 0})
+	DMember(float)                                     MinimumSpeedToHurdle                                        OFFSET(get<float>, {0x68, 4, 0, 0})
+	DMember(float)                                     MinimumForwardStickDeflection                               OFFSET(get<float>, {0x6C, 4, 0, 0})
+	DMember(float)                                     RangeToIgnoreMinimumSpeedThreshold                          OFFSET(get<float>, {0x70, 4, 0, 0})
+	DMember(float)                                     MaximumCapsuleRadius                                        OFFSET(get<float>, {0x74, 4, 0, 0})
+	DMember(float)                                     MaximumCapsuleHalfHeight                                    OFFSET(get<float>, {0x78, 4, 0, 0})
+	DMember(float)                                     Phase0_HorizontalSweepBreadth                               OFFSET(get<float>, {0x7C, 4, 0, 0})
+	DMember(float)                                     Phase0_HorizontalSweepHeight                                OFFSET(get<float>, {0x80, 4, 0, 0})
+	SMember(FFortReleaseVersion)                       ContextualActionPrototypeVersion                            OFFSET(get<T>, {0x84, 4, 0, 0})
+	SMember(FFortReleaseVersion)                       MovementModeExtensionVersion                                OFFSET(get<T>, {0x88, 4, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.HurdleTargetingData
@@ -205,26 +251,26 @@ class FHurdleTargetingData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	CMember(EHurdleType)                               Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x2, 1, 1, 0})
-	DMember(bool)                                      bInRange                                                    ___ OFFSET(get<bool>, {0x2, 1, 1, 1})
-	DMember(bool)                                      bIsNarrowOpening                                            ___ OFFSET(get<bool>, {0x2, 1, 1, 2})
-	SMember(FVector)                                   FacingCornerLocation                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   FacingCornerNormal                                          ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   BackCornerLocation                                          ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   FinalLandingPosition                                        ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	CMember(AActor*)                                   SourceActor                                                 ___ OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FVector)                                   SourceLocation                                              ___ OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   SourceAim                                                   ___ OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FVector)                                   WallLocation                                                ___ OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FVector)                                   WallNormal                                                  ___ OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              ___ OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FVector)                                   TargetNormal                                                ___ OFFSET(get<T>, {0xE8, 24, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   TargetActor                                                 ___ OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(TWeakObjectPtr<UActorComponent*>)          TargetActorComponent                                        ___ OFFSET(get<T>, {0x108, 8, 0, 0})
-	SMember(FVector)                                   TargetActorComponentLocation                                ___ OFFSET(get<T>, {0x110, 24, 0, 0})
-	SMember(FName)                                     TargetActorBoneName                                         ___ OFFSET(get<T>, {0x128, 4, 0, 0})
+	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             OFFSET(get<T>, {0x1, 1, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x2, 1, 1, 0})
+	DMember(bool)                                      bInRange                                                    OFFSET(get<bool>, {0x2, 1, 1, 1})
+	DMember(bool)                                      bIsNarrowOpening                                            OFFSET(get<bool>, {0x2, 1, 1, 2})
+	SMember(FVector)                                   FacingCornerLocation                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   FacingCornerNormal                                          OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   BackCornerLocation                                          OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   FinalLandingPosition                                        OFFSET(get<T>, {0x50, 24, 0, 0})
+	CMember(AActor*)                                   SourceActor                                                 OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FVector)                                   SourceLocation                                              OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   SourceAim                                                   OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   WallLocation                                                OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FVector)                                   WallNormal                                                  OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   TargetNormal                                                OFFSET(get<T>, {0xE8, 24, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   TargetActor                                                 OFFSET(get<T>, {0x100, 8, 0, 0})
+	CMember(TWeakObjectPtr<UActorComponent*>)          TargetActorComponent                                        OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FVector)                                   TargetActorComponentLocation                                OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FName)                                     TargetActorBoneName                                         OFFSET(get<T>, {0x128, 4, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.ReplicatedHurdleTargetingData
@@ -235,13 +281,13 @@ class FReplicatedHurdleTargetingData : public MDKStruct
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(EHurdleType)                               Type                                                        ___ OFFSET(get<T>, {0x0, 1, 0, 0})
-	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             ___ OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FVector_NetQuantize10)                     FacingCornerLocation                                        ___ OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector_NetQuantize10)                     FacingCornerNormal                                          ___ OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector_NetQuantize10)                     BackCornerLocation                                          ___ OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector_NetQuantize10)                     FinalLandingPosition                                        ___ OFFSET(get<T>, {0x50, 24, 0, 0})
-	DMember(bool)                                      bValid                                                      ___ OFFSET(get<bool>, {0x68, 1, 0, 0})
+	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
+	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             OFFSET(get<T>, {0x1, 1, 0, 0})
+	SMember(FVector_NetQuantize10)                     FacingCornerLocation                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector_NetQuantize10)                     FacingCornerNormal                                          OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector_NetQuantize10)                     BackCornerLocation                                          OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector_NetQuantize10)                     FinalLandingPosition                                        OFFSET(get<T>, {0x50, 24, 0, 0})
+	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Enum /Script/VaultingCodeRuntime.EHurdleType
