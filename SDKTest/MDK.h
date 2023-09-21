@@ -29,8 +29,6 @@ struct MemberInfo
 	int size = 0;
 	bool isBit = false;
 	int bitField = 0;
-
-
 };
 
 class MDKStruct

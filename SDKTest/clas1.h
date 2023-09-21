@@ -9,8 +9,6 @@ struct World3 : MDKStruct
 
 public:
 	Member(int) x ___ OFFSET(get<T>,{ 0, 4 })
-	Member(int) y ___ const { return get<T>({ 4, 4 }); }
-	Member(int) z ___ const { return get<T>({ 8, 4 }); }
 	Member(world) world() const { return get<T>({ 12, 8 }); }
 };
 

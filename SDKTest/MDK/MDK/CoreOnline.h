@@ -1,0 +1,43 @@
+
+/********************************************************
+*                                                       *
+*   Package generated using UEDumper by Spuckwaffel.    *
+*                                                       *
+********************************************************/
+
+
+/// Struct /Script/CoreOnline.JoinabilitySettings
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FJoinabilitySettings : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	SMember(FName)                                     SessionName                                                 ___ OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bPublicSearchable                                           ___ OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bAllowInvites                                               ___ OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bJoinViaPresence                                            ___ OFFSET(get<bool>, {0x6, 1, 0, 0})
+	DMember(bool)                                      bJoinViaPresenceFriendsOnly                                 ___ OFFSET(get<bool>, {0x7, 1, 0, 0})
+	DMember(int32_t)                                   MaxPlayers                                                  ___ OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+	DMember(int32_t)                                   MaxPartySize                                                ___ OFFSET(get<int32_t>, {0xC, 4, 0, 0})
+};
+
+/// Struct /Script/CoreOnline.UniqueNetIdWrapper
+/// Size: 0x0001 (0x000000 - 0x000001)
+class FUniqueNetIdWrapper : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Enum /Script/CoreOnline.ECoreOnlineDummy
+/// Size: 0x02
+enum ECoreOnlineDummy : uint8_t
+{
+	ECoreOnlineDummy__Dummy0                                                         = 0,
+	ECoreOnlineDummy__ECoreOnlineDummy_MAX1                                          = 1
+};
+
