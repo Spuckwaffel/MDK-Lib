@@ -32,7 +32,7 @@ int main()
         //it will just cache UWorld without UObect and all classes below, meaning that uobject is empty
         //also its your job to set a good lowerbound, if you try to read something from uobject, its 0
         //its no problem rereading somewhere in the loop the pointer again with a lower lowerbound, it will read those bytes then
-        //e.g now you choose uobject as lowerbound but later you need uobject, you reread and specify MDKBase as lowerbount, or leave empty
+        //e.g now you choose uobject as lowerbound but later you need uobject, you reread and specify MDKBase as lowerbound, or leave empty
         UWorld world = MDKHandler::get<UWorld, UObject>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0x4E0EFF0));
 
         if (!world)
