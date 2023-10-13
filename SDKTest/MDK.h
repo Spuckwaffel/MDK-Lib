@@ -3,59 +3,78 @@
 #include <unordered_map>
 #include "Memory.h"
 
+// whether the entire caching system should be used or not.
+// the cache feature is very powerful, however if you are sure you are good enough
+// with pointers, no double reads and heap management, disable this.
+#define USECACHE true
 
 class MDKHandler;
 class MDKBase;
 struct TargetData;
 
 
-struct MemberInfo
+// the base struct for each member in the SDK
+struct __MDKMemberInfo
 {
-	int offset = 0;
-	int size = 0;
-	bool isBit = false;
-	int bitField = 0;
+	int offset = 0; // the offset of the member in the class
+	int size = 0; // the size of the member
+	bool isBit = false; // whether its a bitfield member or not
+	int bitField = 0; // the bitfield offset if the member is a bitfield member
 };
 
 
+// the base class of all classes. This does all the magic
 class MDKBase
 {
+	// the global handler that contains all the routine functions
 	friend MDKHandler;
 
+	// the size of members the class has (game members, such as UWorld* world, etc.). Here it is 0, we dont have any game members 
+	static inline constexpr uint64_t __MDKClassSize = 0;
+
+	// the base pointer where we got the data from
 	uint64_t basePointer = 0;
 
+	// Memory block struct for memory management
 	struct MemoryBlock
 	{
-		void* blockPointer = nullptr;
-		size_t blockSize = 0;
+		void* blockPointer = nullptr; // pointer to the memory
+		size_t upperBound = 0; // how much of the memory block is valid (upper bound, ... - n)
+		size_t lowerBound = 0; // how much of the memory block is valid (lower bound, n - ...)
 	};
 
 	MemoryBlock block{};
 
-	//this is always 0 if its not a struct were currently working on
+	// this is always 0 if its not a struct were currently working on
 	uint64_t baseOffset = 0;
 
+	// las time the block got updated
 	uint64_t lastCacheTS = -1;
 
+	//whether the memory is valid or not
 	bool valid = false;
+
+	//whether this block doesnt use caching and is just temporary there and gets freed after it isnt anymore in use
+	bool onlyTemporary = false;
 
 
 public:
+	//initializer 
 	MDKBase();
 
 	//only gets called by pointers or default types that are not structs
 	template<typename T>
-	T get(MemberInfo b) const
+	T get(__MDKMemberInfo b) const
 	{
 		T res;
 		memset(&res, 0, sizeof(T));
 
-		if (!valid /*|| sizeof(T) != b.size*/ || block.blockSize - baseOffset < b.offset + b.size)
+		if (!valid /*|| sizeof(T) != b.size*/ || block.upperBound - baseOffset < b.offset + b.size)
 			return res;
 
 		memcpy(&res, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(block.blockPointer) + baseOffset + b.offset), sizeof(T));
 
-		if(b.isBit)
+		if (b.isBit)
 		{
 			//we have to do some converting because compiler doesnt know which types are bits and which arent
 			//in theory only chars and bools can be this but whatever
@@ -67,18 +86,18 @@ public:
 			cres = ((cres >> b.bitField & 1) == 1);
 			memcpy(&res, &cres, 1);
 		}
-			
-			
+
+
 		return res;
 	}
 
-	//we dont even do a single memcpy here, i owuld call this creating a spoof struct
+	//we dont even do a single memcpy here, i would call this creating a spoof struct
 	template<typename T>
-	T getStruct(MemberInfo b) const
+	T getStruct(__MDKMemberInfo b) const
 	{
 		T res;
 		memset(&res, 0, sizeof(T::__MDKClassSize));
-		if (!valid || T::__MDKClassSize != b.size || block.blockSize < b.offset + b.size)
+		if (!valid || T::__MDKClassSize != b.size || block.upperBound < b.offset + b.size)
 			return res;
 
 		//keep a baseOffset but rest still same logic
@@ -88,6 +107,9 @@ public:
 
 
 	operator bool() const { return block.blockPointer != nullptr; }
+
+	//deconstructor
+	~MDKBase();
 };
 
 
@@ -96,19 +118,27 @@ public:
 
 //#define OFFSET(T, ...) const { return T; }
 
-#define OFFSET(T, ...) (MemberInfo* b = nullptr) const { \
+#define OFFSET(T, ...) (__MDKMemberInfo* b = nullptr) const { \
 	if(b != nullptr) {*b = __VA_ARGS__; return {};} \
 	return T(__VA_ARGS__); }
 
 //#define OFFSET(T, ...) const { return T(__VA_ARGS__); }
 
+// different member types, you can ignore this, this is more for hints
 
+// struct member, refers that the type is a full struct within the class
 #define SMember(x,...)  template<typename T>\
 	T
 
+// class member, refers that the type is a pointer to a class
 #define CMember(x,...)  template<typename T>\
 	T
 
+// enum member, refers that the type is a enum
+#define EMember(x,...)  template<typename T>\
+	T
+
+// default member, refers that the type is a default datatype
 #define DMember(x,...)  x
 
 
@@ -131,36 +161,58 @@ class MDKHandler
 	//current counter of the frame. -1 = init
 	static inline int frameSkipCounter = -1;
 
-	template<typename T>
+	//gets the base class and performs checks if its valid and rereads memory if needed.
+	//A valid blockpointer is indeed valid, if we would alloc it here there could be memory leaks.
+	//Adjusts the Timstamp automatically if data is too old
+	template<typename T, typename X = MDKBase>
 	static bool checkSizeandTS(MDKBase& base)
 	{
 		//wont really happen unless we read a invalid ptr
 		if (!base.valid || !base.block.blockPointer)
 			return false;
-		if (base.block.blockSize < T::__MDKClassSize)
+		if (base.block.upperBound < T::__MDKClassSize)
 		{
 			base.block.blockPointer = realloc(base.block.blockPointer, T::__MDKClassSize);
 			if (!base.block.blockPointer)
 				return false;
+
+			const auto oldUpperBound = base.block.upperBound;
+			base.block.upperBound = T::__MDKClassSize;
 			//we in the same frame or more?
-			if(base.lastCacheTS > currentFrameTS)
+			if (base.lastCacheTS >= currentFrameTS)
 			{
 				//keep old data and only read additional bytes
-				Memory::read(base.basePointer + base.block.blockSize, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.blockSize, T::__MDKClassSize - base.block.blockSize);
-				base.block.blockSize = T::__MDKClassSize;
+				Memory::read(base.basePointer + oldUpperBound + base.block.lowerBound, reinterpret_cast<uint64_t>(base.block.blockPointer) + oldUpperBound + base.block.lowerBound, base.block.upperBound - oldUpperBound - base.block.lowerBound);
 				base.lastCacheTS = currentFrameTS;
 				return true;
 			}
 		}
-		if(base.lastCacheTS < currentFrameTS)
+		else if (base.block.lowerBound > X::__MDKClassSize)
 		{
-			Memory::read(base.basePointer, reinterpret_cast<uint64_t>(base.block.blockPointer), T::__MDKClassSize);
+			const auto oldLowerBound = base.block.lowerBound;
+			base.block.lowerBound = X::__MDKClassSize;
+			//we in the same frame or more?
+			if (base.lastCacheTS >= currentFrameTS)
+			{
+				//keep old data and only read additional bytes
+				Memory::read(base.basePointer + base.block.lowerBound, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.lowerBound, oldLowerBound - base.block.lowerBound);
+
+				base.lastCacheTS = currentFrameTS;
+				return true;
+			}
+		}
+		//reread entire block
+		if (base.lastCacheTS < currentFrameTS)
+		{
+			Memory::read(base.basePointer + base.block.lowerBound, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.lowerBound, base.block.upperBound - base.block.lowerBound);
 			base.lastCacheTS = currentFrameTS;
 		}
 		return true;
 		//we cant really do any memory checks, sure we could make for uworld classes some valid vtable bytes but for other stuff that isnt inherited not really
 	}
 
+	//internal cast to function which is just a memcpy. a memcpy is needed instead of a c style cast due to compiler
+	//at the end of the day it will still be casted in assembly
 	template<typename T>
 	static T castTo(MDKBase& base)
 	{
@@ -171,24 +223,31 @@ class MDKHandler
 	}
 
 public:
+	//constructor
 	MDKHandler();
 
+	// always call this at the beginning of your read loop, this will ensure that new data gets fetched after this call
+	// not needed if you dont use caching
 	static void newFrame();
 
 	/// \brief initializes a new memory block for the given class/struct at the pointer and manages all the memory for you
 	/// \tparam T type
+	/// \tparam X highest type we don't include
 	/// \param gamePointer pointer to the class/struct
+	///	\param cache whether this object should be cached or deleted once not needed anymore
 	/// \return the class with data upon success
-	template< typename T>
-	static T get(void* gamePointer)
+	template< typename T, typename X = MDKBase>
+	static T get(void* gamePointer, bool cache = USECACHE)
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(gamePointer);
 
 		if (up < 0x40000)
 			return T();
-		if (MDKCache.contains(up))
+
+		//if we dont cache we dont need to lookup
+		if (cache && MDKCache.contains(up))
 		{
-			if(!checkSizeandTS<T>(MDKCache[up]))
+			if (!checkSizeandTS<T, X>(MDKCache[up]))
 				return T();
 			//freely case, bytes are fine
 			return castTo<T>(MDKCache[up]);
@@ -202,36 +261,103 @@ public:
 		if (!b.block.blockPointer)
 			return T();
 		b.valid = true;
-		if(!checkSizeandTS<T>(b))
+		b.block.lowerBound = X::__MDKClassSize;
+		if (!checkSizeandTS<T, X>(b))
 			return T();
-		MDKCache.insert(std::pair(up, b));
+
+		if (cache)
+			MDKCache.insert(std::pair(up, b));
+		else
+			b.onlyTemporary = true;
 		return castTo<T>(b);
 	}
 
 	/// \brief initializes a new memory block for the given class/struct at the pointer and manages all the memory for you
 	/// \tparam T type
 	/// \param gamePointer pointer to the class/struct
+	/// \param cache whether this object should be cached or deleted once not needed anymore
 	/// \return the class with data upon success
-	template< typename T>
-	static T get(DWORD64 gamePointer)
+	template< typename T, typename X = MDKBase>
+	static T get(DWORD64 gamePointer, bool cache = true)
 	{
-		return get<T>((void*)gamePointer);
+		return get<T, X>((void*)gamePointer, cache);
 	}
+
+
+	/// \brief gets the offset for the given member
+	/// \tparam classInstance class where the member resides in
+	/// \param instance instance of the class
+	/// \param memberFunction the member
+	/// \return the offset
+	template <typename classInstance = MDKBase>
+	static __MDKMemberInfo getOffset(const classInstance& instance, bool(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	{
+		__MDKMemberInfo b{};
+
+		(bool)(instance.*memberFunction)(&b);
+
+		return b;
+	}
+
+	/// \brief reads only that member of the class, no caching
+	/// \tparam classInstance class where the member resides in
+	/// \tparam T type of the member
+	/// \param pointerToClass the pointer to the class we want to read the member from
+	/// \param memberFunction the member
+	/// \return the member converted to T
+	template < typename classInstance = MDKBase, typename T>
+	static T readSingle(classInstance*& pointerToClass, bool(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	{
+		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
+
+		classInstance c;
+
+		auto info = getOffset<classInstance>(c, memberFunction);
+
+		if (info.size <= 0)
+			return T();
+
+		if (sizeof(T) != info.size)
+			return T();
+
+		T res;
+		memset(&res, 0, sizeof(T));
+
+		Memory::read(up + info.offset, (uint64_t)&res, sizeof(T));
+
+		if (info.isBit)
+		{
+			char cb;
+			memcpy(&cb, &res, 1);
+
+			cb = ((cb >> info.bitField & 1) == 1);
+			memcpy(&res, &cb, 1);
+		}
+
+		return res;
+	}
+
+	/// \brief writes memory directly to the game
+	/// \tparam classInstance class where the member resides in
+	/// \tparam x type of the member
+	///	\param instance the class instance
+	/// \param value the value
+	/// \return the member converted to T
 	template <typename classInstance = MDKBase, typename x>
-	static void write(const classInstance& instance, x (classInstance::* memberFunction)(MemberInfo*) const, x value)
+	static void write(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer)
 			return;
-		MemberInfo b{};
+		__MDKMemberInfo b{};
 		(instance.*memberFunction)(&b);
 
-		
+
 		uint64_t addr = (uint64_t)&value;
 		char c;
-		if(b.isBit)
+		if (b.isBit)
 		{
 			const bool bval = (bool)value;
-			
+
 			//for a single bit we need the entire bits first so get them out of the cache
 			memcpy(&c, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), 1);
 			if (bval)
@@ -247,12 +373,13 @@ public:
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}
 
+	// silently writes the memory only into our memory, so no changes are made in the game memory. Use writebulk afterwards to write all the silend writes to game memory
 	template <typename classInstance = MDKBase, typename x>
-	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(MemberInfo*) const, x value)
+	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer || !instance.block.blockPointer)
 			return;
-		MemberInfo b{};
+		__MDKMemberInfo b{};
 		(instance.*memberFunction)(&b);
 
 
@@ -276,6 +403,7 @@ public:
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}
 
+	// writes all silent writes into the games memory. Dont use on large classes, rather use this on structs like FVector etc.
 	template <typename classInstance = MDKBase>
 	static void writeBulk(const classInstance& base)
 	{

@@ -21,62 +21,127 @@ int main()
 
     while(true)
     {
-	    //cheat logic
+        //cheat logic
 
         //first make a new frame
 
         MDKHandler::newFrame();
 
         //get UWorld, obviously we need to read the address in the .data section fist ._.
-        UWorld world = MDKHandler::get<UWorld>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0xE762638));
+        //the secont param in the template is the class + lower we want to disclude
+        //it will just cache UWorld without UObect and all classes below, meaning that uobject is empty
+        //also its your job to set a good lowerbound, if you try to read something from uobject, its 0
+        //its no problem rereading somewhere in the loop the pointer again with a lower lowerbound, it will read those bytes then
+        //e.g now you choose uobject as lowerbound but later you need uobject, you reread and specify MDKBase as lowerbount, or leave empty
+        UWorld world = MDKHandler::get<UWorld, UObject>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0x4E0EFF0));
 
         if (!world)
         {
             puts("world not initialized!");
             DebugBreak();
         }
-        //dDO NOT write anything into the function parameters, they are there for other purposes
+        //DO NOT write anything into the function parameters, they are there for other purposes
         //(check write logic if you really wanna know)
         printf("VTable: %p\n", world.vtable());
 
         //follow the function to see the type the sdk defined
         //the type in these CMember or DMember or SMember
         //ignore these macros, they are there for the MDK
-        const auto gameInstancePtr = world.OwningGameInstance<UGameInstance*>();
+        auto gameInstancePtr = world.OwningGameInstance<UGameInstance*>();
         printf("gameinstance: %p\n", gameInstancePtr);
-        if(gameInstancePtr)
-        {
-            UGameInstance gameInstance = MDKHandler::get<UGameInstance>(gameInstancePtr);
-            TArray<ULocalPlayer*> localPlayer = gameInstance.LocalPlayers<TArray<ULocalPlayer*>>();
-            printf("Localplayer count: %d\n", localPlayer.Count);
-            printf("Data: %p\n", localPlayer.Data);
+        if (!gameInstancePtr)
+            continue;
 
-            // example of writing
-            /*
-            auto pool = world.PSCPool<FWorldPSCPool>();
-            auto member = pool.WorldParticleSystemPools<int>();
-            // you call this function, in the template you define the Class, specify the datatype
-            // as param you specify your object where the write should be, the member (dont forget the &)
-            // and then the value
-            
-            MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
 
-            //or
+        const TArray<ULocalPlayer*> tlocalPlayer =
+            MDKHandler::readSingle<UGameInstance, TArray<ULocalPlayer*>>(gameInstancePtr, &UGameInstance::LocalPlayers);
 
-            //use writesilent so it will just write in the cache to queue many small writes
-            //this is effective when writing an entire vector and not wasting 3 reads
-            
-            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
-            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 283);
-            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 444);
+        printf("Localplayer count: %d\n", tlocalPlayer.Count);
+        printf("Data: %p\n", tlocalPlayer.Data);
+        if (!tlocalPlayer.Data)
+            continue;
 
-        	// and then write the entire bulk
-            MDKHandler::writeBulk(pool);
+        //data contains a pointer, nothing we can really cache
+        ULocalPlayer* player = Memory::read<ULocalPlayer*>(tlocalPlayer.Data);
 
-            //dont do this with too large structs, it could corrupt other possible data in race conditions!
-            //and dont do it with classes
-            */
-        }
+        printf("player: %p\n", player);
+        if (!player)
+            continue;
+
+        //we dont need the entire ULocalPlayer class, just read the playerController
+        //first specify the base class where the member is in, in our case its the playerController
+        //and then specify the type you wanna read, in our case its AAthena_PlayerController_C*
+        //in the params specify the pointer to the ULocalPlayer class and then the member
+        AAthena_PlayerController_C* playerControllerPtr =
+            MDKHandler::readSingle<ULocalPlayer, AAthena_PlayerController_C*>(player, &ULocalPlayer::PlayerController);
+
+
+
+        printf("playerControllerPtr: %p\n", playerControllerPtr);
+
+        if (!playerControllerPtr)
+            continue;
+
+        //we dont need the uobject and larger data, more would be waste
+        //i just showed above a example with AAthena_PlayerController_C, but theres no data we really need, we just need
+        //APlayerController
+        auto playerController = MDKHandler::get<APlayerController, UObject>(playerControllerPtr);
+
+        const auto acknowledgedPawnPtr = playerController.AcknowledgedPawn<APlayerPawn_Athena_C*>();
+
+        printf("acknowledgedPawnPtr: %p\n", acknowledgedPawnPtr);
+
+        if (!acknowledgedPawnPtr)
+            continue;
+
+        //get the acknowledged pawn
+        auto acknowlededPawn = MDKHandler::get<APlayerPawn_Athena_Generic_C>(acknowledgedPawnPtr);
+
+        const auto weaponPtr = acknowlededPawn.CurrentWeapon<AFortWeapon*>();
+
+        if (!weaponPtr)
+            continue;
+
+        //and the weapon
+        auto weapon = MDKHandler::get<AFortWeapon, AActor>(weaponPtr);
+
+        // example of writing
+        /*
+        auto pool = world.PSCPool<FWorldPSCPool>();
+        auto member = pool.WorldParticleSystemPools<int>();
+        // you call this function, in the template you define the Class, specify the datatype
+        // as param you specify your object where the write should be, the member (dont forget the &)
+        // and then the value
+
+        MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+
+        //or
+
+        //use writesilent so it will just write in the cache to queue many small writes
+        //this is effective when writing an entire vector and not wasting 3 reads
+
+        //example use:
+        // in a class exists a FVector, lets say location
+        // you first get the FVector, auto vec = class.Location<FVector>();
+        // now you wanna write xyz coords
+        // you specify in the template args (<>) the class, and the value type you write
+        // in the args, you specify the class instance we created, then specify the member and add the value type there again
+        // and lastly the value
+        // of course you can also use your own custom structs in the template args
+        // MDKHandler::writeSilent<FVector, float>(vec, &FVector::X<float>, 123.f);
+        // MDKHandler::writeSilent<FVector, float>(vec, &FVector::X<float>, 456.f);
+        // MDKHandler::writeSilent<FVector, float>(vec, &FVector::X<float>, 789.f);
+
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 283);
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 444);
+
+        // and then write the entire bulk. DONT FORGET!
+        MDKHandler::writeBulk(pool);
+
+        //dont do this with too large structs, it could corrupt other possible data in race conditions!
+        //and dont do it with classes, use small simple structs. If you write to classes, use the normal write
+        */
 
         getchar();
     }

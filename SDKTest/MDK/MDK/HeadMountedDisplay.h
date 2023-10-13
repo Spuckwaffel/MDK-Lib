@@ -8,192 +8,210 @@
 /// dependency: CoreUObject
 /// dependency: Engine
 
-/// Class /Script/HeadMountedDisplay.HandKeypointConversion
+/// Class /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
-class UHandKeypointConversion : public UBlueprintFunctionLibrary
+class UHeadMountedDisplayFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+
+
+	/// Functions
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
+	// void SetWorldToMetersScale(UObject* WorldContext, float NewScale);                                                       // [0x1b98730] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin
+	// void SetTrackingOrigin(TEnumAsByte<EHMDTrackingOrigin> Origin);                                                          // [0x1b98640] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture
+	// void SetSpectatorScreenTexture(UTexture* InTexture);                                                                     // [0x1b98550] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout
+	// void SetSpectatorScreenModeTexturePlusEyeLayout(FVector2D EyeRectMin, FVector2D EyeRectMax, FVector2D TextureRectMin, FVector2D TextureRectMax, bool bDrawEyeFirst, bool bClearBlack); // [0x1b98390] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode
+	// void SetSpectatorScreenMode(ESpectatorScreenMode Mode);                                                                  // [0x1b98320] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes
+	// void SetClippingPlanes(float Near, float Far);                                                                           // [0x1b98060] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition
+	// void ResetOrientationAndPosition(float Yaw, TEnumAsByte<EOrientPositionSelector> Options);                               // [0x1b97f30] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable
+	// bool IsSpectatorScreenModeControllable();                                                                                // [0x1b97ee0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode
+	// bool IsInLowPersistenceMode();                                                                                           // [0x1b97c90] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled
+	// bool IsHeadMountedDisplayEnabled();                                                                                      // [0x1b97c60] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected
+	// bool IsHeadMountedDisplayConnected();                                                                                    // [0x1b97c30] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition
+	// bool HasValidTrackingPosition();                                                                                         // [0x1b97c00] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale
+	// float GetWorldToMetersScale(UObject* WorldContext);                                                                      // [0x1b97b70] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState
+	// void GetVRFocusState(bool& bUseFocus, bool& bHasFocus);                                                                  // [0x1b97a90] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingToWorldTransform
+	// FTransform GetTrackingToWorldTransform(UObject* WorldContext);                                                           // [0x1b979d0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters
+	// void GetTrackingSensorParameters(FVector& Origin, FRotator& Rotation, float& LeftFOV, float& RightFOV, float& TopFOV, float& BottomFOV, float& Distance, float& NearPlane, float& FarPlane, bool& IsActive, int32_t Index); // [0x1b975f0] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin
+	// TEnumAsByte<EHMDTrackingOrigin> GetTrackingOrigin();                                                                     // [0x1b975b0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage
+	// float GetScreenPercentage();                                                                                             // [0x1b97580] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
+	// void GetPositionalTrackingCameraParameters(FVector& CameraOrigin, FRotator& CameraRotation, float& HFOV, float& VFOV, float& CameraDistance, float& NearPlane, float& FarPlane); // [0x1b97310] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPixelDensity
+	// float GetPixelDensity();                                                                                                 // [0x1b972e0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
+	// void GetOrientationAndPosition(FRotator& DeviceRotation, FVector& DevicePosition);                                       // [0x1b97140] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors
+	// int32_t GetNumOfTrackingSensors();                                                                                       // [0x1b97110] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState
+	// TEnumAsByte<EHMDWornState> GetHMDWornState();                                                                            // [0x1b97080] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName
+	// FName GetHMDDeviceName();                                                                                                // [0x1b97040] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDeviceWorldPose
+	// void GetDeviceWorldPose(UObject* WorldContext, FXRDeviceId& XRDeviceId, bool& bIsTracked, FRotator& Orientation, bool& bHasPositionalTracking, FVector& Position); // [0x1b96e10] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetDevicePose
+	// void GetDevicePose(FXRDeviceId& XRDeviceId, bool& bIsTracked, FRotator& Orientation, bool& bHasPositionalTracking, FVector& Position); // [0x1b96c20] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnumerateTrackedDevices
+	// TArray<FXRDeviceId> EnumerateTrackedDevices(FName SystemId, EXRTrackedDeviceType DeviceType);                            // [0x1b96b10] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode
+	// void EnableLowPersistenceMode(bool bEnable);                                                                             // [0x1b96820] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD
+	// bool EnableHMD(bool bEnable);                                                                                            // [0x1b967a0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.AddDeviceVisualizationComponent
+	// UPrimitiveComponent* AddDeviceVisualizationComponent(AActor* Target, FXRDeviceId& XRDeviceId, bool bManualAttachment, FTransform& RelativeTransform); // [0x1b96380] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/HeadMountedDisplay.MotionControllerComponent
-/// Size: 0x0170 (0x000570 - 0x0006E0)
+/// Size: 0x00C0 (0x000640 - 0x000700)
 class UMotionControllerComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1760;
+	static inline constexpr uint64_t __MDKClassSize = 1792;
 
 public:
-	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x568, 4, 0, 0})
-	SMember(FName)                                     MotionSource                                                OFFSET(getStruct<T>, {0x56C, 4, 0, 0})
-	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
-	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x574, 1, 0, 0})
-	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x575, 1, 0, 0})
-	SMember(FName)                                     DisplayModelSource                                          OFFSET(getStruct<T>, {0x578, 4, 0, 0})
-	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x588, 16, 0, 0})
-	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x598, 8, 0, 0})
+	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x640, 4, 0, 0})
+	CMember(EControllerHand)                           Hand                                                        OFFSET(get<T>, {0x644, 1, 0, 0})
+	SMember(FName)                                     MotionSource                                                OFFSET(getStruct<T>, {0x648, 8, 0, 0})
+	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x650, 1, 1, 0})
+	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x654, 1, 0, 0})
+	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x655, 1, 0, 0})
+	SMember(FName)                                     DisplayModelSource                                          OFFSET(getStruct<T>, {0x658, 8, 0, 0})
+	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x660, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x668, 16, 0, 0})
+	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x6E0, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
-	// void SetTrackingSource(EControllerHand NewSource);                                                                       // [0x55526f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTrackingSource(EControllerHand NewSource);                                                                       // [0x1b986b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
-	// void SetTrackingMotionSource(FName NewSource);                                                                           // [0x5552648] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTrackingMotionSource(FName NewSource);                                                                           // [0x1b985c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel
-	// void SetShowDeviceModel(bool bShowControllerModel);                                                                      // [0x55525a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetShowDeviceModel(bool bShowControllerModel);                                                                      // [0x1b98290] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource
-	// void SetDisplayModelSource(FName NewDisplayModelSource);                                                                 // [0x5552518] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDisplayModelSource(FName NewDisplayModelSource);                                                                 // [0x1b98190] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh
-	// void SetCustomDisplayMesh(UStaticMesh* NewDisplayMesh);                                                                  // [0x5552440] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCustomDisplayMesh(UStaticMesh* NewDisplayMesh);                                                                  // [0x1b98110] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
-	// void SetAssociatedPlayerIndex(int32_t NewPlayer);                                                                        // [0x5552398] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAssociatedPlayerIndex(int32_t NewPlayer);                                                                        // [0x1b97fe0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated
-	// void OnMotionControllerUpdated();                                                                                        // [0x1ebf994] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void OnMotionControllerUpdated();                                                                                        // [0x154a140] Event|Protected|BlueprintEvent 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.IsTracked
-	// bool IsTracked();                                                                                                        // [0x5552380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTracked();                                                                                                        // [0x1b97f10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
-	// EControllerHand GetTrackingSource();                                                                                     // [0x5552348] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EControllerHand GetTrackingSource();                                                                                     // [0x1b979a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetParameterValue
-	// float GetParameterValue(FName InName, bool& bValueFound);                                                                // [0x5552250] Final|RequiredAPI|Native|Protected|HasOutParms|BlueprintCallable 
-	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearVelocity
-	// bool GetLinearVelocity(FVector& OutLinearVelocity);                                                                      // [0x5552158] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
-	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearAcceleration
-	// bool GetLinearAcceleration(FVector& OutLinearAcceleration);                                                              // [0x5552060] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
-	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
-	// FVector GetHandJointPosition(int32_t jointIndex, bool& bValueFound);                                                     // [0x5551f4c] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
-	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetAngularVelocity
-	// bool GetAngularVelocity(FRotator& OutAngularVelocity);                                                                   // [0x5551eb8] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// float GetParameterValue(FName InName, bool& bValueFound);                                                                // [0x1b97210] Final|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
-/// Struct /Script/HeadMountedDisplay.XRHMDData
-/// Size: 0x0060 (0x000000 - 0x000060)
-class FXRHMDData : public MDKBase
+/// Class /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UMotionTrackedDeviceFunctionLibrary : public UBlueprintFunctionLibrary
 { 
 	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 96;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
-	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x40, 32, 0, 0})
+
+
+	/// Functions
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
+	// void SetIsControllerMotionTrackingEnabledByDefault(bool Enable);                                                         // [0x1b98210] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource
+	// bool IsMotionTrackingEnabledForSource(int32_t PlayerIndex, FName SourceName);                                            // [0x1b97e20] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
+	// bool IsMotionTrackingEnabledForDevice(int32_t PlayerIndex, EControllerHand Hand);                                        // [0x1b97d60] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
+	// bool IsMotionTrackingEnabledForComponent(UMotionControllerComponent* MotionControllerComponent);                         // [0x1b97ce0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
+	// bool IsMotionTrackedDeviceCountManagementNecessary();                                                                    // [0x1b97cb0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
+	// int32_t GetMotionTrackingEnabledControllerCount();                                                                       // [0x1b970e0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
+	// int32_t GetMaximumMotionTrackedControllerCount();                                                                        // [0x1b970b0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
+	// TArray<FName> EnumerateMotionSources();                                                                                  // [0x1b96a90] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource
+	// bool EnableMotionTrackingOfSource(int32_t PlayerIndex, FName SourceName);                                                // [0x1b969d0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
+	// bool EnableMotionTrackingOfDevice(int32_t PlayerIndex, EControllerHand Hand);                                            // [0x1b96910] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
+	// bool EnableMotionTrackingForComponent(UMotionControllerComponent* MotionControllerComponent);                            // [0x1b96890] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource
+	// void DisableMotionTrackingOfSource(int32_t PlayerIndex, FName SourceName);                                               // [0x1b966f0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
+	// void DisableMotionTrackingOfDevice(int32_t PlayerIndex, EControllerHand Hand);                                           // [0x1b96640] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
+	// void DisableMotionTrackingOfControllersForPlayer(int32_t PlayerIndex);                                                   // [0x1b965d0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers
+	// void DisableMotionTrackingOfAllControllers();                                                                            // [0x1b965b0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
+	// void DisableMotionTrackingForComponent(UMotionControllerComponent* MotionControllerComponent);                           // [0x1b96540] Final|Native|Static|Public|BlueprintCallable 
 };
 
-/// Struct /Script/HeadMountedDisplay.XRMotionControllerData
-/// Size: 0x0120 (0x000000 - 0x000120)
-class FXRMotionControllerData : public MDKBase
+/// Class /Script/HeadMountedDisplay.VRNotificationsComponent
+/// Size: 0x0090 (0x0000F0 - 0x000180)
+class UVRNotificationsComponent : public UActorComponent
 { 
 	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 288;
+	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
-	CMember(EXRVisualType)                             DeviceVisualType                                            OFFSET(get<T>, {0x18, 1, 0, 0})
-	CMember(EControllerHand)                           HandIndex                                                   OFFSET(get<T>, {0x19, 1, 0, 0})
-	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x1A, 1, 0, 0})
-	SMember(FVector)                                   GripPosition                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     GripRotation                                                OFFSET(getStruct<T>, {0x40, 32, 0, 0})
-	SMember(FVector)                                   AimPosition                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
-	SMember(FQuat)                                     AimRotation                                                 OFFSET(getStruct<T>, {0x80, 32, 0, 0})
-	SMember(FVector)                                   PalmPosition                                                OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
-	SMember(FQuat)                                     PalmRotation                                                OFFSET(getStruct<T>, {0xC0, 32, 0, 0})
-	CMember(TArray<FVector>)                           HandKeyPositions                                            OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<FQuat>)                             HandKeyRotations                                            OFFSET(get<T>, {0xF0, 16, 0, 0})
-	CMember(TArray<float>)                             HandKeyRadii                                                OFFSET(get<T>, {0x100, 16, 0, 0})
-	DMember(bool)                                      bIsGrasped                                                  OFFSET(get<bool>, {0x110, 1, 0, 0})
-};
-
-/// Struct /Script/HeadMountedDisplay.XRGestureConfig
-/// Size: 0x0006 (0x000000 - 0x000006)
-class FXRGestureConfig : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 6;
-
-public:
-	DMember(bool)                                      bTap                                                        OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(bool)                                      bHold                                                       OFFSET(get<bool>, {0x1, 1, 0, 0})
-	CMember(ESpatialInputGestureAxis)                  AxisGesture                                                 OFFSET(get<T>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisX                                            OFFSET(get<bool>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisY                                            OFFSET(get<bool>, {0x4, 1, 0, 0})
-	DMember(bool)                                      bNavigationAxisZ                                            OFFSET(get<bool>, {0x5, 1, 0, 0})
+	CMember(UMulticastDelegate)                        HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate       OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDTrackingInitializedDelegate                              OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDRecenteredDelegate                                       OFFSET(get<T>, {0x110, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDLostDelegate                                             OFFSET(get<T>, {0x120, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDReconnectedDelegate                                      OFFSET(get<T>, {0x130, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDConnectCanceledDelegate                                  OFFSET(get<T>, {0x140, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDPutOnHeadDelegate                                        OFFSET(get<T>, {0x150, 16, 0, 0})
+	CMember(UMulticastDelegate)                        HMDRemovedFromHeadDelegate                                  OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(UMulticastDelegate)                        VRControllerRecenteredDelegate                              OFFSET(get<T>, {0x170, 16, 0, 0})
 };
 
 /// Struct /Script/HeadMountedDisplay.XRDeviceId
-/// Size: 0x0008 (0x000000 - 0x000008)
+/// Size: 0x0010 (0x000000 - 0x000010)
 class FXRDeviceId : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 8;
+	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     SystemName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SystemName                                                  OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
-/// Enum /Script/HeadMountedDisplay.EOrientPositionSelector
-/// Size: 0x04
-enum EOrientPositionSelector : uint8_t
+/// Enum /Script/HeadMountedDisplay.EXRTrackedDeviceType
+/// Size: 0x07
+enum EXRTrackedDeviceType : uint8_t
 {
-	EOrientPositionSelector__Orientation0                                            = 0,
-	EOrientPositionSelector__Position1                                               = 1,
-	EOrientPositionSelector__OrientationAndPosition2                                 = 2,
-	EOrientPositionSelector__EOrientPositionSelector_MAX3                            = 3
-};
-
-/// Enum /Script/HeadMountedDisplay.EHMDTrackingOrigin
-/// Size: 0x04
-enum EHMDTrackingOrigin : uint8_t
-{
-	EHMDTrackingOrigin__Floor0                                                       = 0,
-	EHMDTrackingOrigin__Eye1                                                         = 1,
-	EHMDTrackingOrigin__Stage2                                                       = 2,
-	EHMDTrackingOrigin__EHMDTrackingOrigin_MAX3                                      = 3
-};
-
-/// Enum /Script/HeadMountedDisplay.EHMDWornState
-/// Size: 0x04
-enum EHMDWornState : uint8_t
-{
-	EHMDWornState__Unknown0                                                          = 0,
-	EHMDWornState__Worn1                                                             = 1,
-	EHMDWornState__NotWorn2                                                          = 2,
-	EHMDWornState__EHMDWornState_MAX3                                                = 3
-};
-
-/// Enum /Script/HeadMountedDisplay.EXRDeviceConnectionResult
-/// Size: 0x06
-enum EXRDeviceConnectionResult : uint8_t
-{
-	EXRDeviceConnectionResult__NoTrackingSystem0                                     = 0,
-	EXRDeviceConnectionResult__FeatureNotSupported1                                  = 1,
-	EXRDeviceConnectionResult__NoValidViewport2                                      = 2,
-	EXRDeviceConnectionResult__MiscFailure3                                          = 3,
-	EXRDeviceConnectionResult__Success4                                              = 4,
-	EXRDeviceConnectionResult__EXRDeviceConnectionResult_MAX5                        = 5
-};
-
-/// Enum /Script/HeadMountedDisplay.EXRSystemFlags
-/// Size: 0x06
-enum EXRSystemFlags : uint8_t
-{
-	EXRSystemFlags__NoFlags0                                                         = 0,
-	EXRSystemFlags__IsAR1                                                            = 1,
-	EXRSystemFlags__IsTablet2                                                        = 2,
-	EXRSystemFlags__IsHeadMounted3                                                   = 4,
-	EXRSystemFlags__SupportsHandTracking4                                            = 8,
-	EXRSystemFlags__EXRSystemFlags_MAX5                                              = 9
+	EXRTrackedDeviceType__HeadMountedDisplay0                                        = 0,
+	EXRTrackedDeviceType__Controller1                                                = 1,
+	EXRTrackedDeviceType__TrackingReference2                                         = 2,
+	EXRTrackedDeviceType__Other3                                                     = 3,
+	EXRTrackedDeviceType__Invalid4                                                   = 254,
+	EXRTrackedDeviceType__Any5                                                       = 255,
+	EXRTrackedDeviceType__EXRTrackedDeviceType_MAX6                                  = 256
 };
 
 /// Enum /Script/HeadMountedDisplay.ESpectatorScreenMode
@@ -211,60 +229,33 @@ enum ESpectatorScreenMode : uint8_t
 	ESpectatorScreenMode__ESpectatorScreenMode_MAX8                                  = 8
 };
 
-/// Enum /Script/HeadMountedDisplay.EXRTrackedDeviceType
-/// Size: 0x08
-enum EXRTrackedDeviceType : uint8_t
+/// Enum /Script/HeadMountedDisplay.EHMDWornState
+/// Size: 0x04
+enum EHMDWornState : uint8_t
 {
-	EXRTrackedDeviceType__HeadMountedDisplay0                                        = 0,
-	EXRTrackedDeviceType__Controller1                                                = 1,
-	EXRTrackedDeviceType__TrackingReference2                                         = 2,
-	EXRTrackedDeviceType__Tracker3                                                   = 3,
-	EXRTrackedDeviceType__Other4                                                     = 4,
-	EXRTrackedDeviceType__Invalid5                                                   = 254,
-	EXRTrackedDeviceType__Any6                                                       = 255,
-	EXRTrackedDeviceType__EXRTrackedDeviceType_MAX7                                  = 256
+	EHMDWornState__Unknown0                                                          = 0,
+	EHMDWornState__Worn1                                                             = 1,
+	EHMDWornState__NotWorn2                                                          = 2,
+	EHMDWornState__EHMDWornState_MAX3                                                = 3
 };
 
-/// Enum /Script/HeadMountedDisplay.EHandKeypoint
-/// Size: 0x27
-enum EHandKeypoint : uint8_t
-{
-	EHandKeypoint__Palm0                                                             = 0,
-	EHandKeypoint__Wrist1                                                            = 1,
-	EHandKeypoint__ThumbMetacarpal2                                                  = 2,
-	EHandKeypoint__ThumbProximal3                                                    = 3,
-	EHandKeypoint__ThumbDistal4                                                      = 4,
-	EHandKeypoint__ThumbTip5                                                         = 5,
-	EHandKeypoint__IndexMetacarpal6                                                  = 6,
-	EHandKeypoint__IndexProximal7                                                    = 7,
-	EHandKeypoint__IndexIntermediate8                                                = 8,
-	EHandKeypoint__IndexDistal9                                                      = 9,
-	EHandKeypoint__IndexTip10                                                        = 10,
-	EHandKeypoint__MiddleMetacarpal11                                                = 11,
-	EHandKeypoint__MiddleProximal12                                                  = 12,
-	EHandKeypoint__MiddleIntermediate13                                              = 13,
-	EHandKeypoint__MiddleDistal14                                                    = 14,
-	EHandKeypoint__MiddleTip15                                                       = 15,
-	EHandKeypoint__RingMetacarpal16                                                  = 16,
-	EHandKeypoint__RingProximal17                                                    = 17,
-	EHandKeypoint__RingIntermediate18                                                = 18,
-	EHandKeypoint__RingDistal19                                                      = 19,
-	EHandKeypoint__RingTip20                                                         = 20,
-	EHandKeypoint__LittleMetacarpal21                                                = 21,
-	EHandKeypoint__LittleProximal22                                                  = 22,
-	EHandKeypoint__LittleIntermediate23                                              = 23,
-	EHandKeypoint__LittleDistal24                                                    = 24,
-	EHandKeypoint__LittleTip25                                                       = 25,
-	EHandKeypoint__EHandKeypoint_MAX26                                               = 26
-};
-
-/// Enum /Script/HeadMountedDisplay.EXRVisualType
+/// Enum /Script/HeadMountedDisplay.EHMDTrackingOrigin
 /// Size: 0x03
-enum EXRVisualType : uint8_t
+enum EHMDTrackingOrigin : uint8_t
 {
-	EXRVisualType__Controller0                                                       = 0,
-	EXRVisualType__Hand1                                                             = 1,
-	EXRVisualType__EXRVisualType_MAX2                                                = 2
+	EHMDTrackingOrigin__Floor0                                                       = 0,
+	EHMDTrackingOrigin__Eye1                                                         = 1,
+	EHMDTrackingOrigin__EHMDTrackingOrigin_MAX2                                      = 2
+};
+
+/// Enum /Script/HeadMountedDisplay.EOrientPositionSelector
+/// Size: 0x04
+enum EOrientPositionSelector : uint8_t
+{
+	EOrientPositionSelector__Orientation0                                            = 0,
+	EOrientPositionSelector__Position1                                               = 1,
+	EOrientPositionSelector__OrientationAndPosition2                                 = 2,
+	EOrientPositionSelector__EOrientPositionSelector_MAX3                            = 3
 };
 
 /// Enum /Script/HeadMountedDisplay.ETrackingStatus
@@ -275,16 +266,5 @@ enum ETrackingStatus : uint8_t
 	ETrackingStatus__InertialOnly1                                                   = 1,
 	ETrackingStatus__Tracked2                                                        = 2,
 	ETrackingStatus__ETrackingStatus_MAX3                                            = 3
-};
-
-/// Enum /Script/HeadMountedDisplay.ESpatialInputGestureAxis
-/// Size: 0x05
-enum ESpatialInputGestureAxis : uint8_t
-{
-	ESpatialInputGestureAxis__None0                                                  = 0,
-	ESpatialInputGestureAxis__Manipulation1                                          = 1,
-	ESpatialInputGestureAxis__Navigation2                                            = 2,
-	ESpatialInputGestureAxis__NavigationRails3                                       = 3,
-	ESpatialInputGestureAxis__ESpatialInputGestureAxis_MAX4                          = 4
 };
 

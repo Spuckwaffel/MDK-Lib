@@ -7,107 +7,117 @@
 
 /// dependency: CoreUObject
 /// dependency: Engine
-/// dependency: NetCore
 /// dependency: OnlineSubsystemUtils
 
 /// Class /Script/Lobby.LobbyBeaconClient
-/// Size: 0x0088 (0x000320 - 0x0003A8)
+/// Size: 0x01A0 (0x0003D0 - 0x000570)
 class ALobbyBeaconClient : public AOnlineBeaconClient
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 936;
+	static inline constexpr uint64_t __MDKClassSize = 1392;
 
 public:
-	CMember(ALobbyBeaconState*)                        LobbyState                                                  OFFSET(get<T>, {0x320, 8, 0, 0})
-	CMember(ALobbyBeaconPlayerState*)                  PlayerState                                                 OFFSET(get<T>, {0x328, 8, 0, 0})
-	CMember(ELobbyBeaconJoinState)                     LobbyJoinServerState                                        OFFSET(get<T>, {0x331, 1, 0, 0})
+	CMember(ALobbyBeaconState*)                        LobbyState                                                  OFFSET(get<T>, {0x3C8, 8, 0, 0})
+	CMember(ALobbyBeaconPlayerState*)                  PlayerState                                                 OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	CMember(ELobbyBeaconJoinState)                     LobbyJoinServerState                                        OFFSET(get<T>, {0x3D9, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/Lobby.LobbyBeaconClient.ServerSetPartyOwner
-	// void ServerSetPartyOwner(FUniqueNetIdRepl InUniqueId, FUniqueNetIdRepl InPartyOwnerId);                                  // [0x6ab7360] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSetPartyOwner(FUniqueNetIdRepl InUniqueId, FUniqueNetIdRepl InPartyOwnerId);                                  // [0x631070] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerNotifyJoiningServer
-	// void ServerNotifyJoiningServer();                                                                                        // [0x6ab7314] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerNotifyJoiningServer();                                                                                        // [0x631020] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerLoginPlayer
-	// void ServerLoginPlayer(FString InSessionId, FUniqueNetIdRepl InUniqueId, FString UrlString);                             // [0x6ab6fc4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerLoginPlayer(FString InSessionId, FUniqueNetIdRepl InUniqueId, FString UrlString);                             // [0x630e50] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerKickPlayer
-	// void ServerKickPlayer(FUniqueNetIdRepl PlayerToKick, FText Reason);                                                      // [0x6ab6cc0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerKickPlayer(FUniqueNetIdRepl PlayerToKick, FText Reason);                                                      // [0x630cb0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerDisconnectFromLobby
-	// void ServerDisconnectFromLobby();                                                                                        // [0x6ab6c74] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerDisconnectFromLobby();                                                                                        // [0x630c60] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerCheat
-	// void ServerCheat(FString Msg);                                                                                           // [0x6ab65bc] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// void ServerCheat(FString Msg);                                                                                           // [0x630ba0] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientWasKicked
-	// void ClientWasKicked(FText KickReason);                                                                                  // [0x6ab6458] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientWasKicked(FText KickReason);                                                                                  // [0x630a80] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientSetInviteFlags
-	// void ClientSetInviteFlags(FJoinabilitySettings Settings);                                                                // [0x6ab62f4] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSetInviteFlags(FJoinabilitySettings Settings);                                                                // [0x6309f0] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientPlayerLeft
-	// void ClientPlayerLeft(FUniqueNetIdRepl InUniqueId);                                                                      // [0x6ab6164] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientPlayerLeft(FUniqueNetIdRepl InUniqueId);                                                                      // [0x630900] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientPlayerJoined
-	// void ClientPlayerJoined(FText NewPlayerName, FUniqueNetIdRepl InUniqueId);                                               // [0x6ab5f7c] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientPlayerJoined(FText NewPlayerName, FUniqueNetIdRepl InUniqueId);                                               // [0x630790] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientLoginComplete
-	// void ClientLoginComplete(FUniqueNetIdRepl InUniqueId, bool bWasSuccessful);                                              // [0x6ab5cbc] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientLoginComplete(FUniqueNetIdRepl InUniqueId, bool bWasSuccessful);                                              // [0x630650] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientJoinGame
-	// void ClientJoinGame();                                                                                                   // [0x6ab5ca4] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientJoinGame();                                                                                                   // [0x630630] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientAckJoiningServer
-	// void ClientAckJoiningServer();                                                                                           // [0x5c44714] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientAckJoiningServer();                                                                                           // [0x2668ac0] Net|NetReliableNative|Event|Protected|NetClient 
 };
 
 /// Class /Script/Lobby.LobbyBeaconHost
-/// Size: 0x0030 (0x0002B8 - 0x0002E8)
+/// Size: 0x0038 (0x000340 - 0x000378)
 class ALobbyBeaconHost : public AOnlineBeaconHostObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 744;
+	static inline constexpr uint64_t __MDKClassSize = 888;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   LobbyStateClass                                             OFFSET(get<T>, {0x2C0, 32, 0, 0})
-	CMember(ALobbyBeaconState*)                        LobbyState                                                  OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(UClass*)                                   LobbyStateClass                                             OFFSET(get<T>, {0x348, 40, 0, 0})
+	CMember(ALobbyBeaconState*)                        LobbyState                                                  OFFSET(get<T>, {0x370, 8, 0, 0})
 };
 
 /// Class /Script/Lobby.LobbyBeaconPlayerState
-/// Size: 0x00D0 (0x000290 - 0x000360)
+/// Size: 0x0158 (0x000318 - 0x000470)
 class ALobbyBeaconPlayerState : public AInfo
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 864;
+	static inline constexpr uint64_t __MDKClassSize = 1136;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x290, 24, 0, 0})
-	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(getStruct<T>, {0x2A8, 48, 0, 0})
-	SMember(FUniqueNetIdRepl)                          PartyOwnerUniqueId                                          OFFSET(getStruct<T>, {0x2D8, 48, 0, 0})
-	DMember(bool)                                      bInLobby                                                    OFFSET(get<bool>, {0x308, 1, 0, 0})
-	CMember(AOnlineBeaconClient*)                      ClientActor                                                 OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x318, 24, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UniqueId                                                    OFFSET(getStruct<T>, {0x330, 40, 0, 0})
+	SMember(FUniqueNetIdRepl)                          PartyOwnerUniqueId                                          OFFSET(getStruct<T>, {0x358, 40, 0, 0})
+	DMember(bool)                                      bInLobby                                                    OFFSET(get<bool>, {0x380, 1, 0, 0})
+	CMember(AOnlineBeaconClient*)                      ClientActor                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
-	// void OnRep_UniqueId();                                                                                                   // [0x6ab6570] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
-	// void OnRep_PartyOwner();                                                                                                 // [0x6ab6538] Final|Native|Protected 
+	// void OnRep_PartyOwner();                                                                                                 // [0x630b60] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_InLobby
-	// void OnRep_InLobby();                                                                                                    // [0x6ab64ec] Final|Native|Protected 
+	// void OnRep_InLobby();                                                                                                    // [0x11c3170] Final|Native|Protected 
 };
 
 /// Class /Script/Lobby.LobbyBeaconState
-/// Size: 0x01A8 (0x000290 - 0x000438)
+/// Size: 0x02B8 (0x000318 - 0x0005D0)
 class ALobbyBeaconState : public AInfo
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
+	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
-	DMember(int32_t)                                   MaxPlayers                                                  OFFSET(get<int32_t>, {0x290, 4, 0, 0})
-	CMember(UClass*)                                   LobbyBeaconPlayerStateClass                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	DMember(bool)                                      bLobbyStarted                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-	DMember(float)                                     WaitForPlayersTimeRemaining                                 OFFSET(get<float>, {0x2AC, 4, 0, 0})
-	SMember(FLobbyPlayerStateInfoArray)                Players                                                     OFFSET(getStruct<T>, {0x2B0, 288, 0, 0})
+	DMember(int32_t)                                   MaxPlayers                                                  OFFSET(get<int32_t>, {0x318, 4, 0, 0})
+	CMember(UClass*)                                   LobbyBeaconPlayerStateClass                                 OFFSET(get<T>, {0x320, 8, 0, 0})
+	DMember(bool)                                      bLobbyStarted                                               OFFSET(get<bool>, {0x330, 1, 0, 0})
+	DMember(float)                                     WaitForPlayersTimeRemaining                                 OFFSET(get<float>, {0x334, 4, 0, 0})
+	SMember(FLobbyPlayerStateInfoArray)                Players                                                     OFFSET(getStruct<T>, {0x338, 200, 0, 0})
 
 
 	/// Functions
 	// Function /Script/Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
-	// void OnRep_WaitForPlayersTimeRemaining();                                                                                // [0x6ab65a8] Final|Native|Protected 
+	// void OnRep_WaitForPlayersTimeRemaining();                                                                                // [0x630b80] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconState.OnRep_LobbyStarted
-	// void OnRep_LobbyStarted();                                                                                               // [0x6ab6524] Final|Native|Protected 
+	// void OnRep_LobbyStarted();                                                                                               // [0x630b40] Final|Native|Protected 
+};
+
+/// Struct /Script/Lobby.LobbyPlayerStateInfoArray
+/// Size: 0x0018 (0x0000B0 - 0x0000C8)
+class FLobbyPlayerStateInfoArray : public FFastArraySerializer
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+	CMember(TArray<FLobbyPlayerStateActorInfo>)        Players                                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(ALobbyBeaconState*)                        ParentState                                                 OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
 /// Struct /Script/Lobby.LobbyPlayerStateActorInfo
@@ -120,19 +130,6 @@ class FLobbyPlayerStateActorInfo : public FFastArraySerializerItem
 
 public:
 	CMember(ALobbyBeaconPlayerState*)                  LobbyPlayerState                                            OFFSET(get<T>, {0x10, 8, 0, 0})
-};
-
-/// Struct /Script/Lobby.LobbyPlayerStateInfoArray
-/// Size: 0x0018 (0x000108 - 0x000120)
-class FLobbyPlayerStateInfoArray : public FFastArraySerializer
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 288;
-
-public:
-	CMember(TArray<FLobbyPlayerStateActorInfo>)        Players                                                     OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(ALobbyBeaconState*)                        ParentState                                                 OFFSET(get<T>, {0x118, 8, 0, 0})
 };
 
 /// Enum /Script/Lobby.ELobbyBeaconJoinState

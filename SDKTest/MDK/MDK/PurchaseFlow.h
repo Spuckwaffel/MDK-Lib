@@ -15,20 +15,27 @@ class UPurchaseFlowJSBridge : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
+
+
+	/// Functions
+	// Function /Script/PurchaseFlow.PurchaseFlowJSBridge.RequestClose
+	// void RequestClose(FString CloseInfo);                                                                                    // [0x6e0c20] Final|Native|Public  
+	// Function /Script/PurchaseFlow.PurchaseFlowJSBridge.RECEIPT
+	// void RECEIPT(FPurchaseFlowReceiptParam RECEIPT);                                                                         // [0x6e0b50] Final|Native|Public  
 };
 
-/// Struct /Script/PurchaseFlow.PurchaseFlowItem
+/// Struct /Script/PurchaseFlow.PurchaseFlowReceiptParam
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FPurchaseFlowItem : public MDKBase
+class FPurchaseFlowReceiptParam : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ItemId                                                      OFFSET(getStruct<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   EntitlementId                                               OFFSET(getStruct<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ValidationInfo                                              OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   TransactionId                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TransactionState                                            OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	CMember(TArray<FPurchaseFlowOffer>)                Offers                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/PurchaseFlow.PurchaseFlowOffer
@@ -46,17 +53,17 @@ public:
 	CMember(TArray<FPurchaseFlowItem>)                 Items                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
-/// Struct /Script/PurchaseFlow.PurchaseFlowReceiptParam
+/// Struct /Script/PurchaseFlow.PurchaseFlowItem
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FPurchaseFlowReceiptParam : public MDKBase
+class FPurchaseFlowItem : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   TransactionId                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   TransactionState                                            OFFSET(getStruct<T>, {0x10, 16, 0, 0})
-	CMember(TArray<FPurchaseFlowOffer>)                Offers                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ItemId                                                      OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   EntitlementId                                               OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ValidationInfo                                              OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 

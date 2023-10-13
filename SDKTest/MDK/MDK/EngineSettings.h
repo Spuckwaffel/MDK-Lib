@@ -20,7 +20,6 @@ public:
 	CMember(TArray<FString>)                           AutoCompleteMapPaths                                        OFFSET(get<T>, {0x40, 16, 0, 0})
 	DMember(float)                                     BackgroundOpacityPercentage                                 OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(bool)                                      bOrderTopToBottom                                           OFFSET(get<bool>, {0x54, 1, 0, 0})
-	DMember(bool)                                      bDisplayHelpInAutoComplete                                  OFFSET(get<bool>, {0x55, 1, 0, 0})
 	SMember(FColor)                                    InputColor                                                  OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 	SMember(FColor)                                    HistoryColor                                                OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
 	SMember(FColor)                                    AutoCompleteCommandColor                                    OFFSET(getStruct<T>, {0x60, 4, 0, 0})
@@ -29,36 +28,27 @@ public:
 };
 
 /// Class /Script/EngineSettings.GameMapsSettings
-/// Size: 0x00C8 (0x000028 - 0x0000F0)
+/// Size: 0x00E0 (0x000028 - 0x000108)
 class UGameMapsSettings : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 240;
+	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FString)                                   LocalMapOptions                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
-	SMember(FSoftObjectPath)                           TransitionMap                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
-	DMember(bool)                                      bUseSplitscreen                                             OFFSET(get<bool>, {0x50, 1, 0, 0})
-	CMember(TEnumAsByte<ETwoPlayerSplitScreenType>)    TwoPlayerSplitscreenLayout                                  OFFSET(get<T>, {0x51, 1, 0, 0})
-	CMember(TEnumAsByte<EThreePlayerSplitScreenType>)  ThreePlayerSplitscreenLayout                                OFFSET(get<T>, {0x52, 1, 0, 0})
-	CMember(EFourPlayerSplitScreenType)                FourPlayerSplitscreenLayout                                 OFFSET(get<T>, {0x53, 1, 0, 0})
-	DMember(bool)                                      bOffsetPlayerGamepadIds                                     OFFSET(get<bool>, {0x54, 1, 0, 0})
-	SMember(FSoftClassPath)                            GameInstanceClass                                           OFFSET(getStruct<T>, {0x58, 24, 0, 0})
-	SMember(FSoftObjectPath)                           GameDefaultMap                                              OFFSET(getStruct<T>, {0x70, 24, 0, 0})
-	SMember(FSoftObjectPath)                           ServerDefaultMap                                            OFFSET(getStruct<T>, {0x88, 24, 0, 0})
-	SMember(FSoftClassPath)                            GlobalDefaultGameMode                                       OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
-	SMember(FSoftClassPath)                            GlobalDefaultServerGameMode                                 OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
-	CMember(TArray<FGameModeName>)                     GameModeMapPrefixes                                         OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<FGameModeName>)                     GameModeClassAliases                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Script/EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1
-	// void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);                                                            // [0x4de52b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1
-	// bool GetSkipAssigningGamepadToPlayer1();                                                                                 // [0x4de529c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
-	// Function /Script/EngineSettings.GameMapsSettings.GetGameMapsSettings
-	// UGameMapsSettings* GetGameMapsSettings();                                                                                // [0x4de526c] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	SMember(FSoftObjectPath)                           EditorStartupMap                                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FString)                                   LocalMapOptions                                             OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FSoftObjectPath)                           TransitionMap                                               OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	DMember(bool)                                      bUseSplitscreen                                             OFFSET(get<bool>, {0x68, 1, 0, 0})
+	CMember(TEnumAsByte<ETwoPlayerSplitScreenType>)    TwoPlayerSplitscreenLayout                                  OFFSET(get<T>, {0x69, 1, 0, 0})
+	CMember(TEnumAsByte<EThreePlayerSplitScreenType>)  ThreePlayerSplitscreenLayout                                OFFSET(get<T>, {0x6A, 1, 0, 0})
+	DMember(bool)                                      bOffsetPlayerGamepadIds                                     OFFSET(get<bool>, {0x6B, 1, 0, 0})
+	SMember(FSoftClassPath)                            GameInstanceClass                                           OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GameDefaultMap                                              OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ServerDefaultMap                                            OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FSoftClassPath)                            GlobalDefaultGameMode                                       OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FSoftClassPath)                            GlobalDefaultServerGameMode                                 OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	CMember(TArray<FGameModeName>)                     GameModeMapPrefixes                                         OFFSET(get<T>, {0xE8, 16, 0, 0})
+	CMember(TArray<FGameModeName>)                     GameModeClassAliases                                        OFFSET(get<T>, {0xF8, 16, 0, 0})
 };
 
 /// Class /Script/EngineSettings.GameNetworkManagerSettings
@@ -106,11 +96,11 @@ public:
 };
 
 /// Class /Script/EngineSettings.GeneralProjectSettings
-/// Size: 0x00F0 (0x000028 - 0x000118)
+/// Size: 0x00E8 (0x000028 - 0x000110)
 class UGeneralProjectSettings : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 280;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	SMember(FString)                                   CompanyName                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
@@ -129,12 +119,11 @@ public:
 	DMember(bool)                                      bShouldWindowPreserveAspectRatio                            OFFSET(get<bool>, {0x108, 1, 0, 0})
 	DMember(bool)                                      bUseBorderlessWindow                                        OFFSET(get<bool>, {0x109, 1, 0, 0})
 	DMember(bool)                                      bStartInVR                                                  OFFSET(get<bool>, {0x10A, 1, 0, 0})
-	DMember(bool)                                      bAllowWindowResize                                          OFFSET(get<bool>, {0x10B, 1, 0, 0})
-	DMember(bool)                                      bAllowClose                                                 OFFSET(get<bool>, {0x10C, 1, 0, 0})
-	DMember(bool)                                      bAllowMaximize                                              OFFSET(get<bool>, {0x10D, 1, 0, 0})
-	DMember(bool)                                      bAllowMinimize                                              OFFSET(get<bool>, {0x10E, 1, 0, 0})
-	DMember(float)                                     EyeOffsetForFakeStereoRenderingDevice                       OFFSET(get<float>, {0x110, 4, 0, 0})
-	DMember(float)                                     FOVForFakeStereoRenderingDevice                             OFFSET(get<float>, {0x114, 4, 0, 0})
+	DMember(bool)                                      bStartInAR                                                  OFFSET(get<bool>, {0x10B, 1, 0, 0})
+	DMember(bool)                                      bAllowWindowResize                                          OFFSET(get<bool>, {0x10C, 1, 0, 0})
+	DMember(bool)                                      bAllowClose                                                 OFFSET(get<bool>, {0x10D, 1, 0, 0})
+	DMember(bool)                                      bAllowMaximize                                              OFFSET(get<bool>, {0x10E, 1, 0, 0})
+	DMember(bool)                                      bAllowMinimize                                              OFFSET(get<bool>, {0x10F, 1, 0, 0})
 };
 
 /// Class /Script/EngineSettings.HudSettings
@@ -175,18 +164,13 @@ public:
 	SMember(FSoftClassPath)                            GameMode                                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
-/// Struct /Script/EngineSettings.TemplateMapInfoOverride
-/// Size: 0x0048 (0x000000 - 0x000048)
-class FTemplateMapInfoOverride : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 72;
-
-public:
-	SMember(FSoftObjectPath)                           Thumbnail                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           Map                                                         OFFSET(getStruct<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+/// Enum /Script/EngineSettings.EThreePlayerSplitScreenType
+/// Size: 0x03
+enum EThreePlayerSplitScreenType : uint8_t
+{
+	EThreePlayerSplitScreenType__FavorTop0                                           = 0,
+	EThreePlayerSplitScreenType__FavorBottom1                                        = 1,
+	EThreePlayerSplitScreenType__EThreePlayerSplitScreenType_MAX2                    = 2
 };
 
 /// Enum /Script/EngineSettings.ETwoPlayerSplitScreenType
@@ -196,35 +180,5 @@ enum ETwoPlayerSplitScreenType : uint8_t
 	ETwoPlayerSplitScreenType__Horizontal0                                           = 0,
 	ETwoPlayerSplitScreenType__Vertical1                                             = 1,
 	ETwoPlayerSplitScreenType__ETwoPlayerSplitScreenType_MAX2                        = 2
-};
-
-/// Enum /Script/EngineSettings.EThreePlayerSplitScreenType
-/// Size: 0x05
-enum EThreePlayerSplitScreenType : uint8_t
-{
-	EThreePlayerSplitScreenType__FavorTop0                                           = 0,
-	EThreePlayerSplitScreenType__FavorBottom1                                        = 1,
-	EThreePlayerSplitScreenType__Vertical2                                           = 2,
-	EThreePlayerSplitScreenType__Horizontal3                                         = 3,
-	EThreePlayerSplitScreenType__EThreePlayerSplitScreenType_MAX4                    = 4
-};
-
-/// Enum /Script/EngineSettings.EFourPlayerSplitScreenType
-/// Size: 0x04
-enum EFourPlayerSplitScreenType : uint8_t
-{
-	EFourPlayerSplitScreenType__Grid0                                                = 0,
-	EFourPlayerSplitScreenType__Vertical1                                            = 1,
-	EFourPlayerSplitScreenType__Horizontal2                                          = 2,
-	EFourPlayerSplitScreenType__EFourPlayerSplitScreenType_MAX3                      = 3
-};
-
-/// Enum /Script/EngineSettings.ESubLevelStripMode
-/// Size: 0x03
-enum ESubLevelStripMode : uint8_t
-{
-	ESubLevelStripMode__ExactClass0                                                  = 0,
-	ESubLevelStripMode__IsChildOf1                                                   = 1,
-	ESubLevelStripMode__ESubLevelStripMode_MAX2                                      = 2
 };
 

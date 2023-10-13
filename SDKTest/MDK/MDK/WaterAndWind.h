@@ -16,6 +16,11 @@ class UAnimNotify_PlayPlayerLandsWindEffect_C : public UAnimNotify
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
+
+
+	/// Functions
+	// Function /Game/WaterAndWind/AnimNotifies/AnimNotify_PlayPlayerLandsWindEffect.AnimNotify_PlayPlayerLandsWindEffect_C.Received_Notify
+	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);                                    // [0x154a140] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 };
 
 /// Struct /Game/WaterAndWind/Blueprint/ArrayOfWaterMeshWaterBlueprintPairs.ArrayOfWaterMeshWaterBlueprintPairs

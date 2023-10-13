@@ -17,9 +17,9 @@ class FWebJSCallbackBase : public MDKBase
 public:
 };
 
-/// Struct /Script/WebBrowser.WebJSFunction
+/// Struct /Script/WebBrowser.WebJSResponse
 /// Size: 0x0000 (0x000020 - 0x000020)
-class FWebJSFunction : public FWebJSCallbackBase
+class FWebJSResponse : public FWebJSCallbackBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
@@ -28,9 +28,9 @@ class FWebJSFunction : public FWebJSCallbackBase
 public:
 };
 
-/// Struct /Script/WebBrowser.WebJSResponse
+/// Struct /Script/WebBrowser.WebJSFunction
 /// Size: 0x0000 (0x000020 - 0x000020)
-class FWebJSResponse : public FWebJSCallbackBase
+class FWebJSFunction : public FWebJSCallbackBase
 { 
 	friend MDKHandler;
 	friend MDKBase;

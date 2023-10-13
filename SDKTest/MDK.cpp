@@ -8,28 +8,37 @@ MDKBase::MDKBase()
 
 }
 
+MDKBase::~MDKBase()
+{
+    //objects marked as tamporary aka not cached get deleted
+    if (onlyTemporary)
+    {
+        free(block.blockPointer);
+    }
+}
 
 
 MDKHandler::MDKHandler()
 {
-    printf("starting MDKHandler... Thank for choosing us!");
+    puts("starting MDKHandler... Thank for choosing us!");
 }
 
 void MDKHandler::newFrame()
 {
-	const auto currentTime = std::chrono::high_resolution_clock::now();
+    puts("pushing a new frame...");
+    const auto currentTime = std::chrono::high_resolution_clock::now();
 
     // Convert the time point to nanoseconds since the epoch
     currentFrameTS = std::chrono::duration_cast<std::chrono::nanoseconds>(currentTime.time_since_epoch()).count();
 
-    if(frameSkipCounter == -1)
+    if (frameSkipCounter == -1)
     {
         frameTSFlushThreshold = currentFrameTS;
     }
 
     frameSkipCounter++;
 
-    if(frameSkipCounter >= maxFrameSkipsTilFlush)
+    if (frameSkipCounter >= maxFrameSkipsTilFlush)
     {
         for (auto it = MDKCache.begin(); it != MDKCache.end();) {
             if (it->second.lastCacheTS <= frameTSFlushThreshold) {

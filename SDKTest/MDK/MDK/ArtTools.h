@@ -16,6 +16,13 @@ class URenderToTextureFunctionLibrary_C : public UBlueprintFunctionLibrary
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+
+
+	/// Functions
+	// Function /Engine/ArtTools/RenderToTexture/Macros/RenderToTextureFunctionLibrary.RenderToTextureFunctionLibrary_C.Set Canvas Material Scale and Position
+	// void Set Canvas Material Scale and Position(FVector2D Size, FVector2D Position, float Scale, UObject* __WorldContext, FVector2D& Screen Position, FVector2D& Screen Size); // [0x154a140] Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Engine/ArtTools/RenderToTexture/Macros/RenderToTextureFunctionLibrary.RenderToTextureFunctionLibrary_C.Array to HLSL Int Array
+	// void Array to HLSL Int Array(TEnumAsByte<EIntTypes> Type, FString& Variable Name, TArray<int32_t>& int, TArray<FVector2D>& int2, TArray<FVector>& int3, TArray<FLinearColor>& int4, UObject* __WorldContext, FString& String); // [0x154a140] Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 };
 
 /// Enum /Engine/ArtTools/RenderToTexture/Enums/EIntTypes.EIntTypes

@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/BlueprintContext.BlueprintContextBase
-/// Size: 0x0000 (0x000030 - 0x000030)
-class UBlueprintContextBase : public USubsystem
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UBlueprintContextBase : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };
@@ -26,5 +26,10 @@ class UBlueprintContextLibrary : public UBlueprintFunctionLibrary
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+
+
+	/// Functions
+	// Function /Script/BlueprintContext.BlueprintContextLibrary.GetContext
+	// UBlueprintContextBase* GetContext(UObject* ContextObject, UClass* Class);                                                // [0x2b2da0] Final|BlueprintCosmetic|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 

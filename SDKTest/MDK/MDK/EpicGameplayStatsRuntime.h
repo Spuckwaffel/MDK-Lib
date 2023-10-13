@@ -17,6 +17,13 @@ class UBlueprintGameplayStatsLibrary : public UBlueprintFunctionLibrary
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+
+
+	/// Functions
+	// Function /Script/EpicGameplayStatsRuntime.BlueprintGameplayStatsLibrary.NotEqual_GameplayStatTagGameplayStatTag
+	// bool NotEqual_GameplayStatTagGameplayStatTag(FGameplayStatTag A, FGameplayStatTag B);                                    // [0x802c20] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/EpicGameplayStatsRuntime.BlueprintGameplayStatsLibrary.EqualEqual_GameplayStatTagGameplayStatTag
+	// bool EqualEqual_GameplayStatTagGameplayStatTag(FGameplayStatTag A, FGameplayStatTag B);                                  // [0x802b40] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/EpicGameplayStatsRuntime.GameplayTagTableManager
@@ -30,24 +37,13 @@ public:
 	CMember(TArray<FManagedGameplayTagDataTableItem>)  Tables                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
-/// Struct /Script/EpicGameplayStatsRuntime.TagTableManagerHelper
-/// Size: 0x0001 (0x000000 - 0x000001)
-class FTagTableManagerHelper : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 1;
-
-public:
-};
-
 /// Struct /Script/EpicGameplayStatsRuntime.GameplayStatMetadataTableRow
-/// Size: 0x0048 (0x000008 - 0x000050)
+/// Size: 0x0088 (0x000008 - 0x000090)
 class FGameplayStatMetadataTableRow : public FTableRowBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	SMember(FString)                                   BackendName                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
@@ -59,18 +55,19 @@ public:
 	DMember(int32_t)                                   WeeklyRefreshInterval                                       OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bExportToBackEnd                                            OFFSET(get<bool>, {0x48, 1, 0, 0})
 	DMember(bool)                                      bShowInFrontEnd                                             OFFSET(get<bool>, {0x49, 1, 0, 0})
+	SMember(FGameplayTagReferenceHelper)               ReferenceHelper                                             OFFSET(getStruct<T>, {0x50, 64, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.GameplayStatTag
-/// Size: 0x0004 (0x000004 - 0x000008)
+/// Size: 0x0008 (0x000008 - 0x000010)
 class FGameplayStatTag : public FGameplayTag
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 8;
+	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              Tag                                                         OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.ManagedGameplayTagDataTableItem
@@ -82,17 +79,29 @@ class FManagedGameplayTagDataTableItem : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              RootTag                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              RootTag                                                     OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	CMember(UDataTable*)                               DataTable                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
-/// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardDataType
-/// Size: 0x03
-enum EEpicLeaderboardDataType : uint8_t
+/// Struct /Script/EpicGameplayStatsRuntime.TagTableManagerHelper
+/// Size: 0x0001 (0x000000 - 0x000001)
+class FTagTableManagerHelper : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardUpdateFunction
+/// Size: 0x04
+enum EEpicLeaderboardUpdateFunction : uint8_t
 {
-	EEpicLeaderboardDataType__Integer0                                               = 0,
-	EEpicLeaderboardDataType__Double1                                                = 1,
-	EEpicLeaderboardDataType__EEpicLeaderboardDataType_MAX2                          = 2
+	EEpicLeaderboardUpdateFunction__Min0                                             = 0,
+	EEpicLeaderboardUpdateFunction__Max1                                             = 1,
+	EEpicLeaderboardUpdateFunction__Sum2                                             = 2,
+	EEpicLeaderboardUpdateFunction__MostRecent3                                      = 3
 };
 
 /// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardTimeWindow
@@ -106,13 +115,12 @@ enum EEpicLeaderboardTimeWindow : uint8_t
 	EEpicLeaderboardTimeWindow__EEpicLeaderboardTimeWindow_MAX4                      = 4
 };
 
-/// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardUpdateFunction
-/// Size: 0x04
-enum EEpicLeaderboardUpdateFunction : uint8_t
+/// Enum /Script/EpicGameplayStatsRuntime.EEpicLeaderboardDataType
+/// Size: 0x03
+enum EEpicLeaderboardDataType : uint8_t
 {
-	EEpicLeaderboardUpdateFunction__Min0                                             = 0,
-	EEpicLeaderboardUpdateFunction__Max1                                             = 1,
-	EEpicLeaderboardUpdateFunction__Sum2                                             = 2,
-	EEpicLeaderboardUpdateFunction__MostRecent3                                      = 3
+	EEpicLeaderboardDataType__Integer0                                               = 0,
+	EEpicLeaderboardDataType__Double1                                                = 1,
+	EEpicLeaderboardDataType__EEpicLeaderboardDataType_MAX2                          = 2
 };
 
