@@ -1,4 +1,7 @@
 # MDK-Lib
+
+<img src="https://komarev.com/ghpvc/?username=spuckwaffel-MDK-Lib&label=Project+Views&style=flat-square" alt="Project Views" />
+
 MDK review for the upcoming next generation SDK
 
 I'm releasing a brand-new SDK type, called MDK for Unreal Engine, which I've created, especially targeting external projects. Maybe you're wondering, "why?"
