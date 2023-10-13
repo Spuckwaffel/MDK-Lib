@@ -70,10 +70,10 @@ int main()
 
         //we dont need the entire ULocalPlayer class, just read the playerController
         //first specify the base class where the member is in, in our case its the playerController
-        //and then specify the type you wanna read, in our case its AAthena_PlayerController_C*
+        //and then specify the type you wanna read, in our case its AFortPlayerControllerAthena*
         //in the params specify the pointer to the ULocalPlayer class and then the member
-        AAthena_PlayerController_C* playerControllerPtr =
-            MDKHandler::readSingle<ULocalPlayer, AAthena_PlayerController_C*>(player, &ULocalPlayer::PlayerController);
+        AFortPlayerControllerAthena* playerControllerPtr =
+            MDKHandler::readSingle<ULocalPlayer, AFortPlayerControllerAthena*>(player, &ULocalPlayer::PlayerController);
 
 
 
