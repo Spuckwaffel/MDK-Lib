@@ -7,16 +7,6 @@
 
 /// dependency: CoreUObject
 
-/// Class /Script/ClientPilot.ClientPilotComponent
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UClientPilotComponent : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Script/ClientPilot.ClientPilotBlackboard
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UClientPilotBlackboard : public UObject
@@ -36,5 +26,15 @@ class UClientPilotBlackboardManager : public UObject
 
 public:
 	CMember(UClientPilotBlackboard*)                   PilotBlackboard                                             OFFSET(get<T>, {0x28, 8, 0, 0})
+};
+
+/// Class /Script/ClientPilot.ClientPilotComponent
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UClientPilotComponent : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
 };
 

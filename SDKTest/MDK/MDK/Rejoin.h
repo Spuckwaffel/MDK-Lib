@@ -8,11 +8,11 @@
 /// dependency: CoreUObject
 
 /// Class /Script/Rejoin.RejoinCheck
-/// Size: 0x0188 (0x000028 - 0x0001B0)
+/// Size: 0x0160 (0x000028 - 0x000188)
 class URejoinCheck : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 432;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 	CMember(ERejoinStatus)                             LastKnownStatus                                             OFFSET(get<T>, {0x28, 1, 0, 0})

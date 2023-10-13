@@ -5,43 +5,52 @@
 *                                                       *
 ********************************************************/
 
+/// dependency: CoreUObject
+/// dependency: Engine
 
-/// Struct /Script/Renderer.LightPropagationVolumeSettings
-/// Size: 0x0040 (0x000000 - 0x000040)
-class FLightPropagationVolumeSettings : public MDKBase
+/// Class /Script/Renderer.SparseVolumeTextureViewerComponent
+/// Size: 0x0040 (0x000570 - 0x0005B0)
+class USparseVolumeTextureViewerComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	DMember(bool)                                      bOverride_LPVIntensity                                      OFFSET(get<bool>, {0x0, 1, 1, 0})
-	DMember(bool)                                      bOverride_LPVDirectionalOcclusionIntensity                  OFFSET(get<bool>, {0x0, 1, 1, 1})
-	DMember(bool)                                      bOverride_LPVDirectionalOcclusionRadius                     OFFSET(get<bool>, {0x0, 1, 1, 2})
-	DMember(bool)                                      bOverride_LPVDiffuseOcclusionExponent                       OFFSET(get<bool>, {0x0, 1, 1, 3})
-	DMember(bool)                                      bOverride_LPVSpecularOcclusionExponent                      OFFSET(get<bool>, {0x0, 1, 1, 4})
-	DMember(bool)                                      bOverride_LPVDiffuseOcclusionIntensity                      OFFSET(get<bool>, {0x0, 1, 1, 5})
-	DMember(bool)                                      bOverride_LPVSpecularOcclusionIntensity                     OFFSET(get<bool>, {0x0, 1, 1, 6})
-	DMember(bool)                                      bOverride_LPVSize                                           OFFSET(get<bool>, {0x0, 1, 1, 7})
-	DMember(bool)                                      bOverride_LPVSecondaryOcclusionIntensity                    OFFSET(get<bool>, {0x1, 1, 1, 0})
-	DMember(bool)                                      bOverride_LPVSecondaryBounceIntensity                       OFFSET(get<bool>, {0x1, 1, 1, 1})
-	DMember(bool)                                      bOverride_LPVGeometryVolumeBias                             OFFSET(get<bool>, {0x1, 1, 1, 2})
-	DMember(bool)                                      bOverride_LPVVplInjectionBias                               OFFSET(get<bool>, {0x1, 1, 1, 3})
-	DMember(bool)                                      bOverride_LPVEmissiveInjectionIntensity                     OFFSET(get<bool>, {0x1, 1, 1, 4})
-	DMember(float)                                     LPVIntensity                                                OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     LPVVplInjectionBias                                         OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     LPVSize                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     LPVSecondaryOcclusionIntensity                              OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     LPVSecondaryBounceIntensity                                 OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     LPVGeometryVolumeBias                                       OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     LPVEmissiveInjectionIntensity                               OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     LPVDirectionalOcclusionIntensity                            OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     LPVDirectionalOcclusionRadius                               OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     LPVDiffuseOcclusionExponent                                 OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     LPVSpecularOcclusionExponent                                OFFSET(get<float>, {0x2C, 4, 0, 0})
-	DMember(float)                                     LPVDiffuseOcclusionIntensity                                OFFSET(get<float>, {0x30, 4, 0, 0})
-	DMember(float)                                     LPVSpecularOcclusionIntensity                               OFFSET(get<float>, {0x34, 4, 0, 0})
-	DMember(float)                                     LPVFadeRange                                                OFFSET(get<float>, {0x38, 4, 0, 0})
-	DMember(float)                                     LPVDirectionalOcclusionFadeRange                            OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(USparseVolumeTexture*)                     SparseVolumeTexturePreview                                  OFFSET(get<T>, {0x568, 8, 0, 0})
+	DMember(bool)                                      bAnimate                                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
+	DMember(bool)                                      bReversePlayback                                            OFFSET(get<bool>, {0x570, 1, 1, 1})
+	DMember(bool)                                      bBlockingStreamingRequests                                  OFFSET(get<bool>, {0x570, 1, 1, 2})
+	DMember(float)                                     AnimationFrame                                              OFFSET(get<float>, {0x574, 4, 0, 0})
+	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x578, 4, 0, 0})
+	DMember(float)                                     AnimationTime                                               OFFSET(get<float>, {0x57C, 4, 0, 0})
+	CMember(TEnumAsByte<ESparseVolumeTexturePreviewAttribute>) PreviewAttribute                                    OFFSET(get<T>, {0x580, 1, 0, 0})
+	DMember(int32_t)                                   MipLevel                                                    OFFSET(get<int32_t>, {0x584, 4, 0, 0})
+	DMember(float)                                     Extinction                                                  OFFSET(get<float>, {0x588, 4, 0, 0})
+};
+
+/// Class /Script/Renderer.SparseVolumeTextureViewer
+/// Size: 0x0008 (0x000290 - 0x000298)
+class ASparseVolumeTextureViewer : public AInfo
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 664;
+
+public:
+	CMember(USparseVolumeTextureViewerComponent*)      SparseVolumeTextureViewerComponent                          OFFSET(get<T>, {0x290, 8, 0, 0})
+};
+
+/// Enum /Script/Renderer.ESparseVolumeTexturePreviewAttribute
+/// Size: 0x09
+enum ESparseVolumeTexturePreviewAttribute : uint8_t
+{
+	ESVTPA_AttributesA_R0                                                            = 0,
+	ESVTPA_AttributesA_G1                                                            = 1,
+	ESVTPA_AttributesA_B2                                                            = 2,
+	ESVTPA_AttributesA_A3                                                            = 3,
+	ESVTPA_AttributesB_R4                                                            = 4,
+	ESVTPA_AttributesB_G5                                                            = 5,
+	ESVTPA_AttributesB_B6                                                            = 6,
+	ESVTPA_AttributesB_A7                                                            = 7,
+	ESVTPA_MAX8                                                                      = 8
 };
 

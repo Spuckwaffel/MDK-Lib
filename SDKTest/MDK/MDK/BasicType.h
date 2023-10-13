@@ -9,16 +9,28 @@
 
 
 
-//TODO: Define UMulticastDelegate!
-
-
-//TODO: Define FString!
+//TODO: Define FMulticastInlineDelegate!
 
 
 //TODO: Define TWeakObjectPtr!
 
 
+//TODO: Define FString!
+
+
+//TODO: Define FDelegateProperty!
+
+
+//TODO: Define TSet!
+
+
+//TODO: Define FMulticastSparseDelegate!
+
+
 //TODO: Define EObjectFlags!
+
+
+//TODO: Define TLazyObjectPtr!
 
 
 /// Definition for TArray
@@ -100,8 +112,8 @@ struct FName
     /** Index into the Names array (used to find String portion of the string/number pair used for comparison) */
     FNameEntryId ComparisonIndex = 0;
 
-    /** Number portion of the string/number pair (stored internally as 1 more than actual, so zero'd memory will be the default, no-instance case) */
-	int32_t Number = 0;
+	/** Number portion of the string/number pair (stored internally as 1 more than actual, so zero'd memory will be the default, no-instance case) */
+    FNameEntryId Number = 0;
 
 };
 

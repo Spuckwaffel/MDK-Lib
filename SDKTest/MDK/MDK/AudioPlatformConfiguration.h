@@ -30,6 +30,6 @@ enum ESoundwaveSampleRateSettings : uint8_t
 	ESoundwaveSampleRateSettings__Medium2                                            = 2,
 	ESoundwaveSampleRateSettings__Low3                                               = 3,
 	ESoundwaveSampleRateSettings__Min4                                               = 4,
-	ESoundwaveSampleRateSettings__MatchDevice5                                       = 5
+	ESoundwaveSampleRateSettings__MatchDevice_DEPRECATED5                            = 5
 };
 

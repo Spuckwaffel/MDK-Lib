@@ -41,17 +41,17 @@ public:
 };
 
 /// Struct /Script/Overlay.OverlayItem
-/// Size: 0x0028 (0x000000 - 0x000028)
+/// Size: 0x0030 (0x000000 - 0x000030)
 class FOverlayItem : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
+	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	SMember(FTimespan)                                 StartTime                                                   OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	SMember(FTimespan)                                 EndTime                                                     OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 	SMember(FString)                                   Text                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 Position                                                    OFFSET(getStruct<T>, {0x20, 8, 0, 0})
+	SMember(FVector2D)                                 Position                                                    OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 

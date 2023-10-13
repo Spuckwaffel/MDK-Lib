@@ -9,14 +9,14 @@
 /// dependency: Engine
 
 /// Class /Script/AndroidPermission.AndroidPermissionCallbackProxy
-/// Size: 0x0058 (0x000028 - 0x000080)
+/// Size: 0x0028 (0x000028 - 0x000050)
 class UAndroidPermissionCallbackProxy : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
+	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	CMember(UMulticastDelegate)                        OnPermissionsGrantedDynamicDelegate                         OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPermissionsGrantedDynamicDelegate                         OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/AndroidPermission.AndroidPermissionFunctionLibrary
@@ -27,12 +27,5 @@ class UAndroidPermissionFunctionLibrary : public UBlueprintFunctionLibrary
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-
-
-	/// Functions
-	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
-	// bool CheckPermission(FString permission);                                                                                // [0x87aa80] Final|Native|Static|Public|BlueprintCallable 
-	// Function /Script/AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
-	// UAndroidPermissionCallbackProxy* AcquirePermissions(TArray<FString>& Permissions);                                       // [0x87a9b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 

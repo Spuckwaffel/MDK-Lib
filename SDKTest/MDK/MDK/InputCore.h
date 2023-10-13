@@ -26,7 +26,7 @@ class FKey : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     KeyName                                                     OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     KeyName                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Enum /Script/InputCore.ETouchIndex
@@ -48,16 +48,30 @@ enum ETouchIndex : uint8_t
 	ETouchIndex__ETouchIndex_MAX12                                                   = 12
 };
 
-/// Enum /Script/InputCore.ETouchType
-/// Size: 0x06
-enum ETouchType : uint8_t
+/// Enum /Script/InputCore.EControllerHand
+/// Size: 0x20
+enum EControllerHand : uint8_t
 {
-	ETouchType__Began0                                                               = 0,
-	ETouchType__Moved1                                                               = 1,
-	ETouchType__Stationary2                                                          = 2,
-	ETouchType__Ended3                                                               = 3,
-	ETouchType__NumTypes4                                                            = 4,
-	ETouchType__ETouchType_MAX5                                                      = 5
+	EControllerHand__Left0                                                           = 0,
+	EControllerHand__Right1                                                          = 1,
+	EControllerHand__AnyHand2                                                        = 2,
+	EControllerHand__Pad3                                                            = 3,
+	EControllerHand__ExternalCamera4                                                 = 4,
+	EControllerHand__Gun5                                                            = 5,
+	EControllerHand__HMD6                                                            = 6,
+	EControllerHand__Chest7                                                          = 7,
+	EControllerHand__LeftShoulder8                                                   = 8,
+	EControllerHand__RightShoulder9                                                  = 9,
+	EControllerHand__LeftElbow10                                                     = 10,
+	EControllerHand__RightElbow11                                                    = 11,
+	EControllerHand__Waist12                                                         = 12,
+	EControllerHand__LeftKnee13                                                      = 13,
+	EControllerHand__RightKnee14                                                     = 14,
+	EControllerHand__LeftFoot15                                                      = 15,
+	EControllerHand__RightFoot16                                                     = 16,
+	EControllerHand__Special17                                                       = 17,
+	EControllerHand__ControllerHand_Count18                                          = 18,
+	EControllerHand__EControllerHand_MAX19                                           = 19
 };
 
 /// Enum /Script/InputCore.EConsoleForGamepadLabels
@@ -70,27 +84,17 @@ enum EConsoleForGamepadLabels : uint8_t
 	EConsoleForGamepadLabels__EConsoleForGamepadLabels_MAX3                          = 3
 };
 
-/// Enum /Script/InputCore.EControllerHand
-/// Size: 0x18
-enum EControllerHand : uint8_t
+/// Enum /Script/InputCore.ETouchType
+/// Size: 0x08
+enum ETouchType : uint8_t
 {
-	EControllerHand__Left0                                                           = 0,
-	EControllerHand__Right1                                                          = 1,
-	EControllerHand__AnyHand2                                                        = 2,
-	EControllerHand__Pad3                                                            = 3,
-	EControllerHand__ExternalCamera4                                                 = 4,
-	EControllerHand__Gun5                                                            = 5,
-	EControllerHand__Special6                                                        = 6,
-	EControllerHand__Special7                                                        = 7,
-	EControllerHand__Special8                                                        = 8,
-	EControllerHand__Special9                                                        = 9,
-	EControllerHand__Special10                                                       = 10,
-	EControllerHand__Special11                                                       = 11,
-	EControllerHand__Special12                                                       = 12,
-	EControllerHand__Special13                                                       = 13,
-	EControllerHand__Special14                                                       = 14,
-	EControllerHand__Special15                                                       = 15,
-	EControllerHand__Special16                                                       = 16,
-	EControllerHand__EControllerHand_MAX17                                           = 17
+	ETouchType__Began0                                                               = 0,
+	ETouchType__Moved1                                                               = 1,
+	ETouchType__Stationary2                                                          = 2,
+	ETouchType__ForceChanged3                                                        = 3,
+	ETouchType__FirstMove4                                                           = 4,
+	ETouchType__Ended5                                                               = 5,
+	ETouchType__NumTypes6                                                            = 6,
+	ETouchType__ETouchType_MAX7                                                      = 7
 };
 
