@@ -32,15 +32,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clas1.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="clas2.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sdk.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="MDK.h">
       <Filter>Source Files\MDK</Filter>
     </ClInclude>

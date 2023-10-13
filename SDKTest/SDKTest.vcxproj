@@ -135,12 +135,9 @@
     <ClCompile Include="SDKTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clas1.h" />
-    <ClInclude Include="clas2.h" />
     <ClInclude Include="driver.h" />
     <ClInclude Include="MDK.h" />
     <ClInclude Include="Memory.h" />
-    <ClInclude Include="sdk.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
