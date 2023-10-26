@@ -33,7 +33,7 @@ int main()
         //also its your job to set a good lowerbound, if you try to read something from uobject, its 0
         //its no problem rereading somewhere in the loop the pointer again with a lower lowerbound, it will read those bytes then
         //e.g now you choose uobject as lowerbound but later you need uobject, you reread and specify MDKBase as lowerbound, or leave empty
-        UWorld world = MDKHandler::get<UWorld, UObject>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0x4E0EFF0));
+        UWorld world = MDKHandler::get<UWorld, UObject>(Memory::read<DWORD64>(Memory::getBaseAddress() + 0xE938D58));
 
         if (!world)
         {
@@ -104,6 +104,11 @@ int main()
 
         //and the weapon
         auto weapon = MDKHandler::get<AFortWeapon, AActor>(weaponPtr);
+
+
+        auto pool = world.PSCPool<FWorldPSCPool>();
+
+        MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
 
         // example of writing
         /*

@@ -572,6 +572,16 @@ public:
 	// void ExecuteUbergraph_Grandma_AnimBP(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
 };
 
+/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_PawnDmg.GE_RidingSprint_PawnDmg_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_RidingSprint_PawnDmg_C : public UGET_DirectPhysicalDamage_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_VehicleDmg.GE_RidingSprint_VehicleDmg_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_RidingSprint_VehicleDmg_C : public UGET_DirectPhysicalDamage_C
@@ -585,16 +595,6 @@ public:
 /// Class /Irwin/AI/Prey/Burt/Abilities/GE_NPC_Irwn_Prey_Burt_DiscoverLootCooldown.GE_NPC_Irwn_Prey_Burt_DiscoverLootCooldown_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_NPC_Irwn_Prey_Burt_DiscoverLootCooldown_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
-/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_PawnDmg.GE_RidingSprint_PawnDmg_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_RidingSprint_PawnDmg_C : public UGET_DirectPhysicalDamage_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;

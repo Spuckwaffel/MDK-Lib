@@ -39,9 +39,9 @@ class UMissionGen_AthenaSquad_C : public UFortMissionGenerator
 public:
 };
 
-/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Trios.MissionGen_Habanero_Trios_C
+/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Duo.MissionGen_Habanero_Duo_C
 /// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_Habanero_Trios_C : public UFortMissionGenerator
+class UMissionGen_Habanero_Duo_C : public UFortMissionGenerator
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2096;
@@ -49,9 +49,9 @@ class UMissionGen_Habanero_Trios_C : public UFortMissionGenerator
 public:
 };
 
-/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Duo.MissionGen_Habanero_Duo_C
+/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Trios.MissionGen_Habanero_Trios_C
 /// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_Habanero_Duo_C : public UFortMissionGenerator
+class UMissionGen_Habanero_Trios_C : public UFortMissionGenerator
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2096;

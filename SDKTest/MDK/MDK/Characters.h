@@ -9,26 +9,6 @@
 /// dependency: Engine
 /// dependency: FortniteGame
 
-/// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/ItemAnimLayerInterface.ItemAnimLayerInterface_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UItemAnimLayerInterface_C : public UAnimLayerInterface
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Characters/Enemies/Blueprints/EnemyPawn_Interface.EnemyPawn_Interface_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UEnemyPawn_Interface_C : public UInterface
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/MovementModeLayerInterface.MovementModeLayerInterface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMovementModeLayerInterface_C : public UAnimLayerInterface
@@ -69,6 +49,16 @@ class UTeamID_Lime_C : public UFortTeamIdentification
 public:
 };
 
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_10_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_10_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Orange.TeamID_Orange_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_Orange_C : public UFortTeamIdentification
@@ -99,9 +89,9 @@ class UTeamID_PvP_11_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_10_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_14_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_10_C : public UFortTeamIdentification
+class UTeamID_PvP_14_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -109,9 +99,19 @@ class UTeamID_PvP_10_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_15_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_13_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_15_C : public UFortTeamIdentification
+class UTeamID_PvP_13_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_17_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_17_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -129,19 +129,9 @@ class UTeamID_PvP_16_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_14_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_15_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_14_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_13_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_13_C : public UFortTeamIdentification
+class UTeamID_PvP_15_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -169,9 +159,29 @@ class UTeamID_PvP_19_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_17_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_18_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_17_C : public UFortTeamIdentification
+class UTeamID_PvP_18_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_23_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_23_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_22_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_22_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -189,9 +199,19 @@ class UTeamID_PvP_21_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_18_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_27_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_18_C : public UFortTeamIdentification
+class UTeamID_PvP_27_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_26_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_26_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -219,9 +239,9 @@ class UTeamID_PvP_24_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_22_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_31_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_22_C : public UFortTeamIdentification
+class UTeamID_PvP_31_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -229,9 +249,9 @@ class UTeamID_PvP_22_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_23_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_30_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_23_C : public UFortTeamIdentification
+class UTeamID_PvP_30_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -259,19 +279,9 @@ class UTeamID_PvP_28_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_26_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_35_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_26_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_27_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_27_C : public UFortTeamIdentification
+class UTeamID_PvP_35_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -299,19 +309,9 @@ class UTeamID_PvP_32_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_30_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_37_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_30_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_31_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_31_C : public UFortTeamIdentification
+class UTeamID_PvP_37_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -329,16 +329,6 @@ class UTeamID_PvP_36_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_35_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_35_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_34_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_34_C : public UFortTeamIdentification
@@ -349,9 +339,9 @@ class UTeamID_PvP_34_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_40_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_41_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_40_C : public UFortTeamIdentification
+class UTeamID_PvP_41_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -369,39 +359,19 @@ class UTeamID_PvP_39_C : public UFortTeamIdentification
 public:
 };
 
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_40_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_40_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_38_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_38_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_37_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_37_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_42_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_42_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_41_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_41_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -422,6 +392,16 @@ public:
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_43_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_43_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_42_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_42_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -452,16 +432,6 @@ public:
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_45_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_45_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_50_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_50_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -509,16 +479,6 @@ class UTeamID_PvP_03_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_05.TeamID_PvP_05_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_05_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_06.TeamID_PvP_06_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_06_C : public UFortTeamIdentification
@@ -529,9 +489,19 @@ class UTeamID_PvP_06_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_07.TeamID_PvP_07_C
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_50_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_07_C : public UFortTeamIdentification
+class UTeamID_PvP_50_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_05.TeamID_PvP_05_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_05_C : public UFortTeamIdentification
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -549,6 +519,16 @@ class UTeamID_PvP_08_C : public UFortTeamIdentification
 public:
 };
 
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_07.TeamID_PvP_07_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_07_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_09.TeamID_PvP_09_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UTeamID_PvP_09_C : public UFortTeamIdentification
@@ -559,26 +539,24 @@ class UTeamID_PvP_09_C : public UFortTeamIdentification
 public:
 };
 
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C
-/// Size: 0x00E8 (0x000350 - 0x000438)
-class UPlayer_RigidBodyPBA_AnimBP_Template_C : public UAnimInstance
+/// Class /Game/Characters/Enemies/Blueprints/EnemyPawn_Interface.EnemyPawn_Interface_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UEnemyPawn_Interface_C : public UInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x358, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x360, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x368, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x388, 176, 0, 0})
+};
 
+/// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/ItemAnimLayerInterface.ItemAnimLayerInterface_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UItemAnimLayerInterface_C : public UAnimLayerInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C.ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template
-	// void ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template(int32_t EntryPoint);                                           // [0x1d9241c] Final                
+public:
 };
 
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_SourcePose_AnimBP.Player_SourcePose_AnimBP_C
@@ -643,1186 +621,56 @@ public:
 	// void ExecuteUbergraph_Player_PropertiesDebug_AnimBP(int32_t EntryPoint);                                                 // [0x1d9241c] Final                
 };
 
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C
-/// Size: 0x1988 (0x0006A0 - 0x002028)
-class UPlayer_ZipLine_AnimBP_C : public UFortZiplineAnimInstance
+/// Class /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C
+/// Size: 0x07C8 (0x0008D0 - 0x001098)
+class UFP_Procedural2_C : public UFortFirstPersonProceduralAnimInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 8232;
+	static inline constexpr uint64_t __MDKClassSize = 4248;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6A0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x6A8, 112, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x718, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x720, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x728, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x748, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x7F8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x818, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x8C8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x8E8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x998, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x9D8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x9F8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0xA18, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xA38, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0xA58, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0xAA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0xAE8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0xB30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0xB78, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0xBC0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0xC08, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0xC50, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xC70, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xCB8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xD00, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xD48, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xD90, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xDD8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0xE20, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0xE68, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0xE88, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0xF38, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0xF58, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x1008, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x1028, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1048, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1068, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1088, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1138, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1158, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x1208, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x12B8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x12D8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1388, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x13A8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1458, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1478, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x14A0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x14C8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x14F0, 40, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1518, 40, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1540, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1588, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x15D0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1618, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x1660, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x16A8, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x16F0, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x17E0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x1828, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x1870, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x18B8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x1900, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x1948, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x1968, 40, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x1990, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x1A00, 200, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x1AC8, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x1B90, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x1BD8, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x1BF8, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1CC0, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0x1D30, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x1DF8, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x1E18, 200, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x1EE0, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x1FA8, 120, 0, 0})
-	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x2020, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x8D0, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x8D8, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x8E0, 8, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x8E8, 296, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0xA10, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0xA30, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(getStruct<T>, {0xB58, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone3                                   OFFSET(getStruct<T>, {0xC80, 296, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0xDA8, 176, 0, 0})
+	SMember(FFortAnimNode_CachePose)                   FortAnimGraphNode_CachePose                                 OFFSET(getStruct<T>, {0xE58, 216, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0xF30, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0xF50, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone4                                   OFFSET(getStruct<T>, {0xF70, 296, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ExecuteUbergraph_Player_ZipLine_AnimBP
-	// void ExecuteUbergraph_Player_ZipLine_AnimBP(int32_t EntryPoint);                                                         // [0x1d9241c] Final                
+	// Function /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C.ExecuteUbergraph_FP_Procedural2
+	// void ExecuteUbergraph_FP_Procedural2(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
 };
 
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C
-/// Size: 0x1168 (0x0006D0 - 0x001838)
-class UPlayer_Sprint_AnimBP_C : public UFortSprintAnimInstance
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C
+/// Size: 0x00E8 (0x000350 - 0x000438)
+class UPlayer_RigidBodyPBA_AnimBP_Template_C : public UAnimInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6200;
+	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6D0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x6D8, 44, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x738, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x760, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x788, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x7B0, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x7D8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x820, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x868, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x8B0, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x8D0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x918, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x960, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x9A8, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x9C8, 40, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x9F0, 200, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(getStruct<T>, {0xAB8, 176, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0xB68, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0xBD8, 200, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0xCA0, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xD68, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xDB0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xDF8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xE40, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xE88, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xED0, 72, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0xF18, 200, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive3                                OFFSET(getStruct<T>, {0xFE0, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x10A8, 72, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive4                                OFFSET(getStruct<T>, {0x10F0, 200, 0, 0})
-	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(getStruct<T>, {0x11B8, 72, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1200, 40, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x1228, 240, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1318, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1388, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x13F8, 72, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x1440, 40, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x1468, 40, 0, 0})
-	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot1                                         OFFSET(getStruct<T>, {0x1490, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x14D8, 240, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x15C8, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x15E8, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x16B0, 120, 0, 0})
-	SMember(FAnimNode_Inertialization)                 AnimGraphNode_Inertialization                               OFFSET(getStruct<T>, {0x1728, 272, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x358, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x360, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x368, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x388, 176, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C.ExecuteUbergraph_Player_Sprint_AnimBP
-	// void ExecuteUbergraph_Player_Sprint_AnimBP(int32_t EntryPoint);                                                          // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C
-/// Size: 0x1578 (0x000680 - 0x001BF8)
-class UPlayer_Goop_AnimBP_C : public UFortGoopAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7160;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x680, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x688, 80, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x6D8, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x6E0, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x6E8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x708, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x7B8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x7D8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x888, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x8A8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x958, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x978, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x998, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x9D8, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x9F8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0xA40, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0xA88, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0xAD0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0xB18, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0xB60, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0xBA8, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xBF0, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xC10, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xC58, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xCA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xCE8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xD30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xD78, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0xDC0, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0xE08, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0xE28, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0xE48, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0xEF8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0xF18, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0xFC8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0xFE8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1008, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1028, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1048, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x10F8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1118, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x11C8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1278, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x1298, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1348, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x1368, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1418, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1438, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x1460, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1488, 72, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x14D0, 200, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1598, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x15E0, 112, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1650, 40, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x1678, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1740, 112, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x17B0, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x17D0, 200, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0x1898, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1960, 112, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x19D0, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x19F0, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x1AB8, 120, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x1B30, 200, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ExecuteUbergraph_Player_Goop_AnimBP
-	// void ExecuteUbergraph_Player_Goop_AnimBP(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C
-/// Size: 0x2CB0 (0x0015E0 - 0x004290)
-class UPlayer_InAir_AnimBP_C : public UFortPlayerAnimInstanceProxy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 17040;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 136, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1670, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x1678, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x1680, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x16A0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1750, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x1770, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1820, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1840, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x18F0, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x1910, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x1958, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x19A0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x19E8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1A30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x1A78, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x1AC0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1B08, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x1B50, 16, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1B60, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x1BA8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x1BF0, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1C38, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1C58, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x1CA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x1CE8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1D30, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x1D78, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x1DC0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1E08, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x1E50, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x1E98, 16, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x1EA8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x1EF0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x1F38, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1F80, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x1FA0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x1FE8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2030, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x2078, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x20C0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x2108, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x2150, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x2198, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x21E0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x2228, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x2270, 16, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x2280, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x22C8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x2310, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x2358, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x2378, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x2398, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x23B8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x23D8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x23F8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x24A8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x24C8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x2578, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x2598, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x25B8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x25D8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x25F8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x26A8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x26C8, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x2778, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x2828, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x2848, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x28F8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2918, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x29C8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x29E8, 176, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x2A98, 120, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x2B10, 240, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2C00, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2C28, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2C50, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x2C78, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2CA0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x2CC8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x2CF0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x2D18, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x2D40, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x2D68, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x2D90, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x2DB8, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x2DE0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2E28, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x2E48, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2E90, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x2EB0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x2EF8, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x2F18, 200, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x2FE0, 40, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x3008, 200, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x30D0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x30F8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x3120, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x3148, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x3170, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x3198, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x31C0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x31E8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x3210, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x3238, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x3260, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x3288, 40, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x32B0, 16, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x32C0, 192, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3380, 200, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x3448, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x3538, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3580, 32, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose4                                 OFFSET(getStruct<T>, {0x35A0, 16, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend1                                  OFFSET(getStruct<T>, {0x35B0, 192, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x3670, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x3738, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend2                             OFFSET(getStruct<T>, {0x3780, 240, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x3870, 32, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose5                                 OFFSET(getStruct<T>, {0x3890, 16, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend2                                  OFFSET(getStruct<T>, {0x38A0, 192, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x3960, 200, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend3                             OFFSET(getStruct<T>, {0x3A28, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x3B18, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x3B60, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x3B80, 200, 0, 0})
-	SMember(FAnimNode_Inertialization)                 AnimGraphNode_Inertialization                               OFFSET(getStruct<T>, {0x3C48, 272, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x3D58, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x3DC8, 200, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x3E90, 40, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x3EB8, 72, 0, 0})
-	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x3F00, 288, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend4                             OFFSET(getStruct<T>, {0x4020, 240, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose6                                 OFFSET(getStruct<T>, {0x4110, 16, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend5                             OFFSET(getStruct<T>, {0x4120, 240, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose7                                 OFFSET(getStruct<T>, {0x4210, 16, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(getStruct<T>, {0x4220, 72, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x4268, 40, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink SourcePose, FPoseLink& AnimGraph);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ExecuteUbergraph_Player_InAir_AnimBP
-	// void ExecuteUbergraph_Player_InAir_AnimBP(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C
-/// Size: 0x3E10 (0x0015E0 - 0x0053F0)
-class UPlayer_LocomotionAdditives_AnimBP_C : public UFortPlayerAnimInstanceProxy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 21488;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 424, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1790, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x1798, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x17A0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x17C0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1870, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x1890, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1940, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1960, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x1A10, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1A30, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1A50, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x1A70, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x1A90, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x1AB0, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x1AD0, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x1AF0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x1B10, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x1BC0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x1BE0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x1C90, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x1CB0, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1CD0, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1CF0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1D10, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1DC0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1DE0, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x1E90, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1F40, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x1F60, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x2010, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2030, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x20E0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x2100, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose11                             OFFSET(getStruct<T>, {0x21B0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root20                                        OFFSET(getStruct<T>, {0x2260, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose12                             OFFSET(getStruct<T>, {0x2280, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root21                                        OFFSET(getStruct<T>, {0x2330, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose13                             OFFSET(getStruct<T>, {0x2350, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root22                                        OFFSET(getStruct<T>, {0x2400, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose14                             OFFSET(getStruct<T>, {0x2420, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root23                                        OFFSET(getStruct<T>, {0x24D0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose15                             OFFSET(getStruct<T>, {0x24F0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root24                                        OFFSET(getStruct<T>, {0x25A0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose16                             OFFSET(getStruct<T>, {0x25C0, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose17                             OFFSET(getStruct<T>, {0x2670, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root25                                        OFFSET(getStruct<T>, {0x2720, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2740, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2768, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2790, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x27B8, 40, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x27E0, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x2850, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x28C0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x2908, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x2950, 112, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x29C0, 32, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer3                             OFFSET(getStruct<T>, {0x29E0, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x2A50, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer4                             OFFSET(getStruct<T>, {0x2A98, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer5                             OFFSET(getStruct<T>, {0x2B08, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x2B78, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer6                             OFFSET(getStruct<T>, {0x2BC0, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x2C30, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer7                             OFFSET(getStruct<T>, {0x2C78, 112, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x2CE8, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer8                             OFFSET(getStruct<T>, {0x2D30, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer9                             OFFSET(getStruct<T>, {0x2DA0, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x2E10, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2E58, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2E78, 40, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x2EA0, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer10                            OFFSET(getStruct<T>, {0x2F68, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer11                            OFFSET(getStruct<T>, {0x2FD8, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x3048, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x3090, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer12                            OFFSET(getStruct<T>, {0x30D8, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x3148, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer13                            OFFSET(getStruct<T>, {0x3190, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x3200, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer14                            OFFSET(getStruct<T>, {0x3248, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x32B8, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer15                            OFFSET(getStruct<T>, {0x3300, 112, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x3370, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer16                            OFFSET(getStruct<T>, {0x33B8, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer17                            OFFSET(getStruct<T>, {0x3428, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x3498, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x34E0, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x3500, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x35C8, 120, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3640, 200, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x3708, 16, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3718, 240, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x3808, 16, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x3818, 240, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x3908, 16, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend2                             OFFSET(getStruct<T>, {0x3918, 240, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x3A08, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x3A30, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x3A58, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x3A80, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x3AA8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x3AD0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x3AF8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x3B20, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x3B48, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x3B70, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x3B98, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x3BC0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x3BE8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x3C10, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x3C38, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x3C60, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x3C88, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x3CB0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x3CD8, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x3D00, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x3D48, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x3D90, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x3DD8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x3E20, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x3E68, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x3EB0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x3EF8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x3F40, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3F88, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x3FA8, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x3FD0, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend3                             OFFSET(getStruct<T>, {0x4018, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x4108, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x4150, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x4198, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x41E0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x4228, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x4248, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x4270, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend4                             OFFSET(getStruct<T>, {0x42B8, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x43A8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x43F0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x4438, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x4480, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x44C8, 32, 0, 0})
-	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x44E8, 288, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x4608, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x4630, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x4678, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x46C0, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend5                             OFFSET(getStruct<T>, {0x4708, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x47F8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x4840, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x4888, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x48D0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(getStruct<T>, {0x4918, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(getStruct<T>, {0x4938, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum6                              OFFSET(getStruct<T>, {0x4960, 72, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x49A8, 192, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x4A68, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend6                             OFFSET(getStruct<T>, {0x4AB0, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x4BA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x4BE8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x4C30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(getStruct<T>, {0x4C78, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(getStruct<T>, {0x4CC0, 32, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend1                                  OFFSET(getStruct<T>, {0x4CE0, 192, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(getStruct<T>, {0x4DA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(getStruct<T>, {0x4DE8, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult8                                  OFFSET(getStruct<T>, {0x4E30, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine2                                 OFFSET(getStruct<T>, {0x4E50, 200, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend2                                  OFFSET(getStruct<T>, {0x4F18, 192, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x4FD8, 16, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer28                              OFFSET(getStruct<T>, {0x4FE8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x5030, 72, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x5078, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult9                                  OFFSET(getStruct<T>, {0x5140, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose4                                OFFSET(getStruct<T>, {0x5160, 40, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult10                                 OFFSET(getStruct<T>, {0x5188, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine3                                 OFFSET(getStruct<T>, {0x51A8, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult11                                 OFFSET(getStruct<T>, {0x5270, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine4                                 OFFSET(getStruct<T>, {0x5290, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(getStruct<T>, {0x5358, 120, 0, 0})
-	DMember(bool)                                      IsSnowman                                                   OFFSET(get<bool>, {0x53D0, 1, 0, 0})
-	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x53D8, 8, 0, 0})
-	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x53E0, 8, 0, 0})
-	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x53E8, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_LowerBodyOverride
-	// void MovementMode_LowerBodyOverride(FPoseLink InLowerBodyPose, FPoseLink InSourcePose, FPoseLink& MovementMode_LowerBodyOverride); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_LocomotionAdditives
-	// void MovementMode_LocomotionAdditives(FPoseLink InLocomotionAdditivesPose, FPoseLink& MovementMode_LocomotionAdditives); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_SourcePose
-	// void MovementMode_SourcePose(FPoseLink InSourcePoseBase, FPoseLink& MovementMode_SourcePose);                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_FullBodyOverride
-	// void MovementMode_FullBodyOverride(FPoseLink InputPoseFullBody, FPoseLink& MovementMode_FullBodyOverride);               // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_FinalPoseOverride
-	// void MovementMode_FinalPoseOverride(FPoseLink InFinalPose, FPoseLink& MovementMode_FinalPoseOverride);                   // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_AimOffset
-	// void MovementMode_AimOffset(FPoseLink InAimOffsetsPose, FPoseLink InSourcePosePreAimOffsets, FPoseLink& MovementMode_AimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ExecuteUbergraph_Player_LocomotionAdditives_AnimBP
-	// void ExecuteUbergraph_Player_LocomotionAdditives_AnimBP(int32_t EntryPoint);                                             // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C
-/// Size: 0x3AB0 (0x000BA0 - 0x004650)
-class UPlayer_LowerBodyJog_AnimBP_C : public UFortWalkAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 18000;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBA0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0xBA8, 304, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0xCD8, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0xCE0, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0xCE8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0xD08, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0xDB8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0xDD8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0xE88, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0xEA8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0xF58, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0xF78, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0xF98, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0xFB8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0xFD8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xFF8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x1018, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x1038, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x1058, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x1108, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x1128, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x11D8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x11F8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1218, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1238, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1258, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1308, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1328, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x13D8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1488, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x14A8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1558, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x1578, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1628, 32, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x1648, 112, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root20                                        OFFSET(getStruct<T>, {0x16B8, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x16D8, 72, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(getStruct<T>, {0x1720, 176, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x17D0, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1840, 112, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root21                                        OFFSET(getStruct<T>, {0x18B0, 32, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer3                             OFFSET(getStruct<T>, {0x18D0, 112, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone1                               OFFSET(getStruct<T>, {0x1940, 176, 0, 0})
-	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping                              OFFSET(getStruct<T>, {0x19F0, 512, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x1BF0, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x1C10, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1C30, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer4                             OFFSET(getStruct<T>, {0x1C78, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer5                             OFFSET(getStruct<T>, {0x1CE8, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1D58, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer6                             OFFSET(getStruct<T>, {0x1DA0, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1E10, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root22                                        OFFSET(getStruct<T>, {0x1E58, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1E78, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x1EA0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x1EC8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x1EF0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x1F18, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x1F40, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x1F68, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x1F90, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x1FB8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x1FE0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x2008, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x2030, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x2058, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x2080, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x20A8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x20D0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x20F8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x2120, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x2148, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x2170, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x2198, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x21C0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x21E8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x2210, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x2238, 72, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone2                               OFFSET(getStruct<T>, {0x2280, 176, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x2330, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x2378, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x23C0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x2408, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2450, 32, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x2470, 72, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace1                        OFFSET(getStruct<T>, {0x24B8, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace1                        OFFSET(getStruct<T>, {0x24D8, 32, 0, 0})
-	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping1                             OFFSET(getStruct<T>, {0x24F8, 512, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x26F8, 72, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone3                               OFFSET(getStruct<T>, {0x2740, 176, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone4                               OFFSET(getStruct<T>, {0x27F0, 176, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone5                               OFFSET(getStruct<T>, {0x28A0, 176, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone6                               OFFSET(getStruct<T>, {0x2950, 176, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x2A00, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x2A48, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x2A90, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2AD8, 32, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x2AF8, 72, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone7                               OFFSET(getStruct<T>, {0x2B40, 176, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x2BF0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x2C38, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x2C80, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x2CC8, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x2D10, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace2                        OFFSET(getStruct<T>, {0x2D30, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace2                        OFFSET(getStruct<T>, {0x2D50, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x2D70, 296, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x2E98, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x2EE0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x2F28, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2F70, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x2FB8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x3000, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x3048, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3090, 240, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone8                               OFFSET(getStruct<T>, {0x3180, 176, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x3230, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x3278, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x32C0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3308, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace3                        OFFSET(getStruct<T>, {0x3328, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace3                        OFFSET(getStruct<T>, {0x3348, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0x3368, 296, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace4                        OFFSET(getStruct<T>, {0x3490, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace4                        OFFSET(getStruct<T>, {0x34B0, 32, 0, 0})
-	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping2                             OFFSET(getStruct<T>, {0x34D0, 512, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x36D0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x3718, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x3760, 72, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x37A8, 192, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x3868, 72, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone9                               OFFSET(getStruct<T>, {0x38B0, 176, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x3960, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x3980, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x39A8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x39F0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x3A38, 72, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x3A80, 200, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace5                        OFFSET(getStruct<T>, {0x3B48, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace5                        OFFSET(getStruct<T>, {0x3B68, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(getStruct<T>, {0x3B88, 296, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x3CB0, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x3CD0, 40, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace6                        OFFSET(getStruct<T>, {0x3CF8, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace6                        OFFSET(getStruct<T>, {0x3D18, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone3                                   OFFSET(getStruct<T>, {0x3D38, 296, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(getStruct<T>, {0x3E60, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3E80, 200, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x3F48, 200, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer2                              OFFSET(getStruct<T>, {0x4010, 200, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x40D8, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer7                             OFFSET(getStruct<T>, {0x41A0, 112, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer8                             OFFSET(getStruct<T>, {0x4210, 112, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x4280, 72, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x42C8, 200, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x4390, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x43D8, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(getStruct<T>, {0x4420, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x4440, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x4508, 120, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x4580, 176, 0, 0})
-	DMember(double)                                    JogStartPosition                                            OFFSET(get<double>, {0x4630, 8, 0, 0})
-	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x4638, 8, 0, 0})
-	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x4640, 8, 0, 0})
-	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x4648, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_HeavyWeapon
-	// void Movement_HeavyWeapon(FPoseLink& Movement_HeavyWeapon);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_Crouching
-	// void Movement_Crouching(FPoseLink& Movement_Crouching);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_Standing
-	// void Movement_Standing(FPoseLink& Movement_Standing);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink UpperBody, FPoseLink& AnimGraph);                                                               // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ExecuteUbergraph_Player_LowerBodyJog_AnimBP
-	// void ExecuteUbergraph_Player_LowerBodyJog_AnimBP(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C
-/// Size: 0x20E8 (0x0015E0 - 0x0036C8)
-class UPlayer_Land_AnimBP_C : public UFortPlayerLandingAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 14024;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 40, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1610, 8, 0, 0})
-	SMember(FAnimSubsystemInstance_NodeRelevancy)      AnimBlueprintExtension_NodeRelevancy                        OFFSET(getStruct<T>, {0x1618, 168, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x16C0, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x16C8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x16E8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1798, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x17B8, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1868, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1888, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x1938, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1958, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1978, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x1998, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x19B8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x1A00, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x1A48, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x1A90, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1AD8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x1B20, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x1B68, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x1BB0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1BF8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x1C40, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x1C88, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x1CD0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x1D18, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1D60, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x1DA8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1DF0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1E38, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x1E80, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x1EC8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x1F10, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1F58, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x1FA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x1FE8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x2030, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x2078, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x20C0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2108, 72, 0, 0})
-	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x2150, 288, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x2270, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x22B8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x2300, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x2348, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x2390, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x23D8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x2420, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x2468, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x24B0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x24F8, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x2540, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x2560, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x2580, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x25A0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x25C0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x2670, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x2690, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x2740, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x2760, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x27A8, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x27F0, 16, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x2800, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x2820, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x2868, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x28B0, 16, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x28C0, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x28E0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x2928, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x2970, 16, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x2980, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x29A0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x2A50, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x2A70, 176, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x2B20, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x2BD0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x2BF0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x2CA0, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2CC0, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x2D70, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2D90, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2DB8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2DE0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x2E08, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2E30, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x2E58, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x2E80, 40, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x2EA8, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2F70, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x2F90, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x3058, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer2                              OFFSET(getStruct<T>, {0x3078, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x3140, 32, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x3160, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x3228, 72, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3270, 240, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x3360, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(getStruct<T>, {0x33A8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(getStruct<T>, {0x33F0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum6                              OFFSET(getStruct<T>, {0x3438, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(getStruct<T>, {0x3480, 72, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x34C8, 192, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x3588, 16, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(getStruct<T>, {0x3598, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x35E0, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x3600, 200, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFinalPoseOverride
-	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemUpperBody
-	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemIdleAdditive
-	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJumpUpAdditive
-	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJumpLoopAdditive
-	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFallAdditive
-	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFallLandAdditive
-	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJetPackStartAdditive
-	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJetPackJumpAdditive
-	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemZipLineStartAdditive
-	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemLowerBodyMovement
-	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemRelaxedEntry
-	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpStart
-	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpStartLoop
-	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpFallLoop
-	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpSurfaceLoop
-	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpSurfaceEnd
-	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSkeletalControl
-	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemAimOffset
-	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFullBodyOverride
-	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemPreIK
-	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.OnLandingBecomesRelevant
-	// void OnLandingBecomesRelevant(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                    // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.OnLandingUpdate
-	// void OnLandingUpdate(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                             // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ExecuteUbergraph_Player_Land_AnimBP
-	// void ExecuteUbergraph_Player_Land_AnimBP(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C.ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template
+	// void ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template(int32_t EntryPoint);                                           // [0x1d9241c] Final                
 };
 
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_BuildingPose_AnimBP.Player_BuildingPose_AnimBP_C
@@ -2281,6 +1129,1188 @@ public:
 	// void ExecuteUbergraph_Player_SkyDiveAndGlide_AnimBP(int32_t EntryPoint);                                                 // [0x1d9241c] Final                
 };
 
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C
+/// Size: 0x2CB0 (0x0015E0 - 0x004290)
+class UPlayer_InAir_AnimBP_C : public UFortPlayerAnimInstanceProxy
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 17040;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 136, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1670, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x1678, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x1680, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x16A0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1750, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x1770, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1820, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1840, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x18F0, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x1910, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x1958, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x19A0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x19E8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1A30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x1A78, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x1AC0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1B08, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x1B50, 16, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1B60, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x1BA8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x1BF0, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1C38, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1C58, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x1CA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x1CE8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1D30, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x1D78, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x1DC0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1E08, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x1E50, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x1E98, 16, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x1EA8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x1EF0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x1F38, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1F80, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x1FA0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x1FE8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2030, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x2078, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x20C0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x2108, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x2150, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x2198, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x21E0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x2228, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x2270, 16, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x2280, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x22C8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x2310, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x2358, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x2378, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x2398, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x23B8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x23D8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x23F8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x24A8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x24C8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x2578, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x2598, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x25B8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x25D8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x25F8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x26A8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x26C8, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x2778, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x2828, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x2848, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x28F8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2918, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x29C8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x29E8, 176, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x2A98, 120, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x2B10, 240, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2C00, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2C28, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2C50, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x2C78, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2CA0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x2CC8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x2CF0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x2D18, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x2D40, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x2D68, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x2D90, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x2DB8, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x2DE0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2E28, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x2E48, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2E90, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x2EB0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x2EF8, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x2F18, 200, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x2FE0, 40, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x3008, 200, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x30D0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x30F8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x3120, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x3148, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x3170, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x3198, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x31C0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x31E8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x3210, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x3238, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x3260, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x3288, 40, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x32B0, 16, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x32C0, 192, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3380, 200, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x3448, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x3538, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3580, 32, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose4                                 OFFSET(getStruct<T>, {0x35A0, 16, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend1                                  OFFSET(getStruct<T>, {0x35B0, 192, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x3670, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x3738, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend2                             OFFSET(getStruct<T>, {0x3780, 240, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x3870, 32, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose5                                 OFFSET(getStruct<T>, {0x3890, 16, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend2                                  OFFSET(getStruct<T>, {0x38A0, 192, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x3960, 200, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend3                             OFFSET(getStruct<T>, {0x3A28, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x3B18, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x3B60, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x3B80, 200, 0, 0})
+	SMember(FAnimNode_Inertialization)                 AnimGraphNode_Inertialization                               OFFSET(getStruct<T>, {0x3C48, 272, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x3D58, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x3DC8, 200, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x3E90, 40, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x3EB8, 72, 0, 0})
+	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x3F00, 288, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend4                             OFFSET(getStruct<T>, {0x4020, 240, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose6                                 OFFSET(getStruct<T>, {0x4110, 16, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend5                             OFFSET(getStruct<T>, {0x4120, 240, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose7                                 OFFSET(getStruct<T>, {0x4210, 16, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(getStruct<T>, {0x4220, 72, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x4268, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink SourcePose, FPoseLink& AnimGraph);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ExecuteUbergraph_Player_InAir_AnimBP
+	// void ExecuteUbergraph_Player_InAir_AnimBP(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C
+/// Size: 0x3AB0 (0x000BA0 - 0x004650)
+class UPlayer_LowerBodyJog_AnimBP_C : public UFortWalkAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 18000;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBA0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0xBA8, 304, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0xCD8, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0xCE0, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0xCE8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0xD08, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0xDB8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0xDD8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0xE88, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0xEA8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0xF58, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0xF78, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0xF98, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0xFB8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0xFD8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xFF8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x1018, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x1038, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x1058, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x1108, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x1128, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x11D8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x11F8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1218, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1238, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1258, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1308, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1328, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x13D8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1488, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x14A8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1558, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x1578, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1628, 32, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x1648, 112, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root20                                        OFFSET(getStruct<T>, {0x16B8, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x16D8, 72, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(getStruct<T>, {0x1720, 176, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x17D0, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1840, 112, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root21                                        OFFSET(getStruct<T>, {0x18B0, 32, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer3                             OFFSET(getStruct<T>, {0x18D0, 112, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone1                               OFFSET(getStruct<T>, {0x1940, 176, 0, 0})
+	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping                              OFFSET(getStruct<T>, {0x19F0, 512, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x1BF0, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x1C10, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1C30, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer4                             OFFSET(getStruct<T>, {0x1C78, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer5                             OFFSET(getStruct<T>, {0x1CE8, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1D58, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer6                             OFFSET(getStruct<T>, {0x1DA0, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1E10, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root22                                        OFFSET(getStruct<T>, {0x1E58, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1E78, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x1EA0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x1EC8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x1EF0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x1F18, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x1F40, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x1F68, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x1F90, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x1FB8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x1FE0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x2008, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x2030, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x2058, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x2080, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x20A8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x20D0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x20F8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x2120, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x2148, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x2170, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x2198, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x21C0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x21E8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x2210, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x2238, 72, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone2                               OFFSET(getStruct<T>, {0x2280, 176, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x2330, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x2378, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x23C0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x2408, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2450, 32, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x2470, 72, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace1                        OFFSET(getStruct<T>, {0x24B8, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace1                        OFFSET(getStruct<T>, {0x24D8, 32, 0, 0})
+	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping1                             OFFSET(getStruct<T>, {0x24F8, 512, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x26F8, 72, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone3                               OFFSET(getStruct<T>, {0x2740, 176, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone4                               OFFSET(getStruct<T>, {0x27F0, 176, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone5                               OFFSET(getStruct<T>, {0x28A0, 176, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone6                               OFFSET(getStruct<T>, {0x2950, 176, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x2A00, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x2A48, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x2A90, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2AD8, 32, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x2AF8, 72, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone7                               OFFSET(getStruct<T>, {0x2B40, 176, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x2BF0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x2C38, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x2C80, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x2CC8, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x2D10, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace2                        OFFSET(getStruct<T>, {0x2D30, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace2                        OFFSET(getStruct<T>, {0x2D50, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x2D70, 296, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x2E98, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x2EE0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x2F28, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2F70, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x2FB8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x3000, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x3048, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3090, 240, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone8                               OFFSET(getStruct<T>, {0x3180, 176, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x3230, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x3278, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x32C0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3308, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace3                        OFFSET(getStruct<T>, {0x3328, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace3                        OFFSET(getStruct<T>, {0x3348, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0x3368, 296, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace4                        OFFSET(getStruct<T>, {0x3490, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace4                        OFFSET(getStruct<T>, {0x34B0, 32, 0, 0})
+	SMember(FFortAnimNode_SpeedWarping)                FortAnimGraphNode_SpeedWarping2                             OFFSET(getStruct<T>, {0x34D0, 512, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x36D0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x3718, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x3760, 72, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x37A8, 192, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x3868, 72, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone9                               OFFSET(getStruct<T>, {0x38B0, 176, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x3960, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x3980, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x39A8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x39F0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x3A38, 72, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x3A80, 200, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace5                        OFFSET(getStruct<T>, {0x3B48, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace5                        OFFSET(getStruct<T>, {0x3B68, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(getStruct<T>, {0x3B88, 296, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x3CB0, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x3CD0, 40, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace6                        OFFSET(getStruct<T>, {0x3CF8, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace6                        OFFSET(getStruct<T>, {0x3D18, 32, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone3                                   OFFSET(getStruct<T>, {0x3D38, 296, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(getStruct<T>, {0x3E60, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3E80, 200, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x3F48, 200, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer2                              OFFSET(getStruct<T>, {0x4010, 200, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x40D8, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer7                             OFFSET(getStruct<T>, {0x41A0, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer8                             OFFSET(getStruct<T>, {0x4210, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x4280, 72, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x42C8, 200, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x4390, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x43D8, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(getStruct<T>, {0x4420, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x4440, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x4508, 120, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x4580, 176, 0, 0})
+	DMember(double)                                    JogStartPosition                                            OFFSET(get<double>, {0x4630, 8, 0, 0})
+	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x4638, 8, 0, 0})
+	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x4640, 8, 0, 0})
+	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x4648, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_HeavyWeapon
+	// void Movement_HeavyWeapon(FPoseLink& Movement_HeavyWeapon);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_Crouching
+	// void Movement_Crouching(FPoseLink& Movement_Crouching);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.Movement_Standing
+	// void Movement_Standing(FPoseLink& Movement_Standing);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink UpperBody, FPoseLink& AnimGraph);                                                               // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ExecuteUbergraph_Player_LowerBodyJog_AnimBP
+	// void ExecuteUbergraph_Player_LowerBodyJog_AnimBP(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C
+/// Size: 0x20E8 (0x0015E0 - 0x0036C8)
+class UPlayer_Land_AnimBP_C : public UFortPlayerLandingAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 14024;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 40, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1610, 8, 0, 0})
+	SMember(FAnimSubsystemInstance_NodeRelevancy)      AnimBlueprintExtension_NodeRelevancy                        OFFSET(getStruct<T>, {0x1618, 168, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x16C0, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x16C8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x16E8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1798, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x17B8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1868, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1888, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x1938, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1958, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1978, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x1998, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x19B8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x1A00, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x1A48, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x1A90, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x1AD8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x1B20, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x1B68, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x1BB0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x1BF8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x1C40, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x1C88, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x1CD0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x1D18, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x1D60, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x1DA8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1DF0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1E38, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x1E80, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x1EC8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x1F10, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1F58, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x1FA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x1FE8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x2030, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x2078, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x20C0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x2108, 72, 0, 0})
+	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x2150, 288, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x2270, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x22B8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x2300, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x2348, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x2390, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x23D8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x2420, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x2468, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x24B0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x24F8, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x2540, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x2560, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x2580, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x25A0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x25C0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x2670, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x2690, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x2740, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x2760, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x27A8, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x27F0, 16, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x2800, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x2820, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x2868, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x28B0, 16, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x28C0, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x28E0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x2928, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x2970, 16, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x2980, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x29A0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x2A50, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x2A70, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x2B20, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x2BD0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x2BF0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x2CA0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2CC0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x2D70, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2D90, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2DB8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2DE0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x2E08, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2E30, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x2E58, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x2E80, 40, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x2EA8, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x2F70, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x2F90, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x3058, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer2                              OFFSET(getStruct<T>, {0x3078, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x3140, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x3160, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x3228, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3270, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x3360, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(getStruct<T>, {0x33A8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(getStruct<T>, {0x33F0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum6                              OFFSET(getStruct<T>, {0x3438, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(getStruct<T>, {0x3480, 72, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x34C8, 192, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x3588, 16, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(getStruct<T>, {0x3598, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x35E0, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x3600, 200, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.OnLandingBecomesRelevant
+	// void OnLandingBecomesRelevant(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                    // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.OnLandingUpdate
+	// void OnLandingUpdate(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                             // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ExecuteUbergraph_Player_Land_AnimBP
+	// void ExecuteUbergraph_Player_Land_AnimBP(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C
+/// Size: 0x3E10 (0x0015E0 - 0x0053F0)
+class UPlayer_LocomotionAdditives_AnimBP_C : public UFortPlayerAnimInstanceProxy
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 21488;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15E0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x15E8, 424, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x1790, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x1798, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x17A0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x17C0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x1870, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x1890, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1940, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x1960, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x1A10, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x1A30, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x1A50, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x1A70, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x1A90, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0x1AB0, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0x1AD0, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0x1AF0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0x1B10, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0x1BC0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0x1BE0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x1C90, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x1CB0, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1CD0, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1CF0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1D10, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1DC0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1DE0, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x1E90, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1F40, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x1F60, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x2010, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x2030, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x20E0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose10                             OFFSET(getStruct<T>, {0x2100, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose11                             OFFSET(getStruct<T>, {0x21B0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root20                                        OFFSET(getStruct<T>, {0x2260, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose12                             OFFSET(getStruct<T>, {0x2280, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root21                                        OFFSET(getStruct<T>, {0x2330, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose13                             OFFSET(getStruct<T>, {0x2350, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root22                                        OFFSET(getStruct<T>, {0x2400, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose14                             OFFSET(getStruct<T>, {0x2420, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root23                                        OFFSET(getStruct<T>, {0x24D0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose15                             OFFSET(getStruct<T>, {0x24F0, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root24                                        OFFSET(getStruct<T>, {0x25A0, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose16                             OFFSET(getStruct<T>, {0x25C0, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose17                             OFFSET(getStruct<T>, {0x2670, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root25                                        OFFSET(getStruct<T>, {0x2720, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x2740, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x2768, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x2790, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x27B8, 40, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x27E0, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x2850, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x28C0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x2908, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x2950, 112, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x29C0, 32, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer3                             OFFSET(getStruct<T>, {0x29E0, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0x2A50, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer4                             OFFSET(getStruct<T>, {0x2A98, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer5                             OFFSET(getStruct<T>, {0x2B08, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0x2B78, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer6                             OFFSET(getStruct<T>, {0x2BC0, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x2C30, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer7                             OFFSET(getStruct<T>, {0x2C78, 112, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0x2CE8, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer8                             OFFSET(getStruct<T>, {0x2D30, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer9                             OFFSET(getStruct<T>, {0x2DA0, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(getStruct<T>, {0x2E10, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x2E58, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x2E78, 40, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x2EA0, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer10                            OFFSET(getStruct<T>, {0x2F68, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer11                            OFFSET(getStruct<T>, {0x2FD8, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(getStruct<T>, {0x3048, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(getStruct<T>, {0x3090, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer12                            OFFSET(getStruct<T>, {0x30D8, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(getStruct<T>, {0x3148, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer13                            OFFSET(getStruct<T>, {0x3190, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(getStruct<T>, {0x3200, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer14                            OFFSET(getStruct<T>, {0x3248, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(getStruct<T>, {0x32B8, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer15                            OFFSET(getStruct<T>, {0x3300, 112, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0x3370, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer16                            OFFSET(getStruct<T>, {0x33B8, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer17                            OFFSET(getStruct<T>, {0x3428, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(getStruct<T>, {0x3498, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x34E0, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x3500, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x35C8, 120, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x3640, 200, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(getStruct<T>, {0x3708, 16, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x3718, 240, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose1                                 OFFSET(getStruct<T>, {0x3808, 16, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x3818, 240, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose2                                 OFFSET(getStruct<T>, {0x3908, 16, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend2                             OFFSET(getStruct<T>, {0x3918, 240, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x3A08, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x3A30, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x3A58, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(getStruct<T>, {0x3A80, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(getStruct<T>, {0x3AA8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(getStruct<T>, {0x3AD0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(getStruct<T>, {0x3AF8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(getStruct<T>, {0x3B20, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(getStruct<T>, {0x3B48, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(getStruct<T>, {0x3B70, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(getStruct<T>, {0x3B98, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(getStruct<T>, {0x3BC0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(getStruct<T>, {0x3BE8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(getStruct<T>, {0x3C10, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(getStruct<T>, {0x3C38, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(getStruct<T>, {0x3C60, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(getStruct<T>, {0x3C88, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(getStruct<T>, {0x3CB0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(getStruct<T>, {0x3CD8, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x3D00, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x3D48, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x3D90, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x3DD8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0x3E20, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0x3E68, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0x3EB0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x3EF8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0x3F40, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0x3F88, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x3FA8, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x3FD0, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend3                             OFFSET(getStruct<T>, {0x4018, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x4108, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x4150, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x4198, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x41E0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(getStruct<T>, {0x4228, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x4248, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum4                              OFFSET(getStruct<T>, {0x4270, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend4                             OFFSET(getStruct<T>, {0x42B8, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x43A8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x43F0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x4438, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x4480, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(getStruct<T>, {0x44C8, 32, 0, 0})
+	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(getStruct<T>, {0x44E8, 288, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x4608, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum5                              OFFSET(getStruct<T>, {0x4630, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x4678, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(getStruct<T>, {0x46C0, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend5                             OFFSET(getStruct<T>, {0x4708, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(getStruct<T>, {0x47F8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(getStruct<T>, {0x4840, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(getStruct<T>, {0x4888, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(getStruct<T>, {0x48D0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(getStruct<T>, {0x4918, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(getStruct<T>, {0x4938, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum6                              OFFSET(getStruct<T>, {0x4960, 72, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x49A8, 192, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(getStruct<T>, {0x4A68, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend6                             OFFSET(getStruct<T>, {0x4AB0, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(getStruct<T>, {0x4BA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(getStruct<T>, {0x4BE8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(getStruct<T>, {0x4C30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(getStruct<T>, {0x4C78, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(getStruct<T>, {0x4CC0, 32, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend1                                  OFFSET(getStruct<T>, {0x4CE0, 192, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(getStruct<T>, {0x4DA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(getStruct<T>, {0x4DE8, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult8                                  OFFSET(getStruct<T>, {0x4E30, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine2                                 OFFSET(getStruct<T>, {0x4E50, 200, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend2                                  OFFSET(getStruct<T>, {0x4F18, 192, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(getStruct<T>, {0x4FD8, 16, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer28                              OFFSET(getStruct<T>, {0x4FE8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(getStruct<T>, {0x5030, 72, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_Layer                                         OFFSET(getStruct<T>, {0x5078, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult9                                  OFFSET(getStruct<T>, {0x5140, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose4                                OFFSET(getStruct<T>, {0x5160, 40, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult10                                 OFFSET(getStruct<T>, {0x5188, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine3                                 OFFSET(getStruct<T>, {0x51A8, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult11                                 OFFSET(getStruct<T>, {0x5270, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine4                                 OFFSET(getStruct<T>, {0x5290, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(getStruct<T>, {0x5358, 120, 0, 0})
+	DMember(bool)                                      IsSnowman                                                   OFFSET(get<bool>, {0x53D0, 1, 0, 0})
+	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x53D8, 8, 0, 0})
+	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x53E0, 8, 0, 0})
+	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x53E8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_LowerBodyOverride
+	// void MovementMode_LowerBodyOverride(FPoseLink InLowerBodyPose, FPoseLink InSourcePose, FPoseLink& MovementMode_LowerBodyOverride); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_LocomotionAdditives
+	// void MovementMode_LocomotionAdditives(FPoseLink InLocomotionAdditivesPose, FPoseLink& MovementMode_LocomotionAdditives); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_SourcePose
+	// void MovementMode_SourcePose(FPoseLink InSourcePoseBase, FPoseLink& MovementMode_SourcePose);                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_FullBodyOverride
+	// void MovementMode_FullBodyOverride(FPoseLink InputPoseFullBody, FPoseLink& MovementMode_FullBodyOverride);               // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_FinalPoseOverride
+	// void MovementMode_FinalPoseOverride(FPoseLink InFinalPose, FPoseLink& MovementMode_FinalPoseOverride);                   // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.MovementMode_AimOffset
+	// void MovementMode_AimOffset(FPoseLink InAimOffsetsPose, FPoseLink InSourcePosePreAimOffsets, FPoseLink& MovementMode_AimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ExecuteUbergraph_Player_LocomotionAdditives_AnimBP
+	// void ExecuteUbergraph_Player_LocomotionAdditives_AnimBP(int32_t EntryPoint);                                             // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C
+/// Size: 0x1578 (0x000680 - 0x001BF8)
+class UPlayer_Goop_AnimBP_C : public UFortGoopAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 7160;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x680, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x688, 80, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x6D8, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x6E0, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x6E8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x708, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x7B8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x7D8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x888, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x8A8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x958, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x978, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x998, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0x9D8, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x9F8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0xA40, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0xA88, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0xAD0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0xB18, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0xB60, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0xBA8, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xBF0, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xC10, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xC58, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xCA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xCE8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xD30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xD78, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0xDC0, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0xE08, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0xE28, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0xE48, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0xEF8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0xF18, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0xFC8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0xFE8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1008, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1028, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1048, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x10F8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1118, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x11C8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x1278, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x1298, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1348, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x1368, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1418, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1438, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x1460, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1488, 72, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x14D0, 200, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1598, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x15E0, 112, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1650, 40, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x1678, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1740, 112, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x17B0, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x17D0, 200, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0x1898, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1960, 112, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x19D0, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x19F0, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x1AB8, 120, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x1B30, 200, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ExecuteUbergraph_Player_Goop_AnimBP
+	// void ExecuteUbergraph_Player_Goop_AnimBP(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C
+/// Size: 0x1168 (0x0006D0 - 0x001838)
+class UPlayer_Sprint_AnimBP_C : public UFortSprintAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6200;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6D0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x6D8, 44, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x738, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x760, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x788, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x7B0, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0x7D8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0x820, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x868, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x8B0, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0x8D0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0x918, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0x960, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x9A8, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x9C8, 40, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x9F0, 200, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(getStruct<T>, {0xAB8, 176, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0xB68, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0xBD8, 200, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0xCA0, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xD68, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xDB0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xDF8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xE40, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xE88, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xED0, 72, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0xF18, 200, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive3                                OFFSET(getStruct<T>, {0xFE0, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x10A8, 72, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive4                                OFFSET(getStruct<T>, {0x10F0, 200, 0, 0})
+	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(getStruct<T>, {0x11B8, 72, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1200, 40, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x1228, 240, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1318, 112, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0x1388, 112, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x13F8, 72, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x1440, 40, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x1468, 40, 0, 0})
+	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot1                                         OFFSET(getStruct<T>, {0x1490, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0x14D8, 240, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x15C8, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(getStruct<T>, {0x15E8, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x16B0, 120, 0, 0})
+	SMember(FAnimNode_Inertialization)                 AnimGraphNode_Inertialization                               OFFSET(getStruct<T>, {0x1728, 272, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C.ExecuteUbergraph_Player_Sprint_AnimBP
+	// void ExecuteUbergraph_Player_Sprint_AnimBP(int32_t EntryPoint);                                                          // [0x1d9241c] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C
+/// Size: 0x1988 (0x0006A0 - 0x002028)
+class UPlayer_ZipLine_AnimBP_C : public UFortZiplineAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 8232;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6A0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x6A8, 112, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x718, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x720, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x728, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x748, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x7F8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x818, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x8C8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose2                              OFFSET(getStruct<T>, {0x8E8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root3                                         OFFSET(getStruct<T>, {0x998, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root4                                         OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root5                                         OFFSET(getStruct<T>, {0x9D8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root6                                         OFFSET(getStruct<T>, {0x9F8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(getStruct<T>, {0xA18, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root8                                         OFFSET(getStruct<T>, {0xA38, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0xA58, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(getStruct<T>, {0xAA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0xAE8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0xB30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(getStruct<T>, {0xB78, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(getStruct<T>, {0xBC0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(getStruct<T>, {0xC08, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root9                                         OFFSET(getStruct<T>, {0xC50, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(getStruct<T>, {0xC70, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(getStruct<T>, {0xCB8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(getStruct<T>, {0xD00, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(getStruct<T>, {0xD48, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(getStruct<T>, {0xD90, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(getStruct<T>, {0xDD8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(getStruct<T>, {0xE20, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root10                                        OFFSET(getStruct<T>, {0xE68, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose3                              OFFSET(getStruct<T>, {0xE88, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root11                                        OFFSET(getStruct<T>, {0xF38, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose4                              OFFSET(getStruct<T>, {0xF58, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root12                                        OFFSET(getStruct<T>, {0x1008, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root13                                        OFFSET(getStruct<T>, {0x1028, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root14                                        OFFSET(getStruct<T>, {0x1048, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root15                                        OFFSET(getStruct<T>, {0x1068, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose5                              OFFSET(getStruct<T>, {0x1088, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root16                                        OFFSET(getStruct<T>, {0x1138, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose6                              OFFSET(getStruct<T>, {0x1158, 176, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose7                              OFFSET(getStruct<T>, {0x1208, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root17                                        OFFSET(getStruct<T>, {0x12B8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose8                              OFFSET(getStruct<T>, {0x12D8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root18                                        OFFSET(getStruct<T>, {0x1388, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose9                              OFFSET(getStruct<T>, {0x13A8, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root19                                        OFFSET(getStruct<T>, {0x1458, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x1478, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x14A0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x14C8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x14F0, 40, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x1518, 40, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(getStruct<T>, {0x1540, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(getStruct<T>, {0x1588, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(getStruct<T>, {0x15D0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(getStruct<T>, {0x1618, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum2                              OFFSET(getStruct<T>, {0x1660, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(getStruct<T>, {0x16A8, 72, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x16F0, 240, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(getStruct<T>, {0x17E0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(getStruct<T>, {0x1828, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(getStruct<T>, {0x1870, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(getStruct<T>, {0x18B8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum3                              OFFSET(getStruct<T>, {0x1900, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x1948, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x1968, 40, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x1990, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0x1A00, 200, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0x1AC8, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(getStruct<T>, {0x1B90, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0x1BD8, 32, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(getStruct<T>, {0x1BF8, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0x1CC0, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(getStruct<T>, {0x1D30, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0x1DF8, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0x1E18, 200, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(getStruct<T>, {0x1EE0, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x1FA8, 120, 0, 0})
+	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x2020, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFinalPoseOverride
+	// void ItemFinalPoseOverride(FPoseLink InFinalPose, FPoseLink& ItemFinalPoseOverride);                                     // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemUpperBody
+	// void ItemUpperBody(FPoseLink InPoseUpperBody, FFortAnimInput_AdjustedAim InputParam, FPoseLink& ItemUpperBody);          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemIdleAdditive
+	// void ItemIdleAdditive(FPoseLink InPoseIdleAdditive, FPoseLink& ItemIdleAdditive);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJumpUpAdditive
+	// void ItemJumpUpAdditive(FPoseLink& ItemJumpUpAdditive);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJumpLoopAdditive
+	// void ItemJumpLoopAdditive(FPoseLink& ItemJumpLoopAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFallAdditive
+	// void ItemFallAdditive(FPoseLink& ItemFallAdditive);                                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFallLandAdditive
+	// void ItemFallLandAdditive(FPoseLink& ItemFallLandAdditive);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJetPackStartAdditive
+	// void ItemJetPackStartAdditive(FPoseLink& ItemJetPackStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemJetPackJumpAdditive
+	// void ItemJetPackJumpAdditive(FPoseLink& ItemJetPackJumpAdditive);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemZipLineStartAdditive
+	// void ItemZipLineStartAdditive(FPoseLink& ItemZipLineStartAdditive);                                                      // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemLowerBodyMovement
+	// void ItemLowerBodyMovement(FPoseLink InPoseLowerBodyMovement, FPoseLink& ItemLowerBodyMovement);                         // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemRelaxedEntry
+	// void ItemRelaxedEntry(FPoseLink InPoseRelaxedEntry, FPoseLink& ItemRelaxedEntry);                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpStart
+	// void ItemSwimJumpStart(FPoseLink& ItemSwimJumpStart);                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpStartLoop
+	// void ItemSwimJumpStartLoop(FPoseLink& ItemSwimJumpStartLoop);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpFallLoop
+	// void ItemSwimJumpFallLoop(FPoseLink& ItemSwimJumpFallLoop);                                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpSurfaceLoop
+	// void ItemSwimJumpSurfaceLoop(FPoseLink& ItemSwimJumpSurfaceLoop);                                                        // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSwimJumpSurfaceEnd
+	// void ItemSwimJumpSurfaceEnd(FPoseLink& ItemSwimJumpSurfaceEnd);                                                          // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemSkeletalControl
+	// void ItemSkeletalControl(FPoseLink InPose, FPoseLink& ItemSkeletalControl);                                              // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemAimOffset
+	// void ItemAimOffset(FPoseLink InPose_AimOffset, double AimOffsetAlpha, double Yaw, double Pitch, FPoseLink InPose_UpperLowerPreMeleeAO, FPoseLink& ItemAimOffset); // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemFullBodyOverride
+	// void ItemFullBodyOverride(FPoseLink InPoseFullBody, FPoseLink& ItemFullBodyOverride);                                    // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ItemPreIK
+	// void ItemPreIK(FPoseLink InPose_PreIK, FPoseLink& ItemPreIK);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ExecuteUbergraph_Player_ZipLine_AnimBP
+	// void ExecuteUbergraph_Player_ZipLine_AnimBP(int32_t EntryPoint);                                                         // [0x1d9241c] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C
 /// Size: 0x2970 (0x0015F0 - 0x003F60)
 class UPlayer_TacticalState_AnimBP_C : public UFortPlayerTacticalStateAnimInstance
@@ -2462,36 +2492,6 @@ public:
 	// void AnimGraph(FPoseLink InSourcePose, FPoseLink& AnimGraph);                                                            // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_Locomotion_Prototype_Template.Player_Locomotion_Prototype_Template_C.ExecuteUbergraph_Player_Locomotion_Prototype_Template
 	// void ExecuteUbergraph_Player_Locomotion_Prototype_Template(int32_t EntryPoint);                                          // [0x1d9241c] Final                
-};
-
-/// Class /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C
-/// Size: 0x07C8 (0x0008D0 - 0x001098)
-class UFP_Procedural2_C : public UFortFirstPersonProceduralAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4248;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x8D0, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x8D8, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x8E0, 8, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x8E8, 296, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0xA10, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0xA30, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(getStruct<T>, {0xB58, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone3                                   OFFSET(getStruct<T>, {0xC80, 296, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0xDA8, 176, 0, 0})
-	SMember(FFortAnimNode_CachePose)                   FortAnimGraphNode_CachePose                                 OFFSET(getStruct<T>, {0xE58, 216, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0xF30, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0xF50, 32, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone4                                   OFFSET(getStruct<T>, {0xF70, 296, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C.ExecuteUbergraph_FP_Procedural2
-	// void ExecuteUbergraph_FP_Procedural2(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
 };
 
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/VehicleAnimLayerInterface.VehicleAnimLayerInterface_C

@@ -13,6 +13,52 @@
 /// dependency: Niagara
 /// dependency: NiagaraAnimNotifies
 
+/// Class /Game/Effects/SnowSandInteraction/BP/SSI_BpLib_BpTools.SSI_BpLib_BpTools_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USSI_BpLib_BpTools_C : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C
+/// Size: 0x0008 (0x000380 - 0x000388)
+class AB_PlayerHealthDamage_CameraLensEffect_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C.PassParticle_Parameter
+	// void PassParticle_Parameter(double NewParam, bool First_Hit);                                                            // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect
+	// void ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1d9241c] Final                
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C
+/// Size: 0x0008 (0x000388 - 0x000390)
+class AB_PlayerShieldDamage_CameraLensEffect_C : public AB_PlayerHealthDamage_CameraLensEffect_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 912;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x388, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.PassParticle_Parameter_Shield
+	// void PassParticle_Parameter_Shield(double NewParam);                                                                     // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect
+	// void ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1d9241c] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Medium_Explosion_CameraShake.B_Medium_Explosion_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Medium_Explosion_CameraShake_C : public ULegacyCameraShake
@@ -58,52 +104,6 @@ class UBP_Camera_Shake_Pulse_Flash_C : public ULegacyCameraShake
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-};
-
-/// Class /Game/Effects/SnowSandInteraction/BP/SSI_BpLib_BpTools.SSI_BpLib_BpTools_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USSI_BpLib_BpTools_C : public UBlueprintFunctionLibrary
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C
-/// Size: 0x0008 (0x000380 - 0x000388)
-class AB_PlayerHealthDamage_CameraLensEffect_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C.PassParticle_Parameter
-	// void PassParticle_Parameter(double NewParam, bool First_Hit);                                                            // [0x1d9241c] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect
-	// void ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1d9241c] Final                
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C
-/// Size: 0x0008 (0x000388 - 0x000390)
-class AB_PlayerShieldDamage_CameraLensEffect_C : public AB_PlayerHealthDamage_CameraLensEffect_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 912;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x388, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.PassParticle_Parameter_Shield
-	// void PassParticle_Parameter_Shield(double NewParam);                                                                     // [0x1d9241c] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect
-	// void ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1d9241c] Final                
 };
 
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_LensEffect_Direction.B_PlayerHealthDamage_LensEffect_Direction_C
@@ -292,23 +292,6 @@ public:
 	// void ExecuteUbergraph_B_Pickups_Parent(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C
-/// Size: 0x0018 (0x000088 - 0x0000A0)
-class UAnimNotify_NiagaraNotify_SetBodyType_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 160;
-
-public:
-	CMember(TEnumAsByte<EFortCustomPartType>)          Part_Type                                                   OFFSET(get<T>, {0x88, 1, 0, 0})
-	SMember(FString)                                   Skeletal_Mesh_User_Name                                     OFFSET(getStruct<T>, {0x90, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C.Received_NotifyBegin
-	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-};
-
 /// Class /Game/Effects/Fort_Effects/Effects/Characters/Generic/ResIn/DuplicateResOutMesh.DuplicateResOutMesh_C
 /// Size: 0x0184 (0x000290 - 0x000414)
 class ADuplicateResOutMesh_C : public AActor
@@ -382,6 +365,28 @@ public:
 	// void UpdateExternalParameters(TArray<UMaterialInstanceDynamic*>& MID Array, TArray<USkeletalMeshComponent*>& External MEsh Component Array); // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Effects/Characters/Generic/ResIn/DuplicateResOutMesh.DuplicateResOutMesh_C.ExecuteUbergraph_DuplicateResOutMesh
 	// void ExecuteUbergraph_DuplicateResOutMesh(int32_t EntryPoint);                                                           // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C
+/// Size: 0x0019 (0x000088 - 0x0000A1)
+class UFN_TimedNiagaraNotify_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 161;
+
+public:
+	DMember(bool)                                      Print_Debug                                                 OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(bool)                                      is_Glider_Deploy_Notify                                     OFFSET(get<bool>, {0x89, 1, 0, 0})
+	DMember(bool)                                      Set_in_Water_Niagara_Variable                               OFFSET(get<bool>, {0x8A, 1, 0, 0})
+	CMember(TArray<FAnimCurveParameterPair>)           AnimCurveParameterPair                                      OFFSET(get<T>, {0x90, 16, 0, 0})
+	DMember(bool)                                      IsLargeBodyPawn                                             OFFSET(get<bool>, {0xA0, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C.Received_NotifyTick
+	// bool Received_NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C.Received_NotifyBegin
+	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 };
 
 /// Class /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C
@@ -478,41 +483,26 @@ public:
 	// void ExecuteUbergraph_FN_RadialForce(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
 };
 
-/// Class /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C
-/// Size: 0x0019 (0x000088 - 0x0000A1)
-class UFN_TimedNiagaraNotify_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
+/// Class /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C
+/// Size: 0x0018 (0x000088 - 0x0000A0)
+class UAnimNotify_NiagaraNotify_SetBodyType_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 161;
+	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	DMember(bool)                                      Print_Debug                                                 OFFSET(get<bool>, {0x88, 1, 0, 0})
-	DMember(bool)                                      is_Glider_Deploy_Notify                                     OFFSET(get<bool>, {0x89, 1, 0, 0})
-	DMember(bool)                                      Set_in_Water_Niagara_Variable                               OFFSET(get<bool>, {0x8A, 1, 0, 0})
-	CMember(TArray<FAnimCurveParameterPair>)           AnimCurveParameterPair                                      OFFSET(get<T>, {0x90, 16, 0, 0})
-	DMember(bool)                                      IsLargeBodyPawn                                             OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	CMember(TEnumAsByte<EFortCustomPartType>)          Part_Type                                                   OFFSET(get<T>, {0x88, 1, 0, 0})
+	SMember(FString)                                   Skeletal_Mesh_User_Name                                     OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C.Received_NotifyTick
-	// bool Received_NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C.Received_NotifyBegin
-	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C.Received_NotifyBegin
+	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 };
 
-/// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/BP_CamShake_BlurPulse.BP_CamShake_BlurPulse_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UBP_CamShake_BlurPulse_C : public ULegacyCameraShake
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C
 /// Size: 0x0008 (0x000380 - 0x000388)
-class AB_CameraLens_SwimBoost_C : public AEmitterCameraLensEffectBase
+class AB_CameraLens_SpookyMist_Loop_C : public AEmitterCameraLensEffectBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 904;
@@ -522,15 +512,72 @@ public:
 
 
 	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C.ReceiveBeginPlay
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.ReceiveBeginPlay
 	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C.ExecuteUbergraph_B_CameraLens_SwimBoost
-	// void ExecuteUbergraph_B_CameraLens_SwimBoost(int32_t EntryPoint);                                                        // [0x1d9241c] Final                
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.ExecuteUbergraph_B_CameraLens_SpookyMist_Loop
+	// void ExecuteUbergraph_B_CameraLens_SpookyMist_Loop(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C
+/// Size: 0x0008 (0x000380 - 0x000388)
+class AB_CameraLens_SpookyMist_End_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ExecuteUbergraph_B_CameraLens_SpookyMist_End
+	// void ExecuteUbergraph_B_CameraLens_SpookyMist_End(int32_t EntryPoint);                                                   // [0x1d9241c] Final                
 };
 
 /// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Small_Vertical_Jolt_CameraShake.B_Small_Vertical_Jolt_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Small_Vertical_Jolt_CameraShake_C : public ULegacyCameraShake
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C
+/// Size: 0x0010 (0x000380 - 0x000390)
+class AB_CameraLens_Lava_Bouncing_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 912;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 P_Camera_Lava_Bouncing                                      OFFSET(get<T>, {0x388, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C.ExecuteUbergraph_B_CameraLens_Lava_Bouncing
+	// void ExecuteUbergraph_B_CameraLens_Lava_Bouncing(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraShake_Lava_Bounce.BP_CameraShake_Lava_Bounce_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UBP_CameraShake_Lava_Bounce_C : public ULegacyCameraShake
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
+/// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Small_Explosion_CameraShake.B_Small_Explosion_CameraShake_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UB_Small_Explosion_CameraShake_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 496;
@@ -593,6 +640,26 @@ class UBP_CameraShake_PortalWarp_C : public ULegacyCameraShake
 public:
 };
 
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping.BP_CameraLens_HidingProp_Teleporting_Looping_C
+/// Size: 0x0000 (0x000380 - 0x000380)
+class ABP_CameraLens_HidingProp_Teleporting_Looping_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 896;
+
+public:
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete.BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C
+/// Size: 0x0000 (0x000380 - 0x000380)
+class ABP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 896;
+
+public:
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Drown_Damage.B_CameraLens_Drown_Damage_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_Drown_Damage_C : public AEmitterCameraLensEffectBase
@@ -609,6 +676,16 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Drown_Damage.B_CameraLens_Drown_Damage_C.ExecuteUbergraph_B_CameraLens_Drown_Damage
 	// void ExecuteUbergraph_B_CameraLens_Drown_Damage(int32_t EntryPoint);                                                     // [0x1d9241c] Final                
+};
+
+/// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/BP_CamShake_BlurPulse.BP_CamShake_BlurPulse_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UBP_CamShake_BlurPulse_C : public ULegacyCameraShake
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
 };
 
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_Loop.B_CameraLens_Shadow_Bomb_Loop_C
@@ -629,6 +706,24 @@ public:
 	// void ExecuteUbergraph_B_CameraLens_Shadow_Bomb_Loop(int32_t EntryPoint);                                                 // [0x1d9241c] Final                
 };
 
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C
+/// Size: 0x0008 (0x000380 - 0x000388)
+class AB_CameraLens_SwimBoost_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C.ExecuteUbergraph_B_CameraLens_SwimBoost
+	// void ExecuteUbergraph_B_CameraLens_SwimBoost(int32_t EntryPoint);                                                        // [0x1d9241c] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_End.B_CameraLens_Shadow_Bomb_End_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_Shadow_Bomb_End_C : public AEmitterCameraLensEffectBase
@@ -645,101 +740,6 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_End.B_CameraLens_Shadow_Bomb_End_C.ExecuteUbergraph_B_CameraLens_Shadow_Bomb_End
 	// void ExecuteUbergraph_B_CameraLens_Shadow_Bomb_End(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C
-/// Size: 0x0008 (0x000380 - 0x000388)
-class AB_CameraLens_SpookyMist_Loop_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.ExecuteUbergraph_B_CameraLens_SpookyMist_Loop
-	// void ExecuteUbergraph_B_CameraLens_SpookyMist_Loop(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C
-/// Size: 0x0008 (0x000380 - 0x000388)
-class AB_CameraLens_SpookyMist_End_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ExecuteUbergraph_B_CameraLens_SpookyMist_End
-	// void ExecuteUbergraph_B_CameraLens_SpookyMist_End(int32_t EntryPoint);                                                   // [0x1d9241c] Final                
-};
-
-/// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Small_Explosion_CameraShake.B_Small_Explosion_CameraShake_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UB_Small_Explosion_CameraShake_C : public ULegacyCameraShake
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C
-/// Size: 0x0010 (0x000380 - 0x000390)
-class AB_CameraLens_Lava_Bouncing_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 912;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 P_Camera_Lava_Bouncing                                      OFFSET(get<T>, {0x388, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C.ExecuteUbergraph_B_CameraLens_Lava_Bouncing
-	// void ExecuteUbergraph_B_CameraLens_Lava_Bouncing(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraShake_Lava_Bounce.BP_CameraShake_Lava_Bounce_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UBP_CameraShake_Lava_Bounce_C : public ULegacyCameraShake
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping.BP_CameraLens_HidingProp_Teleporting_Looping_C
-/// Size: 0x0000 (0x000380 - 0x000380)
-class ABP_CameraLens_HidingProp_Teleporting_Looping_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 896;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete.BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C
-/// Size: 0x0000 (0x000380 - 0x000380)
-class ABP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 896;
-
-public:
 };
 
 /// Class /Game/Effects/Niagara/Blueprints/AnimNotifyState_NiagaraNotify_SetParameters.AnimNotifyState_NiagaraNotify_SetParameters_C

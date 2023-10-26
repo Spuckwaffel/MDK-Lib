@@ -12,28 +12,6 @@
 /// dependency: GrindRailRuntime
 /// dependency: VictoryCrownsRuntime
 
-/// Class /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C
-/// Size: 0x0018 (0x000990 - 0x0009A8)
-class AGCNL_Irwin_Slide_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2472;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
-	CMember(USoundBase*)                               SlideSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
-	CMember(UAudioComponent*)                          SlidingSoundComponent                                       OFFSET(get<T>, {0x9A0, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.OnLoopingStartGeneric
-	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.OnRemovalGeneric
-	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.ExecuteUbergraph_GCNL_Irwin_Slide
-	// void ExecuteUbergraph_GCNL_Irwin_Slide(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
-};
-
 /// Class /Irwin/GameplayCues/GCNL_Irwin_Player_Prey_Nug_Float.GCNL_Irwin_Player_Prey_Nug_Float_C
 /// Size: 0x0010 (0x000990 - 0x0009A0)
 class AGCNL_Irwin_Player_Prey_Nug_Float_C : public AFortGameplayCueNotify_Loop
@@ -57,20 +35,26 @@ public:
 	// void ExecuteUbergraph_GCNL_Irwin_Player_Prey_Nug_Float(int32_t EntryPoint);                                              // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C
-/// Size: 0x0008 (0x000218 - 0x000220)
-class UGCN_Irwin_PlayerInteraction_Untamed_C : public UFortGameplayCueNotify_Burst
+/// Class /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C
+/// Size: 0x0018 (0x000990 - 0x0009A8)
+class AGCNL_Irwin_Slide_C : public AFortGameplayCueNotify_Loop
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 544;
+	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	CMember(USkeletalMeshComponent*)                   NewVar                                                      OFFSET(get<T>, {0x218, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
+	CMember(USoundBase*)                               SlideSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
+	CMember(UAudioComponent*)                          SlidingSoundComponent                                       OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C.OnBurstNiagara
-	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.OnLoopingStartGeneric
+	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.OnRemovalGeneric
+	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.ExecuteUbergraph_GCNL_Irwin_Slide
+	// void ExecuteUbergraph_GCNL_Irwin_Slide(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Tamed.GCN_Irwin_PlayerInteraction_Tamed_C
@@ -86,6 +70,22 @@ public:
 
 	/// Functions
 	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Tamed.GCN_Irwin_PlayerInteraction_Tamed_C.OnBurstNiagara
+	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
+/// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C
+/// Size: 0x0008 (0x000218 - 0x000220)
+class UGCN_Irwin_PlayerInteraction_Untamed_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 544;
+
+public:
+	CMember(USkeletalMeshComponent*)                   NewVar                                                      OFFSET(get<T>, {0x218, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C.OnBurstNiagara
 	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 };
 

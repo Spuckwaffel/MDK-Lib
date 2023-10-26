@@ -108,16 +108,6 @@ class UBasicNotification_C : public UFortUINotification
 public:
 };
 
-/// Class /Game/UI/Foundation/MessageCenter/BattlePassPageUnlockNotification.BattlePassPageUnlockNotification_C
-/// Size: 0x0000 (0x000130 - 0x000130)
-class UBattlePassPageUnlockNotification_C : public UFortUIBattlePassPageUnlockNotification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 304;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/MessageCenter/FriendNotification.FriendNotification_C
 /// Size: 0x0008 (0x000148 - 0x000150)
 class UFriendNotification_C : public UFortUIFriendNotification
@@ -136,6 +126,16 @@ public:
 	// void ShowFriendInvites();                                                                                                // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/UI/Foundation/MessageCenter/FriendNotification.FriendNotification_C.ExecuteUbergraph_FriendNotification
 	// void ExecuteUbergraph_FriendNotification(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/Foundation/MessageCenter/BattlePassPageUnlockNotification.BattlePassPageUnlockNotification_C
+/// Size: 0x0000 (0x000130 - 0x000130)
+class UBattlePassPageUnlockNotification_C : public UFortUIBattlePassPageUnlockNotification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 304;
+
+public:
 };
 
 /// Class /Game/UI/Foundation/Text/TextStyle-BaseParent.TextStyle-BaseParent_C
@@ -198,17 +198,6 @@ class UItemUIFunctionLibrary_C : public UBlueprintFunctionLibrary
 public:
 };
 
-/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListObject.CurrencyListObject_C
-/// Size: 0x0050 (0x000028 - 0x000078)
-class UCurrencyListObject_C : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
-
-public:
-	SMember(FCurrencyData)                             Data                                                        OFFSET(getStruct<T>, {0x28, 80, 0, 0})
-};
-
 /// Class /Game/UI/Foundation/Text/TextStyle-Base-M.TextStyle-Base-M_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Base_M_C : public UTextStyle_BaseParent_C
@@ -239,9 +228,9 @@ class UTextStyle_Button_Primary_M_C : public UCommonTextStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-MediumButton.TextStyle-MediumButton_C
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Primary-M-Disabled.TextStyle-Button-Primary-M-Disabled_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_MediumButton_C : public UCommonTextStyle
+class UTextStyle_Button_Primary_M_Disabled_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -249,9 +238,9 @@ class UTextStyle_MediumButton_C : public UCommonTextStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Primary-M-Disabled.TextStyle-Button-Primary-M-Disabled_C
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-MediumButton.TextStyle-MediumButton_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Primary_M_Disabled_C : public UCommonTextStyle
+class UTextStyle_MediumButton_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -282,6 +271,16 @@ public:
 /// Class /Game/UI/Foundation/Items/Parts/TextStyles/ItemCardPowerRatingTextStyle_XS.ItemCardPowerRatingTextStyle_XS_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UItemCardPowerRatingTextStyle_XS_C : public UCommonTextStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-BottomBar-S.TextStyle-Button-BottomBar-S_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Button_BottomBar_S_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -339,9 +338,9 @@ class UTextStyle_Base_S_B_Blue_C : public UTextStyle_Base_S_B_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-BottomBar-S.TextStyle-Button-BottomBar-S_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-ToolTip-B.TextStyle-Base-ToolTip-B_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_BottomBar_S_C : public UCommonTextStyle
+class UTextStyle_Base_ToolTip_B_C : public UTextStyle_Base_S_B_Blue_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -352,16 +351,6 @@ public:
 /// Class /Game/UI/Foundation/Text/TextStyle-Base-ToolTip-Body.TextStyle-Base-ToolTip-Body_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Base_ToolTip_Body_C : public UTextStyle_Base_S_B_Blue_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-ToolTip-B.TextStyle-Base-ToolTip-B_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_ToolTip_B_C : public UTextStyle_Base_S_B_Blue_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -399,9 +388,9 @@ class UTextStyle_Base_XS_B_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline-Disabled.TextStyle-Button-Outline-Disabled_C
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline.TextStyle-Button-Outline_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Outline_Disabled_C : public UCommonTextStyle
+class UTextStyle_Button_Outline_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -409,9 +398,9 @@ class UTextStyle_Button_Outline_Disabled_C : public UCommonTextStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline.TextStyle-Button-Outline_C
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline-Disabled.TextStyle-Button-Outline-Disabled_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Outline_C : public UCommonTextStyle
+class UTextStyle_Button_Outline_Disabled_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -499,16 +488,6 @@ class UTextStyle_BurbSmBk_15_LightBlue_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-40pc.TextStyle-Base-S-B-40pc_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_S_B_40pc_C : public UTextStyle_Base_S_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-Blue-40.TextStyle-Base-S-B-Blue-40_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Base_S_B_Blue_40_C : public UTextStyle_Base_S_B_Blue_C
@@ -572,6 +551,26 @@ public:
 /// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-B-DarkBlueFade.TextStyle-Base-XS-B-DarkBlueFade_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Base_XS_B_DarkBlueFade_C : public UTextStyle_Base_XS_Blue_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-Gray.TextStyle-Base-S-B-Gray_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_S_B_Gray_C : public UTextStyle_Base_S_B_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-Gray50.TextStyle-Base-S-B-Gray50_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_S_B_Gray50_C : public UTextStyle_Base_S_B_Gray_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -689,16 +688,6 @@ class UButtonStyle_Empty_C : public UButtonStyle_Base_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-Clear.ButtonStyle-Clear_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Clear_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-Icon_Transparent.ButtonStyle-Icon_Transparent_C
 /// Size: 0x0000 (0x000730 - 0x000730)
 class UButtonStyle_Icon_Transparent_C : public UCommonButtonStyle
@@ -715,26 +704,6 @@ class UButtonStyle_GamepadBindings_C : public UButtonStyle_MediumTransparentNoCu
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-Gray.TextStyle-Base-S-B-Gray_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_S_B_Gray_C : public UTextStyle_Base_S_B_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-Gray50.TextStyle-Base-S-B-Gray50_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_S_B_Gray50_C : public UTextStyle_Base_S_B_Gray_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 };
@@ -872,22 +841,22 @@ class UBorder_ShellTopBar_C : public UCommonBorderStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Header-M-Horizon.TextStyle-Header-M-Horizon_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Header_M_Horizon_C : public UTextStyle_HeaderParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Movie/VideoPlayerWidget.VideoPlayerWidget_C
 /// Size: 0x0000 (0x0003C8 - 0x0003C8)
 class UVideoPlayerWidget_C : public UFortVideoPlayerWidget
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 968;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Header-M-Horizon.TextStyle-Header-M-Horizon_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Header_M_Horizon_C : public UTextStyle_HeaderParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 };
@@ -1130,29 +1099,19 @@ class UButtonStyle_Skew_SocialInteraction_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border-MainL.Border-MainL_C
-/// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_MainL_C : public UCommonBorderStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 240;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Border/Border-ModalHeader.Border-ModalHeader_C
-/// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_ModalHeader_C : public UCommonBorderStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 240;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Border/Border_Navy_VGrad.Border_Navy_VGrad_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
 class UBorder_Navy_VGrad_C : public UCommonBorderStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 240;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Border/Border-MainL.Border-MainL_C
+/// Size: 0x0000 (0x0000F0 - 0x0000F0)
+class UBorder_MainL_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -1170,9 +1129,9 @@ class UBorder_MainModal_C : public UCommonBorderStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border_LightBlue_VGrad.Border_LightBlue_VGrad_C
+/// Class /Game/UI/Foundation/Border/Border-ModalHeader.Border-ModalHeader_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_LightBlue_VGrad_C : public UCommonBorderStyle
+class UBorder_ModalHeader_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -1180,9 +1139,9 @@ class UBorder_LightBlue_VGrad_C : public UCommonBorderStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border-ItemInfo-Unlocked.Border-ItemInfo-Unlocked_C
+/// Class /Game/UI/Foundation/Border/Border_LightBlue_VGrad.Border_LightBlue_VGrad_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_ItemInfo_Unlocked_C : public UCommonBorderStyle
+class UBorder_LightBlue_VGrad_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -1200,9 +1159,9 @@ class UButtonStyle_GamepadBindings_NonInteractable_C : public UButtonStyle_Mediu
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border-SolidBG-StatItem.Border-SolidBG-StatItem_C
+/// Class /Game/UI/Foundation/Border/Border-ItemInfo-Unlocked.Border-ItemInfo-Unlocked_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_SolidBG_StatItem_C : public UBorder_ShellTopBar_C
+class UBorder_ItemInfo_Unlocked_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -1213,6 +1172,16 @@ public:
 /// Class /Game/UI/Foundation/Border/Border-ItemInfo-Locked.Border-ItemInfo-Locked_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
 class UBorder_ItemInfo_Locked_C : public UBorder_ItemInfo_Unlocked_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 240;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Border/Border-SolidBG-StatItem.Border-SolidBG-StatItem_C
+/// Size: 0x0000 (0x0000F0 - 0x0000F0)
+class UBorder_SolidBG_StatItem_C : public UBorder_ShellTopBar_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -1345,6 +1314,26 @@ class UButtonStyle_Tab_Manage_C : public UCommonButtonStyle
 public:
 };
 
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-40pc.TextStyle-Base-S-B-40pc_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_S_B_40pc_C : public UTextStyle_Base_S_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-Clear.ButtonStyle-Clear_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Clear_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
+
+public:
+};
+
 /// Class /Game/UI/Foundation/Border/Border-SolidBG.Border-SolidBG_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
 class UBorder_SolidBG_C : public UBorder_ShellTopBar_C
@@ -1463,48 +1452,6 @@ public:
 	// void Destruct();                                                                                                         // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/UI/Foundation/Modals/ProgressModal/ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
 	// void ExecuteUbergraph_ProgressModalWidget(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C
-/// Size: 0x0018 (0x0014E0 - 0x0014F8)
-class USocialPanelWeGameFriendButton_C : public UCommonButtonLegacy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5368;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_LinkPrompt                                             OFFSET(get<T>, {0x14F0, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.ExecuteUbergraph_SocialPanelWeGameFriendButton
-	// void ExecuteUbergraph_SocialPanelWeGameFriendButton(int32_t EntryPoint);                                                 // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/Art/ButtonStyle_VoiceSettings.ButtonStyle_VoiceSettings_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_VoiceSettings_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/SocialPanel/Art/ButtonStyle_VoiceHeader.ButtonStyle_VoiceHeader_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_VoiceHeader_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
 };
 
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/Primary/ButtonStyle-Primary-M.ButtonStyle-Primary-M_C
@@ -1965,32 +1912,46 @@ public:
 	// void ExecuteUbergraph_ScrollingTextButton(int32_t EntryPoint);                                                           // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C
-/// Size: 0x0028 (0x0014F0 - 0x001518)
-class ULocalUserSettingTitle_C : public UFortLocalUserSettingTitleButton
+/// Class /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C
+/// Size: 0x0018 (0x0014E0 - 0x0014F8)
+class USocialPanelWeGameFriendButton_C : public UCommonButtonLegacy
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5400;
+	static inline constexpr uint64_t __MDKClassSize = 5368;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnExpansion                                                 OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
-	CMember(UImage*)                                   ExpandDirectionTick                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
-	CMember(USizeBox*)                                 SB_EntryContent                                             OFFSET(get<T>, {0x1510, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x14E8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_LinkPrompt                                             OFFSET(get<T>, {0x14F0, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.BP_OnHovered
+	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnHovered
 	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.OnExpansionChanged
-	// void OnExpansionChanged(bool bIsExpanded);                                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.ExecuteUbergraph_LocalUserSettingTitle
-	// void ExecuteUbergraph_LocalUserSettingTitle(int32_t EntryPoint);                                                         // [0x1d9241c] Final|HasDefaults    
+	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.ExecuteUbergraph_SocialPanelWeGameFriendButton
+	// void ExecuteUbergraph_SocialPanelWeGameFriendButton(int32_t EntryPoint);                                                 // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/Art/ButtonStyle_VoiceSettings.ButtonStyle_VoiceSettings_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_VoiceSettings_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
+
+public:
+};
+
+/// Class /Game/UI/SocialPanel/Art/ButtonStyle_VoiceHeader.ButtonStyle_VoiceHeader_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_VoiceHeader_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
+
+public:
 };
 
 /// Class /Game/UI/Foundation/TabbedView/HorizontalTabList_Legacy.HorizontalTabList_Legacy_C
@@ -2056,6 +2017,69 @@ public:
 	// void RefreshGamepad__DelegateSignature();                                                                                // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
 };
 
+/// Class /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C
+/// Size: 0x0028 (0x0014F0 - 0x001518)
+class ULocalUserSettingTitle_C : public UFortLocalUserSettingTitleButton
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5400;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnExpansion                                                 OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
+	CMember(UImage*)                                   ExpandDirectionTick                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
+	CMember(USizeBox*)                                 SB_EntryContent                                             OFFSET(get<T>, {0x1510, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.OnExpansionChanged
+	// void OnExpansionChanged(bool bIsExpanded);                                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingTitle.LocalUserSettingTitle_C.ExecuteUbergraph_LocalUserSettingTitle
+	// void ExecuteUbergraph_LocalUserSettingTitle(int32_t EntryPoint);                                                         // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C
+/// Size: 0x0088 (0x000548 - 0x0005D0)
+class USocialBanModal_C : public UFortSocialBanModal
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1488;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         disclaimer                                                  OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         disclaimer1                                                 OFFSET(get<T>, {0x558, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         disclaimer2                                                 OFFSET(get<T>, {0x560, 8, 0, 0})
+	CMember(UImage*)                                   Image_Severe                                                OFFSET(get<T>, {0x568, 8, 0, 0})
+	CMember(ULightbox_C*)                              Lightbox                                                    OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_Message                                            OFFSET(get<T>, {0x578, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x580, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Title1                                                      OFFSET(get<T>, {0x588, 8, 0, 0})
+	CMember(UImage*)                                   Triangles                                                   OFFSET(get<T>, {0x590, 8, 0, 0})
+	CMember(UImage*)                                   Triangles1                                                  OFFSET(get<T>, {0x598, 8, 0, 0})
+	CMember(UImage*)                                   Triangles2                                                  OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	CMember(UVerticalBox*)                             VBox_Banned                                                 OFFSET(get<T>, {0x5A8, 8, 0, 0})
+	CMember(UVerticalBox*)                             VBox_Warned                                                 OFFSET(get<T>, {0x5B0, 8, 0, 0})
+	CMember(UWidgetSwitcher*)                          WidgetSwitcher_SeverityImage                                OFFSET(get<T>, {0x5B8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCloseSucceeded                                            OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.OnDisplayModeSet
+	// void OnDisplayModeSet(bool bIsBanned);                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.ExecuteUbergraph_SocialBanModal
+	// void ExecuteUbergraph_SocialBanModal(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
+	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.OnCloseSucceeded__DelegateSignature
+	// void OnCloseSucceeded__DelegateSignature();                                                                              // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/UI/SocialPanel/VoiceChannelHeaderButton.VoiceChannelHeaderButton_C
 /// Size: 0x00A8 (0x001540 - 0x0015E8)
 class UVoiceChannelHeaderButton_C : public UFortVoiceChannelHeaderButton
@@ -2104,41 +2128,6 @@ public:
 	// void ExecuteUbergraph_VoiceChannelHeaderButton(int32_t EntryPoint);                                                      // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C
-/// Size: 0x0088 (0x000548 - 0x0005D0)
-class USocialBanModal_C : public UFortSocialBanModal
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1488;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         disclaimer                                                  OFFSET(get<T>, {0x550, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         disclaimer1                                                 OFFSET(get<T>, {0x558, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         disclaimer2                                                 OFFSET(get<T>, {0x560, 8, 0, 0})
-	CMember(UImage*)                                   Image_Severe                                                OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(ULightbox_C*)                              Lightbox                                                    OFFSET(get<T>, {0x570, 8, 0, 0})
-	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_Message                                            OFFSET(get<T>, {0x578, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Title1                                                      OFFSET(get<T>, {0x588, 8, 0, 0})
-	CMember(UImage*)                                   Triangles                                                   OFFSET(get<T>, {0x590, 8, 0, 0})
-	CMember(UImage*)                                   Triangles1                                                  OFFSET(get<T>, {0x598, 8, 0, 0})
-	CMember(UImage*)                                   Triangles2                                                  OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	CMember(UVerticalBox*)                             VBox_Banned                                                 OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	CMember(UVerticalBox*)                             VBox_Warned                                                 OFFSET(get<T>, {0x5B0, 8, 0, 0})
-	CMember(UWidgetSwitcher*)                          WidgetSwitcher_SeverityImage                                OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCloseSucceeded                                            OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.OnDisplayModeSet
-	// void OnDisplayModeSet(bool bIsBanned);                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.ExecuteUbergraph_SocialBanModal
-	// void ExecuteUbergraph_SocialBanModal(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
-	// Function /Game/UI/Foundation/Modals/PlayerReporting/SocialBanModal.SocialBanModal_C.OnCloseSucceeded__DelegateSignature
-	// void OnCloseSucceeded__DelegateSignature();                                                                              // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
-};
-
 /// Class /Game/UI/SocialPanel/MissedInvitesActionMenu.MissedInvitesActionMenu_C
 /// Size: 0x0050 (0x000448 - 0x000498)
 class UMissedInvitesActionMenu_C : public UFortMissedInvitesActionMenu
@@ -2166,27 +2155,6 @@ public:
 	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/SocialPanel/MissedInvitesActionMenu.MissedInvitesActionMenu_C.ExecuteUbergraph_MissedInvitesActionMenu
 	// void ExecuteUbergraph_MissedInvitesActionMenu(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C
-/// Size: 0x0010 (0x0002C0 - 0x0002D0)
-class UCurrencyListView_C : public UUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 720;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
-	CMember(UCommonListView*)                          DataListView                                                OFFSET(get<T>, {0x2C8, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.AddDataToList
-	// void AddDataToList(FCurrencyData CurrencyData);                                                                          // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.RunClearListView
-	// void RunClearListView();                                                                                                 // [0x1d9241c] BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.ExecuteUbergraph_CurrencyListView
-	// void ExecuteUbergraph_CurrencyListView(int32_t EntryPoint);                                                              // [0x1d9241c] Final                
 };
 
 /// Class /Game/UI/Foundation/Movie/ActivatableMovieWidget.ActivatableMovieWidget_C
@@ -2264,34 +2232,6 @@ public:
 	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/SocialPanel/EditNicknameButton.EditNicknameButton_C.ExecuteUbergraph_EditNicknameButton
 	// void ExecuteUbergraph_EditNicknameButton(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C
-/// Size: 0x0028 (0x0002C0 - 0x0002E8)
-class UCurrencyListViewItem_C : public UUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 744;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     CurrencyMessage                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FText)                                     DisplayMessage                                              OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.SetQuantityAndType
-	// void SetQuantityAndType(int32_t inInt, FText To);                                                                        // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnEntryReleased
-	// void BP_OnEntryReleased();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnItemExpansionChanged
-	// void BP_OnItemExpansionChanged(bool bIsExpanded);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnItemSelectionChanged
-	// void BP_OnItemSelectionChanged(bool bIsSelected);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.OnListItemObjectSet
-	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.ExecuteUbergraph_CurrencyListViewItem
-	// void ExecuteUbergraph_CurrencyListViewItem(int32_t EntryPoint);                                                          // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/SocialPanel/UserActionMenuInputButton.UserActionMenuInputButton_C
@@ -2708,6 +2648,49 @@ public:
 	// void ExecuteUbergraph_TeamMemberManage(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C
+/// Size: 0x0020 (0x001500 - 0x001520)
+class ULocalUserSettingButton_C : public UFortLocalUserSettingButton
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5408;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1500, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1508, 8, 0, 0})
+	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x1510, 8, 0, 0})
+	CMember(UImage*)                                   Image_AnimatedArrow                                         OFFSET(get<T>, {0x1518, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.ExecuteUbergraph_LocalUserSettingButton
+	// void ExecuteUbergraph_LocalUserSettingButton(int32_t EntryPoint);                                                        // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/LocalUserSettingSection.LocalUserSettingSection_C
+/// Size: 0x0000 (0x000340 - 0x000340)
+class ULocalUserSettingSection_C : public UFortLocalUserSettingsSection
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 832;
+
+public:
+};
+
+/// Class /Game/UI/SocialPanel/LocalUserSettingsMenu.LocalUserSettingsMenu_C
+/// Size: 0x0000 (0x000438 - 0x000438)
+class ULocalUserSettingsMenu_C : public UFortLocalUserSettingsMenu
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1080;
+
+public:
+};
+
 /// Class /Game/UI/SocialPanel/ListEntries/FortSocialEventRSVPWidget.FortSocialEventRSVPWidget_C
 /// Size: 0x0029 (0x0002C0 - 0x0002E9)
 class UFortSocialEventRSVPWidget_C : public UFortSocialEventRSVPWidget
@@ -2790,49 +2773,6 @@ public:
 	CMember(UImage*)                                   UpperRightCorner                                            OFFSET(get<T>, {0x5B0, 8, 0, 0})
 };
 
-/// Class /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C
-/// Size: 0x0020 (0x001500 - 0x001520)
-class ULocalUserSettingButton_C : public UFortLocalUserSettingButton
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5408;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1500, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1508, 8, 0, 0})
-	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x1510, 8, 0, 0})
-	CMember(UImage*)                                   Image_AnimatedArrow                                         OFFSET(get<T>, {0x1518, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LocalUserSettingButton.LocalUserSettingButton_C.ExecuteUbergraph_LocalUserSettingButton
-	// void ExecuteUbergraph_LocalUserSettingButton(int32_t EntryPoint);                                                        // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/LocalUserSettingSection.LocalUserSettingSection_C
-/// Size: 0x0000 (0x000340 - 0x000340)
-class ULocalUserSettingSection_C : public UFortLocalUserSettingsSection
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 832;
-
-public:
-};
-
-/// Class /Game/UI/SocialPanel/LocalUserSettingsMenu.LocalUserSettingsMenu_C
-/// Size: 0x0000 (0x000438 - 0x000438)
-class ULocalUserSettingsMenu_C : public UFortLocalUserSettingsMenu
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
-
-public:
-};
-
 /// Class /Game/UI/SocialPanel/ListEntries/LocalUserEntry.LocalUserEntry_C
 /// Size: 0x0068 (0x001540 - 0x0015A8)
 class ULocalUserEntry_C : public UFortSocialEventRSVPLocalUserEntry
@@ -2864,621 +2804,6 @@ public:
 	// void OnOnlineStatusChanged(ELocalUserOnlineStatus OnlineStatus);                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/SocialPanel/ListEntries/LocalUserEntry.LocalUserEntry_C.ExecuteUbergraph_LocalUserEntry
 	// void ExecuteUbergraph_LocalUserEntry(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C
-/// Size: 0x0058 (0x001590 - 0x0015E8)
-class USocialInteraction_C : public USocialInteractionButton
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5608;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1598, 8, 0, 0})
-	CMember(UImage*)                                   EncourageEpicFriend                                         OFFSET(get<T>, {0x15A0, 8, 0, 0})
-	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
-	SMember(FLinearColor)                              AddFriendColor                                              OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.OnInteractionSet
-	// void OnInteractionSet();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.ExecuteUbergraph_SocialInteraction
-	// void ExecuteUbergraph_SocialInteraction(int32_t EntryPoint);                                                             // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C
-/// Size: 0x0010 (0x000320 - 0x000330)
-class UItemReceivedAccountWidget_C : public UFortAccountWidgetBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 816;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x320, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         CommonTextBlock_UserMessage                                 OFFSET(get<T>, {0x328, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C.OnAccountInfoChanged
-	// void OnAccountInfoChanged(FFortPublicAccountInfo& Result);                                                               // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C.ExecuteUbergraph_ItemReceivedAccountWidget
-	// void ExecuteUbergraph_ItemReceivedAccountWidget(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C
-/// Size: 0x0030 (0x0004F8 - 0x000528)
-class UUserActionMenu_C : public UFortSocialInteractionMenu
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1320;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4F8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x500, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x508, 8, 0, 0})
-	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x510, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x518, 8, 0, 0})
-	CMember(UFortMobileImage*)                         Image_Platform                                              OFFSET(get<T>, {0x520, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.OnToggleConfirmation
-	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.OnOpened
-	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.ExecuteUbergraph_UserActionMenu
-	// void ExecuteUbergraph_UserActionMenu(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C
-/// Size: 0x0050 (0x0014E0 - 0x001530)
-class USocialConfirmationButton_C : public UCommonButtonLegacy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5424;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x14F0, 8, 0, 0})
-	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x1500, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x1508, 8, 0, 0})
-	DMember(bool)                                      bIsAccept                                                   OFFSET(get<bool>, {0x1510, 1, 0, 0})
-	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x1518, 24, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.PreConstruct
-	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.ExecuteUbergraph_SocialConfirmationButton
-	// void ExecuteUbergraph_SocialConfirmationButton(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C
-/// Size: 0x0028 (0x000508 - 0x000530)
-class UJoinablePartyActionMenu_C : public UFortJoinablePartyActionMenu
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1328;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x508, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x510, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x518, 8, 0, 0})
-	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x520, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x528, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.OnToggleConfirmation
-	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.OnOpened
-	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.ExecuteUbergraph_JoinablePartyActionMenu
-	// void ExecuteUbergraph_JoinablePartyActionMenu(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C
-/// Size: 0x0078 (0x0015A0 - 0x001618)
-class UJoinablePartyEntry_C : public UFortJoinablePartyListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5656;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x15D8, 8, 0, 0})
-	CMember(USizeBox*)                                 Exclamation                                                 OFFSET(get<T>, {0x15E0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15E8, 8, 0, 0})
-	SMember(FSlateColor)                               InviteFontColor                                             OFFSET(getStruct<T>, {0x15F0, 20, 0, 0})
-	SMember(FSlateColor)                               DefaultFontColor                                            OFFSET(getStruct<T>, {0x1604, 20, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.OnInviteStatusUpdated
-	// void OnInviteStatusUpdated(bool bIsInvited);                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.ExecuteUbergraph_JoinablePartyEntry
-	// void ExecuteUbergraph_JoinablePartyEntry(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C
-/// Size: 0x0031 (0x0002D8 - 0x000309)
-class UItemReceivedHeaderSubWidgetBase_C : public UItemReceivedHeaderBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 777;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D8, 8, 0, 0})
-	CMember(UFortGiftBoxItem*)                         GiftBoxItem_BP                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(FString)                                   FromUserName_BP                                             OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
-	CMember(TArray<FFortReceivedItemLootInfo>)         ItemDefs                                                    OFFSET(get<T>, {0x2F8, 16, 0, 0})
-	DMember(bool)                                      bSelfGift                                                   OFFSET(get<bool>, {0x308, 1, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.SetBlueprintGiftBoxItem
-	// void SetBlueprintGiftBoxItem(UFortGiftBoxItem* GiftBox, FString FromUser, TArray<FFortReceivedItemLootInfo>& ItemDefs, bool bSelfGift); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.InitFromGiftBoxItem_BP
-	// void InitFromGiftBoxItem_BP();                                                                                           // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.ExecuteUbergraph_ItemReceivedHeaderSubWidgetBase
-	// void ExecuteUbergraph_ItemReceivedHeaderSubWidgetBase(int32_t EntryPoint);                                               // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C
-/// Size: 0x0010 (0x000450 - 0x000460)
-class ULeavePartyConfirmationMenu_C : public UFortLeavePartyMenu
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1120;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x450, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x458, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C.OnOpened
-	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C.ExecuteUbergraph_LeavePartyConfirmationMenu
-	// void ExecuteUbergraph_LeavePartyConfirmationMenu(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C
-/// Size: 0x0048 (0x001510 - 0x001558)
-class ULeavePartyListEntry_C : public UFortLeavePartyListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5464;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
-	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1528, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1530, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1538, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_LeavePartyText                                         OFFSET(get<T>, {0x1548, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1550, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.ExecuteUbergraph_LeavePartyListEntry
-	// void ExecuteUbergraph_LeavePartyListEntry(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C
-/// Size: 0x0040 (0x001510 - 0x001550)
-class UMultiFriendActionListEntry_C : public UFortMultiFriendActionListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5456;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1528, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1530, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText                                      OFFSET(get<T>, {0x1538, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText_Hover                                OFFSET(get<T>, {0x1540, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1548, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.GetText
-	// void GetText(EMultiFriendAction InAction, FText& Text);                                                                  // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.OnActionUpdated
-	// void OnActionUpdated(EMultiFriendAction InAction);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.ExecuteUbergraph_MultiFriendActionListEntry
-	// void ExecuteUbergraph_MultiFriendActionListEntry(int32_t EntryPoint);                                                    // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C
-/// Size: 0x0048 (0x0015B0 - 0x0015F8)
-class UVoiceChatMemberListEntry_C : public UFortVoiceChatMemberListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5624;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.ExecuteUbergraph_VoiceChatMemberListEntry
-	// void ExecuteUbergraph_VoiceChatMemberListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C
-/// Size: 0x0048 (0x0014F0 - 0x001538)
-class USocialPanel_FriendLinkButton_C : public UFortSocialPanelView_FriendLinkButton
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5432;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnCopied                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x1500, 8, 0, 0})
-	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x1508, 8, 0, 0})
-	CMember(UFortMobileImage*)                         SharingIcon                                                 OFFSET(get<T>, {0x1510, 8, 0, 0})
-	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_CopyState                                          OFFSET(get<T>, {0x1518, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_CopyConfirmed                                          OFFSET(get<T>, {0x1520, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_FriendLinkInstructions                                 OFFSET(get<T>, {0x1528, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_LinkPrompt                                             OFFSET(get<T>, {0x1530, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
-	// void OnCopiedToClipboard();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnShareButtonTypeSet
-	// void OnShareButtonTypeSet(EFriendLinkShareButtonType Type);                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.ExecuteUbergraph_SocialPanel_FriendLinkButton
-	// void ExecuteUbergraph_SocialPanel_FriendLinkButton(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C
-/// Size: 0x0050 (0x0015B0 - 0x001600)
-class UPartyMemberListEntry_C : public UFortPartyMemberListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5632;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.ExecuteUbergraph_PartyMemberListEntry
-	// void ExecuteUbergraph_PartyMemberListEntry(int32_t EntryPoint);                                                          // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C
-/// Size: 0x0050 (0x0015B0 - 0x001600)
-class UTeamMemberListEntry_C : public UFortTeamMemberListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5632;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.ExecuteUbergraph_TeamMemberListEntry
-	// void ExecuteUbergraph_TeamMemberListEntry(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C
-/// Size: 0x0058 (0x0015A0 - 0x0015F8)
-class UUserListEntry_C : public UFortSocialUserListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5624;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.OnFocusLost
-	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.ExecuteUbergraph_UserListEntry
-	// void ExecuteUbergraph_UserListEntry(int32_t EntryPoint);                                                                 // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C
-/// Size: 0x0060 (0x0015A0 - 0x001600)
-class UJoinRequestUserListEntry_C : public UFortSocialUserListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5632;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     JoinRequest                                                 OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.OnFocusLost
-	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.ExecuteUbergraph_JoinRequestUserListEntry
-	// void ExecuteUbergraph_JoinRequestUserListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C
-/// Size: 0x0058 (0x0015A0 - 0x0015F8)
-class UUserListEntry_XS_C : public UFortSocialUserListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5624;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.OnFocusLost
-	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.ExecuteUbergraph_UserListEntry_XS
-	// void ExecuteUbergraph_UserListEntry_XS(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C
-/// Size: 0x0060 (0x0015B0 - 0x001610)
-class UUserSearchResultListEntry_XS_C : public UFortUserSearchResultListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5648;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	CMember(UImage*)                                   Image_Lock                                                  OFFSET(get<T>, {0x15D8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15E0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15E8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x1600, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.SetNamePlatformAndMutuals
-	// void SetNamePlatformAndMutuals(FText& DisplayName, FText& Platform, int32_t MutualCount);                                // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.ExecuteUbergraph_UserSearchResultListEntry_XS
-	// void ExecuteUbergraph_UserSearchResultListEntry_XS(int32_t EntryPoint);                                                  // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C
-/// Size: 0x0060 (0x001580 - 0x0015E0)
-class USuggestedFriendListEntry_C : public UFortConnectionsUserListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5600;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
-	CMember(UBorder*)                                  Border_Background                                           OFFSET(get<T>, {0x15A0, 8, 0, 0})
-	CMember(UBorder*)                                  Border_Highlight                                            OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.ExecuteUbergraph_SuggestedFriendListEntry
-	// void ExecuteUbergraph_SuggestedFriendListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C
-/// Size: 0x0050 (0x001510 - 0x001560)
-class UMissedInvitesEntry_C : public UFortMissedInvitesListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5472;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
-	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1528, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1530, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1538, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
-	CMember(USizeBox*)                                 Exclamation                                                 OFFSET(get<T>, {0x1548, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText                                      OFFSET(get<T>, {0x1550, 8, 0, 0})
-	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1558, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.ExecuteUbergraph_MissedInvitesEntry
-	// void ExecuteUbergraph_MissedInvitesEntry(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C
-/// Size: 0x0070 (0x001580 - 0x0015F0)
-class UInviteListEntry_FriendInvite_XS_C : public UFortConnectionsUserListEntry
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5616;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
-	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x15A0, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15A8, 8, 0, 0})
-	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Text_SentRequest                                            OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	SMember(FLinearColor)                              Online                                                      OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
-	SMember(FLinearColor)                              Offline                                                     OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
-	SMember(FLinearColor)                              Away                                                        OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.HandleOnlineIndicatorView
-	// void HandleOnlineIndicatorView(char OnlineStatus);                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.ExecuteUbergraph_InviteListEntry_FriendInvite_XS
-	// void ExecuteUbergraph_InviteListEntry_FriendInvite_XS(int32_t EntryPoint);                                               // [0x1d9241c] Final                
 };
 
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/Tab/ButtonStyle-Tab-Main-Recolor.ButtonStyle-Tab-Main-Recolor_C
@@ -3850,6 +3175,578 @@ public:
 	// void OnValueChanged_Bind(float Value);                                                                                   // [0x1d9241c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/UI/Frontend/Settings/Deadzone/DeadzoneAdjustment.DeadzoneAdjustment_C.ExecuteUbergraph_DeadzoneAdjustment
 	// void ExecuteUbergraph_DeadzoneAdjustment(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C
+/// Size: 0x0058 (0x001590 - 0x0015E8)
+class USocialInteraction_C : public USocialInteractionButton
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5608;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1598, 8, 0, 0})
+	CMember(UImage*)                                   EncourageEpicFriend                                         OFFSET(get<T>, {0x15A0, 8, 0, 0})
+	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
+	SMember(FLinearColor)                              AddFriendColor                                              OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.OnInteractionSet
+	// void OnInteractionSet();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialInteraction.SocialInteraction_C.ExecuteUbergraph_SocialInteraction
+	// void ExecuteUbergraph_SocialInteraction(int32_t EntryPoint);                                                             // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C
+/// Size: 0x0030 (0x0004F8 - 0x000528)
+class UUserActionMenu_C : public UFortSocialInteractionMenu
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1320;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4F8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x500, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x508, 8, 0, 0})
+	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x510, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x518, 8, 0, 0})
+	CMember(UFortMobileImage*)                         Image_Platform                                              OFFSET(get<T>, {0x520, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.OnToggleConfirmation
+	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.OnOpened
+	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/UserActionMenu.UserActionMenu_C.ExecuteUbergraph_UserActionMenu
+	// void ExecuteUbergraph_UserActionMenu(int32_t EntryPoint);                                                                // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C
+/// Size: 0x0050 (0x0014E0 - 0x001530)
+class USocialConfirmationButton_C : public UCommonButtonLegacy
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5424;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14E8, 8, 0, 0})
+	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x1500, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x1508, 8, 0, 0})
+	DMember(bool)                                      bIsAccept                                                   OFFSET(get<bool>, {0x1510, 1, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x1518, 24, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.PreConstruct
+	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialConfirmationButton.SocialConfirmationButton_C.ExecuteUbergraph_SocialConfirmationButton
+	// void ExecuteUbergraph_SocialConfirmationButton(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C
+/// Size: 0x0048 (0x0015B0 - 0x0015F8)
+class UVoiceChatMemberListEntry_C : public UFortVoiceChatMemberListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5624;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/VoiceChatMemberListEntry.VoiceChatMemberListEntry_C.ExecuteUbergraph_VoiceChatMemberListEntry
+	// void ExecuteUbergraph_VoiceChatMemberListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C
+/// Size: 0x0028 (0x000508 - 0x000530)
+class UJoinablePartyActionMenu_C : public UFortJoinablePartyActionMenu
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1328;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x508, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x510, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x518, 8, 0, 0})
+	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x520, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x528, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.OnToggleConfirmation
+	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.OnOpened
+	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/JoinablePartyActionMenu.JoinablePartyActionMenu_C.ExecuteUbergraph_JoinablePartyActionMenu
+	// void ExecuteUbergraph_JoinablePartyActionMenu(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C
+/// Size: 0x0078 (0x0015A0 - 0x001618)
+class UJoinablePartyEntry_C : public UFortJoinablePartyListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5656;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x15D8, 8, 0, 0})
+	CMember(USizeBox*)                                 Exclamation                                                 OFFSET(get<T>, {0x15E0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15E8, 8, 0, 0})
+	SMember(FSlateColor)                               InviteFontColor                                             OFFSET(getStruct<T>, {0x15F0, 20, 0, 0})
+	SMember(FSlateColor)                               DefaultFontColor                                            OFFSET(getStruct<T>, {0x1604, 20, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.OnInviteStatusUpdated
+	// void OnInviteStatusUpdated(bool bIsInvited);                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/JoinablePartyEntry.JoinablePartyEntry_C.ExecuteUbergraph_JoinablePartyEntry
+	// void ExecuteUbergraph_JoinablePartyEntry(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C
+/// Size: 0x0010 (0x000450 - 0x000460)
+class ULeavePartyConfirmationMenu_C : public UFortLeavePartyMenu
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1120;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x450, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x458, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C.OnOpened
+	// void OnOpened();                                                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LeavePartyConfirmationMenu.LeavePartyConfirmationMenu_C.ExecuteUbergraph_LeavePartyConfirmationMenu
+	// void ExecuteUbergraph_LeavePartyConfirmationMenu(int32_t EntryPoint);                                                    // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C
+/// Size: 0x0048 (0x001510 - 0x001558)
+class ULeavePartyListEntry_C : public UFortLeavePartyListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5464;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
+	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1528, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1530, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1538, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_LeavePartyText                                         OFFSET(get<T>, {0x1548, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1550, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/LeavePartyListEntry.LeavePartyListEntry_C.ExecuteUbergraph_LeavePartyListEntry
+	// void ExecuteUbergraph_LeavePartyListEntry(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C
+/// Size: 0x0040 (0x001510 - 0x001550)
+class UMultiFriendActionListEntry_C : public UFortMultiFriendActionListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5456;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1528, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1530, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText                                      OFFSET(get<T>, {0x1538, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText_Hover                                OFFSET(get<T>, {0x1540, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1548, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.GetText
+	// void GetText(EMultiFriendAction InAction, FText& Text);                                                                  // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.OnActionUpdated
+	// void OnActionUpdated(EMultiFriendAction InAction);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Sidebar/ListEntries/MultiFriendActionListEntry.MultiFriendActionListEntry_C.ExecuteUbergraph_MultiFriendActionListEntry
+	// void ExecuteUbergraph_MultiFriendActionListEntry(int32_t EntryPoint);                                                    // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C
+/// Size: 0x0048 (0x0014F0 - 0x001538)
+class USocialPanel_FriendLinkButton_C : public UFortSocialPanelView_FriendLinkButton
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5432;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnCopied                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x1500, 8, 0, 0})
+	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x1508, 8, 0, 0})
+	CMember(UFortMobileImage*)                         SharingIcon                                                 OFFSET(get<T>, {0x1510, 8, 0, 0})
+	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_CopyState                                          OFFSET(get<T>, {0x1518, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_CopyConfirmed                                          OFFSET(get<T>, {0x1520, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_FriendLinkInstructions                                 OFFSET(get<T>, {0x1528, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_LinkPrompt                                             OFFSET(get<T>, {0x1530, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
+	// void OnCopiedToClipboard();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnShareButtonTypeSet
+	// void OnShareButtonTypeSet(EFriendLinkShareButtonType Type);                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.ExecuteUbergraph_SocialPanel_FriendLinkButton
+	// void ExecuteUbergraph_SocialPanel_FriendLinkButton(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C
+/// Size: 0x0050 (0x0015B0 - 0x001600)
+class UPartyMemberListEntry_C : public UFortPartyMemberListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5632;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/PartyMemberListEntry.PartyMemberListEntry_C.ExecuteUbergraph_PartyMemberListEntry
+	// void ExecuteUbergraph_PartyMemberListEntry(int32_t EntryPoint);                                                          // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C
+/// Size: 0x0050 (0x0015B0 - 0x001600)
+class UTeamMemberListEntry_C : public UFortTeamMemberListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5632;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/TeamMemberListEntry.TeamMemberListEntry_C.ExecuteUbergraph_TeamMemberListEntry
+	// void ExecuteUbergraph_TeamMemberListEntry(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C
+/// Size: 0x0058 (0x0015A0 - 0x0015F8)
+class UUserListEntry_C : public UFortSocialUserListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5624;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.OnFocusLost
+	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry.UserListEntry_C.ExecuteUbergraph_UserListEntry
+	// void ExecuteUbergraph_UserListEntry(int32_t EntryPoint);                                                                 // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C
+/// Size: 0x0060 (0x0015A0 - 0x001600)
+class UJoinRequestUserListEntry_C : public UFortSocialUserListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5632;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     JoinRequest                                                 OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D8, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.OnFocusLost
+	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/JoinRequestUserListEntry.JoinRequestUserListEntry_C.ExecuteUbergraph_JoinRequestUserListEntry
+	// void ExecuteUbergraph_JoinRequestUserListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C
+/// Size: 0x0058 (0x0015A0 - 0x0015F8)
+class UUserListEntry_XS_C : public UFortSocialUserListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5624;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15A0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.OnFocusLost
+	// void OnFocusLost(FFocusEvent InFocusEvent);                                                                              // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserListEntry_XS.UserListEntry_XS_C.ExecuteUbergraph_UserListEntry_XS
+	// void ExecuteUbergraph_UserListEntry_XS(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C
+/// Size: 0x0060 (0x0015B0 - 0x001610)
+class UUserSearchResultListEntry_XS_C : public UFortUserSearchResultListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5648;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15B0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15C0, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15C8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	CMember(UImage*)                                   Image_Lock                                                  OFFSET(get<T>, {0x15D8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15E0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15E8, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15F0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x1600, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.SetNamePlatformAndMutuals
+	// void SetNamePlatformAndMutuals(FText& DisplayName, FText& Platform, int32_t MutualCount);                                // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/ListEntries/UserSearchResultListEntry_XS.UserSearchResultListEntry_XS_C.ExecuteUbergraph_UserSearchResultListEntry_XS
+	// void ExecuteUbergraph_UserSearchResultListEntry_XS(int32_t EntryPoint);                                                  // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C
+/// Size: 0x0060 (0x001580 - 0x0015E0)
+class USuggestedFriendListEntry_C : public UFortConnectionsUserListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5600;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
+	CMember(UBorder*)                                  Border_Background                                           OFFSET(get<T>, {0x15A0, 8, 0, 0})
+	CMember(UBorder*)                                  Border_Highlight                                            OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SuggestedFriendListEntry.SuggestedFriendListEntry_C.ExecuteUbergraph_SuggestedFriendListEntry
+	// void ExecuteUbergraph_SuggestedFriendListEntry(int32_t EntryPoint);                                                      // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C
+/// Size: 0x0050 (0x001510 - 0x001560)
+class UMissedInvitesEntry_C : public UFortMissedInvitesListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5472;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1510, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1520, 8, 0, 0})
+	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1528, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1530, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1538, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
+	CMember(USizeBox*)                                 Exclamation                                                 OFFSET(get<T>, {0x1548, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_MissedInvitesText                                      OFFSET(get<T>, {0x1550, 8, 0, 0})
+	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1558, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/MissedInvitesEntry.MissedInvitesEntry_C.ExecuteUbergraph_MissedInvitesEntry
+	// void ExecuteUbergraph_MissedInvitesEntry(int32_t EntryPoint);                                                            // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C
+/// Size: 0x0070 (0x001580 - 0x0015F0)
+class UInviteListEntry_FriendInvite_XS_C : public UFortConnectionsUserListEntry
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5616;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
+	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x15A0, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15A8, 8, 0, 0})
+	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x15B0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Text_SentRequest                                            OFFSET(get<T>, {0x15B8, 8, 0, 0})
+	SMember(FLinearColor)                              Online                                                      OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              Offline                                                     OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
+	SMember(FLinearColor)                              Away                                                        OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.HandleOnlineIndicatorView
+	// void HandleOnlineIndicatorView(char OnlineStatus);                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+	// void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);    // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.ExecuteUbergraph_InviteListEntry_FriendInvite_XS
+	// void ExecuteUbergraph_InviteListEntry_FriendInvite_XS(int32_t EntryPoint);                                               // [0x1d9241c] Final                
 };
 
 /// Class /Game/UI/Frontend/Settings/CustomBindings_v3/GamepadMappingInfo_v3.GamepadMappingInfo_v3_C
@@ -4252,16 +4149,6 @@ class UBorder_Bottom_Box_Rounded_DkBlue_C : public UCommonBorderStyle
 public:
 };
 
-/// Class /Game/UI/Frontend/FrontendItemViewSettingsManager.FrontendItemViewSettingsManager_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UFrontendItemViewSettingsManager_C : public UFortFrontendItemViewSettingsManager
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Game/UI/SocialPanel/ReferAFriendActionMenu.ReferAFriendActionMenu_C
 /// Size: 0x0060 (0x000448 - 0x0004A8)
 class UReferAFriendActionMenu_C : public UFortReferFriendActionMenu
@@ -4326,6 +4213,16 @@ public:
 	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/SocialPanel/ReferAFriendEntry.ReferAFriendEntry_C.ExecuteUbergraph_ReferAFriendEntry
 	// void ExecuteUbergraph_ReferAFriendEntry(int32_t EntryPoint);                                                             // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/Frontend/FrontendItemViewSettingsManager.FrontendItemViewSettingsManager_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UFrontendItemViewSettingsManager_C : public UFortFrontendItemViewSettingsManager
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
 };
 
 /// Class /Game/UI/Frontend/Settings/OptionsMenu.OptionsMenu_C
@@ -4465,6 +4362,61 @@ public:
 	// void ExecuteUbergraph_SocialPanelView_UserLists(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C
+/// Size: 0x0028 (0x0014E0 - 0x001508)
+class USocialPanel_TopBarExtension_C : public UCommonButtonLegacy
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5384;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x14E8, 8, 0, 0})
+	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	CMember(UImage*)                                   Image_PlatformIcon                                          OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	CMember(UMiniPartyBar_C*)                          MiniPartyBar                                                OFFSET(get<T>, {0x1500, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnHovered
+	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnUnhovered
+	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.ExecuteUbergraph_SocialPanel_TopBarExtension
+	// void ExecuteUbergraph_SocialPanel_TopBarExtension(int32_t EntryPoint);                                                   // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C
+/// Size: 0x0040 (0x0002E8 - 0x000328)
+class UMiniPartyBar_C : public UCommonUserWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 808;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        ButtonLocalPlayer                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UImage*)                                   LineSeparator                                               OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(UTeamMemberBanner_C*)                      LocalPlayer                                                 OFFSET(get<T>, {0x300, 8, 0, 0})
+	CMember(UTeamMemberBanner_C*)                      RemotePlayer1                                               OFFSET(get<T>, {0x308, 8, 0, 0})
+	CMember(UTeamMemberBanner_C*)                      RemotePlayer2                                               OFFSET(get<T>, {0x310, 8, 0, 0})
+	CMember(UTeamMemberBanner_C*)                      RemotePlayer3                                               OFFSET(get<T>, {0x318, 8, 0, 0})
+	CMember(UTeamMemberManage_C*)                      NewLocalPlayerWidget                                        OFFSET(get<T>, {0x320, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.Get Banners Tooltip Widget
+	// UWidget* Get Banners Tooltip Widget();                                                                                   // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.HandlePartybarUIFeatureChanged
+	// void HandlePartybarUIFeatureChanged(EFortUIFeature Feature, EFortUIFeatureState FeatureState);                           // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature
+	// void BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.ExecuteUbergraph_MiniPartyBar
+	// void ExecuteUbergraph_MiniPartyBar(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
+};
+
 /// Class /Game/UI/Frontend/Parties/TeamMemberBanner.TeamMemberBanner_C
 /// Size: 0x0040 (0x001520 - 0x001560)
 class UTeamMemberBanner_C : public UFortCampaignTeamMemberBanner
@@ -4541,61 +4493,6 @@ public:
 	// void ExecuteUbergraph_SocialPanel(int32_t EntryPoint);                                                                   // [0x1d9241c] Final                
 };
 
-/// Class /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C
-/// Size: 0x0040 (0x0002E8 - 0x000328)
-class UMiniPartyBar_C : public UCommonUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 808;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        ButtonLocalPlayer                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UImage*)                                   LineSeparator                                               OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	CMember(UTeamMemberBanner_C*)                      LocalPlayer                                                 OFFSET(get<T>, {0x300, 8, 0, 0})
-	CMember(UTeamMemberBanner_C*)                      RemotePlayer1                                               OFFSET(get<T>, {0x308, 8, 0, 0})
-	CMember(UTeamMemberBanner_C*)                      RemotePlayer2                                               OFFSET(get<T>, {0x310, 8, 0, 0})
-	CMember(UTeamMemberBanner_C*)                      RemotePlayer3                                               OFFSET(get<T>, {0x318, 8, 0, 0})
-	CMember(UTeamMemberManage_C*)                      NewLocalPlayerWidget                                        OFFSET(get<T>, {0x320, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.Get Banners Tooltip Widget
-	// UWidget* Get Banners Tooltip Widget();                                                                                   // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.HandlePartybarUIFeatureChanged
-	// void HandlePartybarUIFeatureChanged(EFortUIFeature Feature, EFortUIFeatureState FeatureState);                           // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature
-	// void BndEvt__ButtonLocalPlayer_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/Frontend/Parties/MiniPartyBar.MiniPartyBar_C.ExecuteUbergraph_MiniPartyBar
-	// void ExecuteUbergraph_MiniPartyBar(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C
-/// Size: 0x0028 (0x0014E0 - 0x001508)
-class USocialPanel_TopBarExtension_C : public UCommonButtonLegacy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5384;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x14F0, 8, 0, 0})
-	CMember(UImage*)                                   Image_PlatformIcon                                          OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	CMember(UMiniPartyBar_C*)                          MiniPartyBar                                                OFFSET(get<T>, {0x1500, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnHovered
-	// void BP_OnHovered();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnUnhovered
-	// void BP_OnUnhovered();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/SocialPanel/SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.ExecuteUbergraph_SocialPanel_TopBarExtension
-	// void ExecuteUbergraph_SocialPanel_TopBarExtension(int32_t EntryPoint);                                                   // [0x1d9241c] Final                
-};
-
 /// Class /Game/UI/Foundation/Config/DefaultUIDataConfiguration.DefaultUIDataConfiguration_C
 /// Size: 0x0000 (0x004610 - 0x004610)
 class UDefaultUIDataConfiguration_C : public UFortUIDataConfiguration
@@ -4616,9 +4513,9 @@ class UTextStyle_Base_XS_B_S_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-S.TextStyle-Base-S-B-S_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-B-S.TextStyle-Base-XXS-B-S_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_S_B_S_C : public UTextStyle_Base_S_B_C
+class UTextStyle_Base_XXS_B_S_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -4626,9 +4523,9 @@ class UTextStyle_Base_S_B_S_C : public UTextStyle_Base_S_B_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-B-S.TextStyle-Base-XXS-B-S_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-S-B-S.TextStyle-Base-S-B-S_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XXS_B_S_C : public UTextStyle_BaseParent_C
+class UTextStyle_Base_S_B_S_C : public UTextStyle_Base_S_B_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -4670,6 +4567,17 @@ public:
 	// void ExecuteUbergraph_BuildWatermark(int32_t EntryPoint);                                                                // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/Foundation/Subtitles/Subtitles.Subtitles_C
+/// Size: 0x0008 (0x000328 - 0x000330)
+class USubtitles_C : public UFortHUDElementWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 816;
+
+public:
+	CMember(USubtitleDisplay*)                         SubtitleDisplay                                             OFFSET(get<T>, {0x328, 8, 0, 0})
+};
+
 /// Class /Game/UI/Foundation/Movie/Legacy_MovieWidget.Legacy_MovieWidget_C
 /// Size: 0x0040 (0x000308 - 0x000348)
 class ULegacy_MovieWidget_C : public UFortMovieWidget
@@ -4709,17 +4617,6 @@ public:
 	// void OnMediaFailedToOpen__DelegateSignature();                                                                           // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/UI/Foundation/Movie/Legacy_MovieWidget.Legacy_MovieWidget_C.OnMediaReadyToPlay__DelegateSignature
 	// void OnMediaReadyToPlay__DelegateSignature();                                                                            // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
-};
-
-/// Class /Game/UI/Foundation/Subtitles/Subtitles.Subtitles_C
-/// Size: 0x0008 (0x000328 - 0x000330)
-class USubtitles_C : public UFortHUDElementWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 816;
-
-public:
-	CMember(USubtitleDisplay*)                         SubtitleDisplay                                             OFFSET(get<T>, {0x328, 8, 0, 0})
 };
 
 /// Class /Game/UI/InGame/HUD/MicIndicator/MicIndicator.MicIndicator_C
@@ -4804,16 +4701,6 @@ public:
 	// void ExecuteUbergraph_TeamMicStack(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-B-Black.TextStyle-Base-XS-B-Black_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XS_B_Black_C : public UTextStyle_Base_S_B_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/StateLayouts/Cinematic.Cinematic_C
 /// Size: 0x0059 (0x0005B0 - 0x000609)
 class UCinematic_C : public UFortUIStateWidget_NUI
@@ -4877,6 +4764,16 @@ public:
 	// void ExecuteUbergraph_Cinematic(int32_t EntryPoint);                                                                     // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-B-Black.TextStyle-Base-XS-B-Black_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_XS_B_Black_C : public UTextStyle_Base_S_B_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
 /// Class /Game/UI/Foundation/SoftwareCursors/InvisibleCursorWidget.InvisibleCursorWidget_C
 /// Size: 0x0000 (0x0002C0 - 0x0002C0)
 class UInvisibleCursorWidget_C : public UUserWidget
@@ -4907,16 +4804,6 @@ class UTextStyle_Button_Primary_M_Skew_BurbankLightBlue_C : public UCommonTextSt
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-20-Black.TextStyle-BurbankSmall-20-Black_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbankSmall_20_Black_C : public UTextStyle_BaseParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/Athena/TextStyle_BurbSmBk_20_White50pc.TextStyle_BurbSmBk_20_White50pc_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_BurbSmBk_20_White50pc_C : public UTextStyle_BaseParent_C
@@ -4927,9 +4814,9 @@ class UTextStyle_BurbSmBk_20_White50pc_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Athena/TextStyle_BurbSmBk_20_LightBlue.TextStyle_BurbSmBk_20_LightBlue_C
+/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-20-Black.TextStyle-BurbankSmall-20-Black_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbSmBk_20_LightBlue_C : public UTextStyle_BaseParent_C
+class UTextStyle_BurbankSmall_20_Black_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -4947,9 +4834,9 @@ class UTextStyle_BurbSmBk_20_White_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle_BurbankSmall_M_White.TextStyle_BurbankSmall_M_White_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Athena/TextStyle_BurbSmBk_20_LightBlue.TextStyle_BurbSmBk_20_LightBlue_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbankSmall_M_White_C : public UTextStyle_BaseParent_C
+class UTextStyle_BurbSmBk_20_LightBlue_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -4960,6 +4847,16 @@ public:
 /// Class /Game/UI/Foundation/Text/TextStyle_BurbankSmall_L_DarkBlue.TextStyle_BurbankSmall_L_DarkBlue_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_BurbankSmall_L_DarkBlue_C : public UTextStyle_BaseParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle_BurbankSmall_M_White.TextStyle_BurbankSmall_M_White_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_BurbankSmall_M_White_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -5735,6 +5632,27 @@ public:
 	// void ExecuteUbergraph_CorrectiveActionDateOfBirthScreen(int32_t EntryPoint);                                             // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C
+/// Size: 0x0010 (0x000430 - 0x000440)
+class UCorrectiveActionGuardianEmailScreen_C : public UFortCorrectiveActionGuardianEmailScreen
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1088;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_EmailEntryChallengeError                               OFFSET(get<T>, {0x438, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.OnShowFailureReason
+	// void OnShowFailureReason(FText& FailureReason);                                                                          // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.OnShowCorrectiveActionProcessing
+	// void OnShowCorrectiveActionProcessing(bool bShowProcessing);                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.ExecuteUbergraph_CorrectiveActionGuardianEmailScreen
+	// void ExecuteUbergraph_CorrectiveActionGuardianEmailScreen(int32_t EntryPoint);                                           // [0x1d9241c] Final|HasDefaults    
+};
+
 /// Class /Game/UI/Login/CorrectiveAction/CorrectiveActionDisplayNameScreen.CorrectiveActionDisplayNameScreen_C
 /// Size: 0x0018 (0x000430 - 0x000448)
 class UCorrectiveActionDisplayNameScreen_C : public UFortCorrectiveActionDisplayNameScreen
@@ -5782,48 +5700,6 @@ public:
 	// void OnInputMethodChanged(ECommonInputType InputType);                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/Login/SplashScreen/SplashScreenWidget.SplashScreenWidget_C.ExecuteUbergraph_SplashScreenWidget
 	// void ExecuteUbergraph_SplashScreenWidget(int32_t EntryPoint);                                                            // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C
-/// Size: 0x0010 (0x000430 - 0x000440)
-class UCorrectiveActionGuardianEmailScreen_C : public UFortCorrectiveActionGuardianEmailScreen
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1088;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_EmailEntryChallengeError                               OFFSET(get<T>, {0x438, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.OnShowFailureReason
-	// void OnShowFailureReason(FText& FailureReason);                                                                          // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.OnShowCorrectiveActionProcessing
-	// void OnShowCorrectiveActionProcessing(bool bShowProcessing);                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Login/CorrectiveAction/CorrectiveActionGuardianEmailScreen.CorrectiveActionGuardianEmailScreen_C.ExecuteUbergraph_CorrectiveActionGuardianEmailScreen
-	// void ExecuteUbergraph_CorrectiveActionGuardianEmailScreen(int32_t EntryPoint);                                           // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C
-/// Size: 0x0010 (0x0005D8 - 0x0005E8)
-class UJoinServer_C : public UFortUIStateWidget_JoinServer
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1512;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D8, 8, 0, 0})
-	CMember(UBuildWatermark_C*)                        BuildWatermark                                              OFFSET(get<T>, {0x5E0, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.OnEnterState
-	// void OnEnterState(EFortUIState PreviousUIState);                                                                         // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.OnShowTutorialDialog
-	// void OnShowTutorialDialog();                                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.ExecuteUbergraph_JoinServer
-	// void ExecuteUbergraph_JoinServer(int32_t EntryPoint);                                                                    // [0x1d9241c] Final                
 };
 
 /// Class /Game/UI/Login/CorrectiveAction/WBP_ComboBox.WBP_ComboBox_C
@@ -5898,6 +5774,27 @@ public:
 	// void ExecuteUbergraph_WBP_ComboBox(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C
+/// Size: 0x0010 (0x0005D8 - 0x0005E8)
+class UJoinServer_C : public UFortUIStateWidget_JoinServer
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1512;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D8, 8, 0, 0})
+	CMember(UBuildWatermark_C*)                        BuildWatermark                                              OFFSET(get<T>, {0x5E0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.OnEnterState
+	// void OnEnterState(EFortUIState PreviousUIState);                                                                         // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.OnShowTutorialDialog
+	// void OnShowTutorialDialog();                                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/StateLayouts/JoinServer.JoinServer_C.ExecuteUbergraph_JoinServer
+	// void ExecuteUbergraph_JoinServer(int32_t EntryPoint);                                                                    // [0x1d9241c] Final                
+};
+
 /// Class /Game/UI/JoinServer/RejoinWindow.RejoinWindow_C
 /// Size: 0x0038 (0x0005B0 - 0x0005E8)
 class URejoinWindow_C : public UFortRejoinWindowBase
@@ -5970,9 +5867,9 @@ class UButtonStyle_CycleArrow_Left_Double_C : public UButtonStyle_MediumTranspar
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_CycleArrow_Left.ButtonStyle_CycleArrow_Left_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_CycleArrow_Right.ButtonStyle_CycleArrow_Right_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_CycleArrow_Left_C : public UButtonStyle_MediumTransparentNoCues_C
+class UButtonStyle_CycleArrow_Right_C : public UButtonStyle_MediumTransparentNoCues_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -5980,9 +5877,9 @@ class UButtonStyle_CycleArrow_Left_C : public UButtonStyle_MediumTransparentNoCu
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_CycleArrow_Right.ButtonStyle_CycleArrow_Right_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_CycleArrow_Left.ButtonStyle_CycleArrow_Left_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_CycleArrow_Right_C : public UButtonStyle_MediumTransparentNoCues_C
+class UButtonStyle_CycleArrow_Left_C : public UButtonStyle_MediumTransparentNoCues_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -6052,52 +5949,6 @@ public:
 	// void ExecuteUbergraph_StoreSelectionPopup(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/TopBar/ButtonStyle-Yellow-NewCTA.ButtonStyle-Yellow-NewCTA_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Yellow_NewCTA_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C
-/// Size: 0x0078 (0x0002C0 - 0x000338)
-class UInfoFlag_C : public UUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 824;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
-	CMember(UImage*)                                   BG_Gradient                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     CommonRichTextBlock                                         OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(UImage*)                                   Trim                                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(FLinearColor)                              TrimColor                                                   OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
-	SMember(FLinearColor)                              GradientColor                                               OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
-	DMember(double)                                    TrimWidth                                                   OFFSET(get<double>, {0x308, 8, 0, 0})
-	SMember(FText)                                     InfoText                                                    OFFSET(getStruct<T>, {0x310, 24, 0, 0})
-	DMember(double)                                    GradientDistance                                            OFFSET(get<double>, {0x328, 8, 0, 0})
-	DMember(double)                                    MaxWidth                                                    OFFSET(get<double>, {0x330, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateText
-	// void UpdateText(FText& Text);                                                                                            // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateGradientColor
-	// void UpdateGradientColor(FLinearColor Color);                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateTrimColor
-	// void UpdateTrimColor(FLinearColor Color);                                                                                // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.PreConstruct
-	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.ExecuteUbergraph_InfoFlag
-	// void ExecuteUbergraph_InfoFlag(int32_t EntryPoint);                                                                      // [0x1d9241c] Final|HasDefaults    
-};
-
 /// Class /Game/UI/Foundation/Modals/RedeemCodeWindow/RedeemFriendCodeWindow.RedeemFriendCodeWindow_C
 /// Size: 0x0068 (0x000578 - 0x0005E0)
 class URedeemFriendCodeWindow_C : public UFortRedeemCodeBase
@@ -6142,12 +5993,48 @@ public:
 	// void ExecuteUbergraph_RedeemFriendCodeWindow(int32_t EntryPoint);                                                        // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-BurbReg-Black-22.TextStyle-BurbReg-Black-22_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbReg_Black_22_C : public UTextStyle_Base_M_B_C
+/// Class /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C
+/// Size: 0x0078 (0x0002C0 - 0x000338)
+class UInfoFlag_C : public UUserWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
+	static inline constexpr uint64_t __MDKClassSize = 824;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
+	CMember(UImage*)                                   BG_Gradient                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     CommonRichTextBlock                                         OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(UImage*)                                   Trim                                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	SMember(FLinearColor)                              TrimColor                                                   OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
+	SMember(FLinearColor)                              GradientColor                                               OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
+	DMember(double)                                    TrimWidth                                                   OFFSET(get<double>, {0x308, 8, 0, 0})
+	SMember(FText)                                     InfoText                                                    OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	DMember(double)                                    GradientDistance                                            OFFSET(get<double>, {0x328, 8, 0, 0})
+	DMember(double)                                    MaxWidth                                                    OFFSET(get<double>, {0x330, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateText
+	// void UpdateText(FText& Text);                                                                                            // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateGradientColor
+	// void UpdateGradientColor(FLinearColor Color);                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.UpdateTrimColor
+	// void UpdateTrimColor(FLinearColor Color);                                                                                // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.PreConstruct
+	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/InfoFlag.InfoFlag_C.ExecuteUbergraph_InfoFlag
+	// void ExecuteUbergraph_InfoFlag(int32_t EntryPoint);                                                                      // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/TopBar/ButtonStyle-Yellow-NewCTA.ButtonStyle-Yellow-NewCTA_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Yellow_NewCTA_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
@@ -6162,26 +6049,9 @@ class UTextStyle_Base_XS_B_S_Red_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Frontend/StoreMain/Store_BannerMessage.Store_BannerMessage_C
-/// Size: 0x0010 (0x0002F0 - 0x000300)
-class UStore_BannerMessage_C : public UFortStoreBanner
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 768;
-
-public:
-	CMember(UWidgetAnimation*)                         Ani_Intro                                                   OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UImage*)                                   AnimatingBorder                                             OFFSET(get<T>, {0x2F8, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Frontend/StoreMain/Store_BannerMessage.Store_BannerMessage_C.Pulse
-	// void Pulse();                                                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-B-70pc.TextStyle-Base-XS-B-70pc_C
+/// Class /Game/UI/Foundation/Text/TextStyle-BurbReg-Black-22.TextStyle-BurbReg-Black-22_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XS_B_70pc_C : public UTextStyle_Base_XS_C
+class UTextStyle_BurbReg_Black_22_C : public UTextStyle_Base_M_B_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -6225,29 +6095,6 @@ public:
 	// void ExecuteUbergraph_MTXButton(int32_t EntryPoint);                                                                     // [0x1d9241c] Final                
 };
 
-/// Class /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C
-/// Size: 0x0050 (0x0002E8 - 0x000338)
-class UStoreMain_OfferDetailsAttribute_C : public UCommonUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 824;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
-	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     Name                                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Value                                                       OFFSET(get<T>, {0x300, 8, 0, 0})
-	SMember(FText)                                     AttributeDescription                                        OFFSET(getStruct<T>, {0x308, 24, 0, 0})
-	SMember(FText)                                     AttributeValue                                              OFFSET(getStruct<T>, {0x320, 24, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.ExecuteUbergraph_StoreMain_OfferDetailsAttribute
-	// void ExecuteUbergraph_StoreMain_OfferDetailsAttribute(int32_t EntryPoint);                                               // [0x1d9241c] Final                
-};
-
 /// Class /Game/UI/Social/FortOwningPlayerSocialNameTextBlock.FortOwningPlayerSocialNameTextBlock_C
 /// Size: 0x0000 (0x0002C8 - 0x0002C8)
 class UFortOwningPlayerSocialNameTextBlock_C : public UFortOwningPlayerSocialNameTextBlock
@@ -6258,30 +6105,26 @@ class UFortOwningPlayerSocialNameTextBlock_C : public UFortOwningPlayerSocialNam
 public:
 };
 
-/// Class /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C
-/// Size: 0x0020 (0x000580 - 0x0005A0)
-class UPurchaseUnavailable_C : public UFortPurchaseUnavailableModal
+/// Class /Game/UI/Frontend/StoreMain/Store_BannerMessage.Store_BannerMessage_C
+/// Size: 0x0010 (0x0002F0 - 0x000300)
+class UStore_BannerMessage_C : public UFortStoreBanner
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1440;
+	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x580, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x588, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     RichText_Details                                            OFFSET(get<T>, {0x590, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     RichText_HeaderText                                         OFFSET(get<T>, {0x598, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Ani_Intro                                                   OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UImage*)                                   AnimatingBorder                                             OFFSET(get<T>, {0x2F8, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C.OnUpdateTextStyle
-	// void OnUpdateTextStyle(FText& OfferDisplayName);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C.ExecuteUbergraph_PurchaseUnavailable
-	// void ExecuteUbergraph_PurchaseUnavailable(int32_t EntryPoint);                                                           // [0x1d9241c] Final|HasDefaults    
+	// Function /Game/UI/Frontend/StoreMain/Store_BannerMessage.Store_BannerMessage_C.Pulse
+	// void Pulse();                                                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-70pc.TextStyle-Base-XS-70pc_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-B-70pc.TextStyle-Base-XS-B-70pc_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XS_70pc_C : public UTextStyle_Base_XS_C
+class UTextStyle_Base_XS_B_70pc_C : public UTextStyle_Base_XS_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -6318,23 +6161,58 @@ public:
 	// void ExecuteUbergraph_MTXOffer_SpecialBanner(int32_t EntryPoint);                                                        // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C
-/// Size: 0x0010 (0x0002E8 - 0x0002F8)
-class USimpleMTXDisplay_C : public UFortSimpleMTXDisplay
+/// Class /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C
+/// Size: 0x0050 (0x0002E8 - 0x000338)
+class UStoreMain_OfferDetailsAttribute_C : public UCommonUserWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 760;
+	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     AvailableAmountText                                         OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     Name                                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Value                                                       OFFSET(get<T>, {0x300, 8, 0, 0})
+	SMember(FText)                                     AttributeDescription                                        OFFSET(getStruct<T>, {0x308, 24, 0, 0})
+	SMember(FText)                                     AttributeValue                                              OFFSET(getStruct<T>, {0x320, 24, 0, 0})
 
 
 	/// Functions
-	// Function /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C.OnUpdateAvailableMTX
-	// void OnUpdateAvailableMTX(int32_t AvailableBalance);                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C.ExecuteUbergraph_SimpleMTXDisplay
-	// void ExecuteUbergraph_SimpleMTXDisplay(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
+	// Function /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.Construct
+	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.ExecuteUbergraph_StoreMain_OfferDetailsAttribute
+	// void ExecuteUbergraph_StoreMain_OfferDetailsAttribute(int32_t EntryPoint);                                               // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C
+/// Size: 0x0020 (0x000580 - 0x0005A0)
+class UPurchaseUnavailable_C : public UFortPurchaseUnavailableModal
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1440;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x580, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x588, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     RichText_Details                                            OFFSET(get<T>, {0x590, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     RichText_HeaderText                                         OFFSET(get<T>, {0x598, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C.OnUpdateTextStyle
+	// void OnUpdateTextStyle(FText& OfferDisplayName);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/Frontend/StoreMain/PurchaseUnavailable.PurchaseUnavailable_C.ExecuteUbergraph_PurchaseUnavailable
+	// void ExecuteUbergraph_PurchaseUnavailable(int32_t EntryPoint);                                                           // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XS-70pc.TextStyle-Base-XS-70pc_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_XS_70pc_C : public UTextStyle_Base_XS_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
 };
 
 /// Class /Game/UI/Login/SubGameSelect/LoadingSubGameContentModal.LoadingSubGameContentModal_C
@@ -6370,6 +6248,25 @@ public:
 	// void OnAnimationFinished(UWidgetAnimation* Animation);                                                                   // [0x1d9241c] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Game/UI/Login/SubGameSelect/LoadingSubGameContentModal.LoadingSubGameContentModal_C.ExecuteUbergraph_LoadingSubGameContentModal
 	// void ExecuteUbergraph_LoadingSubGameContentModal(int32_t EntryPoint);                                                    // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C
+/// Size: 0x0010 (0x0002E8 - 0x0002F8)
+class USimpleMTXDisplay_C : public UFortSimpleMTXDisplay
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 760;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     AvailableAmountText                                         OFFSET(get<T>, {0x2F0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C.OnUpdateAvailableMTX
+	// void OnUpdateAvailableMTX(int32_t AvailableBalance);                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Frontend/ItemShop/SimpleMTXDisplay.SimpleMTXDisplay_C.ExecuteUbergraph_SimpleMTXDisplay
+	// void ExecuteUbergraph_SimpleMTXDisplay(int32_t EntryPoint);                                                              // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/Login/SubGameSelect/SubgameTile.SubgameTile_C
@@ -6434,9 +6331,9 @@ class UButtonStyle_Skew2_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border-SolidBG-DkBlue.Border-SolidBG-DkBlue_C
+/// Class /Game/UI/Foundation/Border/Border_StatRow_WhiteLowOpacity.Border_StatRow_WhiteLowOpacity_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_SolidBG_DkBlue_C : public UCommonBorderStyle
+class UBorder_StatRow_WhiteLowOpacity_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -6444,9 +6341,9 @@ class UBorder_SolidBG_DkBlue_C : public UCommonBorderStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border_StatRow_WhiteLowOpacity.Border_StatRow_WhiteLowOpacity_C
+/// Class /Game/UI/Foundation/Border/Border-SolidBG-DkBlue.Border-SolidBG-DkBlue_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_StatRow_WhiteLowOpacity_C : public UCommonBorderStyle
+class UBorder_SolidBG_DkBlue_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -6530,6 +6427,60 @@ public:
 	// void ExecuteUbergraph_LoginCredentialSelect(int32_t EntryPoint);                                                         // [0x1d9241c] Final                
 };
 
+/// Class /Game/UI/Login/DisplayName/DisplayName.DisplayName_C
+/// Size: 0x0020 (0x0005C0 - 0x0005E0)
+class UDisplayName_C : public UFortDisplayNameWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1504;
+
+public:
+	CMember(UCommonBorder*)                            DisplayNameBorder                                           OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	CMember(UEditableText*)                            EditText_Number                                             OFFSET(get<T>, {0x5C8, 8, 0, 0})
+	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x5D0, 8, 0, 0})
+	CMember(UVerticalBox*)                             VBox_Number                                                 OFFSET(get<T>, {0x5D8, 8, 0, 0})
+};
+
+/// Class /Game/UI/Login/MFA/MultiFactorAuthWidget.MultiFactorAuthWidget_C
+/// Size: 0x0000 (0x000580 - 0x000580)
+class UMultiFactorAuthWidget_C : public UFortMultiFactorAuthWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1408;
+
+public:
+};
+
+/// Class /Game/UI/Login/AccountSelect/AccountNotFound.AccountNotFound_C
+/// Size: 0x0000 (0x000560 - 0x000560)
+class UAccountNotFound_C : public UFortAccountNotFound
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1376;
+
+public:
+};
+
+/// Class /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C
+/// Size: 0x0018 (0x000670 - 0x000688)
+class UAccountPinLinkingWindow_C : public UFortAccountPinLinkingWindow
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1672;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x670, 8, 0, 0})
+	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x678, 8, 0, 0})
+	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x680, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C.BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature
+	// void BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(UWidget* ActiveWidget, int32_t ActiveWidgetIndex); // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C.ExecuteUbergraph_AccountPinLinkingWindow
+	// void ExecuteUbergraph_AccountPinLinkingWindow(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
+};
+
 /// Class /Game/UI/Foundation/Buttons/SkewButton.SkewButton_C
 /// Size: 0x0063 (0x0014E0 - 0x001543)
 class USkewButton_C : public UCommonButtonLegacy
@@ -6580,50 +6531,6 @@ public:
 	// void ExecuteUbergraph_SkewButton(int32_t EntryPoint);                                                                    // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Login/DisplayName/DisplayName.DisplayName_C
-/// Size: 0x0020 (0x0005C0 - 0x0005E0)
-class UDisplayName_C : public UFortDisplayNameWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1504;
-
-public:
-	CMember(UCommonBorder*)                            DisplayNameBorder                                           OFFSET(get<T>, {0x5C0, 8, 0, 0})
-	CMember(UEditableText*)                            EditText_Number                                             OFFSET(get<T>, {0x5C8, 8, 0, 0})
-	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	CMember(UVerticalBox*)                             VBox_Number                                                 OFFSET(get<T>, {0x5D8, 8, 0, 0})
-};
-
-/// Class /Game/UI/Login/MFA/MultiFactorAuthWidget.MultiFactorAuthWidget_C
-/// Size: 0x0000 (0x000580 - 0x000580)
-class UMultiFactorAuthWidget_C : public UFortMultiFactorAuthWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1408;
-
-public:
-};
-
-/// Class /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C
-/// Size: 0x0018 (0x000670 - 0x000688)
-class UAccountPinLinkingWindow_C : public UFortAccountPinLinkingWindow
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1672;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x670, 8, 0, 0})
-	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x678, 8, 0, 0})
-	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x680, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C.BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature
-	// void BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(UWidget* ActiveWidget, int32_t ActiveWidgetIndex); // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/Login/AccountLinking/AccountPinLinkingWindow.AccountPinLinkingWindow_C.ExecuteUbergraph_AccountPinLinkingWindow
-	// void ExecuteUbergraph_AccountPinLinkingWindow(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
-};
-
 /// Class /Game/UI/Login/Eula/EulaWidget.EulaWidget_C
 /// Size: 0x0010 (0x000598 - 0x0005A8)
 class UEulaWidget_C : public UFortEulaWidget
@@ -6653,16 +6560,6 @@ public:
 	CMember(UVerticalBox*)                             ContentBox                                                  OFFSET(get<T>, {0x5B8, 8, 0, 0})
 };
 
-/// Class /Game/UI/Login/AccountSelect/AccountNotFound.AccountNotFound_C
-/// Size: 0x0000 (0x000560 - 0x000560)
-class UAccountNotFound_C : public UFortAccountNotFound
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1376;
-
-public:
-};
-
 /// Class /Game/UI/Login/AccountLinking/AccountLinkingWindow.AccountLinkingWindow_C
 /// Size: 0x0000 (0x000638 - 0x000638)
 class UAccountLinkingWindow_C : public UFortAccountLinkingWindow
@@ -6671,6 +6568,27 @@ class UAccountLinkingWindow_C : public UFortAccountLinkingWindow
 	static inline constexpr uint64_t __MDKClassSize = 1592;
 
 public:
+};
+
+/// Class /Game/UI/Login/CorrectiveAction/CorrectiveActionUnsupportedActionScreen.CorrectiveActionUnsupportedActionScreen_C
+/// Size: 0x0000 (0x000438 - 0x000438)
+class UCorrectiveActionUnsupportedActionScreen_C : public UFortCorrectiveActionUnsupportedActionScreen
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1080;
+
+public:
+};
+
+/// Class /Game/UI/Login/AccountLinking/PinGrantCodeInfoWidget.PinGrantCodeInfoWidget_C
+/// Size: 0x0008 (0x000340 - 0x000348)
+class UPinGrantCodeInfoWidget_C : public UFortPinGrantCodeInfoWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 840;
+
+public:
+	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x340, 8, 0, 0})
 };
 
 /// Class /Game/UI/Login/QualitySelection/QualityLevelSelectScreen.QualityLevelSelectScreen_C
@@ -6743,25 +6661,14 @@ public:
 	// void ExecuteUbergraph_QualityModeSelectTile(int32_t EntryPoint);                                                         // [0x1d9241c] Final                
 };
 
-/// Class /Game/UI/Login/CorrectiveAction/CorrectiveActionUnsupportedActionScreen.CorrectiveActionUnsupportedActionScreen_C
-/// Size: 0x0000 (0x000438 - 0x000438)
-class UCorrectiveActionUnsupportedActionScreen_C : public UFortCorrectiveActionUnsupportedActionScreen
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-FullyInvisible.ButtonStyle-FullyInvisible_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_FullyInvisible_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
-};
-
-/// Class /Game/UI/Login/AccountLinking/PinGrantCodeInfoWidget.PinGrantCodeInfoWidget_C
-/// Size: 0x0008 (0x000340 - 0x000348)
-class UPinGrantCodeInfoWidget_C : public UFortPinGrantCodeInfoWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 840;
-
-public:
-	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x340, 8, 0, 0})
 };
 
 /// Class /Game/UI/Frontend/BottomBar/AthenaBottomBarWidget.AthenaBottomBarWidget_C
@@ -6804,9 +6711,29 @@ public:
 	// void ExecuteUbergraph_AthenaBottomBarWidget(int32_t EntryPoint);                                                         // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-FullyInvisible.ButtonStyle-FullyInvisible_C
+/// Class /Game/UI/Login/Status/StatusWidget.StatusWidget_C
+/// Size: 0x0008 (0x0005D8 - 0x0005E0)
+class UStatusWidget_C : public UFortLoginStatus
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1504;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.SetContinueButtonText
+	// void SetContinueButtonText(FText& ContinueText);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.SetQuitButtonText
+	// void SetQuitButtonText(FText& QuitText);                                                                                 // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.ExecuteUbergraph_StatusWidget
+	// void ExecuteUbergraph_StatusWidget(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Primary/ButtonStyle_HoldPurchase_Yellow.ButtonStyle_HoldPurchase_Yellow_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_FullyInvisible_C : public UCommonButtonStyle
+class UButtonStyle_HoldPurchase_Yellow_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -6814,9 +6741,9 @@ class UButtonStyle_FullyInvisible_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Primary/ButtonStyle_HoldPurchase_Yellow.ButtonStyle_HoldPurchase_Yellow_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Primary/ButtonStyle-Primary-M_Skew_Yellow.ButtonStyle-Primary-M_Skew_Yellow_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_HoldPurchase_Yellow_C : public UCommonButtonStyle
+class UButtonStyle_Primary_M_Skew_Yellow_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -6854,46 +6781,6 @@ class UTextStyle_Base_M_B_Black_C : public UTextStyle_Base_M_B_C
 public:
 };
 
-/// Class /Game/UI/Login/Status/StatusWidget.StatusWidget_C
-/// Size: 0x0008 (0x0005D8 - 0x0005E0)
-class UStatusWidget_C : public UFortLoginStatus
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1504;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D8, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.SetContinueButtonText
-	// void SetContinueButtonText(FText& ContinueText);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.SetQuitButtonText
-	// void SetQuitButtonText(FText& QuitText);                                                                                 // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/UI/Login/Status/StatusWidget.StatusWidget_C.ExecuteUbergraph_StatusWidget
-	// void ExecuteUbergraph_StatusWidget(int32_t EntryPoint);                                                                  // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-M-B_Red.TextStyle-Base-M-B_Red_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_M_B_Red_C : public UTextStyle_Base_M_B_Blue_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Primary/ButtonStyle-Primary-M_Skew_Yellow.ButtonStyle-Primary-M_Skew_Yellow_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Primary_M_Skew_Yellow_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Text/TextStyle-Base-S-70pc.TextStyle-Base-S-70pc_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Base_S_70pc_C : public UTextStyle_BaseParent_C
@@ -6904,29 +6791,19 @@ class UTextStyle_Base_S_70pc_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Skew/ButtonStyle-Skew_Desirable.ButtonStyle-Skew_Desirable_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Skew_Desirable_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Skew/ButtonStyle-Skew_Eula_GamePad.ButtonStyle-Skew_Eula_GamePad_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Skew_Eula_GamePad_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-Header-L-Grey.TextStyle-Header-L-Grey_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Header-L-Black.TextStyle-Header-L-Black_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Header_L_Grey_C : public UTextStyle_HeaderParent_C
+class UTextStyle_Header_L_Black_C : public UTextStyle_HeaderParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-M-B_Red.TextStyle-Base-M-B_Red_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Base_M_B_Red_C : public UTextStyle_Base_M_B_Blue_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -6944,19 +6821,9 @@ class UButtonStyle_Skew_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Header-L-Black.TextStyle-Header-L-Black_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Header_L_Black_C : public UTextStyle_HeaderParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L.ButtonStyle_Feature_L_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Skew/ButtonStyle-Skew_Desirable.ButtonStyle-Skew_Desirable_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Feature_L_C : public UCommonButtonStyle
+class UButtonStyle_Skew_Desirable_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -6964,9 +6831,9 @@ class UButtonStyle_Feature_L_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/TopBar/ButtonStyle-Outline-M.ButtonStyle-Outline-M_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L.ButtonStyle_Feature_L_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Outline_M_C : public UCommonButtonStyle
+class UButtonStyle_Feature_L_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
@@ -6984,22 +6851,32 @@ class UTextStyle_Base_S_Black_C : public UTextStyle_Base_S_B_Blue_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline-M-Disabled.TextStyle-Button-Outline-M-Disabled_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Outline_M_Disabled_C : public UCommonTextStyle
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Skew/ButtonStyle-Skew_Eula_GamePad.ButtonStyle-Skew_Eula_GamePad_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Skew_Eula_GamePad_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L_Yellow.ButtonStyle_Feature_L_Yellow_C
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/TopBar/ButtonStyle-Outline-M.ButtonStyle-Outline-M_C
 /// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Feature_L_Yellow_C : public UCommonButtonStyle
+class UButtonStyle_Outline_M_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1840;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Text/TextStyle-Header-L-Grey.TextStyle-Header-L-Grey_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Header_L_Grey_C : public UTextStyle_HeaderParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 };
@@ -7099,12 +6976,22 @@ public:
 	// void ExecuteUbergraph_WBP_InputField(int32_t EntryPoint);                                                                // [0x1d9241c] Final|HasDefaults    
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_L_Base.TextStyle_Button_Feature_L_Base_C
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Outline-M-Disabled.TextStyle-Button-Outline-M-Disabled_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Feature_L_Base_C : public UCommonTextStyle
+class UTextStyle_Button_Outline_M_Disabled_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L_Yellow.ButtonStyle_Feature_L_Yellow_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Feature_L_Yellow_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
@@ -7117,6 +7004,37 @@ class UTextStyle_Button_Feature_L_Disabled_C : public UCommonTextStyle
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_L_Base.TextStyle_Button_Feature_L_Base_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Button_Feature_L_Base_C : public UCommonTextStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C
+/// Size: 0x0010 (0x000A00 - 0x000A10)
+class AFrontendCamera_Inspect_C : public AFortCameraBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2576;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
+	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnActivated
+	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnDeactivated
+	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.ExecuteUbergraph_FrontendCamera_Inspect
+	// void ExecuteUbergraph_FrontendCamera_Inspect(int32_t EntryPoint);                                                        // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/Login/QualitySelection/QualityLevelSelectTimer.QualityLevelSelectTimer_C
@@ -7177,16 +7095,6 @@ class UConsoleProfileWidget_C : public UFortConsoleProfileWidget
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_M.ButtonStyle_Feature_M_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Feature_M_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_M_Yellow.ButtonStyle_Feature_M_Yellow_C
 /// Size: 0x0000 (0x000730 - 0x000730)
 class UButtonStyle_Feature_M_Yellow_C : public UCommonButtonStyle
@@ -7197,12 +7105,12 @@ class UButtonStyle_Feature_M_Yellow_C : public UCommonButtonStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_M_Disabled.TextStyle_Button_Feature_M_Disabled_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Feature_M_Disabled_C : public UCommonTextStyle
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_M.ButtonStyle_Feature_M_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Feature_M_C : public UCommonButtonStyle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
@@ -7217,12 +7125,12 @@ class UTextStyle_Button_Feature_M_Base_C : public UCommonTextStyle
 public:
 };
 
-/// Class /Game/UI/Foundation/Border/Border-SolidBG-Yellow.Border-SolidBG-Yellow_C
-/// Size: 0x0000 (0x0000F0 - 0x0000F0)
-class UBorder_SolidBG_Yellow_C : public UCommonBorderStyle
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_M_Disabled.TextStyle_Button_Feature_M_Disabled_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Button_Feature_M_Disabled_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 240;
+	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 };
@@ -7255,6 +7163,16 @@ public:
 /// Class /Game/UI/Foundation/Border/Border-MainL-Black.Border-MainL-Black_C
 /// Size: 0x0000 (0x0000F0 - 0x0000F0)
 class UBorder_MainL_Black_C : public UBorder_MainL_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 240;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Border/Border-SolidBG-Yellow.Border-SolidBG-Yellow_C
+/// Size: 0x0000 (0x0000F0 - 0x0000F0)
+class UBorder_SolidBG_Yellow_C : public UCommonBorderStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 240;
@@ -7313,27 +7231,6 @@ class UItemManagementTileButtonStyle_AthenaLocker_C : public UButtonStyle_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
-};
-
-/// Class /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C
-/// Size: 0x0010 (0x000A00 - 0x000A10)
-class AFrontendCamera_Inspect_C : public AFortCameraBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2576;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
-	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnActivated
-	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.BP_OnDeactivated
-	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Inspect.FrontendCamera_Inspect_C.ExecuteUbergraph_FrontendCamera_Inspect
-	// void ExecuteUbergraph_FrontendCamera_Inspect(int32_t EntryPoint);                                                        // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/Foundation/Environment/Cameras/FrontendCamera_Main.FrontendCamera_Main_C
@@ -7506,6 +7403,109 @@ public:
 	// void ExecuteUbergraph_MPItemShop_VaultWorld(int32_t EntryPoint);                                                         // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListObject.CurrencyListObject_C
+/// Size: 0x0050 (0x000028 - 0x000078)
+class UCurrencyListObject_C : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 120;
+
+public:
+	SMember(FCurrencyData)                             Data                                                        OFFSET(getStruct<T>, {0x28, 80, 0, 0})
+};
+
+/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C
+/// Size: 0x0031 (0x0002D8 - 0x000309)
+class UItemReceivedHeaderSubWidgetBase_C : public UItemReceivedHeaderBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 777;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D8, 8, 0, 0})
+	CMember(UFortGiftBoxItem*)                         GiftBoxItem_BP                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	SMember(FString)                                   FromUserName_BP                                             OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
+	CMember(TArray<FFortReceivedItemLootInfo>)         ItemDefs                                                    OFFSET(get<T>, {0x2F8, 16, 0, 0})
+	DMember(bool)                                      bSelfGift                                                   OFFSET(get<bool>, {0x308, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.SetBlueprintGiftBoxItem
+	// void SetBlueprintGiftBoxItem(UFortGiftBoxItem* GiftBox, FString FromUser, TArray<FFortReceivedItemLootInfo>& ItemDefs, bool bSelfGift); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.InitFromGiftBoxItem_BP
+	// void InitFromGiftBoxItem_BP();                                                                                           // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedHeaderSubWidgetBase.ItemReceivedHeaderSubWidgetBase_C.ExecuteUbergraph_ItemReceivedHeaderSubWidgetBase
+	// void ExecuteUbergraph_ItemReceivedHeaderSubWidgetBase(int32_t EntryPoint);                                               // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C
+/// Size: 0x0028 (0x0002C0 - 0x0002E8)
+class UCurrencyListViewItem_C : public UUserWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 744;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     CurrencyMessage                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	SMember(FText)                                     DisplayMessage                                              OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.SetQuantityAndType
+	// void SetQuantityAndType(int32_t inInt, FText To);                                                                        // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnEntryReleased
+	// void BP_OnEntryReleased();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnItemExpansionChanged
+	// void BP_OnItemExpansionChanged(bool bIsExpanded);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.BP_OnItemSelectionChanged
+	// void BP_OnItemSelectionChanged(bool bIsSelected);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.OnListItemObjectSet
+	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C.ExecuteUbergraph_CurrencyListViewItem
+	// void ExecuteUbergraph_CurrencyListViewItem(int32_t EntryPoint);                                                          // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C
+/// Size: 0x0010 (0x0002C0 - 0x0002D0)
+class UCurrencyListView_C : public UUserWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 720;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
+	CMember(UCommonListView*)                          DataListView                                                OFFSET(get<T>, {0x2C8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.AddDataToList
+	// void AddDataToList(FCurrencyData CurrencyData);                                                                          // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.RunClearListView
+	// void RunClearListView();                                                                                                 // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListView.CurrencyListView_C.ExecuteUbergraph_CurrencyListView
+	// void ExecuteUbergraph_CurrencyListView(int32_t EntryPoint);                                                              // [0x1d9241c] Final                
+};
+
+/// Class /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C
+/// Size: 0x0010 (0x000320 - 0x000330)
+class UItemReceivedAccountWidget_C : public UFortAccountWidgetBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 816;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x320, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         CommonTextBlock_UserMessage                                 OFFSET(get<T>, {0x328, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C.OnAccountInfoChanged
+	// void OnAccountInfoChanged(FFortPublicAccountInfo& Result);                                                               // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedAccountWidget.ItemReceivedAccountWidget_C.ExecuteUbergraph_ItemReceivedAccountWidget
+	// void ExecuteUbergraph_ItemReceivedAccountWidget(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
+};
+
 /// Class /Game/UI/ItemReceived/ItemReceivedHeaders/ItemReceivedCurrencyHeader.ItemReceivedCurrencyHeader_C
 /// Size: 0x0060 (0x000309 - 0x000369)
 class UItemReceivedCurrencyHeader_C : public UItemReceivedHeaderSubWidgetBase_C
@@ -7660,9 +7660,9 @@ class UTextStyle_Base_XXS_B_Red_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-Red.TextStyle-Base-XXS-Red_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-B-Black.TextStyle-Base-XXS-B-Black_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XXS_Red_C : public UTextStyle_BaseParent_C
+class UTextStyle_Base_XXS_B_Black_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -7670,9 +7670,9 @@ class UTextStyle_Base_XXS_Red_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-B-Black.TextStyle-Base-XXS-B-Black_C
+/// Class /Game/UI/Foundation/Text/TextStyle-Base-XXS-Red.TextStyle-Base-XXS-Red_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Base_XXS_B_Black_C : public UTextStyle_BaseParent_C
+class UTextStyle_Base_XXS_Red_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -7765,6 +7765,16 @@ public:
 	CMember(UImage*)                                   Image_RebootRally                                           OFFSET(get<T>, {0x2E8, 8, 0, 0})
 };
 
+/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-XS-White.TextStyle-BurbankSmall-XS-White_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_BurbankSmall_XS_White_C : public UTextStyle_BaseParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
 /// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-XS-Teal.TextStyle-BurbankSmall-XS-Teal_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_BurbankSmall_XS_Teal_C : public UTextStyle_BaseParent_C
@@ -7778,26 +7788,6 @@ public:
 /// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-XS-Cyan_25pc.TextStyle-BurbankSmall-XS-Cyan_25pc_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_BurbankSmall_XS_Cyan_25pc_C : public UTextStyle_BaseParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-XS-White.TextStyle-BurbankSmall-XS-White_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbankSmall_XS_White_C : public UTextStyle_BaseParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-S-Teal.TextStyle-BurbankSmall-S-Teal_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbankSmall_S_Teal_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -7828,6 +7818,16 @@ public:
 	// void ExecuteUbergraph_PinCodeButton(int32_t EntryPoint);                                                                 // [0x1d9241c] Final                
 };
 
+/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-S-Teal_25pc.TextStyle-BurbankSmall-S-Teal_25pc_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_BurbankSmall_S_Teal_25pc_C : public UTextStyle_BaseParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
 /// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-S-White.TextStyle-BurbankSmall-S-White_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_BurbankSmall_S_White_C : public UTextStyle_BaseParent_C
@@ -7838,9 +7838,9 @@ class UTextStyle_BurbankSmall_S_White_C : public UTextStyle_BaseParent_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-S-Teal_25pc.TextStyle-BurbankSmall-S-Teal_25pc_C
+/// Class /Game/UI/Foundation/Text/TextStyle-BurbankSmall-S-Teal.TextStyle-BurbankSmall-S-Teal_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_BurbankSmall_S_Teal_25pc_C : public UTextStyle_BaseParent_C
+class UTextStyle_BurbankSmall_S_Teal_C : public UTextStyle_BaseParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
@@ -7948,22 +7948,22 @@ class UButtonStyle_BottomBar_Console_C : public UButtonStyle_MediumBase_C
 public:
 };
 
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Tab/ButtonStyle-SoloButton.ButtonStyle-SoloButton_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_SoloButton_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
 /// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle-Button-Primary-MSkew.TextStyle-Button-Primary-MSkew_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class UTextStyle_Button_Primary_MSkew_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/Tab/ButtonStyle-SoloButton.ButtonStyle-SoloButton_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_SoloButton_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
@@ -8039,6 +8039,16 @@ public:
 	// void ExecuteUbergraph_VoiceChannelChangePopup(int32_t EntryPoint);                                                       // [0x1d9241c] Final                
 };
 
+/// Class /Game/UI/Sidebar/Tags/SocialTagsFunctionLibrary.SocialTagsFunctionLibrary_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USocialTagsFunctionLibrary_C : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Game/UI/Foundation/Modals/ErrorWindow/ErrorLlama.ErrorLlama_C
 /// Size: 0x0048 (0x0002C0 - 0x000308)
 class UErrorLlama_C : public UUserWidget
@@ -8070,16 +8080,6 @@ public:
 	// void HandleNormalizedInputDirection(FVector2D 2DInputVec);                                                               // [0x1d9241c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/UI/Foundation/Modals/ErrorWindow/ErrorLlama.ErrorLlama_C.ExecuteUbergraph_ErrorLlama
 	// void ExecuteUbergraph_ErrorLlama(int32_t EntryPoint);                                                                    // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/Sidebar/Tags/SocialTagsFunctionLibrary.SocialTagsFunctionLibrary_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USocialTagsFunctionLibrary_C : public UBlueprintFunctionLibrary
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
 };
 
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/Skew/ButtonStyle-Skew_LBlue.ButtonStyle-Skew_LBlue_C
@@ -8139,50 +8139,6 @@ public:
 	// void BP_OnActivated();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
 	// Function /Game/UI/Foundation/Modals/ControllerDisconnectedModal/Athena_ControllerDisconnectedModal.Athena_ControllerDisconnectedModal_C.ExecuteUbergraph_Athena_ControllerDisconnectedModal
 	// void ExecuteUbergraph_Athena_ControllerDisconnectedModal(int32_t EntryPoint);                                            // [0x1d9241c] Final                
-};
-
-/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_M_Feature_s11.TextStyle_Button_Feature_M_Feature_s11_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class UTextStyle_Button_Feature_M_Feature_s11_C : public UCommonTextStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L_Yellow_s11.ButtonStyle_Feature_L_Yellow_s11_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UButtonStyle_Feature_L_Yellow_s11_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
-/// Class /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C
-/// Size: 0x0018 (0x000578 - 0x000590)
-class URestartClient_C : public UFortRestartClientModal
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1424;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x578, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(UIconTextButton_C*)                        Button_Confirm                                              OFFSET(get<T>, {0x588, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.OnButtonSet
-	// void OnButtonSet(bool InbShouldExit, bool bShouldShow);                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.BndEvt__Button_Confirm_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-	// void BndEvt__Button_Confirm_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.OnInitialized
-	// void OnInitialized();                                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.ExecuteUbergraph_RestartClient
-	// void ExecuteUbergraph_RestartClient(int32_t EntryPoint);                                                                 // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/Foundation/Text/TextStyle-Header-S-Black.TextStyle-Header-S-Black_C
@@ -8262,6 +8218,96 @@ public:
 	// void OnFinishedToast__DelegateSignature();                                                                               // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
 };
 
+/// Class /Game/UI/Foundation/Buttons/TextStyles/TextStyle_Button_Feature_M_Feature_s11.TextStyle_Button_Feature_M_Feature_s11_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class UTextStyle_Button_Feature_M_Feature_s11_C : public UCommonTextStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle_Feature_L_Yellow_s11.ButtonStyle_Feature_L_Yellow_s11_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UButtonStyle_Feature_L_Yellow_s11_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
+
+public:
+};
+
+/// Class /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C
+/// Size: 0x0018 (0x000578 - 0x000590)
+class URestartClient_C : public UFortRestartClientModal
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1424;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x578, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x580, 8, 0, 0})
+	CMember(UIconTextButton_C*)                        Button_Confirm                                              OFFSET(get<T>, {0x588, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.OnButtonSet
+	// void OnButtonSet(bool InbShouldExit, bool bShouldShow);                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.BndEvt__Button_Confirm_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+	// void BndEvt__Button_Confirm_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.OnInitialized
+	// void OnInitialized();                                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/RestartClient/RestartClient.RestartClient_C.ExecuteUbergraph_RestartClient
+	// void ExecuteUbergraph_RestartClient(int32_t EntryPoint);                                                                 // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C
+/// Size: 0x0040 (0x000760 - 0x0007A0)
+class UConfirmationWindow_C : public UFortConfirmationWindow
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1952;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x760, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x768, 8, 0, 0})
+	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x770, 8, 0, 0})
+	CMember(UCommonBorder*)                            TapToCloseZone                                              OFFSET(get<T>, {0x778, 8, 0, 0})
+	SMember(FLinearColor)                              ButtonIconColor                                             OFFSET(getStruct<T>, {0x780, 16, 0, 0})
+	CMember(USoundBase*)                               ConfirmationAppearSound                                     OFFSET(get<T>, {0x790, 8, 0, 0})
+	CMember(USoundBase*)                               CloseWhooshSound                                            OFFSET(get<T>, {0x798, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.Handle Configure Decline Button
+	// void Handle Configure Decline Button(UCommonButtonBase* New Button);                                                     // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ConfigureConfirmationButton
+	// void ConfigureConfirmationButton(UCommonButtonBase* Button, FConfirmationDialogAction& Action, bool bSimpleConfirm);     // [0x1d9241c] Event|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.PlayShowSound
+	// void PlayShowSound();                                                                                                    // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.TapToClose
+	// FEventReply TapToClose(FGeometry MyGeometry, FPointerEvent& MouseEvent);                                                 // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.SetupNonInteractiveContent
+	// void SetupNonInteractiveContent();                                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.GetInputAction
+	// FDataTableRowHandle GetInputAction(FName RowName, bool UseInputAction);                                                  // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.Initialize
+	// void Initialize();                                                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.OnBeginOutro
+	// void OnBeginOutro();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ConfigureDeclineButton
+	// void ConfigureDeclineButton(UCommonButtonBase* Button);                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.BP_OnActivated
+	// void BP_OnActivated();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+	// void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.PreConstruct
+	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ExecuteUbergraph_ConfirmationWindow
+	// void ExecuteUbergraph_ConfirmationWindow(int32_t EntryPoint);                                                            // [0x1d9241c] Final|HasDefaults    
+};
+
 /// Class /Game/UI/Foundation/Buttons/ButtonStyles/Athena/Athena_ButtonStyle_CollectionTab.Athena_ButtonStyle_CollectionTab_C
 /// Size: 0x0000 (0x000730 - 0x000730)
 class UAthena_ButtonStyle_CollectionTab_C : public UCommonButtonStyle
@@ -8327,52 +8373,6 @@ public:
 	// void OnInitialized();                                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/UI/Sidebar/Tags/BP_SidebarCollectionScreenContainerTabButtonEditTags.BP_SidebarCollectionScreenContainerTabButtonEditTags_C.ExecuteUbergraph_BP_SidebarCollectionScreenContainerTabButtonEditTags
 	// void ExecuteUbergraph_BP_SidebarCollectionScreenContainerTabButtonEditTags(int32_t EntryPoint);                          // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C
-/// Size: 0x0040 (0x000760 - 0x0007A0)
-class UConfirmationWindow_C : public UFortConfirmationWindow
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1952;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x760, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x768, 8, 0, 0})
-	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x770, 8, 0, 0})
-	CMember(UCommonBorder*)                            TapToCloseZone                                              OFFSET(get<T>, {0x778, 8, 0, 0})
-	SMember(FLinearColor)                              ButtonIconColor                                             OFFSET(getStruct<T>, {0x780, 16, 0, 0})
-	CMember(USoundBase*)                               ConfirmationAppearSound                                     OFFSET(get<T>, {0x790, 8, 0, 0})
-	CMember(USoundBase*)                               CloseWhooshSound                                            OFFSET(get<T>, {0x798, 8, 0, 0})
-
-
-	/// Functions
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.Handle Configure Decline Button
-	// void Handle Configure Decline Button(UCommonButtonBase* New Button);                                                     // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ConfigureConfirmationButton
-	// void ConfigureConfirmationButton(UCommonButtonBase* Button, FConfirmationDialogAction& Action, bool bSimpleConfirm);     // [0x1d9241c] Event|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.PlayShowSound
-	// void PlayShowSound();                                                                                                    // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.TapToClose
-	// FEventReply TapToClose(FGeometry MyGeometry, FPointerEvent& MouseEvent);                                                 // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.SetupNonInteractiveContent
-	// void SetupNonInteractiveContent();                                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.GetInputAction
-	// FDataTableRowHandle GetInputAction(FName RowName, bool UseInputAction);                                                  // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.Initialize
-	// void Initialize();                                                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.OnBeginOutro
-	// void OnBeginOutro();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ConfigureDeclineButton
-	// void ConfigureDeclineButton(UCommonButtonBase* Button);                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.BP_OnActivated
-	// void BP_OnActivated();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-	// void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1d9241c] BlueprintEvent       
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.PreConstruct
-	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/UI/Foundation/Modals/ConfirmationWindow/ConfirmationWindow.ConfirmationWindow_C.ExecuteUbergraph_ConfirmationWindow
-	// void ExecuteUbergraph_ConfirmationWindow(int32_t EntryPoint);                                                            // [0x1d9241c] Final|HasDefaults    
 };
 
 /// Class /Game/UI/Foundation/CabinMode/ParentalControlsCabinEmailManagementWidget.ParentalControlsCabinEmailManagementWidget_C

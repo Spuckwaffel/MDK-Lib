@@ -431,16 +431,6 @@ public:
 	// void RiderUINewStats__DelegateSignature(FText Name, FSlateBrush Icon, AActor* RidableActor);                             // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
 };
 
-/// Class /RidingContent/Components/WolfRidableComponent.WolfRidableComponent_C
-/// Size: 0x0000 (0x000D80 - 0x000D80)
-class UWolfRidableComponent_C : public UCreatureBaseRidableComponent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3456;
-
-public:
-};
-
 /// Class /RidingContent/Components/BoarRidableComponent.BoarRidableComponent_C
 /// Size: 0x0044 (0x000D80 - 0x000DC4)
 class UBoarRidableComponent_C : public UCreatureBaseRidableComponent_C
@@ -478,6 +468,16 @@ public:
 	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Components/BoarRidableComponent.BoarRidableComponent_C.ExecuteUbergraph_BoarRidableComponent
 	// void ExecuteUbergraph_BoarRidableComponent(int32_t EntryPoint);                                                          // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /RidingContent/Components/WolfRidableComponent.WolfRidableComponent_C
+/// Size: 0x0000 (0x000D80 - 0x000D80)
+class UWolfRidableComponent_C : public UCreatureBaseRidableComponent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3456;
+
+public:
 };
 
 /// Class /EventMode/Components/EventMode_Activator_Component.EventMode_Activator_Component_C

@@ -964,6 +964,62 @@ public:
 	// void $InitCDO();                                                                                                         // [0x1d9241c] None                 
 };
 
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted
+/// Size: 0x0000 (0x000028 - 0x000028)
+class URestricted : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event
+/// Size: 0x0090 (0x000028 - 0x0000B8)
+class URestricted_sticky_event : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 184;
+
+public:
+
+
+	/// Functions
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R
+	// void _L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x97e434c] Native|Public|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled
+	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e4344] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount
+	// int64_t _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e433c] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal
+	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e4334] Native|Public|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.Await
+	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1d9241c] Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1d9241c] None                 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$Block
+	// void $Block();                                                                                                           // [0x1d9241c] None                 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1d9241c] None                 
+};
+
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await
+/// Size: 0x0020 (0x000140 - 0x000160)
+class Utask_Restricted_sticky_event_Await : public UConcurrency_task
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 352;
+
+public:
+	CMember(URestricted_sticky_event*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+
+
+	/// Functions
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await.Update
+	// int64_t Update();                                                                                                        // [0x97e432c] Native|Public|HasOutParms 
+};
+
 /// Class /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTags : public UObject
@@ -1085,62 +1141,6 @@ class UTags_tag_view : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-};
-
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted
-/// Size: 0x0000 (0x000028 - 0x000028)
-class URestricted : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event
-/// Size: 0x0090 (0x000028 - 0x0000B8)
-class URestricted_sticky_event : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
-
-public:
-
-
-	/// Functions
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R
-	// void _L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x97e434c] Native|Public|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled
-	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e4344] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount
-	// int64_t _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e433c] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal
-	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x97e4334] Native|Public|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.Await
-	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1d9241c] Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1d9241c] None                 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$Block
-	// void $Block();                                                                                                           // [0x1d9241c] None                 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1d9241c] None                 
-};
-
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await
-/// Size: 0x0020 (0x000140 - 0x000160)
-class Utask_Restricted_sticky_event_Await : public UConcurrency_task
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 352;
-
-public:
-	CMember(URestricted_sticky_event*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
-
-
-	/// Functions
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await.Update
-	// int64_t Update();                                                                                                        // [0x97e432c] Native|Public|HasOutParms 
 };
 
 /// Class /VerseEngine/_Verse/VNI/VerseEngine.task_VerseEngine_subscribable_event$Await
@@ -3276,6 +3276,81 @@ public:
 	// void $InitCDO();                                                                                                         // [0x1d9241c] HasDefaults          
 };
 
+/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component
+/// Size: 0x00A8 (0x000090 - 0x000138)
+class UGame_Abilities_ability_component : public UVerseFortniteAbilityComponentBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 312;
+
+public:
+
+
+	/// Functions
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RRemoveAbility_L_Ngameplay__ability__asset_R
+	// Game_Abilities_remove_ability_result _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RRemoveAbility_L_Ngameplay__ability__asset_R(UGame_Abilities_gameplay_ability_asset* __verse_0xB2CDDD72_Argument); // [0x9a74b60] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RApplyGameplayEffect_L_Ngameplay__effect__asset_M_Nfloat_R
+	// void _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RApplyGameplayEffect_L_Ngameplay__effect__asset_M_Nfloat_R(Ftuple_Lgameplay__effect__asset_Mfloat_R __verse_0xB2CDDD72_Argument); // [0x9a74b58] Native|Public|BlueprintCallable 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RAddAbility_L_Ngameplay__ability__asset_R
+	// Game_Abilities_add_ability_result _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RAddAbility_L_Ngameplay__ability__asset_R(UGame_Abilities_gameplay_ability_asset* __verse_0xB2CDDD72_Argument); // [0x9a74b50] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
+	// UConcurrency_task* ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R __verse_0xB2CDDD72_Argument); // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1d9241c] None                 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$Block
+	// void $Block();                                                                                                           // [0x1d9241c] None                 
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1d9241c] None                 
+};
+
+/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_AbilityComponent
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UGame_Abilities_AbilityComponent : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_gameplay_ability_asset
+/// Size: 0x0000 (0x0000C8 - 0x0000C8)
+class UGame_Abilities_gameplay_ability_asset : public UAssets_asset
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+};
+
+/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_gameplay_effect_asset
+/// Size: 0x0000 (0x0000C8 - 0x0000C8)
+class UGame_Abilities_gameplay_effect_asset : public UAssets_asset
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+};
+
+/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.task_Game_Abilities_ability_component$ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
+/// Size: 0x0021 (0x000140 - 0x000161)
+class Utask_Game_Abilities_ability_component_ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public UConcurrency_task
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 353;
+
+public:
+	CMember(UGame_Abilities_ability_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument   OFFSET(getStruct<T>, {0x148, 24, 0, 0})
+	CMember(Game_Abilities_activate_ability_result)    _RetVal                                                     OFFSET(get<T>, {0x160, 1, 0, 0})
+
+
+	/// Functions
+	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.task_Game_Abilities_ability_component$ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R.Update
+	// int64_t Update();                                                                                                        // [0x9a74b38] Native|Public|HasOutParms 
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.AI
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAI : public UObject
@@ -3891,81 +3966,6 @@ public:
 	// void $Block();                                                                                                           // [0x1d9241c] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Vehicles_fort_vehicle_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1d9241c] HasDefaults          
-};
-
-/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component
-/// Size: 0x00A8 (0x000090 - 0x000138)
-class UGame_Abilities_ability_component : public UVerseFortniteAbilityComponentBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
-
-public:
-
-
-	/// Functions
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RRemoveAbility_L_Ngameplay__ability__asset_R
-	// Game_Abilities_remove_ability_result _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RRemoveAbility_L_Ngameplay__ability__asset_R(UGame_Abilities_gameplay_ability_asset* __verse_0xB2CDDD72_Argument); // [0x9a74b60] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RApplyGameplayEffect_L_Ngameplay__effect__asset_M_Nfloat_R
-	// void _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RApplyGameplayEffect_L_Ngameplay__effect__asset_M_Nfloat_R(Ftuple_Lgameplay__effect__asset_Mfloat_R __verse_0xB2CDDD72_Argument); // [0x9a74b58] Native|Public|BlueprintCallable 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component._L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RAddAbility_L_Ngameplay__ability__asset_R
-	// Game_Abilities_add_ability_result _L_2fFortnite_2ecom_2fGame_2fAbilities_2fability__component_N_RAddAbility_L_Ngameplay__ability__asset_R(UGame_Abilities_gameplay_ability_asset* __verse_0xB2CDDD72_Argument); // [0x9a74b50] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
-	// UConcurrency_task* ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R __verse_0xB2CDDD72_Argument); // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1d9241c] None                 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$Block
-	// void $Block();                                                                                                           // [0x1d9241c] None                 
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1d9241c] None                 
-};
-
-/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_AbilityComponent
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UGame_Abilities_AbilityComponent : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_gameplay_ability_asset
-/// Size: 0x0000 (0x0000C8 - 0x0000C8)
-class UGame_Abilities_gameplay_ability_asset : public UAssets_asset
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
-
-public:
-};
-
-/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_gameplay_effect_asset
-/// Size: 0x0000 (0x0000C8 - 0x0000C8)
-class UGame_Abilities_gameplay_effect_asset : public UAssets_asset
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
-
-public:
-};
-
-/// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.task_Game_Abilities_ability_component$ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
-/// Size: 0x0021 (0x000140 - 0x000161)
-class Utask_Game_Abilities_ability_component_ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public UConcurrency_task
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 353;
-
-public:
-	CMember(UGame_Abilities_ability_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument   OFFSET(getStruct<T>, {0x148, 24, 0, 0})
-	CMember(Game_Abilities_activate_ability_result)    _RetVal                                                     OFFSET(get<T>, {0x160, 1, 0, 0})
-
-
-	/// Functions
-	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.task_Game_Abilities_ability_component$ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R.Update
-	// int64_t Update();                                                                                                        // [0x9a74b38] Native|Public|HasOutParms 
 };
 
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$AttackObstacle_L_Nfort__obstacle__info_R
@@ -13033,6 +13033,31 @@ public:
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x9, 1, 1, 0})
 };
 
+/// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
+/// Size: 0x0018 (0x000000 - 0x000018)
+class Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+};
+
+/// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__effect__asset_Mfloat_R
+/// Size: 0x0010 (0x000000 - 0x000010)
+class Ftuple_Lgameplay__effect__asset_Mfloat_R : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(UGame_Abilities_gameplay_effect_asset*)    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x8, 8, 0, 0})
+};
+
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.AI_damage_perception_settings
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FAI_damage_perception_settings : public MDKBase
@@ -13427,31 +13452,6 @@ class Ftuple_Lvector3_Mrotation_R : public MDKBase
 public:
 	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
-};
-
-/// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
-/// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 24;
-
-public:
-	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-};
-
-/// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__effect__asset_Mfloat_R
-/// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lgameplay__effect__asset_Mfloat_R : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
-
-public:
-	CMember(UGame_Abilities_gameplay_effect_asset*)    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x8, 8, 0, 0})
 };
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.tuple_Lfort__inventory__item__asset_Mint_R
@@ -15121,39 +15121,6 @@ enum Playspace_PlayerType : uint8_t
 	Playspace_PlayerType__Playspace_MAX3                                             = 3
 };
 
-/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.AI_guard_alert_level
-/// Size: 0x05
-enum AI_guard_alert_level : uint8_t
-{
-	AI_guard_alert_level__Unaware0                                                   = 0,
-	AI_guard_alert_level__Suspicious1                                                = 1,
-	AI_guard_alert_level__LostTarget2                                                = 2,
-	AI_guard_alert_level__Alerted3                                                   = 3,
-	AI_guard_alert_level__AI_guard_alert_MAX4                                        = 4
-};
-
-/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.AI_navigation_result
-/// Size: 0x06
-enum AI_navigation_result : uint8_t
-{
-	AI_navigation_result__Reached0                                                   = 0,
-	AI_navigation_result__PartiallyReached1                                          = 1,
-	AI_navigation_result__Interrupted2                                               = 2,
-	AI_navigation_result__Blocked3                                                   = 3,
-	AI_navigation_result__Unreachable4                                               = 4,
-	AI_navigation_result__AI_navigation_MAX5                                         = 5
-};
-
-/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_team_attitude
-/// Size: 0x04
-enum Teams_team_attitude : uint8_t
-{
-	Teams_team_attitude__Friendly0                                                   = 0,
-	Teams_team_attitude__Neutral1                                                    = 1,
-	Teams_team_attitude__Hostile2                                                    = 2,
-	Teams_team_attitude__Teams_team_MAX3                                             = 3
-};
-
 /// Enum /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_activate_ability_result
 /// Size: 0x07
 enum Game_Abilities_activate_ability_result : uint8_t
@@ -15185,6 +15152,39 @@ enum Game_Abilities_remove_ability_result : uint8_t
 	Game_Abilities_remove_ability_result__Removed1                                   = 1,
 	Game_Abilities_remove_ability_result__Invalid2                                   = 2,
 	Game_Abilities_remove_ability_result__Game_Abilities_remove_ability_MAX3         = 3
+};
+
+/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.AI_guard_alert_level
+/// Size: 0x05
+enum AI_guard_alert_level : uint8_t
+{
+	AI_guard_alert_level__Unaware0                                                   = 0,
+	AI_guard_alert_level__Suspicious1                                                = 1,
+	AI_guard_alert_level__LostTarget2                                                = 2,
+	AI_guard_alert_level__Alerted3                                                   = 3,
+	AI_guard_alert_level__AI_guard_alert_MAX4                                        = 4
+};
+
+/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.AI_navigation_result
+/// Size: 0x06
+enum AI_navigation_result : uint8_t
+{
+	AI_navigation_result__Reached0                                                   = 0,
+	AI_navigation_result__PartiallyReached1                                          = 1,
+	AI_navigation_result__Interrupted2                                               = 2,
+	AI_navigation_result__Blocked3                                                   = 3,
+	AI_navigation_result__Unreachable4                                               = 4,
+	AI_navigation_result__AI_navigation_MAX5                                         = 5
+};
+
+/// Enum /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_team_attitude
+/// Size: 0x04
+enum Teams_team_attitude : uint8_t
+{
+	Teams_team_attitude__Friendly0                                                   = 0,
+	Teams_team_attitude__Neutral1                                                    = 1,
+	Teams_team_attitude__Hostile2                                                    = 2,
+	Teams_team_attitude__Teams_team_MAX3                                             = 3
 };
 
 /// Enum /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase_action_result

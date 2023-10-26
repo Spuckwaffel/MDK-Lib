@@ -17,28 +17,6 @@
 /// dependency: ModularGameplay
 /// dependency: RidingCodeRuntime
 
-/// Class /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C
-/// Size: 0x0008 (0x000B28 - 0x000B30)
-class UGA_Riding_Creature_Burt_SprintCharge_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2864;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
-
-
-	/// Functions
-	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.FailedToActivatePassiveAbility
-	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge
-	// void ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge(int32_t EntryPoint);                                          // [0x1d9241c] Final|HasDefaults    
-};
-
 /// Class /RidingContent/Gameplay/Camera/Riding_PlayerCameraMode_TacticalSprint.Riding_PlayerCameraMode_TacticalSprint_C
 /// Size: 0x0000 (0x001B70 - 0x001B70)
 class URiding_PlayerCameraMode_TacticalSprint_C : public UFortCameraMode_Riding
@@ -67,9 +45,51 @@ public:
 	// void ExecuteUbergraph_GA_Riding_Player_StopRidingOnTriggered(int32_t EntryPoint);                                        // [0x1d9241c] Final|HasDefaults    
 };
 
+/// Class /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C
+/// Size: 0x0008 (0x000B28 - 0x000B30)
+class UGA_Riding_Creature_Burt_SprintCharge_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2864;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+
+
+	/// Functions
+	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.FailedToActivatePassiveAbility
+	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge
+	// void ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge(int32_t EntryPoint);                                          // [0x1d9241c] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_EatSlapBerry_TriggerInfiniteStamina.GE_Riding_EatSlapBerry_TriggerInfiniteStamina_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_EatSlapBerry_TriggerInfiniteStamina_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /RidingContent/Gameplay/Camera/RidingCameraMode.RidingCameraMode_C
+/// Size: 0x0000 (0x001B70 - 0x001B70)
+class URidingCameraMode_C : public UFortCameraMode_Riding
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 7024;
+
+public:
+};
+
+/// Class /RidingContent/Gameplay/General/GE_Riding_Player_Petting.GE_Riding_Player_Petting_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Riding_Player_Petting_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -115,60 +135,6 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1d9241c] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Player_Petting.GA_Riding_Player_Petting_C.ExecuteUbergraph_GA_Riding_Player_Petting
 	// void ExecuteUbergraph_GA_Riding_Player_Petting(int32_t EntryPoint);                                                      // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /RidingContent/Gameplay/General/GE_Riding_Player_Petting.GE_Riding_Player_Petting_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Riding_Player_Petting_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
-/// Class /RidingContent/Gameplay/Camera/RidingCameraMode.RidingCameraMode_C
-/// Size: 0x0000 (0x001B70 - 0x001B70)
-class URidingCameraMode_C : public UFortCameraMode_Riding
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7024;
-
-public:
-};
-
-/// Class /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C
-/// Size: 0x0018 (0x000B28 - 0x000B40)
-class UGA_Riding_Player_IsRiding_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2880;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
-	CMember(UAnimMontage*)                             SettleMontageRef                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(UFortAbilityTask_PlayMontageWaitTarget*)   settleMontageTask                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
-
-
-	/// Functions
-	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.FailedToActivatePassiveAbility
-	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.ExecuteUbergraph_GA_Riding_Player_IsRiding
-	// void ExecuteUbergraph_GA_Riding_Player_IsRiding(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /RidingContent/Gameplay/General/GE_Riding_Player_IsRiding.GE_Riding_Player_IsRiding_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Riding_Player_IsRiding_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
 };
 
 /// Class /RidingContent/Gameplay/General/GA_Riding_Creature_IsBeingRidden_Passive.GA_Riding_Creature_IsBeingRidden_Passive_C
@@ -238,6 +204,40 @@ public:
 /// Class /RidingContent/Gameplay/General/GE_Riding_Irwin_Prey_Burt_IsBeingRidden.GE_Riding_Irwin_Prey_Burt_IsBeingRidden_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Irwin_Prey_Burt_IsBeingRidden_C : public UGE_Riding_Creatue_IsBeingRidden_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C
+/// Size: 0x0018 (0x000B28 - 0x000B40)
+class UGA_Riding_Player_IsRiding_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2880;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	CMember(UAnimMontage*)                             SettleMontageRef                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
+	CMember(UFortAbilityTask_PlayMontageWaitTarget*)   settleMontageTask                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
+
+
+	/// Functions
+	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.FailedToActivatePassiveAbility
+	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.ExecuteUbergraph_GA_Riding_Player_IsRiding
+	// void ExecuteUbergraph_GA_Riding_Player_IsRiding(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
+};
+
+/// Class /RidingContent/Gameplay/General/GE_Riding_Player_IsRiding.GE_Riding_Player_IsRiding_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Riding_Player_IsRiding_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -393,9 +393,9 @@ class UGE_Athena_Ascender_DestroyBuilding_C : public UGET_DirectPhysicalDamage_C
 public:
 };
 
-/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Ascending.GE_Ascender_Ascending_C
+/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Descending.GE_Ascender_Descending_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Ascender_Ascending_C : public UGameplayEffect
+class UGE_Ascender_Descending_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -403,9 +403,9 @@ class UGE_Ascender_Ascending_C : public UGameplayEffect
 public:
 };
 
-/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Descending.GE_Ascender_Descending_C
+/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Ascending.GE_Ascender_Ascending_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Ascender_Descending_C : public UGameplayEffect
+class UGE_Ascender_Ascending_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;

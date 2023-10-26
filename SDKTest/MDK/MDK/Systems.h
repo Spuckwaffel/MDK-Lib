@@ -700,6 +700,24 @@ public:
 	CMember(UMaterialInstance*)                        Material_75_7A7C63B046ADDD7A04B8F3AB7F3C30C4                OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
+/// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogButtons.S_UI_DialogButtons
+/// Size: 0x006C (0x000000 - 0x00006C)
+class FS_UI_DialogButtons : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 108;
+
+public:
+	SMember(FS_UI_Placement)                           GroupPlacement_71_A94CBD4C4E96C298CF51F6B49895AE3D          OFFSET(getStruct<T>, {0x0, 64, 0, 0})
+	DMember(double)                                    SpaceBetweenButtons_62_39091237442DEAE1CAFAE3AB75A757F1     OFFSET(get<double>, {0x40, 8, 0, 0})
+	CMember(TEnumAsByte<ModularButtonSize>)            EachButtonSize_74_7A1E34E243F1F10533E9EA910463B328          OFFSET(get<T>, {0x48, 1, 0, 0})
+	DMember(int32_t)                                   EachButtonMinWidth_77_CA4A0FEF4CF6FF0700E0DB8F95AC917B      OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
+	DMember(bool)                                      EachButtonHorizontalFill_87_3A1B89E0481CE49778D5E39C0BD7E90C OFFSET(get<bool>, {0x50, 1, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       CTAButtonsTypes_89_963DA1ED40E4193862297D976DA12A11         OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(int32_t)                                   FocuseButton_85_CC6A212C4012DDFDC810689A87324E54            OFFSET(get<int32_t>, {0x68, 4, 0, 0})
+};
+
 /// Struct /FortUILibrary/Systems/Data/Structs/S_UI_Text.S_UI_Text
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
 class FS_UI_Text : public MDKBase
@@ -717,24 +735,6 @@ public:
 	DMember(double)                                    LineHeightPercentage_55_2509C2B04F6144283C7BADBF36AAA8F6    OFFSET(get<double>, {0xB0, 8, 0, 0})
 	DMember(bool)                                      AutoWrapText_58_064D5C3A4DD3D362216942A761DDC8D0            OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	DMember(int32_t)                                   WrapTextAt_68_39091237442DEAE1CAFAE3AB75A757F1              OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
-};
-
-/// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogButtons.S_UI_DialogButtons
-/// Size: 0x006C (0x000000 - 0x00006C)
-class FS_UI_DialogButtons : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 108;
-
-public:
-	SMember(FS_UI_Placement)                           GroupPlacement_71_A94CBD4C4E96C298CF51F6B49895AE3D          OFFSET(getStruct<T>, {0x0, 64, 0, 0})
-	DMember(double)                                    SpaceBetweenButtons_62_39091237442DEAE1CAFAE3AB75A757F1     OFFSET(get<double>, {0x40, 8, 0, 0})
-	CMember(TEnumAsByte<ModularButtonSize>)            EachButtonSize_74_7A1E34E243F1F10533E9EA910463B328          OFFSET(get<T>, {0x48, 1, 0, 0})
-	DMember(int32_t)                                   EachButtonMinWidth_77_CA4A0FEF4CF6FF0700E0DB8F95AC917B      OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	DMember(bool)                                      EachButtonHorizontalFill_87_3A1B89E0481CE49778D5E39C0BD7E90C OFFSET(get<bool>, {0x50, 1, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       CTAButtonsTypes_89_963DA1ED40E4193862297D976DA12A11         OFFSET(get<T>, {0x58, 16, 0, 0})
-	DMember(int32_t)                                   FocuseButton_85_CC6A212C4012DDFDC810689A87324E54            OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 };
 
 /// Struct /FortUILibrary/Systems/Data/Structs/S_UI_Backplate.S_UI_Backplate

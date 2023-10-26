@@ -8,6 +8,16 @@
 /// dependency: CoreUObject
 /// dependency: GameplayAbilities
 
+/// Class /Game/GameplayEffectTemplates/GET_CooldownDuration.GET_CooldownDuration_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGET_CooldownDuration_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/GameplayEffectTemplates/GET_TagContainer.GET_TagContainer_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGET_TagContainer_C : public UGameplayEffect
@@ -21,16 +31,6 @@ public:
 /// Class /Game/GameplayEffectTemplates/GET_Status_FullHealth.GET_Status_FullHealth_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGET_Status_FullHealth_C : public UGET_TagContainer_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
-/// Class /Game/GameplayEffectTemplates/GET_CooldownDuration.GET_CooldownDuration_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGET_CooldownDuration_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;

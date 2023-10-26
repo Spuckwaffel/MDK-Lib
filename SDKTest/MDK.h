@@ -35,6 +35,9 @@ class MDKBase
 	// the base pointer where we got the data from
 	uint64_t basePointer = 0;
 
+	// this is always 0 if its not a struct were currently working on
+	uint64_t baseOffset = 0;
+
 	// Memory block struct for memory management
 	struct MemoryBlock
 	{
@@ -45,8 +48,7 @@ class MDKBase
 
 	MemoryBlock block{};
 
-	// this is always 0 if its not a struct were currently working on
-	uint64_t baseOffset = 0;
+	
 
 	// las time the block got updated
 	uint64_t lastCacheTS = -1;
@@ -57,10 +59,15 @@ class MDKBase
 	//whether this block doesnt use caching and is just temporary there and gets freed after it isnt anymore in use
 	bool onlyTemporary = false;
 
+	//only for temporary objects and especially for structs that make copies of the real class
+	bool realOwner = true;
 
+	MDKBase shadowCopy() const;
 public:
 	//initializer 
 	MDKBase();
+
+	
 
 	//only gets called by pointers or default types that are not structs
 	template<typename T>
@@ -92,11 +99,10 @@ public:
 	}
 
 	//we dont even do a single memcpy here, i would call this creating a spoof struct
-	template<typename T>
+	template<typename T = MDKBase>
 	T getStruct(__MDKMemberInfo b) const
 	{
-		T res;
-		memset(&res, 0, sizeof(T::__MDKClassSize));
+		T res = (T)shadowCopy();
 		if (!valid || T::__MDKClassSize != b.size || block.upperBound < b.offset + b.size)
 			return res;
 
@@ -368,7 +374,7 @@ public:
 			//change to our cooked bitfield
 			addr = reinterpret_cast<uint64_t>(&c);
 		}
-		Memory::write(addr, reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset, sizeof(x));
+		Memory::write(instance.basePointer + instance.baseOffset + b.offset, addr, sizeof(x));
 		//make a shadow copy so the current frame sees the change too
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}

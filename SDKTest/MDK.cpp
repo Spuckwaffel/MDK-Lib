@@ -3,6 +3,20 @@
 #include "MDK.h"
 
 
+MDKBase MDKBase::shadowCopy() const
+{
+    MDKBase b;
+    b.basePointer = basePointer;
+    b.baseOffset = baseOffset;
+    b.block = block;
+    b.lastCacheTS = lastCacheTS;
+    b.valid = valid;
+    b.onlyTemporary = onlyTemporary; // is ok no worries, we set to realOwner to false so block doesnt get freed
+    b.realOwner = false;
+    
+    return b;
+}
+
 MDKBase::MDKBase()
 {
 
@@ -11,7 +25,7 @@ MDKBase::MDKBase()
 MDKBase::~MDKBase()
 {
     //objects marked as tamporary aka not cached get deleted
-    if (onlyTemporary)
+    if (onlyTemporary && realOwner)
     {
         free(block.blockPointer);
     }

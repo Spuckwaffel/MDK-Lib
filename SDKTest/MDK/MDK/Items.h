@@ -16,12 +16,12 @@
 /// dependency: SpecialSurfaceCoverageRuntime
 /// dependency: VictoryCrownsRuntime
 
-/// Class /SpecialSurfaceCoverage/Items/SnowSurfaceCoverageMap_GSC.SnowSurfaceCoverageMap_GSC_C
-/// Size: 0x0000 (0x000110 - 0x000110)
-class USnowSurfaceCoverageMap_GSC_C : public UFortGameStateComponent_SurfaceCoverageMap
+/// Class /RankedPermanentQuests/Items/B_CosmeticStatObject_HabaneroProgression_Season26.B_CosmeticStatObject_HabaneroProgression_Season26_C
+/// Size: 0x0000 (0x0000D8 - 0x0000D8)
+class UB_CosmeticStatObject_HabaneroProgression_Season26_C : public UFortCosmeticStatObject_HabaneroProgressionSeasonal
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 272;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
 };
@@ -36,12 +36,12 @@ class UB_CosmeticStatObject_HabaneroProgression_C : public UFortCosmeticStatObje
 public:
 };
 
-/// Class /RankedPermanentQuests/Items/B_CosmeticStatObject_HabaneroProgression_Season26.B_CosmeticStatObject_HabaneroProgression_Season26_C
-/// Size: 0x0000 (0x0000D8 - 0x0000D8)
-class UB_CosmeticStatObject_HabaneroProgression_Season26_C : public UFortCosmeticStatObject_HabaneroProgressionSeasonal
+/// Class /SpecialSurfaceCoverage/Items/SnowSurfaceCoverageMap_GSC.SnowSurfaceCoverageMap_GSC_C
+/// Size: 0x0000 (0x000110 - 0x000110)
+class USnowSurfaceCoverageMap_GSC_C : public UFortGameStateComponent_SurfaceCoverageMap
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 216;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 };

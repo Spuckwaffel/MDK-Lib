@@ -8,6 +8,16 @@
 /// dependency: CommonUI
 /// dependency: CoreUObject
 
+/// Class /FortUILibrary/Styles/Typography/_TextStyle_TagNormal._TextStyle_TagNormal_C
+/// Size: 0x0000 (0x0001A0 - 0x0001A0)
+class U_TextStyle_TagNormal_C : public UCommonTextStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
 /// Class /FortUILibrary/Styles/Typography/_TextStyle_Body2._TextStyle_Body2_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class U_TextStyle_Body2_C : public UCommonTextStyle
@@ -51,16 +61,6 @@ public:
 /// Class /FortUILibrary/Styles/Typography/_TextStyle_SubH2._TextStyle_SubH2_C
 /// Size: 0x0000 (0x0001A0 - 0x0001A0)
 class U_TextStyle_SubH2_C : public UCommonTextStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
-
-public:
-};
-
-/// Class /FortUILibrary/Styles/Typography/_TextStyle_TagNormal._TextStyle_TagNormal_C
-/// Size: 0x0000 (0x0001A0 - 0x0001A0)
-class U_TextStyle_TagNormal_C : public UCommonTextStyle
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 416;

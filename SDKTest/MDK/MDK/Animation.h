@@ -15,14 +15,32 @@
 /// dependency: RidingCodeRuntime
 /// dependency: ValetRuntime
 
-/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_Player_HandSplash_R.AnimNotify_Player_HandSplash_R_C
+/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_Player_HandSplash_L.AnimNotify_Player_HandSplash_L_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UAnimNotify_Player_HandSplash_R_C : public UAnimNotify
+class UAnimNotify_Player_HandSplash_L_C : public UAnimNotify
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
+};
+
+/// Class /Game/Animation/Game/BP_AnimNotify_CameraShake.BP_AnimNotify_CameraShake_C
+/// Size: 0x0011 (0x000038 - 0x000049)
+class UBP_AnimNotify_CameraShake_C : public UAnimNotify
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 73;
+
+public:
+	CMember(UClass*)                                   Shake_BP                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
+	DMember(double)                                    Shake_Scale                                                 OFFSET(get<double>, {0x40, 8, 0, 0})
+	CMember(ECameraShakePlaySpace)                     Shake_Space                                                 OFFSET(get<T>, {0x48, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Animation/Game/BP_AnimNotify_CameraShake.BP_AnimNotify_CameraShake_C.Received_Notify
+	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 };
 
 /// Class /Game/Animation/Game/MainPlayer/Locomotion/Medium/Male/Jog/HeavyWeapon/BP_GCSteps.BP_GCSteps_C
@@ -54,16 +72,6 @@ public:
 	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 };
 
-/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_FootStep_Left.AnimNotify_FootStep_Left_C
-/// Size: 0x0000 (0x000050 - 0x000050)
-class UAnimNotify_FootStep_Left_C : public UAnimNotify_FootStep_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
-
-public:
-};
-
 /// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_FootStep_Right.AnimNotify_FootStep_Right_C
 /// Size: 0x0000 (0x000050 - 0x000050)
 class UAnimNotify_FootStep_Right_C : public UAnimNotify_FootStep_C
@@ -74,9 +82,50 @@ class UAnimNotify_FootStep_Right_C : public UAnimNotify_FootStep_C
 public:
 };
 
-/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_Player_HandSplash_L.AnimNotify_Player_HandSplash_L_C
+/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_FootStep_Left.AnimNotify_FootStep_Left_C
+/// Size: 0x0000 (0x000050 - 0x000050)
+class UAnimNotify_FootStep_Left_C : public UAnimNotify_FootStep_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+};
+
+/// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C
+/// Size: 0x0008 (0x000030 - 0x000038)
+class UAnimNotifyState_HolsterWeapon_C : public UAnimNotifyState
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+	DMember(bool)                                      PlayEquipAnim                                               OFFSET(get<bool>, {0x30, 1, 0, 0})
+	SMember(FName)                                     AnimNotifyStateHolster                                      OFFSET(getStruct<T>, {0x34, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.CanApplyHolster
+	// bool CanApplyHolster(FName& HolsterId);                                                                                  // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.Received_NotifyEnd
+	// bool Received_NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.Received_NotifyBegin
+	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
+/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_PlaySoundWithCondition.AnimNotify_PlaySoundWithCondition_C
+/// Size: 0x0000 (0x000050 - 0x000050)
+class UAnimNotify_PlaySoundWithCondition_C : public UFortAnimNotify_PlaySoundConditional
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+};
+
+/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_Player_HandSplash_R.AnimNotify_Player_HandSplash_R_C
 /// Size: 0x0000 (0x000038 - 0x000038)
-class UAnimNotify_Player_HandSplash_L_C : public UAnimNotify
+class UAnimNotify_Player_HandSplash_R_C : public UAnimNotify
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
@@ -214,51 +263,12 @@ public:
 	// void ExecuteUbergraph_Gameplay_FaceSystem_StateMachine_AnimBP(int32_t EntryPoint);                                       // [0x1d9241c] Final                
 };
 
-/// Class /Game/Animation/Game/BP_AnimNotify_CameraShake.BP_AnimNotify_CameraShake_C
-/// Size: 0x0011 (0x000038 - 0x000049)
-class UBP_AnimNotify_CameraShake_C : public UAnimNotify
+/// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HightBeam_HandFX_HologramHide.AnimNotifyState_HightBeam_HandFX_HologramHide_C
+/// Size: 0x0000 (0x0000A1 - 0x0000A1)
+class UAnimNotifyState_HightBeam_HandFX_HologramHide_C : public UFN_TimedNiagaraNotify_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 73;
-
-public:
-	CMember(UClass*)                                   Shake_BP                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
-	DMember(double)                                    Shake_Scale                                                 OFFSET(get<double>, {0x40, 8, 0, 0})
-	CMember(ECameraShakePlaySpace)                     Shake_Space                                                 OFFSET(get<T>, {0x48, 1, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Animation/Game/BP_AnimNotify_CameraShake.BP_AnimNotify_CameraShake_C.Received_Notify
-	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-};
-
-/// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C
-/// Size: 0x0008 (0x000030 - 0x000038)
-class UAnimNotifyState_HolsterWeapon_C : public UAnimNotifyState
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-	DMember(bool)                                      PlayEquipAnim                                               OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FName)                                     AnimNotifyStateHolster                                      OFFSET(getStruct<T>, {0x34, 4, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.CanApplyHolster
-	// bool CanApplyHolster(FName& HolsterId);                                                                                  // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.Received_NotifyEnd
-	// bool Received_NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.Received_NotifyBegin
-	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-};
-
-/// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_PlaySoundWithCondition.AnimNotify_PlaySoundWithCondition_C
-/// Size: 0x0000 (0x000050 - 0x000050)
-class UAnimNotify_PlaySoundWithCondition_C : public UFortAnimNotify_PlaySoundConditional
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 161;
 
 public:
 };
@@ -315,16 +325,6 @@ class UAnimNotifyState_DisablePawnRotation_C : public UAnimNotifyState
 public:
 };
 
-/// Class /Game/Animation/Libraries/FortAnimationBPFunctionLibrary.FortAnimationBPFunctionLibrary_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UFortAnimationBPFunctionLibrary_C : public UBlueprintFunctionLibrary
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_StopMontageGroup.AnimNotifyState_StopMontageGroup_C
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UAnimNotifyState_StopMontageGroup_C : public UAnimNotifyState
@@ -362,12 +362,12 @@ class UAnimNotifyState_TeleportFinished_C : public UAnimNotifyState
 public:
 };
 
-/// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HightBeam_HandFX_HologramHide.AnimNotifyState_HightBeam_HandFX_HologramHide_C
-/// Size: 0x0000 (0x0000A1 - 0x0000A1)
-class UAnimNotifyState_HightBeam_HandFX_HologramHide_C : public UFN_TimedNiagaraNotify_C
+/// Class /Game/Animation/Libraries/FortAnimationBPFunctionLibrary.FortAnimationBPFunctionLibrary_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UFortAnimationBPFunctionLibrary_C : public UBlueprintFunctionLibrary
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 161;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };
@@ -1388,6 +1388,37 @@ public:
 	// void ExecuteUbergraph_GrindRail_Player_LayerAnimBP(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
 };
 
+/// Struct /Game/Animation/Libraries/RBANParamsStruct.RBANParamsStruct
+/// Size: 0x0B40 (0x000000 - 0x000B40)
+class FRBANParamsStruct : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 2880;
+
+public:
+	SMember(FRBANSettingStruct)                        Skydive_GoingUp_56_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(getStruct<T>, {0x0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_FloatingDown_57_2CBF3D3F421785F8994502931454A81F    OFFSET(getStruct<T>, {0x90, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_DivingDown_58_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(getStruct<T>, {0x120, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_Parachuting_60_A88C4A0A407F497561D31287CB20250F     OFFSET(getStruct<T>, {0x1B0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Standing_59_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(getStruct<T>, {0x240, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Moving_65_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(getStruct<T>, {0x2D0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Crouch_Moving_61_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(getStruct<T>, {0x360, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        EmoteOrMelee_62_CFCF66B5492987CBD638EC98EB34D572            OFFSET(getStruct<T>, {0x3F0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Swimming_64_33CE87CE4D4F712B1384E29115845962                OFFSET(getStruct<T>, {0x480, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Front_End_63_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(getStruct<T>, {0x510, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        DBNO_68_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(getStruct<T>, {0x5A0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        DBNO_Carried_67_99829B99495FCFE3488A9A86B549ECE5            OFFSET(getStruct<T>, {0x630, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Falling_66_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(getStruct<T>, {0x6C0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Ziplining_75_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(getStruct<T>, {0x750, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_Surfing_74_408E65FF484AA54111E1ED8A69D8240D         OFFSET(getStruct<T>, {0x7E0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Standing_69_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(getStruct<T>, {0x870, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Moving_72_EE7A01794460B9753E5076A5A3B3080A           OFFSET(getStruct<T>, {0x900, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Moving_Targeting_73_2F57FD9E477C515D70B3DA9D75453357 OFFSET(getStruct<T>, {0x990, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Tactical_Sprint_70_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(getStruct<T>, {0xA20, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Rail_Grinding_71_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(getStruct<T>, {0xAB0, 144, 0, 0})
+};
+
 /// Struct /Game/Animation/Libraries/ClothParamsStruct.ClothParamsStruct
 /// Size: 0x0780 (0x000000 - 0x000780)
 class FClothParamsStruct : public MDKBase
@@ -1417,6 +1448,22 @@ public:
 	SMember(FClothSettingStruct)                       Riding_Moving_Targeting_52_2F57FD9E477C515D70B3DA9D75453357 OFFSET(getStruct<T>, {0x660, 96, 0, 0})
 	SMember(FClothSettingStruct)                       Tactical_Sprint_51_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(getStruct<T>, {0x6C0, 96, 0, 0})
 	SMember(FClothSettingStruct)                       Rail_Grinding_55_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(getStruct<T>, {0x720, 96, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/WindGustLocalSettingStruct.WindGustLocalSettingStruct
+/// Size: 0x0014 (0x000000 - 0x000014)
+class FWindGustLocalSettingStruct : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 20;
+
+public:
+	DMember(float)                                     ElapsedTime_48_9A24DA0842E21D5736699499F1DE1171             OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     TimeBetweenGusts_54_E1D59EA94088FB83508636942434066D        OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     GustStrength_55_7788D1D04920E9BC2F96FCBDDCA7C33A            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     GustDuration_56_E42A0C8341E10ACAC2016FA7F726B406            OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     FinalGustStrengthLocal_57_BD76FBFF47687A7C38D40EAD653D5618  OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Game/Animation/Libraries/WindGustParamsStruct.WindGustParamsStruct
@@ -1450,37 +1497,6 @@ public:
 	SMember(FWindGustSettingStruct)                    Rail_Grinding_62_FF88FD5F4A9AB308E2F095B9F0657D82           OFFSET(getStruct<T>, {0x8E8, 120, 0, 0})
 };
 
-/// Struct /Game/Animation/Libraries/RBANParamsStruct.RBANParamsStruct
-/// Size: 0x0B40 (0x000000 - 0x000B40)
-class FRBANParamsStruct : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 2880;
-
-public:
-	SMember(FRBANSettingStruct)                        Skydive_GoingUp_56_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(getStruct<T>, {0x0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_FloatingDown_57_2CBF3D3F421785F8994502931454A81F    OFFSET(getStruct<T>, {0x90, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_DivingDown_58_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(getStruct<T>, {0x120, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_Parachuting_60_A88C4A0A407F497561D31287CB20250F     OFFSET(getStruct<T>, {0x1B0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Standing_59_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(getStruct<T>, {0x240, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Moving_65_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(getStruct<T>, {0x2D0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Crouch_Moving_61_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(getStruct<T>, {0x360, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        EmoteOrMelee_62_CFCF66B5492987CBD638EC98EB34D572            OFFSET(getStruct<T>, {0x3F0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Swimming_64_33CE87CE4D4F712B1384E29115845962                OFFSET(getStruct<T>, {0x480, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Front_End_63_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(getStruct<T>, {0x510, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        DBNO_68_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(getStruct<T>, {0x5A0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        DBNO_Carried_67_99829B99495FCFE3488A9A86B549ECE5            OFFSET(getStruct<T>, {0x630, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Falling_66_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(getStruct<T>, {0x6C0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Ziplining_75_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(getStruct<T>, {0x750, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_Surfing_74_408E65FF484AA54111E1ED8A69D8240D         OFFSET(getStruct<T>, {0x7E0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Standing_69_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(getStruct<T>, {0x870, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Moving_72_EE7A01794460B9753E5076A5A3B3080A           OFFSET(getStruct<T>, {0x900, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Moving_Targeting_73_2F57FD9E477C515D70B3DA9D75453357 OFFSET(getStruct<T>, {0x990, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Tactical_Sprint_70_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(getStruct<T>, {0xA20, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Rail_Grinding_71_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(getStruct<T>, {0xAB0, 144, 0, 0})
-};
-
 /// Struct /Game/Animation/Libraries/ClothCoreSettingStruct.ClothCoreSettingStruct
 /// Size: 0x0080 (0x000000 - 0x000080)
 class FClothCoreSettingStruct : public MDKBase
@@ -1505,6 +1521,20 @@ public:
 	DMember(int32_t)                                   NumberSubsteps_23_5108D5FA40140A1AAD38459100B14261          OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
 };
 
+/// Struct /Game/Animation/Libraries/RBANSettingStruct.RBANSettingStruct
+/// Size: 0x0090 (0x000000 - 0x000090)
+class FRBANSettingStruct : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	SMember(FVector)                                   ComponentLinearAccScale_28_9CBE863E417FC965C07809A2FE55ADFD OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearVelScale_31_6A3DFE4A481AD4D7CB18D79F95CC88E8 OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FSimSpaceSettings)                         SimSpaceSettings_34_FE68F666411FF9F29BA84CB4BE726A52        OFFSET(getStruct<T>, {0x30, 96, 0, 0})
+};
+
 /// Struct /Game/Animation/Libraries/ClothSettingStruct.ClothSettingStruct
 /// Size: 0x005C (0x000000 - 0x00005C)
 class FClothSettingStruct : public MDKBase
@@ -1521,36 +1551,6 @@ public:
 	SMember(FVector2D)                                 DragCoefficient_23_FE68F666411FF9F29BA84CB4BE726A52         OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	SMember(FVector2D)                                 LiftCoefficient_24_BB285D994A5B3AFF167F4793D7ECA837         OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	SMember(FName)                                     JointName_27_C74F3B2245EA319DE82A629FF3C17CCA               OFFSET(getStruct<T>, {0x58, 4, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/RBANSettingStruct.RBANSettingStruct
-/// Size: 0x0090 (0x000000 - 0x000090)
-class FRBANSettingStruct : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 144;
-
-public:
-	SMember(FVector)                                   ComponentLinearAccScale_28_9CBE863E417FC965C07809A2FE55ADFD OFFSET(getStruct<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearVelScale_31_6A3DFE4A481AD4D7CB18D79F95CC88E8 OFFSET(getStruct<T>, {0x18, 24, 0, 0})
-	SMember(FSimSpaceSettings)                         SimSpaceSettings_34_FE68F666411FF9F29BA84CB4BE726A52        OFFSET(getStruct<T>, {0x30, 96, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/WindGustLocalSettingStruct.WindGustLocalSettingStruct
-/// Size: 0x0014 (0x000000 - 0x000014)
-class FWindGustLocalSettingStruct : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 20;
-
-public:
-	DMember(float)                                     ElapsedTime_48_9A24DA0842E21D5736699499F1DE1171             OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     TimeBetweenGusts_54_E1D59EA94088FB83508636942434066D        OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     GustStrength_55_7788D1D04920E9BC2F96FCBDDCA7C33A            OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     GustDuration_56_E42A0C8341E10ACAC2016FA7F726B406            OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     FinalGustStrengthLocal_57_BD76FBFF47687A7C38D40EAD653D5618  OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Game/Animation/Libraries/GravityOverrideParamsStruct.GravityOverrideParamsStruct
