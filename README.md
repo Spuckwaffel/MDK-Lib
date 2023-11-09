@@ -11,7 +11,7 @@ However, for the creator of the dumpers, it was always a challenge to create an 
 It may sound simple, but the challenge got harder and harder with larger games and hundreds of classes with confusing names, redefinition of classes, redefinition of names and more. 
 
 Nowadays, there exist two dumpers that are publicly known and actively in development for the newest Unreal Engine versions:
-[Dumper-7](https://github.com/Encryqed/Dumper-7)and [UEDumper](https://github.com/Spuckwaffel/UEDumper), my personal dumper. Both of the dumpers work under the hood the same, Dumper-7 is internal, my dumper is external. 
+[Dumper-7](https://github.com/Encryqed/Dumper-7) and [UEDumper](https://github.com/Spuckwaffel/UEDumper), my personal dumper. Both of the dumpers work under the hood the same, Dumper-7 is internal, my dumper is external. 
 
 I talked a lot with the co-owner of Dumper-7, "Fischsalat", how he fixes the issues with the SDK generation, especially cyclic dependencies, because if you try to use an SDK for the popular game Fortnite, you get thousands of errors. The short answer was, **you can't really fix it**. And that's true, multiple classes have cyclic dependencies, and there's no way how to fix them unless you merge the classes together, merge the imports, reorder the structs, etc. etc.
 And even if you have done that, there are still many redefinitions of classes, and names which are spread everywhere. 
