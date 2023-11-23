@@ -8,6 +8,40 @@
 /// dependency: CoreUObject
 /// dependency: Engine
 
+/// Class /Script/IKRig.RetargetOpBase
+/// Size: 0x0008 (0x000028 - 0x000030)
+class URetargetOpBase : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x28, 1, 0, 0})
+};
+
+/// Class /Script/IKRig.CurveRemapOp
+/// Size: 0x0018 (0x000030 - 0x000048)
+class UCurveRemapOp : public URetargetOpBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 72;
+
+public:
+	CMember(TArray<FCurveRemapPair>)                   CurvesToRemap                                               OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(bool)                                      bCopyAllSourceCurves                                        OFFSET(get<bool>, {0x40, 1, 0, 0})
+};
+
+/// Class /Script/IKRig.RetargetOpStack
+/// Size: 0x0010 (0x000028 - 0x000038)
+class URetargetOpStack : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+	CMember(TArray<URetargetOpBase*>)                  RetargetOps                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+};
+
 /// Class /Script/IKRig.IKGoalCreatorInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UIKGoalCreatorInterface : public UInterface
@@ -16,6 +50,41 @@ class UIKGoalCreatorInterface : public UInterface
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+};
+
+/// Class /Script/IKRig.PinBoneOp
+/// Size: 0x00E0 (0x000030 - 0x000110)
+class UPinBoneOp : public URetargetOpBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 272;
+
+public:
+	CMember(TArray<FPinBoneData>)                      BonesToPin                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(ERetargetSourceOrTarget)                   PinTo                                                       OFFSET(get<T>, {0x40, 1, 0, 0})
+	CMember(EPinBoneType)                              PinType                                                     OFFSET(get<T>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bMaintainOffset                                             OFFSET(get<bool>, {0x42, 1, 0, 0})
+	SMember(FTransform)                                GlobalOffset                                                OFFSET(getStruct<T>, {0x50, 96, 0, 0})
+	SMember(FTransform)                                LocalOffset                                                 OFFSET(getStruct<T>, {0xB0, 96, 0, 0})
+};
+
+/// Class /Script/IKRig.RootMotionGeneratorOp
+/// Size: 0x0220 (0x000030 - 0x000250)
+class URootMotionGeneratorOp : public URetargetOpBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 592;
+
+public:
+	SMember(FName)                                     SourceRootBone                                              OFFSET(getStruct<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     TargetRootBone                                              OFFSET(getStruct<T>, {0x34, 4, 0, 0})
+	SMember(FName)                                     TargetPelvisBone                                            OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	CMember(ERootMotionSource)                         RootMotionSource                                            OFFSET(get<T>, {0x3C, 1, 0, 0})
+	CMember(ERootMotionHeightSource)                   RootHeightSource                                            OFFSET(get<T>, {0x3D, 1, 0, 0})
+	DMember(bool)                                      bPropagateToNonRetargetedChildren                           OFFSET(get<bool>, {0x3E, 1, 0, 0})
+	DMember(bool)                                      bMaintainOffsetFromPelvis                                   OFFSET(get<bool>, {0x3F, 1, 0, 0})
+	DMember(bool)                                      bRotateWithPelvis                                           OFFSET(get<bool>, {0x40, 1, 0, 0})
+	SMember(FTransform)                                GlobalOffset                                                OFFSET(getStruct<T>, {0x50, 96, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRigComponent
@@ -60,15 +129,15 @@ class UIKRetargetGlobalSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FRetargetGlobalSettings)                   Settings                                                    OFFSET(getStruct<T>, {0x28, 28, 0, 0})
+	SMember(FRetargetGlobalSettings)                   Settings                                                    OFFSET(getStruct<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRetargeter
-/// Size: 0x01C8 (0x000028 - 0x0001F0)
+/// Size: 0x01D0 (0x000028 - 0x0001F8)
 class UIKRetargeter : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
+	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
 	CMember(TWeakObjectPtr<UIKRigDefinition*>)         SourceIKRigAsset                                            OFFSET(get<T>, {0x28, 32, 0, 0})
@@ -77,54 +146,56 @@ public:
 	CMember(TArray<URetargetChainSettings*>)           ChainSettings                                               OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(URetargetRootSettings*)                    RootSettings                                                OFFSET(get<T>, {0x88, 8, 0, 0})
 	CMember(UIKRetargetGlobalSettings*)                GlobalSettings                                              OFFSET(get<T>, {0x90, 8, 0, 0})
-	CMember(TMap<FName, FRetargetProfile>)             Profiles                                                    OFFSET(get<T>, {0x98, 80, 0, 0})
-	SMember(FName)                                     CurrentProfile                                              OFFSET(getStruct<T>, {0xE8, 4, 0, 0})
-	CMember(TMap<FName, FIKRetargetPose>)              SourceRetargetPoses                                         OFFSET(get<T>, {0xF0, 80, 0, 0})
-	CMember(TMap<FName, FIKRetargetPose>)              TargetRetargetPoses                                         OFFSET(get<T>, {0x140, 80, 0, 0})
-	SMember(FName)                                     CurrentSourceRetargetPose                                   OFFSET(getStruct<T>, {0x190, 4, 0, 0})
-	SMember(FName)                                     CurrentTargetRetargetPose                                   OFFSET(getStruct<T>, {0x194, 4, 0, 0})
-	CMember(TMap<FName, FIKRetargetPose>)              RetargetPoses                                               OFFSET(get<T>, {0x198, 80, 0, 0})
-	SMember(FName)                                     CurrentRetargetPose                                         OFFSET(getStruct<T>, {0x1E8, 4, 0, 0})
+	CMember(URetargetOpStack*)                         OpStack                                                     OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(TMap<FName, FRetargetProfile>)             Profiles                                                    OFFSET(get<T>, {0xA0, 80, 0, 0})
+	SMember(FName)                                     CurrentProfile                                              OFFSET(getStruct<T>, {0xF0, 4, 0, 0})
+	CMember(TMap<FName, FIKRetargetPose>)              SourceRetargetPoses                                         OFFSET(get<T>, {0xF8, 80, 0, 0})
+	CMember(TMap<FName, FIKRetargetPose>)              TargetRetargetPoses                                         OFFSET(get<T>, {0x148, 80, 0, 0})
+	SMember(FName)                                     CurrentSourceRetargetPose                                   OFFSET(getStruct<T>, {0x198, 4, 0, 0})
+	SMember(FName)                                     CurrentTargetRetargetPose                                   OFFSET(getStruct<T>, {0x19C, 4, 0, 0})
+	CMember(TMap<FName, FIKRetargetPose>)              RetargetPoses                                               OFFSET(get<T>, {0x1A0, 80, 0, 0})
+	SMember(FName)                                     CurrentRetargetPose                                         OFFSET(getStruct<T>, {0x1F0, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/IKRig.IKRetargeter.SetRootSettingsInRetargetProfile
-	// void SetRootSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetRootSettings& RootSettings);             // [0x72950b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetRootSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetRootSettings& RootSettings);             // [0x74ab3f0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.SetGlobalSettingsInRetargetProfile
-	// void SetGlobalSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FRetargetGlobalSettings& GlobalSettings);     // [0x7294570] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetGlobalSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FRetargetGlobalSettings& GlobalSettings);     // [0x74aa9e4] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.SetChainSpeedPlantSettingsInRetargetProfile
-	// void SetChainSpeedPlantSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainSpeedPlantSettings& SpeedPlantSettings, FName TargetChainName); // [0x7294328] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetChainSpeedPlantSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainSpeedPlantSettings& SpeedPlantSettings, FName TargetChainName); // [0x74aa7b4] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.SetChainSettingsInRetargetProfile
-	// void SetChainSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainSettings& ChainSettings, FName TargetChainName); // [0x72940f4] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetChainSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainSettings& ChainSettings, FName TargetChainName); // [0x74aa594] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.SetChainIKSettingsInRetargetProfile
-	// void SetChainIKSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainIKSettings& IKSettings, FName TargetChainName); // [0x7293ec0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetChainIKSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainIKSettings& IKSettings, FName TargetChainName); // [0x74aa374] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.SetChainFKSettingsInRetargetProfile
-	// void SetChainFKSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainFKSettings& FKSettings, FName TargetChainName); // [0x7293c70] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetChainFKSettingsInRetargetProfile(FRetargetProfile& RetargetProfile, FTargetChainFKSettings& FKSettings, FName TargetChainName); // [0x74aa140] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/IKRig.IKRetargeter.GetRootSettingsFromRetargetProfile
-	// FTargetRootSettings GetRootSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile);                               // [0x7293b5c] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FTargetRootSettings GetRootSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile);                               // [0x74aa02c] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetRootSettingsFromRetargetAsset
-	// void GetRootSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName OptionalProfileName, FTargetRootSettings& OutSettings); // [0x7293944] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// void GetRootSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName OptionalProfileName, FTargetRootSettings& OutSettings); // [0x74a9e14] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetGlobalSettingsFromRetargetProfile
-	// FRetargetGlobalSettings GetGlobalSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile);                         // [0x7293868] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FRetargetGlobalSettings GetGlobalSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile);                         // [0x74a9d40] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetGlobalSettingsFromRetargetAsset
-	// void GetGlobalSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName OptionalProfileName, FRetargetGlobalSettings& OutSettings); // [0x72936cc] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// void GetGlobalSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName OptionalProfileName, FRetargetGlobalSettings& OutSettings); // [0x74a9bc8] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetChainUsingGoalFromRetargetAsset
-	// FTargetChainSettings GetChainUsingGoalFromRetargetAsset(UIKRetargeter* RetargetAsset, FName IKGoalName);                 // [0x7293470] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// FTargetChainSettings GetChainUsingGoalFromRetargetAsset(UIKRetargeter* RetargetAsset, FName IKGoalName);                 // [0x74a996c] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetChainSettingsFromRetargetProfile
-	// FTargetChainSettings GetChainSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile, FName TargetChainName);      // [0x72931b4] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FTargetChainSettings GetChainSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile, FName TargetChainName);      // [0x74a96b8] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetChainSettingsFromRetargetAsset
-	// FTargetChainSettings GetChainSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName TargetChainName, FName OptionalProfileName); // [0x7292ecc] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// FTargetChainSettings GetChainSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName TargetChainName, FName OptionalProfileName); // [0x74a93d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/IKRig.IKRetargetProcessor
-/// Size: 0x0338 (0x000028 - 0x000360)
+/// Size: 0x0348 (0x000028 - 0x000370)
 class UIKRetargetProcessor : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 864;
+	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
 	CMember(UIKRigProcessor*)                          IKRigProcessor                                              OFFSET(get<T>, {0x170, 8, 0, 0})
+	CMember(TArray<URetargetOpBase*>)                  OpStack                                                     OFFSET(get<T>, {0x360, 16, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRigEffectorGoal
@@ -364,13 +435,26 @@ public:
 	CMember(UIKRig_SetTransformEffector*)              Effector                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
+/// Struct /Script/IKRig.CurveRemapPair
+/// Size: 0x0008 (0x000000 - 0x000008)
+class FCurveRemapPair : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 8;
+
+public:
+	SMember(FName)                                     SourceCurve                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TargetCurve                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+};
+
 /// Struct /Script/IKRig.RetargetProfile
-/// Size: 0x00F8 (0x000000 - 0x0000F8)
+/// Size: 0x0100 (0x000000 - 0x000100)
 class FRetargetProfile : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 248;
+	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
 	DMember(bool)                                      bApplyTargetRetargetPose                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
@@ -382,28 +466,29 @@ public:
 	DMember(bool)                                      bApplyRootSettings                                          OFFSET(get<bool>, {0x68, 1, 0, 0})
 	SMember(FTargetRootSettings)                       RootSettings                                                OFFSET(getStruct<T>, {0x70, 104, 0, 0})
 	DMember(bool)                                      bApplyGlobalSettings                                        OFFSET(get<bool>, {0xD8, 1, 0, 0})
-	SMember(FRetargetGlobalSettings)                   GlobalSettings                                              OFFSET(getStruct<T>, {0xDC, 28, 0, 0})
+	SMember(FRetargetGlobalSettings)                   GlobalSettings                                              OFFSET(getStruct<T>, {0xDC, 32, 0, 0})
 };
 
 /// Struct /Script/IKRig.RetargetGlobalSettings
-/// Size: 0x001C (0x000000 - 0x00001C)
+/// Size: 0x0020 (0x000000 - 0x000020)
 class FRetargetGlobalSettings : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 28;
+	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(bool)                                      bEnableRoot                                                 OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(bool)                                      bEnableFK                                                   OFFSET(get<bool>, {0x1, 1, 0, 0})
 	DMember(bool)                                      bEnableIK                                                   OFFSET(get<bool>, {0x2, 1, 0, 0})
-	DMember(bool)                                      bWarping                                                    OFFSET(get<bool>, {0x3, 1, 0, 0})
-	CMember(EWarpingDirectionSource)                   DirectionSource                                             OFFSET(get<T>, {0x4, 4, 0, 0})
-	CMember(EBasicAxis)                                ForwardDirection                                            OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     DirectionChain                                              OFFSET(getStruct<T>, {0xC, 4, 0, 0})
-	DMember(float)                                     WarpForwards                                                OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     SidewaysOffset                                              OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     WarpSplay                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(bool)                                      bEnablePost                                                 OFFSET(get<bool>, {0x3, 1, 0, 0})
+	DMember(bool)                                      bWarping                                                    OFFSET(get<bool>, {0x4, 1, 0, 0})
+	CMember(EWarpingDirectionSource)                   DirectionSource                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(EBasicAxis)                                ForwardDirection                                            OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     DirectionChain                                              OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	DMember(float)                                     WarpForwards                                                OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     SidewaysOffset                                              OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     WarpSplay                                                   OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/IKRig.TargetRootSettings
@@ -495,6 +580,19 @@ public:
 	DMember(float)                                     PoleVectorOffset                                            OFFSET(get<float>, {0x14, 4, 0, 0})
 };
 
+/// Struct /Script/IKRig.PinBoneData
+/// Size: 0x0070 (0x000000 - 0x000070)
+class FPinBoneData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	SMember(FName)                                     BoneToPin                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BoneToPinTo                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+};
+
 /// Struct /Script/IKRig.AnimNode_IKRig
 /// Size: 0x0188 (0x000058 - 0x0001E0)
 class FAnimNode_IKRig : public FAnimNode_CustomProperty
@@ -542,21 +640,21 @@ public:
 };
 
 /// Struct /Script/IKRig.AnimNode_RetargetPoseFromMesh
-/// Size: 0x01B8 (0x000010 - 0x0001C8)
+/// Size: 0x01C0 (0x000010 - 0x0001D0)
 class FAnimNode_RetargetPoseFromMesh : public FAnimNode_Base
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 456;
+	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         OFFSET(get<T>, {0x10, 8, 0, 0})
 	DMember(bool)                                      bUseAttachedParent                                          OFFSET(get<bool>, {0x18, 1, 0, 0})
 	CMember(UIKRetargeter*)                            IKRetargeterAsset                                           OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FRetargetProfile)                          CustomRetargetProfile                                       OFFSET(getStruct<T>, {0x28, 248, 0, 0})
-	DMember(bool)                                      bSuppressWarnings                                           OFFSET(get<bool>, {0x120, 1, 0, 0})
-	DMember(bool)                                      bCopyCurves                                                 OFFSET(get<bool>, {0x121, 1, 0, 0})
-	CMember(UIKRetargetProcessor*)                     Processor                                                   OFFSET(get<T>, {0x128, 8, 0, 0})
+	SMember(FRetargetProfile)                          CustomRetargetProfile                                       OFFSET(getStruct<T>, {0x28, 256, 0, 0})
+	DMember(bool)                                      bSuppressWarnings                                           OFFSET(get<bool>, {0x128, 1, 0, 0})
+	DMember(bool)                                      bCopyCurves                                                 OFFSET(get<bool>, {0x129, 1, 0, 0})
+	CMember(UIKRetargetProcessor*)                     Processor                                                   OFFSET(get<T>, {0x130, 8, 0, 0})
 };
 
 /// Struct /Script/IKRig.RetargetChainMap
@@ -573,12 +671,12 @@ public:
 };
 
 /// Struct /Script/IKRig.IKRetargetPose
-/// Size: 0x0068 (0x000000 - 0x000068)
+/// Size: 0x0070 (0x000000 - 0x000070)
 class FIKRetargetPose : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 104;
+	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	SMember(FVector)                                   RootTranslationOffset                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
@@ -704,6 +802,35 @@ class FLimbSolver : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
+};
+
+/// Enum /Script/IKRig.EPinBoneType
+/// Size: 0x05
+enum EPinBoneType : uint8_t
+{
+	EPinBoneType__FullTransform0                                                     = 0,
+	EPinBoneType__TranslateOnly1                                                     = 1,
+	EPinBoneType__RotateOnly2                                                        = 2,
+	EPinBoneType__ScaleOnly3                                                         = 3,
+	EPinBoneType__EPinBoneType_MAX4                                                  = 4
+};
+
+/// Enum /Script/IKRig.ERootMotionSource
+/// Size: 0x03
+enum ERootMotionSource : uint8_t
+{
+	ERootMotionSource__CopyFromSourceRoot0                                           = 0,
+	ERootMotionSource__GenerateFromTargetPelvis1                                     = 1,
+	ERootMotionSource__ERootMotionSource_MAX2                                        = 2
+};
+
+/// Enum /Script/IKRig.ERootMotionHeightSource
+/// Size: 0x03
+enum ERootMotionHeightSource : uint8_t
+{
+	ERootMotionHeightSource__CopyHeightFromSource0                                   = 0,
+	ERootMotionHeightSource__SnapToGround1                                           = 1,
+	ERootMotionHeightSource__ERootMotionHeightSource_MAX2                            = 2
 };
 
 /// Enum /Script/IKRig.ERetargetSourceOrTarget

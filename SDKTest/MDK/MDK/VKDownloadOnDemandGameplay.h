@@ -10,21 +10,21 @@
 /// dependency: ModularGameplay
 
 /// Class /Script/VKDownloadOnDemandGameplay.DownloadOnDemandComponent
-/// Size: 0x0170 (0x0000A0 - 0x000210)
+/// Size: 0x0190 (0x0000A0 - 0x000230)
 class UDownloadOnDemandComponent : public UControllerComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 528;
+	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	CMember(UDownloadOnDemandPlot*)                    Plot                                                        OFFSET(get<T>, {0x1E8, 8, 0, 0})
-	CMember(TArray<UDownloadOnDemandProject*>)         UserOwnedProjects                                           OFFSET(get<T>, {0x1F0, 16, 0, 0})
-	CMember(TArray<UDownloadOnDemandProjectContent*>)  ShelvedContents                                             OFFSET(get<T>, {0x200, 16, 0, 0})
+	CMember(UDownloadOnDemandPlot*)                    Plot                                                        OFFSET(get<T>, {0x208, 8, 0, 0})
+	CMember(TArray<UDownloadOnDemandProject*>)         UserOwnedProjects                                           OFFSET(get<T>, {0x210, 16, 0, 0})
+	CMember(TArray<UDownloadOnDemandProjectContent*>)  ShelvedContents                                             OFFSET(get<T>, {0x220, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/VKDownloadOnDemandGameplay.DownloadOnDemandComponent.HandleMnemonicsFromValkyriePaletteProviderReceived
-	// void HandleMnemonicsFromValkyriePaletteProviderReceived(TArray<FString>& Mnemonics);                                     // [0xa023950] Final|Native|Private|HasOutParms 
+	// void HandleMnemonicsFromValkyriePaletteProviderReceived(TArray<FString>& Mnemonics);                                     // [0xa59604c] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/VKDownloadOnDemandGameplay.DownloadOnDemandPlot

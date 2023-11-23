@@ -10,37 +10,37 @@
 /// dependency: Engine
 
 /// Class /Script/VehicleAudioRuntime.FortMotorSimComponent_PatternPlayer
-/// Size: 0x00C0 (0x0000A8 - 0x000168)
+/// Size: 0x00C0 (0x0000B0 - 0x000170)
 class UFortMotorSimComponent_PatternPlayer : public UAudioMotorSimComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 360;
+	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	DMember(float)                                     PatternResetCooldown                                        OFFSET(get<float>, {0xA8, 4, 0, 0})
-	SMember(FFortMotorSimPatternState)                 DriftState                                                  OFFSET(getStruct<T>, {0xB0, 48, 0, 0})
-	SMember(FFortMotorSimPatternState)                 AirState                                                    OFFSET(getStruct<T>, {0xE0, 48, 0, 0})
-	SMember(FFortMotorSimPatternState)                 StartlineState                                              OFFSET(getStruct<T>, {0x110, 48, 0, 0})
-	CMember(UCurveVector*)                             CurrentCurve                                                OFFSET(get<T>, {0x160, 8, 0, 0})
+	DMember(float)                                     PatternResetCooldown                                        OFFSET(get<float>, {0xB0, 4, 0, 0})
+	SMember(FFortMotorSimPatternState)                 DriftState                                                  OFFSET(getStruct<T>, {0xB8, 48, 0, 0})
+	SMember(FFortMotorSimPatternState)                 AirState                                                    OFFSET(getStruct<T>, {0xE8, 48, 0, 0})
+	SMember(FFortMotorSimPatternState)                 StartlineState                                              OFFSET(getStruct<T>, {0x118, 48, 0, 0})
+	CMember(UCurveVector*)                             CurrentCurve                                                OFFSET(get<T>, {0x168, 8, 0, 0})
 };
 
 /// Class /Script/VehicleAudioRuntime.FortMotorSimComponent_SurfaceModifier
-/// Size: 0x0070 (0x0000A8 - 0x000118)
+/// Size: 0x0070 (0x0000B0 - 0x000120)
 class UFortMotorSimComponent_SurfaceModifier : public UAudioMotorSimComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 280;
+	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TMap<FName, UCurveFloat*>)                 Surfaces                                                    OFFSET(get<T>, {0xA8, 80, 0, 0})
-	SMember(FVector2f)                                 ThrottleRange                                               OFFSET(getStruct<T>, {0xF8, 8, 0, 0})
-	DMember(float)                                     OnsetInterpTime                                             OFFSET(get<float>, {0x100, 4, 0, 0})
-	CMember(UCurveFloat*)                              CurrentCurve                                                OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TMap<FName, UCurveFloat*>)                 Surfaces                                                    OFFSET(get<T>, {0xB0, 80, 0, 0})
+	SMember(FVector2f)                                 ThrottleRange                                               OFFSET(getStruct<T>, {0x100, 8, 0, 0})
+	DMember(float)                                     OnsetInterpTime                                             OFFSET(get<float>, {0x108, 4, 0, 0})
+	CMember(UCurveFloat*)                              CurrentCurve                                                OFFSET(get<T>, {0x110, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortMotorSimComponent_SurfaceModifier.SetSurface
-	// void SetSurface(FName NewSurface);                                                                                       // [0x99b6e1c] Final|Native|Private|BlueprintCallable 
+	// void SetSurface(FName NewSurface);                                                                                       // [0x9e8962c] Final|Native|Private|BlueprintCallable 
 };
 
 /// Class /Script/VehicleAudioRuntime.VehicleAudioLifecycleInterface
@@ -54,11 +54,11 @@ public:
 };
 
 /// Class /Script/VehicleAudioRuntime.FortVehicleAudioController
-/// Size: 0x0060 (0x000290 - 0x0002F0)
+/// Size: 0x0070 (0x000290 - 0x000300)
 class AFortVehicleAudioController : public AActor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 752;
+	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
 	CMember(UFortVehicleSoundData*)                    VehicleSoundData                                            OFFSET(get<T>, {0x298, 8, 0, 0})
@@ -73,48 +73,53 @@ public:
 	CMember(UAudioParameterComponent*)                 AudioParameterComponent                                     OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UAudioMotorModelComponent*)                AudioMotorModelComponent                                    OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UREVComponent*)                            REVComponent                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(TArray<UFortVehicleSoundComponent*>)       VehicleSoundComponents                                      OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	CMember(UAudioComponent*)                          EngineComponent                                             OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(TArray<UFortVehicleSoundComponent*>)       VehicleSoundComponents                                      OFFSET(get<T>, {0x2E8, 16, 0, 0})
 
 
 	/// Functions
+	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.UseMetasounds
+	// bool UseMetasounds();                                                                                                    // [0x9e89838] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.UpdateMotorModelNative
-	// void UpdateMotorModelNative(float DeltaSeconds);                                                                         // [0x18d7374] Native|Protected|BlueprintCallable 
+	// void UpdateMotorModelNative(float DeltaSeconds);                                                                         // [0x9e897b4] Native|Protected|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.Update
-	// void Update(float DeltaSeconds);                                                                                         // [0x99b6e9c] Native|Public|BlueprintCallable 
+	// void Update(float DeltaSeconds);                                                                                         // [0x9e896ac] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.Shutdown
-	// void Shutdown();                                                                                                         // [0x2b3eb1c] Native|Public|BlueprintCallable 
+	// void Shutdown();                                                                                                         // [0x2af8708] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.SetVehicle
-	// void SetVehicle(AFortAthenaVehicle* InVehicle);                                                                          // [0x78fc540] Native|Public|BlueprintCallable 
+	// void SetVehicle(AFortAthenaVehicle* InVehicle);                                                                          // [0x7b20814] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.SetRedlineActive
-	// void SetRedlineActive(bool bEnabled);                                                                                    // [0x6e49a7c] Native|Public|BlueprintCallable 
+	// void SetRedlineActive(bool bEnabled);                                                                                    // [0x718c14c] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.SetLayeredAudioComponent
-	// void SetLayeredAudioComponent(UFortLayeredAudioComponent* InComponent);                                                  // [0x2c903c0] Final|Native|Public|BlueprintCallable 
+	// void SetLayeredAudioComponent(UFortLayeredAudioComponent* InComponent);                                                  // [0x931e9f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.IsNativizationEnabled
-	// bool IsNativizationEnabled();                                                                                            // [0x99b6df4] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsNativizationEnabled();                                                                                            // [0x9e89584] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.Init
-	// void Init();                                                                                                             // [0x149aeac] Native|Public|BlueprintCallable 
+	// void Init();                                                                                                             // [0x1d0868c] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetVehicleActor
-	// AFortAthenaVehicle* GetVehicleActor();                                                                                   // [0x29619cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AFortAthenaVehicle* GetVehicleActor();                                                                                   // [0x589f408] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetThrottleNative
-	// float GetThrottleNative();                                                                                               // [0x5b3a51c] Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetThrottleNative();                                                                                               // [0x59d99b4] Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetREVComponent
-	// UREVComponent* GetREVComponent();                                                                                        // [0x9400e78] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UREVComponent* GetREVComponent();                                                                                        // [0x582ed14] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetRedlineActive
-	// bool GetRedlineActive();                                                                                                 // [0x2572290] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetRedlineActive();                                                                                                 // [0x2376048] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetPhysicsVehicleConfigs
-	// UFortPhysicsVehicleConfigs* GetPhysicsVehicleConfigs();                                                                  // [0x99b6d40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UFortPhysicsVehicleConfigs* GetPhysicsVehicleConfigs();                                                                  // [0x9e89418] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetLayeredAudioComponent
-	// UFortLayeredAudioComponent* GetLayeredAudioComponent();                                                                  // [0x2a2e5c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UFortLayeredAudioComponent* GetLayeredAudioComponent();                                                                  // [0x931e6a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetJitterTime
-	// float GetJitterTime();                                                                                                   // [0x99b6cf0] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetJitterTime();                                                                                                   // [0x9e893a4] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetEngineAudioComponent
+	// UAudioComponent* GetEngineAudioComponent();                                                                              // [0x8df34cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetBrakingNative
-	// float GetBrakingNative();                                                                                                // [0x99b6cc4] Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetBrakingNative();                                                                                                // [0x59d9988] Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetAudioParameterComponent
-	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x2a54790] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x242dfb4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.GetAudioMotorModelComponent
-	// UAudioMotorModelComponent* GetAudioMotorModelComponent();                                                                // [0x350fca8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UAudioMotorModelComponent* GetAudioMotorModelComponent();                                                                // [0x33a58e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.CacheJitterTime
-	// void CacheJitterTime();                                                                                                  // [0x2de7560] Native|Public|BlueprintCallable 
+	// void CacheJitterTime();                                                                                                  // [0x726a7b8] Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent
@@ -130,27 +135,31 @@ public:
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.Update
-	// void Update(float DeltaSeconds);                                                                                         // [0x99b6f20] Native|Public|BlueprintCallable 
+	// void Update(float DeltaSeconds);                                                                                         // [0x9e89730] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.Shutdown
-	// void Shutdown();                                                                                                         // [0x6499194] Native|Public|BlueprintCallable 
+	// void Shutdown();                                                                                                         // [0x64771e4] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.Init
-	// void Init();                                                                                                             // [0x2355bcc] Native|Public|BlueprintCallable 
+	// void Init();                                                                                                             // [0x5ea45e4] Native|Public|BlueprintCallable 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetVehicleActor
-	// AFortAthenaVehicle* GetVehicleActor();                                                                                   // [0x137c644] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AFortAthenaVehicle* GetVehicleActor();                                                                                   // [0x9e89560] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetUseMetasounds
+	// bool GetUseMetasounds();                                                                                                 // [0x9e89514] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetRootComponent
-	// USceneComponent* GetRootComponent();                                                                                     // [0x2ff6880] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// USceneComponent* GetRootComponent();                                                                                     // [0x9e894cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetREVComponent
-	// UREVComponent* GetREVComponent();                                                                                        // [0x99b6dac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UREVComponent* GetREVComponent();                                                                                        // [0x9e89484] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetPhysicsVehicleConfigs
-	// UFortPhysicsVehicleConfigs* GetPhysicsVehicleConfigs();                                                                  // [0x99b6d60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UFortPhysicsVehicleConfigs* GetPhysicsVehicleConfigs();                                                                  // [0x9e89438] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetMotorModelComponent
-	// UAudioMotorModelComponent* GetMotorModelComponent();                                                                     // [0x99b6d1c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UAudioMotorModelComponent* GetMotorModelComponent();                                                                     // [0x9e893f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetLayeredAudioComponent
-	// UFortLayeredAudioComponent* GetLayeredAudioComponent();                                                                  // [0x2dac324] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UFortLayeredAudioComponent* GetLayeredAudioComponent();                                                                  // [0x9e893d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetEngineAudioComponent
+	// UAudioComponent* GetEngineAudioComponent();                                                                              // [0x9e8935c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetAudioParameterComponent
-	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x2e49cb8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x9e89314] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetAudioController
-	// AFortVehicleAudioController* GetAudioController();                                                                       // [0x28fcfd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AFortVehicleAudioController* GetAudioController();                                                                       // [0x9e892ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Speed
@@ -166,7 +175,7 @@ public:
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Speed.OnReversedChanged
-	// void OnReversedChanged(bool bReversing);                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnReversedChanged(bool bReversing);                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface
@@ -182,13 +191,13 @@ public:
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface.OnSurfaceChanged
-	// void OnSurfaceChanged(TEnumAsByte<EPhysicalSurface> NewSurface);                                                         // [0x2dceab4] Final|Native|Public  
+	// void OnSurfaceChanged(TEnumAsByte<EPhysicalSurface> NewSurface);                                                         // [0x9e895ac] Final|Native|Public  
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface.OnSkiddingChanged
-	// void OnSkiddingChanged(bool bNewState);                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnSkiddingChanged(bool bNewState);                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface.OnInAirChanged
-	// void OnInAirChanged(bool bNewState);                                                                                     // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnInAirChanged(bool bNewState);                                                                                     // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface.OnBrakingChanged
-	// void OnBrakingChanged(bool bNewState);                                                                                   // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnBrakingChanged(bool bNewState);                                                                                   // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundData

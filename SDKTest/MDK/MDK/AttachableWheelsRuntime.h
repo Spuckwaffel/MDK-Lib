@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/AttachableWheelsRuntime.AttachableWheel
-/// Size: 0x0088 (0x000290 - 0x000318)
+/// Size: 0x0090 (0x000290 - 0x000320)
 class AAttachableWheel : public AActor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 792;
+	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
 	CMember(UStaticMeshComponent*)                     WheelMeshComponent                                          OFFSET(get<T>, {0x290, 8, 0, 0})
@@ -21,31 +21,36 @@ public:
 	DMember(float)                                     WheelDistance                                               OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	CMember(UPhysicsConstraintComponent*)              AxleConstraint                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	SMember(FAttachableWheelAttachData)                AttachData                                                  OFFSET(getStruct<T>, {0x2C0, 88, 0, 0})
+	CMember(AActor*)                                   ActorRef                                                    OFFSET(get<T>, {0x318, 8, 0, 0})
 
 
 	/// Functions
+	// Function /Script/AttachableWheelsRuntime.AttachableWheel.SetActorRef
+	// void SetActorRef(AActor* NewActorRef);                                                                                   // [0xa2f306c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.OnRep_AttachData
-	// void OnRep_AttachData(FAttachableWheelAttachData& AttachDataPrev);                                                       // [0xa0357fc] Final|Native|Protected|HasOutParms 
+	// void OnRep_AttachData(FAttachableWheelAttachData& AttachDataPrev);                                                       // [0xa2f2f80] Final|Native|Protected|HasOutParms 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.OnPhysicsStateChanged
-	// void OnPhysicsStateChanged(UPrimitiveComponent* PrimitiveComponent, EComponentPhysicsStateChange StateChange);           // [0xa035738] Final|Native|Protected 
+	// void OnPhysicsStateChanged(UPrimitiveComponent* PrimitiveComponent, EComponentPhysicsStateChange StateChange);           // [0xa2f2ebc] Final|Native|Protected 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.OnDetached
-	// void OnDetached(UPrimitiveComponent* DetachedComponent);                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnDetached(UPrimitiveComponent* DetachedComponent);                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.OnAttached
-	// void OnAttached(UPrimitiveComponent* AttachedComponent);                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnAttached(UPrimitiveComponent* AttachedComponent);                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.GetWorldSpaceAttachData
-	// bool GetWorldSpaceAttachData(FAttachableWheelAttachData& OutAttachData, UPrimitiveComponent* PrimitiveComponent, FName BodyName); // [0xa035328] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetWorldSpaceAttachData(FAttachableWheelAttachData& OutAttachData, UPrimitiveComponent* PrimitiveComponent, FName BodyName); // [0xa2f2ae0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.GetAttachedComponent
-	// UPrimitiveComponent* GetAttachedComponent();                                                                             // [0xa035100] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UPrimitiveComponent* GetAttachedComponent();                                                                             // [0xa2f281c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AttachableWheelsRuntime.AttachableWheel.GetActorRef
+	// AActor* GetActorRef();                                                                                                   // [0x7705234] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.DrawDebug
-	// void DrawDebug();                                                                                                        // [0x2cf4738] Final|Native|Public|BlueprintCallable|Const 
+	// void DrawDebug();                                                                                                        // [0x2b7b1c8] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.DetachFrom
-	// bool DetachFrom(UPrimitiveComponent* InComponent);                                                                       // [0xa035058] Final|Native|Public|BlueprintCallable 
+	// bool DetachFrom(UPrimitiveComponent* InComponent);                                                                       // [0xa2f2774] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.Detach
-	// void Detach();                                                                                                           // [0xa034fc4] Final|Native|Public|BlueprintCallable 
+	// void Detach();                                                                                                           // [0xa2f26e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.AttachTo
-	// bool AttachTo(UPrimitiveComponent* InComponent, FVector& WorldLocation, FVector& AxleDirection);                         // [0xa034e9c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool AttachTo(UPrimitiveComponent* InComponent, FVector& WorldLocation, FVector& AxleDirection);                         // [0xa2f2540] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.AttachInPlace
-	// bool AttachInPlace(UPrimitiveComponent* InComponent);                                                                    // [0xa034e0c] Final|Native|Public|BlueprintCallable 
+	// bool AttachInPlace(UPrimitiveComponent* InComponent);                                                                    // [0xa2f24b0] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AttachableWheelsRuntime.AttachableWheelsComponent
@@ -61,21 +66,21 @@ public:
 
 	/// Functions
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.OnWheelDetached
-	// void OnWheelDetached(AAttachableWheel* AttachedWheel);                                                                   // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnWheelDetached(AAttachableWheel* AttachedWheel);                                                                   // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.OnWheelAttached
-	// void OnWheelAttached(AAttachableWheel* AttachedWheel);                                                                   // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnWheelAttached(AAttachableWheel* AttachedWheel);                                                                   // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.HandleWheelDetached_Internal
-	// bool HandleWheelDetached_Internal(AAttachableWheel* AttachedWheel);                                                      // [0xa0356a8] Final|Native|Protected 
+	// bool HandleWheelDetached_Internal(AAttachableWheel* AttachedWheel);                                                      // [0xa2f2e2c] Final|Native|Protected 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.HandleWheelAttached_Internal
-	// bool HandleWheelAttached_Internal(AAttachableWheel* AttachedWheel);                                                      // [0xa035618] Final|Native|Protected 
+	// bool HandleWheelAttached_Internal(AAttachableWheel* AttachedWheel);                                                      // [0xa2f2d9c] Final|Native|Protected 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.GetAttachedWheels
-	// TArray<AAttachableWheel*> GetAttachedWheels();                                                                           // [0xa0352bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<AAttachableWheel*> GetAttachedWheels();                                                                           // [0xa2f2a74] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.GetAttachedWheelClosestOnAxis
-	// AAttachableWheel* GetAttachedWheelClosestOnAxis(FVector& Point, float& OutClosetDistanceToAxis, FVector& OutClosestPointOnAxis, FVector& OutClosestAxis); // [0xa035124] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// AAttachableWheel* GetAttachedWheelClosestOnAxis(FVector& Point, float& OutClosetDistanceToAxis, FVector& OutClosestPointOnAxis, FVector& OutClosestAxis); // [0xa2f2840] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.DrawDebug
-	// void DrawDebug();                                                                                                        // [0x2cf4738] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// void DrawDebug();                                                                                                        // [0x2b7b1c8] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.DetachAllWheels
-	// int32_t DetachAllWheels();                                                                                               // [0xa034fd8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// int32_t DetachAllWheels();                                                                                               // [0xa2f26f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/AttachableWheelsRuntime.AttachableWheelAttachData

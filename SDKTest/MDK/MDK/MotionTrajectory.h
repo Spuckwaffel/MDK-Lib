@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/MotionTrajectory.CharacterTrajectoryComponent
-/// Size: 0x0090 (0x0000A0 - 0x000130)
+/// Size: 0x01B0 (0x0000A0 - 0x000250)
 class UCharacterTrajectoryComponent : public UActorComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 304;
+	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
 	SMember(FPoseSearchQueryTrajectory)                Trajectory                                                  OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
@@ -24,17 +24,21 @@ public:
 	DMember(float)                                     RotateTowardsMovementSpeed                                  OFFSET(get<float>, {0xC0, 4, 0, 0})
 	DMember(bool)                                      bAutoUpdateTrajectory                                       OFFSET(get<bool>, {0xC4, 1, 0, 0})
 	DMember(float)                                     MaxControllerRotationRate                                   OFFSET(get<float>, {0xC8, 4, 0, 0})
-	CMember(USkeletalMeshComponent*)                   SkelMeshComponent                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
-	CMember(UCharacterMovementComponent*)              CharacterMovementComponent                                  OFFSET(get<T>, {0xD8, 8, 0, 0})
+	DMember(bool)                                      bUseSpeedRemappingCurve                                     OFFSET(get<bool>, {0xCC, 1, 0, 0})
+	SMember(FRuntimeFloatCurve)                        SpeedRemappingCurve                                         OFFSET(getStruct<T>, {0xD0, 136, 0, 0})
+	DMember(bool)                                      bUseAccelerationRemappingCurve                              OFFSET(get<bool>, {0x158, 1, 0, 0})
+	SMember(FRuntimeFloatCurve)                        AccelerationRemappingCurve                                  OFFSET(getStruct<T>, {0x160, 136, 0, 0})
+	CMember(USkeletalMeshComponent*)                   SkelMeshComponent                                           OFFSET(get<T>, {0x1E8, 8, 0, 0})
+	CMember(UCharacterMovementComponent*)              CharacterMovementComponent                                  OFFSET(get<T>, {0x1F0, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MotionTrajectory.CharacterTrajectoryComponent.UpdateTrajectory
-	// void UpdateTrajectory(float DeltaSeconds);                                                                               // [0xa55c0c0] Final|Native|Public|BlueprintCallable 
+	// void UpdateTrajectory(float DeltaSeconds);                                                                               // [0xac742b8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotionTrajectory.CharacterTrajectoryComponent.OnMovementUpdated
-	// void OnMovementUpdated(float DeltaSeconds, FVector OldLocation, FVector OldVelocity);                                    // [0xa55bc38] Final|Native|Protected|HasDefaults 
+	// void OnMovementUpdated(float DeltaSeconds, FVector OldLocation, FVector OldVelocity);                                    // [0xac73df8] Final|Native|Protected|HasDefaults 
 	// Function /Script/MotionTrajectory.CharacterTrajectoryComponent.GetFacingFromMeshComponent
-	// FRotator GetFacingFromMeshComponent(USkeletalMeshComponent* MeshComponent);                                              // [0xa55bb90] Native|Event|Public|HasDefaults|BlueprintEvent|Const 
+	// FRotator GetFacingFromMeshComponent(USkeletalMeshComponent* MeshComponent);                                              // [0xac73d50] Native|Event|Public|HasDefaults|BlueprintEvent|Const 
 };
 
 /// Class /Script/MotionTrajectory.CharacterMovementTrajectoryLibrary

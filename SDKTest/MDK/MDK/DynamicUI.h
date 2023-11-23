@@ -34,13 +34,13 @@ public:
 
 	/// Functions
 	// Function /Script/DynamicUI.DynamicUIDirectorBase.RemoveScene
-	// void RemoveScene(UDynamicUIScene* Scene);                                                                                // [0x6bffaf4] Final|Native|Public|BlueprintCallable 
+	// void RemoveScene(UDynamicUIScene* Scene);                                                                                // [0x6c67160] Final|Native|Public|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIDirectorBase.GetOwningLocalPlayerController
-	// APlayerController* GetOwningLocalPlayerController();                                                                     // [0x2f2c54c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// APlayerController* GetOwningLocalPlayerController();                                                                     // [0x6c6713c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DynamicUI.DynamicUIDirectorBase.GetOwningLocalPlayer
-	// ULocalPlayer* GetOwningLocalPlayer();                                                                                    // [0x6bffacc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ULocalPlayer* GetOwningLocalPlayer();                                                                                    // [0x6c67114] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DynamicUI.DynamicUIDirectorBase.AddScene
-	// void AddScene(UDynamicUIScene* Scene);                                                                                   // [0x30e45d8] Final|Native|Public|BlueprintCallable 
+	// void AddScene(UDynamicUIScene* Scene);                                                                                   // [0x6c66108] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/DynamicUI.DynamicUIConstraintBase
@@ -163,31 +163,32 @@ public:
 
 	/// Functions
 	// Function /Script/DynamicUI.DynamicUIManager.RemoveScenes
-	// void RemoveScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                          // [0x6c00434] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void RemoveScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                          // [0x6c67528] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.RemoveSceneFromFirstLocalPlayer
-	// void RemoveSceneFromFirstLocalPlayer(UDynamicUIScene* Scene);                                                            // [0x6bffff0] Final|Native|Protected|BlueprintCallable 
+	// void RemoveSceneFromFirstLocalPlayer(UDynamicUIScene* Scene);                                                            // [0x6c673a8] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.RemoveScene
-	// void RemoveScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                    // [0x6bffb74] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void RemoveScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                    // [0x6c671e0] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.AddSceneToFirstLocalPlayer
-	// void AddSceneToFirstLocalPlayer(UDynamicUIScene* Scene);                                                                 // [0x6bff594] Final|Native|Protected|BlueprintCallable 
+	// void AddSceneToFirstLocalPlayer(UDynamicUIScene* Scene);                                                                 // [0x6c66628] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.AddScenes
-	// void AddScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                             // [0x6bff9a4] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void AddScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                             // [0x6c66a8c] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.AddScene
-	// void AddScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                       // [0x6bff14c] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void AddScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                       // [0x6c66188] Final|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/DynamicUI.DynamicUIScene
-/// Size: 0x0038 (0x000030 - 0x000068)
+/// Size: 0x0048 (0x000030 - 0x000078)
 class UDynamicUIScene : public UDataAsset
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 104;
+	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	DMember(char)                                      LayerID                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
+	DMember(char)                                      LayerId                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
 	CMember(TArray<FDynamicUIAllowed>)                 Allowed                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<UDynamicUIUnallowBase*>)            Unallow                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(TArray<FDynamicUIPreload>)                 Preload                                                     OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FDynamicUIAdjust>)                  Adjust                                                      OFFSET(get<T>, {0x58, 16, 0, 0})
+	CMember(TArray<FDynamicUIPreload>)                 Preload                                                     OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Class /Script/DynamicUI.DynamicUISizeBase
@@ -292,7 +293,7 @@ class UDynamicUIUnallowLayer : public UDynamicUIUnallowBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	DMember(char)                                      LayerID                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
+	DMember(char)                                      LayerId                                                     OFFSET(get<char>, {0x30, 1, 0, 0})
 	CMember(EDynamicUIUnallowLayerComparison)          Comparison                                                  OFFSET(get<T>, {0x31, 1, 0, 0})
 };
 
@@ -344,6 +345,35 @@ class FDynamicUIPanelDebug : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
+};
+
+/// Struct /Script/DynamicUI.DynamicUIAdjust
+/// Size: 0x0070 (0x000000 - 0x000070)
+class FDynamicUIAdjust : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	SMember(FDynamicUIWidgetTarget)                    TargetWidget                                                OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	CMember(UDynamicUIConstraintBase*)                 LayoutConstraint                                            OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UDynamicUISizeBase*)                       SizeModifier                                                OFFSET(get<T>, {0x68, 8, 0, 0})
+};
+
+/// Struct /Script/DynamicUI.DynamicUIWidgetTarget
+/// Size: 0x0060 (0x000000 - 0x000060)
+class FDynamicUIWidgetTarget : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 96;
+
+public:
+	SMember(FName)                                     WidgetPath                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   WidgetClass                                                 OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FName)                                     UniqueID                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	DMember(bool)                                      bUseUniqueID                                                OFFSET(get<bool>, {0x2C, 1, 1, 0})
 };
 
 /// Struct /Script/DynamicUI.DynamicUIAllowed
@@ -427,21 +457,6 @@ class FDynamicUIPlayerData : public MDKBase
 
 public:
 	CMember(TMap<FString, FDynamicUIDirectorData>)     ActiveDirectors                                             OFFSET(get<T>, {0x40, 80, 0, 0})
-};
-
-/// Struct /Script/DynamicUI.DynamicUIWidgetTarget
-/// Size: 0x0060 (0x000000 - 0x000060)
-class FDynamicUIWidgetTarget : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 96;
-
-public:
-	SMember(FName)                                     WidgetPath                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   WidgetClass                                                 OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FName)                                     UniqueID                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
-	DMember(bool)                                      bUseUniqueID                                                OFFSET(get<bool>, {0x2C, 1, 1, 0})
 };
 
 /// Enum /Script/DynamicUI.EDynamicUIStrength

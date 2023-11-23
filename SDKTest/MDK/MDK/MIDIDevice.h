@@ -74,21 +74,21 @@ public:
 
 	/// Functions
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIProgramChange
-	// void SendMIDIProgramChange(int32_t Channel, int32_t ProgramNumber);                                                      // [0xa3ef19c] Final|Native|Public|BlueprintCallable 
+	// void SendMIDIProgramChange(int32_t Channel, int32_t ProgramNumber);                                                      // [0xab0375c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIPitchBend
-	// void SendMIDIPitchBend(int32_t Channel, int32_t Pitch);                                                                  // [0xa3ef0b4] Final|Native|Public|BlueprintCallable 
+	// void SendMIDIPitchBend(int32_t Channel, int32_t pitch);                                                                  // [0xab03674] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDINoteOn
-	// void SendMIDINoteOn(int32_t Channel, int32_t Note, int32_t Velocity);                                                    // [0xa3eefb8] Final|Native|Public|BlueprintCallable 
+	// void SendMIDINoteOn(int32_t Channel, int32_t Note, int32_t Velocity);                                                    // [0xab03578] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDINoteOff
-	// void SendMIDINoteOff(int32_t Channel, int32_t Note, int32_t Velocity);                                                   // [0xa3eeebc] Final|Native|Public|BlueprintCallable 
+	// void SendMIDINoteOff(int32_t Channel, int32_t Note, int32_t Velocity);                                                   // [0xab0347c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDINoteAftertouch
-	// void SendMIDINoteAftertouch(int32_t Channel, int32_t Note, float Amount);                                                // [0xa3eedc0] Final|Native|Public|BlueprintCallable 
+	// void SendMIDINoteAftertouch(int32_t Channel, int32_t Note, float Amount);                                                // [0xab03380] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIEvent
-	// void SendMIDIEvent(EMIDIEventType EventType, int32_t Channel, int32_t data1, int32_t data2);                             // [0xa3eec88] Final|Native|Public|BlueprintCallable 
+	// void SendMIDIEvent(EMIDIEventType EventType, int32_t Channel, int32_t data1, int32_t data2);                             // [0xab03248] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIControlChange
-	// void SendMIDIControlChange(int32_t Channel, int32_t Type, int32_t Value);                                                // [0xa3eeb8c] Final|Native|Public|BlueprintCallable 
+	// void SendMIDIControlChange(int32_t Channel, int32_t Type, int32_t Value);                                                // [0xab0314c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIChannelAftertouch
-	// void SendMIDIChannelAftertouch(int32_t Channel, float Amount);                                                           // [0xa3eeac8] Final|Native|Public|BlueprintCallable 
+	// void SendMIDIChannelAftertouch(int32_t Channel, float Amount);                                                           // [0xab03088] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/MIDIDevice.FoundMIDIDevice

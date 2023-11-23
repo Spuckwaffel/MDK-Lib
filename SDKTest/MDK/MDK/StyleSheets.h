@@ -54,11 +54,11 @@ public:
 };
 
 /// Class /Script/StyleSheets.StyleProvider
-/// Size: 0x01C8 (0x000028 - 0x0001F0)
+/// Size: 0x00E8 (0x000028 - 0x000110)
 class UStyleProvider : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	CMember(TWeakObjectPtr<UStyleRuleTree*>)           StyleRuleTree                                               OFFSET(get<T>, {0x48, 8, 0, 0})
@@ -90,14 +90,15 @@ public:
 };
 
 /// Class /Script/StyleSheets.StyleSheet
-/// Size: 0x0010 (0x000028 - 0x000038)
+/// Size: 0x0020 (0x000028 - 0x000048)
 class UStyleSheet : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TArray<UStyleRule*>)                       StyleRules                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FStyleSheetSettings)                       Settings                                                    OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/StyleSheets.StyleSheetCollection
@@ -167,17 +168,16 @@ public:
 };
 
 /// Class /Script/StyleSheets.StyleSheetsSettings
-/// Size: 0x0090 (0x000028 - 0x0000B8)
+/// Size: 0x0038 (0x000028 - 0x000060)
 class UStyleSheetsSettings : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
+	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	CMember(TArray<UClass*>)                           AllowedWidgetClasses                                        OFFSET(get<T>, {0x28, 16, 0, 0})
-	CMember(TArray<FWidgetTypeEntry>)                  WidgetTypes                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TMap<UClass*, FGameplayTag>)               WidgetTypeMap                                               OFFSET(get<T>, {0x48, 80, 0, 0})
-	CMember(TWeakObjectPtr<UStyleThemeConfig*>)        StyleThemeConfig                                            OFFSET(get<T>, {0x98, 32, 0, 0})
+	CMember(TArray<FWidgetTypeEntry>)                  WidgetTypes                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	CMember(TWeakObjectPtr<UStyleThemeConfig*>)        StyleThemeConfig                                            OFFSET(get<T>, {0x38, 32, 0, 0})
+	DMember(bool)                                      bAllowAssigningStyleTagsToWidgets                           OFFSET(get<bool>, {0x58, 1, 0, 0})
 };
 
 /// Class /Script/StyleSheets.StyleSheetsSubsystem
@@ -219,7 +219,7 @@ class FStyleAnimationData : public MDKBase
 
 public:
 	DMember(float)                                     Delay                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 	CMember(ETweenBuiltInEasing)                       Easing                                                      OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
@@ -272,6 +272,18 @@ class FStyleSelectorItem : public MDKBase
 
 public:
 	CMember(TArray<FGameplayTag>)                      Targets                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+};
+
+/// Struct /Script/StyleSheets.StyleSheetSettings
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FStyleSheetSettings : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(TArray<UClass*>)                           StylableWidgetClasses                                       OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StyleSheets.StyleTag

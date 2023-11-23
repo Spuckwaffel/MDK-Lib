@@ -6,6 +6,28 @@
 ********************************************************/
 
 
+/// Struct /Script/Chaos.ManagedArrayCollection
+/// Size: 0x00B0 (0x000000 - 0x0000B0)
+class FManagedArrayCollection : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 176;
+
+public:
+};
+
+/// Struct /Script/Chaos.FieldCollection
+/// Size: 0x0000 (0x0000B0 - 0x0000B0)
+class FFieldCollection : public FManagedArrayCollection
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 176;
+
+public:
+};
+
 /// Struct /Script/Chaos.ClosestPhysicsObjectResult
 /// Size: 0x0028 (0x000000 - 0x000028)
 class FClosestPhysicsObjectResult : public MDKBase
@@ -18,12 +40,12 @@ public:
 };
 
 /// Struct /Script/Chaos.ChaosSolverConfiguration
-/// Size: 0x0068 (0x000000 - 0x000068)
+/// Size: 0x006C (0x000000 - 0x00006C)
 class FChaosSolverConfiguration : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 104;
+	static inline constexpr uint64_t __MDKClassSize = 108;
 
 public:
 	DMember(int32_t)                                   PositionIterations                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
@@ -33,17 +55,18 @@ public:
 	DMember(float)                                     CollisionMarginMax                                          OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     CollisionCullDistance                                       OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     CollisionMaxPushOutVelocity                                 OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
-	CMember(EClusterUnionMethod)                       ClusterUnionConnectionType                                  OFFSET(get<T>, {0x20, 1, 0, 0})
-	DMember(bool)                                      bGenerateCollisionData                                      OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x24, 16, 0, 0})
-	DMember(bool)                                      bGenerateBreakData                                          OFFSET(get<bool>, {0x34, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
-	DMember(bool)                                      bGenerateTrailingData                                       OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x4C, 16, 0, 0})
-	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
-	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(bool)                                      bGenerateContactGraph                                       OFFSET(get<bool>, {0x64, 1, 0, 0})
+	DMember(float)                                     CollisionInitialOverlapDepenetrationVelocity                OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x20, 4, 0, 0})
+	CMember(EClusterUnionMethod)                       ClusterUnionConnectionType                                  OFFSET(get<T>, {0x24, 1, 0, 0})
+	DMember(bool)                                      bGenerateCollisionData                                      OFFSET(get<bool>, {0x25, 1, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	DMember(bool)                                      bGenerateBreakData                                          OFFSET(get<bool>, {0x38, 1, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x3C, 16, 0, 0})
+	DMember(bool)                                      bGenerateTrailingData                                       OFFSET(get<bool>, {0x4C, 1, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x60, 4, 0, 0})
+	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x64, 4, 0, 0})
+	DMember(bool)                                      bGenerateContactGraph                                       OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/Chaos.SolverTrailingFilterSettings
@@ -89,17 +112,6 @@ public:
 	DMember(float)                                     MinMass                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     MinImpulse                                                  OFFSET(get<float>, {0xC, 4, 0, 0})
-};
-
-/// Struct /Script/Chaos.ManagedArrayCollection
-/// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FManagedArrayCollection : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 176;
-
-public:
 };
 
 /// Struct /Script/Chaos.SolverCollisionData

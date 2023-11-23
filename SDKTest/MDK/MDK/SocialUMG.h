@@ -54,17 +54,17 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialChatContainer.SendCurrentMessage
-	// void SendCurrentMessage();                                                                                               // [0x718362c] Final|Native|Public|BlueprintCallable 
+	// void SendCurrentMessage();                                                                                               // [0x72b5638] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SocialUMG.SocialChatContainer.OnChatOpenChanged
-	// void OnChatOpenChanged(bool bShouldBeOpen);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnChatOpenChanged(bool bShouldBeOpen);                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialChatContainer.HandleRightTabPressed
-	// void HandleRightTabPressed();                                                                                            // [0x71835a4] Final|Native|Public|BlueprintCallable 
+	// void HandleRightTabPressed();                                                                                            // [0x72b55b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SocialUMG.SocialChatContainer.HandleLeftTabPressed
-	// void HandleLeftTabPressed();                                                                                             // [0x7183488] Final|Native|Public|BlueprintCallable 
+	// void HandleLeftTabPressed();                                                                                             // [0x72b5494] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SocialUMG.SocialChatContainer.FocusEditableText
-	// void FocusEditableText();                                                                                                // [0x71833d8] Final|Native|Public|BlueprintCallable 
+	// void FocusEditableText();                                                                                                // [0x72b53e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SocialUMG.SocialChatContainer.DynamicHandleMessageTextCommitted
-	// void DynamicHandleMessageTextCommitted(FText& MessageText, TEnumAsByte<ETextCommit> CommitMethod);                       // [0x718329c] Final|Native|Private|HasOutParms 
+	// void DynamicHandleMessageTextCommitted(FText& MessageText, TEnumAsByte<ETextCommit> CommitMethod);                       // [0x72b52d0] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/SocialUMG.SocialChatMessageEntry
@@ -82,9 +82,9 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialChatMessageEntry.OnMessageSet
-	// void OnMessageSet();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnMessageSet();                                                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialChatMessageEntry.CanInteract
-	// bool CanInteract();                                                                                                      // [0x2c6cedc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool CanInteract();                                                                                                      // [0x3075ae8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SocialUMG.SocialChatMessageList
@@ -115,7 +115,7 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialGroupListEntry.HandleGetMenuContent
-	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x7183440] Final|Native|Protected 
+	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x72b544c] Final|Native|Protected 
 };
 
 /// Class /Script/SocialUMG.SocialGroupTreeView
@@ -148,11 +148,11 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialInteractionButton.OnInteractionSet
-	// void OnInteractionSet();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnInteractionSet();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialInteractionButton.IsPlatformOnlyFriend
-	// bool IsPlatformOnlyFriend();                                                                                             // [0x71835b8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlatformOnlyFriend();                                                                                             // [0x72b55c4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SocialUMG.SocialInteractionButton.GetInteractionName
-	// FName GetInteractionName();                                                                                              // [0x718340c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// FName GetInteractionName();                                                                                              // [0x72b5418] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SocialUMG.SocialActionMenu
@@ -184,9 +184,9 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialInteractionMenu.OnToggleConfirmation
-	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialInteractionMenu.GetFirstEntryToCenter
-	// UWidget* GetFirstEntryToCenter();                                                                                        // [0x71833ec] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UWidget* GetFirstEntryToCenter();                                                                                        // [0x72b53f8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SocialUMG.SocialNameTextBlock
@@ -231,9 +231,9 @@ public:
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialListInteractableEntryBase.HandleMenuOpenChanged
-	// void HandleMenuOpenChanged(bool bIsMenuOpen);                                                                            // [0x7183520] Final|Native|Private 
+	// void HandleMenuOpenChanged(bool bIsMenuOpen);                                                                            // [0x72b552c] Final|Native|Private 
 	// Function /Script/SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
-	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x7183464] Final|Native|Protected 
+	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x72b5470] Final|Native|Protected 
 };
 
 /// Class /Script/SocialUMG.SocialListUserEntryBase

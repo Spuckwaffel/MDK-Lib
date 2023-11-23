@@ -47,27 +47,27 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector4
-	// FVector4 ReadVector4(FName VarName, int32_t Index);                                                                      // [0x6709cbc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector4 ReadVector4(FName VarName, int32_t Index);                                                                      // [0x66e50b4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector2D
-	// FVector2D ReadVector2D(FName VarName, int32_t Index);                                                                    // [0x6709b84] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector2D ReadVector2D(FName VarName, int32_t Index);                                                                    // [0x66e4f7c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadVector
-	// FVector ReadVector(FName VarName, int32_t Index);                                                                        // [0x6709db0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector ReadVector(FName VarName, int32_t Index);                                                                        // [0x66e51a8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadQuat
-	// FQuat ReadQuat(FName VarName, int32_t Index);                                                                            // [0x6709a8c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FQuat ReadQuat(FName VarName, int32_t Index);                                                                            // [0x66e4e84] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadPosition
-	// FVector ReadPosition(FName VarName, int32_t Index);                                                                      // [0x6709990] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector ReadPosition(FName VarName, int32_t Index);                                                                      // [0x66e4d88] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadLinearColor
-	// FLinearColor ReadLinearColor(FName VarName, int32_t Index);                                                              // [0x6709858] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FLinearColor ReadLinearColor(FName VarName, int32_t Index);                                                              // [0x66e4c50] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadInt
-	// int32_t ReadInt(FName VarName, int32_t Index);                                                                           // [0x6709744] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t ReadInt(FName VarName, int32_t Index);                                                                           // [0x66e4b3c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadFloat
-	// double ReadFloat(FName VarName, int32_t Index);                                                                          // [0x6709680] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double ReadFloat(FName VarName, int32_t Index);                                                                          // [0x66e4a78] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.ReadBool
-	// bool ReadBool(FName VarName, int32_t Index);                                                                             // [0x670956c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ReadBool(FName VarName, int32_t Index);                                                                             // [0x66e4964] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.Num
-	// int32_t Num();                                                                                                           // [0x6709520] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t Num();                                                                                                           // [0x66e4918] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.InitAccess
-	// bool InitAccess(FNiagaraDataChannelSearchParameters SearchParams, bool bReadPrevFrameData);                              // [0x6708c90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool InitAccess(FNiagaraDataChannelSearchParameters SearchParams, bool bReadPrevFrameData);                              // [0x66e3ff0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelWriter
@@ -83,29 +83,29 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector4
-	// void WriteVector4(FName VarName, int32_t Index, FVector4 InData);                                                        // [0x670aa98] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector4(FName VarName, int32_t Index, FVector4 InData);                                                        // [0x66e5e30] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector2D
-	// void WriteVector2D(FName VarName, int32_t Index, FVector2D InData);                                                      // [0x670a8d0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector2D(FName VarName, int32_t Index, FVector2D InData);                                                      // [0x66e5c7c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteVector
-	// void WriteVector(FName VarName, int32_t Index, FVector InData);                                                          // [0x670ac78] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteVector(FName VarName, int32_t Index, FVector InData);                                                          // [0x66e6000] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteSpawnInfo
-	// void WriteSpawnInfo(FName VarName, int32_t Index, FNiagaraSpawnInfo InData);                                             // [0x670a6fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteSpawnInfo(FName VarName, int32_t Index, FNiagaraSpawnInfo InData);                                             // [0x66e5abc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteQuat
-	// void WriteQuat(FName VarName, int32_t Index, FQuat InData);                                                              // [0x670a52c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteQuat(FName VarName, int32_t Index, FQuat InData);                                                              // [0x66e5900] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WritePosition
-	// void WritePosition(FName VarName, int32_t Index, FVector InData);                                                        // [0x670a35c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WritePosition(FName VarName, int32_t Index, FVector InData);                                                        // [0x66e5740] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteLinearColor
-	// void WriteLinearColor(FName VarName, int32_t Index, FLinearColor InData);                                                // [0x670a194] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void WriteLinearColor(FName VarName, int32_t Index, FLinearColor InData);                                                // [0x66e558c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteInt
-	// void WriteInt(FName VarName, int32_t Index, int32_t InData);                                                             // [0x670a0a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteInt(FName VarName, int32_t Index, int32_t InData);                                                             // [0x66e5498] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteFloat
-	// void WriteFloat(FName VarName, int32_t Index, double InData);                                                            // [0x6709fa4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteFloat(FName VarName, int32_t Index, double InData);                                                            // [0x66e539c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.WriteBool
-	// void WriteBool(FName VarName, int32_t Index, bool InData);                                                               // [0x6709eac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void WriteBool(FName VarName, int32_t Index, bool InData);                                                               // [0x66e52a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.Num
-	// int32_t Num();                                                                                                           // [0x6709548] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t Num();                                                                                                           // [0x66e4940] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.InitWrite
-	// bool InitWrite(FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU); // [0x6708f50] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool InitWrite(FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU); // [0x66e4250] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelHandler
@@ -123,9 +123,9 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataChannelHandler.GetDataChannelWriter
-	// UNiagaraDataChannelWriter* GetDataChannelWriter();                                                                       // [0x671064c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UNiagaraDataChannelWriter* GetDataChannelWriter();                                                                       // [0x66ef434] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelHandler.GetDataChannelReader
-	// UNiagaraDataChannelReader* GetDataChannelReader();                                                                       // [0x6710628] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UNiagaraDataChannelReader* GetDataChannelReader();                                                                       // [0x66ef410] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelAsset
@@ -227,20 +227,18 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceDataChannelRead
-/// Size: 0x0080 (0x000038 - 0x0000B8)
+/// Size: 0x0078 (0x000038 - 0x0000B0)
 class UNiagaraDataInterfaceDataChannelRead : public UNiagaraDataInterfaceRWBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
+	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 	CMember(UNiagaraDataChannelAsset*)                 Channel                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(getStruct<T>, {0x40, 8, 0, 0})
-	DMember(bool)                                      bReadCurrentFrame                                           OFFSET(get<bool>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bUpdateSourceDataEveryTick                                  OFFSET(get<bool>, {0x49, 1, 0, 0})
-	DMember(bool)                                      bOverrideSpawnGroupToDataChannelIndex                       OFFSET(get<bool>, {0x4A, 1, 0, 0})
-	SMember(FName)                                     SpawnInfoName                                               OFFSET(getStruct<T>, {0x4C, 4, 0, 0})
-	SMember(FNDIDataChannelCompiledData)               CompiledData                                                OFFSET(getStruct<T>, {0x50, 104, 0, 0})
+	DMember(bool)                                      bReadCurrentFrame                                           OFFSET(get<bool>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bUpdateSourceDataEveryTick                                  OFFSET(get<bool>, {0x41, 1, 0, 0})
+	DMember(bool)                                      bOverrideSpawnGroupToDataChannelIndex                       OFFSET(get<bool>, {0x42, 1, 0, 0})
+	SMember(FNDIDataChannelCompiledData)               CompiledData                                                OFFSET(getStruct<T>, {0x48, 104, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceDataChannelWrite
@@ -385,6 +383,16 @@ public:
 	CMember(TEnumAsByte<ENDICollisionQuery_AsyncGpuTraceProvider>) TraceProvider                                   OFFSET(get<T>, {0x40, 1, 0, 0})
 };
 
+/// Class /Script/Niagara.NiagaraDataInterfaceConsoleVariable
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UNiagaraDataInterfaceConsoleVariable : public UNiagaraDataInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceDebugDraw
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UNiagaraDataInterfaceDebugDraw : public UNiagaraDataInterface
@@ -487,7 +495,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSceneCapture2D.SetSceneCapture2DManagedShowOnlyActors
-	// void SetSceneCapture2DManagedShowOnlyActors(UNiagaraComponent* NiagaraSystem, FName ParameterName, TArray<AActor*> ShowOnlyActors); // [0x6739628] Final|RequiredAPI|Native|Static|Protected|BlueprintCallable 
+	// void SetSceneCapture2DManagedShowOnlyActors(UNiagaraComponent* NiagaraSystem, FName ParameterName, TArray<AActor*> ShowOnlyActors); // [0x67147e4] Final|RequiredAPI|Native|Static|Protected|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSimCacheReader
@@ -516,11 +524,11 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceStaticMesh
-/// Size: 0x0088 (0x000038 - 0x0000C0)
+/// Size: 0x00A0 (0x000038 - 0x0000D8)
 class UNiagaraDataInterfaceStaticMesh : public UNiagaraDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 192;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
 	CMember(ENDIStaticMesh_SourceMode)                 SourceMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
@@ -533,15 +541,16 @@ public:
 	DMember(bool)                                      bAllowSamplingFromStreamingLODs                             OFFSET(get<bool>, {0x82, 1, 0, 0})
 	DMember(int32_t)                                   LODIndex                                                    OFFSET(get<int32_t>, {0x84, 4, 0, 0})
 	SMember(FNiagaraUserParameterBinding)              LODIndexUserParameter                                       OFFSET(getStruct<T>, {0x88, 24, 0, 0})
-	DMember(int32_t)                                   InstanceIndex                                               OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
-	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MeshParameterBinding                                        OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	DMember(int32_t)                                   InstanceIndex                                               OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
+	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceStaticMesh.SetNiagaraStaticMeshDIInstanceIndex
-	// void SetNiagaraStaticMeshDIInstanceIndex(UNiagaraComponent* NiagaraSystem, FName UserParameterName, int32_t NewInstanceIndex); // [0x67702d4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void SetNiagaraStaticMeshDIInstanceIndex(UNiagaraComponent* NiagaraSystem, FName UserParameterName, int32_t NewInstanceIndex); // [0x6749ab8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceStaticMesh.OnSourceEndPlay
-	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x295ad10] Final|RequiredAPI|Native|Protected 
+	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x1673f5c] Final|RequiredAPI|Native|Protected 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceUObjectPropertyReader
@@ -561,7 +570,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceUObjectPropertyReader.SetUObjectReaderPropertyRemap
-	// void SetUObjectReaderPropertyRemap(UNiagaraComponent* NiagaraComponent, FName UserParameterName, FName GraphName, FName RemapName); // [0x67703f0] Final|Native|Static|Public|BlueprintCallable 
+	// void SetUObjectReaderPropertyRemap(UNiagaraComponent* NiagaraComponent, FName UserParameterName, FName GraphName, FName RemapName); // [0x6749bd4] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVirtualTexture
@@ -688,11 +697,11 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraActor.SetDestroyOnSystemFinish
-	// void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);                                                        // [0x6781b0c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish);                                                        // [0x6761274] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraActor.OnNiagaraSystemFinished
-	// void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);                                                      // [0x298fe58] Final|RequiredAPI|Native|Private 
+	// void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);                                                      // [0x33a3e74] Final|RequiredAPI|Native|Private 
 	// Function /Script/Niagara.NiagaraActor.GetDestroyOnSystemFinish
-	// bool GetDestroyOnSystemFinish();                                                                                         // [0x677ef78] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetDestroyOnSystemFinish();                                                                                         // [0x6760b2c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutput
@@ -716,6 +725,18 @@ class UNiagaraBakerOutputSimCache : public UNiagaraBakerOutput
 public:
 	SMember(FString)                                   SimCacheAssetPathFormat                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	SMember(FNiagaraSimCacheCreateParameters)          CreateParameters                                            OFFSET(getStruct<T>, {0x48, 88, 0, 0})
+};
+
+/// Class /Script/Niagara.NiagaraBakerOutputSparseVolumeTexture
+/// Size: 0x0028 (0x000038 - 0x000060)
+class UNiagaraBakerOutputSparseVolumeTexture : public UNiagaraBakerOutput
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 96;
+
+public:
+	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FString)                                   SparseVolumeTextureAssetPathFormat                          OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutputTexture2D
@@ -769,7 +790,8 @@ public:
 	DMember(float)                                     StartSeconds                                                OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     DurationSeconds                                             OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   FramesPerSecond                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bPreviewLooping                                             OFFSET(get<bool>, {0x34, 1, 1, 0})
+	DMember(bool)                                      bLockToSimulationFrameRate                                  OFFSET(get<bool>, {0x34, 1, 1, 0})
+	DMember(bool)                                      bPreviewLooping                                             OFFSET(get<bool>, {0x34, 1, 1, 1})
 	SMember(FIntPoint)                                 FramesPerDimension                                          OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 	CMember(TArray<UNiagaraBakerOutput*>)              Outputs                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FNiagaraBakerCameraSettings>)       CameraSettings                                              OFFSET(get<T>, {0x50, 16, 0, 0})
@@ -788,204 +810,198 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraComponent
-/// Size: 0x02A0 (0x000570 - 0x000810)
+/// Size: 0x0260 (0x000580 - 0x0007E0)
 class UNiagaraComponent : public UFXSystemComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2064;
+	static inline constexpr uint64_t __MDKClassSize = 2016;
 
 public:
-	CMember(UNiagaraSystem*)                           Asset                                                       OFFSET(get<T>, {0x568, 8, 0, 0})
-	CMember(ENiagaraTickBehavior)                      TickBehavior                                                OFFSET(get<T>, {0x570, 1, 0, 0})
-	DMember(int32_t)                                   RandomSeedOffset                                            OFFSET(get<int32_t>, {0x574, 4, 0, 0})
-	SMember(FNiagaraUserRedirectionParameterStore)     OverrideParameters                                          OFFSET(getStruct<T>, {0x578, 216, 0, 0})
-	DMember(bool)                                      bForceSolo                                                  OFFSET(get<bool>, {0x650, 1, 1, 0})
-	DMember(bool)                                      bEnableGpuComputeDebug                                      OFFSET(get<bool>, {0x650, 1, 1, 1})
-	DMember(bool)                                      bOverrideWarmupSettings                                     OFFSET(get<bool>, {0x650, 1, 1, 2})
-	DMember(int32_t)                                   WarmupTickCount                                             OFFSET(get<int32_t>, {0x654, 4, 0, 0})
-	DMember(float)                                     WarmupTickDelta                                             OFFSET(get<float>, {0x658, 4, 0, 0})
-	DMember(bool)                                      bAutoDestroy                                                OFFSET(get<bool>, {0x690, 1, 1, 0})
-	DMember(bool)                                      bRenderingEnabled                                           OFFSET(get<bool>, {0x690, 1, 1, 1})
-	DMember(bool)                                      bAutoManageAttachment                                       OFFSET(get<bool>, {0x690, 1, 1, 2})
-	DMember(bool)                                      bAutoAttachWeldSimulatedBodies                              OFFSET(get<bool>, {0x690, 1, 1, 3})
-	DMember(float)                                     MaxTimeBeforeForceUpdateTransform                           OFFSET(get<float>, {0x694, 4, 0, 0})
-	CMember(ENiagaraOcclusionQueryMode)                OcclusionQueryMode                                          OFFSET(get<T>, {0x699, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSystemFinished                                            OFFSET(getStruct<T>, {0x6A0, 16, 0, 0})
-	CMember(TWeakObjectPtr<USceneComponent*>)          AutoAttachParent                                            OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	SMember(FName)                                     AutoAttachSocketName                                        OFFSET(getStruct<T>, {0x6B8, 4, 0, 0})
-	CMember(EAttachmentRule)                           AutoAttachLocationRule                                      OFFSET(get<T>, {0x6BC, 1, 0, 0})
-	CMember(EAttachmentRule)                           AutoAttachRotationRule                                      OFFSET(get<T>, {0x6BD, 1, 0, 0})
-	CMember(EAttachmentRule)                           AutoAttachScaleRule                                         OFFSET(get<T>, {0x6BE, 1, 0, 0})
-	DMember(bool)                                      bAllowScalability                                           OFFSET(get<bool>, {0x6C8, 1, 1, 4})
-	CMember(UNiagaraSimCache*)                         SimCache                                                    OFFSET(get<T>, {0x7F8, 8, 0, 0})
-	CMember(UNiagaraCullProxyComponent*)               CullProxy                                                   OFFSET(get<T>, {0x800, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           Asset                                                       OFFSET(get<T>, {0x578, 8, 0, 0})
+	CMember(ENiagaraTickBehavior)                      TickBehavior                                                OFFSET(get<T>, {0x580, 1, 0, 0})
+	DMember(int32_t)                                   RandomSeedOffset                                            OFFSET(get<int32_t>, {0x584, 4, 0, 0})
+	SMember(FNiagaraUserRedirectionParameterStore)     OverrideParameters                                          OFFSET(getStruct<T>, {0x588, 216, 0, 0})
+	DMember(bool)                                      bForceSolo                                                  OFFSET(get<bool>, {0x660, 1, 1, 0})
+	DMember(bool)                                      bEnableGpuComputeDebug                                      OFFSET(get<bool>, {0x660, 1, 1, 1})
+	DMember(bool)                                      bOverrideWarmupSettings                                     OFFSET(get<bool>, {0x660, 1, 1, 2})
+	DMember(int32_t)                                   WarmupTickCount                                             OFFSET(get<int32_t>, {0x664, 4, 0, 0})
+	DMember(float)                                     WarmupTickDelta                                             OFFSET(get<float>, {0x668, 4, 0, 0})
+	DMember(bool)                                      bAutoDestroy                                                OFFSET(get<bool>, {0x6A0, 1, 1, 0})
+	DMember(bool)                                      bRenderingEnabled                                           OFFSET(get<bool>, {0x6A0, 1, 1, 1})
+	DMember(bool)                                      bAutoManageAttachment                                       OFFSET(get<bool>, {0x6A0, 1, 1, 2})
+	DMember(bool)                                      bAutoAttachWeldSimulatedBodies                              OFFSET(get<bool>, {0x6A0, 1, 1, 3})
+	DMember(float)                                     MaxTimeBeforeForceUpdateTransform                           OFFSET(get<float>, {0x6A4, 4, 0, 0})
+	CMember(ENiagaraOcclusionQueryMode)                OcclusionQueryMode                                          OFFSET(get<T>, {0x6A9, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSystemFinished                                            OFFSET(getStruct<T>, {0x6B0, 16, 0, 0})
+	CMember(TWeakObjectPtr<USceneComponent*>)          AutoAttachParent                                            OFFSET(get<T>, {0x6C0, 8, 0, 0})
+	SMember(FName)                                     AutoAttachSocketName                                        OFFSET(getStruct<T>, {0x6C8, 4, 0, 0})
+	CMember(EAttachmentRule)                           AutoAttachLocationRule                                      OFFSET(get<T>, {0x6CC, 1, 0, 0})
+	CMember(EAttachmentRule)                           AutoAttachRotationRule                                      OFFSET(get<T>, {0x6CD, 1, 0, 0})
+	CMember(EAttachmentRule)                           AutoAttachScaleRule                                         OFFSET(get<T>, {0x6CE, 1, 0, 0})
+	DMember(bool)                                      bAllowScalability                                           OFFSET(get<bool>, {0x6D8, 1, 1, 4})
+	CMember(UNiagaraSimCache*)                         SimCache                                                    OFFSET(get<T>, {0x7C8, 8, 0, 0})
+	CMember(UNiagaraCullProxyComponent*)               CullProxy                                                   OFFSET(get<T>, {0x7D0, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec4
-	// void SetVariableVec4(FName InVariableName, FVector4& InValue);                                                           // [0x217fbc8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableVec4(FName InVariableName, FVector4& InValue);                                                           // [0x6766e08] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec3
-	// void SetVariableVec3(FName InVariableName, FVector InValue);                                                             // [0x276e328] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariableVec3(FName InVariableName, FVector InValue);                                                             // [0x29e79fc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableVec2
-	// void SetVariableVec2(FName InVariableName, FVector2D InValue);                                                           // [0x6787cb0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariableVec2(FName InVariableName, FVector2D InValue);                                                           // [0x6766c7c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableTextureRenderTarget
-	// void SetVariableTextureRenderTarget(FName InVariableName, UTextureRenderTarget* TextureRenderTarget);                    // [0x6787bec] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableTextureRenderTarget(FName InVariableName, UTextureRenderTarget* TextureRenderTarget);                    // [0x6766bb8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableTexture
-	// void SetVariableTexture(FName InVariableName, UTexture* Texture);                                                        // [0x6787b28] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableTexture(FName InVariableName, UTexture* Texture);                                                        // [0x2c67e08] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableStaticMesh
-	// void SetVariableStaticMesh(FName InVariableName, UStaticMesh* InValue);                                                  // [0x6787a64] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableStaticMesh(FName InVariableName, UStaticMesh* InValue);                                                  // [0x6766af4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableQuat
-	// void SetVariableQuat(FName InVariableName, FQuat& InValue);                                                              // [0x678799c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableQuat(FName InVariableName, FQuat& InValue);                                                              // [0x6766a2c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariablePosition
-	// void SetVariablePosition(FName InVariableName, FVector InValue);                                                         // [0x67877f4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVariablePosition(FName InVariableName, FVector InValue);                                                         // [0x6766894] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableObject
-	// void SetVariableObject(FName InVariableName, UObject* Object);                                                           // [0x30a6418] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableObject(FName InVariableName, UObject* Object);                                                           // [0x676661c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableMatrix
-	// void SetVariableMatrix(FName InVariableName, FMatrix& InValue);                                                          // [0x6787700] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableMatrix(FName InVariableName, FMatrix& InValue);                                                          // [0x67667a0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableMaterial
-	// void SetVariableMaterial(FName InVariableName, UMaterialInterface* Object);                                              // [0x1d2b7d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableMaterial(FName InVariableName, UMaterialInterface* Object);                                              // [0x290caa4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableLinearColor
-	// void SetVariableLinearColor(FName InVariableName, FLinearColor& InValue);                                                // [0x2641a98] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVariableLinearColor(FName InVariableName, FLinearColor& InValue);                                                // [0x10881bc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableInt
-	// void SetVariableInt(FName InVariableName, int32_t InValue);                                                              // [0x2dfd4f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableInt(FName InVariableName, int32_t InValue);                                                              // [0x67666e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableFloat
-	// void SetVariableFloat(FName InVariableName, float InValue);                                                              // [0x2771cdc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableFloat(FName InVariableName, float InValue);                                                              // [0x25acb9c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableBool
-	// void SetVariableBool(FName InVariableName, bool InValue);                                                                // [0x2776038] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableBool(FName InVariableName, bool InValue);                                                                // [0x25ce7a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetVariableActor
-	// void SetVariableActor(FName InVariableName, AActor* Actor);                                                              // [0x678763c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVariableActor(FName InVariableName, AActor* Actor);                                                              // [0x676661c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetTickBehavior
-	// void SetTickBehavior(ENiagaraTickBehavior NewTickBehavior);                                                              // [0x67875bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTickBehavior(ENiagaraTickBehavior NewTickBehavior);                                                              // [0x676659c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSystemFixedBounds
-	// void SetSystemFixedBounds(FBox LocalBounds);                                                                             // [0x6787434] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSystemFixedBounds(FBox LocalBounds);                                                                             // [0x676642c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSimCache
-	// void SetSimCache(UNiagaraSimCache* SimCache, bool bResetSystem);                                                         // [0x678736c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSimCache(UNiagaraSimCache* SimCache, bool bResetSystem);                                                         // [0x6766364] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetSeekDelta
-	// void SetSeekDelta(float InSeekDelta);                                                                                    // [0x67872ec] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSeekDelta(float InSeekDelta);                                                                                    // [0x67662e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetRenderingEnabled
-	// void SetRenderingEnabled(bool bInRenderingEnabled);                                                                      // [0x678725c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRenderingEnabled(bool bInRenderingEnabled);                                                                      // [0x6766254] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetRandomSeedOffset
-	// void SetRandomSeedOffset(int32_t NewRandomSeedOffset);                                                                   // [0x67871d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRandomSeedOffset(int32_t NewRandomSeedOffset);                                                                   // [0x67661cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetPreviewLODDistance
-	// void SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance);          // [0x67870d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance);          // [0x67660cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetPaused
-	// void SetPaused(bool bInPaused);                                                                                          // [0x6787054] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPaused(bool bInPaused);                                                                                          // [0x676604c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetOcclusionQueryMode
-	// void SetOcclusionQueryMode(ENiagaraOcclusionQueryMode Mode);                                                             // [0x6786fc8] Final|Native|Public|BlueprintCallable 
+	// void SetOcclusionQueryMode(ENiagaraOcclusionQueryMode Mode);                                                             // [0x6765fc0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec4
-	// void SetNiagaraVariableVec4(FString InVariableName, FVector4& InValue);                                                  // [0x67868c4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec4(FString InVariableName, FVector4& InValue);                                                  // [0x6765964] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec3
-	// void SetNiagaraVariableVec3(FString InVariableName, FVector InValue);                                                    // [0x67860e4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec3(FString InVariableName, FVector InValue);                                                    // [0x6765240] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableVec2
-	// void SetNiagaraVariableVec2(FString InVariableName, FVector2D InValue);                                                  // [0x6785910] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableVec2(FString InVariableName, FVector2D InValue);                                                  // [0x6764b28] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableQuat
-	// void SetNiagaraVariableQuat(FString InVariableName, FQuat& InValue);                                                     // [0x6785200] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableQuat(FString InVariableName, FQuat& InValue);                                                     // [0x67644bc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariablePosition
-	// void SetNiagaraVariablePosition(FString InVariableName, FVector InValue);                                                // [0x6784a20] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariablePosition(FString InVariableName, FVector InValue);                                                // [0x6763d98] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableObject
-	// void SetNiagaraVariableObject(FString InVariableName, UObject* Object);                                                  // [0x6781ff8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableObject(FString InVariableName, UObject* Object);                                                  // [0x676174c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableMatrix
-	// void SetNiagaraVariableMatrix(FString InVariableName, FMatrix& InValue);                                                 // [0x67842ec] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableMatrix(FString InVariableName, FMatrix& InValue);                                                 // [0x6763708] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
-	// void SetNiagaraVariableLinearColor(FString InVariableName, FLinearColor& InValue);                                       // [0x6783bdc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetNiagaraVariableLinearColor(FString InVariableName, FLinearColor& InValue);                                       // [0x67630a0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableInt
-	// void SetNiagaraVariableInt(FString InVariableName, int32_t InValue);                                                     // [0x67834dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableInt(FString InVariableName, int32_t InValue);                                                     // [0x6762a44] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableFloat
-	// void SetNiagaraVariableFloat(FString InVariableName, float InValue);                                                     // [0x6782dfc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableFloat(FString InVariableName, float InValue);                                                     // [0x6762408] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableBool
-	// void SetNiagaraVariableBool(FString InVariableName, bool InValue);                                                       // [0x67826f8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableBool(FString InVariableName, bool InValue);                                                       // [0x6761da8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetNiagaraVariableActor
-	// void SetNiagaraVariableActor(FString InVariableName, AActor* Actor);                                                     // [0x6781ff8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNiagaraVariableActor(FString InVariableName, AActor* Actor);                                                     // [0x676174c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetMaxSimTime
-	// void SetMaxSimTime(float InMaxTime);                                                                                     // [0x6781f78] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMaxSimTime(float InMaxTime);                                                                                     // [0x67616cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
-	// void SetLockDesiredAgeDeltaTimeToSeekDelta(bool bLock);                                                                  // [0x6781ef8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetLockDesiredAgeDeltaTimeToSeekDelta(bool bLock);                                                                  // [0x676164c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetGpuComputeDebug
-	// void SetGpuComputeDebug(bool bEnableDebug);                                                                              // [0x6781e5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetGpuComputeDebug(bool bEnableDebug);                                                                              // [0x67615b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetForceSolo
-	// void SetForceSolo(bool bInForceSolo);                                                                                    // [0x6781ddc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetForceSolo(bool bInForceSolo);                                                                                    // [0x6761530] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetForceLocalPlayerEffect
-	// void SetForceLocalPlayerEffect(bool bIsPlayerEffect);                                                                    // [0x6781d5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetForceLocalPlayerEffect(bool bIsPlayerEffect);                                                                    // [0x67614b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetEmitterFixedBounds
-	// void SetEmitterFixedBounds(FName EmitterName, FBox LocalBounds);                                                         // [0x6781b98] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetEmitterFixedBounds(FName EmitterName, FBox LocalBounds);                                                         // [0x6761300] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetDesiredAge
-	// void SetDesiredAge(float InDesiredAge);                                                                                  // [0x6781a8c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDesiredAge(float InDesiredAge);                                                                                  // [0x67611f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetCustomTimeDilation
-	// void SetCustomTimeDilation(float Dilation);                                                                              // [0x23d2d64] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCustomTimeDilation(float Dilation);                                                                              // [0x6761150] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetCanRenderWhileSeeking
-	// void SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking);                                                            // [0x6781a0c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking);                                                            // [0x67610d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAutoDestroy
-	// void SetAutoDestroy(bool bInAutoDestroy);                                                                                // [0x678198c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAutoDestroy(bool bInAutoDestroy);                                                                                // [0x6761050] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAsset
-	// void SetAsset(UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters);                                           // [0x2d09aec] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAsset(UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters);                                           // [0x6760f88] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAllowScalability
-	// void SetAllowScalability(bool bAllow);                                                                                   // [0x678190c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAllowScalability(bool bAllow);                                                                                   // [0x6760f08] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SetAgeUpdateMode
-	// void SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode);                                                            // [0x6781890] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode);                                                            // [0x6760e8c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.SeekToDesiredAge
-	// void SeekToDesiredAge(float InDesiredAge);                                                                               // [0x6781808] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SeekToDesiredAge(float InDesiredAge);                                                                               // [0x6760e04] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ResetSystem
-	// void ResetSystem();                                                                                                      // [0x67817f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetSystem();                                                                                                      // [0x6760df0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ReinitializeSystem
-	// void ReinitializeSystem();                                                                                               // [0x67817e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ReinitializeSystem();                                                                                               // [0x6760ddc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.IsPaused
-	// bool IsPaused();                                                                                                         // [0x67813d4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPaused();                                                                                                         // [0x6760dc0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.InitForPerformanceBaseline
-	// void InitForPerformanceBaseline();                                                                                       // [0x6781398] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void InitForPerformanceBaseline();                                                                                       // [0x6760d84] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.GetTickBehavior
-	// ENiagaraTickBehavior GetTickBehavior();                                                                                  // [0x6781380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraTickBehavior GetTickBehavior();                                                                                  // [0x6760d6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSystemFixedBounds
-	// FBox GetSystemFixedBounds();                                                                                             // [0x6781340] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FBox GetSystemFixedBounds();                                                                                             // [0x6760d2c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSimCache
-	// UNiagaraSimCache* GetSimCache();                                                                                         // [0x6781328] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UNiagaraSimCache* GetSimCache();                                                                                         // [0x6760d14] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetSeekDelta
-	// float GetSeekDelta();                                                                                                    // [0x331054c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetSeekDelta();                                                                                                    // [0x3249e48] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetRandomSeedOffset
-	// int32_t GetRandomSeedOffset();                                                                                           // [0x6781310] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetRandomSeedOffset();                                                                                           // [0x6760cfc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
-	// bool GetPreviewLODDistanceEnabled();                                                                                     // [0x67812f4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetPreviewLODDistanceEnabled();                                                                                     // [0x6760ce0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetPreviewLODDistance
-	// float GetPreviewLODDistance();                                                                                           // [0x67812c8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPreviewLODDistance();                                                                                           // [0x6760cb4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetOcclusionQueryMode
-	// ENiagaraOcclusionQueryMode GetOcclusionQueryMode();                                                                      // [0x67812b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
-	// TArray<FVector> GetNiagaraParticleValueVec3_DebugOnly(FString InEmitterName, FString InValueName);                       // [0x677f8e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
-	// TArray<float> GetNiagaraParticleValues_DebugOnly(FString InEmitterName, FString InValueName);                            // [0x67805cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
-	// TArray<FVector> GetNiagaraParticlePositions_DebugOnly(FString InEmitterName);                                            // [0x677f1fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// ENiagaraOcclusionQueryMode GetOcclusionQueryMode();                                                                      // [0x6760c9c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetMaxSimTime
-	// float GetMaxSimTime();                                                                                                   // [0x677f094] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetMaxSimTime();                                                                                                   // [0x6760c84] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
-	// bool GetLockDesiredAgeDeltaTimeToSeekDelta();                                                                            // [0x677f07c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLockDesiredAgeDeltaTimeToSeekDelta();                                                                            // [0x6760c6c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetForceSolo
-	// bool GetForceSolo();                                                                                                     // [0x677f060] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetForceSolo();                                                                                                     // [0x6760c50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetForceLocalPlayerEffect
-	// bool GetForceLocalPlayerEffect();                                                                                        // [0x677f044] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetForceLocalPlayerEffect();                                                                                        // [0x6760c34] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetEmitterFixedBounds
-	// FBox GetEmitterFixedBounds(FName EmitterName);                                                                           // [0x677ef94] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FBox GetEmitterFixedBounds(FName EmitterName);                                                                           // [0x6760b48] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetDesiredAge
-	// float GetDesiredAge();                                                                                                   // [0x677ef60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetDesiredAge();                                                                                                   // [0x3249e00] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetDataInterface
-	// UNiagaraDataInterface* GetDataInterface(FString Name);                                                                   // [0x677e8a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UNiagaraDataInterface* GetDataInterface(FString Name);                                                                   // [0x6760514] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.GetCustomTimeDilation
-	// float GetCustomTimeDilation();                                                                                           // [0x330fe14] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetCustomTimeDilation();                                                                                           // [0x67604fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAsset
-	// UNiagaraSystem* GetAsset();                                                                                              // [0x30e57c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UNiagaraSystem* GetAsset();                                                                                              // [0x67604e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAllowScalability
-	// bool GetAllowScalability();                                                                                              // [0x677e884] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetAllowScalability();                                                                                              // [0x67604c8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.GetAgeUpdateMode
-	// ENiagaraAgeUpdateMode GetAgeUpdateMode();                                                                                // [0x677e86c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraAgeUpdateMode GetAgeUpdateMode();                                                                                // [0x67604b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraComponent.ClearSystemFixedBounds
-	// void ClearSystemFixedBounds();                                                                                           // [0x677e858] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ClearSystemFixedBounds();                                                                                           // [0x676049c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ClearSimCache
-	// void ClearSimCache(bool bResetSystem);                                                                                   // [0x677e7d4] Final|Native|Public|BlueprintCallable 
+	// void ClearSimCache(bool bResetSystem);                                                                                   // [0x6760418] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.ClearEmitterFixedBounds
-	// void ClearEmitterFixedBounds(FName EmitterName);                                                                         // [0x677e6fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ClearEmitterFixedBounds(FName EmitterName);                                                                         // [0x6760398] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulationByTime
-	// void AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds);                                                // [0x677e638] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds);                                                // [0x67602d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
-	// void AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds);                                                       // [0x677e574] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds);                                                       // [0x6760210] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraComponentPool
@@ -1017,11 +1033,11 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraComponentRendererProperties
-/// Size: 0x00F0 (0x0000B0 - 0x0001A0)
+/// Size: 0x00D8 (0x0000B0 - 0x000188)
 class UNiagaraComponentRendererProperties : public UNiagaraRendererProperties
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 	CMember(UClass*)                                   ComponentType                                               OFFSET(get<T>, {0xB0, 8, 0, 0})
@@ -1037,14 +1053,14 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraCullProxyComponent
-/// Size: 0x0010 (0x000810 - 0x000820)
+/// Size: 0x0010 (0x0007E0 - 0x0007F0)
 class UNiagaraCullProxyComponent : public UNiagaraComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2080;
+	static inline constexpr uint64_t __MDKClassSize = 2032;
 
 public:
-	CMember(TArray<FNiagaraCulledComponentInfo>)       Instances                                                   OFFSET(get<T>, {0x808, 16, 0, 0})
+	CMember(TArray<FNiagaraCulledComponentInfo>)       Instances                                                   OFFSET(get<T>, {0x7D8, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataChannelLibrary
@@ -1440,13 +1456,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
-	// void GetTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                       // [0x67c443c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                       // [0x67d2210] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
-	// void GetRawTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                    // [0x67c4328] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetRawTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY);                                    // [0x67d1f88] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
-	// bool FillTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t AttributeIndex);                  // [0x67c29f0] RequiredAPI|Native|Public|BlueprintCallable 
+	// bool FillTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t AttributeIndex);                  // [0x67d1e88] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
-	// bool FillRawTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t& TilesX, int32_t& TilesY);     // [0x67c288c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool FillRawTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t& TilesX, int32_t& TilesY);     // [0x67d1b6c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollectionReader
@@ -1493,13 +1509,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
-	// void GetTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                       // [0x67ed52c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                       // [0x67d2324] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
-	// void GetRawTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                    // [0x67ed3b8] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetRawTextureSize(UNiagaraComponent* Component, int32_t& SizeX, int32_t& SizeY, int32_t& SizeZ);                    // [0x67d209c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
-	// bool FillVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t AttributeIndex);                      // [0x67c29f0] RequiredAPI|Native|Public|BlueprintCallable 
+	// bool FillVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t AttributeIndex);                      // [0x67d1e88] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
-	// bool FillRawVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t& TilesX, int32_t& TilesY, int32_t& TileZ); // [0x67ed200] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool FillRawVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t& TilesX, int32_t& TilesY, int32_t& TileZ); // [0x67d1cd0] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3DCollectionReader
@@ -1527,16 +1543,17 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceLandscape
-/// Size: 0x0020 (0x000038 - 0x000058)
+/// Size: 0x0028 (0x000038 - 0x000060)
 class UNiagaraDataInterfaceLandscape : public UNiagaraDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
+	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(AActor*)                                   SourceLandscape                                             OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(ENDILandscape_SourceMode)                  SourceMode                                                  OFFSET(get<T>, {0x40, 1, 0, 0})
 	CMember(TArray<UPhysicalMaterial*>)                PhysicalMaterials                                           OFFSET(get<T>, {0x48, 16, 0, 0})
+	DMember(bool)                                      bVirtualTexturesSupported                                   OFFSET(get<bool>, {0x58, 1, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceMeshRendererInfo
@@ -1572,14 +1589,14 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceParticleRead
-/// Size: 0x0010 (0x000038 - 0x000048)
+/// Size: 0x0008 (0x000038 - 0x000040)
 class UNiagaraDataInterfaceParticleRead : public UNiagaraDataInterfaceRWBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 72;
+	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   EmitterName                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfacePlatformSet
@@ -1702,32 +1719,33 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSkeletalMesh
-/// Size: 0x00B0 (0x000038 - 0x0000E8)
+/// Size: 0x00B8 (0x000038 - 0x0000F0)
 class UNiagaraDataInterfaceSkeletalMesh : public UNiagaraDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 232;
+	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
 	CMember(ENDISkeletalMesh_SourceMode)               SourceMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   SoftSourceActor                                             OFFSET(get<T>, {0x40, 32, 0, 0})
-	CMember(TArray<FName>)                             ComponentTags                                               OFFSET(get<T>, {0x60, 16, 0, 0})
-	CMember(USkeletalMeshComponent*)                   SourceComponent                                             OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(getStruct<T>, {0x78, 24, 0, 0})
-	CMember(ENDISkeletalMesh_SkinningMode)             SkinningMode                                                OFFSET(get<T>, {0x90, 1, 0, 0})
-	CMember(TArray<FName>)                             SamplingRegions                                             OFFSET(get<T>, {0x98, 16, 0, 0})
-	DMember(int32_t)                                   WholeMeshLOD                                                OFFSET(get<int32_t>, {0xA8, 4, 0, 0})
-	CMember(TArray<FName>)                             FilteredBones                                               OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FName)                                     ExcludeBoneName                                             OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
-	DMember(bool)                                      bExcludeBone                                                OFFSET(get<bool>, {0xD4, 1, 1, 0})
-	DMember(int32_t)                                   UvSetIndex                                                  OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
-	DMember(bool)                                      bRequireCurrentFrameData                                    OFFSET(get<bool>, {0xDC, 1, 0, 0})
+	CMember(USkeletalMesh*)                            DefaultMesh                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(TWeakObjectPtr<AActor*>)                   SoftSourceActor                                             OFFSET(get<T>, {0x48, 32, 0, 0})
+	CMember(TArray<FName>)                             ComponentTags                                               OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(USkeletalMeshComponent*)                   SourceComponent                                             OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	CMember(ENDISkeletalMesh_SkinningMode)             SkinningMode                                                OFFSET(get<T>, {0x98, 1, 0, 0})
+	CMember(TArray<FName>)                             SamplingRegions                                             OFFSET(get<T>, {0xA0, 16, 0, 0})
+	DMember(int32_t)                                   WholeMeshLOD                                                OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
+	CMember(TArray<FName>)                             FilteredBones                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FName)                                     ExcludeBoneName                                             OFFSET(getStruct<T>, {0xD8, 4, 0, 0})
+	DMember(bool)                                      bExcludeBone                                                OFFSET(get<bool>, {0xDC, 1, 1, 0})
+	DMember(int32_t)                                   UvSetIndex                                                  OFFSET(get<int32_t>, {0xE0, 4, 0, 0})
+	DMember(bool)                                      bRequireCurrentFrameData                                    OFFSET(get<bool>, {0xE4, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSkeletalMesh.OnSourceEndPlay
-	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x295abf4] Final|RequiredAPI|Native|Protected 
+	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x28b4edc] Final|RequiredAPI|Native|Protected 
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSparseVolumeTexture
@@ -2049,11 +2067,11 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraMeshRendererProperties
-/// Size: 0x0478 (0x0000B0 - 0x000528)
+/// Size: 0x0480 (0x0000B0 - 0x000530)
 class UNiagaraMeshRendererProperties : public UNiagaraRendererProperties
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1320;
+	static inline constexpr uint64_t __MDKClassSize = 1328;
 
 public:
 	CMember(TArray<FNiagaraMeshRendererMeshProperties>) Meshes                                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
@@ -2069,39 +2087,40 @@ public:
 	DMember(bool)                                      bEnableCameraDistanceCulling                                OFFSET(get<bool>, {0xC4, 1, 1, 5})
 	DMember(bool)                                      bEnableMeshFlipbook                                         OFFSET(get<bool>, {0xC4, 1, 1, 6})
 	DMember(bool)                                      bLockedAxisEnable                                           OFFSET(get<bool>, {0xC4, 1, 1, 7})
-	CMember(TArray<FNiagaraMeshMaterialOverride>)      OverrideMaterials                                           OFFSET(get<T>, {0xC8, 16, 0, 0})
-	CMember(TArray<FNiagaraMeshMICOverride>)           MICOverrideMaterials                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FVector2D)                                 SubImageSize                                                OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
-	SMember(FVector)                                   LockedAxis                                                  OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
-	SMember(FVector)                                   MeshBoundsScale                                             OFFSET(getStruct<T>, {0x110, 24, 0, 0})
-	CMember(ENiagaraMeshFacingMode)                    FacingMode                                                  OFFSET(get<T>, {0x128, 1, 0, 0})
-	CMember(ENiagaraMeshLockedAxisSpace)               LockedAxisSpace                                             OFFSET(get<T>, {0x129, 1, 0, 0})
-	DMember(float)                                     MinCameraDistance                                           OFFSET(get<float>, {0x12C, 4, 0, 0})
-	DMember(float)                                     MaxCameraDistance                                           OFFSET(get<float>, {0x130, 4, 0, 0})
-	DMember(uint32_t)                                  RendererVisibility                                          OFFSET(get<uint32_t>, {0x134, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x138, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x160, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(getStruct<T>, {0x188, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MeshOrientationBinding                                      OFFSET(getStruct<T>, {0x1B0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(getStruct<T>, {0x200, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(getStruct<T>, {0x228, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(getStruct<T>, {0x250, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(getStruct<T>, {0x278, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(getStruct<T>, {0x2A0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(getStruct<T>, {0x2C8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(getStruct<T>, {0x2F0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(getStruct<T>, {0x318, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(getStruct<T>, {0x340, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x368, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MeshIndexBinding                                            OFFSET(getStruct<T>, {0x390, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x3B8, 80, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(getStruct<T>, {0x408, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevScaleBinding                                            OFFSET(getStruct<T>, {0x430, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevMeshOrientationBinding                                  OFFSET(getStruct<T>, {0x458, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(getStruct<T>, {0x480, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(getStruct<T>, {0x4A8, 40, 0, 0})
-	DMember(uint32_t)                                  MaterialParamValidMask                                      OFFSET(get<uint32_t>, {0x4D0, 4, 0, 0})
+	DMember(bool)                                      bCastShadows                                                OFFSET(get<bool>, {0xC8, 1, 1, 0})
+	CMember(TArray<FNiagaraMeshMaterialOverride>)      OverrideMaterials                                           OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<FNiagaraMeshMICOverride>)           MICOverrideMaterials                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FVector2D)                                 SubImageSize                                                OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FVector)                                   LockedAxis                                                  OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   MeshBoundsScale                                             OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	CMember(ENiagaraMeshFacingMode)                    FacingMode                                                  OFFSET(get<T>, {0x130, 1, 0, 0})
+	CMember(ENiagaraMeshLockedAxisSpace)               LockedAxisSpace                                             OFFSET(get<T>, {0x131, 1, 0, 0})
+	DMember(float)                                     MinCameraDistance                                           OFFSET(get<float>, {0x134, 4, 0, 0})
+	DMember(float)                                     MaxCameraDistance                                           OFFSET(get<float>, {0x138, 4, 0, 0})
+	DMember(uint32_t)                                  RendererVisibility                                          OFFSET(get<uint32_t>, {0x13C, 4, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x140, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x168, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(getStruct<T>, {0x190, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MeshOrientationBinding                                      OFFSET(getStruct<T>, {0x1B8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(getStruct<T>, {0x1E0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(getStruct<T>, {0x208, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(getStruct<T>, {0x230, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(getStruct<T>, {0x258, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(getStruct<T>, {0x280, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(getStruct<T>, {0x2A8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(getStruct<T>, {0x2D0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(getStruct<T>, {0x2F8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(getStruct<T>, {0x320, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(getStruct<T>, {0x348, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x370, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MeshIndexBinding                                            OFFSET(getStruct<T>, {0x398, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x3C0, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(getStruct<T>, {0x410, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevScaleBinding                                            OFFSET(getStruct<T>, {0x438, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevMeshOrientationBinding                                  OFFSET(getStruct<T>, {0x460, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(getStruct<T>, {0x488, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(getStruct<T>, {0x4B0, 40, 0, 0})
+	DMember(uint32_t)                                  MaterialParamValidMask                                      OFFSET(get<uint32_t>, {0x4D8, 4, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraParameterCollectionInstance
@@ -2119,37 +2138,37 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
-	// void SetVectorParameter(FString InVariableName, FVector InValue);                                                        // [0x6861b00] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVectorParameter(FString InVariableName, FVector InValue);                                                        // [0x6852964] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
-	// void SetVector4Parameter(FString InVariableName, FVector4& InValue);                                                     // [0x68613fc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetVector4Parameter(FString InVariableName, FVector4& InValue);                                                     // [0x6852308] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
-	// void SetVector2DParameter(FString InVariableName, FVector2D InValue);                                                    // [0x6860c28] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetVector2DParameter(FString InVariableName, FVector2D InValue);                                                    // [0x6851bf0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
-	// void SetQuatParameter(FString InVariableName, FQuat& InValue);                                                           // [0x6860538] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetQuatParameter(FString InVariableName, FQuat& InValue);                                                           // [0x68515a4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetIntParameter
-	// void SetIntParameter(FString InVariableName, int32_t InValue);                                                           // [0x685fdd8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetIntParameter(FString InVariableName, int32_t InValue);                                                           // [0x6850ee8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
-	// void SetFloatParameter(FString InVariableName, float InValue);                                                           // [0x685f6f8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFloatParameter(FString InVariableName, float InValue);                                                           // [0x68508ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetColorParameter
-	// void SetColorParameter(FString InVariableName, FLinearColor InValue);                                                    // [0x685ef24] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetColorParameter(FString InVariableName, FLinearColor InValue);                                                    // [0x6850194] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
-	// void SetBoolParameter(FString InVariableName, bool InValue);                                                             // [0x685e840] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetBoolParameter(FString InVariableName, bool InValue);                                                             // [0x684fb54] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
-	// FVector GetVectorParameter(FString InVariableName);                                                                      // [0x685dfa4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector GetVectorParameter(FString InVariableName);                                                                      // [0x684f37c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
-	// FVector4 GetVector4Parameter(FString InVariableName);                                                                    // [0x685d8f8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector4 GetVector4Parameter(FString InVariableName);                                                                    // [0x684ed78] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
-	// FVector2D GetVector2DParameter(FString InVariableName);                                                                  // [0x685d258] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FVector2D GetVector2DParameter(FString InVariableName);                                                                  // [0x684e780] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
-	// FQuat GetQuatParameter(FString InVariableName);                                                                          // [0x685cbac] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FQuat GetQuatParameter(FString InVariableName);                                                                          // [0x684e17c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetIntParameter
-	// int32_t GetIntParameter(FString InVariableName);                                                                         // [0x685c460] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// int32_t GetIntParameter(FString InVariableName);                                                                         // [0x684dacc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
-	// float GetFloatParameter(FString InVariableName);                                                                         // [0x685bdac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// float GetFloatParameter(FString InVariableName);                                                                         // [0x684d4b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetColorParameter
-	// FLinearColor GetColorParameter(FString InVariableName);                                                                  // [0x685b70c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// FLinearColor GetColorParameter(FString InVariableName);                                                                  // [0x684cebc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
-	// bool GetBoolParameter(FString InVariableName);                                                                           // [0x685b05c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool GetBoolParameter(FString InVariableName);                                                                           // [0x684c8a8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraParameterCollection
@@ -2183,15 +2202,15 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraBaselineController.OnTickTest
-	// bool OnTickTest();                                                                                                       // [0x1ebf934] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// bool OnTickTest();                                                                                                       // [0x192fa2c] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnOwnerTick
-	// void OnOwnerTick(float DeltaTime);                                                                                       // [0x685e7bc] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnOwnerTick(float DeltaTime);                                                                                       // [0x684fad0] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnEndTest
-	// void OnEndTest(FNiagaraPerfBaselineStats Stats);                                                                         // [0x685e650] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnEndTest(FNiagaraPerfBaselineStats Stats);                                                                         // [0x684f980] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.OnBeginTest
-	// void OnBeginTest();                                                                                                      // [0x21a1844] RequiredAPI|Native|Event|Public|BlueprintEvent 
+	// void OnBeginTest();                                                                                                      // [0x32bde40] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.GetSystem
-	// UNiagaraSystem* GetSystem();                                                                                             // [0x5ce3900] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UNiagaraSystem* GetSystem();                                                                                             // [0x5b96f14] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraBaselineController_Basic
@@ -2356,13 +2375,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraPreviewGrid.SetPaused
-	// void SetPaused(bool bPaused);                                                                                            // [0x68604b8] Final|Native|Public|BlueprintCallable 
+	// void SetPaused(bool bPaused);                                                                                            // [0x6851524] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.GetPreviews
-	// void GetPreviews(TArray<UNiagaraComponent*>& OutPreviews);                                                               // [0x685cb10] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetPreviews(TArray<UNiagaraComponent*>& OutPreviews);                                                               // [0x684e0e0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.DeactivatePreviews
-	// void DeactivatePreviews();                                                                                               // [0x685b048] Final|Native|Public|BlueprintCallable 
+	// void DeactivatePreviews();                                                                                               // [0x684c894] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
-	// void ActivatePreviews(bool bReset);                                                                                      // [0x685a86c] Final|Native|Public|BlueprintCallable 
+	// void ActivatePreviews(bool bReset);                                                                                      // [0x684c15c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraRibbonRendererProperties
@@ -2383,10 +2402,12 @@ public:
 	CMember(ENiagaraRibbonShapeMode)                   Shape                                                       OFFSET(get<T>, {0x129, 1, 0, 0})
 	DMember(bool)                                      bEnableAccurateGeometry                                     OFFSET(get<bool>, {0x12A, 1, 1, 0})
 	DMember(bool)                                      bUseMaterialBackfaceCulling                                 OFFSET(get<bool>, {0x12A, 1, 1, 1})
-	DMember(bool)                                      bUseGPUInit                                                 OFFSET(get<bool>, {0x12A, 1, 1, 2})
-	DMember(bool)                                      bUseConstantFactor                                          OFFSET(get<bool>, {0x12A, 1, 1, 3})
-	DMember(bool)                                      bScreenSpaceTessellation                                    OFFSET(get<bool>, {0x12A, 1, 1, 4})
-	DMember(bool)                                      bLinkOrderUseUniqueID                                       OFFSET(get<bool>, {0x12A, 1, 1, 5})
+	DMember(bool)                                      bUseGeometryNormals                                         OFFSET(get<bool>, {0x12A, 1, 1, 2})
+	DMember(bool)                                      bUseGPUInit                                                 OFFSET(get<bool>, {0x12A, 1, 1, 3})
+	DMember(bool)                                      bUseConstantFactor                                          OFFSET(get<bool>, {0x12A, 1, 1, 4})
+	DMember(bool)                                      bScreenSpaceTessellation                                    OFFSET(get<bool>, {0x12A, 1, 1, 5})
+	DMember(bool)                                      bLinkOrderUseUniqueID                                       OFFSET(get<bool>, {0x12A, 1, 1, 6})
+	DMember(bool)                                      bCastShadows                                                OFFSET(get<bool>, {0x12A, 1, 1, 7})
 	DMember(int32_t)                                   WidthSegmentationCount                                      OFFSET(get<int32_t>, {0x12C, 4, 0, 0})
 	DMember(int32_t)                                   MultiPlaneCount                                             OFFSET(get<int32_t>, {0x130, 4, 0, 0})
 	DMember(int32_t)                                   TubeSubdivisions                                            OFFSET(get<int32_t>, {0x134, 4, 0, 0})
@@ -2455,7 +2476,7 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-	// void RaiseOnGPUCompilationComplete();                                                                                    // [0x2cf4738] Final|Native|Public  
+	// void RaiseOnGPUCompilationComplete();                                                                                    // [0x2b7b1c8] Final|Native|Public  
 };
 
 /// Class /Script/Niagara.NiagaraSimCache
@@ -2479,43 +2500,43 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraSimCache.ReadVectorAttribute
-	// void ReadVectorAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);        // [0x687bbd8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVectorAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);        // [0x6879594] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadVector4Attribute
-	// void ReadVector4Attribute(TArray<FVector4>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);      // [0x687b93c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVector4Attribute(TArray<FVector4>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);      // [0x6879204] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadVector2Attribute
-	// void ReadVector2Attribute(TArray<FVector2D>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);     // [0x687b56c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadVector2Attribute(TArray<FVector2D>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);     // [0x6878e74] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadQuatAttributeWithRebase
-	// void ReadQuatAttributeWithRebase(TArray<FQuat>& OutValues, FQuat Quat, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x687b080] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// void ReadQuatAttributeWithRebase(TArray<FQuat>& OutValues, FQuat Quat, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x68789d8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadQuatAttribute
-	// void ReadQuatAttribute(TArray<FQuat>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x687ab98] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadQuatAttribute(TArray<FQuat>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x6878548] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadPositionAttributeWithRebase
-	// void ReadPositionAttributeWithRebase(TArray<FVector>& OutValues, FTransform Transform, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x687a60c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// void ReadPositionAttributeWithRebase(TArray<FVector>& OutValues, FTransform Transform, FName AttributeName, FName EmitterName, int32_t FrameIndex); // [0x687800c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadPositionAttribute
-	// void ReadPositionAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x687a2c8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadPositionAttribute(TArray<FVector>& OutValues, FName AttributeName, FName EmitterName, bool bLocalSpaceToWorld, int32_t FrameIndex); // [0x6877b7c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadIntAttribute
-	// void ReadIntAttribute(TArray<int32_t>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x6879ef8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadIntAttribute(TArray<int32_t>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x68777ec] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadIDAttribute
-	// void ReadIDAttribute(TArray<FNiagaraID>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);         // [0x687950c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadIDAttribute(TArray<FNiagaraID>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);         // [0x6876ee4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadFloatAttribute
-	// void ReadFloatAttribute(TArray<float>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x687913c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadFloatAttribute(TArray<float>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);           // [0x6876b3c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.ReadColorAttribute
-	// void ReadColorAttribute(TArray<FLinearColor>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);    // [0x6878d6c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void ReadColorAttribute(TArray<FLinearColor>& OutValues, FName AttributeName, FName EmitterName, int32_t FrameIndex);    // [0x68767ac] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.IsEmpty
-	// bool IsEmpty();                                                                                                          // [0x6878d54] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsEmpty();                                                                                                          // [0x6876794] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.IsCacheValid
-	// bool IsCacheValid();                                                                                                     // [0x6878d3c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsCacheValid();                                                                                                     // [0x687677c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetStartSeconds
-	// float GetStartSeconds();                                                                                                 // [0x5c3986c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetStartSeconds();                                                                                                 // [0x5ae2380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetNumFrames
-	// int32_t GetNumFrames();                                                                                                  // [0x58d23e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumFrames();                                                                                                  // [0x5756384] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetNumEmitters
-	// int32_t GetNumEmitters();                                                                                                // [0x58f8d34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumEmitters();                                                                                                // [0x5783254] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetEmitterNames
-	// TArray<FName> GetEmitterNames();                                                                                         // [0x6878cfc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FName> GetEmitterNames();                                                                                         // [0x687673c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetEmitterName
-	// FName GetEmitterName(int32_t EmitterIndex);                                                                              // [0x6878c54] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetEmitterName(int32_t EmitterIndex);                                                                              // [0x6876694] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetAttributeCaptureMode
-	// ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode();                                                          // [0x6432cd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode();                                                          // [0x58c5dac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/Niagara.AsyncNiagaraCaptureSimCache
@@ -2533,13 +2554,13 @@ public:
 
 	/// Functions
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.OnCaptureComplete__DelegateSignature
-	// void OnCaptureComplete__DelegateSignature(bool bSuccess);                                                                // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void OnCaptureComplete__DelegateSignature(bool bSuccess);                                                                // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCacheUntilComplete
-	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, UNiagaraSimCache*& OutSimCache, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x687848c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheUntilComplete(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, UNiagaraSimCache*& OutSimCache, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x6875f64] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCacheMultiFrame
-	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, UNiagaraSimCache*& OutSimCache, int32_t NumFrames, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x6877cac] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, UNiagaraSimCache*& OutSimCache, int32_t NumFrames, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x6875848] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCache
-	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, FNiagaraSimCacheCaptureParameters CaptureParameters, UNiagaraSimCache*& OutSimCache); // [0x6877238] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, FNiagaraSimCacheCaptureParameters CaptureParameters, UNiagaraSimCache*& OutSimCache); // [0x6874ed0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Niagara.NiagaraSimCacheFunctionLibrary
@@ -2615,6 +2636,7 @@ public:
 	DMember(bool)                                      bRemoveHMDRollInVR                                          OFFSET(get<bool>, {0xF8, 1, 1, 1})
 	DMember(bool)                                      bSortOnlyWhenTranslucent                                    OFFSET(get<bool>, {0xF8, 1, 1, 2})
 	DMember(bool)                                      bEnableCameraDistanceCulling                                OFFSET(get<bool>, {0xF8, 1, 1, 3})
+	DMember(bool)                                      bCastShadows                                                OFFSET(get<bool>, {0xF8, 1, 1, 4})
 	CMember(ENiagaraRendererSortPrecision)             SortPrecision                                               OFFSET(get<T>, {0xF9, 1, 0, 0})
 	CMember(ENiagaraRendererGpuTranslucentLatency)     GpuTranslucentLatency                                       OFFSET(get<T>, {0xFA, 1, 0, 0})
 	CMember(ENiagaraRendererPixelCoverageMode)         PixelCoverageMode                                           OFFSET(get<T>, {0xFB, 1, 0, 0})
@@ -2656,11 +2678,11 @@ public:
 };
 
 /// Class /Script/Niagara.NiagaraSystem
-/// Size: 0x04C0 (0x000048 - 0x000508)
+/// Size: 0x04B8 (0x000048 - 0x000500)
 class UNiagaraSystem : public UFXSystemAsset
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1288;
+	static inline constexpr uint64_t __MDKClassSize = 1280;
 
 public:
 	DMember(bool)                                      bSupportLargeWorldCoordinates                               OFFSET(get<bool>, {0x48, 1, 1, 0})
@@ -2675,6 +2697,7 @@ public:
 	DMember(bool)                                      bReceivesDecals                                             OFFSET(get<bool>, {0x49, 1, 1, 1})
 	DMember(bool)                                      bRenderCustomDepth                                          OFFSET(get<bool>, {0x49, 1, 1, 2})
 	DMember(bool)                                      bDisableExperimentalVM                                      OFFSET(get<bool>, {0x49, 1, 1, 3})
+	DMember(bool)                                      bInitialOwnerVelocityFromActor                              OFFSET(get<bool>, {0x49, 1, 1, 4})
 	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 OFFSET(get<T>, {0x4A, 1, 0, 0})
 	DMember(int32_t)                                   CustomDepthStencilValue                                     OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	DMember(int32_t)                                   TranslucencySortPriority                                    OFFSET(get<int32_t>, {0x50, 4, 0, 0})
@@ -2696,8 +2719,7 @@ public:
 	SMember(FNiagaraSystemCompiledData)                SystemCompiledData                                          OFFSET(getStruct<T>, {0xF0, 552, 0, 0})
 	SMember(FNiagaraUserRedirectionParameterStore)     ExposedParameters                                           OFFSET(getStruct<T>, {0x318, 216, 0, 0})
 	SMember(FBox)                                      FixedBounds                                                 OFFSET(getStruct<T>, {0x3F0, 56, 0, 0})
-	DMember(bool)                                      bAutoDeactivate                                             OFFSET(get<bool>, {0x428, 1, 0, 0})
-	DMember(bool)                                      bDeterminism                                                OFFSET(get<bool>, {0x429, 1, 0, 0})
+	DMember(bool)                                      bDeterminism                                                OFFSET(get<bool>, {0x428, 1, 0, 0})
 	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x42C, 4, 0, 0})
 	DMember(float)                                     WarmupTime                                                  OFFSET(get<float>, {0x430, 4, 0, 0})
 	DMember(int32_t)                                   WarmupTickCount                                             OFFSET(get<int32_t>, {0x434, 4, 0, 0})
@@ -3084,19 +3106,20 @@ public:
 };
 
 /// Struct /Script/Niagara.NiagaraSystemUpdateContext
-/// Size: 0x0078 (0x000000 - 0x000078)
+/// Size: 0x0088 (0x000000 - 0x000088)
 class FNiagaraSystemUpdateContext : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	CMember(TArray<UNiagaraComponent*>)                ComponentsToReset                                           OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                ComponentsToReInit                                          OFFSET(get<T>, {0x10, 16, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                ComponentsToNotifySimDestroy                                OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<UNiagaraSystem*>)                   SystemSimsToDestroy                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	CMember(TArray<UNiagaraSystem*>)                   SystemSimsToRecache                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UNiagaraComponent*>)                ComponentsToDestroyInstance                                 OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<UNiagaraSystem*>)                   SystemSimsToDestroy                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<UNiagaraSystem*>)                   SystemSimsToRecache                                         OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableInfo
@@ -3199,16 +3222,16 @@ public:
 };
 
 /// Struct /Script/Niagara.NiagaraScriptAsyncCompileData
-/// Size: 0x00F8 (0x000000 - 0x0000F8)
+/// Size: 0x0100 (0x000000 - 0x000100)
 class FNiagaraScriptAsyncCompileData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 248;
+	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	CMember(TArray<FNiagaraVariable>)                  RapidIterationParameters                                    OFFSET(get<T>, {0x98, 16, 0, 0})
-	CMember(TMap<FName, UNiagaraDataInterface*>)       NamedDataInterfaces                                         OFFSET(get<T>, {0xA8, 80, 0, 0})
+	CMember(TArray<FNiagaraVariable>)                  RapidIterationParameters                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TMap<FName, UNiagaraDataInterface*>)       NamedDataInterfaces                                         OFFSET(get<T>, {0xB0, 80, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSystemAsyncCompileResults
@@ -3239,16 +3262,17 @@ public:
 };
 
 /// Struct /Script/Niagara.NiagaraDataChannelSearchParameters
-/// Size: 0x0020 (0x000000 - 0x000020)
+/// Size: 0x0028 (0x000000 - 0x000028)
 class FNiagaraDataChannelSearchParameters : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 32;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(USceneComponent*)                          OwningComponent                                             OFFSET(get<T>, {0x0, 8, 0, 0})
 	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	DMember(bool)                                      bOverrideLocation                                           OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataChannelGameDataLayout
@@ -3589,15 +3613,15 @@ public:
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraBoolParameterSectionTemplate
-/// Size: 0x0100 (0x000038 - 0x000138)
+/// Size: 0x0108 (0x000038 - 0x000140)
 class FMovieSceneNiagaraBoolParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMovieSceneBoolChannel)                    BoolChannel                                                 OFFSET(getStruct<T>, {0x38, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolChannel                                                 OFFSET(getStruct<T>, {0x38, 264, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraColorParameterSectionTemplate
@@ -3628,15 +3652,15 @@ public:
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraIntegerParameterSectionTemplate
-/// Size: 0x0100 (0x000038 - 0x000138)
+/// Size: 0x0108 (0x000038 - 0x000140)
 class FMovieSceneNiagaraIntegerParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMovieSceneIntegerChannel)                 IntegerChannel                                              OFFSET(getStruct<T>, {0x38, 256, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 IntegerChannel                                              OFFSET(getStruct<T>, {0x38, 264, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraVectorParameterSectionTemplate
@@ -4568,10 +4592,10 @@ class FNiagaraEmitterHandle : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGuid)                                     ID                                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     IdName                                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
-	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(getStruct<T>, {0x4, 16, 0, 0})
+	SMember(FName)                                     IdName                                                      OFFSET(getStruct<T>, {0x14, 4, 0, 0})
+	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x18, 1, 0, 0})
 	SMember(FVersionedNiagaraEmitter)                  VersionedInstance                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
@@ -4631,20 +4655,26 @@ public:
 };
 
 /// Struct /Script/Niagara.NiagaraMeshRendererMeshProperties
-/// Size: 0x0060 (0x000000 - 0x000060)
+/// Size: 0x0080 (0x000000 - 0x000080)
 class FNiagaraMeshRendererMeshProperties : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 96;
+	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
 	SMember(FNiagaraParameterBinding)                  MeshParameterBinding                                        OFFSET(getStruct<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x10, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   PivotOffset                                                 OFFSET(getStruct<T>, {0x40, 24, 0, 0})
-	CMember(ENiagaraMeshPivotOffsetSpace)              PivotOffsetSpace                                            OFFSET(get<T>, {0x58, 1, 0, 0})
+	CMember(ENiagaraMeshLODMode)                       LODMode                                                     OFFSET(get<T>, {0x10, 1, 0, 0})
+	DMember(int32_t)                                   LODLevel                                                    OFFSET(get<int32_t>, {0x14, 4, 0, 0})
+	DMember(int32_t)                                   LODBias                                                     OFFSET(get<int32_t>, {0x18, 4, 0, 0})
+	DMember(float)                                     LODDistanceFactor                                           OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(bool)                                      bUseLODRange                                                OFFSET(get<bool>, {0x20, 1, 0, 0})
+	SMember(FIntVector2)                               LODRange                                                    OFFSET(getStruct<T>, {0x24, 8, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   PivotOffset                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	CMember(ENiagaraMeshPivotOffsetSpace)              PivotOffsetSpace                                            OFFSET(get<T>, {0x78, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.ParameterDefinitionsSubscription
@@ -5385,6 +5415,18 @@ public:
 	SMember(FVector4f)                                 Row3                                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
+/// Struct /Script/Niagara.NiagaraEmitterID
+/// Size: 0x0004 (0x000000 - 0x000004)
+class FNiagaraEmitterID : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 4;
+
+public:
+	DMember(int32_t)                                   ID                                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+};
+
 /// Struct /Script/Niagara.NiagaraSpawnInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FNiagaraSpawnInfo : public MDKBase
@@ -6052,14 +6094,15 @@ enum ENDISceneCapture2DOffsetMode : uint8_t
 };
 
 /// Enum /Script/Niagara.ENDIStaticMesh_SourceMode
-/// Size: 0x05
+/// Size: 0x06
 enum ENDIStaticMesh_SourceMode : uint8_t
 {
 	ENDIStaticMesh_SourceMode__Default0                                              = 0,
 	ENDIStaticMesh_SourceMode__Source1                                               = 1,
 	ENDIStaticMesh_SourceMode__AttachParent2                                         = 2,
 	ENDIStaticMesh_SourceMode__DefaultMeshOnly3                                      = 3,
-	ENDIStaticMesh_SourceMode__ENDIStaticMesh_MAX4                                   = 4
+	ENDIStaticMesh_SourceMode__MeshParameterBinding4                                 = 4,
+	ENDIStaticMesh_SourceMode__ENDIStaticMesh_MAX5                                   = 5
 };
 
 /// Enum /Script/Niagara.ENDIObjectPropertyReaderSourceMode
@@ -6179,13 +6222,14 @@ enum ESetResolutionMethod : uint8_t
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SourceMode
-/// Size: 0x04
+/// Size: 0x05
 enum ENDISkeletalMesh_SourceMode : uint8_t
 {
 	ENDISkeletalMesh_SourceMode__Default0                                            = 0,
 	ENDISkeletalMesh_SourceMode__Source1                                             = 1,
 	ENDISkeletalMesh_SourceMode__AttachParent2                                       = 2,
-	ENDISkeletalMesh_SourceMode__ENDISkeletalMesh_MAX3                               = 3
+	ENDISkeletalMesh_SourceMode__DefaultMeshOnly3                                    = 3,
+	ENDISkeletalMesh_SourceMode__ENDISkeletalMesh_MAX4                               = 4
 };
 
 /// Enum /Script/Niagara.ENDISkeletalMesh_SkinningMode
@@ -6386,6 +6430,17 @@ enum ENiagaraMeshLockedAxisSpace : uint8_t
 	ENiagaraMeshLockedAxisSpace__World1                                              = 1,
 	ENiagaraMeshLockedAxisSpace__Local2                                              = 2,
 	ENiagaraMeshLockedAxisSpace__ENiagaraMeshLockedAxisSpace_MAX3                    = 3
+};
+
+/// Enum /Script/Niagara.ENiagaraMeshLODMode
+/// Size: 0x05
+enum ENiagaraMeshLODMode : uint8_t
+{
+	ENiagaraMeshLODMode__LODLevel0                                                   = 0,
+	ENiagaraMeshLODMode__LODBias1                                                    = 1,
+	ENiagaraMeshLODMode__ByComponentBounds2                                          = 2,
+	ENiagaraMeshLODMode__PerParticle3                                                = 3,
+	ENiagaraMeshLODMode__ENiagaraMeshLODMode_MAX4                                    = 4
 };
 
 /// Enum /Script/Niagara.ENiagaraPlatformSelectionState

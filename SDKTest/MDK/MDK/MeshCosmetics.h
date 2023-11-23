@@ -12,9 +12,59 @@
 /// dependency: GameFeatures
 /// dependency: McpProfileSys
 
+/// Class /Script/MeshCosmetics.MeshCosmeticsOption_ApplyAssembledMeshSchema
+/// Size: 0x0000 (0x000030 - 0x000030)
+class UMeshCosmeticsOption_ApplyAssembledMeshSchema : public UFortCosmeticFlowOption
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
+/// Class /Script/MeshCosmetics.MeshCosmeticsOption_ApplyCustomizableObject
+/// Size: 0x0000 (0x000030 - 0x000030)
+class UMeshCosmeticsOption_ApplyCustomizableObject : public UFortCosmeticFlowOption
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
+/// Class /Script/MeshCosmetics.MeshCosmeticsStep_ChooseParameters
+/// Size: 0x0000 (0x000058 - 0x000058)
+class UMeshCosmeticsStep_ChooseParameters : public UFortCosmeticStep
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+};
+
+/// Class /Script/MeshCosmetics.MeshCosmeticsStep_CommitChosenParams
+/// Size: 0x0000 (0x000058 - 0x000058)
+class UMeshCosmeticsStep_CommitChosenParams : public UFortCosmeticStep
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+};
+
 /// Class /Script/MeshCosmetics.MeshCosmeticsStep_CompileCustomizableObjects
 /// Size: 0x0000 (0x000058 - 0x000058)
 class UMeshCosmeticsStep_CompileCustomizableObjects : public UFortCosmeticStep
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+};
+
+/// Class /Script/MeshCosmetics.MeshCosmeticsStep_ComponentRemoval
+/// Size: 0x0000 (0x000058 - 0x000058)
+class UMeshCosmeticsStep_ComponentRemoval : public UFortCosmeticStep
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 88;
@@ -49,87 +99,6 @@ class UMeshCosmeticsStep_PlaceComponent : public UFortCosmeticStep
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 88;
-
-public:
-};
-
-/// Class /Script/MeshCosmetics.MeshCosmeticsApparelItemDefinition
-/// Size: 0x0028 (0x000778 - 0x0007A0)
-class UMeshCosmeticsApparelItemDefinition : public UFortApparelItemDefinition
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1952;
-
-public:
-	SMember(FCosmeticSlotSelector)                     SlotValidWithin                                             OFFSET(getStruct<T>, {0x778, 2, 0, 0})
-	SMember(FApparelCustomizableItemReference)         Parameter                                                   OFFSET(getStruct<T>, {0x780, 32, 0, 0})
-};
-
-/// Class /Script/MeshCosmetics.FortCustomizableObjectParameterVariant
-/// Size: 0x0010 (0x000070 - 0x000080)
-class UFortCustomizableObjectParameterVariant : public UFortCosmeticVariantBackedByArray
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
-
-public:
-	CMember(TArray<FCustomizableObjectParamsVariantDef>) ParameterOptions                                          OFFSET(get<T>, {0x70, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Script/MeshCosmetics.FortCustomizableObjectParameterVariant.ApplyVariants
-	// void ApplyVariants(AActor* Actor, FFortAthenaLoadout& Loadout);                                                          // [0x9d9574c] Final|Native|Static|Private|HasOutParms|BlueprintCallable 
-};
-
-/// Class /Script/MeshCosmetics.FortCustomizableObjectSprayVariant
-/// Size: 0x0238 (0x000070 - 0x0002A8)
-class UFortCustomizableObjectSprayVariant : public UFortCosmeticVariant
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 680;
-
-public:
-	SMember(FGameplayTag)                              ActiveSelectionTag                                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
-	SMember(FString)                                   EnabledParamName                                            OFFSET(getStruct<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   ProjectorParamName                                          OFFSET(getStruct<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   TextureParamName                                            OFFSET(getStruct<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   SaturationParamName                                         OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   WearParamName                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
-	SMember(FString)                                   ScaleParamName                                              OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQueryForShouldOverrideCODefaultsWithFixedLocationParameters OFFSET(getStruct<T>, {0xD8, 72, 0, 0})
-	SMember(FCustomizableObjectSprayVariantFixedProperties) FixedSprayLocation                                     OFFSET(getStruct<T>, {0x120, 104, 0, 0})
-	SMember(FCustomizableObjectSprayVariantSelectablePayload) DefaultSprayCustomization                            OFFSET(getStruct<T>, {0x188, 152, 0, 0})
-	SMember(FCustomizableObjectSprayVariantPayloadClamps) SprayNumericConstraints                                  OFFSET(getStruct<T>, {0x220, 48, 0, 0})
-	DMember(float)                                     TextureBaseScale                                            OFFSET(get<float>, {0x250, 4, 0, 0})
-	SMember(FCustomizableObjectSprayVariantSlotImageProperties) SpraySlotImageProperties                           OFFSET(getStruct<T>, {0x258, 64, 0, 0})
-};
-
-/// Class /Script/MeshCosmetics.MeshCosmeticsStep_ComponentRemoval
-/// Size: 0x0000 (0x000058 - 0x000058)
-class UMeshCosmeticsStep_ComponentRemoval : public UFortCosmeticStep
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
-
-public:
-};
-
-/// Class /Script/MeshCosmetics.MeshCosmeticsOption_ApplyAssembledMeshSchema
-/// Size: 0x0000 (0x000030 - 0x000030)
-class UMeshCosmeticsOption_ApplyAssembledMeshSchema : public UFortCosmeticFlowOption
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
-
-public:
-};
-
-/// Class /Script/MeshCosmetics.MeshCosmeticsOption_ApplyCustomizableObject
-/// Size: 0x0000 (0x000030 - 0x000030)
-class UMeshCosmeticsOption_ApplyCustomizableObject : public UFortCosmeticFlowOption
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 };
@@ -184,24 +153,55 @@ class UMeshCosmeticsVariance_ProcessVariantAssets : public UFortCosmeticStep
 public:
 };
 
-/// Class /Script/MeshCosmetics.MeshCosmeticsStep_ChooseParameters
-/// Size: 0x0000 (0x000058 - 0x000058)
-class UMeshCosmeticsStep_ChooseParameters : public UFortCosmeticStep
+/// Class /Script/MeshCosmetics.MeshCosmeticsApparelItemDefinition
+/// Size: 0x0028 (0x000790 - 0x0007B8)
+class UMeshCosmeticsApparelItemDefinition : public UFortApparelItemDefinition
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
+	static inline constexpr uint64_t __MDKClassSize = 1976;
 
 public:
+	SMember(FCosmeticSlotSelector)                     SlotValidWithin                                             OFFSET(getStruct<T>, {0x790, 2, 0, 0})
+	SMember(FApparelCustomizableItemReference)         Parameter                                                   OFFSET(getStruct<T>, {0x798, 32, 0, 0})
 };
 
-/// Class /Script/MeshCosmetics.MeshCosmeticsStep_CommitChosenParams
-/// Size: 0x0000 (0x000058 - 0x000058)
-class UMeshCosmeticsStep_CommitChosenParams : public UFortCosmeticStep
+/// Class /Script/MeshCosmetics.FortCustomizableObjectParameterVariant
+/// Size: 0x0010 (0x000070 - 0x000080)
+class UFortCustomizableObjectParameterVariant : public UFortCosmeticVariantBackedByArray
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
+	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
+	CMember(TArray<FCustomizableObjectParamsVariantDef>) ParameterOptions                                          OFFSET(get<T>, {0x70, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/MeshCosmetics.FortCustomizableObjectParameterVariant.ApplyVariants
+	// void ApplyVariants(AActor* Actor, FFortAthenaLoadout& Loadout);                                                          // [0x9bb6bb8] Final|Native|Static|Private|HasOutParms|BlueprintCallable 
+};
+
+/// Class /Script/MeshCosmetics.FortCustomizableObjectSprayVariant
+/// Size: 0x0258 (0x000070 - 0x0002C8)
+class UFortCustomizableObjectSprayVariant : public UFortCosmeticVariant
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 712;
+
+public:
+	SMember(FGameplayTag)                              ActiveSelectionTag                                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FString)                                   EnabledParamName                                            OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   ProjectorParamName                                          OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   TextureParamName                                            OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   SaturationParamName                                         OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   WearParamName                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   ScaleParamName                                              OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryForShouldOverrideCODefaultsWithFixedLocationParameters OFFSET(getStruct<T>, {0xD8, 72, 0, 0})
+	SMember(FCustomizableObjectSprayVariantFixedProperties) FixedSprayLocation                                     OFFSET(getStruct<T>, {0x120, 104, 0, 0})
+	SMember(FCustomizableObjectSprayVariantSelectablePayload) DefaultSprayCustomization                            OFFSET(getStruct<T>, {0x188, 184, 0, 0})
+	SMember(FCustomizableObjectSprayVariantPayloadClamps) SprayNumericConstraints                                  OFFSET(getStruct<T>, {0x240, 48, 0, 0})
+	DMember(float)                                     TextureBaseScale                                            OFFSET(get<float>, {0x270, 4, 0, 0})
+	SMember(FCustomizableObjectSprayVariantSlotImageProperties) SpraySlotImageProperties                           OFFSET(getStruct<T>, {0x278, 64, 0, 0})
 };
 
 /// Class /Script/MeshCosmetics.GameFeatureAction_MeshCosmeticsCompileSchemaDepenencies
@@ -309,18 +309,18 @@ public:
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantSelectablePayload
-/// Size: 0x0018 (0x000080 - 0x000098)
+/// Size: 0x0018 (0x0000A0 - 0x0000B8)
 class FCustomizableObjectSprayVariantSelectablePayload : public FBaseVariantDef
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 152;
+	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FPrimaryAssetId)                           TextureSource                                               OFFSET(getStruct<T>, {0x80, 8, 0, 0})
-	DMember(float)                                     Saturation                                                  OFFSET(get<float>, {0x88, 4, 0, 0})
-	DMember(float)                                     Wear                                                        OFFSET(get<float>, {0x8C, 4, 0, 0})
-	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x90, 4, 0, 0})
+	SMember(FPrimaryAssetId)                           TextureSource                                               OFFSET(getStruct<T>, {0xA0, 8, 0, 0})
+	DMember(float)                                     Saturation                                                  OFFSET(get<float>, {0xA8, 4, 0, 0})
+	DMember(float)                                     Wear                                                        OFFSET(get<float>, {0xAC, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0xB0, 4, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantMCPPayload
@@ -613,22 +613,22 @@ public:
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectParamsVariantDef
-/// Size: 0x0080 (0x000080 - 0x000100)
+/// Size: 0x0080 (0x0000A0 - 0x000120)
 class FCustomizableObjectParamsVariantDef : public FBaseVariantDef
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 256;
+	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	CMember(TArray<FCustomizableObjectIntParamVariant>) IntParams                                                  OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectFloatParamVariant>) FloatParams                                              OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectBoolParamVariant>) BoolParams                                                OFFSET(get<T>, {0xA0, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectVectorParamVariant>) VectorParams                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectTextureParamVariant>) TextureParams                                          OFFSET(get<T>, {0xC0, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectProjectorVariant>) ProjectorParams                                           OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectMultilayerProjectorVariant>) MultilayerProjectorParams                       OFFSET(get<T>, {0xE0, 16, 0, 0})
-	CMember(TArray<FCustomizableObjectStateVariant>)   StateVariants                                               OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectIntParamVariant>) IntParams                                                  OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectFloatParamVariant>) FloatParams                                              OFFSET(get<T>, {0xB0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectBoolParamVariant>) BoolParams                                                OFFSET(get<T>, {0xC0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectVectorParamVariant>) VectorParams                                            OFFSET(get<T>, {0xD0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectTextureParamVariant>) TextureParams                                          OFFSET(get<T>, {0xE0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectProjectorVariant>) ProjectorParams                                           OFFSET(get<T>, {0xF0, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectMultilayerProjectorVariant>) MultilayerProjectorParams                       OFFSET(get<T>, {0x100, 16, 0, 0})
+	CMember(TArray<FCustomizableObjectStateVariant>)   StateVariants                                               OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsCustomizationPerSlotData

@@ -42,13 +42,13 @@ public:
 
 	/// Functions
 	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetTargetToReticleDistanceNormalized
-	// float GetTargetToReticleDistanceNormalized();                                                                            // [0x58f8d34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetTargetToReticleDistanceNormalized();                                                                            // [0x5783254] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetLockOnTargetLocation
-	// bool GetLockOnTargetLocation(FVector& OutLockTargetLocation);                                                            // [0x9f2edc4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
+	// bool GetLockOnTargetLocation(FVector& OutLockTargetLocation);                                                            // [0xa342e68] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|Const 
 	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetLockOnProgress
-	// float GetLockOnProgress();                                                                                               // [0x9f2ed9c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLockOnProgress();                                                                                               // [0xa342e40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetCurrentLockOnCount
-	// int32_t GetCurrentLockOnCount();                                                                                         // [0x9f2ed84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetCurrentLockOnCount();                                                                                         // [0xa342e28] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/AutoAimWeaponRuntime.AutoAimWeaponBoneSegmentData

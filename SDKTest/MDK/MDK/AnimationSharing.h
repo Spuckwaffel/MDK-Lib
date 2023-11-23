@@ -21,9 +21,9 @@ public:
 
 	/// Functions
 	// Function /Script/AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
-	// void ProcessActorState(int32_t& OutState, AActor* InActor, char CurrentState, char OnDemandState, bool& bShouldProcess); // [0x7247454] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void ProcessActorState(int32_t& OutState, AActor* InActor, char CurrentState, char OnDemandState, bool& bShouldProcess); // [0x7410ec0] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
-	// UEnum* GetAnimationStateEnum();                                                                                          // [0x7247390] Native|Event|Public|BlueprintEvent 
+	// UEnum* GetAnimationStateEnum();                                                                                          // [0x7410dbc] Native|Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/AnimationSharing.AnimSharingStateInstance
@@ -43,7 +43,7 @@ public:
 
 	/// Functions
 	// Function /Script/AnimationSharing.AnimSharingStateInstance.GetInstancedActors
-	// void GetInstancedActors(TArray<AActor*>& Actors);                                                                        // [0x72473b8] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void GetInstancedActors(TArray<AActor*>& Actors);                                                                        // [0x7410de4] Final|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AnimationSharing.AnimSharingTransitionInstance
@@ -103,13 +103,13 @@ public:
 
 	/// Functions
 	// Function /Script/AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP
-	// void RegisterActorWithSkeletonBP(AActor* InActor, USkeleton* SharingSkeleton);                                           // [0x72476f8] Final|Native|Public|BlueprintCallable 
+	// void RegisterActorWithSkeletonBP(AActor* InActor, USkeleton* SharingSkeleton);                                           // [0x74110f4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AnimationSharing.AnimationSharingManager.GetAnimationSharingManager
-	// UAnimationSharingManager* GetAnimationSharingManager(UObject* WorldContextObject);                                       // [0x7247244] Final|Native|Static|Public|BlueprintCallable 
+	// UAnimationSharingManager* GetAnimationSharingManager(UObject* WorldContextObject);                                       // [0x7410d3c] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager
-	// bool CreateAnimationSharingManager(UObject* WorldContextObject, UAnimationSharingSetup* Setup);                          // [0x7247104] Final|Native|Static|Public|BlueprintCallable 
+	// bool CreateAnimationSharingManager(UObject* WorldContextObject, UAnimationSharingSetup* Setup);                          // [0x7410bfc] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AnimationSharing.AnimationSharingManager.AnimationSharingEnabled
-	// bool AnimationSharingEnabled();                                                                                          // [0x72470e8] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// bool AnimationSharingEnabled();                                                                                          // [0x7410be0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/AnimationSharing.AnimationSharingSetup

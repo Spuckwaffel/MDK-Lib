@@ -65,13 +65,13 @@ public:
 
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtWorldTime
-	// void GetSubjectDataAtWorldTime(FName SubjectName, float WorldTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa2cd46c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetSubjectDataAtWorldTime(FName SubjectName, float WorldTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa9e8528] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectDataAtSceneTime
-	// void GetSubjectDataAtSceneTime(FName SubjectName, FTimecode& SceneTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa2cd27c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetSubjectDataAtSceneTime(FName SubjectName, FTimecode& SceneTime, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle); // [0xa9e82c0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkComponent.GetSubjectData
-	// void GetSubjectData(FName SubjectName, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle);                         // [0xa2cd0d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetSubjectData(FName SubjectName, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle);                         // [0xa9e811c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkComponent.GetAvailableSubjectNames
-	// void GetAvailableSubjectNames(TArray<FName>& SubjectNames);                                                              // [0xa2cb7b8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetAvailableSubjectNames(TArray<FName>& SubjectNames);                                                              // [0xa9e6868] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/LiveLink.LiveLinkDrivenComponent
@@ -132,13 +132,13 @@ public:
 
 	/// Functions
 	// Function /Script/LiveLink.LiveLinkPreset.BuildFromClient
-	// void BuildFromClient();                                                                                                  // [0xa2c8ea8] Final|Native|Public|BlueprintCallable 
+	// void BuildFromClient();                                                                                                  // [0xa9e47f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkPreset.ApplyToClientLatent
-	// void ApplyToClientLatent(UObject* WorldContextObject, FLatentActionInfo LatentInfo);                                     // [0xa2c8cf0] Final|Native|Public|BlueprintCallable 
+	// void ApplyToClientLatent(UObject* WorldContextObject, FLatentActionInfo LatentInfo);                                     // [0xa9e4654] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkPreset.ApplyToClient
-	// bool ApplyToClient();                                                                                                    // [0xa2c8ccc] Final|Native|Public|BlueprintCallable|Const 
+	// bool ApplyToClient();                                                                                                    // [0xa9e4630] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/LiveLink.LiveLinkPreset.AddToClient
-	// bool AddToClient(bool bRecreatePresets);                                                                                 // [0xa2c8c3c] Final|Native|Public|BlueprintCallable|Const 
+	// bool AddToClient(bool bRecreatePresets);                                                                                 // [0xa9e45a0] Final|Native|Public|BlueprintCallable|Const 
 };
 
 /// Class /Script/LiveLink.LiveLinkUserSettings

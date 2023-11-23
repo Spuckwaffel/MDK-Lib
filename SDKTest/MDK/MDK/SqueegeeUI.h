@@ -25,9 +25,9 @@ public:
 
 	/// Functions
 	// Function /Script/SqueegeeUI.FortContentGateDetailsWidget.OnShowWeaponDescription
-	// void OnShowWeaponDescription();                                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnShowWeaponDescription();                                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SqueegeeUI.FortContentGateDetailsWidget.OnShowGamemodeDescription
-	// void OnShowGamemodeDescription(FString ActivityTitle);                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnShowGamemodeDescription(FString ActivityTitle);                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/SqueegeeUI.FortContentGateRatingWidget
@@ -53,19 +53,19 @@ public:
 
 	/// Functions
 	// Function /Script/SqueegeeUI.FortContentManagementDetails.OnShowWeaponData
-	// void OnShowWeaponData();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnShowWeaponData();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SqueegeeUI.FortContentManagementDetails.OnShowActivityData
-	// void OnShowActivityData(FText& ActivityDisplayName, FText& ActivityDescription, FString CreatorName, FText& LinkCode);   // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnShowActivityData(FText& ActivityDisplayName, FText& ActivityDescription, FString CreatorName, FText& LinkCode, bool IsCreative, FDateTime& UnlockTime, UFortGameActivity* GameActivity); // [0x101681c] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/SqueegeeUI.FortContentManagementDetails.OnPreviewImageChanged
-	// void OnPreviewImageChanged(bool bIsLoading, UTexture* Texture);                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPreviewImageChanged(bool bIsLoading, UTexture* Texture);                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/SqueegeeUI.FortContentManagementButton
-/// Size: 0x0020 (0x001490 - 0x0014B0)
+/// Size: 0x0030 (0x001490 - 0x0014C0)
 class UFortContentManagementButton : public UCommonButtonBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5296;
+	static inline constexpr uint64_t __MDKClassSize = 5312;
 
 public:
 };
@@ -91,11 +91,11 @@ public:
 };
 
 /// Class /Script/SqueegeeUI.FortContentManagementEntryDataObject
-/// Size: 0x0018 (0x000028 - 0x000040)
+/// Size: 0x0030 (0x000028 - 0x000058)
 class UFortContentManagementEntryDataObject : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 };
@@ -112,39 +112,46 @@ public:
 };
 
 /// Class /Script/SqueegeeUI.FortContentManagementList
-/// Size: 0x0048 (0x000300 - 0x000348)
+/// Size: 0x0080 (0x000300 - 0x000380)
 class UFortContentManagementList : public UFortSqueegeeWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 840;
+	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
 	SMember(FText)                                     WeaponLabelText                                             OFFSET(getStruct<T>, {0x300, 24, 0, 0})
 	SMember(FText)                                     GameModeLabelText                                           OFFSET(getStruct<T>, {0x318, 24, 0, 0})
 	CMember(UFortContentManagementListView*)           ContentManagementListView                                   OFFSET(get<T>, {0x330, 8, 0, 0})
-	CMember(TArray<UFortCreativeDiscoveryActivityProvider*>) CachedDataProviders                                   OFFSET(get<T>, {0x338, 16, 0, 0})
+	CMember(TArray<UFortGameActivity*>)                CachedActivities                                            OFFSET(get<T>, {0x350, 16, 0, 0})
 
 
 	/// Functions
-	// Function /Script/SqueegeeUI.FortContentManagementList.OnChangeLoading
-	// void OnChangeLoading(bool bIsLoading);                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// Function /Script/SqueegeeUI.FortContentManagementList.ResetUnlockList
+	// void ResetUnlockList();                                                                                                  // [0xa2bdd1c] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/SqueegeeUI.FortContentManagementList.RequestNextUnlockPage
+	// void RequestNextUnlockPage();                                                                                            // [0xa2bdd08] Final|Native|Protected|BlueprintCallable 
+	// Function /Script/SqueegeeUI.FortContentManagementList.OnNextUnlockPageRequestCompleted
+	// void OnNextUnlockPageRequestCompleted(bool bSuccess);                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
+	// Function /Script/SqueegeeUI.FortContentManagementList.CanRequestNextUnlockPage
+	// bool CanRequestNextUnlockPage();                                                                                         // [0xa2bdcd0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SqueegeeUI.FortContentManagementScreen
-/// Size: 0x0010 (0x000548 - 0x000558)
+/// Size: 0x0018 (0x000548 - 0x000560)
 class UFortContentManagementScreen : public UFortPinScreen
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1368;
+	static inline constexpr uint64_t __MDKClassSize = 1376;
 
 public:
-	CMember(UFortContentManagementList*)               ContentManagementList                                       OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UFortContentManagementDetails*)            ContentManagementDetails                                    OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_CloseTouch                                           OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UFortContentManagementList*)               ContentManagementList                                       OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UFortContentManagementDetails*)            ContentManagementDetails                                    OFFSET(get<T>, {0x558, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/SqueegeeUI.FortContentManagementScreen.ExitScreen
-	// void ExitScreen();                                                                                                       // [0x9fd7918] Final|Native|Protected|BlueprintCallable 
+	// void ExitScreen();                                                                                                       // [0xa2bdcf4] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/SqueegeeUI.SqueegeeUIGameFeatureAction

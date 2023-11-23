@@ -44,11 +44,11 @@ public:
 };
 
 /// Class /Script/PictureInPictureUI.PictureInPicturePanelWidget
-/// Size: 0x0310 (0x000400 - 0x000710)
+/// Size: 0x0320 (0x000400 - 0x000720)
 class UPictureInPicturePanelWidget : public UCommonActivatableWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1808;
+	static inline constexpr uint64_t __MDKClassSize = 1824;
 
 public:
 	CMember(USizeBox*)                                 Video_Size_Box                                              OFFSET(get<T>, {0x408, 8, 0, 0})
@@ -70,36 +70,36 @@ public:
 	CMember(UCommonActionWidget*)                      ToggleActionWidget                                          OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(UCommonActivatableWidget*)                 SourcePickerWidget                                          OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	CMember(UPictureInPicturePlayer*)                  VideoWidget                                                 OFFSET(get<T>, {0x4C8, 8, 0, 0})
-	CMember(UAudioComponent*)                          PIPSoundComponent                                           OFFSET(get<T>, {0x510, 8, 0, 0})
-	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(getStruct<T>, {0x518, 488, 0, 0})
-	CMember(USubtitleDisplay*)                         Subtitles                                                   OFFSET(get<T>, {0x708, 8, 0, 0})
+	CMember(UAudioComponent*)                          PIPSoundComponent                                           OFFSET(get<T>, {0x520, 8, 0, 0})
+	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(getStruct<T>, {0x528, 488, 0, 0})
+	CMember(USubtitleDisplay*)                         Subtitles                                                   OFFSET(get<T>, {0x718, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.ToggleFullScreenPiP
-	// void ToggleFullScreenPiP();                                                                                              // [0x9e67394] Final|Native|Protected 
+	// void ToggleFullScreenPiP();                                                                                              // [0xa1ef88c] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.ShowDebugInfo
-	// void ShowDebugInfo(bool bShow);                                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ShowDebugInfo(bool bShow);                                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.SetupPIPSoundComponent
-	// void SetupPIPSoundComponent(FFortMediaEventsStreamAssets& InStreamAssets);                                               // [0x9e672c8] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// void SetupPIPSoundComponent(FFortMediaEventsStreamAssets& InStreamAssets);                                               // [0xa1ef7c0] Final|Native|Private|HasOutParms|BlueprintCallable 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.IntentionalDeactivate
-	// void IntentionalDeactivate();                                                                                            // [0x3411174] Final|Native|Protected 
+	// void IntentionalDeactivate();                                                                                            // [0x35fe9c4] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.HandleToggleFullscreenMap
-	// void HandleToggleFullscreenMap(bool bFullscreenMapVisible);                                                              // [0x9e67248] Final|Native|Protected 
+	// void HandleToggleFullscreenMap(bool bFullscreenMapVisible);                                                              // [0xa1ef740] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.HandleOnPartnerSourceChanged
-	// void HandleOnPartnerSourceChanged(FPiPPartnerSource& InSelectedSource);                                                  // [0x9e6706c] Final|Native|Protected|HasOutParms 
+	// void HandleOnPartnerSourceChanged(FPiPPartnerSource& InSelectedSource);                                                  // [0xa1ef564] Final|Native|Protected|HasOutParms 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.HandleOnPartnerListUpdated
-	// void HandleOnPartnerListUpdated();                                                                                       // [0x1d9c078] Final|Native|Protected 
+	// void HandleOnPartnerListUpdated();                                                                                       // [0x1a8b188] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.HandleOnPartnerChanged
-	// void HandleOnPartnerChanged(UPictureInPicturePartnerControls* NewPartnerControls);                                       // [0x9e66df8] Final|Native|Protected 
+	// void HandleOnPartnerChanged(UPictureInPicturePartnerControls* NewPartnerControls);                                       // [0xa1ef2e0] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.HandleIsPictureInPictureEnabledChanged
-	// void HandleIsPictureInPictureEnabledChanged(bool bIsPiPEnabled);                                                         // [0x9e66d64] Final|Native|Protected 
+	// void HandleIsPictureInPictureEnabledChanged(bool bIsPiPEnabled);                                                         // [0xa1ef24c] Final|Native|Protected 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.FlipPIPAudioSubmix
-	// void FlipPIPAudioSubmix(bool bInDefault, FFortMediaEventsStreamAssets& InStreamAssets, bool bForce);                     // [0x9e66b48] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// void FlipPIPAudioSubmix(bool bInDefault, FFortMediaEventsStreamAssets& InStreamAssets, bool bForce);                     // [0xa1ef044] Final|Native|Private|HasOutParms|BlueprintCallable 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.DestroyPIPSoundComponent
-	// void DestroyPIPSoundComponent();                                                                                         // [0x9e66b34] Final|Native|Private|BlueprintCallable 
+	// void DestroyPIPSoundComponent();                                                                                         // [0xa1ef030] Final|Native|Private|BlueprintCallable 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.AutoEnableController
-	// void AutoEnableController();                                                                                             // [0x376bbc0] Final|Native|Private 
+	// void AutoEnableController();                                                                                             // [0xa1ef01c] Final|Native|Private 
 };
 
 /// Class /Script/PictureInPictureUI.PictureInPictureSourcePicker
@@ -125,8 +125,8 @@ public:
 
 	/// Functions
 	// Function /Script/PictureInPictureUI.PictureInPictureSourcePicker.HandleOnPartnerSourceChanged
-	// void HandleOnPartnerSourceChanged(TArray<FPiPPartnerSource>& CurrentSources);                                            // [0x9e67130] Final|Native|Private|HasOutParms 
+	// void HandleOnPartnerSourceChanged(TArray<FPiPPartnerSource>& CurrentSources);                                            // [0xa1ef628] Final|Native|Private|HasOutParms 
 	// Function /Script/PictureInPictureUI.PictureInPictureSourcePicker.HandleOnPartnerChanged
-	// void HandleOnPartnerChanged(UPictureInPicturePartnerControls* NewPartner);                                               // [0x9e66fe8] Final|Native|Private 
+	// void HandleOnPartnerChanged(UPictureInPicturePartnerControls* NewPartner);                                               // [0xa1ef4e0] Final|Native|Private 
 };
 

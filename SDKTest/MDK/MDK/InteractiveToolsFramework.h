@@ -19,24 +19,24 @@ public:
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoBaseComponent
-/// Size: 0x0030 (0x000570 - 0x0005A0)
+/// Size: 0x0030 (0x000580 - 0x0005B0)
 class UGizmoBaseComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1440;
+	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x568, 16, 0, 0})
-	DMember(float)                                     HoverSizeMultiplier                                         OFFSET(get<float>, {0x578, 4, 0, 0})
-	DMember(float)                                     PixelHitDistanceThreshold                                   OFFSET(get<float>, {0x57C, 4, 0, 0})
-	CMember(UGizmoViewContext*)                        GizmoViewContext                                            OFFSET(get<T>, {0x588, 8, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x578, 16, 0, 0})
+	DMember(float)                                     HoverSizeMultiplier                                         OFFSET(get<float>, {0x588, 4, 0, 0})
+	DMember(float)                                     PixelHitDistanceThreshold                                   OFFSET(get<float>, {0x58C, 4, 0, 0})
+	CMember(UGizmoViewContext*)                        GizmoViewContext                                            OFFSET(get<T>, {0x598, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/InteractiveToolsFramework.GizmoBaseComponent.UpdateWorldLocalState
-	// void UpdateWorldLocalState(bool bWorldIn);                                                                               // [0xa5155a4] Final|Native|Public  
+	// void UpdateWorldLocalState(bool bWorldIn);                                                                               // [0xac4870c] Final|Native|Public  
 	// Function /Script/InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState
-	// void UpdateHoverState(bool bHoveringIn);                                                                                 // [0xa515308] Final|Native|Public  
+	// void UpdateHoverState(bool bHoveringIn);                                                                                 // [0xac48478] Final|Native|Public  
 };
 
 /// Class /Script/InteractiveToolsFramework.InteractiveCommandArguments
@@ -755,50 +755,50 @@ public:
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoArrowComponent
-/// Size: 0x0020 (0x0005A0 - 0x0005C0)
+/// Size: 0x0020 (0x0005B0 - 0x0005D0)
 class UGizmoArrowComponent : public UGizmoBaseComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1472;
+	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
-	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x598, 24, 0, 0})
-	DMember(float)                                     Gap                                                         OFFSET(get<float>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B8, 4, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x5A8, 24, 0, 0})
+	DMember(float)                                     Gap                                                         OFFSET(get<float>, {0x5C0, 4, 0, 0})
+	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5C4, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5C8, 4, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoBoxComponent
-/// Size: 0x0050 (0x0005A0 - 0x0005F0)
+/// Size: 0x0050 (0x0005B0 - 0x000600)
 class UGizmoBoxComponent : public UGizmoBaseComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1520;
+	static inline constexpr uint64_t __MDKClassSize = 1536;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x5B0, 32, 0, 0})
-	SMember(FVector)                                   Dimensions                                                  OFFSET(getStruct<T>, {0x5D0, 24, 0, 0})
-	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x5E8, 4, 0, 0})
-	DMember(bool)                                      bRemoveHiddenLines                                          OFFSET(get<bool>, {0x5EC, 1, 0, 0})
-	DMember(bool)                                      bEnableAxisFlip                                             OFFSET(get<bool>, {0x5ED, 1, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x5A8, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x5C0, 32, 0, 0})
+	SMember(FVector)                                   Dimensions                                                  OFFSET(getStruct<T>, {0x5E0, 24, 0, 0})
+	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x5F8, 4, 0, 0})
+	DMember(bool)                                      bRemoveHiddenLines                                          OFFSET(get<bool>, {0x5FC, 1, 0, 0})
+	DMember(bool)                                      bEnableAxisFlip                                             OFFSET(get<bool>, {0x5FD, 1, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoCircleComponent
-/// Size: 0x0020 (0x0005A0 - 0x0005C0)
+/// Size: 0x0020 (0x0005B0 - 0x0005D0)
 class UGizmoCircleComponent : public UGizmoBaseComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1472;
+	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
-	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
-	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x5B8, 4, 0, 0})
-	DMember(bool)                                      bViewAligned                                                OFFSET(get<bool>, {0x5BC, 1, 0, 0})
-	DMember(bool)                                      bDrawFullCircle                                             OFFSET(get<bool>, {0x5BD, 1, 0, 0})
-	DMember(bool)                                      bOnlyAllowFrontFacingHits                                   OFFSET(get<bool>, {0x5BE, 1, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x5A8, 24, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x5C0, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5C4, 4, 0, 0})
+	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x5C8, 4, 0, 0})
+	DMember(bool)                                      bViewAligned                                                OFFSET(get<bool>, {0x5CC, 1, 0, 0})
+	DMember(bool)                                      bDrawFullCircle                                             OFFSET(get<bool>, {0x5CD, 1, 0, 0})
+	DMember(bool)                                      bOnlyAllowFrontFacingHits                                   OFFSET(get<bool>, {0x5CE, 1, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoElementBase
@@ -996,6 +996,21 @@ public:
 	CMember(UTransformProxy*)                          GizmoTransformProxy                                         OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
+/// Class /Script/InteractiveToolsFramework.GizmoElementLineStrip
+/// Size: 0x0070 (0x000158 - 0x0001C8)
+class UGizmoElementLineStrip : public UGizmoElementLineBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 456;
+
+public:
+	CMember(TArray<FVector>)                           Vertices                                                    OFFSET(get<T>, {0x158, 16, 0, 0})
+	SMember(FVector)                                   base                                                        OFFSET(getStruct<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x180, 24, 0, 0})
+	SMember(FVector)                                   SideDirection                                               OFFSET(getStruct<T>, {0x198, 24, 0, 0})
+	DMember(bool)                                      bDrawLineStrip                                              OFFSET(get<bool>, {0x1B0, 1, 0, 0})
+};
+
 /// Class /Script/InteractiveToolsFramework.GizmoElementRectangle
 /// Size: 0x0058 (0x000158 - 0x0001B0)
 class UGizmoElementRectangle : public UGizmoElementLineBase
@@ -1015,6 +1030,19 @@ public:
 	DMember(bool)                                      bHitLine                                                    OFFSET(get<bool>, {0x1AB, 1, 0, 0})
 };
 
+/// Class /Script/InteractiveToolsFramework.GizmoElementSphere
+/// Size: 0x0020 (0x000108 - 0x000128)
+class UGizmoElementSphere : public UGizmoElementBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 296;
+
+public:
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x120, 4, 0, 0})
+	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x124, 4, 0, 0})
+};
+
 /// Class /Script/InteractiveToolsFramework.GizmoElementTorus
 /// Size: 0x0010 (0x0001C8 - 0x0001D8)
 class UGizmoElementTorus : public UGizmoElementCircleBase
@@ -1026,6 +1054,20 @@ public:
 	DMember(double)                                    InnerRadius                                                 OFFSET(get<double>, {0x1C8, 8, 0, 0})
 	DMember(int32_t)                                   NumInnerSlices                                              OFFSET(get<int32_t>, {0x1D0, 4, 0, 0})
 	DMember(bool)                                      bEndCaps                                                    OFFSET(get<bool>, {0x1D4, 1, 0, 0})
+};
+
+/// Class /Script/InteractiveToolsFramework.GizmoElementTriangleList
+/// Size: 0x0068 (0x000108 - 0x000170)
+class UGizmoElementTriangleList : public UGizmoElementBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 368;
+
+public:
+	CMember(TArray<FVector>)                           Vertices                                                    OFFSET(get<T>, {0x108, 16, 0, 0})
+	SMember(FVector)                                   base                                                        OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FVector)                                   SideDirection                                               OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoTransformSource
@@ -1119,38 +1161,38 @@ public:
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoLineHandleComponent
-/// Size: 0x0040 (0x0005A0 - 0x0005E0)
+/// Size: 0x0040 (0x0005B0 - 0x0005F0)
 class UGizmoLineHandleComponent : public UGizmoBaseComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1504;
-
-public:
-	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
-	DMember(float)                                     HandleSize                                                  OFFSET(get<float>, {0x5B0, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x5B8, 24, 0, 0})
-	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5D0, 4, 0, 0})
-	DMember(bool)                                      bImageScale                                                 OFFSET(get<bool>, {0x5D4, 1, 0, 0})
-};
-
-/// Class /Script/InteractiveToolsFramework.GizmoRectangleComponent
-/// Size: 0x0050 (0x0005A0 - 0x0005F0)
-class UGizmoRectangleComponent : public UGizmoBaseComponent
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1520;
 
 public:
-	SMember(FVector)                                   DirectionX                                                  OFFSET(getStruct<T>, {0x598, 24, 0, 0})
-	SMember(FVector)                                   DirectionY                                                  OFFSET(getStruct<T>, {0x5B0, 24, 0, 0})
-	DMember(bool)                                      bOrientYAccordingToCamera                                   OFFSET(get<bool>, {0x5C8, 1, 0, 0})
-	DMember(float)                                     OffsetX                                                     OFFSET(get<float>, {0x5CC, 4, 0, 0})
-	DMember(float)                                     OffsetY                                                     OFFSET(get<float>, {0x5D0, 4, 0, 0})
-	DMember(float)                                     LengthX                                                     OFFSET(get<float>, {0x5D4, 4, 0, 0})
-	DMember(float)                                     LengthY                                                     OFFSET(get<float>, {0x5D8, 4, 0, 0})
-	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5DC, 4, 0, 0})
-	DMember(char)                                      SegmentFlags                                                OFFSET(get<char>, {0x5E0, 1, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x5A8, 24, 0, 0})
+	DMember(float)                                     HandleSize                                                  OFFSET(get<float>, {0x5C0, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5C4, 4, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x5C8, 24, 0, 0})
+	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5E0, 4, 0, 0})
+	DMember(bool)                                      bImageScale                                                 OFFSET(get<bool>, {0x5E4, 1, 0, 0})
+};
+
+/// Class /Script/InteractiveToolsFramework.GizmoRectangleComponent
+/// Size: 0x0050 (0x0005B0 - 0x000600)
+class UGizmoRectangleComponent : public UGizmoBaseComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1536;
+
+public:
+	SMember(FVector)                                   DirectionX                                                  OFFSET(getStruct<T>, {0x5A8, 24, 0, 0})
+	SMember(FVector)                                   DirectionY                                                  OFFSET(getStruct<T>, {0x5C0, 24, 0, 0})
+	DMember(bool)                                      bOrientYAccordingToCamera                                   OFFSET(get<bool>, {0x5D8, 1, 0, 0})
+	DMember(float)                                     OffsetX                                                     OFFSET(get<float>, {0x5DC, 4, 0, 0})
+	DMember(float)                                     OffsetY                                                     OFFSET(get<float>, {0x5E0, 4, 0, 0})
+	DMember(float)                                     LengthX                                                     OFFSET(get<float>, {0x5E4, 4, 0, 0})
+	DMember(float)                                     LengthY                                                     OFFSET(get<float>, {0x5E8, 4, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5EC, 4, 0, 0})
+	DMember(char)                                      SegmentFlags                                                OFFSET(get<char>, {0x5F0, 1, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoViewContext
@@ -1454,7 +1496,7 @@ class UGizmoTransformProxyTransformSource : public UGizmoBaseTransformSource
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	CMember(UTransformProxy*)                          Proxy                                                       OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(UTransformProxy*)                          proxy                                                       OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoScaledAndUnscaledTransformSources
@@ -1543,19 +1585,19 @@ public:
 };
 
 /// Class /Script/InteractiveToolsFramework.BaseBrushTool
-/// Size: 0x0178 (0x000108 - 0x000280)
+/// Size: 0x0180 (0x000108 - 0x000288)
 class UBaseBrushTool : public UMeshSurfacePointTool
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 640;
+	static inline constexpr uint64_t __MDKClassSize = 648;
 
 public:
 	CMember(UBrushBaseProperties*)                     BrushProperties                                             OFFSET(get<T>, {0x108, 8, 0, 0})
 	DMember(bool)                                      bInBrushStroke                                              OFFSET(get<bool>, {0x110, 1, 0, 0})
 	DMember(float)                                     WorldToLocalScale                                           OFFSET(get<float>, {0x114, 4, 0, 0})
-	SMember(FBrushStampData)                           LastBrushStamp                                              OFFSET(getStruct<T>, {0x118, 288, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   PropertyClass                                               OFFSET(get<T>, {0x248, 32, 0, 0})
-	CMember(UBrushStampIndicator*)                     BrushStampIndicator                                         OFFSET(get<T>, {0x268, 8, 0, 0})
+	SMember(FBrushStampData)                           LastBrushStamp                                              OFFSET(getStruct<T>, {0x118, 296, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   PropertyClass                                               OFFSET(get<T>, {0x250, 32, 0, 0})
+	CMember(UBrushStampIndicator*)                     BrushStampIndicator                                         OFFSET(get<T>, {0x270, 8, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.InteractiveToolBuilder
@@ -1915,12 +1957,12 @@ public:
 };
 
 /// Struct /Script/InteractiveToolsFramework.BrushStampData
-/// Size: 0x0120 (0x000000 - 0x000120)
+/// Size: 0x0128 (0x000000 - 0x000128)
 class FBrushStampData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 288;
+	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
 };
@@ -1952,6 +1994,69 @@ public:
 	DMember(bool)                                      bHasHitNormal                                               OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(int32_t)                                   HitIdentifier                                               OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  HitObject                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
+};
+
+/// Struct /Script/InteractiveToolsFramework.DeviceButtonState
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FDeviceButtonState : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	SMember(FKey)                                      Button                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	DMember(bool)                                      bPressed                                                    OFFSET(get<bool>, {0x18, 1, 0, 0})
+	DMember(bool)                                      bDown                                                       OFFSET(get<bool>, {0x19, 1, 0, 0})
+	DMember(bool)                                      bReleased                                                   OFFSET(get<bool>, {0x1A, 1, 0, 0})
+};
+
+/// Struct /Script/InteractiveToolsFramework.KeyboardInputDeviceState
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FKeyboardInputDeviceState : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	SMember(FDeviceButtonState)                        ActiveKey                                                   OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+};
+
+/// Struct /Script/InteractiveToolsFramework.MouseInputDeviceState
+/// Size: 0x00B8 (0x000000 - 0x0000B8)
+class FMouseInputDeviceState : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 184;
+
+public:
+	SMember(FDeviceButtonState)                        Left                                                        OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FDeviceButtonState)                        Middle                                                      OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FDeviceButtonState)                        Right                                                       OFFSET(getStruct<T>, {0x40, 32, 0, 0})
+	DMember(float)                                     WheelDelta                                                  OFFSET(get<float>, {0x60, 4, 0, 0})
+	SMember(FVector2D)                                 Position2D                                                  OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FVector2D)                                 Delta2D                                                     OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FRay)                                      WorldRay                                                    OFFSET(getStruct<T>, {0x88, 48, 0, 0})
+};
+
+/// Struct /Script/InteractiveToolsFramework.InputDeviceState
+/// Size: 0x00E0 (0x000000 - 0x0000E0)
+class FInputDeviceState : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 224;
+
+public:
+	CMember(EInputDevices)                             InputDevice                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bShiftKeyDown                                               OFFSET(get<bool>, {0x4, 1, 0, 0})
+	DMember(bool)                                      bAltKeyDown                                                 OFFSET(get<bool>, {0x5, 1, 0, 0})
+	DMember(bool)                                      bCtrlKeyDown                                                OFFSET(get<bool>, {0x6, 1, 0, 0})
+	DMember(bool)                                      bCmdKeyDown                                                 OFFSET(get<bool>, {0x7, 1, 0, 0})
+	SMember(FKeyboardInputDeviceState)                 Keyboard                                                    OFFSET(getStruct<T>, {0x8, 32, 0, 0})
+	SMember(FMouseInputDeviceState)                    Mouse                                                       OFFSET(getStruct<T>, {0x28, 184, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.InputDeviceRay

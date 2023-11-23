@@ -33,9 +33,9 @@ public:
 
 	/// Functions
 	// Function /Script/StateTreeModule.StateTreeNodeBlueprintBase.SendEvent
-	// void SendEvent(FStateTreeEvent& Event);                                                                                  // [0x64dc5c4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SendEvent(FStateTreeEvent& Event);                                                                                  // [0x64bdb98] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
-	// void RequestTransition(FStateTreeStateLink& TargetState, EStateTreeTransitionPriority Priority);                         // [0x64dc424] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RequestTransition(FStateTreeStateLink& TargetState, EStateTreeTransitionPriority Priority);                         // [0x64bda04] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/StateTreeModule.StateTreeConditionBlueprintBase
@@ -74,19 +74,19 @@ public:
 
 	/// Functions
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveTick
-	// EStateTreeRunStatus ReceiveTick(float DeltaTime);                                                                        // [0x1d9241c] Event|Public|BlueprintEvent 
+	// EStateTreeRunStatus ReceiveTick(float DeltaTime);                                                                        // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveStateCompleted
-	// void ReceiveStateCompleted(EStateTreeRunStatus CompletionStatus, FStateTreeActiveStates CompletedActiveStates);          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveStateCompleted(EStateTreeRunStatus CompletionStatus, FStateTreeActiveStates CompletedActiveStates);          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentTick
-	// void ReceiveLatentTick(float DeltaTime);                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveLatentTick(float DeltaTime);                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentEnterState
-	// void ReceiveLatentEnterState(FStateTreeTransitionResult& TRANSITION);                                                    // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void ReceiveLatentEnterState(FStateTreeTransitionResult& TRANSITION);                                                    // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveExitState
-	// void ReceiveExitState(FStateTreeTransitionResult& TRANSITION);                                                           // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void ReceiveExitState(FStateTreeTransitionResult& TRANSITION);                                                           // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.ReceiveEnterState
-	// EStateTreeRunStatus ReceiveEnterState(FStateTreeTransitionResult& TRANSITION);                                           // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// EStateTreeRunStatus ReceiveEnterState(FStateTreeTransitionResult& TRANSITION);                                           // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.FinishTask
-	// void FinishTask(bool bSucceeded);                                                                                        // [0x64dc3a8] Final|Native|Protected|BlueprintCallable 
+	// void FinishTask(bool bSucceeded);                                                                                        // [0x64bd988] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/StateTreeModule.StateTree
@@ -935,7 +935,7 @@ class FStateTreeRandomTimeDuration : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	DMember(uint16_t)                                  Duration                                                    OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
+	DMember(uint16_t)                                  duration                                                    OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
 	DMember(uint16_t)                                  RandomVariance                                              OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
 };
 
@@ -1100,7 +1100,7 @@ class FStateTreeDelayTaskInstanceData : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     RandomDeviation                                             OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bRunForever                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
 };

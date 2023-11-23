@@ -23,6 +23,6 @@ public:
 
 	/// Functions
 	// Function /Script/VerseAssets.VerseAssetPtr.OnRep_AssetPathName
-	// void OnRep_AssetPathName();                                                                                              // [0x980f95c] Final|Native|Protected 
+	// void OnRep_AssetPathName();                                                                                              // [0x9cdb140] Final|Native|Protected 
 };
 

@@ -14,16 +14,16 @@
 /// dependency: UMG
 
 /// Class /Script/StoreSelectionUI.FortStoreSelectionData
-/// Size: 0x0050 (0x000498 - 0x0004E8)
+/// Size: 0x0050 (0x0004A0 - 0x0004F0)
 class UFortStoreSelectionData : public UFortGameFeatureData
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1256;
+	static inline constexpr uint64_t __MDKClassSize = 1264;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   StoreSelectionScreenClass                                   OFFSET(get<T>, {0x498, 32, 0, 0})
-	SMember(FText)                                     RegularStoreSelectedText                                    OFFSET(getStruct<T>, {0x4B8, 24, 0, 0})
-	SMember(FText)                                     NonRegularStoreSelectedText                                 OFFSET(getStruct<T>, {0x4D0, 24, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   StoreSelectionScreenClass                                   OFFSET(get<T>, {0x4A0, 32, 0, 0})
+	SMember(FText)                                     RegularStoreSelectedText                                    OFFSET(getStruct<T>, {0x4C0, 24, 0, 0})
+	SMember(FText)                                     NonRegularStoreSelectedText                                 OFFSET(getStruct<T>, {0x4D8, 24, 0, 0})
 };
 
 /// Class /Script/StoreSelectionUI.FortStoreSelectionOptionEntry

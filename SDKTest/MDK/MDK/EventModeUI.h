@@ -24,9 +24,9 @@ public:
 
 	/// Functions
 	// Function /Script/EventModeUI.FocusButton.HandleEventModeFocusingChanged
-	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0x9d0eb68] Final|Native|Private 
+	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0xa1233c4] Final|Native|Private 
 	// Function /Script/EventModeUI.FocusButton.HandleCanUseEventModeFocusChanged
-	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0x9d0eaec] Final|Native|Private 
+	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0xa123348] Final|Native|Private 
 };
 
 /// Class /Script/EventModeUI.FortEventModeEmotesWidget
@@ -49,9 +49,9 @@ public:
 
 	/// Functions
 	// Function /Script/EventModeUI.FortEventModeEmotesWidget.OnFocusStateChanged
-	// void OnFocusStateChanged(bool bIsFocusing);                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnFocusStateChanged(bool bIsFocusing);                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventModeUI.FortEventModeEmotesWidget.OnFocusAvailableChanged
-	// void OnFocusAvailableChanged(bool bIsFocusAvailable);                                                                    // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnFocusAvailableChanged(bool bIsFocusAvailable);                                                                    // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/EventModeUI.FortMobileActionButtonBehavior_Focus
@@ -67,8 +67,8 @@ public:
 
 	/// Functions
 	// Function /Script/EventModeUI.FortMobileActionButtonBehavior_Focus.HandleEventModeFocusingChanged
-	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0x91a500c] Final|Native|Private 
+	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0x958b3d4] Final|Native|Private 
 	// Function /Script/EventModeUI.FortMobileActionButtonBehavior_Focus.HandleCanUseEventModeFocusChanged
-	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0x91a508c] Final|Native|Private 
+	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0x958b454] Final|Native|Private 
 };
 

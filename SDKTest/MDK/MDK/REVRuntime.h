@@ -24,13 +24,13 @@ public:
 
 	/// Functions
 	// Function /Script/REVRuntime.REVComponent.UpdateSimSettings
-	// void UpdateSimSettings();                                                                                                // [0x99b61f0] Final|Native|Public|BlueprintCallable 
+	// void UpdateSimSettings();                                                                                                // [0x9e8590c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/REVRuntime.REVComponent.UpdateParameters
-	// void UpdateParameters(float InPitch, float InRPM, float InThrottle, float InVelocity, int32_t InGear, bool bInEnableShifting); // [0x99b6014] Final|Native|Public|BlueprintCallable 
+	// void UpdateParameters(float InPitch, float InRPM, float InThrottle, float InVelocity, int32_t InGear, bool bInEnableShifting); // [0x9e85730] Final|Native|Public|BlueprintCallable 
 	// Function /Script/REVRuntime.REVComponent.SetSettings
-	// void SetSettings(URevSettings* InSettings);                                                                              // [0x99b5f90] Final|Native|Public|BlueprintCallable 
+	// void SetSettings(URevSettings* InSettings);                                                                              // [0x9e8569c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/REVRuntime.REVComponent.SetRevModel
-	// void SetRevModel(UREVModel* InModel);                                                                                    // [0x1b7da1c] Final|Native|Public|BlueprintCallable 
+	// void SetRevModel(UREVModel* InModel);                                                                                    // [0x9e8561c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/REVRuntime.REVModel
@@ -73,6 +73,6 @@ public:
 
 	/// Functions
 	// Function /Script/REVRuntime.RevSettings.UpdateSettings
-	// void UpdateSettings();                                                                                                   // [0x99b61dc] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// void UpdateSettings();                                                                                                   // [0x9e858f8] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
 };
 

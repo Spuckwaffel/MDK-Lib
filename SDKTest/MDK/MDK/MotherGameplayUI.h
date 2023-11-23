@@ -31,13 +31,13 @@ public:
 
 	/// Functions
 	// Function /Script/MotherGameplayUI.AvocadoEaterHealthBarWidget.OnTargetDamaged
-	// void OnTargetDamaged();                                                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnTargetDamaged();                                                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.AvocadoEaterHealthBarWidget.OnSetMarkerPosition
-	// void OnSetMarkerPosition(float MarkerPosition);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetMarkerPosition(float MarkerPosition);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.AvocadoEaterHealthBarWidget.OnParasiteDetached
-	// void OnParasiteDetached();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnParasiteDetached();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.AvocadoEaterHealthBarWidget.OnParasiteAttached
-	// void OnParasiteAttached();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnParasiteAttached();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/MotherGameplayUI.FortGravyGoblinReticleExtensionWidget
@@ -75,9 +75,9 @@ public:
 
 	/// Functions
 	// Function /Script/MotherGameplayUI.FortPaddleGingerReticleExtensionWidget.OnPropIndexChanged
-	// void OnPropIndexChanged(FText& CategoryText, int32_t PropIndex, int32_t MaxPropCount, int32_t CategoryIndex, int32_t MaxCategoryCount); // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnPropIndexChanged(FText& CategoryText, int32_t PropIndex, int32_t MaxPropCount, int32_t CategoryIndex, int32_t MaxCategoryCount); // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.FortPaddleGingerReticleExtensionWidget.OnPropActivationChanged
-	// void OnPropActivationChanged(bool Activated);                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPropActivationChanged(bool Activated);                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/MotherGameplayUI.FortReactorGradeReticleExtensionWidget

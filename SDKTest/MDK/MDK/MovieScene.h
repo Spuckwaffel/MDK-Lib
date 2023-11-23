@@ -118,6 +118,27 @@ class UMovieSceneEasingFunction : public UInterface
 public:
 };
 
+/// Class /Script/MovieScene.MovieSceneEntitySystem
+/// Size: 0x0018 (0x000028 - 0x000040)
+class UMovieSceneEntitySystem : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+	CMember(UMovieSceneEntitySystemLinker*)            Linker                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
+};
+
+/// Class /Script/MovieScene.MovieSceneEntityGroupingSystem
+/// Size: 0x0088 (0x000040 - 0x0000C8)
+class UMovieSceneEntityGroupingSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+};
+
 /// Class /Script/MovieScene.MovieSceneKeyProxy
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMovieSceneKeyProxy : public UInterface
@@ -224,17 +245,6 @@ class UMovieSceneEntityProvider : public UInterface
 public:
 };
 
-/// Class /Script/MovieScene.MovieSceneEntitySystem
-/// Size: 0x0018 (0x000028 - 0x000040)
-class UMovieSceneEntitySystem : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 64;
-
-public:
-	CMember(UMovieSceneEntitySystemLinker*)            Linker                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 /// Class /Script/MovieScene.MovieSceneBlenderSystem
 /// Size: 0x0028 (0x000040 - 0x000068)
 class UMovieSceneBlenderSystem : public UMovieSceneEntitySystem
@@ -286,11 +296,11 @@ public:
 };
 
 /// Class /Script/MovieScene.MovieSceneEntitySystemLinker
-/// Size: 0x0710 (0x000028 - 0x000738)
+/// Size: 0x0718 (0x000028 - 0x000740)
 class UMovieSceneEntitySystemLinker : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1848;
+	static inline constexpr uint64_t __MDKClassSize = 1856;
 
 public:
 	SMember(FMovieSceneEntitySystemGraph)              SystemGraph                                                 OFFSET(getStruct<T>, {0x2A0, 400, 0, 0})
@@ -538,17 +548,17 @@ public:
 
 	/// Functions
 	// Function /Script/MovieScene.MovieSceneMetaData.SetNotes
-	// void SetNotes(FString InNotes);                                                                                          // [0x570c43c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotes(FString InNotes);                                                                                          // [0x556f0ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneMetaData.SetCreated
-	// void SetCreated(FDateTime InCreated);                                                                                    // [0x570beec] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetCreated(FDateTime InCreated);                                                                                    // [0x556eb90] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneMetaData.SetAuthor
-	// void SetAuthor(FString InAuthor);                                                                                        // [0x570b6dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAuthor(FString InAuthor);                                                                                        // [0x556e36c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneMetaData.GetNotes
-	// FString GetNotes();                                                                                                      // [0x570a664] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetNotes();                                                                                                      // [0x556d420] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneMetaData.GetCreated
-	// FDateTime GetCreated();                                                                                                  // [0x570a52c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FDateTime GetCreated();                                                                                                  // [0x556d2e8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneMetaData.GetAuthor
-	// FString GetAuthor();                                                                                                     // [0x570a2e8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetAuthor();                                                                                                     // [0x556d0ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieScene.MovieSceneTrack
@@ -604,41 +614,41 @@ public:
 
 	/// Functions
 	// Function /Script/MovieScene.MovieSceneSection.SetRowIndex
-	// void SetRowIndex(int32_t NewRowIndex);                                                                                   // [0x570ce84] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRowIndex(int32_t NewRowIndex);                                                                                   // [0x556fa2c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetPreRollFrames
-	// void SetPreRollFrames(int32_t InPreRollFrames);                                                                          // [0x570cdfc] Final|Native|Public|BlueprintCallable 
+	// void SetPreRollFrames(int32_t InPreRollFrames);                                                                          // [0x556f9a4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetPostRollFrames
-	// void SetPostRollFrames(int32_t InPostRollFrames);                                                                        // [0x570cd74] Final|Native|Public|BlueprintCallable 
+	// void SetPostRollFrames(int32_t InPostRollFrames);                                                                        // [0x556f91c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetOverlapPriority
-	// void SetOverlapPriority(int32_t NewPriority);                                                                            // [0x570cae8] Final|Native|Public|BlueprintCallable 
+	// void SetOverlapPriority(int32_t NewPriority);                                                                            // [0x556f6b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetIsLocked
-	// void SetIsLocked(bool bInIsLocked);                                                                                      // [0x570c3ac] Final|Native|Public|BlueprintCallable 
+	// void SetIsLocked(bool bInIsLocked);                                                                                      // [0x556f01c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetIsActive
-	// void SetIsActive(bool bInIsActive);                                                                                      // [0x570c32c] Final|Native|Public|BlueprintCallable 
+	// void SetIsActive(bool bInIsActive);                                                                                      // [0x556ef9c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetCompletionMode
-	// void SetCompletionMode(EMovieSceneCompletionMode InCompletionMode);                                                      // [0x570be70] Final|Native|Public|BlueprintCallable 
+	// void SetCompletionMode(EMovieSceneCompletionMode InCompletionMode);                                                      // [0x556ea94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetColorTint
-	// void SetColorTint(FColor& InColorTint);                                                                                  // [0x570be0c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetColorTint(FColor& InColorTint);                                                                                  // [0x556e9f4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.SetBlendType
-	// void SetBlendType(EMovieSceneBlendType InBlendType);                                                                     // [0x570bd88] Native|Public|BlueprintCallable 
+	// void SetBlendType(EMovieSceneBlendType InBlendType);                                                                     // [0x556e970] Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSection.IsLocked
-	// bool IsLocked();                                                                                                         // [0x570a920] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLocked();                                                                                                         // [0x556d6f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.IsActive
-	// bool IsActive();                                                                                                         // [0x570a904] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsActive();                                                                                                         // [0x556d6d8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetRowIndex
-	// int32_t GetRowIndex();                                                                                                   // [0x3310730] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetRowIndex();                                                                                                   // [0x324a14c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetPreRollFrames
-	// int32_t GetPreRollFrames();                                                                                              // [0x570a7d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetPreRollFrames();                                                                                              // [0x556d590] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetPostRollFrames
-	// int32_t GetPostRollFrames();                                                                                             // [0x570a7bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetPostRollFrames();                                                                                             // [0x556d578] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetOverlapPriority
-	// int32_t GetOverlapPriority();                                                                                            // [0x570a78c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetOverlapPriority();                                                                                            // [0x556d548] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetCompletionMode
-	// EMovieSceneCompletionMode GetCompletionMode();                                                                           // [0x570a518] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EMovieSceneCompletionMode GetCompletionMode();                                                                           // [0x556d2bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetColorTint
-	// FColor GetColorTint();                                                                                                   // [0x570a4fc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FColor GetColorTint();                                                                                                   // [0x556d2a0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetBlendType
-	// FOptionalMovieSceneBlendType GetBlendType();                                                                             // [0x570a330] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FOptionalMovieSceneBlendType GetBlendType();                                                                             // [0x556d0f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieScene.MovieSceneSequence
@@ -658,19 +668,19 @@ public:
 
 	/// Functions
 	// Function /Script/MovieScene.MovieSceneSequence.GetEarliestTimecodeSource
-	// FMovieSceneTimecodeSource GetEarliestTimecodeSource();                                                                   // [0x570a5d0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneTimecodeSource GetEarliestTimecodeSource();                                                                   // [0x556d38c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequence.FindBindingsByTag
-	// TArray<FMovieSceneObjectBindingID> FindBindingsByTag(FName InBindingName);                                               // [0x570a254] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FMovieSceneObjectBindingID> FindBindingsByTag(FName InBindingName);                                               // [0x556d018] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequence.FindBindingByTag
-	// FMovieSceneObjectBindingID FindBindingByTag(FName InBindingName);                                                        // [0x570a1b4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID FindBindingByTag(FName InBindingName);                                                        // [0x556cf78] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieScene.MovieSceneSequencePlayer
-/// Size: 0x04A0 (0x000028 - 0x0004C8)
+/// Size: 0x04A8 (0x000028 - 0x0004D0)
 class UMovieSceneSequencePlayer : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1224;
+	static inline constexpr uint64_t __MDKClassSize = 1232;
 
 public:
 	CMember(TScriptInterface<Class>)                   Observer                                                    OFFSET(get<T>, {0x228, 16, 0, 0})
@@ -687,88 +697,92 @@ public:
 	DMember(float)                                     DurationSubFrames                                           OFFSET(get<float>, {0x2A0, 4, 0, 0})
 	DMember(int32_t)                                   CurrentNumLoops                                             OFFSET(get<int32_t>, {0x2A4, 4, 0, 0})
 	DMember(int32_t)                                   SerialNumber                                                OFFSET(get<int32_t>, {0x2A8, 4, 0, 0})
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x2AC, 32, 0, 0})
-	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(getStruct<T>, {0x2D0, 136, 0, 0})
-	SMember(FMovieSceneSequenceReplProperties)         NetSyncProps                                                OFFSET(getStruct<T>, {0x3E8, 20, 0, 0})
-	CMember(TScriptInterface<Class>)                   PlaybackClient                                              OFFSET(get<T>, {0x400, 16, 0, 0})
-	CMember(UMovieSceneSequenceTickManager*)           TickManager                                                 OFFSET(get<T>, {0x410, 8, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x2AC, 40, 0, 0})
+	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(getStruct<T>, {0x2D8, 136, 0, 0})
+	SMember(FMovieSceneSequenceReplProperties)         NetSyncProps                                                OFFSET(getStruct<T>, {0x3F0, 20, 0, 0})
+	CMember(TScriptInterface<Class>)                   PlaybackClient                                              OFFSET(get<T>, {0x408, 16, 0, 0})
+	CMember(UMovieSceneSequenceTickManager*)           TickManager                                                 OFFSET(get<T>, {0x418, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.StopAtCurrentTime
-	// void StopAtCurrentTime();                                                                                                // [0x570d0e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void StopAtCurrentTime();                                                                                                // [0x556fc8c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.Stop
-	// void Stop();                                                                                                             // [0x570d0d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Stop();                                                                                                             // [0x556fc78] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetWeight
-	// void SetWeight(double InWeight);                                                                                         // [0x570d044] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetWeight(double InWeight);                                                                                         // [0x556fbec] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetTimeRange
-	// void SetTimeRange(float StartTime, float Duration);                                                                      // [0x570cf80] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTimeRange(float StartTime, float duration);                                                                      // [0x556fb28] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetPlayRate
-	// void SetPlayRate(float PlayRate);                                                                                        // [0x570cb64] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPlayRate(float PlayRate);                                                                                        // [0x556f72c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition
-	// void SetPlaybackPosition(FMovieSceneSequencePlaybackParams PlaybackParams);                                              // [0x570cbe4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPlaybackPosition(FMovieSceneSequencePlaybackParams PlaybackParams);                                              // [0x556f7ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetFrameRate
-	// void SetFrameRate(FFrameRate FrameRate);                                                                                 // [0x570c1c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFrameRate(FFrameRate FrameRate);                                                                                 // [0x556ee54] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetFrameRange
-	// void SetFrameRange(int32_t StartFrame, int32_t Duration, float SubFrames);                                               // [0x570c0cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFrameRange(int32_t StartFrame, int32_t duration, float SubFrames);                                               // [0x556ed5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetDisableCameraCuts
-	// void SetDisableCameraCuts(bool bInDisableCameraCuts);                                                                    // [0x570c03c] Final|Native|Public|BlueprintCallable 
+	// void SetDisableCameraCuts(bool bInDisableCameraCuts);                                                                    // [0x556eccc] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MovieScene.MovieSceneSequencePlayer.SetCompletionModeOverride
+	// void SetCompletionModeOverride(EMovieSceneCompletionModeOverride CompletionModeOverride);                                // [0x556eb10] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.Scrub
-	// void Scrub();                                                                                                            // [0x570b6c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Scrub();                                                                                                            // [0x556e358] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.RPC_OnStopEvent
-	// void RPC_OnStopEvent(FFrameTime StoppedTime, int32_t NewSerialNumber);                                                   // [0x570b238] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
+	// void RPC_OnStopEvent(FFrameTime StoppedTime, int32_t NewSerialNumber);                                                   // [0x556def8] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.RPC_OnFinishPlaybackEvent
-	// void RPC_OnFinishPlaybackEvent(FFrameTime StoppedTime, int32_t NewSerialNumber);                                         // [0x570afb8] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
+	// void RPC_OnFinishPlaybackEvent(FFrameTime StoppedTime, int32_t NewSerialNumber);                                         // [0x556dcd0] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.RPC_ExplicitServerUpdateEvent
-	// void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, FFrameTime RelevantTime, int32_t NewSerialNumber);      // [0x570ad00] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
+	// void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, FFrameTime RelevantTime, int32_t NewSerialNumber);      // [0x556da74] Final|RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Private 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.RestoreState
-	// void RestoreState();                                                                                                     // [0x570b67c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RestoreState();                                                                                                     // [0x556e30c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.RemoveWeight
-	// void RemoveWeight();                                                                                                     // [0x570b4b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveWeight();                                                                                                     // [0x556e120] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.PlayTo
-	// void PlayTo(FMovieSceneSequencePlaybackParams PlaybackParams, FMovieSceneSequencePlayToParams PlayToParams);             // [0x570aa4c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void PlayTo(FMovieSceneSequencePlaybackParams PlaybackParams, FMovieSceneSequencePlayToParams PlayToParams);             // [0x556d820] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.PlayReverse
-	// void PlayReverse();                                                                                                      // [0x570aa38] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void PlayReverse();                                                                                                      // [0x556d80c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.PlayLooping
-	// void PlayLooping(int32_t NumLoops);                                                                                      // [0x570a9b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void PlayLooping(int32_t NumLoops);                                                                                      // [0x556d78c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.Play
-	// void Play();                                                                                                             // [0x570a9a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Play();                                                                                                             // [0x556d778] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.Pause
-	// void Pause();                                                                                                            // [0x570a990] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Pause();                                                                                                            // [0x556d764] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.IsReversed
-	// bool IsReversed();                                                                                                       // [0x570a974] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsReversed();                                                                                                       // [0x556d748] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.IsPlaying
-	// bool IsPlaying();                                                                                                        // [0x570a958] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlaying();                                                                                                        // [0x556d72c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.IsPaused
-	// bool IsPaused();                                                                                                         // [0x570a93c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPaused();                                                                                                         // [0x556d710] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GoToEndAndStop
-	// void GoToEndAndStop();                                                                                                   // [0x570a8f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void GoToEndAndStop();                                                                                                   // [0x556d6c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetStartTime
-	// FQualifiedFrameTime GetStartTime();                                                                                      // [0x570a8ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetStartTime();                                                                                      // [0x556d680] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetSequenceName
-	// FString GetSequenceName(bool bAddClientInfo);                                                                            // [0x570a804] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetSequenceName(bool bAddClientInfo);                                                                            // [0x556d5d8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetSequence
-	// UMovieSceneSequence* GetSequence();                                                                                      // [0x570a7ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMovieSceneSequence* GetSequence();                                                                                      // [0x556d5a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetPlayRate
-	// float GetPlayRate();                                                                                                     // [0x570a7a4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPlayRate();                                                                                                     // [0x556d560] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetObjectBindings
-	// TArray<FMovieSceneObjectBindingID> GetObjectBindings(UObject* InObject);                                                 // [0x570a6ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<FMovieSceneObjectBindingID> GetObjectBindings(UObject* InObject);                                                 // [0x556d468] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetFrameRate
-	// FFrameRate GetFrameRate();                                                                                               // [0x570a64c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFrameRate GetFrameRate();                                                                                               // [0x556d408] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetFrameDuration
-	// int32_t GetFrameDuration();                                                                                              // [0x570a634] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetFrameDuration();                                                                                              // [0x556d3f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetEndTime
-	// FQualifiedFrameTime GetEndTime();                                                                                        // [0x570a608] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetEndTime();                                                                                        // [0x556d3c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetDuration
-	// FQualifiedFrameTime GetDuration();                                                                                       // [0x570a584] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetDuration();                                                                                       // [0x556d340] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetDisableCameraCuts
-	// bool GetDisableCameraCuts();                                                                                             // [0x570a568] Final|Native|Public|BlueprintCallable 
+	// bool GetDisableCameraCuts();                                                                                             // [0x556d324] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetCurrentTime
-	// FQualifiedFrameTime GetCurrentTime();                                                                                    // [0x570a544] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FQualifiedFrameTime GetCurrentTime();                                                                                    // [0x556d300] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetCompletionModeOverride
+	// EMovieSceneCompletionModeOverride GetCompletionModeOverride();                                                           // [0x556d2d0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.GetBoundObjects
-	// TArray<UObject*> GetBoundObjects(FMovieSceneObjectBindingID ObjectBinding);                                              // [0x570a34c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<UObject*> GetBoundObjects(FMovieSceneObjectBindingID ObjectBinding);                                              // [0x556d110] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection
-	// void ChangePlaybackDirection();                                                                                          // [0x570a1a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ChangePlaybackDirection();                                                                                          // [0x556cf64] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/MovieScene.MovieSceneSequenceTickManager
@@ -782,15 +796,15 @@ public:
 };
 
 /// Class /Script/MovieScene.MovieSceneBoolSection
-/// Size: 0x0108 (0x0000F0 - 0x0001F8)
+/// Size: 0x0110 (0x0000F0 - 0x000200)
 class UMovieSceneBoolSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 504;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
 	DMember(bool)                                      DefaultValue                                                OFFSET(get<bool>, {0xF0, 1, 0, 0})
-	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0xF8, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0xF8, 264, 0, 0})
 };
 
 /// Class /Script/MovieScene.MovieSceneHookSection
@@ -806,11 +820,11 @@ public:
 };
 
 /// Class /Script/MovieScene.MovieSceneSpawnSection
-/// Size: 0x0008 (0x0001F8 - 0x000200)
+/// Size: 0x0008 (0x000200 - 0x000208)
 class UMovieSceneSpawnSection : public UMovieSceneBoolSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 512;
+	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
 };
@@ -825,7 +839,7 @@ class UMovieSceneSubSection : public UMovieSceneSection
 public:
 	SMember(FMovieSceneSectionParameters)              Parameters                                                  OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 	DMember(float)                                     StartOffset                                                 OFFSET(get<float>, {0x120, 4, 0, 0})
-	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x124, 4, 0, 0})
+	DMember(float)                                     timescale                                                   OFFSET(get<float>, {0x124, 4, 0, 0})
 	DMember(float)                                     PrerollTime                                                 OFFSET(get<float>, {0x128, 4, 0, 0})
 	DMember(char)                                      NetworkMask                                                 OFFSET(get<char>, {0x12C, 1, 0, 0})
 	CMember(UMovieSceneSequence*)                      SubSequence                                                 OFFSET(get<T>, {0x130, 8, 0, 0})
@@ -833,9 +847,9 @@ public:
 
 	/// Functions
 	// Function /Script/MovieScene.MovieSceneSubSection.SetSequence
-	// void SetSequence(UMovieSceneSequence* Sequence);                                                                         // [0x570cf00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSequence(UMovieSceneSequence* Sequence);                                                                         // [0x556faa8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSubSection.GetSequence
-	// UMovieSceneSequence* GetSequence();                                                                                      // [0x2b2d6b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMovieSceneSequence* GetSequence();                                                                                      // [0x556d5c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieScene.TestMovieSceneTrack
@@ -1098,7 +1112,7 @@ public:
 	DMember(bool)                                      bCanLoop                                                    OFFSET(get<bool>, {0x4, 1, 0, 0})
 	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(getStruct<T>, {0xC, 4, 0, 0})
-	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     timescale                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(int32_t)                                   HierarchicalBias                                            OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 	CMember(EMovieSceneSubSectionFlags)                Flags                                                       OFFSET(get<T>, {0x18, 4, 0, 0})
 	DMember(float)                                     StartOffset                                                 OFFSET(get<float>, {0x1C, 4, 0, 0})
@@ -1156,12 +1170,12 @@ public:
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequencePlaybackSettings
-/// Size: 0x0020 (0x000000 - 0x000020)
+/// Size: 0x0028 (0x000000 - 0x000028)
 class FMovieSceneSequencePlaybackSettings : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 32;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(bool)                                      bAutoPlay                                                   OFFSET(get<bool>, {0x0, 1, 1, 0})
@@ -1170,15 +1184,15 @@ public:
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(bool)                                      bRandomStartTime                                            OFFSET(get<bool>, {0x1C, 1, 1, 0})
-	DMember(bool)                                      bRestoreState                                               OFFSET(get<bool>, {0x1C, 1, 1, 1})
-	DMember(bool)                                      bDisableMovementInput                                       OFFSET(get<bool>, {0x1C, 1, 1, 2})
-	DMember(bool)                                      bDisableLookAtInput                                         OFFSET(get<bool>, {0x1C, 1, 1, 3})
-	DMember(bool)                                      bHidePlayer                                                 OFFSET(get<bool>, {0x1C, 1, 1, 4})
-	DMember(bool)                                      bHideHUD                                                    OFFSET(get<bool>, {0x1C, 1, 1, 5})
-	DMember(bool)                                      bDisableCameraCuts                                          OFFSET(get<bool>, {0x1C, 1, 1, 6})
-	DMember(bool)                                      bPauseAtEnd                                                 OFFSET(get<bool>, {0x1C, 1, 1, 7})
-	DMember(bool)                                      bInheritTickIntervalFromOwner                               OFFSET(get<bool>, {0x1D, 1, 1, 0})
-	DMember(bool)                                      bDynamicWeighting                                           OFFSET(get<bool>, {0x1D, 1, 1, 1})
+	DMember(bool)                                      bDisableMovementInput                                       OFFSET(get<bool>, {0x1C, 1, 1, 1})
+	DMember(bool)                                      bDisableLookAtInput                                         OFFSET(get<bool>, {0x1C, 1, 1, 2})
+	DMember(bool)                                      bHidePlayer                                                 OFFSET(get<bool>, {0x1C, 1, 1, 3})
+	DMember(bool)                                      bHideHUD                                                    OFFSET(get<bool>, {0x1C, 1, 1, 4})
+	DMember(bool)                                      bDisableCameraCuts                                          OFFSET(get<bool>, {0x1C, 1, 1, 5})
+	CMember(EMovieSceneCompletionModeOverride)         FinishCompletionStateOverride                               OFFSET(get<T>, {0x20, 1, 0, 0})
+	DMember(bool)                                      bPauseAtEnd                                                 OFFSET(get<bool>, {0x24, 1, 1, 0})
+	DMember(bool)                                      bInheritTickIntervalFromOwner                               OFFSET(get<bool>, {0x24, 1, 1, 1})
+	DMember(bool)                                      bDynamicWeighting                                           OFFSET(get<bool>, {0x24, 1, 1, 2})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequenceTickInterval
@@ -1205,7 +1219,7 @@ class FMovieSceneTimeTransform : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     timescale                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
 	SMember(FFrameTime)                                Offset                                                      OFFSET(getStruct<T>, {0x4, 8, 0, 0})
 };
 
@@ -1246,19 +1260,21 @@ public:
 };
 
 /// Struct /Script/MovieScene.MovieSceneBoolChannel
-/// Size: 0x00B0 (0x000050 - 0x000100)
+/// Size: 0x00B8 (0x000050 - 0x000108)
 class FMovieSceneBoolChannel : public FMovieSceneChannel
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 256;
+	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(bool)                                      DefaultValue                                                OFFSET(get<bool>, {0x60, 1, 0, 0})
-	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x61, 1, 0, 0})
-	CMember(TArray<bool>)                              Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x78, 136, 0, 0})
+	CMember(TEnumAsByte<ERichCurveExtrapolation>)      PreInfinityExtrap                                           OFFSET(get<T>, {0x50, 1, 0, 0})
+	CMember(TEnumAsByte<ERichCurveExtrapolation>)      PostInfinityExtrap                                          OFFSET(get<T>, {0x51, 1, 0, 0})
+	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(bool)                                      DefaultValue                                                OFFSET(get<bool>, {0x68, 1, 0, 0})
+	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x69, 1, 0, 0})
+	CMember(TArray<bool>)                              Values                                                      OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x80, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneByteChannel
@@ -1365,19 +1381,21 @@ public:
 };
 
 /// Struct /Script/MovieScene.MovieSceneIntegerChannel
-/// Size: 0x00B0 (0x000050 - 0x000100)
+/// Size: 0x00B8 (0x000050 - 0x000108)
 class FMovieSceneIntegerChannel : public FMovieSceneChannel
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 256;
+	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
-	DMember(int32_t)                                   DefaultValue                                                OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x64, 1, 0, 0})
-	CMember(TArray<int32_t>)                           Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x78, 136, 0, 0})
+	CMember(TEnumAsByte<ERichCurveExtrapolation>)      PreInfinityExtrap                                           OFFSET(get<T>, {0x50, 1, 0, 0})
+	CMember(TEnumAsByte<ERichCurveExtrapolation>)      PostInfinityExtrap                                          OFFSET(get<T>, {0x51, 1, 0, 0})
+	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x58, 16, 0, 0})
+	DMember(int32_t)                                   DefaultValue                                                OFFSET(get<int32_t>, {0x68, 4, 0, 0})
+	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x6C, 1, 0, 0})
+	CMember(TArray<int32_t>)                           Values                                                      OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x80, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneObjectPathChannelKeyValue
@@ -2249,15 +2267,16 @@ public:
 };
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBindingPayloadVariable
-/// Size: 0x0010 (0x000000 - 0x000010)
+/// Size: 0x0028 (0x000000 - 0x000028)
 class FMovieSceneDynamicBindingPayloadVariable : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSoftObjectPath)                           ObjectValue                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBinding
@@ -2621,6 +2640,16 @@ enum ESectionEvaluationFlags : uint8_t
 	ESectionEvaluationFlags__ForceKeepState3                                         = 4,
 	ESectionEvaluationFlags__ForceRestoreState4                                      = 8,
 	ESectionEvaluationFlags__ESectionEvaluationFlags_MAX5                            = 9
+};
+
+/// Enum /Script/MovieScene.EMovieSceneCompletionModeOverride
+/// Size: 0x04
+enum EMovieSceneCompletionModeOverride : uint8_t
+{
+	EMovieSceneCompletionModeOverride__None0                                         = 0,
+	EMovieSceneCompletionModeOverride__ForceKeepState1                               = 1,
+	EMovieSceneCompletionModeOverride__ForceRestoreState2                            = 2,
+	EMovieSceneCompletionModeOverride__EMovieSceneCompletionModeOverride_MAX3        = 3
 };
 
 /// Enum /Script/MovieScene.EMovieSceneBlendType

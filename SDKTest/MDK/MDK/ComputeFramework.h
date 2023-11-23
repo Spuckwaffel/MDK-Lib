@@ -85,11 +85,11 @@ public:
 
 	/// Functions
 	// Function /Script/ComputeFramework.ComputeGraphComponent.QueueExecute
-	// void QueueExecute();                                                                                                     // [0x9dc966c] Final|Native|Public|BlueprintCallable 
+	// void QueueExecute();                                                                                                     // [0xa6108f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ComputeFramework.ComputeGraphComponent.DestroyDataProviders
-	// void DestroyDataProviders();                                                                                             // [0x9dc963c] Final|Native|Public|BlueprintCallable 
+	// void DestroyDataProviders();                                                                                             // [0xa6108c8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ComputeFramework.ComputeGraphComponent.CreateDataProviders
-	// void CreateDataProviders(int32_t InBindingIndex, UObject* InBindingObject);                                              // [0x9dc956c] Final|Native|Public|BlueprintCallable 
+	// void CreateDataProviders(int32_t InBindingIndex, UObject* InBindingObject);                                              // [0xa6107e8] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ComputeFramework.ComputeKernel

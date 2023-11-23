@@ -71,9 +71,9 @@ public:
 
 	/// Functions
 	// Function /Script/LiveLinkComponents.LiveLinkComponentController.SetSubjectRepresentation
-	// void SetSubjectRepresentation(FLiveLinkSubjectRepresentation InSubjectRepresentation);                                   // [0xa2d0b98] Final|Native|Public|BlueprintCallable 
+	// void SetSubjectRepresentation(FLiveLinkSubjectRepresentation InSubjectRepresentation);                                   // [0xa9ebd50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLinkComponents.LiveLinkComponentController.GetSubjectRepresentation
-	// FLiveLinkSubjectRepresentation GetSubjectRepresentation();                                                               // [0xa2d0b7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FLiveLinkSubjectRepresentation GetSubjectRepresentation();                                                               // [0xa9ebd0c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/LiveLinkComponents.LiveLinkTransformControllerData

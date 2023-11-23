@@ -64,7 +64,7 @@ public:
 
 	/// Functions
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicleAnimInstance.CollectConditionsFromDriver
-	// void CollectConditionsFromDriver();                                                                                      // [0x9b9005c] Final|Native|Public|BlueprintCallable 
+	// void CollectConditionsFromDriver();                                                                                      // [0xa0978ec] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider
@@ -194,31 +194,31 @@ public:
 
 	/// Functions
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleStartWheelie
-	// void HandleStartWheelie();                                                                                               // [0x9b902e8] Final|Native|Public  
+	// void HandleStartWheelie();                                                                                               // [0xa097b78] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleStartStoppie
-	// void HandleStartStoppie();                                                                                               // [0x9b902d0] Final|Native|Public  
+	// void HandleStartStoppie();                                                                                               // [0xa097b60] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleStartChargingJump
-	// void HandleStartChargingJump();                                                                                          // [0x9b902b8] Final|Native|Public  
+	// void HandleStartChargingJump();                                                                                          // [0xa097b48] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleStartAirTrick
-	// void HandleStartAirTrick(EFortMotorcycleAirTrickType TrickType);                                                         // [0x9b9023c] Final|Native|Public  
+	// void HandleStartAirTrick(EFortMotorcycleAirTrickType TrickType);                                                         // [0xa097acc] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleReleaseWheelie
-	// void HandleReleaseWheelie();                                                                                             // [0x9b90224] Final|Native|Public  
+	// void HandleReleaseWheelie();                                                                                             // [0xa097ab4] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleReleaseStoppie
-	// void HandleReleaseStoppie();                                                                                             // [0x9b9020c] Final|Native|Public  
+	// void HandleReleaseStoppie();                                                                                             // [0xa097a9c] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleJump
-	// void HandleJump(float InJumpChargeFactor);                                                                               // [0x9b90188] Final|Native|Public  
+	// void HandleJump(float InJumpChargeFactor);                                                                               // [0xa097a18] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleFinishAirTrick
-	// void HandleFinishAirTrick();                                                                                             // [0x9b90170] Final|Native|Public  
+	// void HandleFinishAirTrick();                                                                                             // [0xa097a00] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleChargingJump
-	// void HandleChargingJump(float InJumpChargeFactor);                                                                       // [0x9b900f0] Final|Native|Public  
+	// void HandleChargingJump(float InJumpChargeFactor);                                                                       // [0xa097980] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.HandleCancelChargingJump
-	// void HandleCancelChargingJump();                                                                                         // [0x9b900d8] Final|Native|Public  
+	// void HandleCancelChargingJump();                                                                                         // [0xa097968] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.CollapsedAimYawSmoothed
-	// void CollapsedAimYawSmoothed(float DeltaSeconds);                                                                        // [0x9b8ffdc] Final|Native|Public|BlueprintCallable 
+	// void CollapsedAimYawSmoothed(float DeltaSeconds);                                                                        // [0xa09786c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.CalculateNoiseAlpha
-	// void CalculateNoiseAlpha();                                                                                              // [0x9b8ff20] Final|Native|Public|BlueprintCallable 
+	// void CalculateNoiseAlpha();                                                                                              // [0xa0977b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.AnimNotify_JumpEntered
-	// void AnimNotify_JumpEntered();                                                                                           // [0x9b8ff00] Final|Native|Public  
+	// void AnimNotify_JumpEntered();                                                                                           // [0xa097790] Final|Native|Public  
 };
 
 /// Class /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleDriver
@@ -330,152 +330,152 @@ public:
 };
 
 /// Class /Script/MotorcycleRuntime.FortCameraMode_Motorcycle
-/// Size: 0x0000 (0x001B70 - 0x001B70)
+/// Size: 0x0000 (0x001BB0 - 0x001BB0)
 class UFortCameraMode_Motorcycle : public UFortCameraMode_AthenaVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7024;
+	static inline constexpr uint64_t __MDKClassSize = 7088;
 
 public:
 };
 
 /// Class /Script/MotorcycleRuntime.FortMotorcycleVehicle
-/// Size: 0x0460 (0x001BF0 - 0x002050)
+/// Size: 0x0460 (0x001C30 - 0x002090)
 class AFortMotorcycleVehicle : public AFortAthenaSKMotorVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 8272;
+	static inline constexpr uint64_t __MDKClassSize = 8336;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStartChargingJumpDelegate                                 OFFSET(getStruct<T>, {0x1BF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCancelChargingJumpDelegate                                OFFSET(getStruct<T>, {0x1C00, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnJumpDelegate                                              OFFSET(getStruct<T>, {0x1C10, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChargingJumpDelegate                                      OFFSET(getStruct<T>, {0x1C20, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartAirTrickDelegate                                     OFFSET(getStruct<T>, {0x1C30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishAirTrickDelegate                                    OFFSET(getStruct<T>, {0x1C40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartWheelieDelegate                                      OFFSET(getStruct<T>, {0x1C50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnReleaseWheelieDelegate                                    OFFSET(getStruct<T>, {0x1C60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLandWheelieDelegate                                       OFFSET(getStruct<T>, {0x1C70, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailWheelieDelegate                                       OFFSET(getStruct<T>, {0x1C80, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartStoppieDelegate                                      OFFSET(getStruct<T>, {0x1C90, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnReleaseStoppieDelegate                                    OFFSET(getStruct<T>, {0x1CA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLandStoppieDelegate                                       OFFSET(getStruct<T>, {0x1CB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInventoryModeChangedDelegate                              OFFSET(getStruct<T>, {0x1CC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSuperSlidingChangedDelegate                               OFFSET(getStruct<T>, {0x1CD0, 16, 0, 0})
-	CMember(UClass*)                                   InventoryCameraModeClass                                    OFFSET(get<T>, {0x1CE0, 8, 0, 0})
-	CMember(UClass*)                                   InventoryCameraModeClassADS                                 OFFSET(get<T>, {0x1CE8, 8, 0, 0})
-	CMember(UClass*)                                   PassengerCameraModeClass                                    OFFSET(get<T>, {0x1CF0, 8, 0, 0})
-	CMember(UClass*)                                   PassengerCameraModeClassADS                                 OFFSET(get<T>, {0x1CF8, 8, 0, 0})
-	CMember(UFortMotorcycleVehicleConfigs*)            FortMotorcycleVehicleConfigs                                OFFSET(get<T>, {0x1D00, 8, 0, 0})
-	SMember(FName)                                     RearAxleSocket                                              OFFSET(getStruct<T>, {0x1D08, 4, 0, 0})
-	CMember(TArray<FActionDefForUI>)                   ActionDefForUI                                              OFFSET(get<T>, {0x1D10, 16, 0, 0})
-	DMember(float)                                     SwingArmRotation                                            OFFSET(get<float>, {0x1D20, 4, 0, 0})
-	CMember(TArray<int32_t>)                           BoostShapeIndices                                           OFFSET(get<T>, {0x1DA0, 16, 0, 0})
-	DMember(bool)                                      bIsBoostAttacking                                           OFFSET(get<bool>, {0x1DB0, 1, 0, 0})
-	CMember(EFortMotorcycleAirTrickType)               CachedTrickType                                             OFFSET(get<T>, {0x1DC0, 1, 0, 0})
-	DMember(bool)                                      bHadPassengerAtTrickStart                                   OFFSET(get<bool>, {0x1DC1, 1, 0, 0})
-	CMember(TArray<FName>)                             PassengerADSSockets                                         OFFSET(get<T>, {0x1DF8, 16, 0, 0})
-	CMember(TArray<FVector>)                           PassengerADSRelativeOffsets                                 OFFSET(get<T>, {0x1E08, 16, 0, 0})
-	CMember(UNiagaraComponent*)                        CachedNiagaraComponentRoadAndExhaust                        OFFSET(get<T>, {0x1E18, 8, 0, 0})
-	SMember(FString)                                   RoadAndExhaustNiagaraComponentName                          OFFSET(getStruct<T>, {0x1E20, 16, 0, 0})
-	SMember(FName)                                     RoadAndExhaustVehicleSpeedName                              OFFSET(getStruct<T>, {0x1E30, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustSlideDirectionName                            OFFSET(getStruct<T>, {0x1E34, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustMinSpeedForDust                               OFFSET(get<float>, {0x1E38, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustRearName                                  OFFSET(getStruct<T>, {0x1E3C, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustColorLerpName                             OFFSET(getStruct<T>, {0x1E40, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustColorLerp                                 OFFSET(get<float>, {0x1E44, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustAlphaMultiplierName                       OFFSET(getStruct<T>, {0x1E48, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustAlphaMultiplier                           OFFSET(get<float>, {0x1E4C, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(getStruct<T>, {0x1E50, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutRearName                               OFFSET(getStruct<T>, {0x1E54, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustIsPeelOutOnRoadName                           OFFSET(getStruct<T>, {0x1E58, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustIsPeelOutOnRoadRewindName                     OFFSET(getStruct<T>, {0x1E5C, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustIsInAirName                                   OFFSET(getStruct<T>, {0x1E60, 4, 0, 0})
-	SMember(FGameplayTag)                              RoadAndExhaustCameraDirtGameplayCueTag                      OFFSET(getStruct<T>, {0x1E64, 4, 0, 0})
-	SMember(FGameplayTag)                              RoadAndExhaustCameraWaterGameplayCueTag                     OFFSET(getStruct<T>, {0x1E68, 4, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       RoadAndExhaustSurfaceTypeArrayForFX                         OFFSET(get<T>, {0x1E70, 16, 0, 0})
-	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x1E80, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       AcceleratingCameraShakeInstance                             OFFSET(get<T>, {0x1E88, 8, 0, 0})
-	SMember(FName)                                     RoadAndExhaustHeadlightsName                                OFFSET(getStruct<T>, {0x1E98, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustBrakelightsName                               OFFSET(getStruct<T>, {0x1E9C, 4, 0, 0})
-	SMember(FScalableFloat)                            DoorBashMinSpeed                                            OFFSET(getStruct<T>, {0x1EA0, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashMaxSpeed                                            OFFSET(getStruct<T>, {0x1EC8, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashForwardDistanceMin                                  OFFSET(getStruct<T>, {0x1EF0, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashForwardDistanceMax                                  OFFSET(getStruct<T>, {0x1F18, 40, 0, 0})
-	SMember(FGameplayTag)                              DoorBashGameplayCueTag                                      OFFSET(getStruct<T>, {0x1F40, 4, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForDoor                               OFFSET(get<T>, {0x1F48, 16, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForPawn                               OFFSET(get<T>, {0x1F58, 16, 0, 0})
-	SMember(FScalableFloat)                            DoorBashSphereRadiusForPawnLaunch                           OFFSET(getStruct<T>, {0x1F68, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashScalarForPawnLaunch                                 OFFSET(getStruct<T>, {0x1F90, 40, 0, 0})
-	SMember(FGameplayTag)                              DoorBashPawnLaunchGameplayCueTag                            OFFSET(getStruct<T>, {0x1FB8, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         InventoryModeTagQuery                                       OFFSET(getStruct<T>, {0x1FC0, 72, 0, 0})
-	SMember(FGameplayTagContainer)                     InputContextBlockedTags                                     OFFSET(getStruct<T>, {0x2008, 32, 0, 0})
-	SMember(FGameplayTag)                              MobileHUDTag                                                OFFSET(getStruct<T>, {0x2040, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartChargingJumpDelegate                                 OFFSET(getStruct<T>, {0x1C30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCancelChargingJumpDelegate                                OFFSET(getStruct<T>, {0x1C40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnJumpDelegate                                              OFFSET(getStruct<T>, {0x1C50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChargingJumpDelegate                                      OFFSET(getStruct<T>, {0x1C60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartAirTrickDelegate                                     OFFSET(getStruct<T>, {0x1C70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishAirTrickDelegate                                    OFFSET(getStruct<T>, {0x1C80, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartWheelieDelegate                                      OFFSET(getStruct<T>, {0x1C90, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReleaseWheelieDelegate                                    OFFSET(getStruct<T>, {0x1CA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLandWheelieDelegate                                       OFFSET(getStruct<T>, {0x1CB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailWheelieDelegate                                       OFFSET(getStruct<T>, {0x1CC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartStoppieDelegate                                      OFFSET(getStruct<T>, {0x1CD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReleaseStoppieDelegate                                    OFFSET(getStruct<T>, {0x1CE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLandStoppieDelegate                                       OFFSET(getStruct<T>, {0x1CF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInventoryModeChangedDelegate                              OFFSET(getStruct<T>, {0x1D00, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuperSlidingChangedDelegate                               OFFSET(getStruct<T>, {0x1D10, 16, 0, 0})
+	CMember(UClass*)                                   InventoryCameraModeClass                                    OFFSET(get<T>, {0x1D20, 8, 0, 0})
+	CMember(UClass*)                                   InventoryCameraModeClassADS                                 OFFSET(get<T>, {0x1D28, 8, 0, 0})
+	CMember(UClass*)                                   PassengerCameraModeClass                                    OFFSET(get<T>, {0x1D30, 8, 0, 0})
+	CMember(UClass*)                                   PassengerCameraModeClassADS                                 OFFSET(get<T>, {0x1D38, 8, 0, 0})
+	CMember(UFortMotorcycleVehicleConfigs*)            FortMotorcycleVehicleConfigs                                OFFSET(get<T>, {0x1D40, 8, 0, 0})
+	SMember(FName)                                     RearAxleSocket                                              OFFSET(getStruct<T>, {0x1D48, 4, 0, 0})
+	CMember(TArray<FActionDefForUI>)                   ActionDefForUI                                              OFFSET(get<T>, {0x1D50, 16, 0, 0})
+	DMember(float)                                     SwingArmRotation                                            OFFSET(get<float>, {0x1D60, 4, 0, 0})
+	CMember(TArray<int32_t>)                           BoostShapeIndices                                           OFFSET(get<T>, {0x1DE0, 16, 0, 0})
+	DMember(bool)                                      bIsBoostAttacking                                           OFFSET(get<bool>, {0x1DF0, 1, 0, 0})
+	CMember(EFortMotorcycleAirTrickType)               CachedTrickType                                             OFFSET(get<T>, {0x1E00, 1, 0, 0})
+	DMember(bool)                                      bHadPassengerAtTrickStart                                   OFFSET(get<bool>, {0x1E01, 1, 0, 0})
+	CMember(TArray<FName>)                             PassengerADSSockets                                         OFFSET(get<T>, {0x1E38, 16, 0, 0})
+	CMember(TArray<FVector>)                           PassengerADSRelativeOffsets                                 OFFSET(get<T>, {0x1E48, 16, 0, 0})
+	CMember(UNiagaraComponent*)                        CachedNiagaraComponentRoadAndExhaust                        OFFSET(get<T>, {0x1E58, 8, 0, 0})
+	SMember(FString)                                   RoadAndExhaustNiagaraComponentName                          OFFSET(getStruct<T>, {0x1E60, 16, 0, 0})
+	SMember(FName)                                     RoadAndExhaustVehicleSpeedName                              OFFSET(getStruct<T>, {0x1E70, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustSlideDirectionName                            OFFSET(getStruct<T>, {0x1E74, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustMinSpeedForDust                               OFFSET(get<float>, {0x1E78, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustRearName                                  OFFSET(getStruct<T>, {0x1E7C, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustColorLerpName                             OFFSET(getStruct<T>, {0x1E80, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustColorLerp                                 OFFSET(get<float>, {0x1E84, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustAlphaMultiplierName                       OFFSET(getStruct<T>, {0x1E88, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustAlphaMultiplier                           OFFSET(get<float>, {0x1E8C, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(getStruct<T>, {0x1E90, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutRearName                               OFFSET(getStruct<T>, {0x1E94, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustIsPeelOutOnRoadName                           OFFSET(getStruct<T>, {0x1E98, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustIsPeelOutOnRoadRewindName                     OFFSET(getStruct<T>, {0x1E9C, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustIsInAirName                                   OFFSET(getStruct<T>, {0x1EA0, 4, 0, 0})
+	SMember(FGameplayTag)                              RoadAndExhaustCameraDirtGameplayCueTag                      OFFSET(getStruct<T>, {0x1EA4, 4, 0, 0})
+	SMember(FGameplayTag)                              RoadAndExhaustCameraWaterGameplayCueTag                     OFFSET(getStruct<T>, {0x1EA8, 4, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       RoadAndExhaustSurfaceTypeArrayForFX                         OFFSET(get<T>, {0x1EB0, 16, 0, 0})
+	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x1EC0, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       AcceleratingCameraShakeInstance                             OFFSET(get<T>, {0x1EC8, 8, 0, 0})
+	SMember(FName)                                     RoadAndExhaustHeadlightsName                                OFFSET(getStruct<T>, {0x1ED8, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustBrakelightsName                               OFFSET(getStruct<T>, {0x1EDC, 4, 0, 0})
+	SMember(FScalableFloat)                            DoorBashMinSpeed                                            OFFSET(getStruct<T>, {0x1EE0, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashMaxSpeed                                            OFFSET(getStruct<T>, {0x1F08, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashForwardDistanceMin                                  OFFSET(getStruct<T>, {0x1F30, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashForwardDistanceMax                                  OFFSET(getStruct<T>, {0x1F58, 40, 0, 0})
+	SMember(FGameplayTag)                              DoorBashGameplayCueTag                                      OFFSET(getStruct<T>, {0x1F80, 4, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForDoor                               OFFSET(get<T>, {0x1F88, 16, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForPawn                               OFFSET(get<T>, {0x1F98, 16, 0, 0})
+	SMember(FScalableFloat)                            DoorBashSphereRadiusForPawnLaunch                           OFFSET(getStruct<T>, {0x1FA8, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashScalarForPawnLaunch                                 OFFSET(getStruct<T>, {0x1FD0, 40, 0, 0})
+	SMember(FGameplayTag)                              DoorBashPawnLaunchGameplayCueTag                            OFFSET(getStruct<T>, {0x1FF8, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         InventoryModeTagQuery                                       OFFSET(getStruct<T>, {0x2000, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     InputContextBlockedTags                                     OFFSET(getStruct<T>, {0x2048, 32, 0, 0})
+	SMember(FGameplayTag)                              MobileHUDTag                                                OFFSET(getStruct<T>, {0x2080, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.ServerEjectAllPlayers
-	// void ServerEjectAllPlayers();                                                                                            // [0x87f22d0] Net|NetReliableNative|Event|Public|NetServer 
+	// void ServerEjectAllPlayers();                                                                                            // [0x9e7ba94] Net|NetReliableNative|Event|Public|NetServer 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.OnRep_IsBoostAttacking
-	// void OnRep_IsBoostAttacking();                                                                                           // [0x9b90460] Final|Native|Protected 
+	// void OnRep_IsBoostAttacking();                                                                                           // [0xa097cf0] Final|Native|Protected 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.OnPlayerWeaponChanged
-	// void OnPlayerWeaponChanged(AFortWeapon* InNewWeapon, AFortWeapon* InPrevWeapon);                                         // [0x9b9036c] Final|Native|Public  
+	// void OnPlayerWeaponChanged(AFortWeapon* InNewWeapon, AFortWeapon* InPrevWeapon);                                         // [0xa097bfc] Final|Native|Public  
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleWheelie__DelegateSignature
-	// void MotorcycleWheelie__DelegateSignature();                                                                             // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleWheelie__DelegateSignature();                                                                             // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleSuperSlidingChanged__DelegateSignature
-	// void MotorcycleSuperSlidingChanged__DelegateSignature(bool bIsSuperSliding);                                             // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleSuperSlidingChanged__DelegateSignature(bool bIsSuperSliding);                                             // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleStoppie__DelegateSignature
-	// void MotorcycleStoppie__DelegateSignature();                                                                             // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleStoppie__DelegateSignature();                                                                             // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleStartAirTrick__DelegateSignature
-	// void MotorcycleStartAirTrick__DelegateSignature(EFortMotorcycleAirTrickType TrickType);                                  // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleStartAirTrick__DelegateSignature(EFortMotorcycleAirTrickType TrickType);                                  // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleJump__DelegateSignature
-	// void MotorcycleJump__DelegateSignature(float JumpChargeFactor);                                                          // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleJump__DelegateSignature(float JumpChargeFactor);                                                          // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleInventoryMode__DelegateSignature
-	// void MotorcycleInventoryMode__DelegateSignature(bool IsInInventoryMode);                                                 // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleInventoryMode__DelegateSignature(bool IsInInventoryMode);                                                 // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleChargingJump__DelegateSignature
-	// void MotorcycleChargingJump__DelegateSignature();                                                                        // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleChargingJump__DelegateSignature();                                                                        // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.MotorcycleAirTrick__DelegateSignature
-	// void MotorcycleAirTrick__DelegateSignature();                                                                            // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void MotorcycleAirTrick__DelegateSignature();                                                                            // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.IsSuperSliding
-	// bool IsSuperSliding();                                                                                                   // [0x9b90348] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsSuperSliding();                                                                                                   // [0xa097bd8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.IsPowerSliding
-	// bool IsPowerSliding();                                                                                                   // [0x9b90324] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPowerSliding();                                                                                                   // [0xa097bb4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.IsInInventoryMode
-	// bool IsInInventoryMode();                                                                                                // [0x9b90300] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsInInventoryMode();                                                                                                // [0xa097b90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.GetSurfaceTypeVehicleOn
-	// TEnumAsByte<EPhysicalSurface> GetSurfaceTypeVehicleOn();                                                                 // [0x9b900c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<EPhysicalSurface> GetSurfaceTypeVehicleOn();                                                                 // [0xa097950] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.GetLeanAngleDegrees
-	// float GetLeanAngleDegrees();                                                                                             // [0x9b90098] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetLeanAngleDegrees();                                                                                             // [0xa097928] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.GetAverageSpringNormal
-	// FVector GetAverageSpringNormal();                                                                                        // [0x9b90070] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetAverageSpringNormal();                                                                                        // [0xa097900] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.ChangeBoostAttackState
-	// void ChangeBoostAttackState(bool bNewIsBoostAttacking);                                                                  // [0x9b8ff34] Final|Native|Public|BlueprintCallable 
+	// void ChangeBoostAttackState(bool bNewIsBoostAttacking);                                                                  // [0xa0977c4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnStartWheelie
-	// void BP_OnStartWheelie();                                                                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnStartWheelie();                                                                                                // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnStartStoppie
-	// void BP_OnStartStoppie();                                                                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnStartStoppie();                                                                                                // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnStartChargingJump
-	// void BP_OnStartChargingJump();                                                                                           // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnStartChargingJump();                                                                                           // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnStartAirTrick
-	// void BP_OnStartAirTrick(EFortMotorcycleAirTrickType TrickType);                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnStartAirTrick(EFortMotorcycleAirTrickType TrickType);                                                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnReleaseWheelie
-	// void BP_OnReleaseWheelie();                                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnReleaseWheelie();                                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnReleaseStoppie
-	// void BP_OnReleaseStoppie();                                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnReleaseStoppie();                                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnLandWheelie
-	// void BP_OnLandWheelie();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnLandWheelie();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnLandStoppie
-	// void BP_OnLandStoppie();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnLandStoppie();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnJump
-	// void BP_OnJump(float JumpChargeFactor);                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnJump(float JumpChargeFactor);                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnFinishAirTrick
-	// void BP_OnFinishAirTrick();                                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnFinishAirTrick();                                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnFailWheelie
-	// void BP_OnFailWheelie();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnFailWheelie();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnChargingJump
-	// void BP_OnChargingJump(float JumpChargeFactor);                                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnChargingJump(float JumpChargeFactor);                                                                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnCancelChargingJump
-	// void BP_OnCancelChargingJump();                                                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_OnCancelChargingJump();                                                                                          // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/MotorcycleRuntime.FortMotorcycleVehicleConfigs

@@ -36,19 +36,19 @@ public:
 
 	/// Functions
 	// Function /Script/MotherGameplayRuntime.GravityGunTargetTrackingComponent.IsValidTarget
-	// bool IsValidTarget(AActor* OwningPlayer, AActor* PotentialTarget, FGameplayTagContainer& ReasonForFailure);              // [0x9ab57d8] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// bool IsValidTarget(AActor* OwningPlayer, AActor* PotentialTarget, FGameplayTagContainer& ReasonForFailure);              // [0x9fedcb0] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/MotherGameplayRuntime.GravityGunTargetTrackingComponent.FindTargetProjectile
-	// bool FindTargetProjectile(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd, float TargetingRadius);          // [0x9ab537c] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool FindTargetProjectile(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd, float TargetingRadius);          // [0x9fed7fc] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MotherGameplayRuntime.GravityGunTargetTrackingComponent.FindTargetActor
-	// void FindTargetActor(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd);                                      // [0x9ab5258] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// void FindTargetActor(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd);                                      // [0x9fed660] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/MotherGameplayRuntime.FortCabbageIglooVehicle
-/// Size: 0x0000 (0x0026B0 - 0x0026B0)
+/// Size: 0x0000 (0x002720 - 0x002720)
 class AFortCabbageIglooVehicle : public AFortOctopusVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 9904;
+	static inline constexpr uint64_t __MDKClassSize = 10016;
 
 public:
 };
@@ -77,18 +77,18 @@ public:
 };
 
 /// Class /Script/MotherGameplayRuntime.FortGameplayCueNotifyLoop_Goop
-/// Size: 0x0040 (0x000990 - 0x0009D0)
+/// Size: 0x0040 (0x0009B0 - 0x0009F0)
 class AFortGameplayCueNotifyLoop_Goop : public AFortGameplayCueNotify_Loop
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2512;
+	static inline constexpr uint64_t __MDKClassSize = 2544;
 
 public:
-	SMember(FName)                                     SpeedParamName                                              OFFSET(getStruct<T>, {0x990, 4, 0, 0})
-	SMember(FName)                                     IsFallingParamName                                          OFFSET(getStruct<T>, {0x994, 4, 0, 0})
-	SMember(FGoopAudioMapRangeClamped)                 SpeedMapRangeClamped                                        OFFSET(getStruct<T>, {0x998, 32, 0, 0})
-	DMember(float)                                     InterpSpeed                                                 OFFSET(get<float>, {0x9B8, 4, 0, 0})
-	CMember(UAudioComponent*)                          LoopingAudioComponent                                       OFFSET(get<T>, {0x9C0, 8, 0, 0})
+	SMember(FName)                                     SpeedParamName                                              OFFSET(getStruct<T>, {0x9B0, 4, 0, 0})
+	SMember(FName)                                     IsFallingParamName                                          OFFSET(getStruct<T>, {0x9B4, 4, 0, 0})
+	SMember(FGoopAudioMapRangeClamped)                 SpeedMapRangeClamped                                        OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
+	DMember(float)                                     InterpSpeed                                                 OFFSET(get<float>, {0x9D8, 4, 0, 0})
+	CMember(UAudioComponent*)                          LoopingAudioComponent                                       OFFSET(get<T>, {0x9E0, 8, 0, 0})
 };
 
 /// Class /Script/MotherGameplayRuntime.PropGunFunctionLibrary
@@ -102,28 +102,28 @@ public:
 };
 
 /// Class /Script/MotherGameplayRuntime.ReactorGradeGameplayCue_ChargeUp
-/// Size: 0x0088 (0x000990 - 0x000A18)
+/// Size: 0x0088 (0x0009B0 - 0x000A38)
 class AReactorGradeGameplayCue_ChargeUp : public AFortGameplayCueNotify_Loop
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2584;
+	static inline constexpr uint64_t __MDKClassSize = 2616;
 
 public:
-	CMember(AFortPawn*)                                Pawn                                                        OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UFortWeaponFxComponent_ChargeAimLocation*) CachedAimLocationComponent                                  OFFSET(get<T>, {0x998, 8, 0, 0})
-	SMember(FVector)                                   FoundEndPoint                                               OFFSET(getStruct<T>, {0x9A0, 24, 0, 0})
-	SMember(FScalableFloat)                            MinHitDistance                                              OFFSET(getStruct<T>, {0x9B8, 40, 0, 0})
-	SMember(FScalableFloat)                            HitObjectsLimit                                             OFFSET(getStruct<T>, {0x9E0, 40, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0xA0C, 1, 0, 0})
+	CMember(AFortPawn*)                                Pawn                                                        OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	CMember(UFortWeaponFxComponent_ChargeAimLocation*) CachedAimLocationComponent                                  OFFSET(get<T>, {0x9B8, 8, 0, 0})
+	SMember(FVector)                                   FoundEndPoint                                               OFFSET(getStruct<T>, {0x9C0, 24, 0, 0})
+	SMember(FScalableFloat)                            MinHitDistance                                              OFFSET(getStruct<T>, {0x9D8, 40, 0, 0})
+	SMember(FScalableFloat)                            HitObjectsLimit                                             OFFSET(getStruct<T>, {0xA00, 40, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0xA2C, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MotherGameplayRuntime.ReactorGradeGameplayCue_ChargeUp.UpdateAimEndPoint
-	// void UpdateAimEndPoint();                                                                                                // [0x9ab5918] Final|Native|Public|BlueprintCallable 
+	// void UpdateAimEndPoint();                                                                                                // [0x9feddf0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotherGameplayRuntime.ReactorGradeGameplayCue_ChargeUp.OnEndPointUpdated
-	// void OnEndPointUpdated(FVector& FoundPoint);                                                                             // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
+	// void OnEndPointUpdated(FVector& FoundPoint);                                                                             // [0x101681c] Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/MotherGameplayRuntime.ReactorGradeGameplayCue_ChargeUp.GetFoundEndPoint
-	// FVector GetFoundEndPoint();                                                                                              // [0x9ab57b0] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetFoundEndPoint();                                                                                              // [0x9fedc88] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/MotherGameplayRuntime.GravyGoblinActivatable_Event

@@ -106,13 +106,13 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventMoreInfoModal.SetModalText
-	// void SetModalText(FText& Header, FText& SubHeader, FText& Legal);                                                        // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void SetModalText(FText& Header, FText& SubHeader, FText& Legal);                                                        // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventMoreInfoModal.OnModalBackout
-	// void OnModalBackout();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnModalBackout();                                                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventMoreInfoModal.OnEventScreenDataSet
-	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventMoreInfoModal.GetEventScreenData
-	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9d24548] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventScreenData* GetEventScreenData();                                                                              // [0xa1391c4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortEventPurchaseLevelsModal
@@ -139,17 +139,17 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.OnPurchaseAmountChanged
-	// void OnPurchaseAmountChanged(int32_t TotalPrice, int32_t LevelQuantity, int32_t PurchaseQuantity, int32_t ResourceQuantity); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPurchaseAmountChanged(int32_t TotalPrice, int32_t LevelQuantity, int32_t PurchaseQuantity, int32_t ResourceQuantity); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.OnEventScreenDataSet
-	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.OnCMSTextApplied
-	// void OnCMSTextApplied(FText& LegalText);                                                                                 // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnCMSTextApplied(FText& LegalText);                                                                                 // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.OnAmountChangeButtonClicked
-	// void OnAmountChangeButtonClicked();                                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnAmountChangeButtonClicked();                                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.HandlePurchaseComplete
-	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0x9d24764] Final|Native|Private|HasOutParms 
+	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0xa1393e0] Final|Native|Private|HasOutParms 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.GetEventScreenData
-	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9d24570] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventScreenData* GetEventScreenData();                                                                              // [0xa1391ec] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortPurchasePremiumTrackBody
@@ -182,15 +182,15 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.OnPriceSet
-	// void OnPriceSet(int32_t Price);                                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPriceSet(int32_t Price);                                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.OnEventScreenDataSet
-	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.OnCMSTextApplied
-	// void OnCMSTextApplied(FText& HeaderText, FText& LegalText);                                                              // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnCMSTextApplied(FText& HeaderText, FText& LegalText);                                                              // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.HandlePurchaseComplete
-	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0x9d24764] Final|Native|Private|HasOutParms 
+	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0xa1393e0] Final|Native|Private|HasOutParms 
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.GetEventScreenData
-	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9d24598] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventScreenData* GetEventScreenData();                                                                              // [0xa139214] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortEventListViewWidgetBase
@@ -217,13 +217,13 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventRewardTracksWidget.BPSetProgressPercent
-	// void BPSetProgressPercent(float Percent);                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BPSetProgressPercent(float Percent);                                                                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardTracksWidget.BPSetAllRewardsCollected
-	// void BPSetAllRewardsCollected(bool bAllCollected);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BPSetAllRewardsCollected(bool bAllCollected);                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardTracksWidget.BPOnSetRewardItem
-	// void BPOnSetRewardItem(int32_t RequiredProgress, int32_t RemainingProgress, float RewardProgressPercent, float PreviewProgressPercent, float OverallProgressPercent, bool bInPreviewMode); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BPOnSetRewardItem(int32_t RequiredProgress, int32_t RemainingProgress, float RewardProgressPercent, float PreviewProgressPercent, float OverallProgressPercent, bool bInPreviewMode); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardTracksWidget.BPOnEventScreenDataSet
-	// void BPOnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BPOnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/EventScreenBase.FortEventSpacerWidget
@@ -254,120 +254,120 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetTrackData
-	// void SetTrackData(FEventScreenTrackData& TrackData, bool bIsOwned);                                                      // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void SetTrackData(FEventScreenTrackData& TrackData, bool bIsOwned);                                                      // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetProgressPercent
-	// void SetProgressPercent(float Percent);                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetProgressPercent(float Percent);                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetIsBannerItem
-	// void SetIsBannerItem(bool bIsBanner);                                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetIsBannerItem(bool bIsBanner);                                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetInSelectedState
-	// void SetInSelectedState(bool bSelected);                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetInSelectedState(bool bSelected);                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetInPreviewSelectedState
-	// void SetInPreviewSelectedState(bool bSelected);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetInPreviewSelectedState(bool bSelected);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetInPreviewedState
-	// void SetInPreviewedState(bool bPreviewed);                                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetInPreviewedState(bool bPreviewed);                                                                               // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetInPremiumUpgradeState
-	// void SetInPremiumUpgradeState(bool bHighlighted);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetInPremiumUpgradeState(bool bHighlighted);                                                                        // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetDoubleWidth
-	// void SetDoubleWidth(bool bDoubleWidth);                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetDoubleWidth(bool bDoubleWidth);                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetCustomItemIcon
-	// void SetCustomItemIcon(UTexture2D* CustomItemIcon);                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetCustomItemIcon(UTexture2D* CustomItemIcon);                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.SetAllRewardsCollected
-	// void SetAllRewardsCollected(bool bAllCollected);                                                                         // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetAllRewardsCollected(bool bAllCollected);                                                                         // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.OnSetRewardItem
-	// void OnSetRewardItem(int32_t RequiredProgress, int32_t RemainingProgress, float RewardProgressPercent, float PreviewProgressPercent, float OverallProgressPercent, bool bInPreviewMode); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetRewardItem(int32_t RequiredProgress, int32_t RemainingProgress, float RewardProgressPercent, float PreviewProgressPercent, float OverallProgressPercent, bool bInPreviewMode); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.OnRewardWidgetReset
-	// void OnRewardWidgetReset();                                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnRewardWidgetReset();                                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.OnInputMethodChanged
-	// void OnInputMethodChanged(ECommonInputType NewInputType);                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnInputMethodChanged(ECommonInputType NewInputType);                                                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.OnEventScreenDataSet
-	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.GetEventScreenData
-	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9d245c0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventScreenData* GetEventScreenData();                                                                              // [0xa13923c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortEventScreenBase
-/// Size: 0x0440 (0x000720 - 0x000B60)
+/// Size: 0x0440 (0x000730 - 0x000B70)
 class UFortEventScreenBase : public UFortItemPreviewScreen
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2912;
+	static inline constexpr uint64_t __MDKClassSize = 2928;
 
 public:
-	CMember(TArray<UNamedSlot*>)                       LayoutTemplateSlots                                         OFFSET(get<T>, {0x728, 16, 0, 0})
-	CMember(UFortLazyImage*)                           LazyImage_KeyArt                                            OFFSET(get<T>, {0x738, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ViewQuests                                           OFFSET(get<T>, {0x740, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_MoreInfo                                             OFFSET(get<T>, {0x748, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_PurchaseLevels                                       OFFSET(get<T>, {0x750, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Preview                                              OFFSET(get<T>, {0x758, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_ShowInItemShop                                       OFFSET(get<T>, {0x760, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Previous                                             OFFSET(get<T>, {0x768, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Next                                                 OFFSET(get<T>, {0x770, 8, 0, 0})
-	CMember(UFortEventTrackerModule_CustomText*)       CustomText_InspectItem                                      OFFSET(get<T>, {0x778, 8, 0, 0})
-	CMember(UPanelWidget*)                             Panel_LoadError                                             OFFSET(get<T>, {0x780, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_Close                                                OFFSET(get<T>, {0x788, 8, 0, 0})
-	CMember(UCommonButtonBase*)                        Button_MobileClose                                          OFFSET(get<T>, {0x790, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ItemDescription                                        OFFSET(get<T>, {0x798, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x7A0, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Text_SetDetails                                             OFFSET(get<T>, {0x7A8, 8, 0, 0})
-	CMember(UAthenaRewardItemTypeRarityTag*)           ItemRewardTag                                               OFFSET(get<T>, {0x7B0, 8, 0, 0})
-	CMember(UFortEventScreenData*)                     EventScreenData                                             OFFSET(get<T>, {0x7B8, 8, 0, 0})
-	CMember(EEventScreenRewardPreviewType)             ActiveRewardPreviewType                                     OFFSET(get<T>, {0x7C0, 1, 0, 0})
-	CMember(UFortChallengeBundleItemDefinition*)       LoadedQuestBundle                                           OFFSET(get<T>, {0x7C8, 8, 0, 0})
-	CMember(AFortItemPreviewWorld*)                    CachedVaultWorld                                            OFFSET(get<T>, {0x7D0, 8, 0, 0})
-	DMember(float)                                     TimeBetweenVariantsRestart                                  OFFSET(get<float>, {0x7E8, 4, 0, 0})
-	DMember(float)                                     TimeBetweenVariants                                         OFFSET(get<float>, {0x7EC, 4, 0, 0})
-	CMember(TArray<FFortCosmeticVariantPreview>)       CachedVariantPreviews                                       OFFSET(get<T>, {0x7F0, 16, 0, 0})
+	CMember(TArray<UNamedSlot*>)                       LayoutTemplateSlots                                         OFFSET(get<T>, {0x738, 16, 0, 0})
+	CMember(UFortLazyImage*)                           LazyImage_KeyArt                                            OFFSET(get<T>, {0x748, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ViewQuests                                           OFFSET(get<T>, {0x750, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_MoreInfo                                             OFFSET(get<T>, {0x758, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_PurchaseLevels                                       OFFSET(get<T>, {0x760, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Preview                                              OFFSET(get<T>, {0x768, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_ShowInItemShop                                       OFFSET(get<T>, {0x770, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Previous                                             OFFSET(get<T>, {0x778, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Next                                                 OFFSET(get<T>, {0x780, 8, 0, 0})
+	CMember(UFortEventTrackerModule_CustomText*)       CustomText_InspectItem                                      OFFSET(get<T>, {0x788, 8, 0, 0})
+	CMember(UPanelWidget*)                             Panel_LoadError                                             OFFSET(get<T>, {0x790, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_Close                                                OFFSET(get<T>, {0x798, 8, 0, 0})
+	CMember(UCommonButtonBase*)                        Button_MobileClose                                          OFFSET(get<T>, {0x7A0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ItemDescription                                        OFFSET(get<T>, {0x7A8, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x7B0, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Text_SetDetails                                             OFFSET(get<T>, {0x7B8, 8, 0, 0})
+	CMember(UAthenaRewardItemTypeRarityTag*)           ItemRewardTag                                               OFFSET(get<T>, {0x7C0, 8, 0, 0})
+	CMember(UFortEventScreenData*)                     EventScreenData                                             OFFSET(get<T>, {0x7C8, 8, 0, 0})
+	CMember(EEventScreenRewardPreviewType)             ActiveRewardPreviewType                                     OFFSET(get<T>, {0x7D0, 1, 0, 0})
+	CMember(UFortChallengeBundleItemDefinition*)       LoadedQuestBundle                                           OFFSET(get<T>, {0x7D8, 8, 0, 0})
+	CMember(AFortItemPreviewWorld*)                    CachedVaultWorld                                            OFFSET(get<T>, {0x7E0, 8, 0, 0})
+	DMember(float)                                     TimeBetweenVariantsRestart                                  OFFSET(get<float>, {0x7F8, 4, 0, 0})
+	DMember(float)                                     TimeBetweenVariants                                         OFFSET(get<float>, {0x7FC, 4, 0, 0})
+	CMember(TArray<FFortCosmeticVariantPreview>)       CachedVariantPreviews                                       OFFSET(get<T>, {0x800, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventScreenBase.UpdateVariantCounter
-	// void UpdateVariantCounter(int32_t CurrentVariantIndex, int32_t TotalNumVariants);                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void UpdateVariantCounter(int32_t CurrentVariantIndex, int32_t TotalNumVariants);                                        // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.SetRewardTrackLegal
-	// void SetRewardTrackLegal(FText& LegalText);                                                                              // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void SetRewardTrackLegal(FText& LegalText);                                                                              // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.SetItemShopOfferInfoVisibility
-	// void SetItemShopOfferInfoVisibility(bool bIsVisible);                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetItemShopOfferInfoVisibility(bool bIsVisible);                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.SetItemShopCallout
-	// void SetItemShopCallout(FText& ItemShopCalloutText);                                                                     // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void SetItemShopCallout(FText& ItemShopCalloutText);                                                                     // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.RegisterLayoutSlots
-	// void RegisterLayoutSlots();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void RegisterLayoutSlots();                                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnScreenViewChanged
-	// void OnScreenViewChanged(EEventScreenView PrevScreenView, EEventScreenView NewScreenView);                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnScreenViewChanged(EEventScreenView PrevScreenView, EEventScreenView NewScreenView);                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnRewardTrackReady
-	// void OnRewardTrackReady();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnRewardTrackReady();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnRewardPreviewItemChanged
-	// void OnRewardPreviewItemChanged(UFortAccountItemDefinition* Item, bool bFreeTrack);                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnRewardPreviewItemChanged(UFortAccountItemDefinition* Item, bool bFreeTrack);                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnFirstViewAfterCompletion
-	// void OnFirstViewAfterCompletion();                                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnFirstViewAfterCompletion();                                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnCalendarEventStarted
-	// void OnCalendarEventStarted(FString EventName);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCalendarEventStarted(FString EventName);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.OnCalendarEventEnded
-	// void OnCalendarEventEnded(FString EventName);                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCalendarEventEnded(FString EventName);                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventScreenBase.IsCalendarEventActive
-	// bool IsCalendarEventActive(FString EventName);                                                                           // [0x9d251f8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsCalendarEventActive(FString EventName);                                                                           // [0xa139db8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HasPurchasedPremiumTrack
-	// bool HasPurchasedPremiumTrack();                                                                                         // [0x9d251d4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasPurchasedPremiumTrack();                                                                                         // [0xa139d94] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HasAllRewardsCollected
-	// bool HasAllRewardsCollected();                                                                                           // [0x9d251b0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasAllRewardsCollected();                                                                                           // [0xa139d70] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleUpsellPromptNavigateUpEvent
-	// UWidget* HandleUpsellPromptNavigateUpEvent(EUINavigation InNavigation);                                                  // [0x9d25128] Final|Native|Private 
+	// UWidget* HandleUpsellPromptNavigateUpEvent(EUINavigation InNavigation);                                                  // [0xa139ce8] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleToggleFullscreenMap
-	// void HandleToggleFullscreenMap(bool bVisible);                                                                           // [0x9d250a8] Final|Native|Private 
+	// void HandleToggleFullscreenMap(bool bVisible);                                                                           // [0xa139c68] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleRewardListNavigateUpEvent
-	// UWidget* HandleRewardListNavigateUpEvent(EUINavigation InNavigation);                                                    // [0x9d25018] Final|Native|Private 
+	// UWidget* HandleRewardListNavigateUpEvent(EUINavigation InNavigation);                                                    // [0xa139bd8] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleRewardListNavigateRightEvent
-	// UWidget* HandleRewardListNavigateRightEvent(EUINavigation InNavigation);                                                 // [0x9d24f88] Final|Native|Private 
+	// UWidget* HandleRewardListNavigateRightEvent(EUINavigation InNavigation);                                                 // [0xa139b48] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleItemShown
-	// void HandleItemShown(UFortAccountItemDefinition* AccountItemDef);                                                        // [0x9d246e4] Final|Native|Private 
+	// void HandleItemShown(UFortAccountItemDefinition* AccountItemDef);                                                        // [0xa139360] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleGiftBoxClosed
-	// void HandleGiftBoxClosed();                                                                                              // [0x9d246d0] Final|Native|Private 
+	// void HandleGiftBoxClosed();                                                                                              // [0xa13934c] Final|Native|Private 
 	// Function /Script/EventScreenBase.FortEventScreenBase.HandleActiveSeasonDataChanged
-	// void HandleActiveSeasonDataChanged(TArray<FString>& ActiveEventFlags);                                                   // [0x9d24638] Final|Native|Private|HasOutParms 
+	// void HandleActiveSeasonDataChanged(TArray<FString>& ActiveEventFlags);                                                   // [0xa1392b4] Final|Native|Private|HasOutParms 
 	// Function /Script/EventScreenBase.FortEventScreenBase.GetVaultWorldFloorMID
-	// UMaterialInstanceDynamic* GetVaultWorldFloorMID();                                                                       // [0x9d24610] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UMaterialInstanceDynamic* GetVaultWorldFloorMID();                                                                       // [0xa13928c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.GetVaultWorldBackgroundMID
-	// UMaterialInstanceDynamic* GetVaultWorldBackgroundMID();                                                                  // [0x9d245e8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UMaterialInstanceDynamic* GetVaultWorldBackgroundMID();                                                                  // [0xa139264] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.GetActiveModal
-	// UFortEventModalBase* GetActiveModal();                                                                                   // [0x9d244f8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventModalBase* GetActiveModal();                                                                                   // [0xa139174] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.EventScreenListView
@@ -394,9 +394,9 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.EventScreenListView.SetNativeTickAllowed
-	// void SetNativeTickAllowed(bool bAllowed);                                                                                // [0x9d258b4] Final|Native|Public|BlueprintCallable 
+	// void SetNativeTickAllowed(bool bAllowed);                                                                                // [0xa13a3d8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EventScreenBase.EventScreenListView.GetEventScreenData
-	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9d24520] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UFortEventScreenData* GetEventScreenData();                                                                              // [0xa13919c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortEventTokenCollectionWidget
@@ -416,7 +416,7 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTokenCollectionWidget.OnRefreshIcon
-	// void OnRefreshIcon(bool IsCollected, bool bIsFirstViewAfterCollection);                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnRefreshIcon(bool IsCollected, bool bIsFirstViewAfterCollection);                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/EventScreenBase.FortEventTrackerModule
@@ -472,7 +472,7 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_RewardRemaining.OnPopulateRemaining
-	// void OnPopulateRemaining(int32_t ResourceNeeded, int32_t TotalResourceRequired, bool bRequiresPremiumTrackPurchase);     // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPopulateRemaining(int32_t ResourceNeeded, int32_t TotalResourceRequired, bool bRequiresPremiumTrackPurchase);     // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/EventScreenBase.FortEventTrackerModule_ProgressiveRewards
@@ -488,7 +488,7 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_ProgressiveRewards.OnPopulateCompletionMessage
-	// void OnPopulateCompletionMessage(bool bIsComplete, FText& CompletionText);                                               // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void OnPopulateCompletionMessage(bool bIsComplete, FText& CompletionText);                                               // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/EventScreenBase.FortEventTrackerModule_Collection
@@ -514,11 +514,11 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_Banner.OnPopulateHeaderCTAText
-	// void OnPopulateHeaderCTAText(FText& HeaderCTAText);                                                                      // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnPopulateHeaderCTAText(FText& HeaderCTAText);                                                                      // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_Banner.OnPopulateBannerText
-	// void OnPopulateBannerText(FText& BannerText);                                                                            // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnPopulateBannerText(FText& BannerText);                                                                            // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_Banner.OnCTACompleted
-	// void OnCTACompleted(bool bIsComplete);                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCTACompleted(bool bIsComplete);                                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell
@@ -536,11 +536,11 @@ public:
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell.OnPopulateText
-	// void OnPopulateText(FText& HeaderText, FText& BodyText);                                                                 // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnPopulateText(FText& HeaderText, FText& BodyText);                                                                 // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell.OnIconLoaded
-	// void OnIconLoaded(UTexture* LoadedTexture);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnIconLoaded(UTexture* LoadedTexture);                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell.IsPremiumTrackOwned
-	// bool IsPremiumTrackOwned();                                                                                              // [0x9945b44] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPremiumTrackOwned();                                                                                              // [0x9e02214] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/EventScreenBase.FortEventTrackerModule_CustomText

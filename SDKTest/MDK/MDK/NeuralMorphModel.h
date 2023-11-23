@@ -21,14 +21,14 @@ public:
 };
 
 /// Class /Script/NeuralMorphModel.NeuralMorphModelInstance
-/// Size: 0x0028 (0x0000B0 - 0x0000D8)
+/// Size: 0x0028 (0x0000A8 - 0x0000D0)
 class UNeuralMorphModelInstance : public UMLDeformerMorphModelInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 216;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(UNeuralMorphNetworkInstance*)              NetworkInstance                                             OFFSET(get<T>, {0xB0, 8, 0, 0})
+	CMember(UNeuralMorphNetworkInstance*)              NetworkInstance                                             OFFSET(get<T>, {0xA8, 8, 0, 0})
 };
 
 /// Class /Script/NeuralMorphModel.NeuralMorphModelVizSettings
@@ -69,24 +69,27 @@ public:
 };
 
 /// Class /Script/NeuralMorphModel.NeuralMorphNetwork
-/// Size: 0x0050 (0x000028 - 0x000078)
+/// Size: 0x0080 (0x000028 - 0x0000A8)
 class UNeuralMorphNetwork : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
 	CMember(UNeuralMorphMLP*)                          MainMLP                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UNeuralMorphMLP*)                          GroupMLP                                                    OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TArray<float>)                             InputMeans                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
-	CMember(TArray<float>)                             InputStd                                                    OFFSET(get<T>, {0x48, 16, 0, 0})
-	CMember(ENeuralMorphMode)                          Mode                                                        OFFSET(get<T>, {0x58, 1, 0, 0})
-	DMember(int32_t)                                   NumMorphsPerBone                                            OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
-	DMember(int32_t)                                   NumBones                                                    OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	DMember(int32_t)                                   NumCurves                                                   OFFSET(get<int32_t>, {0x64, 4, 0, 0})
-	DMember(int32_t)                                   NumFloatsPerCurve                                           OFFSET(get<int32_t>, {0x68, 4, 0, 0})
-	DMember(int32_t)                                   NumGroups                                                   OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
-	DMember(int32_t)                                   NumItemsPerGroup                                            OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	CMember(UNNEModelData*)                            MainModelData                                               OFFSET(get<T>, {0x38, 8, 0, 0})
+	CMember(UNNEModelData*)                            GroupModelData                                              OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(TArray<float>)                             InputMeans                                                  OFFSET(get<T>, {0x68, 16, 0, 0})
+	CMember(TArray<float>)                             InputStd                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
+	CMember(ENeuralMorphMode)                          Mode                                                        OFFSET(get<T>, {0x88, 1, 0, 0})
+	DMember(int32_t)                                   NumMorphs                                                   OFFSET(get<int32_t>, {0x8C, 4, 0, 0})
+	DMember(int32_t)                                   NumMorphsPerBone                                            OFFSET(get<int32_t>, {0x90, 4, 0, 0})
+	DMember(int32_t)                                   NumBones                                                    OFFSET(get<int32_t>, {0x94, 4, 0, 0})
+	DMember(int32_t)                                   NumCurves                                                   OFFSET(get<int32_t>, {0x98, 4, 0, 0})
+	DMember(int32_t)                                   NumFloatsPerCurve                                           OFFSET(get<int32_t>, {0x9C, 4, 0, 0})
+	DMember(int32_t)                                   NumGroups                                                   OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
+	DMember(int32_t)                                   NumItemsPerGroup                                            OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
 };
 
 /// Class /Script/NeuralMorphModel.NeuralMorphNetworkInstance
@@ -101,31 +104,31 @@ public:
 };
 
 /// Class /Script/NeuralMorphModel.NeuralMorphModel
-/// Size: 0x0100 (0x000188 - 0x000288)
+/// Size: 0x0100 (0x000190 - 0x000290)
 class UNeuralMorphModel : public UMLDeformerMorphModel
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 648;
+	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	CMember(TArray<FNeuralMorphBoneGroup>)             BoneGroups                                                  OFFSET(get<T>, {0x188, 16, 0, 0})
-	CMember(TArray<FNeuralMorphCurveGroup>)            CurveGroups                                                 OFFSET(get<T>, {0x198, 16, 0, 0})
-	CMember(TMap<FName, FNeuralMorphMaskInfo>)         BoneMaskInfos                                               OFFSET(get<T>, {0x1A8, 80, 0, 0})
-	CMember(TMap<FName, FNeuralMorphMaskInfo>)         BoneGroupMaskInfos                                          OFFSET(get<T>, {0x1F8, 80, 0, 0})
-	CMember(ENeuralMorphMode)                          Mode                                                        OFFSET(get<T>, {0x248, 1, 0, 0})
-	DMember(int32_t)                                   LocalNumMorphTargetsPerBone                                 OFFSET(get<int32_t>, {0x24C, 4, 0, 0})
-	DMember(int32_t)                                   GlobalNumMorphTargets                                       OFFSET(get<int32_t>, {0x250, 4, 0, 0})
-	DMember(int32_t)                                   NumIterations                                               OFFSET(get<int32_t>, {0x254, 4, 0, 0})
-	DMember(int32_t)                                   LocalNumHiddenLayers                                        OFFSET(get<int32_t>, {0x258, 4, 0, 0})
-	DMember(int32_t)                                   LocalNumNeuronsPerLayer                                     OFFSET(get<int32_t>, {0x25C, 4, 0, 0})
-	DMember(int32_t)                                   GlobalNumHiddenLayers                                       OFFSET(get<int32_t>, {0x260, 4, 0, 0})
-	DMember(int32_t)                                   GlobalNumNeuronsPerLayer                                    OFFSET(get<int32_t>, {0x264, 4, 0, 0})
-	DMember(int32_t)                                   BatchSize                                                   OFFSET(get<int32_t>, {0x268, 4, 0, 0})
-	DMember(float)                                     LearningRate                                                OFFSET(get<float>, {0x26C, 4, 0, 0})
-	DMember(float)                                     RegularizationFactor                                        OFFSET(get<float>, {0x270, 4, 0, 0})
-	DMember(bool)                                      bEnableBoneMasks                                            OFFSET(get<bool>, {0x274, 1, 0, 0})
-	DMember(float)                                     SmoothLossBeta                                              OFFSET(get<float>, {0x278, 4, 0, 0})
-	CMember(UNeuralMorphNetwork*)                      NeuralMorphNetwork                                          OFFSET(get<T>, {0x280, 8, 0, 0})
+	CMember(TArray<FNeuralMorphBoneGroup>)             BoneGroups                                                  OFFSET(get<T>, {0x190, 16, 0, 0})
+	CMember(TArray<FNeuralMorphCurveGroup>)            CurveGroups                                                 OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	CMember(TMap<FName, FNeuralMorphMaskInfo>)         BoneMaskInfos                                               OFFSET(get<T>, {0x1B0, 80, 0, 0})
+	CMember(TMap<FName, FNeuralMorphMaskInfo>)         BoneGroupMaskInfos                                          OFFSET(get<T>, {0x200, 80, 0, 0})
+	CMember(ENeuralMorphMode)                          Mode                                                        OFFSET(get<T>, {0x250, 1, 0, 0})
+	DMember(int32_t)                                   LocalNumMorphTargetsPerBone                                 OFFSET(get<int32_t>, {0x254, 4, 0, 0})
+	DMember(int32_t)                                   GlobalNumMorphTargets                                       OFFSET(get<int32_t>, {0x258, 4, 0, 0})
+	DMember(int32_t)                                   NumIterations                                               OFFSET(get<int32_t>, {0x25C, 4, 0, 0})
+	DMember(int32_t)                                   LocalNumHiddenLayers                                        OFFSET(get<int32_t>, {0x260, 4, 0, 0})
+	DMember(int32_t)                                   LocalNumNeuronsPerLayer                                     OFFSET(get<int32_t>, {0x264, 4, 0, 0})
+	DMember(int32_t)                                   GlobalNumHiddenLayers                                       OFFSET(get<int32_t>, {0x268, 4, 0, 0})
+	DMember(int32_t)                                   GlobalNumNeuronsPerLayer                                    OFFSET(get<int32_t>, {0x26C, 4, 0, 0})
+	DMember(int32_t)                                   BatchSize                                                   OFFSET(get<int32_t>, {0x270, 4, 0, 0})
+	DMember(float)                                     LearningRate                                                OFFSET(get<float>, {0x274, 4, 0, 0})
+	DMember(float)                                     RegularizationFactor                                        OFFSET(get<float>, {0x278, 4, 0, 0})
+	DMember(bool)                                      bEnableBoneMasks                                            OFFSET(get<bool>, {0x27C, 1, 0, 0})
+	DMember(float)                                     SmoothLossBeta                                              OFFSET(get<float>, {0x280, 4, 0, 0})
+	CMember(UNeuralMorphNetwork*)                      NeuralMorphNetwork                                          OFFSET(get<T>, {0x288, 8, 0, 0})
 };
 
 /// Struct /Script/NeuralMorphModel.NeuralMorphBoneGroup

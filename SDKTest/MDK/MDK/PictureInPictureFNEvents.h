@@ -55,18 +55,18 @@ public:
 
 	/// Functions
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.UpdateClientLoginState
-	// void UpdateClientLoginState(TArray<FPiPPartnerSource>& UpdatedSources);                                                  // [0x1d9aa78] Final|Native|Private|HasOutParms 
+	// void UpdateClientLoginState(TArray<FPiPPartnerSource>& UpdatedSources);                                                  // [0xa1f3cdc] Final|Native|Private|HasOutParms 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.OnClientLogoutSuccess
-	// void OnClientLogoutSuccess();                                                                                            // [0x9e69ea0] Final|Native|Private 
+	// void OnClientLogoutSuccess();                                                                                            // [0xa1f3c90] Final|Native|Private 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.OnClientLoginSuccess
-	// void OnClientLoginSuccess();                                                                                             // [0x9e69e8c] Final|Native|Private 
+	// void OnClientLoginSuccess();                                                                                             // [0xa1f3c7c] Final|Native|Private 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.HandleFNMediaRemoveEventsStream
-	// void HandleFNMediaRemoveEventsStream(FString InEventName);                                                               // [0x9e697d8] Final|Native|Protected 
+	// void HandleFNMediaRemoveEventsStream(FString InEventName);                                                               // [0xa1f3660] Final|Native|Protected 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.HandleFNMediaEventsStreams
-	// void HandleFNMediaEventsStreams(FFortMediaEventsStreamAssets& VideoStreamAssets);                                        // [0x9e69100] Final|Native|Protected|HasOutParms 
+	// void HandleFNMediaEventsStreams(FFortMediaEventsStreamAssets& VideoStreamAssets);                                        // [0xa1f3030] Final|Native|Protected|HasOutParms 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.ExitEvent
-	// void ExitEvent();                                                                                                        // [0x9e690ec] Final|Native|Private 
+	// void ExitEvent();                                                                                                        // [0xa1f301c] Final|Native|Private 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.AddPartnerActionAnalytics
-	// void AddPartnerActionAnalytics(FString InPartnerName, PictureInPictureAction InActionType);                              // [0x9e68a0c] Final|Native|Private 
+	// void AddPartnerActionAnalytics(FString InPartnerName, PictureInPictureAction InActionType);                              // [0xa1f29e0] Final|Native|Private 
 };
 

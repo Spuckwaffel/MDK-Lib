@@ -20,7 +20,7 @@ public:
 
 	/// Functions
 	// Function /Script/InterchangeCore.InterchangeFactoryBase.GetFactoryClass
-	// UClass* GetFactoryClass();                                                                                               // [0x26c9278] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UClass* GetFactoryClass();                                                                                               // [0x27a0e58] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/InterchangeCore.InterchangeSourceData
@@ -36,9 +36,9 @@ public:
 
 	/// Functions
 	// Function /Script/InterchangeCore.InterchangeSourceData.SetFilename
-	// bool SetFilename(FString InFilename);                                                                                    // [0xa65a780] Final|Native|Public|BlueprintCallable 
+	// bool SetFilename(FString InFilename);                                                                                    // [0xad8f72c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeSourceData.GetFilename
-	// FString GetFilename();                                                                                                   // [0xa648970] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetFilename();                                                                                                   // [0xad7ff9c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/InterchangeCore.InterchangeWriterBase
@@ -52,36 +52,32 @@ public:
 };
 
 /// Class /Script/InterchangeCore.InterchangePipelineBase
-/// Size: 0x00C0 (0x000028 - 0x0000E8)
+/// Size: 0x00D0 (0x000028 - 0x0000F8)
 class UInterchangePipelineBase : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 232;
+	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(TMap<FName, FInterchangePipelinePropertyStates>) PropertiesStates                                      OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x40, 8, 0, 0})
+	CMember(TMap<FName, FInterchangePipelinePropertyStates>) PropertiesStates                                      OFFSET(get<T>, {0x48, 80, 0, 0})
 
 
 	/// Functions
 	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedSetReimportSourceIndex
-	// void ScriptedSetReimportSourceIndex(UClass* ReimportObjectClass, int32_t SourceFileIndex);                               // [0xa658730] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePreImportPipeline
-	// void ScriptedExecutePreImportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, TArray<UInterchangeSourceData*>& SourceDatas); // [0xa658050] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void ScriptedSetReimportSourceIndex(UClass* ReimportObjectClass, int32_t SourceFileIndex);                               // [0xad8d958] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePostImportPipeline
-	// void ScriptedExecutePostImportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xa657900] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// void ScriptedExecutePostImportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xad8d2ac] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePostFactoryPipeline
-	// void ScriptedExecutePostFactoryPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xa6571b0] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// void ScriptedExecutePostFactoryPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, FString FactoryNodeKey, UObject* CreatedAsset, bool bIsAReimport); // [0xad8cc00] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecutePipeline
-	// void ScriptedExecutePipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, TArray<UInterchangeSourceData*>& SourceDatas); // [0xa656ad0] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void ScriptedExecutePipeline(UInterchangeBaseNodeContainer* BaseNodeContainer, TArray<UInterchangeSourceData*>& SourceDatas); // [0xad8c5c4] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedExecuteExportPipeline
-	// void ScriptedExecuteExportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer);                                    // [0x5ae68dc] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Script/InterchangeCore.InterchangePipelineBase.ScriptedCanExecuteOnAnyThread
-	// bool ScriptedCanExecuteOnAnyThread(EInterchangePipelineTask PipelineTask);                                               // [0xa656a3c] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// void ScriptedExecuteExportPipeline(UInterchangeBaseNodeContainer* BaseNodeContainer);                                    // [0x6cdb660] RequiredAPI|Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.FindOrAddPropertyStates
-	// FInterchangePipelinePropertyStates FindOrAddPropertyStates(FName PropertyPath);                                          // [0xa645a54] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// FInterchangePipelinePropertyStates FindOrAddPropertyStates(FName PropertyPath);                                          // [0xad7d448] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.DoesPropertyStatesExist
-	// bool DoesPropertyStatesExist(FName PropertyPath);                                                                        // [0xa6458ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool DoesPropertyStatesExist(FName PropertyPath);                                                                        // [0xad7d2a0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/InterchangeCore.InterchangeResult
@@ -217,35 +213,35 @@ public:
 
 	/// Functions
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.SetNodeParentUid
-	// bool SetNodeParentUid(FString NodeUniqueID, FString NewParentNodeUid);                                                   // [0xa65ae60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetNodeParentUid(FString NodeUniqueID, FString NewParentNodeUid);                                                   // [0xad8fd64] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.SaveToFile
-	// void SaveToFile(FString Filename);                                                                                       // [0xa656388] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SaveToFile(FString Filename);                                                                                       // [0xad8bfa8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ResetChildrenCache
-	// void ResetChildrenCache();                                                                                               // [0xa656374] Final|Native|Public|BlueprintCallable 
+	// void ResetChildrenCache();                                                                                               // [0xad8bf94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ReplaceNode
-	// void ReplaceNode(FString NodeUniqueID, UInterchangeFactoryBaseNode* NewNode);                                            // [0xa655c94] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ReplaceNode(FString NodeUniqueID, UInterchangeFactoryBaseNode* NewNode);                                            // [0xad8b958] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.LoadFromFile
-	// void LoadFromFile(FString Filename);                                                                                     // [0xa653af0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void LoadFromFile(FString Filename);                                                                                     // [0xad89ac4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.IsNodeUidValid
-	// bool IsNodeUidValid(FString NodeUniqueID);                                                                               // [0xa653440] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsNodeUidValid(FString NodeUniqueID);                                                                               // [0xad894b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetRoots
-	// void GetRoots(TArray<FString>& RootNodes);                                                                               // [0xa64c190] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetRoots(TArray<FString>& RootNodes);                                                                               // [0xad832ac] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodes
-	// void GetNodes(UClass* ClassNode, TArray<FString>& OutNodes);                                                             // [0xa64c04c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNodes(UClass* ClassNode, TArray<FString>& OutNodes);                                                             // [0xad83168] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenUids
-	// TArray<FString> GetNodeChildrenUids(FString NodeUniqueID);                                                               // [0xa64b96c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FString> GetNodeChildrenUids(FString NodeUniqueID);                                                               // [0xad82b30] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenCount
-	// int32_t GetNodeChildrenCount(FString NodeUniqueID);                                                                      // [0xa64b2bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNodeChildrenCount(FString NodeUniqueID);                                                                      // [0xad8251c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildren
-	// UInterchangeBaseNode* GetNodeChildren(FString NodeUniqueID, int32_t ChildIndex);                                         // [0xa64abe8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UInterchangeBaseNode* GetNodeChildren(FString NodeUniqueID, int32_t ChildIndex);                                         // [0xad81eec] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetNode
-	// UInterchangeBaseNode* GetNode(FString NodeUniqueID);                                                                     // [0xa64a538] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UInterchangeBaseNode* GetNode(FString NodeUniqueID);                                                                     // [0xad818d4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.GetFactoryNode
-	// UInterchangeFactoryBaseNode* GetFactoryNode(FString NodeUniqueID);                                                       // [0xa6482c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UInterchangeFactoryBaseNode* GetFactoryNode(FString NodeUniqueID);                                                       // [0xad7f984] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.ComputeChildrenCache
-	// void ComputeChildrenCache();                                                                                             // [0xa6430c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ComputeChildrenCache();                                                                                             // [0xad7ac5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.AddNode
-	// FString AddNode(UInterchangeBaseNode* Node);                                                                             // [0xa641568] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// FString AddNode(UInterchangeBaseNode* Node);                                                                             // [0xad79394] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/InterchangeCore.InterchangeFactoryBaseNode
@@ -305,12 +301,12 @@ public:
 };
 
 /// Struct /Script/InterchangeCore.InterchangeUserDefinedAttributeInfo
-/// Size: 0x0030 (0x000000 - 0x000030)
+/// Size: 0x0038 (0x000000 - 0x000038)
 class FInterchangeUserDefinedAttributeInfo : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 48;
+	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})

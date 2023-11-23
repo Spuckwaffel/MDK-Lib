@@ -42,14 +42,15 @@ public:
 };
 
 /// Struct /Script/VerseSimulation.LocalizableMessageParameterAgent
-/// Size: 0x0030 (0x000000 - 0x000030)
+/// Size: 0x0038 (0x000000 - 0x000038)
 class FLocalizableMessageParameterAgent : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 48;
+	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	SMember(FUniqueNetIdRepl)                          Value                                                       OFFSET(getStruct<T>, {0x0, 48, 0, 0})
+	CMember(APawn*)                                    AgentPawn                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 

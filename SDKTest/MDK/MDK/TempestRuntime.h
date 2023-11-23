@@ -54,7 +54,7 @@ public:
 
 	/// Functions
 	// Function /Script/TempestRuntime.TempestMovementComponent.OnRep_MovementData
-	// void OnRep_MovementData();                                                                                               // [0x9fec3e8] Final|Native|Private|Const 
+	// void OnRep_MovementData();                                                                                               // [0xa2c88c0] Final|Native|Private|Const 
 };
 
 /// Class /Script/TempestRuntime.TempestStateMachineComponent
@@ -75,15 +75,15 @@ public:
 
 	/// Functions
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.OnRep_CurrentStateInfo
-	// void OnRep_CurrentStateInfo();                                                                                           // [0x9fec3a8] Final|Native|Private 
+	// void OnRep_CurrentStateInfo();                                                                                           // [0xa2c8880] Final|Native|Private 
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.GetCurrentStateInfo
-	// FTempestStateInfo GetCurrentStateInfo();                                                                                 // [0x9fec380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FTempestStateInfo GetCurrentStateInfo();                                                                                 // [0xa2c8858] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.GetCurrentStateCompletionPercentage
-	// float GetCurrentStateCompletionPercentage();                                                                             // [0x9fec358] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetCurrentStateCompletionPercentage();                                                                             // [0xa2c8830] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.GetCurrentState
-	// ETempestState GetCurrentState();                                                                                         // [0x98a8d8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ETempestState GetCurrentState();                                                                                         // [0x9d6687c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.ForceDissipate
-	// void ForceDissipate(FString InDissipationReason);                                                                        // [0x9febcac] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void ForceDissipate(FString InDissipationReason);                                                                        // [0xa2c822c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/TempestRuntime.TempestStateInfo

@@ -56,37 +56,37 @@ public:
 
 	/// Functions
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OnRep_AttachedPlayer
-	// void OnRep_AttachedPlayer();                                                                                             // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void OnRep_AttachedPlayer();                                                                                             // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Update Audio and VFXParams
-	// void Update Audio and VFXParams();                                                                                       // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void Update Audio and VFXParams();                                                                                       // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Start Travel Audio
-	// void Start Travel Audio();                                                                                               // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Start Travel Audio();                                                                                               // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Stop Travel Audio
-	// void Stop Travel Audio();                                                                                                // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Stop Travel Audio();                                                                                                // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveDestroyed
-	// void ReceiveDestroyed();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveDestroyed();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.HandleOnDied
-	// void HandleOnDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void HandleOnDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Chime Visual
-	// void Chime Visual();                                                                                                     // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Chime Visual();                                                                                                     // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.OrientMotorForZipline
-	// void OrientMotorForZipline(AFortAthenaZiplineBase* Zipline, FVector DesiredZiplineOffset);                               // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void OrientMotorForZipline(AFortAthenaZiplineBase* Zipline, FVector DesiredZiplineOffset);                               // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.RotateToZiplineDirection
-	// void RotateToZiplineDirection();                                                                                         // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void RotateToZiplineDirection();                                                                                         // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateMotorToSpline
-	// void UpdateMotorToSpline();                                                                                              // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateMotorToSpline();                                                                                              // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateParamsForAudioAndVFX
-	// void UpdateParamsForAudioAndVFX();                                                                                       // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateParamsForAudioAndVFX();                                                                                       // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Cleanup On DownhillGCN
-	// void Cleanup On DownhillGCN();                                                                                           // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Cleanup On DownhillGCN();                                                                                           // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateZiplineOffsetLocation
-	// void UpdateZiplineOffsetLocation();                                                                                      // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateZiplineOffsetLocation();                                                                                      // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UpdateMotorToDynSpline
-	// void UpdateMotorToDynSpline();                                                                                           // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateMotorToDynSpline();                                                                                           // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness
-	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness(int32_t EntryPoint);                                                     // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness(int32_t EntryPoint);                                                     // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C
@@ -112,23 +112,23 @@ public:
 
 	/// Functions
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Spark__FinishedFunc
-	// void Spark__FinishedFunc();                                                                                              // [0x1d9241c] BlueprintEvent       
+	// void Spark__FinishedFunc();                                                                                              // [0x101681c] BlueprintEvent       
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Spark__UpdateFunc
-	// void Spark__UpdateFunc();                                                                                                // [0x1d9241c] BlueprintEvent       
+	// void Spark__UpdateFunc();                                                                                                // [0x101681c] BlueprintEvent       
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Alpha__FinishedFunc
-	// void Alpha__FinishedFunc();                                                                                              // [0x1d9241c] BlueprintEvent       
+	// void Alpha__FinishedFunc();                                                                                              // [0x101681c] BlueprintEvent       
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Alpha__UpdateFunc
-	// void Alpha__UpdateFunc();                                                                                                // [0x1d9241c] BlueprintEvent       
+	// void Alpha__UpdateFunc();                                                                                                // [0x101681c] BlueprintEvent       
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.UpdateZiplineFX
-	// void UpdateZiplineFX();                                                                                                  // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateZiplineFX();                                                                                                  // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.Update Begin Z
-	// void Update Begin Z();                                                                                                   // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Update Begin Z();                                                                                                   // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ResetBlue
-	// void ResetBlue();                                                                                                        // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void ResetBlue();                                                                                                        // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow
-	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow(int32_t EntryPoint);                                              // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow(int32_t EntryPoint);                                              // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Gadgets/Assets/VinderTech_GliderChute/Glider_Bistro_Monster_Female/Scripts/VariantScript_Glider_BistroAstronaut_Style.VariantScript_Glider_BistroAstronaut_Style_C
@@ -142,11 +142,11 @@ public:
 };
 
 /// Class /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C
-/// Size: 0x0A80 (0x000350 - 0x000DD0)
+/// Size: 0x0A90 (0x000350 - 0x000DE0)
 class UFringe_Plank_AnimBP_C : public UAnimInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3536;
+	static inline constexpr uint64_t __MDKClassSize = 3552;
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
@@ -154,15 +154,15 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x360, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x368, 32, 0, 0})
 	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x388, 176, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0x440, 2384, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0xD90, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0xDB0, 32, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0x440, 2400, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0xDA0, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0xDC0, 32, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1d9241c] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x101681c] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C.ExecuteUbergraph_Fringe_Plank_AnimBP
-	// void ExecuteUbergraph_Fringe_Plank_AnimBP(int32_t EntryPoint);                                                           // [0x1d9241c] Final                
+	// void ExecuteUbergraph_Fringe_Plank_AnimBP(int32_t EntryPoint);                                                           // [0x101681c] Final                
 };
 

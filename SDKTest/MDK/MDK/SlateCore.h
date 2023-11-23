@@ -351,6 +351,8 @@ public:
 	DMember(float)                                     Size                                                        OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(int32_t)                                   LetterSpacing                                               OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(float)                                     SkewAmount                                                  OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(bool)                                      bForceMonospaced                                            OFFSET(get<bool>, {0x51, 1, 0, 0})
+	DMember(float)                                     MonospacedWidth                                             OFFSET(get<float>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/SlateCore.FontOutlineSettings

@@ -21,15 +21,15 @@ public:
 
 	/// Functions
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.UseTimeFromMediaPlayer
-	// void UseTimeFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                // [0x9c5aab0] Final|Native|Public|BlueprintCallable 
+	// void UseTimeFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                // [0xa375558] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromStateStreamServer
-	// void PlayFromStateStreamServer(FString InStatePlaylistURL);                                                              // [0x9c59680] Final|Native|Public|BlueprintCallable 
+	// void PlayFromStateStreamServer(FString InStatePlaylistURL);                                                              // [0xa3742f0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromMediaPlayer
-	// void PlayFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                   // [0x9c59600] Final|Native|Public|BlueprintCallable 
+	// void PlayFromMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                   // [0xa374270] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.PlayFromFile
-	// void PlayFromFile(FString InFilename);                                                                                   // [0x9c58f4c] Final|Native|Public|BlueprintCallable 
+	// void PlayFromFile(FString InFilename);                                                                                   // [0xa373c54] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.EndPlayback
-	// void EndPlayback();                                                                                                      // [0x9c58f24] Final|Native|Public|BlueprintCallable 
+	// void EndPlayback();                                                                                                      // [0xa373c2c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ElectraDataChannelRuntime.ElectraDataChannelRecorder

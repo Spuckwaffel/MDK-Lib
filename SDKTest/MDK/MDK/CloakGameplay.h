@@ -11,33 +11,33 @@
 /// dependency: GameplayAbilities
 
 /// Class /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak
-/// Size: 0x0078 (0x000990 - 0x000A08)
+/// Size: 0x0078 (0x0009B0 - 0x000A28)
 class AFortGameCueNotifyLoop_Cloak : public AFortGameplayCueNotify_Loop
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2568;
+	static inline constexpr uint64_t __MDKClassSize = 2600;
 
 public:
-	CMember(AFortPlayerPawn*)                          TargetPlayer                                                OFFSET(get<T>, {0x990, 8, 0, 0})
-	DMember(float)                                     VisibilityLevel                                             OFFSET(get<float>, {0x998, 4, 0, 0})
-	DMember(float)                                     StationaryVisMult                                           OFFSET(get<float>, {0x99C, 4, 0, 0})
-	DMember(float)                                     MaxSpeedVisMult                                             OFFSET(get<float>, {0x9A0, 4, 0, 0})
-	DMember(float)                                     SpeedForMaxVis                                              OFFSET(get<float>, {0x9A4, 4, 0, 0})
-	DMember(float)                                     VisibilityMinFriendly                                       OFFSET(get<float>, {0x9A8, 4, 0, 0})
-	DMember(float)                                     VisibilityMinNonfriendly                                    OFFSET(get<float>, {0x9AC, 4, 0, 0})
-	DMember(float)                                     VisibilityLevelChangeRate                                   OFFSET(get<float>, {0x9B0, 4, 0, 0})
-	CMember(TMap<FName, FFortGameCueCloakModifier>)    CloakModifiersByNameMap                                     OFFSET(get<T>, {0x9B8, 80, 0, 0})
+	CMember(AFortPlayerPawn*)                          TargetPlayer                                                OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	DMember(float)                                     VisibilityLevel                                             OFFSET(get<float>, {0x9B8, 4, 0, 0})
+	DMember(float)                                     StationaryVisMult                                           OFFSET(get<float>, {0x9BC, 4, 0, 0})
+	DMember(float)                                     MaxSpeedVisMult                                             OFFSET(get<float>, {0x9C0, 4, 0, 0})
+	DMember(float)                                     SpeedForMaxVis                                              OFFSET(get<float>, {0x9C4, 4, 0, 0})
+	DMember(float)                                     VisibilityMinFriendly                                       OFFSET(get<float>, {0x9C8, 4, 0, 0})
+	DMember(float)                                     VisibilityMinNonfriendly                                    OFFSET(get<float>, {0x9CC, 4, 0, 0})
+	DMember(float)                                     VisibilityLevelChangeRate                                   OFFSET(get<float>, {0x9D0, 4, 0, 0})
+	CMember(TMap<FName, FFortGameCueCloakModifier>)    CloakModifiersByNameMap                                     OFFSET(get<T>, {0x9D8, 80, 0, 0})
 
 
 	/// Functions
 	// Function /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak.TickVisibilityLevel
-	// float TickVisibilityLevel(float DeltaSeconds);                                                                           // [0x9b992e4] Final|Native|Protected|BlueprintCallable 
+	// float TickVisibilityLevel(float DeltaSeconds);                                                                           // [0xa0a7e90] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak.SetModifierEnabled
-	// bool SetModifierEnabled(FName& ModifierName, bool bNewEnabled);                                                          // [0x9b9919c] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// bool SetModifierEnabled(FName& ModifierName, bool bNewEnabled);                                                          // [0xa0a7d70] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak.SetModifierCanBeEnabled
-	// bool SetModifierCanBeEnabled(FName& ModifierName, bool bNewCanBeEnabled);                                                // [0x9b99054] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// bool SetModifierCanBeEnabled(FName& ModifierName, bool bNewCanBeEnabled);                                                // [0xa0a7c50] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak.GetCurrentModifierValues
-	// bool GetCurrentModifierValues(float& OutVisibilityMultiplier, float& OutVisibilityAddition, FName& ModifierName);        // [0x9b98f28] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetCurrentModifierValues(float& OutVisibilityMultiplier, float& OutVisibilityAddition, FName& ModifierName);        // [0xa0a7b24] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/CloakGameplay.FortGameCueCloakModifier

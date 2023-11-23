@@ -20,41 +20,41 @@ public:
 };
 
 /// Class /Script/MediaAssets.MediaTexture
-/// Size: 0x00E8 (0x000138 - 0x000220)
+/// Size: 0x00E8 (0x000130 - 0x000218)
 class UMediaTexture : public UTexture
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 544;
+	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	CMember(TEnumAsByte<TextureAddress>)               AddressX                                                    OFFSET(get<T>, {0x138, 1, 0, 0})
-	CMember(TEnumAsByte<TextureAddress>)               AddressY                                                    OFFSET(get<T>, {0x139, 1, 0, 0})
-	DMember(bool)                                      AutoClear                                                   OFFSET(get<bool>, {0x13A, 1, 0, 0})
-	SMember(FLinearColor)                              ClearColor                                                  OFFSET(getStruct<T>, {0x13C, 16, 0, 0})
-	DMember(bool)                                      EnableGenMips                                               OFFSET(get<bool>, {0x14C, 1, 0, 0})
-	DMember(char)                                      NumMips                                                     OFFSET(get<char>, {0x14D, 1, 0, 0})
-	DMember(bool)                                      NewStyleOutput                                              OFFSET(get<bool>, {0x14E, 1, 0, 0})
-	CMember(TEnumAsByte<MediaTextureOutputFormat>)     OutputFormat                                                OFFSET(get<T>, {0x14F, 1, 0, 0})
-	DMember(float)                                     CurrentAspectRatio                                          OFFSET(get<float>, {0x150, 4, 0, 0})
-	CMember(TEnumAsByte<MediaTextureOrientation>)      CurrentOrientation                                          OFFSET(get<T>, {0x154, 1, 0, 0})
-	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x158, 8, 0, 0})
+	CMember(TEnumAsByte<TextureAddress>)               AddressX                                                    OFFSET(get<T>, {0x130, 1, 0, 0})
+	CMember(TEnumAsByte<TextureAddress>)               AddressY                                                    OFFSET(get<T>, {0x131, 1, 0, 0})
+	DMember(bool)                                      AutoClear                                                   OFFSET(get<bool>, {0x132, 1, 0, 0})
+	SMember(FLinearColor)                              ClearColor                                                  OFFSET(getStruct<T>, {0x134, 16, 0, 0})
+	DMember(bool)                                      EnableGenMips                                               OFFSET(get<bool>, {0x144, 1, 0, 0})
+	DMember(char)                                      NumMips                                                     OFFSET(get<char>, {0x145, 1, 0, 0})
+	DMember(bool)                                      NewStyleOutput                                              OFFSET(get<bool>, {0x146, 1, 0, 0})
+	CMember(TEnumAsByte<MediaTextureOutputFormat>)     OutputFormat                                                OFFSET(get<T>, {0x147, 1, 0, 0})
+	DMember(float)                                     CurrentAspectRatio                                          OFFSET(get<float>, {0x148, 4, 0, 0})
+	CMember(TEnumAsByte<MediaTextureOrientation>)      CurrentOrientation                                          OFFSET(get<T>, {0x14C, 1, 0, 0})
+	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MediaAssets.MediaTexture.UpdateResource
-	// void UpdateResource();                                                                                                   // [0x5981dac] Native|Public|BlueprintCallable 
+	// void UpdateResource();                                                                                                   // [0x18b5810] Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaTexture.SetMediaPlayer
-	// void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);                                                                       // [0x59813f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);                                                                       // [0x581f348] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaTexture.GetWidth
-	// int32_t GetWidth();                                                                                                      // [0x597e1b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetWidth();                                                                                                      // [0x581c3d0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaTexture.GetTextureNumMips
-	// int32_t GetTextureNumMips();                                                                                             // [0x597d334] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetTextureNumMips();                                                                                             // [0x581b5f8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaTexture.GetMediaPlayer
-	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x597b920] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x5819de0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaTexture.GetHeight
-	// int32_t GetHeight();                                                                                                     // [0x597b7c8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetHeight();                                                                                                     // [0x2d435c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaTexture.GetAspectRatio
-	// float GetAspectRatio();                                                                                                  // [0x597b3ec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetAspectRatio();                                                                                                  // [0x58198b4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MediaAssets.MediaSource
@@ -92,7 +92,7 @@ public:
 
 	/// Functions
 	// Function /Script/MediaAssets.FileMediaSource.SetFilePath
-	// void SetFilePath(FString Path);                                                                                          // [0x5980024] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFilePath(FString Path);                                                                                          // [0x581e14c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/MediaAssets.MediaComponent
@@ -109,9 +109,9 @@ public:
 
 	/// Functions
 	// Function /Script/MediaAssets.MediaComponent.GetMediaTexture
-	// UMediaTexture* GetMediaTexture();                                                                                        // [0x2d8489c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaTexture* GetMediaTexture();                                                                                        // [0x5819e04] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaComponent.GetMediaPlayer
-	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x597b908] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x5819da4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MediaAssets.MediaTimeStampInfo
@@ -161,155 +161,155 @@ public:
 
 	/// Functions
 	// Function /Script/MediaAssets.MediaPlayer.SupportsSeeking
-	// bool SupportsSeeking();                                                                                                  // [0x5981d88] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool SupportsSeeking();                                                                                                  // [0x581fca0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.SupportsScrubbing
-	// bool SupportsScrubbing();                                                                                                // [0x5981d10] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool SupportsScrubbing();                                                                                                // [0x581fc28] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.SupportsRate
-	// bool SupportsRate(float Rate, bool Unthinned);                                                                           // [0x5981c44] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool SupportsRate(float Rate, bool Unthinned);                                                                           // [0x581fb5c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.SetViewRotation
-	// bool SetViewRotation(FRotator& Rotation, bool Absolute);                                                                 // [0x5981afc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetViewRotation(FRotator& Rotation, bool Absolute);                                                                 // [0x581fa40] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetViewField
-	// bool SetViewField(float Horizontal, float Vertical, bool Absolute);                                                      // [0x59819fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetViewField(float Horizontal, float Vertical, bool Absolute);                                                      // [0x581f940] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetVideoTrackFrameRate
-	// bool SetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex, float FrameRate);                                   // [0x5981904] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex, float FrameRate);                                   // [0x581f848] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetTrackFormat
-	// bool SetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex, int32_t FormatIndex);                               // [0x598180c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex, int32_t FormatIndex);                               // [0x581f750] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetTimeDelay
-	// void SetTimeDelay(FTimespan TimeDelay);                                                                                  // [0x59816b8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetTimeDelay(FTimespan TimeDelay);                                                                                  // [0x581f610] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetRate
-	// bool SetRate(float Rate);                                                                                                // [0x5981518] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetRate(float Rate);                                                                                                // [0x581f470] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetNativeVolume
-	// bool SetNativeVolume(float Volume);                                                                                      // [0x5981470] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetNativeVolume(float Volume);                                                                                      // [0x581f3c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetMediaOptions
-	// void SetMediaOptions(UMediaSource* Options);                                                                             // [0x59812b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMediaOptions(UMediaSource* Options);                                                                             // [0x581f20c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetLooping
-	// bool SetLooping(bool Looping);                                                                                           // [0x59806d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SetLooping(bool Looping);                                                                                           // [0x581e768] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetDesiredPlayerName
-	// void SetDesiredPlayerName(FName PlayerName);                                                                             // [0x597fd54] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDesiredPlayerName(FName PlayerName);                                                                             // [0x581de7c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SetBlockOnTime
-	// void SetBlockOnTime(FTimespan& Time);                                                                                    // [0x597fcc8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetBlockOnTime(FTimespan& Time);                                                                                    // [0x581ddf0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.SelectTrack
-	// bool SelectTrack(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                                       // [0x597fc08] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool SelectTrack(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                                       // [0x581dd30] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Seek
-	// bool Seek(FTimespan& Time);                                                                                              // [0x597fb70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool Seek(FTimespan& Time);                                                                                              // [0x581dc98] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Rewind
-	// bool Rewind();                                                                                                           // [0x597fae0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Rewind();                                                                                                           // [0x581dc08] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Reopen
-	// bool Reopen();                                                                                                           // [0x597f9e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Reopen();                                                                                                           // [0x581dafc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Previous
-	// bool Previous();                                                                                                         // [0x597f86c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Previous();                                                                                                         // [0x581d96c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.PlayAndSeek
-	// void PlayAndSeek();                                                                                                      // [0x597f858] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void PlayAndSeek();                                                                                                      // [0x581d958] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Play
-	// bool Play();                                                                                                             // [0x597f834] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Play();                                                                                                             // [0x581d934] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Pause
-	// bool Pause();                                                                                                            // [0x597f810] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Pause();                                                                                                            // [0x581d910] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenUrl
-	// bool OpenUrl(FString URL);                                                                                               // [0x597f160] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool OpenUrl(FString URL);                                                                                               // [0x581d2fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSourceWithOptions
-	// bool OpenSourceWithOptions(UMediaSource* MediaSource, FMediaPlayerOptions& Options);                                     // [0x597f07c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool OpenSourceWithOptions(UMediaSource* MediaSource, FMediaPlayerOptions& Options);                                     // [0x581d218] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSourceLatent
-	// void OpenSourceLatent(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UMediaSource* MediaSource, FMediaPlayerOptions& Options, bool& bSuccess); // [0x597ed08] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void OpenSourceLatent(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UMediaSource* MediaSource, FMediaPlayerOptions& Options, bool& bSuccess); // [0x581ce8c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenSource
-	// bool OpenSource(UMediaSource* MediaSource);                                                                              // [0x597ec78] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool OpenSource(UMediaSource* MediaSource);                                                                              // [0x581cdfc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenPlaylistIndex
-	// bool OpenPlaylistIndex(UMediaPlaylist* InPlaylist, int32_t Index);                                                       // [0x597ebb4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool OpenPlaylistIndex(UMediaPlaylist* InPlaylist, int32_t Index);                                                       // [0x581cd38] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenPlaylist
-	// bool OpenPlaylist(UMediaPlaylist* InPlaylist);                                                                           // [0x597eb24] Final|Native|Public|BlueprintCallable 
+	// bool OpenPlaylist(UMediaPlaylist* InPlaylist);                                                                           // [0x581cca8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.OpenFile
-	// bool OpenFile(FString FilePath);                                                                                         // [0x597e474] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool OpenFile(FString FilePath);                                                                                         // [0x581c694] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.Next
-	// bool Next();                                                                                                             // [0x597e43c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Next();                                                                                                             // [0x581c65c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.IsReady
-	// bool IsReady();                                                                                                          // [0x597e418] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsReady();                                                                                                          // [0x581c638] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsPreparing
-	// bool IsPreparing();                                                                                                      // [0x597e3ec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPreparing();                                                                                                      // [0x581c60c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsPlaying
-	// bool IsPlaying();                                                                                                        // [0x597e3c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlaying();                                                                                                        // [0x581c5e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsPaused
-	// bool IsPaused();                                                                                                         // [0x597e39c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPaused();                                                                                                         // [0x581c5bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsLooping
-	// bool IsLooping();                                                                                                        // [0x597e378] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLooping();                                                                                                        // [0x581c598] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsConnecting
-	// bool IsConnecting();                                                                                                     // [0x597e300] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsConnecting();                                                                                                     // [0x581c520] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsClosed
-	// bool IsClosed();                                                                                                         // [0x597e2dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsClosed();                                                                                                         // [0x581c4fc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.IsBuffering
-	// bool IsBuffering();                                                                                                      // [0x597e2b8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsBuffering();                                                                                                      // [0x581c4d8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.HasError
-	// bool HasError();                                                                                                         // [0x597e1c8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasError();                                                                                                         // [0x581c3e8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetViewRotation
-	// FRotator GetViewRotation();                                                                                              // [0x597e178] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FRotator GetViewRotation();                                                                                              // [0x581c398] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackType
-	// FString GetVideoTrackType(int32_t TrackIndex, int32_t FormatIndex);                                                      // [0x597e08c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetVideoTrackType(int32_t TrackIndex, int32_t FormatIndex);                                                      // [0x581c2ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackFrameRates
-	// FFloatRange GetVideoTrackFrameRates(int32_t TrackIndex, int32_t FormatIndex);                                            // [0x597dfbc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFloatRange GetVideoTrackFrameRates(int32_t TrackIndex, int32_t FormatIndex);                                            // [0x581c1dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackFrameRate
-	// float GetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex);                                                   // [0x597def4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex);                                                   // [0x581c114] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackDimensions
-	// FIntPoint GetVideoTrackDimensions(int32_t TrackIndex, int32_t FormatIndex);                                              // [0x597de28] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FIntPoint GetVideoTrackDimensions(int32_t TrackIndex, int32_t FormatIndex);                                              // [0x581c048] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVideoTrackAspectRatio
-	// float GetVideoTrackAspectRatio(int32_t TrackIndex, int32_t FormatIndex);                                                 // [0x597dd60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetVideoTrackAspectRatio(int32_t TrackIndex, int32_t FormatIndex);                                                 // [0x581bf80] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetVerticalFieldOfView
-	// float GetVerticalFieldOfView();                                                                                          // [0x597dd38] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetVerticalFieldOfView();                                                                                          // [0x581bf58] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetUrl
-	// FString GetUrl();                                                                                                        // [0x597dcd0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetUrl();                                                                                                        // [0x581bef0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackLanguage
-	// FString GetTrackLanguage(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                               // [0x597d5ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetTrackLanguage(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                               // [0x581b870] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackFormat
-	// int32_t GetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                                 // [0x597d4e4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                                 // [0x581b7a8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTrackDisplayName
-	// FText GetTrackDisplayName(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                              // [0x597d400] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetTrackDisplayName(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                              // [0x581b6c4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTimeStamp
-	// UMediaTimeStampInfo* GetTimeStamp();                                                                                     // [0x597d394] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaTimeStampInfo* GetTimeStamp();                                                                                     // [0x581b658] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTimeDelay
-	// FTimespan GetTimeDelay();                                                                                                // [0x597d378] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTimespan GetTimeDelay();                                                                                                // [0x581b63c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetTime
-	// FTimespan GetTime();                                                                                                     // [0x597d34c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTimespan GetTime();                                                                                                     // [0x581b610] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetSupportedRates
-	// void GetSupportedRates(TArray<FFloatRange>& OutRates, bool Unthinned);                                                   // [0x597cb58] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetSupportedRates(TArray<FFloatRange>& OutRates, bool Unthinned);                                                   // [0x581aed8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetSelectedTrack
-	// int32_t GetSelectedTrack(EMediaPlayerTrack TrackType);                                                                   // [0x597c434] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetSelectedTrack(EMediaPlayerTrack TrackType);                                                                   // [0x581a860] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetRate
-	// float GetRate();                                                                                                         // [0x597c408] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetRate();                                                                                                         // [0x581a834] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlaylistIndex
-	// int32_t GetPlaylistIndex();                                                                                              // [0x597c2c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetPlaylistIndex();                                                                                              // [0x581a6ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlaylist
-	// UMediaPlaylist* GetPlaylist();                                                                                           // [0x597c288] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaPlaylist* GetPlaylist();                                                                                           // [0x581a6b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetPlayerName
-	// FName GetPlayerName();                                                                                                   // [0x597c25c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetPlayerName();                                                                                                   // [0x581a688] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetNumTracks
-	// int32_t GetNumTracks(EMediaPlayerTrack TrackType);                                                                       // [0x597c188] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumTracks(EMediaPlayerTrack TrackType);                                                                       // [0x581a5b4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetNumTrackFormats
-	// int32_t GetNumTrackFormats(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                             // [0x597c070] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumTrackFormats(EMediaPlayerTrack TrackType, int32_t TrackIndex);                                             // [0x581a49c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetMediaName
-	// FText GetMediaName();                                                                                                    // [0x597b8c0] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetMediaName();                                                                                                    // [0x5819d5c] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetMediaMetadataItems
-	// TMap<FString, FMediaMetadataItemsBPT> GetMediaMetadataItems();                                                           // [0x597b808] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TMap<FString, FMediaMetadataItemsBPT> GetMediaMetadataItems();                                                           // [0x5819cb8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetHorizontalFieldOfView
-	// float GetHorizontalFieldOfView();                                                                                        // [0x597b7e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetHorizontalFieldOfView();                                                                                        // [0x5819c90] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetDuration
-	// FTimespan GetDuration();                                                                                                 // [0x597b770] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTimespan GetDuration();                                                                                                 // [0x5819c38] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetDisplayTimeStamp
-	// UMediaTimeStampInfo* GetDisplayTimeStamp();                                                                              // [0x597b704] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaTimeStampInfo* GetDisplayTimeStamp();                                                                              // [0x5819bcc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetDisplayTime
-	// FTimespan GetDisplayTime();                                                                                              // [0x597b6b4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTimespan GetDisplayTime();                                                                                              // [0x5819b7c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetDesiredPlayerName
-	// FName GetDesiredPlayerName();                                                                                            // [0x597b698] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetDesiredPlayerName();                                                                                            // [0x5819b60] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackType
-	// FString GetAudioTrackType(int32_t TrackIndex, int32_t FormatIndex);                                                      // [0x597b5ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetAudioTrackType(int32_t TrackIndex, int32_t FormatIndex);                                                      // [0x5819a74] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackSampleRate
-	// int32_t GetAudioTrackSampleRate(int32_t TrackIndex, int32_t FormatIndex);                                                // [0x597b4e8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetAudioTrackSampleRate(int32_t TrackIndex, int32_t FormatIndex);                                                // [0x58199b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.GetAudioTrackChannels
-	// int32_t GetAudioTrackChannels(int32_t TrackIndex, int32_t FormatIndex);                                                  // [0x597b424] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetAudioTrackChannels(int32_t TrackIndex, int32_t FormatIndex);                                                  // [0x58198ec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaPlayer.Close
-	// void Close();                                                                                                            // [0x597ae60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Close();                                                                                                            // [0x5819340] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.CanPlayUrl
-	// bool CanPlayUrl(FString URL);                                                                                            // [0x597a734] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool CanPlayUrl(FString URL);                                                                                            // [0x5818cbc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.CanPlaySource
-	// bool CanPlaySource(UMediaSource* MediaSource);                                                                           // [0x597a5d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool CanPlaySource(UMediaSource* MediaSource);                                                                           // [0x5818b60] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.CanPause
-	// bool CanPause();                                                                                                         // [0x597a560] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool CanPause();                                                                                                         // [0x5818ae8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MediaAssets.MediaPlayerProxyInterface
@@ -335,29 +335,29 @@ public:
 
 	/// Functions
 	// Function /Script/MediaAssets.MediaPlaylist.Replace
-	// bool Replace(int32_t Index, UMediaSource* Replacement);                                                                  // [0x597fa0c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Replace(int32_t Index, UMediaSource* Replacement);                                                                  // [0x581db20] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.RemoveAt
-	// bool RemoveAt(int32_t Index);                                                                                            // [0x597f920] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool RemoveAt(int32_t Index);                                                                                            // [0x581da34] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Remove
-	// bool Remove(UMediaSource* MediaSource);                                                                                  // [0x597f890] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Remove(UMediaSource* MediaSource);                                                                                  // [0x581d990] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Num
-	// int32_t Num();                                                                                                           // [0x597e460] Final|Native|Public|BlueprintCallable 
+	// int32_t Num();                                                                                                           // [0x581c680] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Insert
-	// void Insert(UMediaSource* MediaSource, int32_t Index);                                                                   // [0x597e1f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Insert(UMediaSource* MediaSource, int32_t Index);                                                                   // [0x581c414] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.GetRandom
-	// UMediaSource* GetRandom(int32_t& OutIndex);                                                                              // [0x597c370] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// UMediaSource* GetRandom(int32_t& OutIndex);                                                                              // [0x581a79c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.GetPrevious
-	// UMediaSource* GetPrevious(int32_t& InOutIndex);                                                                          // [0x597c2d8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// UMediaSource* GetPrevious(int32_t& InOutIndex);                                                                          // [0x581a704] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.GetNext
-	// UMediaSource* GetNext(int32_t& InOutIndex);                                                                              // [0x597b944] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// UMediaSource* GetNext(int32_t& InOutIndex);                                                                              // [0x5819e1c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Get
-	// UMediaSource* Get(int32_t Index);                                                                                        // [0x597b360] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// UMediaSource* Get(int32_t Index);                                                                                        // [0x5819828] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.AddUrl
-	// bool AddUrl(FString URL);                                                                                                // [0x5979d6c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool AddUrl(FString URL);                                                                                                // [0x581839c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.AddFile
-	// bool AddFile(FString FilePath);                                                                                          // [0x5979644] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool AddFile(FString FilePath);                                                                                          // [0x5817d1c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Add
-	// bool Add(UMediaSource* MediaSource);                                                                                     // [0x597958c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool Add(UMediaSource* MediaSource);                                                                                     // [0x5817c5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/MediaAssets.MediaSoundComponent
@@ -377,25 +377,25 @@ public:
 
 	/// Functions
 	// Function /Script/MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
-	// void SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize);           // [0x59815a8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize);           // [0x581f500] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetMediaPlayer
-	// void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);                                                                       // [0x5981370] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMediaPlayer(UMediaPlayer* NewMediaPlayer);                                                                       // [0x581f2c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
-	// void SetEnvelopeFollowingsettings(int32_t AttackTimeMsec, int32_t ReleaseTimeMsec);                                      // [0x597ff38] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetEnvelopeFollowingsettings(int32_t AttackTimeMsec, int32_t ReleaseTimeMsec);                                      // [0x581e060] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
-	// void SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled);                                                         // [0x597fe88] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled);                                                         // [0x581dfb0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
-	// void SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing);                                                              // [0x597fdd4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing);                                                              // [0x581defc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetSpectralData
-	// TArray<FMediaSoundComponentSpectralData> GetSpectralData();                                                              // [0x597c4c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<FMediaSoundComponentSpectralData> GetSpectralData();                                                              // [0x581a8f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetNormalizedSpectralData
-	// TArray<FMediaSoundComponentSpectralData> GetNormalizedSpectralData();                                                    // [0x597b9dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TArray<FMediaSoundComponentSpectralData> GetNormalizedSpectralData();                                                    // [0x5819eb4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetMediaPlayer
-	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x30ee768] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x5819dbc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaSoundComponent.GetEnvelopeValue
-	// float GetEnvelopeValue();                                                                                                // [0x597b79c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetEnvelopeValue();                                                                                                // [0x5819c64] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-	// bool BP_GetAttenuationSettingsToApply(FSoundAttenuationSettings& OutAttenuationSettings);                                // [0x597a470] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool BP_GetAttenuationSettingsToApply(FSoundAttenuationSettings& OutAttenuationSettings);                                // [0x58189f8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MediaAssets.PlatformMediaSource

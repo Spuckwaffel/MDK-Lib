@@ -97,16 +97,6 @@ class UMovieSceneInterrogatedPropertyInstantiatorSystem : public UMovieSceneEnti
 public:
 };
 
-/// Class /Script/MovieSceneTracks.MovieSceneCameraShakeEvaluator
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UMovieSceneCameraShakeEvaluator : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Script/MovieSceneTracks.MovieScene3DConstraintSection
 /// Size: 0x0028 (0x0000F0 - 0x000118)
 class UMovieScene3DConstraintSection : public UMovieSceneSection
@@ -121,9 +111,9 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
-	// void SetConstraintBindingID(FMovieSceneObjectBindingID& InConstraintBindingID);                                          // [0x581c7b0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetConstraintBindingID(FMovieSceneObjectBindingID& InConstraintBindingID);                                          // [0x5689990] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
-	// FMovieSceneObjectBindingID GetConstraintBindingID();                                                                     // [0x581c488] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID GetConstraintBindingID();                                                                     // [0x5689638] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieScene3DAttachSection
@@ -235,29 +225,29 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetSuppressSubtitles
-	// void SetSuppressSubtitles(bool bInSuppressSubtitles);                                                                    // [0x581e7cc] Final|Native|Public|BlueprintCallable 
+	// void SetSuppressSubtitles(bool bInSuppressSubtitles);                                                                    // [0x568a310] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetStartOffset
-	// void SetStartOffset(FFrameNumber InStartOffset);                                                                         // [0x581e67c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetStartOffset(FFrameNumber InStartOffset);                                                                         // [0x568a1d4] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetSound
-	// void SetSound(USoundBase* InSound);                                                                                      // [0x581e5f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSound(USoundBase* InSound);                                                                                      // [0x568a154] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetOverrideAttenuation
-	// void SetOverrideAttenuation(bool bInOverrideAttenuation);                                                                // [0x581de38] Final|Native|Public|BlueprintCallable 
+	// void SetOverrideAttenuation(bool bInOverrideAttenuation);                                                                // [0x5689abc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetLooping
-	// void SetLooping(bool bInLooping);                                                                                        // [0x581ddb8] Final|Native|Public|BlueprintCallable 
+	// void SetLooping(bool bInLooping);                                                                                        // [0x5689a3c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.SetAttenuationSettings
-	// void SetAttenuationSettings(USoundAttenuation* InAttenuationSettings);                                                   // [0x581c684] Final|Native|Public|BlueprintCallable 
+	// void SetAttenuationSettings(USoundAttenuation* InAttenuationSettings);                                                   // [0x5689858] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetSuppressSubtitles
-	// bool GetSuppressSubtitles();                                                                                             // [0x581c66c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetSuppressSubtitles();                                                                                             // [0x5689700] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetStartOffset
-	// FFrameNumber GetStartOffset();                                                                                           // [0x581c614] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FFrameNumber GetStartOffset();                                                                                           // [0x56896e8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetSound
-	// USoundBase* GetSound();                                                                                                  // [0x581c5fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// USoundBase* GetSound();                                                                                                  // [0x56896d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetOverrideAttenuation
-	// bool GetOverrideAttenuation();                                                                                           // [0x581c58c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetOverrideAttenuation();                                                                                           // [0x5689678] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetLooping
-	// bool GetLooping();                                                                                                       // [0x581c574] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLooping();                                                                                                       // [0x5689660] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneAudioSection.GetAttenuationSettings
-	// USoundAttenuation* GetAttenuationSettings();                                                                             // [0x56a5d7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// USoundAttenuation* GetAttenuationSettings();                                                                             // [0x56895f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneBaseCacheSection
@@ -298,46 +288,46 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
-	// void SetCameraBindingID(FMovieSceneObjectBindingID& InCameraBindingID);                                                  // [0x581c704] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetCameraBindingID(FMovieSceneObjectBindingID& InCameraBindingID);                                                  // [0x56898e4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
-	// FMovieSceneObjectBindingID GetCameraBindingID();                                                                         // [0x581c460] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FMovieSceneObjectBindingID GetCameraBindingID();                                                                         // [0x5689610] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSection
-/// Size: 0x0050 (0x0000F0 - 0x000140)
+/// Size: 0x0058 (0x0000F0 - 0x000148)
 class UMovieSceneCameraShakeSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 320;
+	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
-	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x118, 8, 0, 0})
-	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x120, 4, 0, 0})
-	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0x124, 1, 0, 0})
-	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
+	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x120, 8, 0, 0})
+	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x128, 4, 0, 0})
+	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0x12C, 1, 0, 0})
+	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x130, 24, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceShakeSection
-/// Size: 0x0028 (0x0000F0 - 0x000118)
+/// Size: 0x0030 (0x0000F0 - 0x000120)
 class UMovieSceneCameraShakeSourceShakeSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 280;
+	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerSection
-/// Size: 0x00F8 (0x0000F0 - 0x0001E8)
+/// Size: 0x0100 (0x0000F0 - 0x0001F0)
 class UMovieSceneCameraShakeSourceTriggerSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
+	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FMovieSceneCameraShakeSourceTriggerChannel) Channel                                                    OFFSET(getStruct<T>, {0xF0, 248, 0, 0})
+	SMember(FMovieSceneCameraShakeSourceTriggerChannel) Channel                                                    OFFSET(getStruct<T>, {0xF8, 248, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCinematicShotSection
@@ -354,9 +344,9 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
-	// void SetShotDisplayName(FString InShotDisplayName);                                                                      // [0x581df34] Final|Native|Public|BlueprintCallable 
+	// void SetShotDisplayName(FString InShotDisplayName);                                                                      // [0x5689b3c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
-	// FString GetShotDisplayName();                                                                                            // [0x581c5bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetShotDisplayName();                                                                                            // [0x5689690] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneColorSection
@@ -373,12 +363,90 @@ public:
 	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(getStruct<T>, {0x428, 272, 0, 0})
 };
 
+/// Class /Script/MovieSceneTracks.MovieSceneComponentMaterialParameterSection
+/// Size: 0x0028 (0x0000F0 - 0x000118)
+class UMovieSceneComponentMaterialParameterSection : public UMovieSceneSection
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 280;
+
+public:
+	CMember(TArray<FScalarMaterialParameterInfoAndCurve>) ScalarParameterInfosAndCurves                            OFFSET(get<T>, {0xF8, 16, 0, 0})
+	CMember(TArray<FColorMaterialParameterInfoAndCurves>) ColorParameterInfosAndCurves                             OFFSET(get<T>, {0x108, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveScalarParameter
+	// bool RemoveScalarParameter(FMaterialParameterInfo& InParameterInfo);                                                     // [0x56897b8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveColorParameter
+	// bool RemoveColorParameter(FMaterialParameterInfo& InParameterInfo);                                                      // [0x5689718] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddScalarParameterKey
+	// void AddScalarParameterKey(FMaterialParameterInfo& InParameterInfo, FFrameNumber InTime, float InValue, FString InLayerName, FString InAssetName); // [0x5688be8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddColorParameterKey
+	// void AddColorParameterKey(FMaterialParameterInfo& InParameterInfo, FFrameNumber InTime, FLinearColor InValue, FString InLayerName, FString InAssetName); // [0x56881d4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/MovieSceneTracks.MovieSceneConstrainedSection
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMovieSceneConstrainedSection : public UInterface
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneParameterSection
+/// Size: 0x0068 (0x0000F0 - 0x000158)
+class UMovieSceneParameterSection : public UMovieSceneSection
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 344;
+
+public:
+	CMember(TArray<FBoolParameterNameAndCurve>)        BoolParameterNamesAndCurves                                 OFFSET(get<T>, {0xF8, 16, 0, 0})
+	CMember(TArray<FScalarParameterNameAndCurve>)      ScalarParameterNamesAndCurves                               OFFSET(get<T>, {0x108, 16, 0, 0})
+	CMember(TArray<FVector2DParameterNameAndCurves>)   Vector2DParameterNamesAndCurves                             OFFSET(get<T>, {0x118, 16, 0, 0})
+	CMember(TArray<FVectorParameterNameAndCurves>)     VectorParameterNamesAndCurves                               OFFSET(get<T>, {0x128, 16, 0, 0})
+	CMember(TArray<FColorParameterNameAndCurves>)      ColorParameterNamesAndCurves                                OFFSET(get<T>, {0x138, 16, 0, 0})
+	CMember(TArray<FTransformParameterNameAndCurves>)  TransformParameterNamesAndCurves                            OFFSET(get<T>, {0x148, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveVectorParameter
+	// bool RemoveVectorParameter(FName InParameterName);                                                                       // [0x56ca614] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveVector2DParameter
+	// bool RemoveVector2DParameter(FName InParameterName);                                                                     // [0x56ca588] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveTransformParameter
+	// bool RemoveTransformParameter(FName InParameterName);                                                                    // [0x56ca4fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveScalarParameter
+	// bool RemoveScalarParameter(FName InParameterName);                                                                       // [0x56ca470] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveColorParameter
+	// bool RemoveColorParameter(FName InParameterName);                                                                        // [0x56ca3e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveBoolParameter
+	// bool RemoveBoolParameter(FName InParameterName);                                                                         // [0x56ca358] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
+	// void GetParameterNames(TSet<FName>& ParameterNames);                                                                     // [0x56ca1d0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddVectorParameterKey
+	// void AddVectorParameterKey(FName InParameterName, FFrameNumber InTime, FVector InValue);                                 // [0x56c9e7c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddVector2DParameterKey
+	// void AddVector2DParameterKey(FName InParameterName, FFrameNumber InTime, FVector2D InValue);                             // [0x56c9c10] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddTransformParameterKey
+	// void AddTransformParameterKey(FName InParameterName, FFrameNumber InTime, FTransform& InValue);                          // [0x56c9984] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddScalarParameterKey
+	// void AddScalarParameterKey(FName InParameterName, FFrameNumber InTime, float InValue);                                   // [0x56c9724] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddColorParameterKey
+	// void AddColorParameterKey(FName InParameterName, FFrameNumber InTime, FLinearColor InValue);                             // [0x56c94b8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
+	// void AddBoolParameterKey(FName InParameterName, FFrameNumber InTime, bool InValue);                                      // [0x56c9254] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneCustomPrimitiveDataSection
+/// Size: 0x0000 (0x000158 - 0x000158)
+class UMovieSceneCustomPrimitiveDataSection : public UMovieSceneParameterSection
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
 };
@@ -397,9 +465,9 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneCVarSection.SetFromString
-	// void SetFromString(FString InString);                                                                                    // [0x581d708] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFromString(FString InString);                                                                                    // [0x56cb42c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneCVarSection.GetString
-	// FString GetString();                                                                                                     // [0x581c62c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetString();                                                                                                     // [0x56ca318] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneDataLayerSection
@@ -419,25 +487,25 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.SetPrerollState
-	// void SetPrerollState(EDataLayerRuntimeState InPrerollState);                                                             // [0x581deb8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPrerollState(EDataLayerRuntimeState InPrerollState);                                                             // [0x56cbae0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnUnload
-	// void SetFlushOnUnload(bool bFlushOnUnload);                                                                              // [0x581d688] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetFlushOnUnload(bool bFlushOnUnload);                                                                              // [0x56cb3ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.SetDesiredState
-	// void SetDesiredState(EDataLayerRuntimeState InDesiredState);                                                             // [0x581d60c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDesiredState(EDataLayerRuntimeState InDesiredState);                                                             // [0x56cb330] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.SetDataLayers
-	// void SetDataLayers(TArray<FActorDataLayer>& InDataLayers);                                                               // [0x581cf50] Final|Native|Private|HasOutParms|BlueprintCallable 
+	// void SetDataLayers(TArray<FActorDataLayer>& InDataLayers);                                                               // [0x56cad10] Final|Native|Private|HasOutParms|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.SetDataLayerAssets
-	// void SetDataLayerAssets(TArray<UDataLayerAsset*>& InDataLayerAssets);                                                    // [0x581c85c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetDataLayerAssets(TArray<UDataLayerAsset*>& InDataLayerAssets);                                                    // [0x56ca6a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.GetPrerollState
-	// EDataLayerRuntimeState GetPrerollState();                                                                                // [0x581c5a4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EDataLayerRuntimeState GetPrerollState();                                                                                // [0x56ca300] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.GetFlushOnUnload
-	// bool GetFlushOnUnload();                                                                                                 // [0x581c55c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetFlushOnUnload();                                                                                                 // [0x56ca19c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.GetDesiredState
-	// EDataLayerRuntimeState GetDesiredState();                                                                                // [0x581c544] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EDataLayerRuntimeState GetDesiredState();                                                                                // [0x56ca184] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.GetDataLayers
-	// TArray<FActorDataLayer> GetDataLayers();                                                                                 // [0x581c528] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FActorDataLayer> GetDataLayers();                                                                                 // [0x56ca168] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneDataLayerSection.GetDataLayerAssets
-	// TArray<UDataLayerAsset*> GetDataLayerAssets();                                                                           // [0x581c4b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UDataLayerAsset*> GetDataLayerAssets();                                                                           // [0x56ca0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneDoubleSection
@@ -532,14 +600,14 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneIntegerSection
-/// Size: 0x0108 (0x0000F0 - 0x0001F8)
+/// Size: 0x0110 (0x0000F0 - 0x000200)
 class UMovieSceneIntegerSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 504;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FMovieSceneIntegerChannel)                 IntegerCurve                                                OFFSET(getStruct<T>, {0xF8, 256, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 IntegerCurve                                                OFFSET(getStruct<T>, {0xF8, 264, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection
@@ -556,13 +624,13 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
-	// void SetVisibility(ELevelVisibility InVisibility);                                                                       // [0x5865a28] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVisibility(ELevelVisibility InVisibility);                                                                       // [0x56cbb5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
-	// void SetLevelNames(TArray<FName>& InLevelNames);                                                                         // [0x5865988] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetLevelNames(TArray<FName>& InLevelNames);                                                                         // [0x56cba40] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
-	// ELevelVisibility GetVisibility();                                                                                        // [0x2af32dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ELevelVisibility GetVisibility();                                                                                        // [0x2ac7f48] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
-	// TArray<FName> GetLevelNames();                                                                                           // [0x58654f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FName> GetLevelNames();                                                                                           // [0x56ca1b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneObjectPropertySection
@@ -584,51 +652,6 @@ class UMovieSceneParameterSectionExtender : public UInterface
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-};
-
-/// Class /Script/MovieSceneTracks.MovieSceneParameterSection
-/// Size: 0x0068 (0x0000F0 - 0x000158)
-class UMovieSceneParameterSection : public UMovieSceneSection
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 344;
-
-public:
-	CMember(TArray<FBoolParameterNameAndCurve>)        BoolParameterNamesAndCurves                                 OFFSET(get<T>, {0xF8, 16, 0, 0})
-	CMember(TArray<FScalarParameterNameAndCurve>)      ScalarParameterNamesAndCurves                               OFFSET(get<T>, {0x108, 16, 0, 0})
-	CMember(TArray<FVector2DParameterNameAndCurves>)   Vector2DParameterNamesAndCurves                             OFFSET(get<T>, {0x118, 16, 0, 0})
-	CMember(TArray<FVectorParameterNameAndCurves>)     VectorParameterNamesAndCurves                               OFFSET(get<T>, {0x128, 16, 0, 0})
-	CMember(TArray<FColorParameterNameAndCurves>)      ColorParameterNamesAndCurves                                OFFSET(get<T>, {0x138, 16, 0, 0})
-	CMember(TArray<FTransformParameterNameAndCurves>)  TransformParameterNamesAndCurves                            OFFSET(get<T>, {0x148, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveVectorParameter
-	// bool RemoveVectorParameter(FName InParameterName);                                                                       // [0x58658fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveVector2DParameter
-	// bool RemoveVector2DParameter(FName InParameterName);                                                                     // [0x5865870] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveTransformParameter
-	// bool RemoveTransformParameter(FName InParameterName);                                                                    // [0x58657e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveScalarParameter
-	// bool RemoveScalarParameter(FName InParameterName);                                                                       // [0x5865758] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveColorParameter
-	// bool RemoveColorParameter(FName InParameterName);                                                                        // [0x58656cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.RemoveBoolParameter
-	// bool RemoveBoolParameter(FName InParameterName);                                                                         // [0x5865640] Final|RequiredAPI|Native|Public|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
-	// void GetParameterNames(TSet<FName>& ParameterNames);                                                                     // [0x5865510] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddVectorParameterKey
-	// void AddVectorParameterKey(FName InParameterName, FFrameNumber InTime, FVector InValue);                                 // [0x5865238] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddVector2DParameterKey
-	// void AddVector2DParameterKey(FName InParameterName, FFrameNumber InTime, FVector2D InValue);                             // [0x5864f84] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddTransformParameterKey
-	// void AddTransformParameterKey(FName InParameterName, FFrameNumber InTime, FTransform& InValue);                          // [0x5864ccc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddScalarParameterKey
-	// void AddScalarParameterKey(FName InParameterName, FFrameNumber InTime, float InValue);                                   // [0x5864a24] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddColorParameterKey
-	// void AddColorParameterKey(FName InParameterName, FFrameNumber InTime, FLinearColor InValue);                             // [0x5864770] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
-	// Function /Script/MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
-	// void AddBoolParameterKey(FName InParameterName, FFrameNumber InTime, bool InValue);                                      // [0x58644c0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneParticleSection
@@ -683,14 +706,14 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneSlomoSection
-/// Size: 0x0110 (0x0000F0 - 0x000200)
+/// Size: 0x0118 (0x0000F0 - 0x000208)
 class UMovieSceneSlomoSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 512;
+	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(getStruct<T>, {0xF0, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(getStruct<T>, {0xF8, 272, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneStringSection
@@ -859,6 +882,26 @@ class UMovieSceneBytePropertySystem : public UMovieScenePropertySystem
 public:
 };
 
+/// Class /Script/MovieSceneTracks.MovieSceneCameraShakeInstantiatorSystem
+/// Size: 0x0080 (0x000040 - 0x0000C0)
+class UMovieSceneCameraShakeInstantiatorSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 192;
+
+public:
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneCameraShakeEvaluatorSystem
+/// Size: 0x0000 (0x000040 - 0x000040)
+class UMovieSceneCameraShakeEvaluatorSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+};
+
 /// Class /Script/MovieSceneTracks.MovieSceneColorPropertySystem
 /// Size: 0x0000 (0x000058 - 0x000058)
 class UMovieSceneColorPropertySystem : public UMovieScenePropertySystem
@@ -890,11 +933,11 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneComponentMaterialSystem
-/// Size: 0x0160 (0x000040 - 0x0001A0)
+/// Size: 0x0168 (0x000040 - 0x0001A8)
 class UMovieSceneComponentMaterialSystem : public UMovieSceneEntitySystem
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 416;
+	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
 };
@@ -927,6 +970,17 @@ class UMovieSceneConstraintSystem : public UMovieSceneEntitySystem
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneCustomPrimitiveDataSystem
+/// Size: 0x0190 (0x000040 - 0x0001D0)
+class UMovieSceneCustomPrimitiveDataSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 464;
+
+public:
+	CMember(UMovieScenePiecewiseDoubleBlenderSystem*)  DoubleBlenderSystem                                         OFFSET(get<T>, {0x1C8, 8, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneDataLayerSystem
@@ -1089,15 +1143,25 @@ class UMovieSceneMaterialParameterCollectionSystem : public UMovieSceneEntitySys
 public:
 };
 
-/// Class /Script/MovieSceneTracks.MovieSceneMaterialParameterSystem
+/// Class /Script/MovieSceneTracks.MovieSceneMaterialParameterInstantiatorSystem
 /// Size: 0x0318 (0x000040 - 0x000358)
-class UMovieSceneMaterialParameterSystem : public UMovieSceneEntitySystem
+class UMovieSceneMaterialParameterInstantiatorSystem : public UMovieSceneEntityInstantiatorSystem
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
 	CMember(UMovieScenePiecewiseDoubleBlenderSystem*)  DoubleBlenderSystem                                         OFFSET(get<T>, {0x350, 8, 0, 0})
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneMaterialParameterEvaluationSystem
+/// Size: 0x0000 (0x000040 - 0x000040)
+class UMovieSceneMaterialParameterEvaluationSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneMotionVectorSimulationSystem
@@ -1176,13 +1240,13 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictWorldTransformAtTime
-	// UMovieSceneAsyncAction_SequencePrediction* PredictWorldTransformAtTime(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, float TimeInSeconds); // [0x5893eb0] Final|Native|Static|Public|BlueprintCallable 
+	// UMovieSceneAsyncAction_SequencePrediction* PredictWorldTransformAtTime(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, float TimeInSeconds); // [0x5707714] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictWorldTransformAtFrame
-	// UMovieSceneAsyncAction_SequencePrediction* PredictWorldTransformAtFrame(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, FFrameTime FrameTime); // [0x5893c6c] Final|Native|Static|Public|BlueprintCallable 
+	// UMovieSceneAsyncAction_SequencePrediction* PredictWorldTransformAtFrame(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, FFrameTime FrameTime); // [0x57074ec] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictLocalTransformAtTime
-	// UMovieSceneAsyncAction_SequencePrediction* PredictLocalTransformAtTime(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, float TimeInSeconds); // [0x5893b08] Final|Native|Static|Public|BlueprintCallable 
+	// UMovieSceneAsyncAction_SequencePrediction* PredictLocalTransformAtTime(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, float TimeInSeconds); // [0x5707388] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictLocalTransformAtFrame
-	// UMovieSceneAsyncAction_SequencePrediction* PredictLocalTransformAtFrame(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, FFrameTime FrameTime); // [0x58938c4] Final|Native|Static|Public|BlueprintCallable 
+	// UMovieSceneAsyncAction_SequencePrediction* PredictLocalTransformAtFrame(UMovieSceneSequencePlayer* Player, USceneComponent* TargetComponent, FFrameTime FrameTime); // [0x5707160] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/MovieSceneTracks.MovieScenePredictionSystem
@@ -1198,11 +1262,11 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieScenePropertyInstantiatorSystem
-/// Size: 0x0228 (0x000040 - 0x000268)
+/// Size: 0x0190 (0x000040 - 0x0001D0)
 class UMovieScenePropertyInstantiatorSystem : public UMovieSceneEntityInstantiatorSystem
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 616;
+	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
 };
@@ -1233,6 +1297,16 @@ class UMovieSceneSkeletalAnimationSystem : public UMovieSceneEntitySystem
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 224;
+
+public:
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneSlomoSystem
+/// Size: 0x0018 (0x000040 - 0x000058)
+class UMovieSceneSlomoSystem : public UMovieSceneEntitySystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 };
@@ -1340,11 +1414,11 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraCutTrackInstance
-/// Size: 0x0078 (0x000050 - 0x0000C8)
+/// Size: 0x0028 (0x000050 - 0x000078)
 class UMovieSceneCameraCutTrackInstance : public UMovieSceneTrackInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
+	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 };
@@ -1469,36 +1543,36 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceShakeTrack
-/// Size: 0x0018 (0x000098 - 0x0000B0)
+/// Size: 0x0010 (0x000098 - 0x0000A8)
 class UMovieSceneCameraShakeSourceShakeTrack : public UMovieSceneNameableTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
+	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(TArray<UMovieSceneSection*>)               CameraShakeSections                                         OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               CameraShakeSections                                         OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerTrack
-/// Size: 0x0018 (0x000098 - 0x0000B0)
+/// Size: 0x0010 (0x000098 - 0x0000A8)
 class UMovieSceneCameraShakeSourceTriggerTrack : public UMovieSceneTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
+	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeTrack
-/// Size: 0x0018 (0x000098 - 0x0000B0)
+/// Size: 0x0010 (0x000098 - 0x0000A8)
 class UMovieSceneCameraShakeTrack : public UMovieSceneNameableTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
+	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	CMember(TArray<UMovieSceneSection*>)               CameraShakeSections                                         OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<UMovieSceneSection*>)               CameraShakeSections                                         OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCinematicShotTrack
@@ -1520,6 +1594,18 @@ class UMovieSceneColorTrack : public UMovieScenePropertyTrack
 
 public:
 	DMember(bool)                                      bIsSlateColor                                               OFFSET(get<bool>, {0xC0, 1, 0, 0})
+};
+
+/// Class /Script/MovieSceneTracks.MovieSceneCustomPrimitiveDataTrack
+/// Size: 0x0028 (0x000098 - 0x0000C0)
+class UMovieSceneCustomPrimitiveDataTrack : public UMovieSceneNameableTrack
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 192;
+
+public:
+	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(UMovieSceneSection*)                       SectionToKey                                                OFFSET(get<T>, {0xB8, 8, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCVarTrack
@@ -1654,14 +1740,14 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneComponentMaterialTrack
-/// Size: 0x0018 (0x0000B0 - 0x0000C8)
+/// Size: 0x0020 (0x0000B0 - 0x0000D0)
 class UMovieSceneComponentMaterialTrack : public UMovieSceneMaterialTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	DMember(int32_t)                                   MaterialIndex                                               OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
+	SMember(FComponentMaterialInfo)                    MaterialInfo                                                OFFSET(getStruct<T>, {0xC0, 12, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneObjectPropertyTrack
@@ -1698,14 +1784,14 @@ public:
 };
 
 /// Class /Script/MovieSceneTracks.MovieScenePrimitiveMaterialTrack
-/// Size: 0x0008 (0x0000C0 - 0x0000C8)
+/// Size: 0x0010 (0x0000C0 - 0x0000D0)
 class UMovieScenePrimitiveMaterialTrack : public UMovieScenePropertyTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	DMember(int32_t)                                   MaterialIndex                                               OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
+	SMember(FComponentMaterialInfo)                    MaterialInfo                                                OFFSET(getStruct<T>, {0xC0, 12, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack
@@ -1725,17 +1811,17 @@ public:
 
 	/// Functions
 	// Function /Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack.SetSwapRootBone
-	// void SetSwapRootBone(ESwapRootBone InValue);                                                                             // [0x5898cd4] Final|RequiredAPI|Native|Public 
+	// void SetSwapRootBone(ESwapRootBone InValue);                                                                             // [0x571928c] Final|RequiredAPI|Native|Public 
 	// Function /Script/MovieSceneTracks.MovieSceneSkeletalAnimationTrack.GetSwapRootBone
-	// ESwapRootBone GetSwapRootBone();                                                                                         // [0x5898cbc] Final|RequiredAPI|Native|Public|Const 
+	// ESwapRootBone GetSwapRootBone();                                                                                         // [0x5719274] Final|RequiredAPI|Native|Public|Const 
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneSlomoTrack
-/// Size: 0x0008 (0x0000C0 - 0x0000C8)
+/// Size: 0x0000 (0x0000C0 - 0x0000C0)
 class UMovieSceneSlomoTrack : public UMovieSceneFloatTrack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 };
@@ -1861,15 +1947,16 @@ public:
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventPayloadVariable
-/// Size: 0x0010 (0x000000 - 0x000010)
+/// Size: 0x0028 (0x000000 - 0x000028)
 class FMovieSceneEventPayloadVariable : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSoftObjectPath)                           ObjectValue                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventPtrs
@@ -2009,61 +2096,6 @@ class FMovieSceneBaseCacheSectionTemplateParameters : public MDKBase
 public:
 	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(getStruct<T>, {0x4, 4, 0, 0})
-};
-
-/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceShakeSectionTemplate
-/// Size: 0x0030 (0x000020 - 0x000050)
-class FMovieSceneCameraShakeSourceShakeSectionTemplate : public FMovieSceneEvalTemplate
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 80;
-
-public:
-	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(getStruct<T>, {0x20, 40, 0, 0})
-	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x48, 4, 0, 0})
-	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(getStruct<T>, {0x4C, 4, 0, 0})
-};
-
-/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSectionData
-/// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneCameraShakeSectionData : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
-	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
-	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
-};
-
-/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerSectionTemplate
-/// Size: 0x0020 (0x000020 - 0x000040)
-class FMovieSceneCameraShakeSourceTriggerSectionTemplate : public FMovieSceneEvalTemplate
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 64;
-
-public:
-	CMember(TArray<FFrameNumber>)                      TriggerTimes                                                OFFSET(get<T>, {0x20, 16, 0, 0})
-	CMember(TArray<FMovieSceneCameraShakeSourceTrigger>) TriggerValues                                             OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
-/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSectionTemplate
-/// Size: 0x0030 (0x000020 - 0x000050)
-class FMovieSceneCameraShakeSectionTemplate : public FMovieSceneEvalTemplate
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 80;
-
-public:
-	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(getStruct<T>, {0x20, 40, 0, 0})
-	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventSectionTemplate
@@ -2208,16 +2240,16 @@ public:
 };
 
 /// Struct /Script/MovieSceneTracks.BoolParameterNameAndCurve
-/// Size: 0x0108 (0x000000 - 0x000108)
+/// Size: 0x0110 (0x000000 - 0x000110)
 class FBoolParameterNameAndCurve : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 264;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneBoolChannel)                    ParameterCurve                                              OFFSET(getStruct<T>, {0x8, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    ParameterCurve                                              OFFSET(getStruct<T>, {0x8, 264, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.ScalarParameterNameAndCurve
@@ -2268,36 +2300,24 @@ public:
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneBoolPropertySectionTemplate
-/// Size: 0x0100 (0x000038 - 0x000138)
+/// Size: 0x0108 (0x000038 - 0x000140)
 class FMovieSceneBoolPropertySectionTemplate : public FMovieScenePropertySectionTemplate
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0x38, 256, 0, 0})
-};
-
-/// Struct /Script/MovieSceneTracks.MovieSceneSlomoSectionTemplate
-/// Size: 0x0110 (0x000020 - 0x000130)
-class FMovieSceneSlomoSectionTemplate : public FMovieSceneEvalTemplate
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 304;
-
-public:
-	SMember(FMovieSceneFloatChannel)                   SlomoCurve                                                  OFFSET(getStruct<T>, {0x20, 272, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0x38, 264, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVisibilitySectionTemplate
-/// Size: 0x0000 (0x000138 - 0x000138)
+/// Size: 0x0000 (0x000140 - 0x000140)
 class FMovieSceneVisibilitySectionTemplate : public FMovieSceneBoolPropertySectionTemplate
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
 };
@@ -2360,6 +2380,36 @@ class FMovieSceneAudioComponentData : public MDKBase
 
 public:
 	CMember(UMovieSceneAudioSection*)                  Section                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+};
+
+/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeComponentData
+/// Size: 0x0038 (0x000000 - 0x000038)
+class FMovieSceneCameraShakeComponentData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+	SMember(FMovieSceneCameraShakeSectionData)         SectionData                                                 OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
+	CMember(UCameraShakeBase*)                         ShakeInstance                                               OFFSET(get<T>, {0x30, 8, 0, 0})
+};
+
+/// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSectionData
+/// Size: 0x0028 (0x000000 - 0x000028)
+class FMovieSceneCameraShakeSectionData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
+	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneAudioInputData
@@ -2470,6 +2520,35 @@ class FMovieSceneColorKeyStruct : public FMovieSceneKeyStruct
 public:
 	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+};
+
+/// Struct /Script/MovieSceneTracks.ScalarMaterialParameterInfoAndCurve
+/// Size: 0x0120 (0x000000 - 0x000120)
+class FScalarMaterialParameterInfoAndCurve : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 288;
+
+public:
+	SMember(FMaterialParameterInfo)                    ParameterInfo                                               OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   ParameterCurve                                              OFFSET(getStruct<T>, {0x10, 272, 0, 0})
+};
+
+/// Struct /Script/MovieSceneTracks.ColorMaterialParameterInfoAndCurves
+/// Size: 0x0450 (0x000000 - 0x000450)
+class FColorMaterialParameterInfoAndCurves : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1104;
+
+public:
+	SMember(FMaterialParameterInfo)                    ParameterInfo                                               OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   RedCurve                                                    OFFSET(getStruct<T>, {0x10, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   GreenCurve                                                  OFFSET(getStruct<T>, {0x120, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   BlueCurve                                                   OFFSET(getStruct<T>, {0x230, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(getStruct<T>, {0x340, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneConsoleVariableCollection
@@ -2631,6 +2710,20 @@ public:
 	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
+/// Struct /Script/MovieSceneTracks.ComponentMaterialInfo
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FComponentMaterialInfo : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	SMember(FName)                                     MaterialSlotName                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   MaterialSlotIndex                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	CMember(EComponentMaterialType)                    MaterialType                                                OFFSET(get<T>, {0x8, 4, 0, 0})
+};
+
 /// Struct /Script/MovieSceneTracks.MovieSceneSkeletalAnimRootMotionTrackParams
 /// Size: 0x0080 (0x000000 - 0x000080)
 class FMovieSceneSkeletalAnimRootMotionTrackParams : public MDKBase
@@ -2682,5 +2775,16 @@ enum EFireEventsAtPosition : uint8_t
 	EFireEventsAtPosition__AtEndOfEvaluation1                                        = 1,
 	EFireEventsAtPosition__AfterSpawn2                                               = 2,
 	EFireEventsAtPosition__EFireEventsAtPosition_MAX3                                = 3
+};
+
+/// Enum /Script/MovieSceneTracks.EComponentMaterialType
+/// Size: 0x05
+enum EComponentMaterialType : uint8_t
+{
+	EComponentMaterialType__Empty0                                                   = 0,
+	EComponentMaterialType__IndexedMaterial1                                         = 1,
+	EComponentMaterialType__OverlayMaterial2                                         = 2,
+	EComponentMaterialType__DecalMaterial3                                           = 3,
+	EComponentMaterialType__EComponentMaterialType_MAX4                              = 4
 };
 

@@ -48,7 +48,7 @@ class UClothingAssetCommon : public UClothingAssetBase
 public:
 	CMember(UPhysicsAsset*)                            PhysicsAsset                                                OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(TMap<FName, UClothConfigBase*>)            ClothConfigs                                                OFFSET(get<T>, {0x50, 80, 0, 0})
-	CMember(TArray<FClothLODDataCommon>)               LodData                                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
+	CMember(TArray<FClothLODDataCommon>)               LODData                                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<int32_t>)                           LodMap                                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FName>)                             UsedBoneNames                                               OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<int32_t>)                           UsedBoneIndices                                             OFFSET(get<T>, {0xD0, 16, 0, 0})

@@ -56,75 +56,75 @@ public:
 
 	/// Functions
 	// Function /Script/ContextualAnimation.ContextualAnimManager.TryStopSceneWithActor
-	// bool TryStopSceneWithActor(AActor* Actor);                                                                               // [0x74b4d80] Final|Native|Public|BlueprintCallable 
+	// bool TryStopSceneWithActor(AActor* Actor);                                                                               // [0x768f0a8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.OnSceneInstanceEnded
-	// void OnSceneInstanceEnded(UContextualAnimSceneInstance* SceneInstance);                                                  // [0x74b45a4] Final|Native|Protected 
+	// void OnSceneInstanceEnded(UContextualAnimSceneInstance* SceneInstance);                                                  // [0x768e8c4] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.IsActorInAnyScene
-	// bool IsActorInAnyScene(AActor* Actor);                                                                                   // [0x74b3ee4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsActorInAnyScene(AActor* Actor);                                                                                   // [0x768e23c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.GetSceneWithActor
-	// UContextualAnimSceneInstance* GetSceneWithActor(AActor* Actor);                                                          // [0x74b3e28] Final|Native|Public|BlueprintCallable 
+	// UContextualAnimSceneInstance* GetSceneWithActor(AActor* Actor);                                                          // [0x768e180] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.GetContextualAnimManager
-	// UContextualAnimManager* GetContextualAnimManager(UObject* WorldContextObject);                                           // [0x74b3a98] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UContextualAnimManager* GetContextualAnimManager(UObject* WorldContextObject);                                           // [0x768ddf0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.BP_TryStartScene
-	// UContextualAnimSceneInstance* BP_TryStartScene(UContextualAnimSceneAsset* SceneAsset, FContextualAnimStartSceneParams& Params); // [0x74b2738] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UContextualAnimSceneInstance* BP_TryStartScene(UContextualAnimSceneAsset* SceneAsset, FContextualAnimStartSceneParams& Params); // [0x768cbec] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneActorComponent
-/// Size: 0x0120 (0x000570 - 0x000690)
+/// Size: 0x0170 (0x000580 - 0x0006F0)
 class UContextualAnimSceneActorComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1680;
+	static inline constexpr uint64_t __MDKClassSize = 1776;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnJoinedSceneDelegate                                       OFFSET(getStruct<T>, {0x570, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLeftSceneDelegate                                         OFFSET(getStruct<T>, {0x580, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayMontageNotifyBeginDelegate                            OFFSET(getStruct<T>, {0x590, 16, 0, 0})
-	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	DMember(bool)                                      bEnableDebug                                                OFFSET(get<bool>, {0x5A8, 1, 0, 0})
-	SMember(FContextualAnimRepBindingsData)            RepBindings                                                 OFFSET(getStruct<T>, {0x5B0, 64, 0, 0})
-	SMember(FContextualAnimRepLateJoinData)            RepLateJoinData                                             OFFSET(getStruct<T>, {0x5F0, 40, 0, 0})
-	SMember(FContextualAnimRepTransitionData)          RepTransitionData                                           OFFSET(getStruct<T>, {0x618, 24, 0, 0})
-	SMember(FContextualAnimRepTransitionData)          RepTransitionSingleActorData                                OFFSET(getStruct<T>, {0x630, 24, 0, 0})
-	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(getStruct<T>, {0x648, 40, 0, 0})
-	CMember(TArray<FContextualAnimIKTarget>)           IKTargets                                                   OFFSET(get<T>, {0x670, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnJoinedSceneDelegate                                       OFFSET(getStruct<T>, {0x580, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLeftSceneDelegate                                         OFFSET(getStruct<T>, {0x590, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayMontageNotifyBeginDelegate                            OFFSET(getStruct<T>, {0x5A0, 16, 0, 0})
+	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x5B0, 8, 0, 0})
+	DMember(bool)                                      bEnableDebug                                                OFFSET(get<bool>, {0x5B8, 1, 0, 0})
+	SMember(FContextualAnimRepBindingsData)            RepBindings                                                 OFFSET(getStruct<T>, {0x5C0, 80, 0, 0})
+	SMember(FContextualAnimRepLateJoinData)            RepLateJoinData                                             OFFSET(getStruct<T>, {0x610, 56, 0, 0})
+	SMember(FContextualAnimRepTransitionData)          RepTransitionData                                           OFFSET(getStruct<T>, {0x648, 40, 0, 0})
+	SMember(FContextualAnimRepTransitionData)          RepTransitionSingleActorData                                OFFSET(getStruct<T>, {0x670, 40, 0, 0})
+	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(getStruct<T>, {0x698, 40, 0, 0})
+	CMember(TArray<FContextualAnimIKTarget>)           IKTargets                                                   OFFSET(get<T>, {0x6C0, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.TransitionSingleActor
-	// bool TransitionSingleActor(int32_t SectionIdx, int32_t AnimSetIdx);                                                      // [0x74b4cc0] Final|Native|Public|BlueprintCallable 
+	// bool TransitionSingleActor(int32_t SectionIdx, int32_t AnimSetIdx);                                                      // [0x768efe8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.TransitionContextualAnimScene
-	// bool TransitionContextualAnimScene(FName SectionName);                                                                   // [0x74b4c34] Final|Native|Public|BlueprintCallable 
+	// bool TransitionContextualAnimScene(FName SectionName);                                                                   // [0x768ef5c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.StartContextualAnimScene
-	// bool StartContextualAnimScene(FContextualAnimSceneBindings& InBindings);                                                 // [0x74b4b7c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool StartContextualAnimScene(FContextualAnimSceneBindings& InBindings);                                                 // [0x768eea4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.ServerStartContextualAnimScene
-	// void ServerStartContextualAnimScene(FContextualAnimSceneBindings InBindings);                                            // [0x74b49d8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerStartContextualAnimScene(FContextualAnimSceneBindings InBindings);                                            // [0x768ed1c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.ServerEarlyOutContextualAnimScene
-	// void ServerEarlyOutContextualAnimScene();                                                                                // [0x74b498c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerEarlyOutContextualAnimScene();                                                                                // [0x768ecd0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnTickPose
-	// void OnTickPose(USkinnedMeshComponent* SkinnedMeshComponent, float DeltaTime, bool bNeedsValidRootMotion);               // [0x74b4638] Final|Native|Protected 
+	// void OnTickPose(USkinnedMeshComponent* SkinnedMeshComponent, float DeltaTime, bool bNeedsValidRootMotion);               // [0x768e968] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_TransitionData
-	// void OnRep_TransitionData();                                                                                             // [0x74b4590] Final|Native|Protected 
+	// void OnRep_TransitionData();                                                                                             // [0x768e8b0] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_RepTransitionSingleActor
-	// void OnRep_RepTransitionSingleActor();                                                                                   // [0x74b457c] Final|Native|Protected 
+	// void OnRep_RepTransitionSingleActor();                                                                                   // [0x768e89c] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_LateJoinData
-	// void OnRep_LateJoinData();                                                                                               // [0x74b4568] Final|Native|Protected 
+	// void OnRep_LateJoinData();                                                                                               // [0x768e888] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnRep_Bindings
-	// void OnRep_Bindings();                                                                                                   // [0x74b4554] Final|Native|Protected 
+	// void OnRep_Bindings();                                                                                                   // [0x768e874] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnPlayMontageNotifyBegin
-	// void OnPlayMontageNotifyBegin(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);              // [0x74b4474] Final|Native|Protected|HasOutParms 
+	// void OnPlayMontageNotifyBegin(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);              // [0x768e794] Final|Native|Protected|HasOutParms 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnMontageBlendingOut
-	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x74b4124] Final|Native|Protected 
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x768e444] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnLeftScene
-	// void OnLeftScene();                                                                                                      // [0x74b4110] Final|Native|Public|BlueprintCallable 
+	// void OnLeftScene();                                                                                                      // [0x2b7b1c8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.OnJoinedScene
-	// void OnJoinedScene(FContextualAnimSceneBindings& InBindings);                                                            // [0x74b4064] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void OnJoinedScene(FContextualAnimSceneBindings& InBindings);                                                            // [0x768e3bc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.LateJoinContextualAnimScene
-	// bool LateJoinContextualAnimScene(AActor* Actor, FName Role);                                                             // [0x74b3fa0] Final|Native|Public|BlueprintCallable 
+	// bool LateJoinContextualAnimScene(AActor* Actor, FName Role);                                                             // [0x768e2f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.GetIKTargets
-	// TArray<FContextualAnimIKTarget> GetIKTargets();                                                                          // [0x74b3c88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FContextualAnimIKTarget> GetIKTargets();                                                                          // [0x768dfe0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.GetIKTargetByGoalName
-	// FContextualAnimIKTarget GetIKTargetByGoalName(FName GoalName);                                                           // [0x74b3ba4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FContextualAnimIKTarget GetIKTargetByGoalName(FName GoalName);                                                           // [0x768defc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimRolesAsset
@@ -139,11 +139,11 @@ public:
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneAsset
-/// Size: 0x0048 (0x000030 - 0x000078)
+/// Size: 0x0060 (0x000030 - 0x000090)
 class UContextualAnimSceneAsset : public UDataAsset
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(UContextualAnimRolesAsset*)                RolesAsset                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
@@ -152,30 +152,31 @@ public:
 	CMember(TArray<FContextualAnimSceneSection>)       Sections                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x60, 4, 0, 0})
 	CMember(UClass*)                                   SceneInstanceClass                                          OFFSET(get<T>, {0x68, 8, 0, 0})
-	DMember(bool)                                      bDisableCollisionBetweenActors                              OFFSET(get<bool>, {0x70, 1, 0, 0})
-	DMember(bool)                                      bPrecomputeAlignmentTracks                                  OFFSET(get<bool>, {0x71, 1, 0, 0})
-	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
+	CMember(EContextualAnimCollisionBehavior)          CollisionBehavior                                           OFFSET(get<T>, {0x70, 1, 0, 0})
+	CMember(TArray<FContextualAnimIgnoreChannelsParam>) CollisionChannelsToIgnoreParams                            OFFSET(get<T>, {0x78, 16, 0, 0})
+	DMember(bool)                                      bPrecomputeAlignmentTracks                                  OFFSET(get<bool>, {0x88, 1, 0, 0})
+	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x8C, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.Query
-	// bool Query(FName Role, FContextualAnimQueryResult& OutResult, FContextualAnimQueryParams& QueryParams, FTransform& ToWorldTransform); // [0x74b4730] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool Query(FName Role, FContextualAnimQueryResult& OutResult, FContextualAnimQueryParams& QueryParams, FTransform& ToWorldTransform); // [0x768ea60] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetRoles
-	// TArray<FName> GetRoles();                                                                                                // [0x74b3d28] Final|Native|Public|Const 
+	// TArray<FName> GetRoles();                                                                                                // [0x768e080] Final|Native|Public|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetAlignmentPointsForSecondaryRoleConsideringSelectionCriteria
-	// void GetAlignmentPointsForSecondaryRoleConsideringSelectionCriteria(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, FContextualAnimSceneBindingContext& Querier, EContextualAnimCriterionToConsider CriterionToConsider, TArray<FContextualAnimPoint>& OutResult); // [0x74b313c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetAlignmentPointsForSecondaryRoleConsideringSelectionCriteria(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, FContextualAnimSceneBindingContext& Querier, EContextualAnimCriterionToConsider CriterionToConsider, TArray<FContextualAnimPoint>& OutResult); // [0x768d54c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.GetAlignmentPointsForSecondaryRole
-	// void GetAlignmentPointsForSecondaryRole(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, TArray<FContextualAnimPoint>& OutResult); // [0x74b2968] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetAlignmentPointsForSecondaryRole(EContextualAnimPointType Type, int32_t SectionIdx, FContextualAnimSceneBindingContext& Primary, TArray<FContextualAnimPoint>& OutResult); // [0x768ce1c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetStartAndEndTimeForWarpSection
-	// void BP_GetStartAndEndTimeForWarpSection(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName WarpSectionName, float& OutStartTime, float& OutEndTime); // [0x74afa28] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void BP_GetStartAndEndTimeForWarpSection(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName WarpSectionName, float& OutStartTime, float& OutEndTime); // [0x7689f88] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetIKTargetTransformForRoleAtTime
-	// FTransform BP_GetIKTargetTransformForRoleAtTime(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName TrackName, float Time); // [0x74af86c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTransform BP_GetIKTargetTransformForRoleAtTime(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, FName TrackName, float Time); // [0x7689dcc] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_GetAlignmentTransformForRoleRelativeToWarpPoint
-	// FTransform BP_GetAlignmentTransformForRoleRelativeToWarpPoint(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, float Time); // [0x74af6d8] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTransform BP_GetAlignmentTransformForRoleRelativeToWarpPoint(int32_t SectionIdx, int32_t AnimSetIdx, FName Role, float Time); // [0x7689c38] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_FindAnimSetIndexByAnimation
-	// int32_t BP_FindAnimSetIndexByAnimation(int32_t SectionIdx, UAnimSequenceBase* Animation);                                // [0x74af4b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t BP_FindAnimSetIndexByAnimation(int32_t SectionIdx, UAnimSequenceBase* Animation);                                // [0x7689a04] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_FindAnimationForRole
-	// UAnimSequenceBase* BP_FindAnimationForRole(int32_t SectionIdx, int32_t AnimSetIdx, FName Role);                          // [0x74af5d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UAnimSequenceBase* BP_FindAnimationForRole(int32_t SectionIdx, int32_t AnimSetIdx, FName Role);                          // [0x7689b24] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSceneInstance
@@ -198,13 +199,13 @@ public:
 
 	/// Functions
 	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnNotifyEndReceived
-	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x74b4394] Final|Native|Protected|HasOutParms 
+	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x768e6b4] Final|Native|Protected|HasOutParms 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnNotifyBeginReceived
-	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x74b42b4] Final|Native|Protected|HasOutParms 
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x768e5d4] Final|Native|Protected|HasOutParms 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.OnMontageBlendingOut
-	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x74b41ec] Final|Native|Protected 
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x768e50c] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.GetActorByRole
-	// AActor* GetActorByRole(FName Role);                                                                                      // [0x74b2884] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AActor* GetActorByRole(FName Role);                                                                                      // [0x768cd38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion
@@ -315,16 +316,30 @@ public:
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepBindingsData
-/// Size: 0x003F (0x000001 - 0x000040)
+/// Size: 0x004F (0x000001 - 0x000050)
 class FContextualAnimRepBindingsData : public FContextualAnimRepData
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(getStruct<T>, {0x8, 40, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FContextualAnimWarpPoint>)          WarpPoints                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+};
+
+/// Struct /Script/ContextualAnimation.ContextualAnimWarpPoint
+/// Size: 0x0070 (0x000000 - 0x000070)
+class FContextualAnimWarpPoint : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSceneBindings
@@ -372,32 +387,47 @@ public:
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimRepLateJoinData
-/// Size: 0x0027 (0x000001 - 0x000028)
+/// Size: 0x0037 (0x000001 - 0x000038)
 class FContextualAnimRepLateJoinData : public FContextualAnimRepData
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	CMember(TArray<FContextualAnimWarpPoint>)          WarpPoints                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
+	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x28, 16, 0, 0})
+};
+
+/// Struct /Script/ContextualAnimation.ContextualAnimRepTransitionData
+/// Size: 0x0027 (0x000001 - 0x000028)
+class FContextualAnimRepTransitionData : public FContextualAnimRepData
 { 
 	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     Role                                                        OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	DMember(char)                                      ID                                                          OFFSET(get<char>, {0x1, 1, 0, 0})
+	DMember(char)                                      SectionIdx                                                  OFFSET(get<char>, {0x2, 1, 0, 0})
+	DMember(char)                                      AnimSetIdx                                                  OFFSET(get<char>, {0x3, 1, 0, 0})
+	CMember(TArray<FContextualAnimWarpPoint>)          WarpPoints                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
-/// Struct /Script/ContextualAnimation.ContextualAnimRepTransitionData
-/// Size: 0x0017 (0x000001 - 0x000018)
-class FContextualAnimRepTransitionData : public FContextualAnimRepData
+/// Struct /Script/ContextualAnimation.ContextualAnimIgnoreChannelsParam
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FContextualAnimIgnoreChannelsParam : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(char)                                      ID                                                          OFFSET(get<char>, {0x1, 1, 0, 0})
-	DMember(char)                                      SectionIdx                                                  OFFSET(get<char>, {0x2, 1, 0, 0})
-	DMember(char)                                      AnimSetIdx                                                  OFFSET(get<char>, {0x3, 1, 0, 0})
-	CMember(TArray<FContextualAnimWarpTarget>)         ExternalWarpTargets                                         OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Role                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       Channels                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ContextualAnimation.ContextualAnimSet
@@ -585,19 +615,6 @@ public:
 	SMember(FTransform)                                MeshToComponent                                             OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
-/// Struct /Script/ContextualAnimation.ContextualAnimWarpPoint
-/// Size: 0x0070 (0x000000 - 0x000070)
-class FContextualAnimWarpPoint : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 112;
-
-public:
-	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
-};
-
 /// Struct /Script/ContextualAnimation.ContextualAnimStartSceneParams
 /// Size: 0x0068 (0x000000 - 0x000068)
 class FContextualAnimStartSceneParams : public MDKBase
@@ -641,6 +658,16 @@ public:
 	SMember(FTransform)                                QueryTransform                                              OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(bool)                                      bComplexQuery                                               OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bFindAnimStartTime                                          OFFSET(get<bool>, {0x71, 1, 0, 0})
+};
+
+/// Enum /Script/ContextualAnimation.EContextualAnimCollisionBehavior
+/// Size: 0x04
+enum EContextualAnimCollisionBehavior : uint8_t
+{
+	EContextualAnimCollisionBehavior__None0                                          = 0,
+	EContextualAnimCollisionBehavior__IgnoreActorWhenMoving1                         = 1,
+	EContextualAnimCollisionBehavior__IgnoreChannels2                                = 2,
+	EContextualAnimCollisionBehavior__EContextualAnimCollisionBehavior_MAX3          = 3
 };
 
 /// Enum /Script/ContextualAnimation.EContextualAnimPointType

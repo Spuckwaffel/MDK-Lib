@@ -11,11 +11,11 @@
 /// dependency: VerseFortnite
 
 /// Class /Script/VerseCreature.CreaturePerceptionComponentBase
-/// Size: 0x0010 (0x0000A8 - 0x0000B8)
+/// Size: 0x0010 (0x0000D0 - 0x0000E0)
 class UCreaturePerceptionComponentBase : public UAIPerceptionComponentBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
+	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
 };

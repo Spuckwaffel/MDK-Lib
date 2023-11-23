@@ -317,29 +317,33 @@ public:
 };
 
 /// Class /Script/IrisCore.ObjectReplicationBridge
-/// Size: 0x03A0 (0x000110 - 0x0004B0)
+/// Size: 0x0440 (0x000110 - 0x000550)
 class UObjectReplicationBridge : public UReplicationBridge
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1200;
+	static inline constexpr uint64_t __MDKClassSize = 1360;
 
 public:
 };
 
 /// Class /Script/IrisCore.ObjectReplicationBridgeConfig
-/// Size: 0x0048 (0x000028 - 0x000070)
+/// Size: 0x0080 (0x000028 - 0x0000A8)
 class UObjectReplicationBridgeConfig : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 112;
+	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
 	CMember(TArray<FObjectReplicationBridgePollConfig>) PollConfigs                                                OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FObjectReplicationBridgeFilterConfig>) FilterConfigs                                            OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FObjectReplicationBridgePrioritizerConfig>) PrioritizerConfigs                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FObjectReplicationBridgeDeltaCompressionConfig>) DeltaCompressionConfigs                        OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FName)                                     DefaultSpatialFilterName                                    OFFSET(getStruct<T>, {0x68, 4, 0, 0})
-	SMember(FName)                                     RequiredNetDriverChannelClassName                           OFFSET(getStruct<T>, {0x6C, 4, 0, 0})
+	CMember(TArray<FObjectReplicatedBridgeCriticalClassConfig>) CriticalClassConfigs                               OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(bool)                                      bAllClassesCritical                                         OFFSET(get<bool>, {0x78, 1, 0, 0})
+	CMember(TArray<FObjectReplicationBridgeTypeStatsConfig>) TypeStatsConfigs                                      OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FName)                                     DefaultSpatialFilterName                                    OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     RequiredNetDriverChannelClassName                           OFFSET(getStruct<T>, {0x94, 4, 0, 0})
+	CMember(TArray<FName>)                             CriticalActorClasses                                        OFFSET(get<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/IrisCore.SequentialPartialNetBlobHandlerConfig
@@ -966,6 +970,33 @@ class FObjectReplicationBridgeDeltaCompressionConfig : public MDKBase
 public:
 	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bEnableDeltaCompression                                     OFFSET(get<bool>, {0x4, 1, 0, 0})
+};
+
+/// Struct /Script/IrisCore.ObjectReplicatedBridgeCriticalClassConfig
+/// Size: 0x0008 (0x000000 - 0x000008)
+class FObjectReplicatedBridgeCriticalClassConfig : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 8;
+
+public:
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	DMember(bool)                                      bDisconnectOnProtocolMismatch                               OFFSET(get<bool>, {0x4, 1, 0, 0})
+};
+
+/// Struct /Script/IrisCore.ObjectReplicationBridgeTypeStatsConfig
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FObjectReplicationBridgeTypeStatsConfig : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TypeStatsName                                               OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bIncludeInMinimalCSVStats                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.PackedInt64NetSerializerConfig

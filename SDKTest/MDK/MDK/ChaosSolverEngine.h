@@ -74,39 +74,39 @@ public:
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolverActor
-/// Size: 0x00F8 (0x000290 - 0x000388)
+/// Size: 0x0100 (0x000290 - 0x000390)
 class AChaosSolverActor : public AActor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
+	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FChaosSolverConfiguration)                 Properties                                                  OFFSET(getStruct<T>, {0x290, 104, 0, 0})
-	DMember(float)                                     TimeStepMultiplier                                          OFFSET(get<float>, {0x2F8, 4, 0, 0})
-	DMember(int32_t)                                   CollisionIterations                                         OFFSET(get<int32_t>, {0x2FC, 4, 0, 0})
-	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x300, 4, 0, 0})
-	DMember(int32_t)                                   PushOutPairIterations                                       OFFSET(get<int32_t>, {0x304, 4, 0, 0})
-	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x308, 4, 0, 0})
-	CMember(EClusterConnectionTypeEnum)                ClusterUnionConnectionType                                  OFFSET(get<T>, {0x30C, 1, 0, 0})
-	DMember(bool)                                      DoGenerateCollisionData                                     OFFSET(get<bool>, {0x30D, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x310, 16, 0, 0})
-	DMember(bool)                                      DoGenerateBreakingData                                      OFFSET(get<bool>, {0x320, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x324, 16, 0, 0})
-	DMember(bool)                                      DoGenerateTrailingData                                      OFFSET(get<bool>, {0x334, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x338, 16, 0, 0})
-	DMember(float)                                     MassScale                                                   OFFSET(get<float>, {0x348, 4, 0, 0})
-	DMember(bool)                                      bHasFloor                                                   OFFSET(get<bool>, {0x34C, 1, 0, 0})
-	DMember(float)                                     FloorHeight                                                 OFFSET(get<float>, {0x350, 4, 0, 0})
-	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(getStruct<T>, {0x354, 3, 0, 0})
-	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x358, 8, 0, 0})
-	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            OFFSET(get<T>, {0x378, 8, 0, 0})
+	SMember(FChaosSolverConfiguration)                 Properties                                                  OFFSET(getStruct<T>, {0x290, 108, 0, 0})
+	DMember(float)                                     TimeStepMultiplier                                          OFFSET(get<float>, {0x2FC, 4, 0, 0})
+	DMember(int32_t)                                   CollisionIterations                                         OFFSET(get<int32_t>, {0x300, 4, 0, 0})
+	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x304, 4, 0, 0})
+	DMember(int32_t)                                   PushOutPairIterations                                       OFFSET(get<int32_t>, {0x308, 4, 0, 0})
+	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x30C, 4, 0, 0})
+	CMember(EClusterConnectionTypeEnum)                ClusterUnionConnectionType                                  OFFSET(get<T>, {0x310, 1, 0, 0})
+	DMember(bool)                                      DoGenerateCollisionData                                     OFFSET(get<bool>, {0x311, 1, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x314, 16, 0, 0})
+	DMember(bool)                                      DoGenerateBreakingData                                      OFFSET(get<bool>, {0x324, 1, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x328, 16, 0, 0})
+	DMember(bool)                                      DoGenerateTrailingData                                      OFFSET(get<bool>, {0x338, 1, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x33C, 16, 0, 0})
+	DMember(float)                                     MassScale                                                   OFFSET(get<float>, {0x34C, 4, 0, 0})
+	DMember(bool)                                      bHasFloor                                                   OFFSET(get<bool>, {0x350, 1, 0, 0})
+	DMember(float)                                     FloorHeight                                                 OFFSET(get<float>, {0x354, 4, 0, 0})
+	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(getStruct<T>, {0x358, 3, 0, 0})
+	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x360, 8, 0, 0})
+	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            OFFSET(get<T>, {0x380, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetSolverActive
-	// void SetSolverActive(bool bActive);                                                                                      // [0x5712318] RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSolverActive(bool bActive);                                                                                      // [0x5575e10] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver
-	// void SetAsCurrentWorldSolver();                                                                                          // [0x5712304] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAsCurrentWorldSolver();                                                                                          // [0x5575dfc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ChaosSolverEngine.ChaosSolverSettings

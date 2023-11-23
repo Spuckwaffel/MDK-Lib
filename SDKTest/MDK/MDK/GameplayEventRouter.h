@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent
-/// Size: 0x0078 (0x000030 - 0x0000A8)
+/// Size: 0x0088 (0x000030 - 0x0000B8)
 class UAsyncAction_StartListeningToEvent : public UBlueprintAsyncActionBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 168;
+	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(getStruct<T>, {0x30, 16, 0, 0})
@@ -21,21 +21,21 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent.StopListeningToEvent
-	// void StopListeningToEvent();                                                                                             // [0x21a1844] Final|Native|Public|BlueprintCallable 
+	// void StopListeningToEvent();                                                                                             // [0x32bde40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent.StartListeningToEventBackwardCompatible
-	// UAsyncAction_StartListeningToEvent* StartListeningToEventBackwardCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x176908c] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_StartListeningToEvent* StartListeningToEventBackwardCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x6353eac] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent.StartListeningToEvent
-	// UAsyncAction_StartListeningToEvent* StartListeningToEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x6383ea8] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_StartListeningToEvent* StartListeningToEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x24c18cc] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent.GetPayload
-	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x31d6a68] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x6352c94] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent
-/// Size: 0x0098 (0x000030 - 0x0000C8)
+/// Size: 0x00A8 (0x000030 - 0x0000D8)
 class UAsyncAction_StartListeningToStatefulEvent : public UBlueprintAsyncActionBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 200;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(getStruct<T>, {0x30, 16, 0, 0})
@@ -45,13 +45,13 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent.StopListeningToStatefulEvent
-	// void StopListeningToStatefulEvent();                                                                                     // [0x21a1844] Final|Native|Public|BlueprintCallable 
+	// void StopListeningToStatefulEvent();                                                                                     // [0x32bde40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent.StartListeningToStatefulEventBackwardsCompatible
-	// UAsyncAction_StartListeningToStatefulEvent* StartListeningToStatefulEventBackwardsCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x6384024] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_StartListeningToStatefulEvent* StartListeningToStatefulEventBackwardsCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x63543b4] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent.StartListeningToStatefulEvent
-	// UAsyncAction_StartListeningToStatefulEvent* StartListeningToStatefulEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x1768838] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_StartListeningToStatefulEvent* StartListeningToStatefulEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x2004264] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent.GetPayload
-	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x6383040] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x2003388] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/GameplayEventRouter.GameplayEventRouterComponent
@@ -74,14 +74,30 @@ class UGameplayEventRouterOwnerInterface : public UInterface
 public:
 };
 
-/// Class /Script/GameplayEventRouter.GameplayEventRouterSubsytem
-/// Size: 0x0108 (0x000030 - 0x000138)
-class UGameplayEventRouterSubsytem : public UGameInstanceSubsystem
+/// Class /Script/GameplayEventRouter.GameplayEventRouterSubsystem
+/// Size: 0x0168 (0x000030 - 0x000198)
+class UGameplayEventRouterSubsystem : public UGameInstanceSubsystem
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 408;
 
 public:
+	CMember(TArray<FGameplayEventGlobalRouterPendingListenerData>) PendingGlobalRouterListenerDatas                OFFSET(get<T>, {0x188, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.K2_BroadcastStatefulEventBackwardCompatible
+	// bool K2_BroadcastStatefulEventBackwardCompatible(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, FEventMessageTag Channel, int32_t& EventData, UObject* EventContext); // [0x6353a08] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.K2_BroadcastEventBackwardCompatible
+	// bool K2_BroadcastEventBackwardCompatible(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, FEventMessageTag Channel, int32_t& EventData, UObject* EventContext); // [0x63532e0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.GetGlobalEventRouter
+	// UGameplayEventRouterComponent* GetGlobalEventRouter(UObject* WorldContextObject);                                        // [0x318f790] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.GetEventRouter
+	// UGameplayEventRouterComponent* GetEventRouter(UClass* Scope, AActor* ContextActor);                                      // [0x2f269a0] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.ClearEventStateByContextBackwardCompatible
+	// void ClearEventStateByContextBackwardCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context); // [0x6352878] Final|Native|Static|Public|BlueprintCallable 
+	// Function /Script/GameplayEventRouter.GameplayEventRouterSubsystem.ClearEventStateBackwardCompatible
+	// void ClearEventStateBackwardCompatible(UObject* WorldContextObject, FEventMessageTag Channel, UGameplayEventRouterComponent* Target, UScriptStruct* EventType); // [0x6352480] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Struct /Script/GameplayEventRouter.GameplayEventId
@@ -108,12 +124,12 @@ public:
 };
 
 /// Struct /Script/GameplayEventRouter.GameplayEventListenerBackwardCompatibleHandle
-/// Size: 0x0038 (0x000000 - 0x000038)
+/// Size: 0x0048 (0x000000 - 0x000048)
 class FGameplayEventListenerBackwardCompatibleHandle : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 };
@@ -140,6 +156,19 @@ class FGameplayEventListenerList : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
+};
+
+/// Struct /Script/GameplayEventRouter.GameplayEventGlobalRouterPendingListenerData
+/// Size: 0x00F0 (0x000000 - 0x0000F0)
+class FGameplayEventGlobalRouterPendingListenerData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 240;
+
+public:
+	CMember(UScriptStruct*)                            EventType                                                   OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UObject*)                                  EventContext                                                OFFSET(get<T>, {0xE8, 8, 0, 0})
 };
 
 /// Enum /Script/GameplayEventRouter.EEventBubblingRule

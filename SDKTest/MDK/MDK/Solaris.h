@@ -35,17 +35,18 @@ public:
 };
 
 /// Class /Script/Solaris.VerseDigest
-/// Size: 0x0028 (0x000028 - 0x000050)
+/// Size: 0x0038 (0x000028 - 0x000060)
 class UVerseDigest : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(TArray<char>)                              DigestCode                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   ProjectName                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
-	CMember(EVerseDigestVariant)                       Variant                                                     OFFSET(get<T>, {0x48, 1, 0, 0})
-	DMember(bool)                                      bCookAllVerseInternalDigests                                OFFSET(get<bool>, {0x49, 1, 0, 0})
+	CMember(TArray<char>)                              ManifestCode                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ProjectName                                                 OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	CMember(EVerseDigestVariant)                       Variant                                                     OFFSET(get<T>, {0x58, 1, 0, 0})
+	DMember(bool)                                      bCookAllVerseInternalDigests                                OFFSET(get<bool>, {0x59, 1, 0, 0})
 };
 
 /// Class /Script/Solaris.VerseEnum

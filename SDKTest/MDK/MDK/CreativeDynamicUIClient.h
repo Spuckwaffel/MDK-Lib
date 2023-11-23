@@ -8,9 +8,9 @@
 /// dependency: CoreUObject
 /// dependency: Engine
 
-/// Class /Script/jg_test.jg_testBPLibrary
+/// Class /Script/CreativeDynamicUIClient.CreativeDynamicUILibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
-class Ujg_testBPLibrary : public UBlueprintFunctionLibrary
+class UCreativeDynamicUILibrary : public UBlueprintFunctionLibrary
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;

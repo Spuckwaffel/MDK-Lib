@@ -10,38 +10,38 @@
 /// dependency: FortniteGame
 
 /// Class /Script/UnstableLiquidGunRuntime.FortLiquidGunProjectile
-/// Size: 0x0150 (0x000A88 - 0x000BD8)
+/// Size: 0x0150 (0x000AA0 - 0x000BF0)
 class AFortLiquidGunProjectile : public AFortProjectileBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3032;
+	static inline constexpr uint64_t __MDKClassSize = 3056;
 
 public:
-	CMember(USceneComponent*)                          AttachComponent                                             OFFSET(get<T>, {0xA88, 8, 0, 0})
-	SMember(FVector)                                   AttachOffset                                                OFFSET(getStruct<T>, {0xA90, 24, 0, 0})
-	DMember(int32_t)                                   ProjectileIndex                                             OFFSET(get<int32_t>, {0xAA8, 4, 0, 0})
-	SMember(FVector)                                   StopNormal                                                  OFFSET(getStruct<T>, {0xAB0, 24, 0, 0})
-	CMember(ALiquidRibbonManager*)                     RibbonManager                                               OFFSET(get<T>, {0xAC8, 8, 0, 0})
-	SMember(FScalableFloat)                            MinDistBetweenProjectilesForSplineCollisionTest             OFFSET(getStruct<T>, {0xAD0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDistBetweenInLineProjectilesForSplineCollisionTest       OFFSET(getStruct<T>, {0xAF8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinProjectileVelocityAngleToBeInLine                        OFFSET(getStruct<T>, {0xB20, 40, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            BroadSphereOverlapTraceChannel                              OFFSET(get<T>, {0xB48, 1, 0, 0})
-	SMember(FName)                                     CapsuleTraceProfileName                                     OFFSET(getStruct<T>, {0xB4C, 4, 0, 0})
-	DMember(bool)                                      bCapsuleTraceComplex                                        OFFSET(get<bool>, {0xB50, 1, 0, 0})
-	SMember(FVector_NetQuantize)                       RandomDetachmentAngleFirstHalf                              OFFSET(getStruct<T>, {0xB58, 24, 0, 0})
-	SMember(FVector_NetQuantize)                       RandomDetachmentAngleSecondHalf                             OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
-	DMember(bool)                                      bDrawDebugCollision                                         OFFSET(get<bool>, {0xB88, 1, 0, 0})
-	DMember(bool)                                      bDrawDebugCollisionOnlyCapsuleTraceHits                     OFFSET(get<bool>, {0xB89, 1, 0, 0})
-	CMember(ELiquidRibbonDetachmentReason)             DetachmentReason                                            OFFSET(get<T>, {0xB8A, 1, 0, 0})
+	CMember(USceneComponent*)                          AttachComponent                                             OFFSET(get<T>, {0xAA0, 8, 0, 0})
+	SMember(FVector)                                   AttachOffset                                                OFFSET(getStruct<T>, {0xAA8, 24, 0, 0})
+	DMember(int32_t)                                   ProjectileIndex                                             OFFSET(get<int32_t>, {0xAC0, 4, 0, 0})
+	SMember(FVector)                                   StopNormal                                                  OFFSET(getStruct<T>, {0xAC8, 24, 0, 0})
+	CMember(ALiquidRibbonManager*)                     RibbonManager                                               OFFSET(get<T>, {0xAE0, 8, 0, 0})
+	SMember(FScalableFloat)                            MinDistBetweenProjectilesForSplineCollisionTest             OFFSET(getStruct<T>, {0xAE8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDistBetweenInLineProjectilesForSplineCollisionTest       OFFSET(getStruct<T>, {0xB10, 40, 0, 0})
+	SMember(FScalableFloat)                            MinProjectileVelocityAngleToBeInLine                        OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            BroadSphereOverlapTraceChannel                              OFFSET(get<T>, {0xB60, 1, 0, 0})
+	SMember(FName)                                     CapsuleTraceProfileName                                     OFFSET(getStruct<T>, {0xB64, 4, 0, 0})
+	DMember(bool)                                      bCapsuleTraceComplex                                        OFFSET(get<bool>, {0xB68, 1, 0, 0})
+	SMember(FVector_NetQuantize)                       RandomDetachmentAngleFirstHalf                              OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
+	SMember(FVector_NetQuantize)                       RandomDetachmentAngleSecondHalf                             OFFSET(getStruct<T>, {0xB88, 24, 0, 0})
+	DMember(bool)                                      bDrawDebugCollision                                         OFFSET(get<bool>, {0xBA0, 1, 0, 0})
+	DMember(bool)                                      bDrawDebugCollisionOnlyCapsuleTraceHits                     OFFSET(get<bool>, {0xBA1, 1, 0, 0})
+	CMember(ELiquidRibbonDetachmentReason)             DetachmentReason                                            OFFSET(get<T>, {0xBA2, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/UnstableLiquidGunRuntime.FortLiquidGunProjectile.SetDetachmentReason
-	// void SetDetachmentReason(ELiquidRibbonDetachmentReason InDetachmentReason);                                              // [0xa00d278] Final|Native|Public|BlueprintCallable 
+	// void SetDetachmentReason(ELiquidRibbonDetachmentReason InDetachmentReason);                                              // [0xa5851e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/UnstableLiquidGunRuntime.FortLiquidGunProjectile.HandleSplineHit
-	// void HandleSplineHit(FHitResult& Hit);                                                                                   // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void HandleSplineHit(FHitResult& Hit);                                                                                   // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/UnstableLiquidGunRuntime.FortLiquidGunProjectile.GetDetachmentReason
-	// ELiquidRibbonDetachmentReason GetDetachmentReason();                                                                     // [0xa00cfd4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ELiquidRibbonDetachmentReason GetDetachmentReason();                                                                     // [0xa584f2c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/UnstableLiquidGunRuntime.LiquidRibbonManager
@@ -87,23 +87,23 @@ public:
 
 	/// Functions
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.SetNiagaraData
-	// void SetNiagaraData(UNiagaraComponent* NiagaraComponent, TArray<FVector>& Positions, TArray<int32_t>& RibbonIDs, TArray<bool>& RibbonVisibilities, TArray<float>& FlashIntensities, TArray<int32_t>& RibbonSizes); // [0xa00d2f4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void SetNiagaraData(UNiagaraComponent* NiagaraComponent, TArray<FVector>& Positions, TArray<int32_t>& RibbonIDs, TArray<bool>& RibbonVisibilities, TArray<float>& FlashIntensities, TArray<int32_t>& RibbonSizes); // [0xa58525c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.RunSplineCollisionTestOnProjectiles
-	// void RunSplineCollisionTestOnProjectiles();                                                                              // [0xa00d22c] Final|Native|Public|BlueprintCallable 
+	// void RunSplineCollisionTestOnProjectiles();                                                                              // [0xa585184] Final|Native|Public|BlueprintCallable 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.GetPointOnSegment
-	// FVector GetPointOnSegment(float T, FLiquidRibbonSplineSegment& Segment);                                                 // [0xa00d118] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetPointOnSegment(float T, FLiquidRibbonSplineSegment& Segment);                                                 // [0xa585070] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.GetOrAddDetachment
-	// FLiquidRibbonSplineDetachment GetOrAddDetachment(int32_t RibbonID, FLiquidRibbonSplineSegment& Segment);                 // [0xa00d014] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FLiquidRibbonSplineDetachment GetOrAddDetachment(int32_t RibbonID, FLiquidRibbonSplineSegment& Segment);                 // [0xa584f6c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.GetFirstVisiblePointIndex
-	// int32_t GetFirstVisiblePointIndex();                                                                                     // [0xa00cfec] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// int32_t GetFirstVisiblePointIndex();                                                                                     // [0xa584f44] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.CalculateSplinePointsAndSetNiagaraData
-	// void CalculateSplinePointsAndSetNiagaraData(TArray<AFortLiquidGunProjectile*>& Projectiles, bool bAttachSplineToMuzzle, UNiagaraComponent* NiagaraComponent, TArray<FVector>& OutAllPositions, TArray<int32_t>& OutRibbonIDs, TArray<bool>& OutRibbonVisibilities, TArray<float>& OutFlashIntensities, TArray<int32_t>& OutRibbonSizes); // [0xa00c514] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void CalculateSplinePointsAndSetNiagaraData(TArray<AFortLiquidGunProjectile*>& Projectiles, bool bAttachSplineToMuzzle, UNiagaraComponent* NiagaraComponent, TArray<FVector>& OutAllPositions, TArray<int32_t>& OutRibbonIDs, TArray<bool>& OutRibbonVisibilities, TArray<float>& OutFlashIntensities, TArray<int32_t>& OutRibbonSizes); // [0xa584514] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.CalculateSegments
-	// TArray<FLiquidRibbonSplineSegment> CalculateSegments(TArray<FVector>& Points, float Tension);                            // [0xa00c3a0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FLiquidRibbonSplineSegment> CalculateSegments(TArray<FVector>& Points, float Tension);                            // [0xa584350] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.CalculatePointSize
-	// float CalculatePointSize(int32_t SegmentIndex, int32_t PointIndex);                                                      // [0xa00c2e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float CalculatePointSize(int32_t SegmentIndex, int32_t PointIndex);                                                      // [0xa584294] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.CalculatePointFlashIntensity
-	// float CalculatePointFlashIntensity(int32_t PointSize);                                                                   // [0xa00c254] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float CalculatePointFlashIntensity(int32_t PointSize);                                                                   // [0xa584204] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/UnstableLiquidGunRuntime.LiquidRibbonSplineSegment

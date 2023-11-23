@@ -37,9 +37,9 @@ public:
 
 	/// Functions
 	// Function /Script/SpecialEventGameplayUI.FortGameplayCinematicWidget.OnStartCinematic
-	// void OnStartCinematic();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnStartCinematic();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SpecialEventGameplayUI.FortGameplayCinematicWidget.OnCinematicFinished
-	// void OnCinematicFinished();                                                                                              // [0x9fd3e24] Final|Native|Protected|BlueprintCallable 
+	// void OnCinematicFinished();                                                                                              // [0xa2b8484] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/SpecialEventGameplayUI.FortGameplayIntroPanelWidget
@@ -66,17 +66,17 @@ public:
 
 	/// Functions
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.OnViewportLocationChanged
-	// void OnViewportLocationChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FVector2D& NormalizedLocation, FVector2D& ViewportLocation); // [0x9fd422c] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// void OnViewportLocationChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FVector2D& NormalizedLocation, FVector2D& ViewportLocation); // [0xa2b891c] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.OnDesiredVisibilityChanged
-	// void OnDesiredVisibilityChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0x9fd3ff0] Final|Native|Private|HasOutParms 
+	// void OnDesiredVisibilityChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0xa2b86c8] Final|Native|Private|HasOutParms 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.OnCursorModeChanged
-	// void OnCursorModeChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& NewCursorModeTag, FGameplayTag& OldCursorModeTag); // [0x9fd3e38] Final|Native|Private|HasOutParms 
+	// void OnCursorModeChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& NewCursorModeTag, FGameplayTag& OldCursorModeTag); // [0xa2b8498] Final|Native|Private|HasOutParms 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.GetCursorModeTags
-	// FGameplayTagContainer GetCursorModeTags();                                                                               // [0x9fd3c58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FGameplayTagContainer GetCursorModeTags();                                                                               // [0xa2b82b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.BP_OnDesiredVisibilityChanged
-	// void BP_OnDesiredVisibilityChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_OnDesiredVisibilityChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.BP_OnCursorModeChanged
-	// void BP_OnCursorModeChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& NewCursorModeTag, FGameplayTag& OldCursorModeTag); // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_OnCursorModeChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& NewCursorModeTag, FGameplayTag& OldCursorModeTag); // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/SpecialEventGameplayUI.SpecialEventPlayerInfoWidget
@@ -92,7 +92,7 @@ public:
 
 	/// Functions
 	// Function /Script/SpecialEventGameplayUI.SpecialEventPlayerInfoWidget.GetRepresentedPlayerState
-	// AFortPlayerStateAthena* GetRepresentedPlayerState();                                                                     // [0x9fd3c94] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AFortPlayerStateAthena* GetRepresentedPlayerState();                                                                     // [0xa2b82f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SpecialEventGameplayUI.SpecialEventUILibrary

@@ -11,15 +11,15 @@
 /// dependency: NetCore
 
 /// Class /Script/LaserGameplayRuntime.LaserCapsuleComponent
-/// Size: 0x0010 (0x000590 - 0x0005A0)
+/// Size: 0x0010 (0x0005A0 - 0x0005B0)
 class ULaserCapsuleComponent : public UCapsuleComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1440;
+	static inline constexpr uint64_t __MDKClassSize = 1456;
 
 public:
-	CMember(TEnumAsByte<ECollisionEnabled>)            CollisionWhenEnabled                                        OFFSET(get<T>, {0x590, 1, 0, 0})
-	CMember(TEnumAsByte<ECollisionEnabled>)            CollisionWhenDisabled                                       OFFSET(get<T>, {0x591, 1, 0, 0})
+	CMember(TEnumAsByte<ECollisionEnabled>)            CollisionWhenEnabled                                        OFFSET(get<T>, {0x5A0, 1, 0, 0})
+	CMember(TEnumAsByte<ECollisionEnabled>)            CollisionWhenDisabled                                       OFFSET(get<T>, {0x5A1, 1, 0, 0})
 };
 
 /// Class /Script/LaserGameplayRuntime.LaserGridEditorComponent
@@ -80,29 +80,29 @@ public:
 
 	/// Functions
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.SetLaserGridEnable
-	// void SetLaserGridEnable(bool bEnable);                                                                                   // [0x56ae764] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
+	// void SetLaserGridEnable(bool bEnable);                                                                                   // [0x550d6d4] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.OnRep_LaserGridConnections
-	// void OnRep_LaserGridConnections();                                                                                       // [0x9b54258] Final|Native|Private 
+	// void OnRep_LaserGridConnections();                                                                                       // [0xa08248c] Final|Native|Private 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.OnRep_bEnabled
-	// void OnRep_bEnabled();                                                                                                   // [0x9b5426c] Final|Native|Private 
+	// void OnRep_bEnabled();                                                                                                   // [0xa0824a0] Final|Native|Private 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.LaserGridTriggered
-	// void LaserGridTriggered(FLaserGridConnectionEntry& LaserConnectionData, AActor* TriggeringActor);                        // [0x1d9241c] BlueprintAuthorityOnly|Event|Protected|HasOutParms|BlueprintEvent 
+	// void LaserGridTriggered(FLaserGridConnectionEntry& LaserConnectionData, AActor* TriggeringActor);                        // [0x101681c] BlueprintAuthorityOnly|Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.LaserGridStateUpdated
-	// void LaserGridStateUpdated(bool bLaserGridEnabled);                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void LaserGridStateUpdated(bool bLaserGridEnabled);                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.HandlePatternTimerComplete_PreTransition
-	// void HandlePatternTimerComplete_PreTransition();                                                                         // [0x2cf4738] Final|Native|Private 
+	// void HandlePatternTimerComplete_PreTransition();                                                                         // [0x2b7b1c8] Final|Native|Private 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.HandlePatternTimerComplete_PostTransition
-	// void HandlePatternTimerComplete_PostTransition();                                                                        // [0x2cf4738] Final|Native|Private 
+	// void HandlePatternTimerComplete_PostTransition();                                                                        // [0x2b7b1c8] Final|Native|Private 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.HandleLaserCollisionOverlap
-	// void HandleLaserCollisionOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x7599f20] Final|Native|Private|HasOutParms 
+	// void HandleLaserCollisionOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x77a4754] Final|Native|Private|HasOutParms 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.HandleAttachedBuildingActorDied
-	// void HandleAttachedBuildingActorDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* HitComponent, FName BoneName, FVector Momentum); // [0x7ac5cec] Final|Native|Private|HasDefaults 
+	// void HandleAttachedBuildingActorDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* HitComponent, FName BoneName, FVector Momentum); // [0x7ceedec] Final|Native|Private|HasDefaults 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.GetActiveLaserGridConnections
-	// void GetActiveLaserGridConnections(TArray<FLaserGridConnectionEntry>& OutActiveLaserGridConnections);                    // [0x9b53b98] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void GetActiveLaserGridConnections(TArray<FLaserGridConnectionEntry>& OutActiveLaserGridConnections);                    // [0xa081e68] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.CosmeticDestroyOutletInstance
-	// void CosmeticDestroyOutletInstance(FLaserGridOutletEntry& OutletEntry);                                                  // [0x1d9241c] BlueprintCosmetic|Event|Protected|HasOutParms|BlueprintEvent 
+	// void CosmeticDestroyOutletInstance(FLaserGridOutletEntry& OutletEntry);                                                  // [0x101681c] BlueprintCosmetic|Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.CanActorTriggerLaserGrid
-	// bool CanActorTriggerLaserGrid(AActor* TriggeringActor);                                                                  // [0x9b53b04] BlueprintAuthorityOnly|Native|Event|Protected|BlueprintEvent|Const 
+	// bool CanActorTriggerLaserGrid(AActor* TriggeringActor);                                                                  // [0xa081dd4] BlueprintAuthorityOnly|Native|Event|Protected|BlueprintEvent|Const 
 };
 
 /// Struct /Script/LaserGameplayRuntime.LaserGridConnectionEntry
@@ -179,7 +179,7 @@ class FLaserGridPattern : public MDKBase
 
 public:
 	CMember(TArray<FLaserOutletConnection>)            OutletConnections                                           OFFSET(get<T>, {0x0, 16, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Enum /Script/LaserGameplayRuntime.ELaserConnectionState

@@ -10,24 +10,24 @@
 /// dependency: FortniteGame
 
 /// Class /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController
-/// Size: 0x0030 (0x000368 - 0x000398)
+/// Size: 0x0030 (0x000398 - 0x0003C8)
 class AFortCreativeEditCameraController : public AFortFirstPersonCameraController
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 920;
+	static inline constexpr uint64_t __MDKClassSize = 968;
 
 public:
-	SMember(FCreativeOptionVariableBase)               WantsToImmersiveEdit                                        OFFSET(getStruct<T>, {0x368, 8, 0, 0})
+	SMember(FCreativeOptionVariableBase)               WantsToImmersiveEdit                                        OFFSET(getStruct<T>, {0x398, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController.ServerSetImmersiveEdit
-	// void ServerSetImmersiveEdit(bool bWantsToImmersiveEdit, bool bIsCreativeEditModeEnabled);                                // [0x9bcb82c] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// void ServerSetImmersiveEdit(bool bWantsToImmersiveEdit, bool bIsCreativeEditModeEnabled);                                // [0xa340328] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 	// Function /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController.OnWantsToImmersiveEditChanged
-	// void OnWantsToImmersiveEditChanged(UFortCreativeOption* CreativeOption, char IndexValue);                                // [0x9bcb768] Final|Native|Private 
+	// void OnWantsToImmersiveEditChanged(UFortCreativeOption* CreativeOption, char IndexValue);                                // [0xa340264] Final|Native|Private 
 	// Function /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController.OnCreativeEditModeChanged
-	// void OnCreativeEditModeChanged(bool bIsCreativeEditModeEnabled);                                                         // [0x9bcb6e8] Final|Native|Private 
+	// void OnCreativeEditModeChanged(bool bIsCreativeEditModeEnabled);                                                         // [0xa3401e4] Final|Native|Private 
 	// Function /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController.HandleWeaponEquipped
-	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0x9bcb624] Final|Native|Private 
+	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0xa340120] Final|Native|Private 
 };
 

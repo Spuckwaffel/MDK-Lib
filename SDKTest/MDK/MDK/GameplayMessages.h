@@ -24,11 +24,11 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.Unregister
-	// void Unregister();                                                                                                       // [0x21a1844] Final|Native|Public|BlueprintCallable 
+	// void Unregister();                                                                                                       // [0x32bde40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.RegisterGameplayMessageReceiver
-	// UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(UObject* WorldContextObject, FEventMessageTag Channel, UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, AActor* ActorContext); // [0x17695e4] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(UObject* WorldContextObject, FEventMessageTag Channel, UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, AActor* ActorContext); // [0x634dd40] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.GetPayload
-	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x637d8f4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x634d32c] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/GameplayMessages.GameplayMessageReplicator
@@ -54,11 +54,11 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayMessages.GameplayMessageRouter.K2_BroadcastMessage
-	// void K2_BroadcastMessage(FEventMessageTag Channel, int32_t& Message, bool bSaveToChannel, AActor* ActorContext);         // [0x637dc0c] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void K2_BroadcastMessage(FEventMessageTag Channel, int32_t& Message, bool bSaveToChannel, AActor* ActorContext);         // [0x634d66c] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/GameplayMessages.GameplayMessageRouter.HasValidSavedMessage
-	// bool HasValidSavedMessage(FEventMessageTag Channel);                                                                     // [0x637daac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasValidSavedMessage(FEventMessageTag Channel);                                                                     // [0x634d4cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GameplayMessages.GameplayMessageRouter.ClearSavedMessage
-	// void ClearSavedMessage(FEventMessageTag Channel);                                                                        // [0x637d654] Final|Native|Public|BlueprintCallable 
+	// void ClearSavedMessage(FEventMessageTag Channel);                                                                        // [0x634d1f0] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GameplayMessages.BlueprintEventMessageTagLibrary

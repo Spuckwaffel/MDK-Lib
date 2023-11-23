@@ -54,11 +54,11 @@ public:
 
 	/// Functions
 	// Function /Script/EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1
-	// void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);                                                            // [0x4dd1b0c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);                                                            // [0x4baa008] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1
-	// bool GetSkipAssigningGamepadToPlayer1();                                                                                 // [0x4dd1af8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetSkipAssigningGamepadToPlayer1();                                                                                 // [0x4ba9ff4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EngineSettings.GameMapsSettings.GetGameMapsSettings
-	// UGameMapsSettings* GetGameMapsSettings();                                                                                // [0x4dd1ac8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UGameMapsSettings* GetGameMapsSettings();                                                                                // [0x4ba9fc4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/EngineSettings.GameNetworkManagerSettings

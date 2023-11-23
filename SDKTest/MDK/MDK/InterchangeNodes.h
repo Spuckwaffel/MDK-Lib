@@ -88,6 +88,36 @@ class UInterchangeStandardCameraNode : public UInterchangeBaseNode
 public:
 };
 
+/// Class /Script/InterchangeNodes.InterchangeShaderNode
+/// Size: 0x0010 (0x000060 - 0x000070)
+class UInterchangeShaderNode : public UInterchangeBaseNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+};
+
+/// Class /Script/InterchangeNodes.InterchangeDecalMaterialNode
+/// Size: 0x0020 (0x000070 - 0x000090)
+class UInterchangeDecalMaterialNode : public UInterchangeShaderNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+};
+
+/// Class /Script/InterchangeNodes.InterchangeDecalNode
+/// Size: 0x0030 (0x000060 - 0x000090)
+class UInterchangeDecalNode : public UInterchangeBaseNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+};
+
 /// Class /Script/InterchangeNodes.InterchangeBaseLightNode
 /// Size: 0x0040 (0x000060 - 0x0000A0)
 class UInterchangeBaseLightNode : public UInterchangeBaseNode
@@ -268,16 +298,6 @@ class UInterchangeShaderPortsAPI : public UObject
 public:
 };
 
-/// Class /Script/InterchangeNodes.InterchangeShaderNode
-/// Size: 0x0010 (0x000060 - 0x000070)
-class UInterchangeShaderNode : public UInterchangeBaseNode
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 112;
-
-public:
-};
-
 /// Class /Script/InterchangeNodes.InterchangeFunctionCallShaderNode
 /// Size: 0x0010 (0x000070 - 0x000080)
 class UInterchangeFunctionCallShaderNode : public UInterchangeShaderNode
@@ -289,11 +309,11 @@ public:
 };
 
 /// Class /Script/InterchangeNodes.InterchangeShaderGraphNode
-/// Size: 0x0050 (0x000070 - 0x0000C0)
+/// Size: 0x0060 (0x000070 - 0x0000D0)
 class UInterchangeShaderGraphNode : public UInterchangeShaderNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 192;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
 };

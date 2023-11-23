@@ -38,7 +38,7 @@ public:
 
 	/// Functions
 	// Function /Script/DeployableTurretGameplayRuntime.DeployableTurretAnimInstance.SetNativeVariables
-	// void SetNativeVariables(ABuildingGameplayActor* OwningTurretBGA, FDeployableTurretBPAnimData& AnimData);                 // [0x220dce4] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SetNativeVariables(ABuildingGameplayActor* OwningTurretBGA, FDeployableTurretBPAnimData& AnimData);                 // [0xa0ff644] Final|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/DeployableTurretGameplayRuntime.DeployableTurretLibrary

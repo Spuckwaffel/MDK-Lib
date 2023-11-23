@@ -19,53 +19,53 @@ public:
 };
 
 /// Class /Script/HeadMountedDisplay.MotionControllerComponent
-/// Size: 0x0170 (0x000570 - 0x0006E0)
+/// Size: 0x0170 (0x000580 - 0x0006F0)
 class UMotionControllerComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1760;
+	static inline constexpr uint64_t __MDKClassSize = 1776;
 
 public:
-	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x568, 4, 0, 0})
-	SMember(FName)                                     MotionSource                                                OFFSET(getStruct<T>, {0x56C, 4, 0, 0})
-	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
-	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x574, 1, 0, 0})
-	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x575, 1, 0, 0})
-	SMember(FName)                                     DisplayModelSource                                          OFFSET(getStruct<T>, {0x578, 4, 0, 0})
-	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x580, 8, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x588, 16, 0, 0})
-	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x598, 8, 0, 0})
+	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x578, 4, 0, 0})
+	SMember(FName)                                     MotionSource                                                OFFSET(getStruct<T>, {0x57C, 4, 0, 0})
+	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x580, 1, 1, 0})
+	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x584, 1, 0, 0})
+	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x585, 1, 0, 0})
+	SMember(FName)                                     DisplayModelSource                                          OFFSET(getStruct<T>, {0x588, 4, 0, 0})
+	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x590, 8, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x598, 16, 0, 0})
+	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x5A8, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
-	// void SetTrackingSource(EControllerHand NewSource);                                                                       // [0x5553708] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTrackingSource(EControllerHand NewSource);                                                                       // [0x5360f04] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
-	// void SetTrackingMotionSource(FName NewSource);                                                                           // [0x5553660] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTrackingMotionSource(FName NewSource);                                                                           // [0x5360e84] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetShowDeviceModel
-	// void SetShowDeviceModel(bool bShowControllerModel);                                                                      // [0x55535bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetShowDeviceModel(bool bShowControllerModel);                                                                      // [0x5360de0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetDisplayModelSource
-	// void SetDisplayModelSource(FName NewDisplayModelSource);                                                                 // [0x5553530] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDisplayModelSource(FName NewDisplayModelSource);                                                                 // [0x5360d54] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetCustomDisplayMesh
-	// void SetCustomDisplayMesh(UStaticMesh* NewDisplayMesh);                                                                  // [0x5553458] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCustomDisplayMesh(UStaticMesh* NewDisplayMesh);                                                                  // [0x5360c68] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
-	// void SetAssociatedPlayerIndex(int32_t NewPlayer);                                                                        // [0x55533b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAssociatedPlayerIndex(int32_t NewPlayer);                                                                        // [0x5360be8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.OnMotionControllerUpdated
-	// void OnMotionControllerUpdated();                                                                                        // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void OnMotionControllerUpdated();                                                                                        // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.IsTracked
-	// bool IsTracked();                                                                                                        // [0x5553398] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTracked();                                                                                                        // [0x5360bd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
-	// EControllerHand GetTrackingSource();                                                                                     // [0x5553360] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EControllerHand GetTrackingSource();                                                                                     // [0x5360b98] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetParameterValue
-	// float GetParameterValue(FName InName, bool& bValueFound);                                                                // [0x5553268] Final|RequiredAPI|Native|Protected|HasOutParms|BlueprintCallable 
+	// float GetParameterValue(FName InName, bool& bValueFound);                                                                // [0x5360aa0] Final|RequiredAPI|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearVelocity
-	// bool GetLinearVelocity(FVector& OutLinearVelocity);                                                                      // [0x55531d4] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLinearVelocity(FVector& OutLinearVelocity);                                                                      // [0x53609cc] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetLinearAcceleration
-	// bool GetLinearAcceleration(FVector& OutLinearAcceleration);                                                              // [0x5553140] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLinearAcceleration(FVector& OutLinearAcceleration);                                                              // [0x53608f8] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
-	// FVector GetHandJointPosition(int32_t jointIndex, bool& bValueFound);                                                     // [0x555302c] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// FVector GetHandJointPosition(int32_t jointIndex, bool& bValueFound);                                                     // [0x53607e4] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetAngularVelocity
-	// bool GetAngularVelocity(FRotator& OutAngularVelocity);                                                                   // [0x5552f98] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetAngularVelocity(FRotator& OutAngularVelocity);                                                                   // [0x5360750] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/HeadMountedDisplay.XRHMDData

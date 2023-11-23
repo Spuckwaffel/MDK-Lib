@@ -67,27 +67,27 @@ public:
 
 	/// Functions
 	// Function /Script/Tweening.TweenManager.StopTweens
-	// void StopTweens(TArray<int32_t> InTweenIds);                                                                             // [0x9a2e49c] Final|Native|Public|BlueprintCallable 
+	// void StopTweens(TArray<int32_t> InTweenIds);                                                                             // [0x9f5d4e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.StopTween
-	// bool StopTween(int32_t InTweenId);                                                                                       // [0x9a2e410] Final|Native|Public|BlueprintCallable 
+	// bool StopTween(int32_t InTweenId);                                                                                       // [0x9f5d458] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.SetTweenTiming
-	// bool SetTweenTiming(int32_t InTweenId, float InDuration, float InDelayAtBeginning, float InDelayAtEnd);                  // [0x9a2e2bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool SetTweenTiming(int32_t InTweenId, float InDuration, float InDelayAtBeginning, float InDelayAtEnd);                  // [0x9f5d304] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Tweening.TweenManager.ResetTweens
-	// void ResetTweens(TArray<int32_t> InTweenIds, ETweenResetDestination InDestination);                                      // [0x9a2e1ac] Final|Native|Public|BlueprintCallable 
+	// void ResetTweens(TArray<int32_t> InTweenIds, ETweenResetDestination InDestination);                                      // [0x9f5d1f4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.ResetTween
-	// bool ResetTween(int32_t InTweenId, ETweenResetDestination InDestination);                                                // [0x9a2e0ec] Final|Native|Public|BlueprintCallable 
+	// bool ResetTween(int32_t InTweenId, ETweenResetDestination InDestination);                                                // [0x9f5d134] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.PlayTweenWithLooping
-	// bool PlayTweenWithLooping(int32_t InTweenId, ETweenLoopType InLoopType, int32_t InLoopCount, ETweenPlayDirection InPlayDirection); // [0x9a2dea0] Final|Native|Public|BlueprintCallable 
+	// bool PlayTweenWithLooping(int32_t InTweenId, ETweenLoopType InLoopType, int32_t InLoopCount, ETweenPlayDirection InPlayDirection); // [0x9f5cee8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.PlayTweens
-	// void PlayTweens(TArray<int32_t> InTweenIds, ETweenPlayDirection InPlayDirection);                                        // [0x9a2dfdc] Final|Native|Public|BlueprintCallable 
+	// void PlayTweens(TArray<int32_t> InTweenIds, ETweenPlayDirection InPlayDirection);                                        // [0x9f5d024] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.PlayTween
-	// bool PlayTween(int32_t InTweenId, ETweenPlayDirection InPlayDirection);                                                  // [0x9a2dde0] Final|Native|Public|BlueprintCallable 
+	// bool PlayTween(int32_t InTweenId, ETweenPlayDirection InPlayDirection);                                                  // [0x9f5ce28] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.KillTweens
-	// void KillTweens(TArray<int32_t> InTweenIds);                                                                             // [0x9a2dc84] Final|Native|Public|BlueprintCallable 
+	// void KillTweens(TArray<int32_t> InTweenIds);                                                                             // [0x9f5cccc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.KillTween
-	// bool KillTween(int32_t InTweenId);                                                                                       // [0x9a2dbf8] Final|Native|Public|BlueprintCallable 
+	// bool KillTween(int32_t InTweenId);                                                                                       // [0x9f5cc40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.HasTween
-	// bool HasTween(int32_t InTweenId);                                                                                        // [0x9a2db6c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// bool HasTween(int32_t InTweenId);                                                                                        // [0x9f5cbb4] Final|Native|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/Tweening.TweenSequence
@@ -105,17 +105,17 @@ public:
 
 	/// Functions
 	// Function /Script/Tweening.TweenSequence.Stop
-	// void Stop();                                                                                                             // [0x9a2e3fc] Final|Native|Public|BlueprintCallable 
+	// void Stop();                                                                                                             // [0x9f5d444] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.Play
-	// void Play(ETweenPlayDirection InPlayDirection);                                                                          // [0x9a2dd60] Final|Native|Public|BlueprintCallable 
+	// void Play(ETweenPlayDirection InPlayDirection);                                                                          // [0x9f5cda8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.BP_JoinTween
-	// void BP_JoinTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9a26e74] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void BP_JoinTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9f56c88] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.BP_JoinSequence
-	// void BP_JoinSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9a26bac] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void BP_JoinSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9f569f0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.BP_AppendTween
-	// void BP_AppendTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9a25d64] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void BP_AppendTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9f55d6c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.BP_AppendSequence
-	// void BP_AppendSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9a25a9c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void BP_AppendSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0x9f55ad4] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/Tweening.WidgetTweening

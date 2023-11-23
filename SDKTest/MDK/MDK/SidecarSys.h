@@ -58,7 +58,7 @@ class FSidecarFileInfo : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	CMember(TMap<FString, FString>)                    meta                                                        OFFSET(get<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FString, FString>)                    Meta                                                        OFFSET(get<T>, {0x0, 80, 0, 0})
 	DMember(bool)                                      bIsCheckedOut                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(bool)                                      bOperationPending                                           OFFSET(get<bool>, {0x51, 1, 0, 0})
 	SMember(FString)                                   CheckoutGuid                                                OFFSET(getStruct<T>, {0x58, 16, 0, 0})

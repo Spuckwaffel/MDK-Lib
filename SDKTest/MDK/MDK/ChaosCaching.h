@@ -38,23 +38,23 @@ public:
 
 	/// Functions
 	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerComponentByCache
-	// void TriggerComponentByCache(FName InCacheName);                                                                         // [0xa59d178] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void TriggerComponentByCache(FName InCacheName);                                                                         // [0xacb957c] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerComponent
-	// void TriggerComponent(UPrimitiveComponent* InComponent);                                                                 // [0xa59d0f8] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void TriggerComponent(UPrimitiveComponent* InComponent);                                                                 // [0xacb94fc] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.TriggerAll
-	// void TriggerAll();                                                                                                       // [0xa59d074] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void TriggerAll();                                                                                                       // [0xacb9474] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.SetStartTime
-	// void SetStartTime(float InStartTime);                                                                                    // [0xa59cff4] Final|RequiredAPI|Native|Public 
+	// void SetStartTime(float InStartTime);                                                                                    // [0xacb93f4] Final|RequiredAPI|Native|Public 
 	// Function /Script/ChaosCaching.ChaosCacheManager.SetCacheCollection
-	// void SetCacheCollection(UChaosCacheCollection* InCacheCollection);                                                       // [0xa59cf74] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void SetCacheCollection(UChaosCacheCollection* InCacheCollection);                                                       // [0xacb9374] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.ResetSingleTransform
-	// void ResetSingleTransform(int32_t InIndex);                                                                              // [0xa59ceac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetSingleTransform(int32_t InIndex);                                                                              // [0xacb92a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.ResetAllComponentTransforms
-	// void ResetAllComponentTransforms();                                                                                      // [0xa59ce98] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetAllComponentTransforms();                                                                                      // [0xacb928c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.EnablePlaybackByCache
-	// void EnablePlaybackByCache(FName InCacheName, bool bEnable);                                                             // [0xa59cdb0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void EnablePlaybackByCache(FName InCacheName, bool bEnable);                                                             // [0xacb91a0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.EnablePlayback
-	// void EnablePlayback(int32_t Index, bool bEnable);                                                                        // [0xa59cce0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void EnablePlayback(int32_t Index, bool bEnable);                                                                        // [0xacb90d0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/ChaosCaching.ChaosCachePlayer
@@ -212,12 +212,12 @@ public:
 };
 
 /// Struct /Script/ChaosCaching.ObservedComponent
-/// Size: 0x0160 (0x000000 - 0x000160)
+/// Size: 0x0180 (0x000000 - 0x000180)
 class FObservedComponent : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 352;
+	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
 	SMember(FName)                                     CacheName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
@@ -225,6 +225,7 @@ public:
 	SMember(FSoftComponentReference)                   SoftComponentRef                                            OFFSET(getStruct<T>, {0x30, 64, 0, 0})
 	DMember(bool)                                      bIsSimulating                                               OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bPlaybackEnabled                                            OFFSET(get<bool>, {0x71, 1, 0, 0})
+	SMember(FDirectoryPath)                            USDCacheDirectory                                           OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 };
 
 /// Struct /Script/ChaosCaching.ParticleTransformTrack

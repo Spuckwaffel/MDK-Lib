@@ -55,23 +55,23 @@ public:
 
 	/// Functions
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomRotation
-	// void SetRoomRotation(FQuat& InRotation);                                                                                 // [0xa473ce0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetRoomRotation(FQuat& InRotation);                                                                                 // [0xab94d74] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomPosition
-	// void SetRoomPosition(FVector& InPosition);                                                                               // [0xa473c58] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetRoomPosition(FVector& InPosition);                                                                               // [0xab94cb0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomMaterials
-	// void SetRoomMaterials(TArray<ERaMaterialName>& InMaterials);                                                             // [0xa473580] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetRoomMaterials(TArray<ERaMaterialName>& InMaterials);                                                             // [0xab9467c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomDimensions
-	// void SetRoomDimensions(FVector& InDimensions);                                                                           // [0xa4734f8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetRoomDimensions(FVector& InDimensions);                                                                           // [0xab945b8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbTimeModifier
-	// void SetReverbTimeModifier(float InReverbTimeModifier);                                                                  // [0xa473468] Final|Native|Public|BlueprintCallable 
+	// void SetReverbTimeModifier(float InReverbTimeModifier);                                                                  // [0xab94528] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbGain
-	// void SetReverbGain(float InReverbGain);                                                                                  // [0xa4733d8] Final|Native|Public|BlueprintCallable 
+	// void SetReverbGain(float InReverbGain);                                                                                  // [0xab94498] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbBrightness
-	// void SetReverbBrightness(float InReverbBrightness);                                                                      // [0xa473348] Final|Native|Public|BlueprintCallable 
+	// void SetReverbBrightness(float InReverbBrightness);                                                                      // [0xab94408] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReflectionScalar
-	// void SetReflectionScalar(float InReflectionScalar);                                                                      // [0xa4732b8] Final|Native|Public|BlueprintCallable 
+	// void SetReflectionScalar(float InReflectionScalar);                                                                      // [0xab94378] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetEnableRoomEffects
-	// void SetEnableRoomEffects(bool bInEnableRoomEffects);                                                                    // [0xa473124] Final|Native|Public|BlueprintCallable 
+	// void SetEnableRoomEffects(bool bInEnableRoomEffects);                                                                    // [0xab941e4] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ResonanceAudio.ResonanceAudioSettings
@@ -109,9 +109,9 @@ public:
 
 	/// Functions
 	// Function /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceSpread
-	// void SetSoundSourceSpread(float InSpread);                                                                               // [0x5b3c7b8] Final|Native|Public|BlueprintCallable 
+	// void SetSoundSourceSpread(float InSpread);                                                                               // [0x59ae9dc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
-	// void SetSoundSourceDirectivity(float InPattern, float InSharpness);                                                      // [0xa473d68] Final|Native|Public|BlueprintCallable 
+	// void SetSoundSourceDirectivity(float InPattern, float InSharpness);                                                      // [0xab94dfc] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/ResonanceAudio.ResonanceAudioReverbPluginSettings

@@ -9,26 +9,6 @@
 /// dependency: Engine
 /// dependency: FortniteGame
 
-/// Class /Game/Maps/FrontEnd/Maps/FrontEndStore.FrontEndStore_C
-/// Size: 0x0000 (0x0002A8 - 0x0002A8)
-class AFrontEndStore_C : public AFortLevelScriptActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 680;
-
-public:
-};
-
-/// Class /Game/Maps/UI/Frontend_Lobby_Layout2.Frontend_Lobby_Layout2_C
-/// Size: 0x0000 (0x0002A8 - 0x0002A8)
-class AFrontend_Lobby_Layout2_C : public AFortLevelScriptActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 680;
-
-public:
-};
-
 /// Class /Game/Maps/Frontend.Frontend_C
 /// Size: 0x0018 (0x0002A8 - 0x0002C0)
 class AFrontend_C : public AFortLevelScriptActor
@@ -45,13 +25,33 @@ public:
 
 	/// Functions
 	// Function /Game/Maps/Frontend.Frontend_C.PlaySpeech
-	// void PlaySpeech(FString Filename, int32_t SampleRate, USoundWave* AssetFile);                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void PlaySpeech(FString Filename, int32_t SampleRate, USoundWave* AssetFile);                                            // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Maps/Frontend.Frontend_C.OnMatchStarted
-	// void OnMatchStarted();                                                                                                   // [0x1d9241c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+	// void OnMatchStarted();                                                                                                   // [0x101681c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
 	// Function /Game/Maps/Frontend.Frontend_C.EnableTutorial
-	// void EnableTutorial();                                                                                                   // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void EnableTutorial();                                                                                                   // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Maps/Frontend.Frontend_C.ExecuteUbergraph_Frontend
-	// void ExecuteUbergraph_Frontend(int32_t EntryPoint);                                                                      // [0x1d9241c] Final                
+	// void ExecuteUbergraph_Frontend(int32_t EntryPoint);                                                                      // [0x101681c] Final                
+};
+
+/// Class /Game/Maps/WorldLightingMenu.WorldLightingMenu_C
+/// Size: 0x0000 (0x0002A8 - 0x0002A8)
+class AWorldLightingMenu_C : public AFortLevelScriptActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 680;
+
+public:
+};
+
+/// Class /Game/Maps/UI/Frontend_BattlePass.Frontend_BattlePass_C
+/// Size: 0x0000 (0x0002A8 - 0x0002A8)
+class AFrontend_BattlePass_C : public AFortLevelScriptActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 680;
+
+public:
 };
 
 /// Class /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C
@@ -69,26 +69,26 @@ public:
 
 	/// Functions
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_2_RequestDelegate__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_2_RequestDelegate__DelegateSignature();                           // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_2_RequestDelegate__DelegateSignature();                           // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_3_RequestDelegate__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_3_RequestDelegate__DelegateSignature();                           // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_3_RequestDelegate__DelegateSignature();                           // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_1_OnEnvironmentBackgroundTextureChangedDynamic__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_1_OnEnvironmentBackgroundTextureChangedDynamic__DelegateSignature(UTexture* BackgroundImage); // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_1_OnEnvironmentBackgroundTextureChangedDynamic__DelegateSignature(UTexture* BackgroundImage); // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_0_OnEnvironmentChangedDynamic__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_0_OnEnvironmentChangedDynamic__DelegateSignature(FString PresetEnvironmentName); // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_0_OnEnvironmentChangedDynamic__DelegateSignature(FString PresetEnvironmentName); // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_4_OnEnteredItemShop__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_4_OnEnteredItemShop__DelegateSignature();                         // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_4_OnEnteredItemShop__DelegateSignature();                         // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_5_OnEnteredStore__DelegateSignature
-	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_5_OnEnteredStore__DelegateSignature();                            // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_5_OnEnteredStore__DelegateSignature();                            // [0x101681c] BlueprintEvent       
 	// Function /Game/Maps/UI/Frontend_BG_Main.Frontend_BG_Main_C.ExecuteUbergraph_Frontend_BG_Main
-	// void ExecuteUbergraph_Frontend_BG_Main(int32_t EntryPoint);                                                              // [0x1d9241c] Final                
+	// void ExecuteUbergraph_Frontend_BG_Main(int32_t EntryPoint);                                                              // [0x101681c] Final                
 };
 
-/// Class /Game/Maps/WorldLightingMenu.WorldLightingMenu_C
+/// Class /Game/Maps/FrontEnd/Maps/FrontEndStore.FrontEndStore_C
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
-class AWorldLightingMenu_C : public AFortLevelScriptActor
+class AFrontEndStore_C : public AFortLevelScriptActor
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 680;
@@ -96,9 +96,9 @@ class AWorldLightingMenu_C : public AFortLevelScriptActor
 public:
 };
 
-/// Class /Game/Maps/UI/Frontend_BattlePass.Frontend_BattlePass_C
+/// Class /Game/Maps/UI/Frontend_Lobby_Layout2.Frontend_Lobby_Layout2_C
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
-class AFrontend_BattlePass_C : public AFortLevelScriptActor
+class AFrontend_Lobby_Layout2_C : public AFortLevelScriptActor
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 680;

@@ -7,24 +7,13 @@
 
 /// dependency: CoreUObject
 /// dependency: Engine
-/// dependency: ModularGameplay
-
-/// Class /Script/AssembledMeshSystem.AssembledMeshCoordinatorComponent
-/// Size: 0x0008 (0x0000A0 - 0x0000A8)
-class UAssembledMeshCoordinatorComponent : public UPlayerStateComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 168;
-
-public:
-};
 
 /// Class /Script/AssembledMeshSystem.AssembledMeshSchema
-/// Size: 0x0178 (0x000030 - 0x0001A8)
+/// Size: 0x0188 (0x000030 - 0x0001B8)
 class UAssembledMeshSchema : public UPrimaryDataAsset
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 424;
+	static inline constexpr uint64_t __MDKClassSize = 440;
 
 public:
 	SMember(FGameplayTag)                              MeshSchemaTag                                               OFFSET(getStruct<T>, {0x30, 4, 0, 0})
@@ -35,6 +24,7 @@ public:
 	SMember(FAssembledMeshAttachmentRules)             AttachmentRules                                             OFFSET(getStruct<T>, {0x118, 80, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   AnimClass                                                   OFFSET(get<T>, {0x168, 32, 0, 0})
 	SMember(FGameplayTagContainer)                     SoundLibraryTags                                            OFFSET(getStruct<T>, {0x188, 32, 0, 0})
+	CMember(TArray<FInstancedStruct>)                  AdditionalData                                              OFFSET(get<T>, {0x1A8, 16, 0, 0})
 };
 
 /// Class /Script/AssembledMeshSystem.AssembledMeshUserComponent
@@ -52,17 +42,42 @@ public:
 
 	/// Functions
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.SetMeshPart
-	// void SetMeshPart(UAssembledMeshSchema* InMeshPart);                                                                      // [0x56bcb00] Final|Native|Private|BlueprintCallable 
+	// void SetMeshPart(UAssembledMeshSchema* InMeshPart);                                                                      // [0x551cb00] Final|Native|Private|BlueprintCallable 
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.OnRep_MeshParts
-	// void OnRep_MeshParts();                                                                                                  // [0x661ed88] Final|Native|Private 
+	// void OnRep_MeshParts();                                                                                                  // [0x65f1a74] Final|Native|Private 
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GetMeshPart
-	// UAssembledMeshSchema* GetMeshPart();                                                                                     // [0x5ce3900] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// UAssembledMeshSchema* GetMeshPart();                                                                                     // [0x5b96f14] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GetAttachToComponent
-	// USkeletalMeshComponent* GetAttachToComponent();                                                                          // [0x661ec68] Native|Event|Protected|BlueprintEvent 
+	// USkeletalMeshComponent* GetAttachToComponent();                                                                          // [0x65f1a4c] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.GatherAndAssignAssembledMeshParts
-	// void GatherAndAssignAssembledMeshParts();                                                                                // [0x2c410f8] Native|Public        
+	// void GatherAndAssignAssembledMeshParts();                                                                                // [0x5d4e118] Native|Public        
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.CustomizationCompleted
-	// void CustomizationCompleted(int32_t PartIndex);                                                                          // [0x661ebe8] Final|Native|Private 
+	// void CustomizationCompleted(int32_t PartIndex);                                                                          // [0x65f19cc] Final|Native|Private 
+};
+
+/// Struct /Script/AssembledMeshSystem.AssembledMeshSchemaData
+/// Size: 0x0001 (0x000000 - 0x000001)
+class FAssembledMeshSchemaData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/AssembledMeshSystem.AssembledMeshSchemaData_Icons
+/// Size: 0x005F (0x000001 - 0x000060)
+class FAssembledMeshSchemaData_Icons : public FAssembledMeshSchemaData
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 96;
+
+public:
+	CMember(TWeakObjectPtr<UTexture2D*>)               WidePreviewImage                                            OFFSET(get<T>, {0x0, 32, 0, 0})
+	CMember(TWeakObjectPtr<UTexture2D*>)               SmallPreviewImage                                           OFFSET(get<T>, {0x20, 32, 0, 0})
+	CMember(TWeakObjectPtr<UTexture2D*>)               LargePreviewImage                                           OFFSET(get<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.AssembledMeshAttachmentRules
@@ -119,15 +134,16 @@ public:
 };
 
 /// Struct /Script/AssembledMeshSystem.AssembledComponentReferences
-/// Size: 0x0010 (0x000000 - 0x000010)
+/// Size: 0x0018 (0x000000 - 0x000018)
 class FAssembledComponentReferences : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
+	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(USkeletalMeshComponent*)                   SkeletalMeshComponent                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UCustomizableSkeletalComponent*)           CustomizableComponent                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FGameplayTag)                              AssembledMeshSchemaTag                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 

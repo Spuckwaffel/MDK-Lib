@@ -14,21 +14,21 @@
 /// dependency: ModularGameplay
 
 /// Class /Script/MantisRuntime.FortMantisLayerAnimInstance
-/// Size: 0x0010 (0x0015E0 - 0x0015F0)
+/// Size: 0x0010 (0x0015F0 - 0x001600)
 class UFortMantisLayerAnimInstance : public UFortPlayerAnimInstanceProxy
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5616;
+	static inline constexpr uint64_t __MDKClassSize = 5632;
 
 public:
-	SMember(FFortMantisReplicatedAnimInstanceInfo)     MantisAnimInstanceInfo                                      OFFSET(getStruct<T>, {0x15D8, 16, 0, 0})
+	SMember(FFortMantisReplicatedAnimInstanceInfo)     MantisAnimInstanceInfo                                      OFFSET(getStruct<T>, {0x15E8, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MantisRuntime.FortMantisLayerAnimInstance.OnMantisTechniqueStarted
-	// void OnMantisTechniqueStarted(int32_t TechniqueIndex, FName TechniqueName);                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnMantisTechniqueStarted(int32_t TechniqueIndex, FName TechniqueName);                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortMantisLayerAnimInstance.OnMantisTechniqueEnded
-	// void OnMantisTechniqueEnded(int32_t TechniqueIndex, FName TechniqueName);                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnMantisTechniqueEnded(int32_t TechniqueIndex, FName TechniqueName);                                                // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/MantisRuntime.FortItemLayerAnimInstance_UncleBrolly
@@ -104,17 +104,17 @@ public:
 };
 
 /// Class /Script/MantisRuntime.FortAbilityTask_ApplyRootMotionMantisForce
-/// Size: 0x0048 (0x0000B8 - 0x000100)
+/// Size: 0x0068 (0x0000B8 - 0x000120)
 class UFortAbilityTask_ApplyRootMotionMantisForce : public UAbilityTask_ApplyRootMotion_Base
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 256;
+	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC8, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0xC8, 4, 0, 0})
 	CMember(UAnimMontage*)                             TechniqueMontage                                            OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xD8, 72, 0, 0})
 };
 
 /// Class /Script/MantisRuntime.FortAnimNotify_Mantis
@@ -131,61 +131,68 @@ public:
 };
 
 /// Class /Script/MantisRuntime.FortAnimNotifyState_Mantis
-/// Size: 0x0010 (0x000030 - 0x000040)
+/// Size: 0x0018 (0x000030 - 0x000048)
 class UFortAnimNotifyState_Mantis : public UAnimNotifyState
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(EFortMantisNotifyWindow)                   MantisNotifyWindow                                          OFFSET(get<T>, {0x30, 1, 0, 0})
 	SMember(FGameplayTag)                              MantisNotifyTag                                             OFFSET(getStruct<T>, {0x34, 4, 0, 0})
-	CMember(EFortMantisNotifyRotationWarpRateRule)     RotationRateWarpRule                                        OFFSET(get<T>, {0x38, 1, 0, 0})
-	DMember(bool)                                      bWarpRotation                                               OFFSET(get<bool>, {0x39, 1, 1, 0})
-	DMember(bool)                                      bWarpTranslation                                            OFFSET(get<bool>, {0x39, 1, 1, 1})
+	CMember(EFortMantisNotifyTranslationWarpLimitRule) TranslationWarpLimitRule                                    OFFSET(get<T>, {0x38, 1, 0, 0})
+	DMember(float)                                     TranslationWarpLimit                                        OFFSET(get<float>, {0x3C, 4, 0, 0})
+	CMember(EFortMantisNotifyRotationWarpRateRule)     RotationRateWarpRule                                        OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(bool)                                      bWarpRotation                                               OFFSET(get<bool>, {0x41, 1, 1, 0})
+	DMember(bool)                                      bWarpTranslation                                            OFFSET(get<bool>, {0x41, 1, 1, 1})
 };
 
 /// Class /Script/MantisRuntime.FortGameplayAbility_Mantis
-/// Size: 0x0048 (0x000B28 - 0x000B70)
+/// Size: 0x0048 (0x000B60 - 0x000BA8)
 class UFortGameplayAbility_Mantis : public UFortGameplayAbility
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2928;
+	static inline constexpr uint64_t __MDKClassSize = 2984;
 
 public:
-	DMember(bool)                                      bAllowRootMotionWarping                                     OFFSET(get<bool>, {0xB28, 1, 0, 0})
-	DMember(bool)                                      bApplyEffectContainerOnTechniqueDamage                      OFFSET(get<bool>, {0xB29, 1, 0, 0})
-	DMember(bool)                                      bApplyEffectContainerOnTechniqueStart                       OFFSET(get<bool>, {0xB2A, 1, 0, 0})
-	CMember(UFortMantisPawnComponent*)                 MantisPawnComponent                                         OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(UAbilityTask_PlayMontageAndWait*)          MontageTask                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
-	CMember(UAbilityTask_ApplyRootMotion_Base*)        RootMotionTask                                              OFFSET(get<T>, {0xB40, 8, 0, 0})
+	DMember(bool)                                      bAllowRootMotionWarping                                     OFFSET(get<bool>, {0xB60, 1, 0, 0})
+	DMember(bool)                                      bUseAlternativeWarpingBehavior                              OFFSET(get<bool>, {0xB61, 1, 0, 0})
+	DMember(bool)                                      bApplyEffectContainerOnTechniqueDamage                      OFFSET(get<bool>, {0xB62, 1, 0, 0})
+	DMember(bool)                                      bApplyEffectContainerOnTechniqueStart                       OFFSET(get<bool>, {0xB63, 1, 0, 0})
+	CMember(UFortMantisPawnComponent*)                 MantisPawnComponent                                         OFFSET(get<T>, {0xB68, 8, 0, 0})
+	CMember(UAbilityTask_PlayMontageAndWait*)          MontageTask                                                 OFFSET(get<T>, {0xB70, 8, 0, 0})
+	CMember(UAbilityTask_ApplyRootMotion_Base*)        RootMotionTask                                              OFFSET(get<T>, {0xB78, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.OnMontageFinished
-	// void OnMontageFinished();                                                                                                // [0x9a71d14] Final|Native|Protected 
+	// void OnMontageFinished();                                                                                                // [0x9f9c388] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.OnMontageCancelled
-	// void OnMontageCancelled();                                                                                               // [0x9a71d00] Final|Native|Protected 
+	// void OnMontageCancelled();                                                                                               // [0x9f9c374] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.GetLevelForGameplayEffectContainer
-	// int32_t GetLevelForGameplayEffectContainer(FGameplayTag ApplicationTag);                                                 // [0x9a71928] Native|Event|Protected|BlueprintEvent|Const 
+	// int32_t GetLevelForGameplayEffectContainer(FGameplayTag ApplicationTag);                                                 // [0x9f9bf64] Native|Event|Protected|BlueprintEvent|Const 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.GetDynamicMontageNameForTechnique
-	// FName GetDynamicMontageNameForTechnique(FName TechniqueName);                                                            // [0x9a7189c] Native|Event|Protected|BlueprintEvent|Const 
+	// FName GetDynamicMontageNameForTechnique(FName TechniqueName);                                                            // [0x9f9bed8] Native|Event|Protected|BlueprintEvent|Const 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.FillMetadataForTechnique
-	// void FillMetadataForTechnique(FName TechniqueName, FFortMantisTechniqueMetadata& OutTechniqueMetadata);                  // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void FillMetadataForTechnique(FName TechniqueName, FFortMantisTechniqueMetadata& OutTechniqueMetadata);                  // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.ConfigureRootMotionWarpingAlternativeBehavior
+	// void ConfigureRootMotionWarpingAlternativeBehavior(FName TechniqueName, AActor*& OutTargetActor, bool& bOutSnapshotTargetActorLocation, EFortMantisWarpTranslationMethod& OutWarpTranslationMethod, FVector& OutWarpTranslationVector, EFortMantisWarpRotationMethod& OutWarpRotationMethod, FRotator& OutStaticRotation); // [0x101681c] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.ConfigureRootMotionWarping
-	// void ConfigureRootMotionWarping(FName TechniqueName, bool& bOutAllowTranslationWarp, bool& bOutAllowRotationWarp, AActor*& OutTargetActor, bool& bOutSnapshotTargetActorLocation, bool& bOutWarpTranslationToLocation, FVector& outTargetLocation); // [0x9a715f0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// void ConfigureRootMotionWarping(FName TechniqueName, bool& bOutAllowTranslationWarp, bool& bOutAllowRotationWarp, AActor*& OutTargetActor, bool& bOutSnapshotTargetActorLocation, bool& bOutWarpTranslationToLocation, FVector& outTargetLocation); // [0x9f9bbf0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnTechniqueNotifyWindowStarted
-	// void BP_OnTechniqueNotifyWindowStarted(EFortMantisNotifyWindow NotifyWindow, UFortAnimNotifyState_Mantis* Notify);       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnTechniqueNotifyWindowStarted(EFortMantisNotifyWindow NotifyWindow, UFortAnimNotifyState_Mantis* Notify);       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnTechniqueNotifyWindowEnded
-	// void BP_OnTechniqueNotifyWindowEnded(EFortMantisNotifyWindow NotifyWindow, UFortAnimNotifyState_Mantis* Notify);         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnTechniqueNotifyWindowEnded(EFortMantisNotifyWindow NotifyWindow, UFortAnimNotifyState_Mantis* Notify);         // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnTechniqueNotifyEvent
-	// void BP_OnTechniqueNotifyEvent(EFortMantisNotifyEvent NotifyEvent, UFortAnimNotify_Mantis* Notify);                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnTechniqueNotifyEvent(EFortMantisNotifyEvent NotifyEvent, UFortAnimNotify_Mantis* Notify);                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnMantisTechniqueHit
-	// void BP_OnMantisTechniqueHit(FGameplayAbilityTargetDataHandle& TargetDataHandle, FGameplayTag ApplicationTag);           // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_OnMantisTechniqueHit(FGameplayAbilityTargetDataHandle& TargetDataHandle, FGameplayTag ApplicationTag);           // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnMantisPreTechniqueSelection
+	// void BP_OnMantisPreTechniqueSelection();                                                                                 // [0x101681c] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_OnMantisInputEvent
-	// void BP_OnMantisInputEvent(EFortMantisTechniqueActivationInputType InputType, EFortMantisTechniqueActivationTimingType InputTiming, bool bDidInputStartTechnique, bool bDidInputQueueTechnique, float InputHeldDuration); // [0x1d9241c] BlueprintCosmetic|Event|Protected|BlueprintEvent 
+	// void BP_OnMantisInputEvent(EFortMantisTechniqueActivationInputType InputType, EFortMantisTechniqueActivationTimingType InputTiming, bool bDidInputStartTechnique, bool bDidInputQueueTechnique, float InputHeldDuration); // [0x101681c] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_MantisAbilityTechniqueStarted
-	// void BP_MantisAbilityTechniqueStarted(FGameplayTagContainer OwningTags, FName SequenceName, bool StartsSequence, bool EndsSequence); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_MantisAbilityTechniqueStarted(FGameplayTagContainer OwningTags, FName SequenceName, bool StartsSequence, bool EndsSequence); // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/MantisRuntime.FortMantisData
@@ -204,48 +211,50 @@ public:
 };
 
 /// Class /Script/MantisRuntime.FortMantisPawnComponent
-/// Size: 0x03A8 (0x0000A0 - 0x000448)
+/// Size: 0x03C0 (0x0000A0 - 0x000460)
 class UFortMantisPawnComponent : public UPawnComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1096;
+	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnTechniqueMetadataReady                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
-	CMember(TMap<UAnimMontage*, FFortMantisMontageData>) MontageDataMap                                            OFFSET(get<T>, {0x178, 80, 0, 0})
-	CMember(UFortMantisData*)                          MantisData                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	CMember(AFortWeapon*)                              Weapon                                                      OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(TMap<UAnimMontage*, FFortMantisMontageData>) MontageDataMap                                            OFFSET(get<T>, {0x190, 80, 0, 0})
+	CMember(UFortMantisData*)                          MantisData                                                  OFFSET(get<T>, {0x1E0, 8, 0, 0})
+	CMember(AFortWeapon*)                              Weapon                                                      OFFSET(get<T>, {0x1E8, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.TryManuallyStartTechnique
-	// bool TryManuallyStartTechnique(int32_t TechniqueDataIndex);                                                              // [0x9a7251c] Final|Native|Public|BlueprintCallable 
+	// bool TryManuallyStartTechnique(int32_t TechniqueDataIndex);                                                              // [0x9f9cb60] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.TryManuallyEndCurrentTechnique
-	// bool TryManuallyEndCurrentTechnique();                                                                                   // [0x9a724c8] Final|Native|Public|BlueprintCallable 
+	// bool TryManuallyEndCurrentTechnique();                                                                                   // [0x9f9cb0c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.SimulateInputEvent
-	// void SimulateInputEvent(EFortMantisTechniqueActivationInputType InputType, EFortMantisTechniqueActivationTimingType InputTiming, bool bForceProcessEvent); // [0x9a723c0] Final|Native|Public|BlueprintCallable 
+	// void SimulateInputEvent(EFortMantisTechniqueActivationInputType InputType, EFortMantisTechniqueActivationTimingType InputTiming, bool bForceProcessEvent); // [0x9f9ca04] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.SetLockOnState
-	// void SetLockOnState(bool bEnabled, AActor* TargetActor);                                                                 // [0x9a7224c] Final|Native|Public|BlueprintCallable 
+	// void SetLockOnState(bool bEnabled, AActor* TargetActor);                                                                 // [0x9f9c890] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.SetBranchRule
-	// void SetBranchRule(EFortMantisBranchRule InBranchRule, EFortMantisBranchPath InBranchPath);                              // [0x9a72188] Final|Native|Protected|BlueprintCallable 
+	// void SetBranchRule(EFortMantisBranchRule InBranchRule, EFortMantisBranchPath InBranchPath);                              // [0x9f9c7cc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.OnPostPhysicsRotation
-	// void OnPostPhysicsRotation(UCharacterMovementComponent* CharMoveComp, float DeltaSeconds);                               // [0x9a71d3c] Final|Native|Protected 
+	// void OnPostPhysicsRotation(UCharacterMovementComponent* CharMoveComp, float DeltaSeconds);                               // [0x9f9c3b0] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.OnOwnerWeaponHolstered
-	// void OnOwnerWeaponHolstered();                                                                                           // [0x9a71d28] Final|Native|Protected 
+	// void OnOwnerWeaponHolstered();                                                                                           // [0x9f9c39c] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.OnCharacterMovementPreUpdate
-	// void OnCharacterMovementPreUpdate(UCharacterMovementComponent* CharMoveComp, float DeltaSeconds);                        // [0x9a71bbc] Final|Native|Protected 
+	// void OnCharacterMovementPreUpdate(UCharacterMovementComponent* CharMoveComp, float DeltaSeconds);                        // [0x9f9c230] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.IsSpecificInputPressed
-	// bool IsSpecificInputPressed(EFortMantisTechniqueActivationInputType InputType);                                          // [0x9a71b10] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// bool IsSpecificInputPressed(EFortMantisTechniqueActivationInputType InputType);                                          // [0x9f9c184] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.IsPerformingLockOn
-	// bool IsPerformingLockOn();                                                                                               // [0x9a71af4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPerformingLockOn();                                                                                               // [0x9f9c168] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.HasLockOnTarget
-	// bool HasLockOnTarget();                                                                                                  // [0x9a71ab4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasLockOnTarget();                                                                                                  // [0x9f9c128] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.HasCurrentTechniqueMetadataBeenSet
-	// bool HasCurrentTechniqueMetadataBeenSet();                                                                               // [0x902add4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasCurrentTechniqueMetadataBeenSet();                                                                               // [0x950f054] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MantisRuntime.FortMantisPawnComponent.GetMontageForCurrentTechnique
+	// UAnimMontage* GetMontageForCurrentTechnique();                                                                           // [0x9f9c0dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.GetLockOnTarget
-	// AActor* GetLockOnTarget();                                                                                               // [0x9a71a90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AActor* GetLockOnTarget();                                                                                               // [0x9f9c0b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.GetCurrentTechniqueMetadata
-	// FFortMantisTechniqueMetadata GetCurrentTechniqueMetadata();                                                              // [0x9a71880] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFortMantisTechniqueMetadata GetCurrentTechniqueMetadata();                                                              // [0x9f9bebc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/MantisRuntime.FortMantisWeaponComponent
@@ -266,23 +275,23 @@ public:
 
 	/// Functions
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnWeaponAbilitiesRemoved
-	// void OnWeaponAbilitiesRemoved(AFortWeapon* Weapon, EFortWeaponAbilityRemovalReason RemovalReason);                       // [0x9a720c4] Final|Native|Protected 
+	// void OnWeaponAbilitiesRemoved(AFortWeapon* Weapon, EFortWeaponAbilityRemovalReason RemovalReason);                       // [0x9f9c708] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnUnEquip
-	// void OnUnEquip(AFortWeapon* Weapon);                                                                                     // [0x9a72044] Final|Native|Protected 
+	// void OnUnEquip(AFortWeapon* Weapon);                                                                                     // [0x9f9c688] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnRep_ReplayAnimInstanceInfo
-	// void OnRep_ReplayAnimInstanceInfo();                                                                                     // [0x9a72000] Final|Native|Protected 
+	// void OnRep_ReplayAnimInstanceInfo();                                                                                     // [0x9f9c674] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnReleaseTrigger
-	// void OnReleaseTrigger(AFortWeapon* Weapon);                                                                              // [0x9a71f80] Final|Native|Protected 
+	// void OnReleaseTrigger(AFortWeapon* Weapon);                                                                              // [0x9f9c5f4] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnReleaseSecondaryFire
-	// void OnReleaseSecondaryFire(AFortWeapon* Weapon);                                                                        // [0x9a71f00] Final|Native|Protected 
+	// void OnReleaseSecondaryFire(AFortWeapon* Weapon);                                                                        // [0x9f9c574] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnPressTrigger
-	// void OnPressTrigger(AFortWeapon* Weapon);                                                                                // [0x9a71e80] Final|Native|Protected 
+	// void OnPressTrigger(AFortWeapon* Weapon);                                                                                // [0x9f9c4f4] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnPressSecondaryFire
-	// void OnPressSecondaryFire(AFortWeapon* Weapon);                                                                          // [0x9a71e00] Final|Native|Protected 
+	// void OnPressSecondaryFire(AFortWeapon* Weapon);                                                                          // [0x9f9c474] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.OnEquip
-	// void OnEquip(AFortWeapon* Weapon);                                                                                       // [0x9a71c80] Final|Native|Protected 
+	// void OnEquip(AFortWeapon* Weapon);                                                                                       // [0x9f9c2f4] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.GetAnimInstanceInfo
-	// FFortMantisReplicatedAnimInstanceInfo GetAnimInstanceInfo();                                                             // [0x9a71864] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FFortMantisReplicatedAnimInstanceInfo GetAnimInstanceInfo();                                                             // [0x9f9bea0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueMetadata
@@ -301,27 +310,27 @@ public:
 };
 
 /// Struct /Script/MantisRuntime.FortRootMotionSource_Mantis
-/// Size: 0x0080 (0x0000E0 - 0x000160)
+/// Size: 0x00A0 (0x0000E0 - 0x000180)
 class FFortRootMotionSource_Mantis : public FRootMotionSource
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 352;
+	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
 	DMember(float)                                     CurrentTechniqueTime                                        OFFSET(get<float>, {0xD8, 4, 0, 0})
 	CMember(UAnimMontage*)                             TechniqueMontage                                            OFFSET(get<T>, {0xE0, 8, 0, 0})
-	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
-	SMember(FVector)                                   LatestRepMovementLocation                                   OFFSET(getStruct<T>, {0x110, 24, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xE8, 72, 0, 0})
+	SMember(FVector)                                   LatestRepMovementLocation                                   OFFSET(getStruct<T>, {0x130, 24, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisRootMotionWarpInfo
-/// Size: 0x0028 (0x000000 - 0x000028)
+/// Size: 0x0048 (0x000000 - 0x000048)
 class FFortMantisRootMotionWarpInfo : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   WarpTarget                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
@@ -329,22 +338,27 @@ public:
 	DMember(bool)                                      bAllowTranslationWarp                                       OFFSET(get<bool>, {0x20, 1, 1, 1})
 	DMember(bool)                                      bAllowRotationWarp                                          OFFSET(get<bool>, {0x20, 1, 1, 2})
 	DMember(bool)                                      bSnapshotTargetLocation                                     OFFSET(get<bool>, {0x20, 1, 1, 3})
+	DMember(bool)                                      bUseAlternativeWarpingBehavior                              OFFSET(get<bool>, {0x21, 1, 0, 0})
+	CMember(EFortMantisWarpTranslationMethod)          WarpTranslationMethod                                       OFFSET(get<T>, {0x22, 1, 0, 0})
+	SMember(FVector_NetQuantize)                       WarpTranslationVector                                       OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	CMember(EFortMantisWarpRotationMethod)             WarpRotationMethod                                          OFFSET(get<T>, {0x40, 1, 0, 0})
+	DMember(float)                                     WarpRotationYaw                                             OFFSET(get<float>, {0x44, 4, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisTargetData
-/// Size: 0x0178 (0x000008 - 0x000180)
+/// Size: 0x0198 (0x000008 - 0x0001A0)
 class FFortMantisTargetData : public FGameplayAbilityTargetData
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 384;
+	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FFortMantisRootMotionWarpInfo)             TechniqueWarpInfo                                           OFFSET(getStruct<T>, {0x8, 40, 0, 0})
-	DMember(int32_t)                                   TechniqueDataIndex                                          OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	DMember(bool)                                      bIsLockedOn                                                 OFFSET(get<bool>, {0x34, 1, 0, 0})
-	SMember(FName)                                     DynamicMontageName                                          OFFSET(getStruct<T>, {0x38, 4, 0, 0})
-	SMember(FFortMantisTechniqueMetadata)              TechniqueMetadata                                           OFFSET(getStruct<T>, {0x40, 320, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             TechniqueWarpInfo                                           OFFSET(getStruct<T>, {0x8, 72, 0, 0})
+	DMember(int32_t)                                   TechniqueDataIndex                                          OFFSET(get<int32_t>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bIsLockedOn                                                 OFFSET(get<bool>, {0x54, 1, 0, 0})
+	SMember(FName)                                     DynamicMontageName                                          OFFSET(getStruct<T>, {0x58, 4, 0, 0})
+	SMember(FFortMantisTechniqueMetadata)              TechniqueMetadata                                           OFFSET(getStruct<T>, {0x60, 320, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueCharacterSettings
@@ -479,12 +493,13 @@ enum EFortMantisTechniqueAnimationType : uint8_t
 };
 
 /// Enum /Script/MantisRuntime.EFortMantisTechniqueRootMotionType
-/// Size: 0x03
+/// Size: 0x04
 enum EFortMantisTechniqueRootMotionType : uint8_t
 {
 	EFortMantisTechniqueRootMotionType__None0                                        = 0,
 	EFortMantisTechniqueRootMotionType__ExtractFromMontageAndWarp1                   = 1,
-	EFortMantisTechniqueRootMotionType__EFortMantisTechniqueRootMotionType_MAX2      = 2
+	EFortMantisTechniqueRootMotionType__HoldPosition2                                = 2,
+	EFortMantisTechniqueRootMotionType__EFortMantisTechniqueRootMotionType_MAX3      = 3
 };
 
 /// Enum /Script/MantisRuntime.EFortMantisNotifyEvent
@@ -507,6 +522,17 @@ enum EFortMantisNotifyWindow : uint8_t
 	EFortMantisNotifyWindow__Damage3                                                 = 3,
 	EFortMantisNotifyWindow__RootMotionWarp4                                         = 4,
 	EFortMantisNotifyWindow__EFortMantisNotifyWindow_MAX5                            = 5
+};
+
+/// Enum /Script/MantisRuntime.EFortMantisNotifyTranslationWarpLimitRule
+/// Size: 0x05
+enum EFortMantisNotifyTranslationWarpLimitRule : uint8_t
+{
+	EFortMantisNotifyTranslationWarpLimitRule__None0                                 = 0,
+	EFortMantisNotifyTranslationWarpLimitRule__Window1                               = 1,
+	EFortMantisNotifyTranslationWarpLimitRule__Animation2                            = 2,
+	EFortMantisNotifyTranslationWarpLimitRule__Custom3                               = 3,
+	EFortMantisNotifyTranslationWarpLimitRule__EFortMantisNotifyTranslationWarpLimitRule_MAX4 = 4
 };
 
 /// Enum /Script/MantisRuntime.EFortMantisNotifyRotationWarpRateRule
@@ -540,5 +566,28 @@ enum EFortMantisBranchPath : uint8_t
 	EFortMantisBranchPath__Path5                                                     = 5,
 	EFortMantisBranchPath__Blocked6                                                  = 6,
 	EFortMantisBranchPath__EFortMantisBranchPath_MAX7                                = 7
+};
+
+/// Enum /Script/MantisRuntime.EFortMantisWarpTranslationMethod
+/// Size: 0x07
+enum EFortMantisWarpTranslationMethod : uint8_t
+{
+	EFortMantisWarpTranslationMethod__None0                                          = 0,
+	EFortMantisWarpTranslationMethod__OffsetFromTargetActor1                         = 1,
+	EFortMantisWarpTranslationMethod__StaticLocation2                                = 2,
+	EFortMantisWarpTranslationMethod__Reorient3                                      = 3,
+	EFortMantisWarpTranslationMethod__ScaledBasedOnInput4                            = 4,
+	EFortMantisWarpTranslationMethod__ReorientAndScaledBasedOnInput5                 = 5,
+	EFortMantisWarpTranslationMethod__EFortMantisWarpTranslationMethod_MAX6          = 6
+};
+
+/// Enum /Script/MantisRuntime.EFortMantisWarpRotationMethod
+/// Size: 0x04
+enum EFortMantisWarpRotationMethod : uint8_t
+{
+	EFortMantisWarpRotationMethod__None0                                             = 0,
+	EFortMantisWarpRotationMethod__FaceTargetActor1                                  = 1,
+	EFortMantisWarpRotationMethod__StaticRotation2                                   = 2,
+	EFortMantisWarpRotationMethod__EFortMantisWarpRotationMethod_MAX3                = 3
 };
 

@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/GLTFExporter.GLTFExportOptions
-/// Size: 0x0078 (0x000028 - 0x0000A0)
+/// Size: 0x0088 (0x000028 - 0x0000B0)
 class UGLTFExportOptions : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 160;
+	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 	DMember(float)                                     ExportUniformScale                                          OFFSET(get<float>, {0x28, 4, 0, 0})
@@ -23,31 +23,33 @@ public:
 	DMember(bool)                                      bExportProxyMaterials                                       OFFSET(get<bool>, {0x2F, 1, 0, 0})
 	DMember(bool)                                      bExportUnlitMaterials                                       OFFSET(get<bool>, {0x30, 1, 0, 0})
 	DMember(bool)                                      bExportClearCoatMaterials                                   OFFSET(get<bool>, {0x31, 1, 0, 0})
-	DMember(bool)                                      bExportEmissiveStrength                                     OFFSET(get<bool>, {0x32, 1, 0, 0})
-	CMember(EGLTFMaterialBakeMode)                     BakeMaterialInputs                                          OFFSET(get<T>, {0x33, 1, 0, 0})
-	CMember(EGLTFMaterialBakeSizePOT)                  DefaultMaterialBakeSize                                     OFFSET(get<T>, {0x34, 1, 0, 0})
-	CMember(TEnumAsByte<TextureFilter>)                DefaultMaterialBakeFilter                                   OFFSET(get<T>, {0x35, 1, 0, 0})
-	CMember(TEnumAsByte<TextureAddress>)               DefaultMaterialBakeTiling                                   OFFSET(get<T>, {0x36, 1, 0, 0})
-	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) DefaultInputBakeSettings          OFFSET(get<T>, {0x38, 80, 0, 0})
-	DMember(int32_t)                                   DefaultLevelOfDetail                                        OFFSET(get<int32_t>, {0x88, 4, 0, 0})
-	DMember(bool)                                      bExportVertexColors                                         OFFSET(get<bool>, {0x8C, 1, 0, 0})
-	DMember(bool)                                      bExportVertexSkinWeights                                    OFFSET(get<bool>, {0x8D, 1, 0, 0})
-	DMember(bool)                                      bUseMeshQuantization                                        OFFSET(get<bool>, {0x8E, 1, 0, 0})
-	DMember(bool)                                      bExportLevelSequences                                       OFFSET(get<bool>, {0x8F, 1, 0, 0})
-	DMember(bool)                                      bExportAnimationSequences                                   OFFSET(get<bool>, {0x90, 1, 0, 0})
-	CMember(EGLTFTextureImageFormat)                   TextureImageFormat                                          OFFSET(get<T>, {0x91, 1, 0, 0})
-	DMember(int32_t)                                   TextureImageQuality                                         OFFSET(get<int32_t>, {0x94, 4, 0, 0})
-	DMember(bool)                                      bExportTextureTransforms                                    OFFSET(get<bool>, {0x98, 1, 0, 0})
-	DMember(bool)                                      bAdjustNormalmaps                                           OFFSET(get<bool>, {0x99, 1, 0, 0})
-	DMember(bool)                                      bExportHiddenInGame                                         OFFSET(get<bool>, {0x9A, 1, 0, 0})
-	DMember(bool)                                      bExportLights                                               OFFSET(get<bool>, {0x9B, 1, 0, 0})
-	DMember(bool)                                      bExportCameras                                              OFFSET(get<bool>, {0x9C, 1, 0, 0})
-	CMember(EGLTFMaterialVariantMode)                  ExportMaterialVariants                                      OFFSET(get<T>, {0x9D, 1, 0, 0})
+	DMember(bool)                                      bExportClothMaterials                                       OFFSET(get<bool>, {0x32, 1, 0, 0})
+	DMember(bool)                                      bExportEmissiveStrength                                     OFFSET(get<bool>, {0x33, 1, 0, 0})
+	CMember(EGLTFMaterialBakeMode)                     BakeMaterialInputs                                          OFFSET(get<T>, {0x34, 1, 0, 0})
+	SMember(FGLTFMaterialBakeSize)                     DefaultMaterialBakeSize                                     OFFSET(getStruct<T>, {0x38, 12, 0, 0})
+	CMember(TEnumAsByte<TextureFilter>)                DefaultMaterialBakeFilter                                   OFFSET(get<T>, {0x44, 1, 0, 0})
+	CMember(TEnumAsByte<TextureAddress>)               DefaultMaterialBakeTiling                                   OFFSET(get<T>, {0x45, 1, 0, 0})
+	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) DefaultInputBakeSettings          OFFSET(get<T>, {0x48, 80, 0, 0})
+	DMember(int32_t)                                   DefaultLevelOfDetail                                        OFFSET(get<int32_t>, {0x98, 4, 0, 0})
+	DMember(bool)                                      bExportVertexColors                                         OFFSET(get<bool>, {0x9C, 1, 0, 0})
+	DMember(bool)                                      bExportVertexSkinWeights                                    OFFSET(get<bool>, {0x9D, 1, 0, 0})
+	DMember(bool)                                      bMakeSkinnedMeshesRoot                                      OFFSET(get<bool>, {0x9E, 1, 0, 0})
+	DMember(bool)                                      bUseMeshQuantization                                        OFFSET(get<bool>, {0x9F, 1, 0, 0})
+	DMember(bool)                                      bExportLevelSequences                                       OFFSET(get<bool>, {0xA0, 1, 0, 0})
+	DMember(bool)                                      bExportAnimationSequences                                   OFFSET(get<bool>, {0xA1, 1, 0, 0})
+	CMember(EGLTFTextureImageFormat)                   TextureImageFormat                                          OFFSET(get<T>, {0xA2, 1, 0, 0})
+	DMember(int32_t)                                   TextureImageQuality                                         OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
+	DMember(bool)                                      bExportTextureTransforms                                    OFFSET(get<bool>, {0xA8, 1, 0, 0})
+	DMember(bool)                                      bAdjustNormalmaps                                           OFFSET(get<bool>, {0xA9, 1, 0, 0})
+	DMember(bool)                                      bExportHiddenInGame                                         OFFSET(get<bool>, {0xAA, 1, 0, 0})
+	DMember(bool)                                      bExportLights                                               OFFSET(get<bool>, {0xAB, 1, 0, 0})
+	DMember(bool)                                      bExportCameras                                              OFFSET(get<bool>, {0xAC, 1, 0, 0})
+	CMember(EGLTFMaterialVariantMode)                  ExportMaterialVariants                                      OFFSET(get<T>, {0xAD, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/GLTFExporter.GLTFExportOptions.ResetToDefault
-	// void ResetToDefault();                                                                                                   // [0xa5fd65c] Final|Native|Public|BlueprintCallable 
+	// void ResetToDefault();                                                                                                   // [0xad36468] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GLTFExporter.GLTFExporter
@@ -131,36 +133,36 @@ public:
 };
 
 /// Class /Script/GLTFExporter.GLTFProxyOptions
-/// Size: 0x0058 (0x000028 - 0x000080)
+/// Size: 0x0068 (0x000028 - 0x000090)
 class UGLTFProxyOptions : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
+	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	DMember(bool)                                      bBakeMaterialInputs                                         OFFSET(get<bool>, {0x28, 1, 0, 0})
-	CMember(EGLTFMaterialBakeSizePOT)                  DefaultMaterialBakeSize                                     OFFSET(get<T>, {0x29, 1, 0, 0})
-	CMember(TEnumAsByte<TextureFilter>)                DefaultMaterialBakeFilter                                   OFFSET(get<T>, {0x2A, 1, 0, 0})
-	CMember(TEnumAsByte<TextureAddress>)               DefaultMaterialBakeTiling                                   OFFSET(get<T>, {0x2B, 1, 0, 0})
-	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) DefaultInputBakeSettings          OFFSET(get<T>, {0x30, 80, 0, 0})
+	SMember(FGLTFMaterialBakeSize)                     DefaultMaterialBakeSize                                     OFFSET(getStruct<T>, {0x2C, 12, 0, 0})
+	CMember(TEnumAsByte<TextureFilter>)                DefaultMaterialBakeFilter                                   OFFSET(get<T>, {0x38, 1, 0, 0})
+	CMember(TEnumAsByte<TextureAddress>)               DefaultMaterialBakeTiling                                   OFFSET(get<T>, {0x39, 1, 0, 0})
+	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) DefaultInputBakeSettings          OFFSET(get<T>, {0x40, 80, 0, 0})
 
 
 	/// Functions
 	// Function /Script/GLTFExporter.GLTFProxyOptions.ResetToDefault
-	// void ResetToDefault();                                                                                                   // [0xa5fd670] Final|Native|Public|BlueprintCallable 
+	// void ResetToDefault();                                                                                                   // [0xad3647c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GLTFExporter.GLTFMaterialExportOptions
-/// Size: 0x0060 (0x000028 - 0x000088)
+/// Size: 0x0070 (0x000028 - 0x000098)
 class UGLTFMaterialExportOptions : public UAssetUserData
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 136;
+	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	CMember(UMaterialInterface*)                       Proxy                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FGLTFOverrideMaterialBakeSettings)         Default                                                     OFFSET(getStruct<T>, {0x30, 6, 0, 0})
-	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) Inputs                            OFFSET(get<T>, {0x38, 80, 0, 0})
+	CMember(UMaterialInterface*)                       proxy                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FGLTFOverrideMaterialBakeSettings)         Default                                                     OFFSET(getStruct<T>, {0x30, 20, 0, 0})
+	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) Inputs                            OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
 /// Struct /Script/GLTFExporter.GLTFExportMessages
@@ -177,21 +179,35 @@ public:
 	CMember(TArray<FString>)                           Errors                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
+/// Struct /Script/GLTFExporter.GLTFMaterialBakeSize
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FGLTFMaterialBakeSize : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	DMember(int32_t)                                   X                                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   Y                                                           OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(bool)                                      bAutoDetect                                                 OFFSET(get<bool>, {0x8, 1, 0, 0})
+};
+
 /// Struct /Script/GLTFExporter.GLTFOverrideMaterialBakeSettings
-/// Size: 0x0006 (0x000000 - 0x000006)
+/// Size: 0x0014 (0x000000 - 0x000014)
 class FGLTFOverrideMaterialBakeSettings : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 6;
+	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
 	DMember(bool)                                      bOverrideSize                                               OFFSET(get<bool>, {0x0, 1, 0, 0})
-	CMember(EGLTFMaterialBakeSizePOT)                  Size                                                        OFFSET(get<T>, {0x1, 1, 0, 0})
-	DMember(bool)                                      bOverrideFilter                                             OFFSET(get<bool>, {0x2, 1, 0, 0})
-	CMember(TEnumAsByte<TextureFilter>)                Filter                                                      OFFSET(get<T>, {0x3, 1, 0, 0})
-	DMember(bool)                                      bOverrideTiling                                             OFFSET(get<bool>, {0x4, 1, 0, 0})
-	CMember(TEnumAsByte<TextureAddress>)               Tiling                                                      OFFSET(get<T>, {0x5, 1, 0, 0})
+	SMember(FGLTFMaterialBakeSize)                     Size                                                        OFFSET(getStruct<T>, {0x4, 12, 0, 0})
+	DMember(bool)                                      bOverrideFilter                                             OFFSET(get<bool>, {0x10, 1, 0, 0})
+	CMember(TEnumAsByte<TextureFilter>)                Filter                                                      OFFSET(get<T>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bOverrideTiling                                             OFFSET(get<bool>, {0x12, 1, 0, 0})
+	CMember(TEnumAsByte<TextureAddress>)               Tiling                                                      OFFSET(get<T>, {0x13, 1, 0, 0})
 };
 
 /// Enum /Script/GLTFExporter.EGLTFTextureImageFormat
@@ -222,27 +238,6 @@ enum EGLTFMaterialBakeMode : uint8_t
 	EGLTFMaterialBakeMode__Simple1                                                   = 1,
 	EGLTFMaterialBakeMode__UseMeshData2                                              = 2,
 	EGLTFMaterialBakeMode__EGLTFMaterialBakeMode_MAX3                                = 3
-};
-
-/// Enum /Script/GLTFExporter.EGLTFMaterialBakeSizePOT
-/// Size: 0x15
-enum EGLTFMaterialBakeSizePOT : uint8_t
-{
-	EGLTFMaterialBakeSizePOT__POT0                                                   = 0,
-	EGLTFMaterialBakeSizePOT__POT1                                                   = 1,
-	EGLTFMaterialBakeSizePOT__POT2                                                   = 2,
-	EGLTFMaterialBakeSizePOT__POT3                                                   = 3,
-	EGLTFMaterialBakeSizePOT__POT4                                                   = 4,
-	EGLTFMaterialBakeSizePOT__POT5                                                   = 5,
-	EGLTFMaterialBakeSizePOT__POT6                                                   = 6,
-	EGLTFMaterialBakeSizePOT__POT7                                                   = 7,
-	EGLTFMaterialBakeSizePOT__POT8                                                   = 8,
-	EGLTFMaterialBakeSizePOT__POT9                                                   = 9,
-	EGLTFMaterialBakeSizePOT__POT10                                                  = 10,
-	EGLTFMaterialBakeSizePOT__POT11                                                  = 11,
-	EGLTFMaterialBakeSizePOT__POT12                                                  = 12,
-	EGLTFMaterialBakeSizePOT__POT13                                                  = 13,
-	EGLTFMaterialBakeSizePOT__POT_MAX14                                              = 14
 };
 
 /// Enum /Script/GLTFExporter.EGLTFMaterialPropertyGroup

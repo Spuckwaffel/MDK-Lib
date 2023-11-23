@@ -96,14 +96,14 @@ public:
 
 	/// Functions
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.SetDelayedMaterialParameters
-	// void SetDelayedMaterialParameters();                                                                                     // [0x9b961e8] Final|Native|Protected|BlueprintCallable 
+	// void SetDelayedMaterialParameters();                                                                                     // [0xa0a4f88] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.GetWorldStriderComponent
-	// UFortAnimWorldStriderComponent* GetWorldStriderComponent();                                                              // [0x9b960c4] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UFortAnimWorldStriderComponent* GetWorldStriderComponent();                                                              // [0xa0a4e64] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.GetWalkSpeedWarpingValue
-	// float GetWalkSpeedWarpingValue();                                                                                        // [0x9b96098] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetWalkSpeedWarpingValue();                                                                                        // [0xa0a4e38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.GetWalkPlayRateValue
-	// float GetWalkPlayRateValue();                                                                                            // [0x9b96078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetWalkPlayRateValue();                                                                                            // [0xa0a4e18] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.GetStartAnimPosition
-	// float GetStartAnimPosition();                                                                                            // [0x9b9604c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetStartAnimPosition();                                                                                            // [0xa0a4dec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 

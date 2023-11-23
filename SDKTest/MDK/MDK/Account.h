@@ -241,7 +241,7 @@ public:
 };
 
 /// Enum /Script/Account.EExternalAccountType
-/// Size: 0x11
+/// Size: 0x10
 enum EExternalAccountType : uint8_t
 {
 	EExternalAccountType__None0                                                      = 0,
@@ -253,8 +253,7 @@ enum EExternalAccountType : uint8_t
 	EExternalAccountType__Epic_Facebook6                                             = 6,
 	EExternalAccountType__Epic_Google7                                               = 7,
 	EExternalAccountType__Epic_Portal8                                               = 8,
-	EExternalAccountType__Epic_Portal_Kairos9                                        = 9,
-	EExternalAccountType__EExternalAccountType_MAX10                                 = 10
+	EExternalAccountType__EExternalAccountType_MAX9                                  = 9
 };
 
 /// Enum /Script/Account.EConsoleAuthLinkState

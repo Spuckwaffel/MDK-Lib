@@ -128,22 +128,22 @@ public:
 };
 
 /// Struct /Script/FullBodyIK.RigUnit_FullbodyIK
-/// Size: 0x0270 (0x000160 - 0x0003D0)
+/// Size: 0x0270 (0x000180 - 0x0003F0)
 class FRigUnit_FullbodyIK : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 976;
+	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FRigElementKey)                            Root                                                        OFFSET(getStruct<T>, {0x160, 8, 0, 0})
-	CMember(TArray<FFBIKEndEffector>)                  Effectors                                                   OFFSET(get<T>, {0x168, 16, 0, 0})
-	CMember(TArray<FFBIKConstraintOption>)             Constraints                                                 OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FSolverInput)                              SolverProperty                                              OFFSET(getStruct<T>, {0x188, 36, 0, 0})
-	SMember(FMotionProcessInput)                       MotionProperty                                              OFFSET(getStruct<T>, {0x1AC, 2, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1AE, 1, 0, 0})
-	SMember(FFBIKDebugOption)                          DebugOption                                                 OFFSET(getStruct<T>, {0x1B0, 128, 0, 0})
-	SMember(FRigUnit_FullbodyIK_WorkData)              WorkData                                                    OFFSET(getStruct<T>, {0x230, 408, 0, 0})
+	SMember(FRigElementKey)                            Root                                                        OFFSET(getStruct<T>, {0x180, 8, 0, 0})
+	CMember(TArray<FFBIKEndEffector>)                  Effectors                                                   OFFSET(get<T>, {0x188, 16, 0, 0})
+	CMember(TArray<FFBIKConstraintOption>)             Constraints                                                 OFFSET(get<T>, {0x198, 16, 0, 0})
+	SMember(FSolverInput)                              SolverProperty                                              OFFSET(getStruct<T>, {0x1A8, 36, 0, 0})
+	SMember(FMotionProcessInput)                       MotionProperty                                              OFFSET(getStruct<T>, {0x1CC, 2, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1CE, 1, 0, 0})
+	SMember(FFBIKDebugOption)                          DebugOption                                                 OFFSET(getStruct<T>, {0x1D0, 128, 0, 0})
+	SMember(FRigUnit_FullbodyIK_WorkData)              WorkData                                                    OFFSET(getStruct<T>, {0x250, 408, 0, 0})
 };
 
 /// Enum /Script/FullBodyIK.EFBIKBoneLimitType

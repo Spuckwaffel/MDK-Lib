@@ -13,11 +13,11 @@
 /// dependency: UMG
 
 /// Class /Script/VKEditUI.VKConnectionIndicator
-/// Size: 0x0230 (0x000400 - 0x000630)
+/// Size: 0x0250 (0x000400 - 0x000650)
 class UVKConnectionIndicator : public UCommonActivatableWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1584;
+	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
 	SMember(FText)                                     EditStatusLocalizedText                                     OFFSET(getStruct<T>, {0x400, 240, 0, 0})
@@ -48,9 +48,9 @@ public:
 
 	/// Functions
 	// Function /Script/VKEditUI.VKConnectionIndicator.OnMinigameStateChanged
-	// void OnMinigameStateChanged(EFortMinigameState MinigameState, EFortMinigameState PreviousMinigameState);                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnMinigameStateChanged(EFortMinigameState MinigameState, EFortMinigameState PreviousMinigameState);                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/VKEditUI.VKConnectionIndicator.HandleMemorySamplerProgressUpdated
-	// void HandleMemorySamplerProgressUpdated(float Progress);                                                                 // [0xa032d6c] Final|Native|Private 
+	// void HandleMemorySamplerProgressUpdated(float Progress);                                                                 // [0xa5a6ad8] Final|Native|Private 
 };
 
 /// Class /Script/VKEditUI.VKDebugMessagesBase
@@ -64,24 +64,25 @@ public:
 };
 
 /// Class /Script/VKEditUI.VkEditDynamicUIDirector
-/// Size: 0x0048 (0x0002B0 - 0x0002F8)
+/// Size: 0x0058 (0x0002B0 - 0x000308)
 class AVkEditDynamicUIDirector : public ADynamicUIDirectorBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 760;
+	static inline constexpr uint64_t __MDKClassSize = 776;
 
 public:
 	CMember(UDynamicUIScene*)                          MemorySamplingScene                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
 };
 
 /// Class /Script/VKEditUI.VkEditLogTab
-/// Size: 0x0100 (0x000400 - 0x000500)
+/// Size: 0x0190 (0x000400 - 0x000590)
 class UVkEditLogTab : public UCommonActivatableWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1280;
+	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x410, 240, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x430, 272, 0, 0})
+	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  OFFSET(getStruct<T>, {0x540, 72, 0, 0})
 };
 

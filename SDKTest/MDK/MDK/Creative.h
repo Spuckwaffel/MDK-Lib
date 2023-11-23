@@ -13,107 +13,97 @@
 /// dependency: GameplayAbilities
 
 /// Class /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C
-/// Size: 0x001B (0x000B35 - 0x000B50)
+/// Size: 0x001B (0x000B6D - 0x000B88)
 class UGAT_Creative_TriggeredAbility_C : public UGAT_TriggeredAbility_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2896;
+	static inline constexpr uint64_t __MDKClassSize = 2952;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
-	CMember(TArray<FName>)                             OverriddenPropertyNames                                     OFFSET(get<T>, {0xB40, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB70, 8, 0, 0})
+	CMember(TArray<FName>)                             OverriddenPropertyNames                                     OFFSET(get<T>, {0xB78, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.IsPropertyOverridden
-	// void IsPropertyOverridden(FName PropertyName, bool& bResult);                                                            // [0x1d9241c] Protected|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// void IsPropertyOverridden(FName PropertyName, bool& bResult);                                                            // [0x101681c] Protected|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.SetupAbilityFailsafeTimer
-	// void SetupAbilityFailsafeTimer(double Duration);                                                                         // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetupAbilityFailsafeTimer(double duration);                                                                         // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.AbilityTimeout
-	// void AbilityTimeout();                                                                                                   // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void AbilityTimeout();                                                                                                   // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.ExecuteUbergraph_GAT_Creative_TriggeredAbility
-	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility(int32_t EntryPoint);                                                 // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility(int32_t EntryPoint);                                                 // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C
-/// Size: 0x0010 (0x000B50 - 0x000B60)
+/// Size: 0x0010 (0x000B88 - 0x000B98)
 class UGAT_Creative_TriggeredAbility_Pawn_C : public UGAT_Creative_TriggeredAbility_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2912;
+	static inline constexpr uint64_t __MDKClassSize = 2968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB50, 8, 0, 0})
-	CMember(AFortPawn*)                                AbilityOwner                                                OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB88, 8, 0, 0})
+	CMember(AFortPawn*)                                AbilityOwner                                                OFFSET(get<T>, {0xB90, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C.SetupPawnActorAbility
-	// void SetupPawnActorAbility(AFortPawn*& FortPawn);                                                                        // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void SetupPawnActorAbility(AFortPawn*& FortPawn);                                                                        // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C.ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn
-	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn(int32_t EntryPoint);                                            // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn(int32_t EntryPoint);                                            // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C
-/// Size: 0x0044 (0x000B60 - 0x000BA4)
+/// Size: 0x0044 (0x000B98 - 0x000BDC)
 class UGA_Creative_OnKillSiphon_C : public UGAT_Creative_TriggeredAbility_Pawn_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2980;
+	static inline constexpr uint64_t __MDKClassSize = 3036;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB60, 8, 0, 0})
-	CMember(AFortGameStateAthena*)                     GameState                                                   OFFSET(get<T>, {0xB68, 8, 0, 0})
-	DMember(bool)                                      IsCreativeOrPlayground                                      OFFSET(get<bool>, {0xB70, 1, 0, 0})
-	CMember(UClass*)                                   GE_HealPlayer                                               OFFSET(get<T>, {0xB78, 8, 0, 0})
-	DMember(bool)                                      bShouldConvertExcessHealthToShields                         OFFSET(get<bool>, {0xB80, 1, 0, 0})
-	CMember(UClass*)                                   ShieldGE                                                    OFFSET(get<T>, {0xB88, 8, 0, 0})
-	SMember(FGameplayTag)                              ConsumedCue                                                 OFFSET(getStruct<T>, {0xB90, 4, 0, 0})
-	DMember(bool)                                      bDebugBypasLocalMapEnable                                   OFFSET(get<bool>, {0xB94, 1, 0, 0})
-	DMember(bool)                                      bAttemptHealthRestore                                       OFFSET(get<bool>, {0xB95, 1, 0, 0})
-	DMember(bool)                                      bAttemptMatsRestore                                         OFFSET(get<bool>, {0xB96, 1, 0, 0})
-	SMember(FName)                                     NameGrantWood                                               OFFSET(getStruct<T>, {0xB98, 4, 0, 0})
-	SMember(FName)                                     NameGrantStone                                              OFFSET(getStruct<T>, {0xB9C, 4, 0, 0})
-	SMember(FName)                                     NameGrantMetal                                              OFFSET(getStruct<T>, {0xBA0, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB98, 8, 0, 0})
+	CMember(AFortGameStateAthena*)                     GameState                                                   OFFSET(get<T>, {0xBA0, 8, 0, 0})
+	DMember(bool)                                      IsCreativeOrPlayground                                      OFFSET(get<bool>, {0xBA8, 1, 0, 0})
+	CMember(UClass*)                                   GE_HealPlayer                                               OFFSET(get<T>, {0xBB0, 8, 0, 0})
+	DMember(bool)                                      bShouldConvertExcessHealthToShields                         OFFSET(get<bool>, {0xBB8, 1, 0, 0})
+	CMember(UClass*)                                   ShieldGE                                                    OFFSET(get<T>, {0xBC0, 8, 0, 0})
+	SMember(FGameplayTag)                              ConsumedCue                                                 OFFSET(getStruct<T>, {0xBC8, 4, 0, 0})
+	DMember(bool)                                      bDebugBypasLocalMapEnable                                   OFFSET(get<bool>, {0xBCC, 1, 0, 0})
+	DMember(bool)                                      bAttemptHealthRestore                                       OFFSET(get<bool>, {0xBCD, 1, 0, 0})
+	DMember(bool)                                      bAttemptMatsRestore                                         OFFSET(get<bool>, {0xBCE, 1, 0, 0})
+	SMember(FName)                                     NameGrantWood                                               OFFSET(getStruct<T>, {0xBD0, 4, 0, 0})
+	SMember(FName)                                     NameGrantStone                                              OFFSET(getStruct<T>, {0xBD4, 4, 0, 0})
+	SMember(FName)                                     NameGrantMetal                                              OFFSET(getStruct<T>, {0xBD8, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.GiveResourcesToPlayer
-	// void GiveResourcesToPlayer(bool bShouldGrant, int32_t GiveAmount, TEnumAsByte<EFortResourceType> GiveType, bool& Success); // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void GiveResourcesToPlayer(bool bShouldGrant, int32_t GiveAmount, TEnumAsByte<EFortResourceType> GiveType, bool& Success); // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.CalculateResources
-	// void CalculateResources(TEnumAsByte<EFortResourceType> ResourceGrantType, bool& bSuccess, int32_t& ResourceToGive, TEnumAsByte<EFortResourceType>& ResourceType); // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void CalculateResources(TEnumAsByte<EFortResourceType> ResourceGrantType, bool& bSuccess, int32_t& ResourceToGive, TEnumAsByte<EFortResourceType>& ResourceType); // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.AttemptMats
-	// void AttemptMats();                                                                                                      // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void AttemptMats();                                                                                                      // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.AttemptHeal
-	// void AttemptHeal();                                                                                                      // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void AttemptHeal();                                                                                                      // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.SetupRestoreModes
-	// void SetupRestoreModes(bool& ShouldContinue);                                                                            // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void SetupRestoreModes(bool& ShouldContinue);                                                                            // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.DetermineHealthDelta
-	// void DetermineHealthDelta(double HealingAmount, double& MaxHealth, double& CurrentHealth, double& HealthDelta, double& ExcessHealh); // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void DetermineHealthDelta(double HealingAmount, double& MaxHealth, double& CurrentHealth, double& HealthDelta, double& ExcessHealh); // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.AddShields
-	// void AddShields(bool bShouldConvertExcessHealthToShields, double ShieldToAdd, bool& bAddedShields, double& ShieldAdded); // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void AddShields(bool bShouldConvertExcessHealthToShields, double ShieldToAdd, bool& bAddedShields, double& ShieldAdded); // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.RestoreHealth
-	// void RestoreHealth(bool& Success, double& InitialHealAmount, double& ActualAppliedHeal, double& ExcessHealing);          // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void RestoreHealth(bool& Success, double& InitialHealAmount, double& ActualAppliedHeal, double& ExcessHealing);          // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.K2_ShouldAbilityRespondToEvent
-	// bool K2_ShouldAbilityRespondToEvent(FGameplayAbilityActorInfo ActorInfo, FGameplayEventData Payload);                    // [0x1d9241c] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// bool K2_ShouldAbilityRespondToEvent(FGameplayAbilityActorInfo ActorInfo, FGameplayEventData Payload);                    // [0x101681c] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.ExecuteUbergraph_GA_Creative_OnKillSiphon
-	// void ExecuteUbergraph_GA_Creative_OnKillSiphon(int32_t EntryPoint);                                                      // [0x1d9241c] Final|HasDefaults    
-};
-
-/// Class /Game/Creative/BuildingActors/GameplayActors/GE_LaunchedByVent.GE_LaunchedByVent_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_LaunchedByVent_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
+	// void ExecuteUbergraph_GA_Creative_OnKillSiphon(int32_t EntryPoint);                                                      // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Creative/Sets/MilitaryBase/Props/CreativeTeamColors.CreativeTeamColors_C
@@ -129,6 +119,16 @@ public:
 	CMember(TArray<FLinearColor>)                      TeamBoldColors                                              OFFSET(get<T>, {0x2C0, 16, 0, 0})
 };
 
+/// Class /Game/Creative/BuildingActors/GameplayActors/GE_LaunchedByVent.GE_LaunchedByVent_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_LaunchedByVent_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/Creative/Devices/Common/Creative_CommonDeviceFunctionLibrary.Creative_CommonDeviceFunctionLibrary_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCreative_CommonDeviceFunctionLibrary_C : public UBlueprintFunctionLibrary
@@ -140,67 +140,67 @@ public:
 };
 
 /// Class /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C
-/// Size: 0x0090 (0x000D30 - 0x000DC0)
+/// Size: 0x0090 (0x000D38 - 0x000DC8)
 class AMilitaryBase_Door_01_C : public AParent_BuildingWall_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3520;
+	static inline constexpr uint64_t __MDKClassSize = 3528;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xD30, 8, 0, 0})
-	CMember(UBoxComponent*)                            DoorSlideOverlapVolume                                      OFFSET(get<T>, {0xD38, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     DoorStaticMesh1                                             OFFSET(get<T>, {0xD40, 8, 0, 0})
-	DMember(float)                                     Timeline_0_EmissiveColorLerp_75727DFA4F9CA24A009D23ADC967876F OFFSET(get<float>, {0xD48, 4, 0, 0})
-	DMember(float)                                     Timeline_0_SlideAnimation_75727DFA4F9CA24A009D23ADC967876F  OFFSET(get<float>, {0xD4C, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_75727DFA4F9CA24A009D23ADC967876F      OFFSET(get<T>, {0xD50, 1, 0, 0})
-	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0xD58, 8, 0, 0})
-	DMember(int32_t)                                   NumberOfPawnsWithinVolume                                   OFFSET(get<int32_t>, {0xD60, 4, 0, 0})
-	DMember(bool)                                      DoorOpen                                                    OFFSET(get<bool>, {0xD64, 1, 0, 0})
-	CMember(UMaterialInstanceDynamic*)                 DoorMID                                                     OFFSET(get<T>, {0xD68, 8, 0, 0})
-	SMember(FLinearColor)                              DefaultDoorEmissiveValue                                    OFFSET(getStruct<T>, {0xD70, 16, 0, 0})
-	SMember(FLinearColor)                              ActiveDoorEmissiveValue                                     OFFSET(getStruct<T>, {0xD80, 16, 0, 0})
-	CMember(UMaterialInterface*)                       DoorBaseMaterial                                            OFFSET(get<T>, {0xD90, 8, 0, 0})
-	CMember(UMaterialInterface*)                       Door_Source_Materials                                       OFFSET(get<T>, {0xD98, 8, 0, 0})
-	CMember(USoundBase*)                               SlidingDoorClose_Sound                                      OFFSET(get<T>, {0xDA0, 8, 0, 0})
-	CMember(USoundBase*)                               SlidingDoorOpen_Sound                                       OFFSET(get<T>, {0xDA8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnDoorOpened                                                OFFSET(getStruct<T>, {0xDB0, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xD38, 8, 0, 0})
+	CMember(UBoxComponent*)                            DoorSlideOverlapVolume                                      OFFSET(get<T>, {0xD40, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     DoorStaticMesh1                                             OFFSET(get<T>, {0xD48, 8, 0, 0})
+	DMember(float)                                     Timeline_0_EmissiveColorLerp_75727DFA4F9CA24A009D23ADC967876F OFFSET(get<float>, {0xD50, 4, 0, 0})
+	DMember(float)                                     Timeline_0_SlideAnimation_75727DFA4F9CA24A009D23ADC967876F  OFFSET(get<float>, {0xD54, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_75727DFA4F9CA24A009D23ADC967876F      OFFSET(get<T>, {0xD58, 1, 0, 0})
+	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0xD60, 8, 0, 0})
+	DMember(int32_t)                                   NumberOfPawnsWithinVolume                                   OFFSET(get<int32_t>, {0xD68, 4, 0, 0})
+	DMember(bool)                                      DoorOpen                                                    OFFSET(get<bool>, {0xD6C, 1, 0, 0})
+	CMember(UMaterialInstanceDynamic*)                 DoorMID                                                     OFFSET(get<T>, {0xD70, 8, 0, 0})
+	SMember(FLinearColor)                              DefaultDoorEmissiveValue                                    OFFSET(getStruct<T>, {0xD78, 16, 0, 0})
+	SMember(FLinearColor)                              ActiveDoorEmissiveValue                                     OFFSET(getStruct<T>, {0xD88, 16, 0, 0})
+	CMember(UMaterialInterface*)                       DoorBaseMaterial                                            OFFSET(get<T>, {0xD98, 8, 0, 0})
+	CMember(UMaterialInterface*)                       Door_Source_Materials                                       OFFSET(get<T>, {0xDA0, 8, 0, 0})
+	CMember(USoundBase*)                               SlidingDoorClose_Sound                                      OFFSET(get<T>, {0xDA8, 8, 0, 0})
+	CMember(USoundBase*)                               SlidingDoorOpen_Sound                                       OFFSET(get<T>, {0xDB0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDoorOpened                                                OFFSET(getStruct<T>, {0xDB8, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.IsOpen
-	// bool IsOpen();                                                                                                           // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// bool IsOpen();                                                                                                           // [0x101681c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.GetComponentToLock
-	// TArray<UPrimitiveComponent*> GetComponentToLock();                                                                       // [0x1d9241c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// TArray<UPrimitiveComponent*> GetComponentToLock();                                                                       // [0x101681c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OnRep_DoorOpen
-	// void OnRep_DoorOpen();                                                                                                   // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void OnRep_DoorOpen();                                                                                                   // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.GetDoorMID
-	// void GetDoorMID();                                                                                                       // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void GetDoorMID();                                                                                                       // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void UserConstructionScript();                                                                                           // [0x101681c] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.Timeline_0__FinishedFunc
-	// void Timeline_0__FinishedFunc();                                                                                         // [0x1d9241c] BlueprintEvent       
+	// void Timeline_0__FinishedFunc();                                                                                         // [0x101681c] BlueprintEvent       
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.Timeline_0__UpdateFunc
-	// void Timeline_0__UpdateFunc();                                                                                           // [0x1d9241c] BlueprintEvent       
+	// void Timeline_0__UpdateFunc();                                                                                           // [0x101681c] BlueprintEvent       
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-	// void BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1d9241c] HasOutParms|BlueprintEvent 
+	// void BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x101681c] HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-	// void BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x1d9241c] BlueprintEvent       
+	// void BndEvt__DoorSlideOverlapVolume_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x101681c] BlueprintEvent       
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OpenDoor
-	// void OpenDoor();                                                                                                         // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void OpenDoor();                                                                                                         // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.CloseDoor
-	// void CloseDoor();                                                                                                        // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void CloseDoor();                                                                                                        // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.Open
-	// void Open(AController* ControllerInstigator, bool bRequestFastOpen);                                                     // [0x1d9241c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+	// void Open(AController* ControllerInstigator, bool bRequestFastOpen);                                                     // [0x101681c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.Close
-	// void Close(AController* ControllerInstigator);                                                                           // [0x1d9241c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+	// void Close(AController* ControllerInstigator);                                                                           // [0x101681c] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OnUnLocked
-	// void OnUnLocked();                                                                                                       // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnUnLocked();                                                                                                       // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OnLocked
-	// void OnLocked();                                                                                                         // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnLocked();                                                                                                         // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.ExecuteUbergraph_MilitaryBase_Door_01
-	// void ExecuteUbergraph_MilitaryBase_Door_01(int32_t EntryPoint);                                                          // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_MilitaryBase_Door_01(int32_t EntryPoint);                                                          // [0x101681c] Final|HasDefaults    
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OnDoorOpened__DelegateSignature
-	// void OnDoorOpened__DelegateSignature();                                                                                  // [0x1d9241c] Public|Delegate|BlueprintCallable|BlueprintEvent 
+	// void OnDoorOpened__DelegateSignature();                                                                                  // [0x101681c] Public|Delegate|BlueprintCallable|BlueprintEvent 
 };
 
 /// Struct /Game/Creative/Devices/Common/PawnHighlight.PawnHighlight
@@ -229,6 +229,16 @@ enum EAwardScoreType : uint8_t
 	EAwardScoreType__NewEnumerator22                                                 = 2,
 	EAwardScoreType__NewEnumerator33                                                 = 3,
 	EAwardScoreType__EAwardScoreType_MAX4                                            = 4
+};
+
+/// Enum /Game/Creative/Devices/Common/EBoolWithUnset.EBoolWithUnset
+/// Size: 0x04
+enum EBoolWithUnset : uint8_t
+{
+	EBoolWithUnset__NewEnumerator00                                                  = 0,
+	EBoolWithUnset__NewEnumerator11                                                  = 1,
+	EBoolWithUnset__NewEnumerator22                                                  = 2,
+	EBoolWithUnset__EBoolWithUnset_MAX3                                              = 3
 };
 
 /// Enum /Game/Creative/Devices/Common/Enums/ECreativeColorSetType.ECreativeColorSetType
@@ -265,15 +275,5 @@ enum ECreativeTeamColor : uint8_t
 	ECreativeTeamColor__NewEnumerator1716                                            = 16,
 	ECreativeTeamColor__NewEnumerator1817                                            = 17,
 	ECreativeTeamColor__ECreativeTeamColor_MAX18                                     = 18
-};
-
-/// Enum /Game/Creative/Devices/Common/EBoolWithUnset.EBoolWithUnset
-/// Size: 0x04
-enum EBoolWithUnset : uint8_t
-{
-	EBoolWithUnset__NewEnumerator00                                                  = 0,
-	EBoolWithUnset__NewEnumerator11                                                  = 1,
-	EBoolWithUnset__NewEnumerator22                                                  = 2,
-	EBoolWithUnset__EBoolWithUnset_MAX3                                              = 3
 };
 

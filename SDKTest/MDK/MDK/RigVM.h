@@ -8,6 +8,7 @@
 /// dependency: CoreUObject
 /// dependency: DeveloperSettings
 /// dependency: Engine
+/// dependency: StructUtils
 
 /// Class /Script/RigVM.RigVMGraphFunctionHost
 /// Size: 0x0000 (0x000028 - 0x000028)
@@ -31,73 +32,70 @@ public:
 };
 
 /// Class /Script/RigVM.RigVM
-/// Size: 0x0320 (0x000028 - 0x000348)
+/// Size: 0x02C0 (0x000028 - 0x0002E8)
 class URigVM : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 840;
+	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	CMember(URigVMMemoryStorage*)                      WorkMemoryStorageObject                                     OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(URigVMMemoryStorage*)                      LiteralMemoryStorageObject                                  OFFSET(get<T>, {0x30, 8, 0, 0})
-	CMember(URigVMMemoryStorage*)                      DebugMemoryStorageObject                                    OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FRigVMByteCode)                            ByteCodeStorage                                             OFFSET(getStruct<T>, {0x60, 160, 0, 0})
-	SMember(FRigVMInstructionArray)                    Instructions                                                OFFSET(getStruct<T>, {0x108, 16, 0, 0})
-	CMember(TArray<FName>)                             FunctionNamesStorage                                        OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(TArray<FRigVMParameter>)                   Parameters                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
-	CMember(TMap<FName, int32_t>)                      ParametersNameMap                                           OFFSET(get<T>, {0x178, 80, 0, 0})
-	CMember(URigVM*)                                   DeferredVMToCopy                                            OFFSET(get<T>, {0x300, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      LiteralMemoryStorageObject                                  OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FRigVMMemoryStorageStruct)                 LiteralMemoryStorage                                        OFFSET(getStruct<T>, {0x30, 80, 0, 0})
+	SMember(FRigVMByteCode)                            ByteCodeStorage                                             OFFSET(getStruct<T>, {0xA0, 160, 0, 0})
+	SMember(FRigVMInstructionArray)                    Instructions                                                OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	CMember(TArray<FName>)                             FunctionNamesStorage                                        OFFSET(get<T>, {0x160, 16, 0, 0})
+	CMember(TArray<FRigVMParameter>)                   Parameters                                                  OFFSET(get<T>, {0x1A8, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/RigVM.RigVM.SetParameterValueVector2D
-	// void SetParameterValueVector2D(FName& InParameterName, FVector2D& InValue, int32_t InArrayIndex);                        // [0x6d9cda4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetParameterValueVector2D(FName& InParameterName, FVector2D& InValue, int32_t InArrayIndex);                        // [0x70c924c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueVector
-	// void SetParameterValueVector(FName& InParameterName, FVector& InValue, int32_t InArrayIndex);                            // [0x6d9cf28] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetParameterValueVector(FName& InParameterName, FVector& InValue, int32_t InArrayIndex);                            // [0x70c9370] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueTransform
-	// void SetParameterValueTransform(FName& InParameterName, FTransform& InValue, int32_t InArrayIndex);                      // [0x6d9cbb4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetParameterValueTransform(FName& InParameterName, FTransform& InValue, int32_t InArrayIndex);                      // [0x70c90b8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueString
-	// void SetParameterValueString(FName& InParameterName, FString InValue, int32_t InArrayIndex);                             // [0x6d9c3bc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueString(FName& InParameterName, FString InValue, int32_t InArrayIndex);                             // [0x70c89e0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueQuat
-	// void SetParameterValueQuat(FName& InParameterName, FQuat& InValue, int32_t InArrayIndex);                                // [0x6d9c1d4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetParameterValueQuat(FName& InParameterName, FQuat& InValue, int32_t InArrayIndex);                                // [0x70c8864] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueName
-	// void SetParameterValueName(FName& InParameterName, FName& InValue, int32_t InArrayIndex);                                // [0x6d9c050] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueName(FName& InParameterName, FName& InValue, int32_t InArrayIndex);                                // [0x70c873c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueInt
-	// void SetParameterValueInt(FName& InParameterName, int32_t InValue, int32_t InArrayIndex);                                // [0x6d9be78] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueInt(FName& InParameterName, int32_t InValue, int32_t InArrayIndex);                                // [0x70c85d4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueFloat
-	// void SetParameterValueFloat(FName& InParameterName, float InValue, int32_t InArrayIndex);                                // [0x6d9bc9c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueFloat(FName& InParameterName, float InValue, int32_t InArrayIndex);                                // [0x70c846c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueDouble
-	// void SetParameterValueDouble(FName& InParameterName, double InValue, int32_t InArrayIndex);                              // [0x6d9babc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueDouble(FName& InParameterName, double InValue, int32_t InArrayIndex);                              // [0x70c8300] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.SetParameterValueBool
-	// void SetParameterValueBool(FName& InParameterName, bool InValue, int32_t InArrayIndex);                                  // [0x6d9b8d0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetParameterValueBool(FName& InParameterName, bool InValue, int32_t InArrayIndex);                                  // [0x70c8198] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetStatistics
-	// FRigVMStatistics GetStatistics();                                                                                        // [0x6d9b808] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FRigVMStatistics GetStatistics();                                                                                        // [0x70c804c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVM.GetRigVMFunctionName
-	// FString GetRigVMFunctionName(int32_t InFunctionIndex);                                                                   // [0x6d9b760] Native|Public|Const  
+	// FString GetRigVMFunctionName(int32_t InFunctionIndex);                                                                   // [0x70c7fa4] Native|Public|Const  
 	// Function /Script/RigVM.RigVM.GetParameterValueVector2D
-	// FVector2D GetParameterValueVector2D(FName& InParameterName, int32_t InArrayIndex);                                       // [0x6d9b48c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FVector2D GetParameterValueVector2D(FName& InParameterName, int32_t InArrayIndex);                                       // [0x70c7d98] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueVector
-	// FVector GetParameterValueVector(FName& InParameterName, int32_t InArrayIndex);                                           // [0x6d9b5ec] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FVector GetParameterValueVector(FName& InParameterName, int32_t InArrayIndex);                                           // [0x70c7e98] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueTransform
-	// FTransform GetParameterValueTransform(FName& InParameterName, int32_t InArrayIndex);                                     // [0x6d9b2c0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FTransform GetParameterValueTransform(FName& InParameterName, int32_t InArrayIndex);                                     // [0x70c7c64] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueString
-	// FString GetParameterValueString(FName& InParameterName, int32_t InArrayIndex);                                           // [0x6d9b14c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FString GetParameterValueString(FName& InParameterName, int32_t InArrayIndex);                                           // [0x70c7608] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueQuat
-	// FQuat GetParameterValueQuat(FName& InParameterName, int32_t InArrayIndex);                                               // [0x6d9afdc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// FQuat GetParameterValueQuat(FName& InParameterName, int32_t InArrayIndex);                                               // [0x70c7500] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueName
-	// FName GetParameterValueName(FName& InParameterName, int32_t InArrayIndex);                                               // [0x6d9ae8c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FName GetParameterValueName(FName& InParameterName, int32_t InArrayIndex);                                               // [0x70c740c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueInt
-	// int32_t GetParameterValueInt(FName& InParameterName, int32_t InArrayIndex);                                              // [0x6d9ad48] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// int32_t GetParameterValueInt(FName& InParameterName, int32_t InArrayIndex);                                              // [0x70c740c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueFloat
-	// float GetParameterValueFloat(FName& InParameterName, int32_t InArrayIndex);                                              // [0x6d9ac00] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// float GetParameterValueFloat(FName& InParameterName, int32_t InArrayIndex);                                              // [0x70c740c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueDouble
-	// double GetParameterValueDouble(FName& InParameterName, int32_t InArrayIndex);                                            // [0x6d9aab8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// double GetParameterValueDouble(FName& InParameterName, int32_t InArrayIndex);                                            // [0x70c7318] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.GetParameterValueBool
-	// bool GetParameterValueBool(FName& InParameterName, int32_t InArrayIndex);                                                // [0x6d9a974] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetParameterValueBool(FName& InParameterName, int32_t InArrayIndex);                                                // [0x70c7224] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.Execute
-	// bool Execute(FRigVMExtendedExecuteContext& Context, FName& InEntryName);                                                 // [0x6d9a844] Native|Public|HasOutParms|BlueprintCallable 
+	// bool Execute(FRigVMExtendedExecuteContext& Context, FName& InEntryName);                                                 // [0x70c70f4] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.AddRigVMFunction
-	// int32_t AddRigVMFunction(UScriptStruct* InRigVMStruct, FName& InMethodName);                                             // [0x6d9a770] Native|Public|HasOutParms 
+	// int32_t AddRigVMFunction(UScriptStruct* InRigVMStruct, FName& InMethodName);                                             // [0x70c7020] Native|Public|HasOutParms 
 };
 
 /// Class /Script/RigVM.NameSpacedUserData
@@ -124,9 +122,9 @@ public:
 
 	/// Functions
 	// Function /Script/RigVM.DataAssetLink.SetDataAsset
-	// void SetDataAsset(UDataAsset* InDataAsset);                                                                              // [0x6d9b850] Final|Native|Public|BlueprintCallable 
+	// void SetDataAsset(UDataAsset* InDataAsset);                                                                              // [0x70c8118] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.DataAssetLink.GetDataAsset
-	// UDataAsset* GetDataAsset();                                                                                              // [0x6d9a95c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UDataAsset* GetDataAsset();                                                                                              // [0x70c720c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/RigVM.RigVMMemoryStorageGeneratorClass
@@ -150,11 +148,11 @@ public:
 };
 
 /// Class /Script/RigVM.RigVMNativized
-/// Size: 0x0028 (0x000348 - 0x000370)
+/// Size: 0x0028 (0x0002E8 - 0x000310)
 class URigVMNativized : public URigVM
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 880;
+	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
 };
@@ -173,78 +171,81 @@ public:
 
 	/// Functions
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.RequiresDialog
-	// bool RequiresDialog();                                                                                                   // [0x6de24cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool RequiresDialog();                                                                                                   // [0x7112410] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportWarning
-	// void ReportWarning(FString InMessage);                                                                                   // [0x6de1e10] Final|Native|Public|BlueprintCallable 
+	// void ReportWarning(FString InMessage);                                                                                   // [0x7111df0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportInfo
-	// void ReportInfo(FString InMessage);                                                                                      // [0x6de1754] Final|Native|Public|BlueprintCallable 
+	// void ReportInfo(FString InMessage);                                                                                      // [0x71117d0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.ReportError
-	// void ReportError(FString InMessage);                                                                                     // [0x6de1098] Final|Native|Public|BlueprintCallable 
+	// void ReportError(FString InMessage);                                                                                     // [0x71111b8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.IsValid
-	// bool IsValid();                                                                                                          // [0x6de107c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsValid();                                                                                                          // [0x711119c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/RigVM.RigVMHost
-/// Size: 0x0310 (0x000028 - 0x000338)
+/// Size: 0x0488 (0x000028 - 0x0004B0)
 class URigVMHost : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 824;
+	static inline constexpr uint64_t __MDKClassSize = 1200;
 
 public:
 	SMember(FRigVMRuntimeSettings)                     VMRuntimeSettings                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(URigVM*)                                   VM                                                          OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      OFFSET(getStruct<T>, {0x60, 440, 0, 0})
-	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(getStruct<T>, {0x218, 24, 0, 0})
-	CMember(TArray<FName>)                             EventQueue                                                  OFFSET(get<T>, {0x248, 16, 0, 0})
-	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	CMember(TMap<FString, FSoftObjectPath>)            UserDefinedStructGuidToPathName                             OFFSET(get<T>, {0x60, 80, 0, 0})
+	CMember(TMap<FString, FSoftObjectPath>)            UserDefinedEnumToPathName                                   OFFSET(get<T>, {0xB0, 80, 0, 0})
+	CMember(TSet<UObject*>)                            UserDefinedTypesInUse                                       OFFSET(get<T>, {0x100, 80, 0, 0})
+	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      OFFSET(getStruct<T>, {0x150, 576, 0, 0})
+	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(getStruct<T>, {0x390, 24, 0, 0})
+	CMember(TArray<FName>)                             EventQueue                                                  OFFSET(get<T>, {0x3C0, 16, 0, 0})
+	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x460, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/RigVM.RigVMHost.SupportsEvent
-	// bool SupportsEvent(FName& InEventName);                                                                                  // [0x6df3a34] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool SupportsEvent(FName& InEventName);                                                                                  // [0x7131b9c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.SetVariableFromString
-	// bool SetVariableFromString(FName& InVariableName, FString InValue);                                                      // [0x6df3304] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool SetVariableFromString(FName& InVariableName, FString InValue);                                                      // [0x713153c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.SetFramesPerSecond
-	// void SetFramesPerSecond(float InFramesPerSecond);                                                                        // [0x6df3284] Final|Native|Public|BlueprintCallable 
+	// void SetFramesPerSecond(float InFramesPerSecond);                                                                        // [0x71314bc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.SetDeltaTime
-	// void SetDeltaTime(float InDeltaTime);                                                                                    // [0x6df3204] Final|Native|Public|BlueprintCallable 
+	// void SetDeltaTime(float InDeltaTime);                                                                                    // [0x713143c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.SetAbsoluteTime
-	// void SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero);                                                     // [0x6df313c] Final|Native|Public|BlueprintCallable 
+	// void SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero);                                                     // [0x7131374] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.SetAbsoluteAndDeltaTime
-	// void SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime);                                                   // [0x6df3074] Final|Native|Public|BlueprintCallable 
+	// void SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime);                                                   // [0x71312ac] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.RequestRunOnceEvent
-	// void RequestRunOnceEvent(FName& InEventName, int32_t InEventIndex);                                                      // [0x6df2f40] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RequestRunOnceEvent(FName& InEventName, int32_t InEventIndex);                                                      // [0x71311a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.RequestInit
-	// void RequestInit();                                                                                                      // [0x5c43bd4] Native|Public|BlueprintCallable 
+	// void RequestInit();                                                                                                      // [0x59acff4] Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.RemoveRunOnceEvent
-	// bool RemoveRunOnceEvent(FName& InEventName);                                                                             // [0x6df2ea8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool RemoveRunOnceEvent(FName& InEventName);                                                                             // [0x7131108] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.GetVM
-	// URigVM* GetVM();                                                                                                         // [0x6df2748] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// URigVM* GetVM();                                                                                                         // [0x7130a4c] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/RigVM.RigVMHost.GetVariableType
-	// FName GetVariableType(FName& InVariableName);                                                                            // [0x6df2df8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FName GetVariableType(FName& InVariableName);                                                                            // [0x7131058] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetVariableAsString
-	// FString GetVariableAsString(FName& InVariableName);                                                                      // [0x6df276c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FString GetVariableAsString(FName& InVariableName);                                                                      // [0x7130a70] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetSupportedEvents
-	// TArray<FName> GetSupportedEvents();                                                                                      // [0x6df26a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FName> GetSupportedEvents();                                                                                      // [0x71309ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetScriptAccessibleVariables
-	// TArray<FName> GetScriptAccessibleVariables();                                                                            // [0x6df2668] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FName> GetScriptAccessibleVariables();                                                                            // [0x713096c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetExtendedExecuteContext
-	// FRigVMExtendedExecuteContext GetExtendedExecuteContext();                                                                // [0x6df2638] Native|Public|BlueprintCallable 
+	// FRigVMExtendedExecuteContext GetExtendedExecuteContext();                                                                // [0x713093c] Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.GetDeltaTime
-	// float GetDeltaTime();                                                                                                    // [0x32c2980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetDeltaTime();                                                                                                    // [0x324975c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetCurrentFramesPerSecond
-	// float GetCurrentFramesPerSecond();                                                                                       // [0x6df2618] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetCurrentFramesPerSecond();                                                                                       // [0x713091c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.GetAbsoluteTime
-	// float GetAbsoluteTime();                                                                                                 // [0x330fc38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetAbsoluteTime();                                                                                                 // [0x3249490] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RigVM.RigVMHost.FindRigVMHosts
-	// TArray<URigVMHost*> FindRigVMHosts(UObject* Outer, UClass* OptionalClass);                                               // [0x6df251c] Final|Native|Static|Public|BlueprintCallable 
+	// TArray<URigVMHost*> FindRigVMHosts(UObject* Outer, UClass* OptionalClass);                                               // [0x7130810] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.ExecuteEvent
-	// bool ExecuteEvent(FName& InEventName);                                                                                   // [0x6df2484] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool ExecuteEvent(FName& InEventName);                                                                                   // [0x7130778] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.Execute
-	// bool Execute(FName& InEventName);                                                                                        // [0x6df23e4] Native|Public|HasOutParms|BlueprintCallable 
+	// bool Execute(FName& InEventName);                                                                                        // [0x71306d8] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.CanExecute
-	// bool CanExecute();                                                                                                       // [0x21b84d8] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool CanExecute();                                                                                                       // [0x581fcc4] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/RigVM.RigVMEditorSettings
@@ -258,17 +259,30 @@ public:
 };
 
 /// Struct /Script/RigVM.RigVMExtendedExecuteContext
-/// Size: 0x01B8 (0x000000 - 0x0001B8)
+/// Size: 0x0240 (0x000000 - 0x000240)
 class FRigVMExtendedExecuteContext : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 440;
+	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
 	DMember(uint32_t)                                  VMHash                                                      OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
-	DMember(uint32_t)                                  NumExecutions                                               OFFSET(get<uint32_t>, {0x110, 4, 0, 0})
-	CMember(URigVM*)                                   DeferredVMToCopy                                            OFFSET(get<T>, {0x170, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      WorkMemoryStorageObject                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	CMember(URigVMMemoryStorage*)                      DebugMemoryStorageObject                                    OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FRigVMMemoryStorageStruct)                 WorkMemoryStorage                                           OFFSET(getStruct<T>, {0x20, 80, 0, 0})
+	SMember(FRigVMMemoryStorageStruct)                 DebugMemoryStorage                                          OFFSET(getStruct<T>, {0x70, 80, 0, 0})
+};
+
+/// Struct /Script/RigVM.RigVMMemoryStorageStruct
+/// Size: 0x0040 (0x000010 - 0x000050)
+class FRigVMMemoryStorageStruct : public FInstancedPropertyBag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
 };
 
 /// Struct /Script/RigVM.RigVMDrawContainer
@@ -1730,7 +1744,7 @@ class FRigVMFunction_MathBoolFlipFlop : public FRigVMFunction_MathBoolBase
 
 public:
 	DMember(bool)                                      StartValue                                                  OFFSET(get<bool>, {0x8, 1, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(bool)                                      LastValue                                                   OFFSET(get<bool>, {0x11, 1, 0, 0})
 	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
@@ -1745,7 +1759,7 @@ class FRigVMFunction_MathBoolOnce : public FRigVMFunction_MathBoolBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0xC, 1, 0, 0})
 	DMember(bool)                                      LastValue                                                   OFFSET(get<bool>, {0xD, 1, 0, 0})
 	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
@@ -4060,6 +4074,79 @@ public:
 	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
 };
 
+/// Struct /Script/RigVM.RigVMFunction_MathRayBase
+/// Size: 0x0000 (0x000008 - 0x000008)
+class FRigVMFunction_MathRayBase : public FRigVMFunction_MathBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 8;
+
+public:
+};
+
+/// Struct /Script/RigVM.RigVMFunction_MathRayIntersectRay
+/// Size: 0x0088 (0x000008 - 0x000090)
+class FRigVMFunction_MathRayIntersectRay : public FRigVMFunction_MathRayBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	SMember(FRay)                                      A                                                           OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	SMember(FRay)                                      B                                                           OFFSET(getStruct<T>, {0x38, 48, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x68, 24, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(float)                                     RatioA                                                      OFFSET(get<float>, {0x84, 4, 0, 0})
+	DMember(float)                                     RatioB                                                      OFFSET(get<float>, {0x88, 4, 0, 0})
+};
+
+/// Struct /Script/RigVM.RigVMFunction_MathRayIntersectPlane
+/// Size: 0x0080 (0x000008 - 0x000088)
+class FRigVMFunction_MathRayIntersectPlane : public FRigVMFunction_MathRayBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 136;
+
+public:
+	SMember(FRay)                                      Ray                                                         OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	SMember(FVector)                                   PlanePoint                                                  OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   PlaneNormal                                                 OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x68, 24, 0, 0})
+	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x80, 4, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x84, 4, 0, 0})
+};
+
+/// Struct /Script/RigVM.RigVMFunction_MathRayGetAt
+/// Size: 0x0050 (0x000008 - 0x000058)
+class FRigVMFunction_MathRayGetAt : public FRigVMFunction_MathRayBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+	SMember(FRay)                                      Ray                                                         OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+};
+
+/// Struct /Script/RigVM.RigVMFunction_MathRayTransform
+/// Size: 0x00C8 (0x000008 - 0x0000D0)
+class FRigVMFunction_MathRayTransform : public FRigVMFunction_MathRayBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 208;
+
+public:
+	SMember(FRay)                                      Ray                                                         OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FRay)                                      Result                                                      OFFSET(getStruct<T>, {0xA0, 48, 0, 0})
+};
+
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatWorkData
 /// Size: 0x0090 (0x000000 - 0x000090)
 class FRigVMFunction_MathRBFInterpolateQuatWorkData : public MDKBase
@@ -5500,7 +5587,7 @@ public:
 	DMember(int32_t)                                   Seed                                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     LastResult                                                  OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(int32_t)                                   LastSeed                                                    OFFSET(get<int32_t>, {0x20, 4, 0, 0})
@@ -5520,7 +5607,7 @@ public:
 	DMember(int32_t)                                   Seed                                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	SMember(FVector)                                   LastResult                                                  OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(int32_t)                                   LastSeed                                                    OFFSET(get<int32_t>, {0x48, 4, 0, 0})
@@ -6723,7 +6810,7 @@ class FRigVMFunction_TimeLoop : public FRigVMFunction_SimBase
 
 public:
 	DMember(float)                                     Speed                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(bool)                                      Normalize                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(float)                                     Absolute                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     Relative                                                    OFFSET(get<float>, {0x18, 4, 0, 0})
@@ -6849,13 +6936,14 @@ enum ERigVMTransformSpace : uint8_t
 };
 
 /// Enum /Script/RigVM.ERigVMClampSpatialMode
-/// Size: 0x04
+/// Size: 0x05
 enum ERigVMClampSpatialMode : uint8_t
 {
 	ERigVMClampSpatialMode__Plane0                                                   = 0,
 	ERigVMClampSpatialMode__Cylinder1                                                = 1,
 	ERigVMClampSpatialMode__Sphere2                                                  = 2,
-	ERigVMClampSpatialMode__ERigVMClampSpatialMode_MAX3                              = 3
+	ERigVMClampSpatialMode__Capsule3                                                 = 3,
+	ERigVMClampSpatialMode__ERigVMClampSpatialMode_MAX4                              = 4
 };
 
 /// Enum /Script/RigVM.ERigVMParameterType

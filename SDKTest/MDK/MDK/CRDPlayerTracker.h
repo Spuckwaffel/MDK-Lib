@@ -32,8 +32,8 @@ public:
 
 	/// Functions
 	// Function /Script/CRDPlayerTracker.CRDPlayerTrackerMarker.DestroyPlayerTrackerWidget
-	// bool DestroyPlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay);                          // [0x9c81b8c] Final|Native|Public|BlueprintCallable 
+	// bool DestroyPlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay);                          // [0xa5403fc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDPlayerTracker.CRDPlayerTrackerMarker.CreatePlayerTrackerWidget
-	// UUserWidget* CreatePlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay, AFortPlayerStateAthena* AssociatedPSA); // [0x9c819c0] Final|Native|Public|BlueprintCallable 
+	// UUserWidget* CreatePlayerTrackerWidget(AFortPlayerControllerGameplay* InFortPlayerControllerGameplay, AFortPlayerStateAthena* AssociatedPSA); // [0xa540208] Final|Native|Public|BlueprintCallable 
 };
 

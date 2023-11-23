@@ -49,11 +49,11 @@ public:
 
 	/// Functions
 	// Function /Script/VerseDevices.ScriptDevice.SetEnabled
-	// void SetEnabled(bool bInEnabled);                                                                                        // [0x98f627c] Final|Native|Protected|BlueprintCallable 
+	// void SetEnabled(bool bInEnabled);                                                                                        // [0x9daded8] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/VerseDevices.ScriptDevice.HandlePreMinigameStartedSetup
-	// void HandlePreMinigameStartedSetup();                                                                                    // [0x98f6268] Final|Native|Public  
+	// void HandlePreMinigameStartedSetup();                                                                                    // [0x9dadec4] Final|Native|Public  
 	// Function /Script/VerseDevices.ScriptDevice.BP_SetVisibility
-	// void BP_SetVisibility(bool bVisible);                                                                                    // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void BP_SetVisibility(bool bVisible);                                                                                    // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/VerseDevices.VerseMovableObjectBase
@@ -84,7 +84,7 @@ class UVerseCreativeObject : public UVerseMovableObjectBase
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	CMember(ABuildingActor*)                           SavedActor                                                  OFFSET(get<T>, {0xA0, 8, 0, 0})
+	CMember(AActor*)                                   SavedActor                                                  OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
 /// Class /Script/VerseDevices.VerseCreativeObjectQuotaHelperComponent

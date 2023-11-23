@@ -104,21 +104,21 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.IsSetup
-	// bool IsSetup();                                                                                                          // [0x7599ca0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsSetup();                                                                                                          // [0x77a44bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.GetAllAgents
-	// void GetAllAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& OutAgentIds, UClass* AgentClass);                        // [0xa1ea1c0] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// void GetAllAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& OutAgentIds, UClass* AgentClass);                        // [0xa90cc04] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.GetAgents
-	// void GetAgents(TArray<int32_t>& AgentIds, UClass* AgentClass, TArray<UObject*>& OutAgents);                              // [0xa1e9dac] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
+	// void GetAgents(TArray<int32_t>& AgentIds, UClass* AgentClass, TArray<UObject*>& OutAgents);                              // [0xa90c7ec] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.GetAgentManager
-	// ALearningAgentsManager* GetAgentManager(UClass* AgentManagerClass);                                                      // [0xa1e9b00] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// ALearningAgentsManager* GetAgentManager(UClass* AgentManagerClass);                                                      // [0xa90c530] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.GetAgent
-	// UObject* GetAgent(int32_t AgentId, UClass* AgentClass);                                                                  // [0xa1e9898] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// UObject* GetAgent(int32_t AgentId, UClass* AgentClass);                                                                  // [0xa90c2b4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.AgentsReset
-	// void AgentsReset(TArray<int32_t>& AgentIds);                                                                             // [0x64be3cc] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void AgentsReset(TArray<int32_t>& AgentIds);                                                                             // [0xa90bfec] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.AgentsRemoved
-	// void AgentsRemoved(TArray<int32_t>& AgentIds);                                                                           // [0xa1e9630] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void AgentsRemoved(TArray<int32_t>& AgentIds);                                                                           // [0x855205c] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.AgentsAdded
-	// void AgentsAdded(TArray<int32_t>& AgentIds);                                                                             // [0xa1e9590] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void AgentsAdded(TArray<int32_t>& AgentIds);                                                                             // [0xa90bf4c] Native|Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/LearningAgents.LearningAgentsController
@@ -134,15 +134,15 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsController.SetupController
-	// void SetupController(ULearningAgentsInteractor* InInteractor);                                                           // [0xa1e5290] Final|Native|Public|BlueprintCallable 
+	// void SetupController(ULearningAgentsInteractor* InInteractor);                                                           // [0xa907ce0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsController.SetActions
-	// void SetActions(TArray<int32_t>& AgentIds);                                                                              // [0xa1e4b1c] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void SetActions(TArray<int32_t>& AgentIds);                                                                              // [0xa907550] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsController.RunController
-	// void RunController();                                                                                                    // [0xa1e43c8] Final|Native|Public|BlueprintCallable 
+	// void RunController();                                                                                                    // [0xa906e98] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsController.GetInteractor
-	// ULearningAgentsInteractor* GetInteractor(UClass* InteractorClass);                                                       // [0xa1e00dc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// ULearningAgentsInteractor* GetInteractor(UClass* InteractorClass);                                                       // [0xa9027bc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsController.EncodeActions
-	// void EncodeActions();                                                                                                    // [0xa1df944] Final|Native|Public|BlueprintCallable 
+	// void EncodeActions();                                                                                                    // [0xa902030] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LearningAgents.LearningAgentsCritic
@@ -159,21 +159,21 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsCritic.UseCriticFromAsset
-	// void UseCriticFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                               // [0xa1e5500] Final|Native|Public|BlueprintCallable 
+	// void UseCriticFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                               // [0xa907f38] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsCritic.SetupCritic
-	// void SetupCritic(ULearningAgentsInteractor* InInteractor, FLearningAgentsCriticSettings& CriticSettings, ULearningAgentsNeuralNetwork* NeuralNetworkAsset); // [0xa1e5310] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetupCritic(ULearningAgentsInteractor* InInteractor, FLearningAgentsCriticSettings& CriticSettings, ULearningAgentsNeuralNetwork* NeuralNetworkAsset); // [0xa907d60] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsCritic.SaveCriticToSnapshot
-	// void SaveCriticToSnapshot(FFilePath& File);                                                                              // [0xa1e445c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void SaveCriticToSnapshot(FFilePath& File);                                                                              // [0xa906f2c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsCritic.SaveCriticToAsset
-	// void SaveCriticToAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                                // [0xa1e43dc] Final|Native|Public|BlueprintCallable 
+	// void SaveCriticToAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                                // [0xa906eac] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsCritic.LoadCriticFromSnapshot
-	// void LoadCriticFromSnapshot(FFilePath& File);                                                                            // [0xa1e1dc0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void LoadCriticFromSnapshot(FFilePath& File);                                                                            // [0xa904b9c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsCritic.LoadCriticFromAsset
-	// void LoadCriticFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                              // [0xa1e1d40] Final|Native|Public|BlueprintCallable 
+	// void LoadCriticFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                              // [0xa904b1c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsCritic.GetEstimatedDiscountedReturn
-	// float GetEstimatedDiscountedReturn(int32_t AgentId);                                                                     // [0xa1dfed8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetEstimatedDiscountedReturn(int32_t AgentId);                                                                     // [0xa90257c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsCritic.EvaluateCritic
-	// void EvaluateCritic();                                                                                                   // [0xa1df958] Final|Native|Public|BlueprintCallable 
+	// void EvaluateCritic();                                                                                                   // [0xa902044] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LearningAgents.LearningAgentsHelper
@@ -251,23 +251,23 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsInteractor.SetupObservations
-	// void SetupObservations();                                                                                                // [0xa1f0b64] Native|Event|Public|BlueprintEvent 
+	// void SetupObservations();                                                                                                // [0xa91355c] Native|Event|Public|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.SetupInteractor
-	// void SetupInteractor();                                                                                                  // [0xa1f0b50] Final|Native|Public|BlueprintCallable 
+	// void SetupInteractor();                                                                                                  // [0xa913548] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.SetupActions
-	// void SetupActions();                                                                                                     // [0x7cea14c] Native|Event|Public|BlueprintEvent 
+	// void SetupActions();                                                                                                     // [0x7f0c0dc] Native|Event|Public|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.SetObservations
-	// void SetObservations(TArray<int32_t>& AgentIds);                                                                         // [0xa1ec6e8] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void SetObservations(TArray<int32_t>& AgentIds);                                                                         // [0xa90efd0] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.GetObservationVector
-	// void GetObservationVector(int32_t AgentId, TArray<float>& OutObservationVector);                                         // [0xa1ea3e4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetObservationVector(int32_t AgentId, TArray<float>& OutObservationVector);                                         // [0xa90ce20] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.GetActionVector
-	// void GetActionVector(int32_t AgentId, TArray<float>& OutActionVector);                                                   // [0xa1e96f8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetActionVector(int32_t AgentId, TArray<float>& OutActionVector);                                                   // [0xa90c0b4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.GetActions
-	// void GetActions(TArray<int32_t>& AgentIds);                                                                              // [0xa1e4b1c] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void GetActions(TArray<int32_t>& AgentIds);                                                                              // [0xa907550] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.EncodeObservations
-	// void EncodeObservations();                                                                                               // [0xa1e96e4] Final|Native|Public|BlueprintCallable 
+	// void EncodeObservations();                                                                                               // [0xa90c0a0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.DecodeActions
-	// void DecodeActions();                                                                                                    // [0xa1e96d0] Final|Native|Public|BlueprintCallable 
+	// void DecodeActions();                                                                                                    // [0xa90c08c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LearningAgents.LearningAgentsManager
@@ -284,53 +284,101 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsManager.ResetAllAgents
-	// void ResetAllAgents();                                                                                                   // [0xa1eaf6c] Final|Native|Public|BlueprintCallable 
+	// void ResetAllAgents();                                                                                                   // [0xa90d948] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.ResetAgents
-	// void ResetAgents(TArray<int32_t>& AgentIds);                                                                             // [0xa1eaed0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ResetAgents(TArray<int32_t>& AgentIds);                                                                             // [0xa90d8ac] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.ResetAgent
-	// void ResetAgent(int32_t AgentId);                                                                                        // [0xa1eae50] Final|Native|Public|BlueprintCallable 
+	// void ResetAgent(int32_t AgentId);                                                                                        // [0xa90d82c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.RemoveAllAgents
-	// void RemoveAllAgents();                                                                                                  // [0xa1eae3c] Final|Native|Public|BlueprintCallable 
+	// void RemoveAllAgents();                                                                                                  // [0xa90d818] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.RemoveAgents
-	// void RemoveAgents(TArray<int32_t>& AgentIds);                                                                            // [0xa1eada0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveAgents(TArray<int32_t>& AgentIds);                                                                            // [0xa90d77c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.RemoveAgent
-	// void RemoveAgent(int32_t AgentId);                                                                                       // [0xa1ead20] Final|Native|Public|BlueprintCallable 
+	// void RemoveAgent(int32_t AgentId);                                                                                       // [0xa90d6fc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.HasAgentObject
-	// bool HasAgentObject(UObject* Agent);                                                                                     // [0xa1ea554] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasAgentObject(UObject* Agent);                                                                                     // [0xa90cfcc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.HasAgent
-	// bool HasAgent(int32_t AgentId);                                                                                          // [0xa1ea4c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasAgent(int32_t AgentId);                                                                                          // [0xa90cf40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetMaxAgentNum
-	// int32_t GetMaxAgentNum();                                                                                                // [0x5b3a3b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetMaxAgentNum();                                                                                                // [0x59d9824] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAllAgents
-	// void GetAllAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& OutAgentIds, UClass* AgentClass);                        // [0xa1e9f9c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void GetAllAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& OutAgentIds, UClass* AgentClass);                        // [0xa90c9e8] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAgents
-	// void GetAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& AgentIds, UClass* AgentClass);                              // [0xa1e9b8c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void GetAgents(TArray<UObject*>& OutAgents, TArray<int32_t>& AgentIds, UClass* AgentClass);                              // [0xa90c5cc] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAgentNum
-	// int32_t GetAgentNum();                                                                                                   // [0x792261c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetAgentNum();                                                                                                   // [0x7b45840] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAgentIds
-	// void GetAgentIds(TArray<int32_t>& OutAgentIds, TArray<UObject*>& InAgents);                                              // [0xa1e99ec] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void GetAgentIds(TArray<int32_t>& OutAgentIds, TArray<UObject*>& InAgents);                                              // [0xa90c41c] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAgentId
-	// int32_t GetAgentId(UObject* Agent);                                                                                      // [0xa1e995c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetAgentId(UObject* Agent);                                                                                      // [0xa90c38c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.GetAgent
-	// UObject* GetAgent(int32_t AgentId, UClass* AgentClass);                                                                  // [0xa1e97dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UObject* GetAgent(int32_t AgentId, UClass* AgentClass);                                                                  // [0xa90c1d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsManager.AddManagerAsTickPrerequisiteOfAgents
-	// void AddManagerAsTickPrerequisiteOfAgents(TArray<AActor*>& InAgents);                                                    // [0xa1e683c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddManagerAsTickPrerequisiteOfAgents(TArray<AActor*>& InAgents);                                                    // [0xa9093fc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.AddAgentsAsTickPrerequisiteOfManager
-	// void AddAgentsAsTickPrerequisiteOfManager(TArray<AActor*>& InAgents);                                                    // [0xa1e5ab0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddAgentsAsTickPrerequisiteOfManager(TArray<AActor*>& InAgents);                                                    // [0xa908634] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.AddAgents
-	// void AddAgents(TArray<int32_t>& OutAgentIds, TArray<UObject*>& InAgents);                                                // [0xa1e599c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddAgents(TArray<int32_t>& OutAgentIds, TArray<UObject*>& InAgents);                                                // [0xa908520] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.AddAgent
-	// int32_t AddAgent(UObject* Agent);                                                                                        // [0xa1e590c] Final|Native|Public|BlueprintCallable 
+	// int32_t AddAgent(UObject* Agent);                                                                                        // [0xa908490] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LearningAgents.LearningAgentsNeuralNetwork
-/// Size: 0x0010 (0x000030 - 0x000040)
+/// Size: 0x0008 (0x000030 - 0x000038)
 class ULearningAgentsNeuralNetwork : public UDataAsset
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
+	CMember(ULearningAgentsNeuralNetworkData*)         NeuralNetworkData                                           OFFSET(get<T>, {0x30, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Script/LearningAgents.LearningAgentsNeuralNetwork.SaveNetworkToSnapshot
+	// void SaveNetworkToSnapshot(FFilePath& File);                                                                             // [0xa90da10] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/LearningAgents.LearningAgentsNeuralNetwork.SaveNetworkToAsset
+	// void SaveNetworkToAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                               // [0xa90d990] Final|Native|Public|BlueprintCallable 
+	// Function /Script/LearningAgents.LearningAgentsNeuralNetwork.ResetNetwork
+	// void ResetNetwork();                                                                                                     // [0xa90d95c] Final|Native|Public  
+	// Function /Script/LearningAgents.LearningAgentsNeuralNetwork.LoadNetworkFromSnapshot
+	// void LoadNetworkFromSnapshot(FFilePath& File);                                                                           // [0xa90d0d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/LearningAgents.LearningAgentsNeuralNetwork.LoadNetworkFromAsset
+	// void LoadNetworkFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                             // [0xa90d058] Final|Native|Public|BlueprintCallable 
+};
+
+/// Class /Script/LearningAgents.LearningAgentsNeuralNetworkData
+/// Size: 0x0000 (0x000028 - 0x000028)
+class ULearningAgentsNeuralNetworkData : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/LearningAgents.LearningAgentsMLPNeuralNetworkData
+/// Size: 0x0010 (0x000028 - 0x000038)
+class ULearningAgentsMLPNeuralNetworkData : public ULearningAgentsNeuralNetworkData
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Script/LearningAgents.LearningAgentsNNENeuralNetworkData
+/// Size: 0x0030 (0x000028 - 0x000058)
+class ULearningAgentsNNENeuralNetworkData : public ULearningAgentsNeuralNetworkData
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+	DMember(int32_t)                                   InputNum                                                    OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	DMember(int32_t)                                   OutputNum                                                   OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
+	CMember(TArray<char>)                              FileData                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	CMember(UNNEModelData*)                            ModelData                                                   OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Class /Script/LearningAgents.LearningAgentsObservation
@@ -678,25 +726,25 @@ public:
 
 	/// Functions
 	// Function /Script/LearningAgents.LearningAgentsPolicy.UsePolicyFromAsset
-	// void UsePolicyFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                               // [0xa268324] Final|Native|Public|BlueprintCallable 
+	// void UsePolicyFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                               // [0xa984e3c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.SetupPolicy
-	// void SetupPolicy(ULearningAgentsInteractor* InInteractor, FLearningAgentsPolicySettings& PolicySettings, ULearningAgentsNeuralNetwork* NeuralNetworkAsset); // [0xa268118] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetupPolicy(ULearningAgentsInteractor* InInteractor, FLearningAgentsPolicySettings& PolicySettings, ULearningAgentsNeuralNetwork* NeuralNetworkAsset); // [0xa984c44] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.SetActionNoiseScale
-	// void SetActionNoiseScale(float ActionNoiseScale);                                                                        // [0xa268098] Final|Native|Public|BlueprintCallable 
+	// void SetActionNoiseScale(float ActionNoiseScale);                                                                        // [0xa984bc4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.SavePolicyToSnapshot
-	// void SavePolicyToSnapshot(FFilePath& File);                                                                              // [0xa2679d8] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// void SavePolicyToSnapshot(FFilePath& File);                                                                              // [0xa9845a0] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.SavePolicyToAsset
-	// void SavePolicyToAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                                // [0xa267958] Final|Native|Public|BlueprintCallable 
+	// void SavePolicyToAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                                // [0xa984520] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.RunInference
-	// void RunInference();                                                                                                     // [0xa267944] Final|Native|Public|BlueprintCallable 
+	// void RunInference();                                                                                                     // [0xa98450c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.LoadPolicyFromSnapshot
-	// void LoadPolicyFromSnapshot(FFilePath& File);                                                                            // [0xa267284] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void LoadPolicyFromSnapshot(FFilePath& File);                                                                            // [0xa983ee8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.LoadPolicyFromAsset
-	// void LoadPolicyFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                              // [0xa267204] Final|Native|Public|BlueprintCallable 
+	// void LoadPolicyFromAsset(ULearningAgentsNeuralNetwork* NeuralNetworkAsset);                                              // [0xa983e68] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.GetActionNoiseScale
-	// float GetActionNoiseScale();                                                                                             // [0xa2671dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetActionNoiseScale();                                                                                             // [0xa983e40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.EvaluatePolicy
-	// void EvaluatePolicy();                                                                                                   // [0xa2671c8] Final|Native|Public|BlueprintCallable 
+	// void EvaluatePolicy();                                                                                                   // [0xa983e2c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/LearningAgents.LearningAgentsCriticSettings

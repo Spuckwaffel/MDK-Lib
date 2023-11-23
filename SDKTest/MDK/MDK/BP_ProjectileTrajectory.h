@@ -32,22 +32,22 @@ public:
 
 	/// Functions
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetShouldUpdateFromOwner
-	// void SetShouldUpdateFromOwner(bool ShouldUpdate, UObject* Owner);                                                        // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void SetShouldUpdateFromOwner(bool ShouldUpdate, UObject* Owner);                                                        // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UpdateFromTrajectoryOwner
-	// void UpdateFromTrajectoryOwner();                                                                                        // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void UpdateFromTrajectoryOwner();                                                                                        // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// void UserConstructionScript();                                                                                           // [0x101681c] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ReceiveTick
-	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectorySpline
-	// void SetTrajectorySpline(TArray<FVector>& SplinePoints, TArray<FVector>& SplineTangents);                                // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void SetTrajectorySpline(TArray<FVector>& SplinePoints, TArray<FVector>& SplineTangents);                                // [0x101681c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectoryValid
-	// void SetTrajectoryValid(bool bIsTrajectoryValid);                                                                        // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetTrajectoryValid(bool bIsTrajectoryValid);                                                                        // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UpdateTargetMeshVisibility
-	// void UpdateTargetMeshVisibility();                                                                                       // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void UpdateTargetMeshVisibility();                                                                                       // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ExecuteUbergraph_BP_ProjectileTrajectory
-	// void ExecuteUbergraph_BP_ProjectileTrajectory(int32_t EntryPoint);                                                       // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_BP_ProjectileTrajectory(int32_t EntryPoint);                                                       // [0x101681c] Final|HasDefaults    
 };
 

@@ -19,14 +19,13 @@ public:
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionISMPoolSubSystem
-/// Size: 0x0008 (0x000030 - 0x000038)
+/// Size: 0x0050 (0x000030 - 0x000080)
 class UGeometryCollectionISMPoolSubSystem : public UWorldSubsystem
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	CMember(AGeometryCollectionISMPoolActor*)          ISMPoolActor                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/GeometryCollectionEngine.ChaosDestructionListener
@@ -55,39 +54,39 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents
-	// void SortTrailingEvents(TArray<FChaosTrailingEventData>& TrailingEvents, EChaosTrailingSortMethod SortMethod);           // [0x5750548] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SortTrailingEvents(TArray<FChaosTrailingEventData>& TrailingEvents, EChaosTrailingSortMethod SortMethod);           // [0x55b8d50] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortRemovalEvents
-	// void SortRemovalEvents(TArray<FChaosRemovalEventData>& RemovalEvents, EChaosRemovalSortMethod SortMethod);               // [0x574fd70] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SortRemovalEvents(TArray<FChaosRemovalEventData>& RemovalEvents, EChaosRemovalSortMethod SortMethod);               // [0x55b8634] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents
-	// void SortCollisionEvents(TArray<FChaosCollisionEventData>& CollisionEvents, EChaosCollisionSortMethod SortMethod);       // [0x574f598] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SortCollisionEvents(TArray<FChaosCollisionEventData>& CollisionEvents, EChaosCollisionSortMethod SortMethod);       // [0x55b7f18] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents
-	// void SortBreakingEvents(TArray<FChaosBreakingEventData>& BreakingEvents, EChaosBreakingSortMethod SortMethod);           // [0x574edc0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SortBreakingEvents(TArray<FChaosBreakingEventData>& BreakingEvents, EChaosBreakingSortMethod SortMethod);           // [0x55b77fc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventRequestSettings
-	// void SetTrailingEventRequestSettings(FChaosTrailingEventRequestSettings& InSettings);                                    // [0x574ed14] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetTrailingEventRequestSettings(FChaosTrailingEventRequestSettings& InSettings);                                    // [0x55b76b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled
-	// void SetTrailingEventEnabled(bool bIsEnabled);                                                                           // [0x574ec80] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTrailingEventEnabled(bool bIsEnabled);                                                                           // [0x55b761c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventRequestSettings
-	// void SetRemovalEventRequestSettings(FChaosRemovalEventRequestSettings& InSettings);                                      // [0x574e92c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetRemovalEventRequestSettings(FChaosRemovalEventRequestSettings& InSettings);                                      // [0x55b7268] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventEnabled
-	// void SetRemovalEventEnabled(bool bIsEnabled);                                                                            // [0x574e898] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRemovalEventEnabled(bool bIsEnabled);                                                                            // [0x55b71d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventRequestSettings
-	// void SetCollisionEventRequestSettings(FChaosCollisionEventRequestSettings& InSettings);                                  // [0x574dce8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetCollisionEventRequestSettings(FChaosCollisionEventRequestSettings& InSettings);                                  // [0x55b62b8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventEnabled
-	// void SetCollisionEventEnabled(bool bIsEnabled);                                                                          // [0x574dc58] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCollisionEventEnabled(bool bIsEnabled);                                                                          // [0x55b6228] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventRequestSettings
-	// void SetBreakingEventRequestSettings(FChaosBreakingEventRequestSettings& InSettings);                                    // [0x574dbac] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetBreakingEventRequestSettings(FChaosBreakingEventRequestSettings& InSettings);                                    // [0x55b617c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventEnabled
-	// void SetBreakingEventEnabled(bool bIsEnabled);                                                                           // [0x574db18] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetBreakingEventEnabled(bool bIsEnabled);                                                                           // [0x55b60e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.RemoveGeometryCollectionActor
-	// void RemoveGeometryCollectionActor(AGeometryCollectionActor* GeometryCollectionActor);                                   // [0x574cfe4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveGeometryCollectionActor(AGeometryCollectionActor* GeometryCollectionActor);                                   // [0x55b56b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.RemoveChaosSolverActor
-	// void RemoveChaosSolverActor(AChaosSolverActor* ChaosSolverActor);                                                        // [0x56bcb00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveChaosSolverActor(AChaosSolverActor* ChaosSolverActor);                                                        // [0x551cb00] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.IsEventListening
-	// bool IsEventListening();                                                                                                 // [0x574cc68] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsEventListening();                                                                                                 // [0x55b52a0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.AddGeometryCollectionActor
-	// void AddGeometryCollectionActor(AGeometryCollectionActor* GeometryCollectionActor);                                      // [0x574b7e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AddGeometryCollectionActor(AGeometryCollectionActor* GeometryCollectionActor);                                      // [0x55b3de8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor
-	// void AddChaosSolverActor(AChaosSolverActor* ChaosSolverActor);                                                           // [0x56bcb00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AddChaosSolverActor(AChaosSolverActor* ChaosSolverActor);                                                           // [0x551cb00] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionActor
@@ -104,7 +103,7 @@ public:
 
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle
-	// bool RaycastSingle(FVector Start, FVector End, FHitResult& OutHit);                                                      // [0x574ccbc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool RaycastSingle(FVector Start, FVector End, FHitResult& OutHit);                                                      // [0x55b53e0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionCache
@@ -121,27 +120,29 @@ public:
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionComponent
-/// Size: 0x0620 (0x0005A0 - 0x000BC0)
+/// Size: 0x06A0 (0x0005B0 - 0x000C50)
 class UGeometryCollectionComponent : public UMeshComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3008;
+	static inline constexpr uint64_t __MDKClassSize = 3152;
 
 public:
-	CMember(AChaosSolverActor*)                        ChaosSolverActor                                            OFFSET(get<T>, {0x5A8, 8, 0, 0})
+	CMember(AChaosSolverActor*)                        ChaosSolverActor                                            OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(UGeometryCollection*)                      RestCollection                                              OFFSET(get<T>, {0x698, 8, 0, 0})
 	CMember(TArray<AFieldSystemActor*>)                InitializationFields                                        OFFSET(get<T>, {0x6A0, 16, 0, 0})
 	DMember(bool)                                      Simulating                                                  OFFSET(get<bool>, {0x6B0, 1, 0, 0})
 	CMember(EObjectStateTypeEnum)                      ObjectType                                                  OFFSET(get<T>, {0x6B2, 1, 0, 0})
 	DMember(int32_t)                                   GravityGroupIndex                                           OFFSET(get<int32_t>, {0x6B4, 4, 0, 0})
-	DMember(bool)                                      bForceMotionBlur                                            OFFSET(get<bool>, {0x6B8, 1, 0, 0})
-	DMember(bool)                                      EnableClustering                                            OFFSET(get<bool>, {0x6B9, 1, 0, 0})
+	DMember(bool)                                      bDensityFromPhysicsMaterial                                 OFFSET(get<bool>, {0x6B8, 1, 0, 0})
+	DMember(bool)                                      bForceMotionBlur                                            OFFSET(get<bool>, {0x6B9, 1, 0, 0})
+	DMember(bool)                                      EnableClustering                                            OFFSET(get<bool>, {0x6BA, 1, 0, 0})
 	DMember(int32_t)                                   ClusterGroupIndex                                           OFFSET(get<int32_t>, {0x6BC, 4, 0, 0})
 	DMember(int32_t)                                   MaxClusterLevel                                             OFFSET(get<int32_t>, {0x6C0, 4, 0, 0})
 	DMember(int32_t)                                   MaxSimulatedLevel                                           OFFSET(get<int32_t>, {0x6C4, 4, 0, 0})
 	CMember(EDamageModelTypeEnum)                      DamageModel                                                 OFFSET(get<T>, {0x6C8, 1, 0, 0})
 	CMember(TArray<float>)                             DamageThreshold                                             OFFSET(get<T>, {0x6D0, 16, 0, 0})
 	DMember(bool)                                      bUseSizeSpecificDamageThreshold                             OFFSET(get<bool>, {0x6E0, 1, 0, 0})
+	DMember(bool)                                      bUseMaterialDamageModifiers                                 OFFSET(get<bool>, {0x6E1, 1, 0, 0})
 	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(getStruct<T>, {0x6E4, 12, 0, 0})
 	DMember(bool)                                      bEnableDamageFromCollision                                  OFFSET(get<bool>, {0x6F0, 1, 0, 0})
 	DMember(bool)                                      bAllowRemovalOnSleep                                        OFFSET(get<bool>, {0x6F1, 1, 0, 0})
@@ -163,129 +164,148 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnChaosBreakEvent                                           OFFSET(getStruct<T>, {0x7E8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnChaosRemovalEvent                                         OFFSET(getStruct<T>, {0x7F8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnChaosCrumblingEvent                                       OFFSET(getStruct<T>, {0x808, 16, 0, 0})
-	DMember(float)                                     DesiredCacheTime                                            OFFSET(get<float>, {0x828, 4, 0, 0})
-	DMember(bool)                                      CachePlayback                                               OFFSET(get<bool>, {0x82C, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChaosPhysicsCollision                                     OFFSET(getStruct<T>, {0x830, 16, 0, 0})
-	DMember(bool)                                      bNotifyBreaks                                               OFFSET(get<bool>, {0x840, 1, 0, 0})
-	DMember(bool)                                      bNotifyCollisions                                           OFFSET(get<bool>, {0x841, 1, 0, 0})
-	DMember(bool)                                      bNotifyTrailing                                             OFFSET(get<bool>, {0x842, 1, 0, 0})
-	DMember(bool)                                      bNotifyRemovals                                             OFFSET(get<bool>, {0x843, 1, 0, 0})
-	DMember(bool)                                      bNotifyCrumblings                                           OFFSET(get<bool>, {0x844, 1, 0, 0})
-	DMember(bool)                                      bCrumblingEventIncludesChildren                             OFFSET(get<bool>, {0x845, 1, 0, 0})
-	DMember(bool)                                      bNotifyGlobalBreaks                                         OFFSET(get<bool>, {0x846, 1, 0, 0})
-	DMember(bool)                                      bNotifyGlobalCollisions                                     OFFSET(get<bool>, {0x847, 1, 0, 0})
-	DMember(bool)                                      bNotifyGlobalRemovals                                       OFFSET(get<bool>, {0x848, 1, 0, 0})
-	DMember(bool)                                      bNotifyGlobalCrumblings                                     OFFSET(get<bool>, {0x849, 1, 0, 0})
-	DMember(bool)                                      bGlobalCrumblingEventIncludesChildren                       OFFSET(get<bool>, {0x84A, 1, 0, 0})
-	DMember(bool)                                      bStoreVelocities                                            OFFSET(get<bool>, {0x84B, 1, 0, 0})
-	DMember(bool)                                      bShowBoneColors                                             OFFSET(get<bool>, {0x84C, 1, 0, 0})
-	DMember(bool)                                      bUseRootProxyForNavigation                                  OFFSET(get<bool>, {0x84D, 1, 0, 0})
-	DMember(bool)                                      bUpdateNavigationInTick                                     OFFSET(get<bool>, {0x84E, 1, 0, 0})
-	CMember(AGeometryCollectionISMPoolActor*)          ISMPool                                                     OFFSET(get<T>, {0x850, 8, 0, 0})
-	DMember(bool)                                      bAutoAssignISMPool                                          OFFSET(get<bool>, {0x858, 1, 0, 0})
-	DMember(bool)                                      bOverrideCustomRenderer                                     OFFSET(get<bool>, {0x859, 1, 0, 0})
-	CMember(UClass*)                                   CustomRendererType                                          OFFSET(get<T>, {0x860, 8, 0, 0})
-	CMember(UGeometryCollectionExternalRenderInterface*) CustomRenderer                                            OFFSET(get<T>, {0x868, 8, 0, 0})
-	DMember(bool)                                      bEnableReplication                                          OFFSET(get<bool>, {0x870, 1, 0, 0})
-	DMember(bool)                                      bEnableAbandonAfterLevel                                    OFFSET(get<bool>, {0x871, 1, 0, 0})
-	SMember(FName)                                     AbandonedCollisionProfileName                               OFFSET(getStruct<T>, {0x874, 4, 0, 0})
-	CMember(TArray<FName>)                             CollisionProfilePerLevel                                    OFFSET(get<T>, {0x878, 16, 0, 0})
-	DMember(int32_t)                                   ReplicationAbandonClusterLevel                              OFFSET(get<int32_t>, {0x898, 4, 0, 0})
-	DMember(int32_t)                                   ReplicationAbandonAfterLevel                                OFFSET(get<int32_t>, {0x89C, 4, 0, 0})
-	DMember(int32_t)                                   ReplicationMaxPositionAndVelocityCorrectionLevel            OFFSET(get<int32_t>, {0x8A0, 4, 0, 0})
-	SMember(FGeometryCollectionRepData)                RepData                                                     OFFSET(getStruct<T>, {0x8A8, 56, 0, 0})
-	CMember(UBodySetup*)                               DummyBodySetup                                              OFFSET(get<T>, {0xB80, 8, 0, 0})
-	CMember(UChaosGameplayEventDispatcher*)            EventDispatcher                                             OFFSET(get<T>, {0xB88, 8, 0, 0})
-	CMember(TArray<UInstancedStaticMeshComponent*>)    EmbeddedGeometryComponents                                  OFFSET(get<T>, {0xB90, 16, 0, 0})
+	DMember(float)                                     DesiredCacheTime                                            OFFSET(get<float>, {0x838, 4, 0, 0})
+	DMember(bool)                                      CachePlayback                                               OFFSET(get<bool>, {0x83C, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChaosPhysicsCollision                                     OFFSET(getStruct<T>, {0x840, 16, 0, 0})
+	DMember(bool)                                      bNotifyBreaks                                               OFFSET(get<bool>, {0x850, 1, 0, 0})
+	DMember(bool)                                      bNotifyCollisions                                           OFFSET(get<bool>, {0x851, 1, 0, 0})
+	DMember(bool)                                      bNotifyTrailing                                             OFFSET(get<bool>, {0x852, 1, 0, 0})
+	DMember(bool)                                      bNotifyRemovals                                             OFFSET(get<bool>, {0x853, 1, 0, 0})
+	DMember(bool)                                      bNotifyCrumblings                                           OFFSET(get<bool>, {0x854, 1, 0, 0})
+	DMember(bool)                                      bCrumblingEventIncludesChildren                             OFFSET(get<bool>, {0x855, 1, 0, 0})
+	DMember(bool)                                      bNotifyGlobalBreaks                                         OFFSET(get<bool>, {0x856, 1, 0, 0})
+	DMember(bool)                                      bNotifyGlobalCollisions                                     OFFSET(get<bool>, {0x857, 1, 0, 0})
+	DMember(bool)                                      bNotifyGlobalRemovals                                       OFFSET(get<bool>, {0x858, 1, 0, 0})
+	DMember(bool)                                      bNotifyGlobalCrumblings                                     OFFSET(get<bool>, {0x859, 1, 0, 0})
+	DMember(bool)                                      bGlobalCrumblingEventIncludesChildren                       OFFSET(get<bool>, {0x85A, 1, 0, 0})
+	DMember(bool)                                      bStoreVelocities                                            OFFSET(get<bool>, {0x85B, 1, 0, 0})
+	DMember(bool)                                      bIsCurrentlyNavigationRelevant                              OFFSET(get<bool>, {0x85C, 1, 0, 0})
+	DMember(bool)                                      bShowBoneColors                                             OFFSET(get<bool>, {0x85D, 1, 0, 0})
+	DMember(bool)                                      bUpdateComponentTransformToRootBone                         OFFSET(get<bool>, {0x85E, 1, 0, 0})
+	DMember(bool)                                      bUseRootProxyForNavigation                                  OFFSET(get<bool>, {0x85F, 1, 0, 0})
+	DMember(bool)                                      bUpdateNavigationInTick                                     OFFSET(get<bool>, {0x860, 1, 0, 0})
+	CMember(AGeometryCollectionISMPoolActor*)          ISMPool                                                     OFFSET(get<T>, {0x868, 8, 0, 0})
+	DMember(bool)                                      bAutoAssignISMPool                                          OFFSET(get<bool>, {0x870, 1, 0, 0})
+	DMember(bool)                                      bOverrideCustomRenderer                                     OFFSET(get<bool>, {0x871, 1, 0, 0})
+	CMember(UClass*)                                   CustomRendererType                                          OFFSET(get<T>, {0x878, 8, 0, 0})
+	DMember(bool)                                      bEnableRootProxyForCustomRenderer                           OFFSET(get<bool>, {0x880, 1, 0, 0})
+	CMember(TScriptInterface<Class>)                   CustomRenderer                                              OFFSET(get<T>, {0x888, 16, 0, 0})
+	DMember(bool)                                      bEnableReplication                                          OFFSET(get<bool>, {0x898, 1, 0, 0})
+	DMember(bool)                                      bEnableAbandonAfterLevel                                    OFFSET(get<bool>, {0x899, 1, 0, 0})
+	SMember(FName)                                     AbandonedCollisionProfileName                               OFFSET(getStruct<T>, {0x89C, 4, 0, 0})
+	CMember(TArray<FName>)                             CollisionProfilePerLevel                                    OFFSET(get<T>, {0x8A0, 16, 0, 0})
+	DMember(int32_t)                                   ReplicationAbandonClusterLevel                              OFFSET(get<int32_t>, {0x8C0, 4, 0, 0})
+	DMember(int32_t)                                   ReplicationAbandonAfterLevel                                OFFSET(get<int32_t>, {0x8C4, 4, 0, 0})
+	DMember(int32_t)                                   ReplicationMaxPositionAndVelocityCorrectionLevel            OFFSET(get<int32_t>, {0x8C8, 4, 0, 0})
+	SMember(FGeometryCollectionRepData)                RepData                                                     OFFSET(getStruct<T>, {0x8D0, 56, 0, 0})
+	SMember(FGeometryCollectionRepStateData)           RepStateData                                                OFFSET(getStruct<T>, {0x908, 64, 0, 0})
+	SMember(FGeometryCollectionRepDynamicData)         RepDynamicData                                              OFFSET(getStruct<T>, {0x948, 24, 0, 0})
+	CMember(UBodySetup*)                               DummyBodySetup                                              OFFSET(get<T>, {0xC10, 8, 0, 0})
+	CMember(UChaosGameplayEventDispatcher*)            EventDispatcher                                             OFFSET(get<T>, {0xC18, 8, 0, 0})
+	CMember(TArray<UInstancedStaticMeshComponent*>)    EmbeddedGeometryComponents                                  OFFSET(get<T>, {0xC20, 16, 0, 0})
 
 
 	/// Functions
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetUseMaterialDamageModifiers
+	// void SetUseMaterialDamageModifiers(bool bInUseMaterialDamageModifiers);                                                  // [0x55b775c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetRestCollection
-	// void SetRestCollection(UGeometryCollection* RestCollectionIn, bool bApplyAssetDefaults);                                 // [0x574e9cc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetRestCollection(UGeometryCollection* RestCollectionIn, bool bApplyAssetDefaults);                                 // [0x55b7308] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetPerParticleCollisionProfileName
-	// void SetPerParticleCollisionProfileName(TArray<int32_t>& BoneIds, FName ProfileName);                                    // [0x574e6e0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetPerParticleCollisionProfileName(TArray<int32_t>& BoneIds, FName ProfileName);                                    // [0x55b7008] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetPerLevelCollisionProfileNames
-	// void SetPerLevelCollisionProfileNames(TArray<FName>& ProfileNames);                                                      // [0x574e638] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetPerLevelCollisionProfileNames(TArray<FName>& ProfileNames);                                                      // [0x55b6f60] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyRemovals
-	// void SetNotifyRemovals(bool bNewNotifyRemovals);                                                                         // [0x574e5b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyRemovals(bool bNewNotifyRemovals);                                                                         // [0x55b6e9c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalRemovals
-	// void SetNotifyGlobalRemovals(bool bNewNotifyGlobalRemovals);                                                             // [0x574e538] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyGlobalRemovals(bool bNewNotifyGlobalRemovals);                                                             // [0x55b6e1c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCrumblings
-	// void SetNotifyGlobalCrumblings(bool bNewNotifyGlobalCrumblings, bool bGlobalNewCrumblingEventIncludesChildren);          // [0x574e474] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyGlobalCrumblings(bool bNewNotifyGlobalCrumblings, bool bGlobalNewCrumblingEventIncludesChildren);          // [0x55b6d58] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCollision
-	// void SetNotifyGlobalCollision(bool bNewNotifyGlobalCollisions);                                                          // [0x574e3c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyGlobalCollision(bool bNewNotifyGlobalCollisions);                                                          // [0x55b6ca8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalBreaks
-	// void SetNotifyGlobalBreaks(bool bNewNotifyGlobalBreaks);                                                                 // [0x574e308] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyGlobalBreaks(bool bNewNotifyGlobalBreaks);                                                                 // [0x55b6bec] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyCrumblings
-	// void SetNotifyCrumblings(bool bNewNotifyCrumblings, bool bNewCrumblingEventIncludesChildren);                            // [0x574e244] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyCrumblings(bool bNewNotifyCrumblings, bool bNewCrumblingEventIncludesChildren);                            // [0x55b6b28] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks
-	// void SetNotifyBreaks(bool bNewNotifyBreaks);                                                                             // [0x574e1c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNotifyBreaks(bool bNewNotifyBreaks);                                                                             // [0x55b6a64] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetLocalRestTransforms
-	// void SetLocalRestTransforms(TArray<FTransform>& Transforms, bool bOnlyLeaves);                                           // [0x574e000] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetLocalRestTransforms(TArray<FTransform>& Transforms, bool bOnlyLeaves);                                           // [0x55b68ac] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetGravityGroupIndex
+	// void SetGravityGroupIndex(int32_t InGravityGroupIndex);                                                                  // [0x55b6810] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetEnableDamageFromCollision
-	// void SetEnableDamageFromCollision(bool bValue);                                                                          // [0x574ded0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetEnableDamageFromCollision(bool bValue);                                                                          // [0x55b66e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetDensityFromPhysicsMaterial
+	// void SetDensityFromPhysicsMaterial(bool bInDensityFromPhysicsMaterial);                                                  // [0x55b6634] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetDamageThreshold
-	// void SetDamageThreshold(TArray<float>& InDamageThreshold);                                                               // [0x574de1c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetDamageThreshold(TArray<float>& InDamageThreshold);                                                               // [0x55b6520] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetDamagePropagationData
+	// void SetDamagePropagationData(FGeometryCollectionDamagePropagationData& InDamagePropagationData);                        // [0x55b6488] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetDamageModel
+	// void SetDamageModel(EDamageModelTypeEnum InDamageModel);                                                                 // [0x55b63ec] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByTransformedBox
-	// void SetAnchoredByTransformedBox(FBox Box, FTransform Transform, bool bAnchored, int32_t MaxLevel);                      // [0x574d5a4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetAnchoredByTransformedBox(FBox Box, FTransform Transform, bool bAnchored, int32_t MaxLevel);                      // [0x55b5c18] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByIndex
-	// void SetAnchoredByIndex(int32_t Index, bool bAnchored);                                                                  // [0x574d4bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAnchoredByIndex(int32_t Index, bool bAnchored);                                                                  // [0x55b5b30] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByBox
-	// void SetAnchoredByBox(FBox WorldSpaceBox, bool bAnchored, int32_t MaxLevel);                                             // [0x574d104] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetAnchoredByBox(FBox WorldSpaceBox, bool bAnchored, int32_t MaxLevel);                                             // [0x55b57f8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.SetAbandonedParticleCollisionProfileName
-	// void SetAbandonedParticleCollisionProfileName(FName CollisionProfile);                                                   // [0x574d078] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAbandonedParticleCollisionProfileName(FName CollisionProfile);                                                   // [0x55b576c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.RemoveAllAnchors
-	// void RemoveAllAnchors();                                                                                                 // [0x574cfd0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RemoveAllAnchors();                                                                                                 // [0x55b56a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ReceivePhysicsCollision
-	// void ReceivePhysicsCollision(FChaosPhysicsCollisionInfo& CollisionInfo);                                                 // [0x1d9241c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent 
+	// void ReceivePhysicsCollision(FChaosPhysicsCollisionInfo& CollisionInfo);                                                 // [0x101681c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepStateData
+	// void OnRep_RepStateData();                                                                                               // [0x55b53cc] Final|RequiredAPI|Native|Protected 
+	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepDynamicData
+	// void OnRep_RepDynamicData();                                                                                             // [0x55b53b8] Final|RequiredAPI|Native|Protected 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepData
-	// void OnRep_RepData();                                                                                                    // [0x574cca8] Final|RequiredAPI|Native|Protected 
+	// void OnRep_RepData();                                                                                                    // [0x55b53a4] Final|RequiredAPI|Native|Protected 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsStateChange__DelegateSignature
-	// void NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(UGeometryCollectionComponent* FracturedComponent);    // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(UGeometryCollectionComponent* FracturedComponent);    // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature
-	// void NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(UGeometryCollectionComponent* FracturedComponent); // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(UGeometryCollectionComponent* FracturedComponent); // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.IsRootBroken
-	// bool IsRootBroken();                                                                                                     // [0x574cc84] Final|RequiredAPI|Native|Private|BlueprintCallable|BlueprintPure|Const 
+	// bool IsRootBroken();                                                                                                     // [0x55b52bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetRootInitialTransform
-	// FTransform GetRootInitialTransform();                                                                                    // [0x574cc0c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTransform GetRootInitialTransform();                                                                                    // [0x55b5244] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetRootIndex
-	// int32_t GetRootIndex();                                                                                                  // [0x574cbec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetRootIndex();                                                                                                  // [0x55b5224] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetRootCurrentTransform
-	// FTransform GetRootCurrentTransform();                                                                                    // [0x574cb90] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FTransform GetRootCurrentTransform();                                                                                    // [0x55b51c8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetMassAndExtents
-	// void GetMassAndExtents(int32_t ItemIndex, float& OutMass, FBox& OutExtents);                                             // [0x574ca70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void GetMassAndExtents(int32_t ItemIndex, float& OutMass, FBox& OutExtents);                                             // [0x55b50a8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetLocalBounds
-	// FBox GetLocalBounds();                                                                                                   // [0x574ca30] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FBox GetLocalBounds();                                                                                                   // [0x55b5068] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLocalRestTransforms
-	// TArray<FTransform> GetInitialLocalRestTransforms();                                                                      // [0x574c9f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FTransform> GetInitialLocalRestTransforms();                                                                      // [0x55b5028] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLevel
-	// int32_t GetInitialLevel(int32_t ItemIndex);                                                                              // [0x574c964] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// int32_t GetInitialLevel(int32_t ItemIndex);                                                                              // [0x55b4f9c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetDebugInfo
-	// FString GetDebugInfo();                                                                                                  // [0x574c924] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// FString GetDebugInfo();                                                                                                  // [0x55b4f5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.GetDamageThreshold
-	// TArray<float> GetDamageThreshold();                                                                                      // [0x574c894] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<float> GetDamageThreshold();                                                                                      // [0x55b4ecc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.CrumbleCluster
-	// void CrumbleCluster(int32_t ItemIndex);                                                                                  // [0x574c814] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void CrumbleCluster(int32_t ItemIndex);                                                                                  // [0x55b4e4c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.CrumbleActiveClusters
-	// void CrumbleActiveClusters();                                                                                            // [0x574c7d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void CrumbleActiveClusters();                                                                                            // [0x55b4e0c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyPhysicsField
-	// void ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field); // [0x574c464] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field); // [0x55b4c5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyLinearVelocity
-	// void ApplyLinearVelocity(int32_t ItemIndex, FVector& LinearVelocity);                                                    // [0x574c368] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyLinearVelocity(int32_t ItemIndex, FVector& LinearVelocity);                                                    // [0x55b4b24] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyKinematicField
-	// void ApplyKinematicField(float Radius, FVector Position);                                                                // [0x574c1bc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void ApplyKinematicField(float Radius, FVector Position);                                                                // [0x55b498c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyInternalStrain
-	// void ApplyInternalStrain(int32_t ItemIndex, FVector& Location, float Radius, int32_t PropagationDepth, float PropagationFactor, float Strain); // [0x574be48] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyInternalStrain(int32_t ItemIndex, FVector& Location, float Radius, int32_t PropagationDepth, float PropagationFactor, float Strain); // [0x55b4658] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyExternalStrain
-	// void ApplyExternalStrain(int32_t ItemIndex, FVector& Location, float Radius, int32_t PropagationDepth, float PropagationFactor, float Strain); // [0x574bad4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyExternalStrain(int32_t ItemIndex, FVector& Location, float Radius, int32_t PropagationDepth, float PropagationFactor, float Strain); // [0x55b4324] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyBreakingLinearVelocity
-	// void ApplyBreakingLinearVelocity(int32_t ItemIndex, FVector& LinearVelocity);                                            // [0x574b9fc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyBreakingLinearVelocity(int32_t ItemIndex, FVector& LinearVelocity);                                            // [0x55b41e8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyBreakingAngularVelocity
-	// void ApplyBreakingAngularVelocity(int32_t ItemIndex, FVector& AngularVelocity);                                          // [0x574b9fc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyBreakingAngularVelocity(int32_t ItemIndex, FVector& AngularVelocity);                                          // [0x55b40ac] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyAssetDefaults
-	// void ApplyAssetDefaults();                                                                                               // [0x574b9e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ApplyAssetDefaults();                                                                                               // [0x55b4098] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyAngularVelocity
-	// void ApplyAngularVelocity(int32_t ItemIndex, FVector& AngularVelocity);                                                  // [0x574b8ec] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void ApplyAngularVelocity(int32_t ItemIndex, FVector& AngularVelocity);                                                  // [0x55b3f60] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionDebugDrawActor
@@ -384,32 +404,32 @@ public:
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionISMPoolComponent
-/// Size: 0x00D0 (0x0002A0 - 0x000370)
+/// Size: 0x00F0 (0x0002A0 - 0x000390)
 class UGeometryCollectionISMPoolComponent : public USceneComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 880;
+	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionISMPoolRenderer
-/// Size: 0x00A8 (0x000028 - 0x0000D0)
+/// Size: 0x00B8 (0x000028 - 0x0000E0)
 class UGeometryCollectionISMPoolRenderer : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 208;
+	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
 	CMember(AGeometryCollectionISMPoolActor*)          ISMPoolActor                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollection
-/// Size: 0x01C0 (0x000028 - 0x0001E8)
+/// Size: 0x01E0 (0x000028 - 0x000208)
 class UGeometryCollection : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
+	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
 	DMember(bool)                                      EnableClustering                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
@@ -418,7 +438,8 @@ public:
 	CMember(EDamageModelTypeEnum)                      DamageModel                                                 OFFSET(get<T>, {0x44, 1, 0, 0})
 	CMember(TArray<float>)                             DamageThreshold                                             OFFSET(get<T>, {0x48, 16, 0, 0})
 	DMember(bool)                                      bUseSizeSpecificDamageThreshold                             OFFSET(get<bool>, {0x58, 1, 0, 0})
-	DMember(bool)                                      PerClusterOnlyDamageThreshold                               OFFSET(get<bool>, {0x59, 1, 0, 0})
+	DMember(bool)                                      bUseMaterialDamageModifiers                                 OFFSET(get<bool>, {0x59, 1, 0, 0})
+	DMember(bool)                                      PerClusterOnlyDamageThreshold                               OFFSET(get<bool>, {0x5A, 1, 0, 0})
 	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(getStruct<T>, {0x5C, 12, 0, 0})
 	CMember(EClusterConnectionTypeEnum)                ClusterConnectionType                                       OFFSET(get<T>, {0x68, 1, 0, 0})
 	DMember(float)                                     ConnectionGraphBoundsFilteringMargin                        OFFSET(get<float>, {0x6C, 4, 0, 0})
@@ -434,35 +455,37 @@ public:
 	DMember(bool)                                      bConvertVertexColorsToSRGB                                  OFFSET(get<bool>, {0xC1, 1, 0, 0})
 	CMember(UPhysicalMaterial*)                        PhysicsMaterial                                             OFFSET(get<T>, {0xC8, 8, 0, 0})
 	DMember(bool)                                      bDensityFromPhysicsMaterial                                 OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	DMember(bool)                                      bMassAsDensity                                              OFFSET(get<bool>, {0xD1, 1, 0, 0})
-	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0xD4, 4, 0, 0})
-	DMember(float)                                     MinimumMassClamp                                            OFFSET(get<float>, {0xD8, 4, 0, 0})
-	DMember(bool)                                      bImportCollisionFromSource                                  OFFSET(get<bool>, {0xDC, 1, 0, 0})
-	DMember(bool)                                      bScaleOnRemoval                                             OFFSET(get<bool>, {0xDD, 1, 0, 0})
-	DMember(bool)                                      bRemoveOnMaxSleep                                           OFFSET(get<bool>, {0xDE, 1, 0, 0})
-	SMember(FVector2D)                                 MaximumSleepTime                                            OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
-	SMember(FVector2D)                                 RemovalDuration                                             OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
-	DMember(bool)                                      bSlowMovingAsSleeping                                       OFFSET(get<bool>, {0x100, 1, 0, 0})
-	DMember(float)                                     SlowMovingVelocityThreshold                                 OFFSET(get<float>, {0x104, 4, 0, 0})
-	CMember(TArray<FGeometryCollectionSizeSpecificData>) SizeSpecificData                                          OFFSET(get<T>, {0x108, 16, 0, 0})
-	DMember(bool)                                      EnableRemovePiecesOnFracture                                OFFSET(get<bool>, {0x118, 1, 0, 0})
-	CMember(TArray<UMaterialInterface*>)               RemoveOnFractureMaterials                                   OFFSET(get<T>, {0x120, 16, 0, 0})
-	CMember(UDataflow*)                                DataflowAsset                                               OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FString)                                   DataflowTerminal                                            OFFSET(getStruct<T>, {0x138, 16, 0, 0})
-	CMember(TMap<FString, FString>)                    Overrides                                                   OFFSET(get<T>, {0x148, 80, 0, 0})
-	SMember(FGuid)                                     PersistentGuid                                              OFFSET(getStruct<T>, {0x198, 16, 0, 0})
-	SMember(FGuid)                                     StateGuid                                                   OFFSET(getStruct<T>, {0x1A8, 16, 0, 0})
-	DMember(int32_t)                                   RootIndex                                                   OFFSET(get<int32_t>, {0x1B8, 4, 0, 0})
-	DMember(int32_t)                                   BoneSelectedMaterialIndex                                   OFFSET(get<int32_t>, {0x1BC, 4, 0, 0})
-	CMember(UMaterialInterface*)                       BoneSelectedMaterial                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	DMember(float)                                     CachedDensityFromPhysicsMaterialInGCm3                      OFFSET(get<float>, {0xD4, 4, 0, 0})
+	DMember(bool)                                      bMassAsDensity                                              OFFSET(get<bool>, {0xD8, 1, 0, 0})
+	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0xDC, 4, 0, 0})
+	DMember(float)                                     MinimumMassClamp                                            OFFSET(get<float>, {0xE0, 4, 0, 0})
+	DMember(bool)                                      bImportCollisionFromSource                                  OFFSET(get<bool>, {0xE4, 1, 0, 0})
+	DMember(bool)                                      bScaleOnRemoval                                             OFFSET(get<bool>, {0xE5, 1, 0, 0})
+	DMember(bool)                                      bRemoveOnMaxSleep                                           OFFSET(get<bool>, {0xE6, 1, 0, 0})
+	SMember(FVector2D)                                 MaximumSleepTime                                            OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FVector2D)                                 RemovalDuration                                             OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
+	DMember(bool)                                      bSlowMovingAsSleeping                                       OFFSET(get<bool>, {0x108, 1, 0, 0})
+	DMember(float)                                     SlowMovingVelocityThreshold                                 OFFSET(get<float>, {0x10C, 4, 0, 0})
+	CMember(TArray<FGeometryCollectionSizeSpecificData>) SizeSpecificData                                          OFFSET(get<T>, {0x110, 16, 0, 0})
+	DMember(bool)                                      EnableRemovePiecesOnFracture                                OFFSET(get<bool>, {0x120, 1, 0, 0})
+	CMember(TArray<UMaterialInterface*>)               RemoveOnFractureMaterials                                   OFFSET(get<T>, {0x128, 16, 0, 0})
+	CMember(UDataflow*)                                DataflowAsset                                               OFFSET(get<T>, {0x138, 8, 0, 0})
+	SMember(FString)                                   DataflowTerminal                                            OFFSET(getStruct<T>, {0x140, 16, 0, 0})
+	CMember(TMap<FString, FString>)                    Overrides                                                   OFFSET(get<T>, {0x150, 80, 0, 0})
+	SMember(FGuid)                                     PersistentGuid                                              OFFSET(getStruct<T>, {0x1A0, 16, 0, 0})
+	SMember(FGuid)                                     StateGuid                                                   OFFSET(getStruct<T>, {0x1B0, 16, 0, 0})
+	DMember(int32_t)                                   RootIndex                                                   OFFSET(get<int32_t>, {0x1C0, 4, 0, 0})
+	CMember(TArray<int32_t>)                           BreadthFirstTransformIndices                                OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	DMember(int32_t)                                   BoneSelectedMaterialIndex                                   OFFSET(get<int32_t>, {0x1D8, 4, 0, 0})
+	CMember(UMaterialInterface*)                       BoneSelectedMaterial                                        OFFSET(get<T>, {0x1E0, 8, 0, 0})
+	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x1F8, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.GeometryCollection.SetEnableNanite
-	// void SetEnableNanite(bool bValue);                                                                                       // [0x574df78] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetEnableNanite(bool bValue);                                                                                       // [0x55b6788] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollection.SetConvertVertexColorsToSRGB
-	// void SetConvertVertexColorsToSRGB(bool bValue);                                                                          // [0x574dd94] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetConvertVertexColorsToSRGB(bool bValue);                                                                          // [0x55b6364] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
@@ -482,17 +505,17 @@ public:
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionISMPoolDebugDrawComponent
-/// Size: 0x0010 (0x0005C0 - 0x0005D0)
+/// Size: 0x0010 (0x0005D0 - 0x0005E0)
 class UGeometryCollectionISMPoolDebugDrawComponent : public UDebugDrawComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1488;
+	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
-	DMember(bool)                                      bShowGlobalStats                                            OFFSET(get<bool>, {0x5B8, 1, 0, 0})
-	DMember(bool)                                      bShowStats                                                  OFFSET(get<bool>, {0x5B9, 1, 0, 0})
-	DMember(bool)                                      bShowBounds                                                 OFFSET(get<bool>, {0x5BA, 1, 0, 0})
-	CMember(UInstancedStaticMeshComponent*)            SelectedComponent                                           OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	DMember(bool)                                      bShowGlobalStats                                            OFFSET(get<bool>, {0x5C8, 1, 0, 0})
+	DMember(bool)                                      bShowStats                                                  OFFSET(get<bool>, {0x5C9, 1, 0, 0})
+	DMember(bool)                                      bShowBounds                                                 OFFSET(get<bool>, {0x5CA, 1, 0, 0})
+	CMember(UInstancedStaticMeshComponent*)            SelectedComponent                                           OFFSET(get<T>, {0x5D0, 8, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosBreakingEventData
@@ -557,6 +580,42 @@ public:
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 };
 
+/// Struct /Script/GeometryCollectionEngine.GeometryCollectionDamagePropagationData
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FGeometryCollectionDamagePropagationData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
+	DMember(float)                                     BreakDamagePropagationFactor                                OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     ShockDamagePropagationFactor                                OFFSET(get<float>, {0x8, 4, 0, 0})
+};
+
+/// Struct /Script/GeometryCollectionEngine.GeometryCollectionRepDynamicData
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FGeometryCollectionRepDynamicData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+};
+
+/// Struct /Script/GeometryCollectionEngine.GeometryCollectionRepStateData
+/// Size: 0x0040 (0x000000 - 0x000040)
+class FGeometryCollectionRepStateData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+};
+
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionRepData
 /// Size: 0x0038 (0x000000 - 0x000038)
 class FGeometryCollectionRepData : public MDKBase
@@ -597,20 +656,6 @@ public:
 	DMember(int32_t)                                   TrailingDataSizeMax                                         OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	DMember(float)                                     TrailingMinSpeedThreshold                                   OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(float)                                     TrailingMinVolumeThreshold                                  OFFSET(get<float>, {0x48, 4, 0, 0})
-};
-
-/// Struct /Script/GeometryCollectionEngine.GeometryCollectionDamagePropagationData
-/// Size: 0x000C (0x000000 - 0x00000C)
-class FGeometryCollectionDamagePropagationData : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 12;
-
-public:
-	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	DMember(float)                                     BreakDamagePropagationFactor                                OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     ShockDamagePropagationFactor                                OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosBreakingEventRequestSettings

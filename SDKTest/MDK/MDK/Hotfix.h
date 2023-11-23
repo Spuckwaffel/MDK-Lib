@@ -23,7 +23,7 @@ public:
 
 	/// Functions
 	// Function /Script/Hotfix.OnlineHotfixManager.StartHotfixProcess
-	// void StartHotfixProcess();                                                                                               // [0x5ae6ab8] Native|Public|BlueprintCallable 
+	// void StartHotfixProcess();                                                                                               // [0x59adc60] Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/Hotfix.UpdateManager
@@ -41,10 +41,9 @@ public:
 	DMember(float)                                     HotfixAvailabilityCheckCompleteDelay                        OFFSET(get<float>, {0x98, 4, 0, 0})
 	DMember(float)                                     UpdateCheckAvailabilityCompleteDelay                        OFFSET(get<float>, {0x9C, 4, 0, 0})
 	DMember(int32_t)                                   AppSuspendedUpdateCheckTimeSeconds                          OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
-	DMember(bool)                                      bPlatformEnvironmentDetected                                OFFSET(get<bool>, {0xB0, 1, 0, 0})
-	DMember(bool)                                      bInitialUpdateFinished                                      OFFSET(get<bool>, {0xB1, 1, 0, 0})
-	DMember(bool)                                      bCheckHotfixAvailabilityOnly                                OFFSET(get<bool>, {0xB2, 1, 0, 0})
-	CMember(EUpdateState)                              CurrentUpdateState                                          OFFSET(get<T>, {0xB3, 1, 0, 0})
+	DMember(bool)                                      bInitialUpdateFinished                                      OFFSET(get<bool>, {0xB0, 1, 0, 0})
+	DMember(bool)                                      bCheckHotfixAvailabilityOnly                                OFFSET(get<bool>, {0xB1, 1, 0, 0})
+	CMember(EUpdateState)                              CurrentUpdateState                                          OFFSET(get<T>, {0xB2, 1, 0, 0})
 	DMember(int32_t)                                   WorstNumFilesPendingLoadViewed                              OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
 	CMember(EHotfixResult)                             LastHotfixResult                                            OFFSET(get<T>, {0xBC, 1, 0, 0})
 	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
@@ -68,7 +67,6 @@ public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(bool)                                      bCheckAvailabilityOnly                                      OFFSET(get<bool>, {0x11, 1, 0, 0})
 	DMember(bool)                                      bPatchCheckEnabled                                          OFFSET(get<bool>, {0x12, 1, 0, 0})
-	DMember(bool)                                      bPlatformEnvironmentDetectionEnabled                        OFFSET(get<bool>, {0x13, 1, 0, 0})
 	CMember(TSet<FString>)                             AdditionalTags                                              OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
@@ -85,18 +83,17 @@ enum EHotfixResult : uint8_t
 };
 
 /// Enum /Script/Hotfix.EUpdateState
-/// Size: 0x09
+/// Size: 0x08
 enum EUpdateState : uint8_t
 {
 	EUpdateState__UpdateIdle0                                                        = 0,
 	EUpdateState__UpdatePending1                                                     = 1,
 	EUpdateState__CheckingForPatch2                                                  = 2,
-	EUpdateState__DetectingPlatformEnvironment3                                      = 3,
-	EUpdateState__CheckingForHotfix4                                                 = 4,
-	EUpdateState__WaitingOnInitialLoad5                                              = 5,
-	EUpdateState__InitialLoadComplete6                                               = 6,
-	EUpdateState__UpdateComplete7                                                    = 7,
-	EUpdateState__EUpdateState_MAX8                                                  = 8
+	EUpdateState__CheckingForHotfix3                                                 = 3,
+	EUpdateState__WaitingOnInitialLoad4                                              = 4,
+	EUpdateState__InitialLoadComplete5                                               = 5,
+	EUpdateState__UpdateComplete6                                                    = 6,
+	EUpdateState__EUpdateState_MAX7                                                  = 7
 };
 
 /// Enum /Script/Hotfix.EUpdateCompletionStatus

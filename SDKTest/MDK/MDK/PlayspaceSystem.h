@@ -12,11 +12,11 @@
 /// dependency: NetCore
 
 /// Class /Script/PlayspaceSystem.OverlapComponent
-/// Size: 0x0020 (0x000620 - 0x000640)
+/// Size: 0x0020 (0x000640 - 0x000660)
 class UOverlapComponent : public UStaticMeshComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1600;
+	static inline constexpr uint64_t __MDKClassSize = 1632;
 
 public:
 };
@@ -64,19 +64,19 @@ class UPlayspaceControllerComponent_PlayerSpawning : public UControllerComponent
 public:
 	SMember(FMulticastInlineDelegate)                  OnPlayerQueuedToSpawn                                       OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(ACameraActor*)                             SpawnCameraActor                                            OFFSET(get<T>, {0xB0, 8, 0, 0})
-	DMember(bool)                                      bClientReadyForSpawning                                     OFFSET(get<bool>, {0xB8, 1, 0, 0})
+	DMember(bool)                                      bClientReadyForSpawning                                     OFFSET(get<bool>, {0xB9, 1, 0, 0})
 	SMember(FReplicatedSpawnInfo)                      ReplicatedSpawnInfo                                         OFFSET(getStruct<T>, {0xC0, 88, 0, 0})
 
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning.ServerMarkReadyForSpawning
-	// void ServerMarkReadyForSpawning();                                                                                       // [0x6beb488] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// void ServerMarkReadyForSpawning();                                                                                       // [0x6c42064] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 	// Function /Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning.OnRep_ReplicatedSpawnInfo
-	// void OnRep_ReplicatedSpawnInfo();                                                                                        // [0x6beb3e4] Final|Native|Private 
+	// void OnRep_ReplicatedSpawnInfo();                                                                                        // [0x6c41fc0] Final|Native|Private 
 	// Function /Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning.GetSpawnInfo
-	// FReplicatedSpawnInfo GetSpawnInfo();                                                                                     // [0x6beabe4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FReplicatedSpawnInfo GetSpawnInfo();                                                                                     // [0x6c4179c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning.ClientReplicatedSpawnInfo
-	// void ClientReplicatedSpawnInfo(FReplicatedSpawnInfo InReplicatedSpawnInfo);                                              // [0x6bea4c4] Final|Net|NetReliableNative|Event|Private|NetClient 
+	// void ClientReplicatedSpawnInfo(FReplicatedSpawnInfo InReplicatedSpawnInfo);                                              // [0x6c41090] Final|Net|NetReliableNative|Event|Private|NetClient 
 };
 
 /// Class /Script/PlayspaceSystem.PlayspaceGameStateComponent
@@ -141,52 +141,53 @@ public:
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.GameplayVolume.UpdateSize
-	// void UpdateSize(FVector& NewScale);                                                                                      // [0x6beb4d4] Native|Public|HasOutParms|HasDefaults 
+	// void UpdateSize(FVector& NewScale);                                                                                      // [0x6c420b0] Native|Public|HasOutParms|HasDefaults 
 	// Function /Script/PlayspaceSystem.GameplayVolume.OnOverlappedPawnControllerChanged
-	// void OnOverlappedPawnControllerChanged(APawn* Pawn, AController* OldController, AController* NewController);             // [0x6beb060] Native|Protected     
+	// void OnOverlappedPawnControllerChanged(APawn* Pawn, AController* OldController, AController* NewController);             // [0x6c41c3c] Native|Protected     
 	// Function /Script/PlayspaceSystem.GameplayVolume.InitializeBoundsComponent
-	// void InitializeBoundsComponent(UOverlapComponent* NewBoundsComponent);                                                   // [0x6beac3c] Final|Native|Private|BlueprintCallable 
+	// void InitializeBoundsComponent(UOverlapComponent* NewBoundsComponent);                                                   // [0x6c417f4] Final|Native|Private|BlueprintCallable 
 	// Function /Script/PlayspaceSystem.GameplayVolume.GetPlayspace
-	// APlayspace* GetPlayspace();                                                                                              // [0x2a54790] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// APlayspace* GetPlayspace();                                                                                              // [0x242dfb4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/PlayspaceSystem.Playspace
-/// Size: 0x02F0 (0x000290 - 0x000580)
+/// Size: 0x0318 (0x000290 - 0x0005A8)
 class APlayspace : public AInfo
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1408;
+	static inline constexpr uint64_t __MDKClassSize = 1448;
 
 public:
 	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserAdded                                    OFFSET(getStruct<T>, {0x290, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserRemoved                                  OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceInitialized                                  OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyStartMatch                                            OFFSET(getStruct<T>, {0x320, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyEndMatch                                              OFFSET(getStruct<T>, {0x348, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x370, 32, 0, 0})
-	SMember(FGameplayTag)                              RequestedPlayspaceParentTag                                 OFFSET(getStruct<T>, {0x390, 4, 0, 0})
-	CMember(TArray<UClass*>)                           ChildPlayspaceClasses                                       OFFSET(get<T>, {0x398, 16, 0, 0})
-	SMember(FPlayspaceUserList)                        PlayspaceUsers                                              OFFSET(getStruct<T>, {0x3A8, 376, 0, 0})
-	CMember(TArray<APlayspace*>)                       ChildPlayspaces                                             OFFSET(get<T>, {0x520, 16, 0, 0})
-	CMember(TArray<FUniqueNetIdRepl>)                  PendingUsers                                                OFFSET(get<T>, {0x530, 16, 0, 0})
-	DMember(bool)                                      bAutoStartMatchOnServerStart                                OFFSET(get<bool>, {0x540, 1, 0, 0})
-	CMember(EWithinBoundsEvaluationType)               BoundsEvaluationType                                        OFFSET(get<T>, {0x541, 1, 0, 0})
-	CMember(UPlayspaceManagerComponent*)               PlayspaceManagerCached                                      OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(AGameplayVolume*)                          BoundGameplayVolume                                         OFFSET(get<T>, {0x550, 8, 0, 0})
-	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x558, 1, 0, 0})
-	DMember(bool)                                      bMatchHasEnded                                              OFFSET(get<bool>, {0x55A, 1, 0, 0})
-	DMember(float)                                     MatchStartTime                                              OFFSET(get<float>, {0x55C, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceCreatedAndReady                              OFFSET(getStruct<T>, {0x308, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyStartMatch                                            OFFSET(getStruct<T>, {0x348, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyEndMatch                                              OFFSET(getStruct<T>, {0x370, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x398, 32, 0, 0})
+	SMember(FGameplayTag)                              RequestedPlayspaceParentTag                                 OFFSET(getStruct<T>, {0x3B8, 4, 0, 0})
+	CMember(TArray<UClass*>)                           ChildPlayspaceClasses                                       OFFSET(get<T>, {0x3C0, 16, 0, 0})
+	SMember(FPlayspaceUserList)                        PlayspaceUsers                                              OFFSET(getStruct<T>, {0x3D0, 376, 0, 0})
+	CMember(TArray<APlayspace*>)                       ChildPlayspaces                                             OFFSET(get<T>, {0x548, 16, 0, 0})
+	CMember(TArray<FUniqueNetIdRepl>)                  PendingUsers                                                OFFSET(get<T>, {0x558, 16, 0, 0})
+	DMember(bool)                                      bAutoStartMatchOnServerStart                                OFFSET(get<bool>, {0x568, 1, 0, 0})
+	CMember(EWithinBoundsEvaluationType)               BoundsEvaluationType                                        OFFSET(get<T>, {0x569, 1, 0, 0})
+	CMember(UPlayspaceManagerComponent*)               PlayspaceManagerCached                                      OFFSET(get<T>, {0x570, 8, 0, 0})
+	CMember(AGameplayVolume*)                          BoundGameplayVolume                                         OFFSET(get<T>, {0x578, 8, 0, 0})
+	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x580, 1, 0, 0})
+	DMember(bool)                                      bMatchHasEnded                                              OFFSET(get<bool>, {0x582, 1, 0, 0})
+	DMember(float)                                     MatchStartTime                                              OFFSET(get<float>, {0x584, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.Playspace.OnRep_PlayspaceUsers
-	// void OnRep_PlayspaceUsers();                                                                                             // [0x313a308] Final|RequiredAPI|Native|Protected 
+	// void OnRep_PlayspaceUsers();                                                                                             // [0x1954c80] Final|RequiredAPI|Native|Protected 
 	// Function /Script/PlayspaceSystem.Playspace.OnRep_MatchStartTime
-	// void OnRep_MatchStartTime();                                                                                             // [0x33aadb0] RequiredAPI|Native|Protected 
+	// void OnRep_MatchStartTime();                                                                                             // [0x3249224] RequiredAPI|Native|Protected 
 	// Function /Script/PlayspaceSystem.Playspace.OnRep_bMatchHasEnded
-	// void OnRep_bMatchHasEnded();                                                                                             // [0x17f77b8] Final|RequiredAPI|Native|Protected 
+	// void OnRep_bMatchHasEnded();                                                                                             // [0x1d5ab84] Final|RequiredAPI|Native|Protected 
 	// Function /Script/PlayspaceSystem.Playspace.OnRep_bIsInitialized
-	// void OnRep_bIsInitialized();                                                                                             // [0x5e4caa0] Final|RequiredAPI|Native|Protected 
+	// void OnRep_bIsInitialized();                                                                                             // [0x5cf0260] Final|RequiredAPI|Native|Protected 
 };
 
 /// Class /Script/PlayspaceSystem.PlayspaceComponent_Logic
@@ -214,7 +215,7 @@ public:
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.PlayspaceComponent_PlayerManager.OnPlayerPawnSet
-	// void OnPlayerPawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                              // [0x6beb2e4] Final|Native|Protected 
+	// void OnPlayerPawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                              // [0x6c41ec0] Final|Native|Protected 
 };
 
 /// Class /Script/PlayspaceSystem.PlayspaceLibrary
@@ -243,9 +244,9 @@ public:
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.PlayspaceLogic.OnRep_MatchStartTime
-	// void OnRep_MatchStartTime();                                                                                             // [0x2d11494] Native|Protected     
+	// void OnRep_MatchStartTime();                                                                                             // [0x2bc2ff8] Native|Protected     
 	// Function /Script/PlayspaceSystem.PlayspaceLogic.OnRep_bMatchHasEnded
-	// void OnRep_bMatchHasEnded();                                                                                             // [0x149a7f4] Final|Native|Private 
+	// void OnRep_bMatchHasEnded();                                                                                             // [0x1d09150] Final|Native|Private 
 };
 
 /// Class /Script/PlayspaceSystem.PlayspaceManagerComponent
@@ -265,13 +266,13 @@ public:
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.PlayspaceManagerComponent.ProcessOverlapEvents
-	// bool ProcessOverlapEvents(float DeltaTime);                                                                              // [0x6beb3f8] Final|Native|Private 
+	// bool ProcessOverlapEvents(float DeltaTime);                                                                              // [0x6c41fd4] Final|Native|Private 
 	// Function /Script/PlayspaceSystem.PlayspaceManagerComponent.OnRep_RootPlayspace
-	// void OnRep_RootPlayspace();                                                                                              // [0x2ba0ba4] Final|Native|Private 
+	// void OnRep_RootPlayspace();                                                                                              // [0x2a31fb8] Final|Native|Private 
 	// Function /Script/PlayspaceSystem.PlayspaceManagerComponent.OnPlayerEndOverlapGameplayVolume
-	// void OnPlayerEndOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                               // [0x6beb220] Final|Native|Private 
+	// void OnPlayerEndOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                               // [0x6c41dfc] Final|Native|Private 
 	// Function /Script/PlayspaceSystem.PlayspaceManagerComponent.OnPlayerBeginOverlapGameplayVolume
-	// void OnPlayerBeginOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                             // [0x6beb15c] Final|Native|Private 
+	// void OnPlayerBeginOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                             // [0x6c41d38] Final|Native|Private 
 };
 
 /// Class /Script/PlayspaceSystem.PlayspaceSpawnActor
@@ -314,6 +315,7 @@ public:
 	DMember(float)                                     ServerSpawnTime                                             OFFSET(get<float>, {0x30, 4, 0, 0})
 	SMember(FVector)                                   LastLocation                                                OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(float)                                     MinTimeForCameraFadeTransition                              OFFSET(get<float>, {0x50, 4, 0, 0})
+	DMember(bool)                                      bIsPlayerRespawning                                         OFFSET(get<bool>, {0x54, 1, 0, 0})
 };
 
 /// Struct /Script/PlayspaceSystem.PlayspaceSpawningInfo

@@ -60,9 +60,9 @@ public:
 
 	/// Functions
 	// Function /Script/CorruptionGameplayCodeRuntime.CubeMovementStaticPath.EditorGetCorruptionGenerationData
-	// void EditorGetCorruptionGenerationData(FCubeMovement_CorruptionGenerationData& OutData);                                 // [0x9b396b0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void EditorGetCorruptionGenerationData(FCubeMovement_CorruptionGenerationData& OutData);                                 // [0xa066a28] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CorruptionGameplayCodeRuntime.CubeMovementStaticPath.ClearAllGeneratedSplinesAndLockedData
-	// void ClearAllGeneratedSplinesAndLockedData();                                                                            // [0x9b394d0] Final|Native|Protected 
+	// void ClearAllGeneratedSplinesAndLockedData();                                                                            // [0xa06685c] Final|Native|Protected 
 };
 
 /// Class /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort
@@ -81,17 +81,17 @@ public:
 
 	/// Functions
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.SetTryBeforeYouBuyItemState
-	// void SetTryBeforeYouBuyItemState(FGameplayTag ItemFundingTag, bool bIsActive);                                           // [0x9b3abf0] Final|Native|Public|BlueprintCallable 
+	// void SetTryBeforeYouBuyItemState(FGameplayTag ItemFundingTag, bool bIsActive);                                           // [0xa067de0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.SetItemFundedState
-	// void SetItemFundedState(FGameplayTag ItemFundingTag, bool bIsActive);                                                    // [0x9b3a978] Final|Native|Public|BlueprintCallable 
+	// void SetItemFundedState(FGameplayTag ItemFundingTag, bool bIsActive);                                                    // [0xa067bbc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.SetItemFundedPercent
-	// void SetItemFundedPercent(FGameplayTag ItemFundingTag, float FundingPercent);                                            // [0x9b3a70c] Final|Native|Public|BlueprintCallable 
+	// void SetItemFundedPercent(FGameplayTag ItemFundingTag, float FundingPercent);                                            // [0xa06799c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.SetItemFundedAmount
-	// void SetItemFundedAmount(FGameplayTag ItemFundingTag, int64_t CurrentFundingAmount, int64_t TargetFundingAmount);        // [0x9b3a38c] Final|Native|Public|BlueprintCallable 
+	// void SetItemFundedAmount(FGameplayTag ItemFundingTag, int64_t CurrentFundingAmount, int64_t TargetFundingAmount);        // [0xa0676a0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.SetFundingManagerReady
-	// void SetFundingManagerReady(bool bIsReady);                                                                              // [0x9b3a30c] Final|Native|Public|BlueprintCallable 
+	// void SetFundingManagerReady(bool bIsReady);                                                                              // [0xa067620] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.OnRep_PreloadedItemList
-	// void OnRep_PreloadedItemList();                                                                                          // [0x9b3a2f8] Final|Native|Protected 
+	// void OnRep_PreloadedItemList();                                                                                          // [0xa06760c] Final|Native|Protected 
 };
 
 /// Class /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor
@@ -110,11 +110,11 @@ public:
 
 	/// Functions
 	// Function /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor.OnRep_CurrentFundingData
-	// void OnRep_CurrentFundingData();                                                                                         // [0x9b3a2e4] Final|Native|Protected 
+	// void OnRep_CurrentFundingData();                                                                                         // [0xa0675f8] Final|Native|Protected 
 	// Function /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor.OnRep_ActiveTryBeforeYouBuyItems
-	// void OnRep_ActiveTryBeforeYouBuyItems();                                                                                 // [0x9b3a2d0] Final|Native|Protected 
+	// void OnRep_ActiveTryBeforeYouBuyItems();                                                                                 // [0xa0675e4] Final|Native|Protected 
 	// Function /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor.OnRep_ActiveFundedItems
-	// void OnRep_ActiveFundedItems();                                                                                          // [0x9b3a2bc] Final|Native|Protected 
+	// void OnRep_ActiveFundedItems();                                                                                          // [0xa0675d0] Final|Native|Protected 
 };
 
 /// Struct /Script/CorruptionGameplayCodeRuntime.WarEffortFundingOptionData

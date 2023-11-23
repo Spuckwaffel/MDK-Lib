@@ -48,44 +48,44 @@ public:
 
 	/// Functions
 	// Function /Script/AdvancedWidgets.RadialSlider.SetValueTags
-	// void SetValueTags(TArray<float>& InValueTags);                                                                           // [0x9b6c750] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueTags(TArray<float>& InValueTags);                                                                           // [0x9ea1e44] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetValue
-	// void SetValue(float InValue);                                                                                            // [0x9b6c6d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetValue(float InValue);                                                                                            // [0x9ea1dc4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetUseVerticalDrag
-	// void SetUseVerticalDrag(bool InUseVerticalDrag);                                                                         // [0x9b6c648] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetUseVerticalDrag(bool InUseVerticalDrag);                                                                         // [0x9ea1d3c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetStepSize
-	// void SetStepSize(float InValue);                                                                                         // [0x9b6c5c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetStepSize(float InValue);                                                                                         // [0x9ea1cbc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderRange
-	// void SetSliderRange(FRuntimeFloatCurve& InSliderRange);                                                                  // [0x9b6c4dc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetSliderRange(FRuntimeFloatCurve& InSliderRange);                                                                  // [0x9ea1bd0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderProgressColor
-	// void SetSliderProgressColor(FLinearColor InValue);                                                                       // [0x9b6c380] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderProgressColor(FLinearColor InValue);                                                                       // [0x9ea1a8c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderHandleStartAngle
-	// void SetSliderHandleStartAngle(float InValue);                                                                           // [0x9b6c2f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSliderHandleStartAngle(float InValue);                                                                           // [0x9ea19fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderHandleEndAngle
-	// void SetSliderHandleEndAngle(float InValue);                                                                             // [0x9b6c260] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSliderHandleEndAngle(float InValue);                                                                             // [0x9ea196c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderHandleColor
-	// void SetSliderHandleColor(FLinearColor InValue);                                                                         // [0x9b6c104] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderHandleColor(FLinearColor InValue);                                                                         // [0x9ea1828] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetSliderBarColor
-	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9b6bfa8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9ea16e4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetShowSliderHandle
-	// void SetShowSliderHandle(bool InShowSliderHandle);                                                                       // [0x9b6bf20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetShowSliderHandle(bool InShowSliderHandle);                                                                       // [0x9ea165c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetShowSliderHand
-	// void SetShowSliderHand(bool InShowSliderHand);                                                                           // [0x9b6be98] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetShowSliderHand(bool InShowSliderHand);                                                                           // [0x9ea15d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetLocked
-	// void SetLocked(bool InValue);                                                                                            // [0x9b6bddc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetLocked(bool InValue);                                                                                            // [0x9ea1518] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetHandStartEndRatio
-	// void SetHandStartEndRatio(FVector2D InValue);                                                                            // [0x9b6bc78] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetHandStartEndRatio(FVector2D InValue);                                                                            // [0x9ea13cc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetCustomDefaultValue
-	// void SetCustomDefaultValue(float InValue);                                                                               // [0x9b6bbf8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetCustomDefaultValue(float InValue);                                                                               // [0x9ea134c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetCenterBackgroundColor
-	// void SetCenterBackgroundColor(FLinearColor InValue);                                                                     // [0x9b6ba9c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetCenterBackgroundColor(FLinearColor InValue);                                                                     // [0x9ea1208] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.SetAngularOffset
-	// void SetAngularOffset(float InValue);                                                                                    // [0x9b6ba10] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAngularOffset(float InValue);                                                                                    // [0x9ea117c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AdvancedWidgets.RadialSlider.GetValue
-	// float GetValue();                                                                                                        // [0x9b6b9e8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetValue();                                                                                                        // [0x9ea1154] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AdvancedWidgets.RadialSlider.GetNormalizedSliderHandlePosition
-	// float GetNormalizedSliderHandlePosition();                                                                               // [0x9b6b9b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetNormalizedSliderHandlePosition();                                                                               // [0x9ea111c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AdvancedWidgets.RadialSlider.GetCustomDefaultValue
-	// float GetCustomDefaultValue();                                                                                           // [0x9b6b988] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetCustomDefaultValue();                                                                                           // [0x9ea10f4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 

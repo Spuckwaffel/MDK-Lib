@@ -69,65 +69,65 @@ public:
 
 	/// Functions
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton6UseFallbackDefaultInputAction
-	// bool ShouldButton6UseFallbackDefaultInputAction();                                                                       // [0x9c6f190] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton6UseFallbackDefaultInputAction();                                                                       // [0xa52d92c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton5UseFallbackDefaultInputAction
-	// bool ShouldButton5UseFallbackDefaultInputAction();                                                                       // [0x9c6f164] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton5UseFallbackDefaultInputAction();                                                                       // [0xa52d900] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton4UseFallbackDefaultInputAction
-	// bool ShouldButton4UseFallbackDefaultInputAction();                                                                       // [0x9c6f138] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton4UseFallbackDefaultInputAction();                                                                       // [0xa52d8d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton3UseFallbackDefaultInputAction
-	// bool ShouldButton3UseFallbackDefaultInputAction();                                                                       // [0x9c6f10c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton3UseFallbackDefaultInputAction();                                                                       // [0xa52d8a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton2UseFallbackDefaultInputAction
-	// bool ShouldButton2UseFallbackDefaultInputAction();                                                                       // [0x9c6f0e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton2UseFallbackDefaultInputAction();                                                                       // [0xa52d87c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.ShouldButton1UseFallbackDefaultInputAction
-	// bool ShouldButton1UseFallbackDefaultInputAction();                                                                       // [0x9c6f0b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldButton1UseFallbackDefaultInputAction();                                                                       // [0xa52d850] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsTimerVisible
-	// bool IsTimerVisible();                                                                                                   // [0x9c6f084] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTimerVisible();                                                                                                   // [0xa52d820] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton6Visible
-	// bool IsButton6Visible();                                                                                                 // [0x9c6f068] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton6Visible();                                                                                                 // [0xa52d804] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton5Visible
-	// bool IsButton5Visible();                                                                                                 // [0x9c6f04c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton5Visible();                                                                                                 // [0xa52d7e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton4Visible
-	// bool IsButton4Visible();                                                                                                 // [0x9c6f030] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton4Visible();                                                                                                 // [0xa52d7cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton3Visible
-	// bool IsButton3Visible();                                                                                                 // [0x9c6f014] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton3Visible();                                                                                                 // [0xa52d7b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton2Visible
-	// bool IsButton2Visible();                                                                                                 // [0x9c6eff8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton2Visible();                                                                                                 // [0xa52d794] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.IsButton1Visible
-	// bool IsButton1Visible();                                                                                                 // [0x9c6efdc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsButton1Visible();                                                                                                 // [0xa52d778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetVerticalAlignment
-	// TEnumAsByte<EVerticalAlignment> GetVerticalAlignment();                                                                  // [0x9c6ef64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<EVerticalAlignment> GetVerticalAlignment();                                                                  // [0xa52d700] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetTimerVisibility
-	// ESlateVisibility GetTimerVisibility();                                                                                   // [0x9c6ef2c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetTimerVisibility();                                                                                   // [0xa52d6c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetTimeoutProgress
-	// float GetTimeoutProgress();                                                                                              // [0x9c6ef08] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetTimeoutProgress();                                                                                              // [0xa52d6a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetHorizontalAlignment
-	// TEnumAsByte<EHorizontalAlignment> GetHorizontalAlignment();                                                              // [0x9c6e390] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<EHorizontalAlignment> GetHorizontalAlignment();                                                              // [0xa52cba0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton6Visibility
-	// ESlateVisibility GetButton6Visibility();                                                                                 // [0x9c6e054] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton6Visibility();                                                                                 // [0xa52c864] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton6TriggeringInputAction
-	// FDataTableRowHandle GetButton6TriggeringInputAction();                                                                   // [0x9c6e01c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton6TriggeringInputAction();                                                                   // [0xa52c828] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton5Visibility
-	// ESlateVisibility GetButton5Visibility();                                                                                 // [0x9c6e000] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton5Visibility();                                                                                 // [0xa52c80c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton5TriggeringInputAction
-	// FDataTableRowHandle GetButton5TriggeringInputAction();                                                                   // [0x9c6dfc8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton5TriggeringInputAction();                                                                   // [0xa52c7d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton4Visibility
-	// ESlateVisibility GetButton4Visibility();                                                                                 // [0x9c6dfac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton4Visibility();                                                                                 // [0xa52c7b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton4TriggeringInputAction
-	// FDataTableRowHandle GetButton4TriggeringInputAction();                                                                   // [0x9c6df74] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton4TriggeringInputAction();                                                                   // [0xa52c778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton3Visibility
-	// ESlateVisibility GetButton3Visibility();                                                                                 // [0x9c6df58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton3Visibility();                                                                                 // [0xa52c75c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton3TriggeringInputAction
-	// FDataTableRowHandle GetButton3TriggeringInputAction();                                                                   // [0x9c6df20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton3TriggeringInputAction();                                                                   // [0xa52c720] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton2Visibility
-	// ESlateVisibility GetButton2Visibility();                                                                                 // [0x9c6df04] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton2Visibility();                                                                                 // [0xa52c704] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton2TriggeringInputAction
-	// FDataTableRowHandle GetButton2TriggeringInputAction();                                                                   // [0x9c6decc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton2TriggeringInputAction();                                                                   // [0xa52c6c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton1Visibility
-	// ESlateVisibility GetButton1Visibility();                                                                                 // [0x9c6deb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetButton1Visibility();                                                                                 // [0xa52c6ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetButton1TriggeringInputAction
-	// FDataTableRowHandle GetButton1TriggeringInputAction();                                                                   // [0x9c6de78] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDataTableRowHandle GetButton1TriggeringInputAction();                                                                   // [0xa52c670] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetBackgroundVisibility
-	// ESlateVisibility GetBackgroundVisibility();                                                                              // [0x9c6de54] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESlateVisibility GetBackgroundVisibility();                                                                              // [0xa52c64c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/CRD_ModalDialogUI.CreativeModalDialogWidget

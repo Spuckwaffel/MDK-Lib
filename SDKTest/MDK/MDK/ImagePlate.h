@@ -20,23 +20,23 @@ public:
 };
 
 /// Class /Script/ImagePlate.ImagePlateComponent
-/// Size: 0x0150 (0x000570 - 0x0006C0)
+/// Size: 0x0150 (0x000580 - 0x0006D0)
 class UImagePlateComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1728;
+	static inline constexpr uint64_t __MDKClassSize = 1744;
 
 public:
-	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(getStruct<T>, {0x568, 64, 0, 0})
+	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(getStruct<T>, {0x578, 64, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ImagePlate.ImagePlateComponent.SetImagePlate
-	// void SetImagePlate(FImagePlateParameters Plate);                                                                         // [0xa191148] Final|Native|Public|BlueprintCallable 
+	// void SetImagePlate(FImagePlateParameters Plate);                                                                         // [0xa8b62e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ImagePlate.ImagePlateComponent.OnRenderTextureChanged
-	// void OnRenderTextureChanged();                                                                                           // [0xa191134] Final|Native|Public  
+	// void OnRenderTextureChanged();                                                                                           // [0xa8b62d0] Final|Native|Public  
 	// Function /Script/ImagePlate.ImagePlateComponent.GetPlate
-	// FImagePlateParameters GetPlate();                                                                                        // [0xa1910f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FImagePlateParameters GetPlate();                                                                                        // [0xa8b6258] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ImagePlate.ImagePlateSettings
@@ -64,11 +64,11 @@ public:
 };
 
 /// Class /Script/ImagePlate.ImagePlateFrustumComponent
-/// Size: 0x0000 (0x000570 - 0x000570)
+/// Size: 0x0000 (0x000580 - 0x000580)
 class UImagePlateFrustumComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1392;
+	static inline constexpr uint64_t __MDKClassSize = 1408;
 
 public:
 };

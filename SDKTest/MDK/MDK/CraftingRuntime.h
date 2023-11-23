@@ -10,16 +10,6 @@
 /// dependency: FortniteGame
 /// dependency: ModularGameplay
 
-/// Class /Script/CraftingRuntime.CraftingGlobals
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UCraftingGlobals : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Script/CraftingRuntime.CraftingObjectBGA
 /// Size: 0x0068 (0x000978 - 0x0009E0)
 class ACraftingObjectBGA : public ABuildingGameplayActor
@@ -39,9 +29,9 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingRuntime.CraftingObjectBGA.HandleInteractionRangeEndOverlap
-	// void HandleInteractionRangeEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x9aca338] Final|Native|Private 
+	// void HandleInteractionRangeEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0xa001eb8] Final|Native|Private 
 	// Function /Script/CraftingRuntime.CraftingObjectBGA.HandleInteractionRangeBeginOverlap
-	// void HandleInteractionRangeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x9aca138] Final|Native|Private|HasOutParms 
+	// void HandleInteractionRangeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0xa001cac] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/CraftingRuntime.CraftingCheatManager
@@ -55,11 +45,11 @@ public:
 };
 
 /// Class /Script/CraftingRuntime.CraftingObjectComponent
-/// Size: 0x03A0 (0x0000A0 - 0x000440)
+/// Size: 0x03C0 (0x0000A0 - 0x000460)
 class UCraftingObjectComponent : public UGameFrameworkComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1088;
+	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
 	SMember(FMulticastInlineDelegate)                  CraftingObjectStateChanged                                  OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
@@ -92,16 +82,16 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   InstigatorWhileCraftingAbility                              OFFSET(get<T>, {0x2A8, 32, 0, 0})
 	DMember(bool)                                      bScaleMultiCraftingTime                                     OFFSET(get<bool>, {0x2C8, 1, 0, 0})
 	SMember(FGameplayTagContainer)                     CraftingFailedTags                                          OFFSET(getStruct<T>, {0x2D0, 32, 0, 0})
-	DMember(bool)                                      FreeCraftingEnabled                                         OFFSET(get<bool>, {0x438, 1, 0, 0})
+	DMember(bool)                                      FreeCraftingEnabled                                         OFFSET(get<bool>, {0x458, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/CraftingRuntime.CraftingObjectComponent.OnRep_CraftingObjectRepStateData
-	// void OnRep_CraftingObjectRepStateData(TArray<FCraftingObjectRepStateData>& OldValue);                                    // [0x9acadc4] Final|Native|Private|HasOutParms 
+	// void OnRep_CraftingObjectRepStateData(TArray<FCraftingObjectRepStateData>& OldValue);                                    // [0xa0028e0] Final|Native|Private|HasOutParms 
 	// Function /Script/CraftingRuntime.CraftingObjectComponent.HandlePickupCraftingItemPickedUp
-	// void HandlePickupCraftingItemPickedUp(AFortPickup* Pickup, AFortPawn* InteractingPawn, UFortWorldItemDefinition* WorldItemDefinition, FVector PickupLocation); // [0x9aca4f4] Final|Native|Private|HasDefaults 
+	// void HandlePickupCraftingItemPickedUp(AFortPickup* Pickup, AFortPawn* InteractingPawn, UFortWorldItemDefinition* WorldItemDefinition, FVector PickupLocation); // [0xa002074] Final|Native|Private|HasDefaults 
 	// Function /Script/CraftingRuntime.CraftingObjectComponent.CraftingObjectOnFormulaCraftableChanged__DelegateSignature
-	// void CraftingObjectOnFormulaCraftableChanged__DelegateSignature(FName& FormulaRowName, bool bIsCraftable);               // [0x1d9241c] MulticastDelegate|Public|Delegate|HasOutParms 
+	// void CraftingObjectOnFormulaCraftableChanged__DelegateSignature(FName& FormulaRowName, bool bIsCraftable);               // [0x101681c] MulticastDelegate|Public|Delegate|HasOutParms 
 };
 
 /// Class /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents
@@ -117,27 +107,27 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerStartCrafting
-	// void ServerStartCrafting(AActor* CraftingObject, FName CraftingFormulaName, int32_t NumberToCraft, FCraftingMultiKey Key); // [0x9acc9b0] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerStartCrafting(AActor* CraftingObject, FName CraftingFormulaName, int32_t NumberToCraft, FCraftingMultiKey Key); // [0xa004340] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerResumeCrafting
-	// void ServerResumeCrafting(AActor* CraftingObject, FCraftingMultiKey Key);                                                // [0x9acc7ec] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerResumeCrafting(AActor* CraftingObject, FCraftingMultiKey Key);                                                // [0xa004194] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerReportCraftingSuccess
-	// void ServerReportCraftingSuccess(AActor* CraftingObject, FCraftingMultiKey Key);                                         // [0x9acc628] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerReportCraftingSuccess(AActor* CraftingObject, FCraftingMultiKey Key);                                         // [0xa003fe8] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerPickupItemAndStartCrafting
-	// void ServerPickupItemAndStartCrafting(AActor* CraftingObject, AFortPickup* Pickup, FName CraftingFormulaName, FCraftingMultiKey Key); // [0x9acc3e4] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerPickupItemAndStartCrafting(AActor* CraftingObject, AFortPickup* Pickup, FName CraftingFormulaName, FCraftingMultiKey Key); // [0xa003dc4] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerPauseCrafting
-	// void ServerPauseCrafting(AActor* CraftingObject, bool bDecayPausedTime, FCraftingMultiKey Key);                          // [0x9acc1e0] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerPauseCrafting(AActor* CraftingObject, bool bDecayPausedTime, FCraftingMultiKey Key);                          // [0xa003bd8] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerEjectItems
-	// void ServerEjectItems(AActor* CraftingObject);                                                                           // [0x9acc140] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerEjectItems(AActor* CraftingObject);                                                                           // [0xa003b38] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerClaimCraftingResults
-	// void ServerClaimCraftingResults(AActor* CraftingObject, FCraftingMultiKey Key);                                          // [0x9acbf7c] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerClaimCraftingResults(AActor* CraftingObject, FCraftingMultiKey Key);                                          // [0xa00398c] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ServerCancelCrafting
-	// void ServerCancelCrafting(AActor* CraftingObject, FCraftingMultiKey Key);                                                // [0x9acbdb8] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
+	// void ServerCancelCrafting(AActor* CraftingObject, FCraftingMultiKey Key);                                                // [0xa0037e0] Net|NetReliableNative|Event|Public|NetServer|BlueprintCallable|NetValidate 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.NotifyCraftingSuccess
-	// void NotifyCraftingSuccess(AActor* CraftingObject, FName& FormulaRowName, FCraftingMultiKey Key);                        // [0x9acaa24] Final|Native|Public|HasOutParms 
+	// void NotifyCraftingSuccess(AActor* CraftingObject, FName& FormulaRowName, FCraftingMultiKey Key);                        // [0xa00254c] Final|Native|Public|HasOutParms 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ClientNotifyCraftingSuccess
-	// void ClientNotifyCraftingSuccess(AActor* CraftingObject, FName FormulaRowName, FCraftingMultiKey Key);                   // [0x9ac78c0] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientNotifyCraftingSuccess(AActor* CraftingObject, FName FormulaRowName, FCraftingMultiKey Key);                   // [0x9fff5b4] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ClientNotifyCraftingFailed
-	// void ClientNotifyCraftingFailed(AActor* CraftingObject, FGameplayTagContainer FailedReason, FCraftingMultiKey Key);      // [0x9ac75f4] Net|Native|Event|Public|NetClient 
+	// void ClientNotifyCraftingFailed(AActor* CraftingObject, FGameplayTagContainer FailedReason, FCraftingMultiKey Key);      // [0x9fff31c] Net|Native|Event|Public|NetClient 
 };
 
 /// Class /Script/CraftingRuntime.FortGameStateComponent_Crafting
@@ -155,9 +145,9 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingRuntime.FortGameStateComponent_Crafting.OnRep_CraftingResultsList
-	// void OnRep_CraftingResultsList();                                                                                        // [0x9acb484] Final|Native|Protected 
+	// void OnRep_CraftingResultsList();                                                                                        // [0xa002f04] Final|Native|Protected 
 	// Function /Script/CraftingRuntime.FortGameStateComponent_Crafting.OnPlaylistDataReady
-	// void OnPlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x9acaca8] Final|Native|Protected|HasOutParms 
+	// void OnPlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0xa0027c4] Final|Native|Protected|HasOutParms 
 };
 
 /// Class /Script/CraftingRuntime.FortPickupInteractOverrideComponent_Crafting
@@ -202,6 +192,16 @@ class UFortContextualTutorial_CraftingTabOpen : public UFortContextualTutorial
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 256;
+
+public:
+};
+
+/// Class /Script/CraftingRuntime.CraftingGlobals
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UCraftingGlobals : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };
@@ -279,23 +279,23 @@ public:
 };
 
 /// Struct /Script/CraftingRuntime.CraftingObjectServerStateData
-/// Size: 0x01F0 (0x000000 - 0x0001F0)
+/// Size: 0x0200 (0x000000 - 0x000200)
 class FCraftingObjectServerStateData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 496;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
 	DMember(bool)                                      bNextResultsHandledExternally                               OFFSET(get<bool>, {0x0, 1, 1, 0})
 	CMember(AFortPickup*)                              PendingPickupCraftingItem                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 	SMember(FName)                                     PendingPickupCraftingFormula                                OFFSET(getStruct<T>, {0x10, 4, 0, 0})
-	SMember(FFortItemEntry)                            PendingPickupCraftingItemEntry                              OFFSET(getStruct<T>, {0x18, 408, 0, 0})
-	DMember(int32_t)                                   PendingPickupHeldCount                                      OFFSET(get<int32_t>, {0x1B0, 4, 0, 0})
-	CMember(TArray<FFortItemEntry>)                    AllOfTheIngredientItems                                     OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	CMember(TArray<int32_t>)                           NonConsumedIngredientItemIndices                            OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	CMember(TArray<FItemAndCount>)                     CraftingResults                                             OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(FGameplayAbilitySpecHandle)                InstigatorWhileCraftingAbilitySpecHandle                    OFFSET(getStruct<T>, {0x1E8, 4, 0, 0})
+	SMember(FFortItemEntry)                            PendingPickupCraftingItemEntry                              OFFSET(getStruct<T>, {0x18, 424, 0, 0})
+	DMember(int32_t)                                   PendingPickupHeldCount                                      OFFSET(get<int32_t>, {0x1C0, 4, 0, 0})
+	CMember(TArray<FFortItemEntry>)                    AllOfTheIngredientItems                                     OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           NonConsumedIngredientItemIndices                            OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	CMember(TArray<FItemAndCount>)                     CraftingResults                                             OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	SMember(FGameplayAbilitySpecHandle)                InstigatorWhileCraftingAbilitySpecHandle                    OFFSET(getStruct<T>, {0x1F8, 4, 0, 0})
 };
 
 /// Struct /Script/CraftingRuntime.CraftingIngredientRequirement
@@ -326,26 +326,27 @@ public:
 };
 
 /// Struct /Script/CraftingRuntime.CraftingFormula
-/// Size: 0x0098 (0x000008 - 0x0000A0)
+/// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FCraftingFormula : public FTableRowBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 160;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 	DMember(bool)                                      bAlwaysKnownFormula                                         OFFSET(get<bool>, {0x20, 1, 1, 1})
 	DMember(bool)                                      bInstantlyConsumeIngredients                                OFFSET(get<bool>, {0x20, 1, 1, 2})
-	SMember(FGameplayTag)                              SourceObjectTag                                             OFFSET(getStruct<T>, {0x24, 4, 0, 0})
-	SMember(FGameplayTag)                              CategoryTag                                                 OFFSET(getStruct<T>, {0x28, 4, 0, 0})
-	CMember(TArray<FCraftingIngredientRequirement>)    RequiredIngredients                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FName)                                     ResultLootTierKey                                           OFFSET(getStruct<T>, {0x40, 4, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   WhileCraftingAbility                                        OFFSET(get<T>, {0x48, 32, 0, 0})
-	CMember(TArray<FCraftingUpgradeRule>)              UpgradeRules                                                OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(float)                                     OverrideCraftingTime                                        OFFSET(get<float>, {0x78, 4, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   InstigatorWhileCraftingAbility                              OFFSET(get<T>, {0x80, 32, 0, 0})
+	DMember(int32_t)                                   SortingPriority                                             OFFSET(get<int32_t>, {0x24, 4, 0, 0})
+	SMember(FGameplayTag)                              SourceObjectTag                                             OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     AttributeTags                                               OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	CMember(TArray<FCraftingIngredientRequirement>)    RequiredIngredients                                         OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FName)                                     ResultLootTierKey                                           OFFSET(getStruct<T>, {0x60, 4, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   WhileCraftingAbility                                        OFFSET(get<T>, {0x68, 32, 0, 0})
+	CMember(TArray<FCraftingUpgradeRule>)              UpgradeRules                                                OFFSET(get<T>, {0x88, 16, 0, 0})
+	DMember(float)                                     OverrideCraftingTime                                        OFFSET(get<float>, {0x98, 4, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   InstigatorWhileCraftingAbility                              OFFSET(get<T>, {0xA0, 32, 0, 0})
 };
 
 /// Struct /Script/CraftingRuntime.CraftingResult

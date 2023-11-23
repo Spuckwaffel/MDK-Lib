@@ -35,47 +35,47 @@ public:
 };
 
 /// Class /Script/TankRuntime.FortTankVehicle
-/// Size: 0x01A0 (0x001B20 - 0x001CC0)
+/// Size: 0x01A0 (0x001B60 - 0x001D00)
 class AFortTankVehicle : public AFortTreadVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7360;
+	static inline constexpr uint64_t __MDKClassSize = 7424;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTankRepairedDelegate                                      OFFSET(getStruct<T>, {0x1B98, 16, 0, 0})
-	SMember(FName)                                     BarrelSocketName                                            OFFSET(getStruct<T>, {0x1BA8, 4, 0, 0})
-	CMember(UCapsuleComponent*)                        BarrelCollision                                             OFFSET(get<T>, {0x1BB0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     UnderVehicleCollision                                       OFFSET(get<T>, {0x1BB8, 8, 0, 0})
-	CMember(TArray<FServerSocketTransformOverride>)    SocketOverrideArray                                         OFFSET(get<T>, {0x1BC0, 16, 0, 0})
-	CMember(TMap<FName, FTransform>)                   SocketTransformOverrideMap                                  OFFSET(get<T>, {0x1BD0, 80, 0, 0})
-	CMember(USkeletalMeshComponent*)                   CachedSkeletalMeshComponent                                 OFFSET(get<T>, {0x1C20, 8, 0, 0})
-	CMember(AFortVehicleAudioController*)              CachedVehicleAudioController                                OFFSET(get<T>, {0x1C28, 8, 0, 0})
-	CMember(EVisibilityBasedAnimTickOption)            DefaultServerVisibilityBasedAnimTickOption                  OFFSET(get<T>, {0x1C30, 1, 0, 0})
-	DMember(bool)                                      DefaultServerSkeletalMeshTickEnabled                        OFFSET(get<bool>, {0x1C31, 1, 0, 0})
-	SMember(FName)                                     YawPivotSocketName                                          OFFSET(getStruct<T>, {0x1C34, 4, 0, 0})
-	SMember(FName)                                     PitchPivotSocketName                                        OFFSET(getStruct<T>, {0x1C38, 4, 0, 0})
-	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x1C40, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       AcceleratingCameraShakeInstance                             OFFSET(get<T>, {0x1C48, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        CachedNiagaraComponentRoadAndExhaust                        OFFSET(get<T>, {0x1C58, 8, 0, 0})
-	SMember(FString)                                   RoadAndExhaustNiagaraComponentName                          OFFSET(getStruct<T>, {0x1C60, 16, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutLeftName                               OFFSET(getStruct<T>, {0x1C70, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutRightName                              OFFSET(getStruct<T>, {0x1C74, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustVehicleSpeedName                              OFFSET(getStruct<T>, {0x1C78, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustSlideDirectionName                            OFFSET(getStruct<T>, {0x1C7C, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustMinSpeedForDust                               OFFSET(get<float>, {0x1C80, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustColorLerpName                             OFFSET(getStruct<T>, {0x1C84, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustColorLerpOffRoad                          OFFSET(get<float>, {0x1C88, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustColorLerpOnRoad                           OFFSET(get<float>, {0x1C8C, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustAlphaMultiplierName                       OFFSET(getStruct<T>, {0x1C90, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustAlphaMultiplierOffRoad                    OFFSET(get<float>, {0x1C94, 4, 0, 0})
-	DMember(float)                                     RoadAndExhaustDustAlphaMultiplierOnRoad                     OFFSET(get<float>, {0x1C98, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustFrontLeftName                             OFFSET(getStruct<T>, {0x1C9C, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustFrontRightName                            OFFSET(getStruct<T>, {0x1CA0, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustMiddleLeftName                            OFFSET(getStruct<T>, {0x1CA4, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustMiddleRightName                           OFFSET(getStruct<T>, {0x1CA8, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustRearLeftName                              OFFSET(getStruct<T>, {0x1CAC, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustDustRearRightName                             OFFSET(getStruct<T>, {0x1CB0, 4, 0, 0})
-	SMember(FName)                                     RoadAndExhaustIsOnDirtName                                  OFFSET(getStruct<T>, {0x1CB4, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTankRepairedDelegate                                      OFFSET(getStruct<T>, {0x1BD8, 16, 0, 0})
+	SMember(FName)                                     BarrelSocketName                                            OFFSET(getStruct<T>, {0x1BE8, 4, 0, 0})
+	CMember(UCapsuleComponent*)                        BarrelCollision                                             OFFSET(get<T>, {0x1BF0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     UnderVehicleCollision                                       OFFSET(get<T>, {0x1BF8, 8, 0, 0})
+	CMember(TArray<FServerSocketTransformOverride>)    SocketOverrideArray                                         OFFSET(get<T>, {0x1C00, 16, 0, 0})
+	CMember(TMap<FName, FTransform>)                   SocketTransformOverrideMap                                  OFFSET(get<T>, {0x1C10, 80, 0, 0})
+	CMember(USkeletalMeshComponent*)                   CachedSkeletalMeshComponent                                 OFFSET(get<T>, {0x1C60, 8, 0, 0})
+	CMember(AFortVehicleAudioController*)              CachedVehicleAudioController                                OFFSET(get<T>, {0x1C68, 8, 0, 0})
+	CMember(EVisibilityBasedAnimTickOption)            DefaultServerVisibilityBasedAnimTickOption                  OFFSET(get<T>, {0x1C70, 1, 0, 0})
+	DMember(bool)                                      DefaultServerSkeletalMeshTickEnabled                        OFFSET(get<bool>, {0x1C71, 1, 0, 0})
+	SMember(FName)                                     YawPivotSocketName                                          OFFSET(getStruct<T>, {0x1C74, 4, 0, 0})
+	SMember(FName)                                     PitchPivotSocketName                                        OFFSET(getStruct<T>, {0x1C78, 4, 0, 0})
+	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x1C80, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       AcceleratingCameraShakeInstance                             OFFSET(get<T>, {0x1C88, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        CachedNiagaraComponentRoadAndExhaust                        OFFSET(get<T>, {0x1C98, 8, 0, 0})
+	SMember(FString)                                   RoadAndExhaustNiagaraComponentName                          OFFSET(getStruct<T>, {0x1CA0, 16, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutLeftName                               OFFSET(getStruct<T>, {0x1CB0, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutRightName                              OFFSET(getStruct<T>, {0x1CB4, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustVehicleSpeedName                              OFFSET(getStruct<T>, {0x1CB8, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustSlideDirectionName                            OFFSET(getStruct<T>, {0x1CBC, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustMinSpeedForDust                               OFFSET(get<float>, {0x1CC0, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustColorLerpName                             OFFSET(getStruct<T>, {0x1CC4, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustColorLerpOffRoad                          OFFSET(get<float>, {0x1CC8, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustColorLerpOnRoad                           OFFSET(get<float>, {0x1CCC, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustAlphaMultiplierName                       OFFSET(getStruct<T>, {0x1CD0, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustAlphaMultiplierOffRoad                    OFFSET(get<float>, {0x1CD4, 4, 0, 0})
+	DMember(float)                                     RoadAndExhaustDustAlphaMultiplierOnRoad                     OFFSET(get<float>, {0x1CD8, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustFrontLeftName                             OFFSET(getStruct<T>, {0x1CDC, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustFrontRightName                            OFFSET(getStruct<T>, {0x1CE0, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustMiddleLeftName                            OFFSET(getStruct<T>, {0x1CE4, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustMiddleRightName                           OFFSET(getStruct<T>, {0x1CE8, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustRearLeftName                              OFFSET(getStruct<T>, {0x1CEC, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustDustRearRightName                             OFFSET(getStruct<T>, {0x1CF0, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustIsOnDirtName                                  OFFSET(getStruct<T>, {0x1CF4, 4, 0, 0})
 };
 
 /// Class /Script/TankRuntime.FortTankVehicleAnimInstance
@@ -117,44 +117,44 @@ public:
 
 	/// Functions
 	// Function /Script/TankRuntime.FortTankVehicleAnimInstance.UpdateMIDEngineProperties
-	// void UpdateMIDEngineProperties(float DeltaSeconds, float EngineHealthRatio);                                             // [0x9bff3c4] Final|Native|Private|BlueprintCallable 
+	// void UpdateMIDEngineProperties(float DeltaSeconds, float EngineHealthRatio);                                             // [0xa1c19e0] Final|Native|Private|BlueprintCallable 
 };
 
 /// Class /Script/TankRuntime.FortTankVehicleAudioController
-/// Size: 0x0400 (0x0002F0 - 0x0006F0)
+/// Size: 0x0400 (0x000300 - 0x000700)
 class AFortTankVehicleAudioController : public AFortVehicleAudioController
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1776;
+	static inline constexpr uint64_t __MDKClassSize = 1792;
 
 public:
-	SMember(FFortAudioFloatParameter)                  SpeedParam                                                  OFFSET(getStruct<T>, {0x2F0, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  TurnPowerParam                                              OFFSET(getStruct<T>, {0x328, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  OutOfFuelParam                                              OFFSET(getStruct<T>, {0x360, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  IdleParam                                                   OFFSET(getStruct<T>, {0x398, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  TurningParam                                                OFFSET(getStruct<T>, {0x3D0, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  ForwardParam                                                OFFSET(getStruct<T>, {0x408, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  ReverseParam                                                OFFSET(getStruct<T>, {0x440, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  SurfaceParam                                                OFFSET(getStruct<T>, {0x478, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  IsInWaterParam                                              OFFSET(getStruct<T>, {0x4B0, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  IsInAirParam                                                OFFSET(getStruct<T>, {0x4E8, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  BoostParam                                                  OFFSET(getStruct<T>, {0x520, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  CannonHorizontalMovementParam                               OFFSET(getStruct<T>, {0x558, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  CannonVerticalMovementParam                                 OFFSET(getStruct<T>, {0x590, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  TurretHorizontalMovementParam                               OFFSET(getStruct<T>, {0x5C8, 56, 0, 0})
-	SMember(FFortAudioFloatParameter)                  TurretVerticalMovementParam                                 OFFSET(getStruct<T>, {0x600, 56, 0, 0})
-	SMember(FTankAudioUpdateContext)                   Context                                                     OFFSET(getStruct<T>, {0x638, 184, 0, 0})
+	SMember(FFortAudioFloatParameter)                  SpeedParam                                                  OFFSET(getStruct<T>, {0x300, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  TurnPowerParam                                              OFFSET(getStruct<T>, {0x338, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  OutOfFuelParam                                              OFFSET(getStruct<T>, {0x370, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  IdleParam                                                   OFFSET(getStruct<T>, {0x3A8, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  TurningParam                                                OFFSET(getStruct<T>, {0x3E0, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  ForwardParam                                                OFFSET(getStruct<T>, {0x418, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  ReverseParam                                                OFFSET(getStruct<T>, {0x450, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  SurfaceParam                                                OFFSET(getStruct<T>, {0x488, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  IsInWaterParam                                              OFFSET(getStruct<T>, {0x4C0, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  IsInAirParam                                                OFFSET(getStruct<T>, {0x4F8, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  BoostParam                                                  OFFSET(getStruct<T>, {0x530, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  CannonHorizontalMovementParam                               OFFSET(getStruct<T>, {0x568, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  CannonVerticalMovementParam                                 OFFSET(getStruct<T>, {0x5A0, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  TurretHorizontalMovementParam                               OFFSET(getStruct<T>, {0x5D8, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  TurretVerticalMovementParam                                 OFFSET(getStruct<T>, {0x610, 56, 0, 0})
+	SMember(FTankAudioUpdateContext)                   Context                                                     OFFSET(getStruct<T>, {0x648, 184, 0, 0})
 
 
 	/// Functions
 	// Function /Script/TankRuntime.FortTankVehicleAudioController.PlayTurningOneShot
-	// void PlayTurningOneShot();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void PlayTurningOneShot();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/TankRuntime.FortTankVehicleAudioController.PlayDecelOneShot
-	// void PlayDecelOneShot();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void PlayDecelOneShot();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/TankRuntime.FortTankVehicleAudioController.PlayAccelOneShot
-	// void PlayAccelOneShot();                                                                                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void PlayAccelOneShot();                                                                                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/TankRuntime.FortTankVehicleAudioController.GetTankVehicleActor
-	// AFortTankVehicle* GetTankVehicleActor();                                                                                 // [0x9bff380] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AFortTankVehicle* GetTankVehicleActor();                                                                                 // [0xa1c199c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Struct /Script/TankRuntime.TankWeaponAimingData

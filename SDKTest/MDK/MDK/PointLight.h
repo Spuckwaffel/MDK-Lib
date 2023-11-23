@@ -24,15 +24,15 @@ public:
 
 	/// Functions
 	// Function /Script/PointLight.PointLightNativeComponent.UpdateShortCircuit
-	// void UpdateShortCircuit();                                                                                               // [0x9c82e8c] Final|Native|Private 
+	// void UpdateShortCircuit();                                                                                               // [0xa5419b0] Final|Native|Private 
 	// Function /Script/PointLight.PointLightNativeComponent.UpdateDeviceSettings
-	// void UpdateDeviceSettings(FPointLightRhythmParameters& RhythmParameters);                                                // [0x9c82dfc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void UpdateDeviceSettings(FPointLightRhythmParameters& RhythmParameters);                                                // [0xa541920] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/PointLight.PointLightNativeComponent.StopShortCircuitUpdate
-	// void StopShortCircuitUpdate();                                                                                           // [0x9c82de8] Final|Native|Public|BlueprintCallable 
+	// void StopShortCircuitUpdate();                                                                                           // [0xa54190c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/PointLight.PointLightNativeComponent.StartShortCircuitUpdate
-	// void StartShortCircuitUpdate(UTimelineComponent* ShortCircuitTimeline);                                                  // [0x9c82c48] Final|Native|Public|BlueprintCallable 
+	// void StartShortCircuitUpdate(UTimelineComponent* ShortCircuitTimeline);                                                  // [0xa541758] Final|Native|Public|BlueprintCallable 
 	// Function /Script/PointLight.PointLightNativeComponent.StartRhythmUpdate
-	// void StartRhythmUpdate(FTimerHandle& TimerHandle, float Rate);                                                           // [0x9c82b10] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void StartRhythmUpdate(FTimerHandle& TimerHandle, float Rate);                                                           // [0xa541648] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/PointLight.PointLightRhythmParameters

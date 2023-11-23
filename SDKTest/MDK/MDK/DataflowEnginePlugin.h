@@ -20,11 +20,11 @@ public:
 };
 
 /// Class /Script/DataflowEnginePlugin.DataflowComponent
-/// Size: 0x0140 (0x000570 - 0x0006B0)
+/// Size: 0x0140 (0x000580 - 0x0006C0)
 class UDataflowComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1712;
+	static inline constexpr uint64_t __MDKClassSize = 1728;
 
 public:
 };

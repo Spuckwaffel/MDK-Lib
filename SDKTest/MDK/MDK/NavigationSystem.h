@@ -230,18 +230,18 @@ public:
 };
 
 /// Class /Script/NavigationSystem.NavCollision
-/// Size: 0x0060 (0x000070 - 0x0000D0)
+/// Size: 0x0098 (0x000070 - 0x000108)
 class UNavCollision : public UNavCollisionBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 208;
+	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	CMember(TArray<FNavCollisionCylinder>)             CylinderCollision                                           OFFSET(get<T>, {0x80, 16, 0, 0})
-	CMember(TArray<FNavCollisionBox>)                  BoxCollision                                                OFFSET(get<T>, {0x90, 16, 0, 0})
-	CMember(UClass*)                                   AreaClass                                                   OFFSET(get<T>, {0xA0, 8, 0, 0})
-	DMember(bool)                                      bGatherConvexGeometry                                       OFFSET(get<bool>, {0xA8, 1, 1, 0})
-	DMember(bool)                                      bCreateOnClient                                             OFFSET(get<bool>, {0xA8, 1, 1, 1})
+	CMember(TArray<FNavCollisionCylinder>)             CylinderCollision                                           OFFSET(get<T>, {0xB8, 16, 0, 0})
+	CMember(TArray<FNavCollisionBox>)                  BoxCollision                                                OFFSET(get<T>, {0xC8, 16, 0, 0})
+	CMember(UClass*)                                   AreaClass                                                   OFFSET(get<T>, {0xD8, 8, 0, 0})
+	DMember(bool)                                      bGatherConvexGeometry                                       OFFSET(get<bool>, {0xE0, 1, 1, 0})
+	DMember(bool)                                      bCreateOnClient                                             OFFSET(get<bool>, {0xE0, 1, 1, 1})
 };
 
 /// Class /Script/NavigationSystem.NavigationQueryFilter
@@ -306,29 +306,29 @@ public:
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavigationPath.IsValid
-	// bool IsValid();                                                                                                          // [0x63e5620] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsValid();                                                                                                          // [0x63bdfa0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.IsStringPulled
-	// bool IsStringPulled();                                                                                                   // [0x2a1f97c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsStringPulled();                                                                                                   // [0x29d4b34] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.IsPartial
-	// bool IsPartial();                                                                                                        // [0x63e55f4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPartial();                                                                                                        // [0x63bdf74] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.GetPathLength
-	// double GetPathLength();                                                                                                  // [0x63e520c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double GetPathLength();                                                                                                  // [0x63bdb34] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.GetPathCost
-	// double GetPathCost();                                                                                                    // [0x63e4f10] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double GetPathCost();                                                                                                    // [0x63bd7e0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.GetDebugString
-	// FString GetDebugString();                                                                                                // [0x63e4de8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetDebugString();                                                                                                // [0x63bd6b8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation
-	// void EnableRecalculationOnInvalidation(TEnumAsByte<ENavigationOptionFlag> DoRecalculation);                              // [0x63e4670] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void EnableRecalculationOnInvalidation(TEnumAsByte<ENavigationOptionFlag> DoRecalculation);                              // [0x63bcef8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationPath.EnableDebugDrawing
-	// void EnableDebugDrawing(bool bShouldDrawDebugData, FLinearColor PathColor);                                              // [0x63e44cc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void EnableDebugDrawing(bool bShouldDrawDebugData, FLinearColor PathColor);                                              // [0x63bcd68] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.NavigationSystemV1
-/// Size: 0x1560 (0x000028 - 0x001588)
+/// Size: 0x1588 (0x000028 - 0x0015B0)
 class UNavigationSystemV1 : public UNavigationSystemBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5512;
+	static inline constexpr uint64_t __MDKClassSize = 5552;
 
 public:
 	CMember(ANavigationData*)                          MainNavData                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
@@ -346,58 +346,59 @@ public:
 	DMember(int32_t)                                   GeometryExportTriangleCountWarningThreshold                 OFFSET(get<int32_t>, {0x64, 4, 0, 0})
 	DMember(bool)                                      bGenerateNavigationOnlyAroundNavigationInvokers             OFFSET(get<bool>, {0x68, 1, 1, 0})
 	DMember(float)                                     ActiveTilesUpdateInterval                                   OFFSET(get<float>, {0x6C, 4, 0, 0})
-	CMember(ENavDataGatheringModeConfig)               DataGatheringMode                                           OFFSET(get<T>, {0x70, 1, 0, 0})
-	DMember(float)                                     DirtyAreaWarningSizeThreshold                               OFFSET(get<float>, {0x74, 4, 0, 0})
-	DMember(float)                                     GatheringNavModifiersWarningLimitTime                       OFFSET(get<float>, {0x78, 4, 0, 0})
-	CMember(TArray<FNavDataConfig>)                    SupportedAgents                                             OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgentsMask                                         OFFSET(getStruct<T>, {0x90, 4, 0, 0})
-	SMember(FBox)                                      BuildBounds                                                 OFFSET(getStruct<T>, {0x98, 56, 0, 0})
-	CMember(TArray<ANavigationData*>)                  NavDataSet                                                  OFFSET(get<T>, {0xD0, 16, 0, 0})
-	CMember(TArray<ANavigationData*>)                  NavDataRegistrationQueue                                    OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNavDataRegisteredEvent                                    OFFSET(getStruct<T>, {0x100, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNavigationGenerationFinishedDelegate                      OFFSET(getStruct<T>, {0x110, 16, 0, 0})
-	SMember(FNavigationSystemRunMode)                  OperationMode                                               OFFSET(getStruct<T>, {0x200, 1, 0, 0})
+	DMember(double)                                    InvokersMaximumDistanceFromSeed                             OFFSET(get<double>, {0x70, 8, 0, 0})
+	CMember(ENavDataGatheringModeConfig)               DataGatheringMode                                           OFFSET(get<T>, {0x78, 1, 0, 0})
+	DMember(float)                                     DirtyAreaWarningSizeThreshold                               OFFSET(get<float>, {0x7C, 4, 0, 0})
+	DMember(float)                                     GatheringNavModifiersWarningLimitTime                       OFFSET(get<float>, {0x80, 4, 0, 0})
+	CMember(TArray<FNavDataConfig>)                    SupportedAgents                                             OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgentsMask                                         OFFSET(getStruct<T>, {0x98, 4, 0, 0})
+	SMember(FBox)                                      BuildBounds                                                 OFFSET(getStruct<T>, {0xA0, 56, 0, 0})
+	CMember(TArray<ANavigationData*>)                  NavDataSet                                                  OFFSET(get<T>, {0xD8, 16, 0, 0})
+	CMember(TArray<ANavigationData*>)                  NavDataRegistrationQueue                                    OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNavDataRegisteredEvent                                    OFFSET(getStruct<T>, {0x108, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNavigationGenerationFinishedDelegate                      OFFSET(getStruct<T>, {0x118, 16, 0, 0})
+	SMember(FNavigationSystemRunMode)                  OperationMode                                               OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker
-	// void UnregisterNavigationInvoker(AActor* Invoker);                                                                       // [0x63e679c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void UnregisterNavigationInvoker(AActor* Invoker);                                                                       // [0x63bf574] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount
-	// void SetMaxSimultaneousTileGenerationJobsCount(int32_t MaxNumberOfJobs);                                                 // [0x63e66e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMaxSimultaneousTileGenerationJobsCount(int32_t MaxNumberOfJobs);                                                 // [0x63bf4a8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode
-	// void SetGeometryGatheringMode(ENavDataGatheringModeConfig NewMode);                                                      // [0x63e6660] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetGeometryGatheringMode(ENavDataGatheringModeConfig NewMode);                                                      // [0x63bf428] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount
-	// void ResetMaxSimultaneousTileGenerationJobsCount();                                                                      // [0x63e65d8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetMaxSimultaneousTileGenerationJobsCount();                                                                      // [0x63bf414] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker
-	// void RegisterNavigationInvoker(AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius);                    // [0x63e64b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RegisterNavigationInvoker(AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius);                    // [0x63bf2f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated
-	// void OnNavigationBoundsUpdated(ANavMeshBoundsVolume* NavVolume);                                                         // [0x63e639c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void OnNavigationBoundsUpdated(ANavMeshBoundsVolume* NavVolume);                                                         // [0x63bf1e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.NavigationRaycast
-	// bool NavigationRaycast(UObject* WorldContextObject, FVector& RayStart, FVector& RayEnd, FVector& HitLocation, UClass* FilterClass, AController* Querier); // [0x63e60dc] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool NavigationRaycast(UObject* WorldContextObject, FVector& RayStart, FVector& RayEnd, FVector& HitLocation, UClass* FilterClass, AController* Querier); // [0x63bee8c] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData
-	// bool K2_ReplaceAreaInOctreeData(UObject* Object, UClass* OldArea, UClass* NewArea);                                      // [0x63e5fd0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool K2_ReplaceAreaInOctreeData(UObject* Object, UClass* OldArea, UClass* NewArea);                                      // [0x63bed30] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation
-	// bool K2_ProjectPointToNavigation(UObject* WorldContextObject, FVector& Point, FVector& ProjectedLocation, ANavigationData* NavData, UClass* FilterClass, FVector QueryExtent); // [0x63e5c58] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// bool K2_ProjectPointToNavigation(UObject* WorldContextObject, FVector& Point, FVector& ProjectedLocation, ANavigationData* NavData, UClass* FilterClass, FVector QueryExtent); // [0x63be96c] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius
-	// bool K2_GetRandomReachablePointInRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63e5948] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// bool K2_GetRandomReachablePointInRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63be630] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius
-	// bool K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63e5638] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// bool K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63be2f4] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.K2_GetRandomLocationInNavigableRadius
-	// bool K2_GetRandomLocationInNavigableRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63e5638] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool K2_GetRandomLocationInNavigableRadius(UObject* WorldContextObject, FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData, UClass* FilterClass); // [0x63bdfb8] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked
-	// bool IsNavigationBeingBuiltOrLocked(UObject* WorldContextObject);                                                        // [0x63e5574] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// bool IsNavigationBeingBuiltOrLocked(UObject* WorldContextObject);                                                        // [0x63bdef4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt
-	// bool IsNavigationBeingBuilt(UObject* WorldContextObject);                                                                // [0x63e54f4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// bool IsNavigationBeingBuilt(UObject* WorldContextObject);                                                                // [0x63bde74] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetPathLength
-	// TEnumAsByte<ENavigationQueryResult> GetPathLength(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, double& PathLength, ANavigationData* NavData, UClass* FilterClass); // [0x63e5234] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// TEnumAsByte<ENavigationQueryResult> GetPathLength(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, double& PathLength, ANavigationData* NavData, UClass* FilterClass); // [0x63bdb5c] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetPathCost
-	// TEnumAsByte<ENavigationQueryResult> GetPathCost(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, double& PathCost, ANavigationData* NavData, UClass* FilterClass); // [0x63e4f4c] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
+	// TEnumAsByte<ENavigationQueryResult> GetPathCost(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, double& PathCost, ANavigationData* NavData, UClass* FilterClass); // [0x63bd81c] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.GetNavigationSystem
-	// UNavigationSystemV1* GetNavigationSystem(UObject* WorldContextObject);                                                   // [0x63e4e90] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UNavigationSystemV1* GetNavigationSystem(UObject* WorldContextObject);                                                   // [0x63bd760] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously
-	// UNavigationPath* FindPathToLocationSynchronously(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, AActor* PathfindingContext, UClass* FilterClass); // [0x63e4b88] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UNavigationPath* FindPathToLocationSynchronously(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, AActor* PathfindingContext, UClass* FilterClass); // [0x63bd404] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
-	// UNavigationPath* FindPathToActorSynchronously(UObject* WorldContextObject, FVector& PathStart, AActor* GoalActor, float TetherDistance, AActor* PathfindingContext, UClass* FilterClass); // [0x63e4718] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UNavigationPath* FindPathToActorSynchronously(UObject* WorldContextObject, FVector& PathStart, AActor* GoalActor, float TetherDistance, AActor* PathfindingContext, UClass* FilterClass); // [0x63bcfa0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.NavigationSystemModuleConfig
@@ -457,14 +458,14 @@ public:
 };
 
 /// Class /Script/NavigationSystem.NavLinkComponent
-/// Size: 0x0010 (0x000570 - 0x000580)
+/// Size: 0x0010 (0x000580 - 0x000590)
 class UNavLinkComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1408;
+	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	CMember(TArray<FNavigationLink>)                   Links                                                       OFFSET(get<T>, {0x570, 16, 0, 0})
+	CMember(TArray<FNavigationLink>)                   Links                                                       OFFSET(get<T>, {0x580, 16, 0, 0})
 };
 
 /// Class /Script/NavigationSystem.NavRelevantComponent
@@ -481,7 +482,7 @@ public:
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-	// void SetNavigationRelevancy(bool bRelevant);                                                                             // [0x642b590] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNavigationRelevancy(bool bRelevant);                                                                             // [0x6406fcc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.NavLinkCustomComponent
@@ -514,11 +515,11 @@ public:
 };
 
 /// Class /Script/NavigationSystem.NavLinkRenderingComponent
-/// Size: 0x0000 (0x000570 - 0x000570)
+/// Size: 0x0000 (0x000580 - 0x000580)
 class UNavLinkRenderingComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1392;
+	static inline constexpr uint64_t __MDKClassSize = 1408;
 
 public:
 };
@@ -535,21 +536,21 @@ public:
 };
 
 /// Class /Script/NavigationSystem.NavMeshRenderingComponent
-/// Size: 0x0010 (0x0005C0 - 0x0005D0)
+/// Size: 0x0010 (0x0005D0 - 0x0005E0)
 class UNavMeshRenderingComponent : public UDebugDrawComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1488;
+	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
 };
 
 /// Class /Script/NavigationSystem.NavTestRenderingComponent
-/// Size: 0x0000 (0x0005C0 - 0x0005C0)
+/// Size: 0x0000 (0x0005D0 - 0x0005D0)
 class UNavTestRenderingComponent : public UDebugDrawComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1472;
+	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
 };
@@ -636,7 +637,7 @@ public:
 
 	/// Functions
 	// Function /Script/NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
-	// bool K2_ReplaceAreaInTileBounds(FBox Bounds, UClass* OldArea, UClass* NewArea, bool ReplaceLinks);                       // [0x640e5ec] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// bool K2_ReplaceAreaInTileBounds(FBox Bounds, UClass* OldArea, UClass* NewArea, bool ReplaceLinks);                       // [0x63e6600] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.RecastNavMeshDataChunk
@@ -665,7 +666,7 @@ public:
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierComponent.SetAreaClass
-	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x642b510] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x6406f38] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.NavModifierVolume
@@ -683,7 +684,7 @@ public:
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierVolume.SetAreaClass
-	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x642b434] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x6406e40] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/NavigationSystem.NavSystemConfigOverride

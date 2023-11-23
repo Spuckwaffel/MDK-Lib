@@ -28,7 +28,7 @@ public:
 
 	/// Functions
 	// Function /Script/EpicCMSUIFramework.EpicCMSImage.SetMediaURL
-	// void SetMediaURL(FString MediaUrl);                                                                                      // [0x1b3e6e8] Final|Native|Public|BlueprintCallable 
+	// void SetMediaURL(FString MediaUrl);                                                                                      // [0x6ee6e20] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/EpicCMSUIFramework.EpicCMSLayoutBase
@@ -103,7 +103,7 @@ public:
 
 	/// Functions
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileBase.Launch
-	// void Launch();                                                                                                           // [0x6cb6020] Final|Native|Protected|BlueprintCallable 
+	// void Launch();                                                                                                           // [0x6ee6d60] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/EpicCMSUIFramework.EpicCMSTileCarousel
@@ -126,21 +126,21 @@ public:
 
 	/// Functions
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.SetCurrentPageByIndex
-	// void SetCurrentPageByIndex(int32_t PageIndex);                                                                           // [0x6cb605c] Final|Native|Protected|BlueprintCallable 
+	// void SetCurrentPageByIndex(int32_t PageIndex);                                                                           // [0x6ee6d9c] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.PreviousPage
-	// void PreviousPage();                                                                                                     // [0x6cb6048] Final|Native|Protected|BlueprintCallable 
+	// void PreviousPage();                                                                                                     // [0x6ee6d88] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.NextPage
-	// void NextPage();                                                                                                         // [0x6cb6034] Final|Native|Protected|BlueprintCallable 
+	// void NextPage();                                                                                                         // [0x6ee6d74] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.NavigationVisibilityChanged
-	// void NavigationVisibilityChanged(bool bShowNavigation);                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void NavigationVisibilityChanged(bool bShowNavigation);                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.HandleTilePageAdded
-	// void HandleTilePageAdded(UWidget* TileWidget);                                                                           // [0x6cb5f9c] Native|Event|Protected|BlueprintEvent 
+	// void HandleTilePageAdded(UWidget* TileWidget);                                                                           // [0x6ee6cdc] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.GetCurrentPageIndex
-	// int32_t GetCurrentPageIndex();                                                                                           // [0x6cb5f74] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetCurrentPageIndex();                                                                                           // [0x6ee6cb4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.BeginAutoScrolling
-	// void BeginAutoScrolling();                                                                                               // [0x6cb5f40] Final|Native|Public|BlueprintCallable 
+	// void BeginAutoScrolling();                                                                                               // [0x6ee6c80] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.AddTilePage
-	// void AddTilePage(UWidget* TilePageWidget);                                                                               // [0x6cb5df0] Final|Native|Public|BlueprintCallable 
+	// void AddTilePage(UWidget* TilePageWidget);                                                                               // [0x6ee6aec] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/EpicCMSUIFramework.EpicCMSTileTypeMapping

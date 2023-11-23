@@ -26,9 +26,9 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.AudioComponentBase.OnRep_SoundAsset
-	// void OnRep_SoundAsset();                                                                                                 // [0x9867de0] Final|Native|Protected 
+	// void OnRep_SoundAsset();                                                                                                 // [0x9d28758] Final|Native|Protected 
 	// Function /Script/VGameplayRst.AudioComponentBase.OnRep_ActiveSoundInfo
-	// void OnRep_ActiveSoundInfo();                                                                                            // [0x9867be4] Final|Native|Protected 
+	// void OnRep_ActiveSoundInfo();                                                                                            // [0x9d2855c] Final|Native|Protected 
 };
 
 /// Class /Script/VGameplayRst.ControllerStateComponent
@@ -44,7 +44,7 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.ControllerStateComponent.OnRep_ActiveStates
-	// void OnRep_ActiveStates();                                                                                               // [0x9867c14] Final|Native|Private 
+	// void OnRep_ActiveStates();                                                                                               // [0x9d2858c] Final|Native|Private 
 };
 
 /// Class /Script/VGameplayRst.DatastoreComponentBase
@@ -82,15 +82,15 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnRep_NewLevel
-	// void OnRep_NewLevel();                                                                                                   // [0x9867d84] Final|Native|Public  
+	// void OnRep_NewLevel();                                                                                                   // [0x9d286fc] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnLevelUnloaded_Server
-	// void OnLevelUnloaded_Server();                                                                                           // [0x9867bd0] Final|Native|Public  
+	// void OnLevelUnloaded_Server();                                                                                           // [0x9d28548] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnLevelUnloaded_Client
-	// void OnLevelUnloaded_Client();                                                                                           // [0x9867bbc] Final|Native|Public  
+	// void OnLevelUnloaded_Client();                                                                                           // [0x9d28534] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnLevelShown_Server
-	// void OnLevelShown_Server();                                                                                              // [0x9867ba8] Final|Native|Public  
+	// void OnLevelShown_Server();                                                                                              // [0x9d28520] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnLevelShown_Client
-	// void OnLevelShown_Client();                                                                                              // [0x9867b94] Final|Native|Public  
+	// void OnLevelShown_Client();                                                                                              // [0x9d2850c] Final|Native|Public  
 };
 
 /// Class /Script/VGameplayRst.PointLightComponentBase
@@ -130,11 +130,11 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.VerseLightPropertiesBase.OnRep_LightComponent
-	// void OnRep_LightComponent();                                                                                             // [0x9867d04] Final|Native|Protected 
+	// void OnRep_LightComponent();                                                                                             // [0x9d2867c] Final|Native|Protected 
 	// Function /Script/VGameplayRst.VerseLightPropertiesBase.OnRep_LightColor
-	// void OnRep_LightColor();                                                                                                 // [0x9867cc4] Final|Native|Protected 
+	// void OnRep_LightColor();                                                                                                 // [0x9d2863c] Final|Native|Protected 
 	// Function /Script/VGameplayRst.VerseLightPropertiesBase.OnRep_Intensity
-	// void OnRep_Intensity();                                                                                                  // [0x9867c90] Final|Native|Protected 
+	// void OnRep_Intensity();                                                                                                  // [0x9d28608] Final|Native|Protected 
 };
 
 /// Class /Script/VGameplayRst.VerseLocalLightProperties
@@ -150,7 +150,7 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.VerseLocalLightProperties.OnRep_AttenuationRadius
-	// void OnRep_AttenuationRadius();                                                                                          // [0x9867c28] Final|Native|Protected 
+	// void OnRep_AttenuationRadius();                                                                                          // [0x9d285a0] Final|Native|Protected 
 };
 
 /// Class /Script/VGameplayRst.VersePointLightProperties
@@ -167,9 +167,9 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.VersePointLightProperties.OnRep_SourceRadius
-	// void OnRep_SourceRadius();                                                                                               // [0x9867e3c] Final|Native|Public  
+	// void OnRep_SourceRadius();                                                                                               // [0x9d287b4] Final|Native|Public  
 	// Function /Script/VGameplayRst.VersePointLightProperties.OnRep_SourceLength
-	// void OnRep_SourceLength();                                                                                               // [0x9867e08] Final|Native|Public  
+	// void OnRep_SourceLength();                                                                                               // [0x9d28780] Final|Native|Public  
 };
 
 /// Class /Script/VGameplayRst.VerseSpotLightProperties
@@ -186,9 +186,9 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.VerseSpotLightProperties.OnRep_OuterConeAngle
-	// void OnRep_OuterConeAngle();                                                                                             // [0x9867d98] Final|Native|Public  
+	// void OnRep_OuterConeAngle();                                                                                             // [0x9d28710] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseSpotLightProperties.OnRep_InnerConeAngle
-	// void OnRep_InnerConeAngle();                                                                                             // [0x9867c5c] Final|Native|Public  
+	// void OnRep_InnerConeAngle();                                                                                             // [0x9d285d4] Final|Native|Public  
 };
 
 /// Class /Script/VGameplayRst.ParticleSystemComponentBase
@@ -205,9 +205,9 @@ public:
 
 	/// Functions
 	// Function /Script/VGameplayRst.ParticleSystemComponentBase.OnRep_ParticleSystemAsset
-	// void OnRep_ParticleSystemAsset();                                                                                        // [0x9867dcc] Final|Native|Protected 
+	// void OnRep_ParticleSystemAsset();                                                                                        // [0x9d28744] Final|Native|Protected 
 	// Function /Script/VGameplayRst.ParticleSystemComponentBase.OnRep_bActive
-	// void OnRep_bActive();                                                                                                    // [0x9867e70] Final|Native|Protected 
+	// void OnRep_bActive();                                                                                                    // [0x9d287e8] Final|Native|Protected 
 };
 
 /// Struct /Script/VGameplayRst.ActiveSoundInfo

@@ -25,31 +25,31 @@ public:
 
 	/// Functions
 	// Function /Script/Lobby.LobbyBeaconClient.ServerSetPartyOwner
-	// void ServerSetPartyOwner(FUniqueNetIdRepl InUniqueId, FUniqueNetIdRepl InPartyOwnerId);                                  // [0x6aeb11c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSetPartyOwner(FUniqueNetIdRepl InUniqueId, FUniqueNetIdRepl InPartyOwnerId);                                  // [0x6b475f4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerNotifyJoiningServer
-	// void ServerNotifyJoiningServer();                                                                                        // [0x6aeb0d0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerNotifyJoiningServer();                                                                                        // [0x6b475a8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerLoginPlayer
-	// void ServerLoginPlayer(FString InSessionId, FUniqueNetIdRepl InUniqueId, FString UrlString);                             // [0x6aead80] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerLoginPlayer(FString InSessionId, FUniqueNetIdRepl InUniqueId, FString UrlString);                             // [0x6b472a4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerKickPlayer
-	// void ServerKickPlayer(FUniqueNetIdRepl PlayerToKick, FText Reason);                                                      // [0x6aeaa7c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerKickPlayer(FUniqueNetIdRepl PlayerToKick, FText Reason);                                                      // [0x6b47004] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerDisconnectFromLobby
-	// void ServerDisconnectFromLobby();                                                                                        // [0x6aeaa30] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerDisconnectFromLobby();                                                                                        // [0x6b46fb8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ServerCheat
-	// void ServerCheat(FString Msg);                                                                                           // [0x6aea378] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
+	// void ServerCheat(FString Msg);                                                                                           // [0x6b469a8] Net|NetReliableNative|Event|Public|NetServer|NetValidate 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientWasKicked
-	// void ClientWasKicked(FText KickReason);                                                                                  // [0x6aea214] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientWasKicked(FText KickReason);                                                                                  // [0x6b46844] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientSetInviteFlags
-	// void ClientSetInviteFlags(FJoinabilitySettings Settings);                                                                // [0x6aea0b0] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSetInviteFlags(FJoinabilitySettings Settings);                                                                // [0x6b466f8] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientPlayerLeft
-	// void ClientPlayerLeft(FUniqueNetIdRepl InUniqueId);                                                                      // [0x6ae9f20] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientPlayerLeft(FUniqueNetIdRepl InUniqueId);                                                                      // [0x6b46578] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientPlayerJoined
-	// void ClientPlayerJoined(FText NewPlayerName, FUniqueNetIdRepl InUniqueId);                                               // [0x6ae9d38] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientPlayerJoined(FText NewPlayerName, FUniqueNetIdRepl InUniqueId);                                               // [0x6b463ac] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientLoginComplete
-	// void ClientLoginComplete(FUniqueNetIdRepl InUniqueId, bool bWasSuccessful);                                              // [0x6ae9a78] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientLoginComplete(FUniqueNetIdRepl InUniqueId, bool bWasSuccessful);                                              // [0x6b46138] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientJoinGame
-	// void ClientJoinGame();                                                                                                   // [0x34110b8] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientJoinGame();                                                                                                   // [0x2ce35b4] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientAckJoiningServer
-	// void ClientAckJoiningServer();                                                                                           // [0x5c49968] Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientAckJoiningServer();                                                                                           // [0x5af225c] Net|NetReliableNative|Event|Protected|NetClient 
 };
 
 /// Class /Script/Lobby.LobbyBeaconHost
@@ -81,11 +81,11 @@ public:
 
 	/// Functions
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
-	// void OnRep_UniqueId();                                                                                                   // [0x6aea32c] Final|Native|Protected 
+	// void OnRep_UniqueId();                                                                                                   // [0x6b4695c] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
-	// void OnRep_PartyOwner();                                                                                                 // [0x6aea2f4] Final|Native|Protected 
+	// void OnRep_PartyOwner();                                                                                                 // [0x6b46924] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_InLobby
-	// void OnRep_InLobby();                                                                                                    // [0x6aea2a8] Final|Native|Protected 
+	// void OnRep_InLobby();                                                                                                    // [0x6b468d8] Final|Native|Protected 
 };
 
 /// Class /Script/Lobby.LobbyBeaconState
@@ -105,9 +105,9 @@ public:
 
 	/// Functions
 	// Function /Script/Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
-	// void OnRep_WaitForPlayersTimeRemaining();                                                                                // [0x6aea364] Final|Native|Protected 
+	// void OnRep_WaitForPlayersTimeRemaining();                                                                                // [0x6b46994] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconState.OnRep_LobbyStarted
-	// void OnRep_LobbyStarted();                                                                                               // [0x6aea2e0] Final|Native|Protected 
+	// void OnRep_LobbyStarted();                                                                                               // [0x6b46910] Final|Native|Protected 
 };
 
 /// Struct /Script/Lobby.LobbyPlayerStateActorInfo

@@ -26,11 +26,11 @@ public:
 
 	/// Functions
 	// Function /Script/AmbientAudio.AmbientAudioComponent.SetPriority
-	// void SetPriority(int32_t InPriority);                                                                                    // [0x718eeb0] Final|Native|Public|BlueprintCallable 
+	// void SetPriority(int32_t InPriority);                                                                                    // [0x72c52b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioComponent.SetCrossfadeTime
-	// void SetCrossfadeTime(float InCrossfadeTime);                                                                            // [0x718ee1c] Final|Native|Public|BlueprintCallable 
+	// void SetCrossfadeTime(float InCrossfadeTime);                                                                            // [0x72c5230] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioComponent.SetAmbientAsset
-	// void SetAmbientAsset(UAmbientAudioDataAsset* InAmbientAsset);                                                            // [0x718ed8c] Final|Native|Public|BlueprintCallable 
+	// void SetAmbientAsset(UAmbientAudioDataAsset* InAmbientAsset);                                                            // [0x72c5194] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AmbientAudio.AmbientAudioDataAsset
@@ -62,15 +62,15 @@ public:
 
 	/// Functions
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.RemoveGameplayTag
-	// void RemoveGameplayTag(FGameplayTag GameplayTag);                                                                        // [0x193e680] Final|Native|Public|BlueprintCallable 
+	// void RemoveGameplayTag(FGameplayTag GameplayTag);                                                                        // [0x201629c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.RemoveAmbientEntry
-	// void RemoveAmbientEntry(FName AmbientName, float CrossfadeOverride);                                                     // [0x193e7e4] Final|Native|Public|BlueprintCallable 
+	// void RemoveAmbientEntry(FName AmbientName, float CrossfadeOverride);                                                     // [0x2b1ccf8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.GetAudioParameterComponent
-	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x718ed64] Final|Native|Public|BlueprintCallable 
+	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x72c5150] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.AddGameplayTag
-	// void AddGameplayTag(FGameplayTag GameplayTag);                                                                           // [0x718ec10] Final|Native|Public|BlueprintCallable 
+	// void AddGameplayTag(FGameplayTag GameplayTag);                                                                           // [0x72c5014] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.AddAmbientEntry
-	// void AddAmbientEntry(FName AmbientName, UAmbientAudioDataAsset* Asset, int32_t Priority, float CrossfadeTime);           // [0x193e2b8] Final|Native|Public|BlueprintCallable 
+	// void AddAmbientEntry(FName AmbientName, UAmbientAudioDataAsset* Asset, int32_t Priority, float CrossfadeTime);           // [0x20158a8] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AmbientAudio.AmbientAudioParameterActor

@@ -30,22 +30,22 @@ public:
 	CMember(UCameraAnimationSequence*)                 AnimSequence                                                OFFSET(get<T>, {0x150, 8, 0, 0})
 	DMember(bool)                                      bRandomAnimSegment                                          OFFSET(get<bool>, {0x158, 1, 1, 0})
 	DMember(float)                                     OscillatorTimeRemaining                                     OFFSET(get<float>, {0x15C, 4, 0, 0})
-	CMember(USequenceCameraShakePattern*)              SequenceShakePattern                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
+	CMember(USequenceCameraShakePattern*)              SequenceShakePattern                                        OFFSET(get<T>, {0x1D8, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/GameplayCameras.LegacyCameraShake.StartLegacyCameraShakeFromSource
-	// ULegacyCameraShake* StartLegacyCameraShakeFromSource(APlayerCameraManager* PlayerCameraManager, UClass* ShakeClass, UCameraShakeSourceComponent* SourceComponent, float Scale, ECameraShakePlaySpace Playspace, FRotator UserPlaySpaceRot); // [0x6caafec] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// ULegacyCameraShake* StartLegacyCameraShakeFromSource(APlayerCameraManager* PlayerCameraManager, UClass* ShakeClass, UCameraShakeSourceComponent* SourceComponent, float Scale, ECameraShakePlaySpace Playspace, FRotator UserPlaySpaceRot); // [0x6d20d04] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GameplayCameras.LegacyCameraShake.StartLegacyCameraShake
-	// ULegacyCameraShake* StartLegacyCameraShake(APlayerCameraManager* PlayerCameraManager, UClass* ShakeClass, float Scale, ECameraShakePlaySpace Playspace, FRotator UserPlaySpaceRot); // [0x6caad80] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// ULegacyCameraShake* StartLegacyCameraShake(APlayerCameraManager* PlayerCameraManager, UClass* ShakeClass, float Scale, ECameraShakePlaySpace Playspace, FRotator UserPlaySpaceRot); // [0x6d20a50] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GameplayCameras.LegacyCameraShake.ReceiveStopShake
-	// void ReceiveStopShake(bool bImmediately);                                                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveStopShake(bool bImmediately);                                                                                // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayCameras.LegacyCameraShake.ReceivePlayShake
-	// void ReceivePlayShake(float Scale);                                                                                      // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceivePlayShake(float Scale);                                                                                      // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayCameras.LegacyCameraShake.ReceiveIsFinished
-	// bool ReceiveIsFinished();                                                                                                // [0x2de5e28] Native|Event|Public|BlueprintEvent|Const 
+	// bool ReceiveIsFinished();                                                                                                // [0x2cb7c3c] Native|Event|Public|BlueprintEvent|Const 
 	// Function /Script/GameplayCameras.LegacyCameraShake.BlueprintUpdateCameraShake
-	// void BlueprintUpdateCameraShake(float DeltaTime, float Alpha, FMinimalViewInfo& POV, FMinimalViewInfo& ModifiedPOV);     // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void BlueprintUpdateCameraShake(float DeltaTime, float Alpha, FMinimalViewInfo& POV, FMinimalViewInfo& ModifiedPOV);     // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/GameplayCameras.LegacyCameraShakePattern
@@ -82,21 +82,21 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.StopCameraAnimation
-	// void StopCameraAnimation(FCameraAnimationHandle& Handle, bool bImmediate);                                               // [0x6cab5f4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void StopCameraAnimation(FCameraAnimationHandle& Handle, bool bImmediate);                                               // [0x6d21348] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.StopAllCameraAnimationsOf
-	// void StopAllCameraAnimationsOf(UCameraAnimationSequence* Sequence, bool bImmediate);                                     // [0x6cab408] Final|Native|Public|BlueprintCallable 
+	// void StopAllCameraAnimationsOf(UCameraAnimationSequence* Sequence, bool bImmediate);                                     // [0x6d2115c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.StopAllCameraAnimations
-	// void StopAllCameraAnimations(bool bImmediate);                                                                           // [0x6cab2a8] Native|Public|BlueprintCallable 
+	// void StopAllCameraAnimations(bool bImmediate);                                                                           // [0x6d20ffc] Native|Public|BlueprintCallable 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.PlayCameraAnimation
-	// FCameraAnimationHandle PlayCameraAnimation(UCameraAnimationSequence* Sequence, FCameraAnimationParams Params);           // [0x6caa84c] Final|Native|Public|BlueprintCallable 
+	// FCameraAnimationHandle PlayCameraAnimation(UCameraAnimationSequence* Sequence, FCameraAnimationParams Params);           // [0x6d20518] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.IsCameraAnimationActive
-	// bool IsCameraAnimationActive(FCameraAnimationHandle& Handle);                                                            // [0x6caa6cc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool IsCameraAnimationActive(FCameraAnimationHandle& Handle);                                                            // [0x6d20398] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifierFromPlayerController
-	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromPlayerController(APlayerController* PlayerController); // [0x6caa64c] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromPlayerController(APlayerController* PlayerController); // [0x6d20318] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifierFromID
-	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromID(UObject* WorldContextObject, int32_t ControllerId); // [0x6caa580] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromID(UObject* WorldContextObject, int32_t ControllerId); // [0x6d2024c] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifier
-	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifier(UObject* WorldContextObject, int32_t PlayerIndex);      // [0x6caa4b4] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifier(UObject* WorldContextObject, int32_t PlayerIndex);      // [0x6d20180] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/GameplayCameras.GameplayCamerasFunctionLibrary
@@ -148,7 +148,7 @@ class USimpleCameraShakePattern : public UCameraShakePattern
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     BlendInTime                                                 OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(float)                                     BlendOutTime                                                OFFSET(get<float>, {0x30, 4, 0, 0})
 };
@@ -168,7 +168,7 @@ public:
 	SMember(FPerlinNoiseShaker)                        Z                                                           OFFSET(getStruct<T>, {0x70, 8, 0, 0})
 	DMember(float)                                     RotationAmplitudeMultiplier                                 OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(float)                                     RotationFrequencyMultiplier                                 OFFSET(get<float>, {0x7C, 4, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Pitch                                                       OFFSET(getStruct<T>, {0x80, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        pitch                                                       OFFSET(getStruct<T>, {0x80, 8, 0, 0})
 	SMember(FPerlinNoiseShaker)                        Yaw                                                         OFFSET(getStruct<T>, {0x88, 8, 0, 0})
 	SMember(FPerlinNoiseShaker)                        Roll                                                        OFFSET(getStruct<T>, {0x90, 8, 0, 0})
 	SMember(FPerlinNoiseShaker)                        FOV                                                         OFFSET(getStruct<T>, {0x98, 8, 0, 0})
@@ -211,7 +211,7 @@ public:
 	SMember(FWaveOscillator)                           Z                                                           OFFSET(getStruct<T>, {0x78, 12, 0, 0})
 	DMember(float)                                     RotationAmplitudeMultiplier                                 OFFSET(get<float>, {0x84, 4, 0, 0})
 	DMember(float)                                     RotationFrequencyMultiplier                                 OFFSET(get<float>, {0x88, 4, 0, 0})
-	SMember(FWaveOscillator)                           Pitch                                                       OFFSET(getStruct<T>, {0x8C, 12, 0, 0})
+	SMember(FWaveOscillator)                           pitch                                                       OFFSET(getStruct<T>, {0x8C, 12, 0, 0})
 	SMember(FWaveOscillator)                           Yaw                                                         OFFSET(getStruct<T>, {0x98, 12, 0, 0})
 	SMember(FWaveOscillator)                           Roll                                                        OFFSET(getStruct<T>, {0xA4, 12, 0, 0})
 	SMember(FWaveOscillator)                           FOV                                                         OFFSET(getStruct<T>, {0xB0, 12, 0, 0})
@@ -241,7 +241,7 @@ class FROscillator : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
-	SMember(FFOscillator)                              Pitch                                                       OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FFOscillator)                              pitch                                                       OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	SMember(FFOscillator)                              Yaw                                                         OFFSET(getStruct<T>, {0xC, 12, 0, 0})
 	SMember(FFOscillator)                              Roll                                                        OFFSET(getStruct<T>, {0x18, 12, 0, 0})
 };

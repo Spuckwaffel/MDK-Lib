@@ -9,23 +9,23 @@
 /// dependency: Engine
 
 /// Class /Script/Renderer.SparseVolumeTextureViewerComponent
-/// Size: 0x0040 (0x000570 - 0x0005B0)
+/// Size: 0x0040 (0x000580 - 0x0005C0)
 class USparseVolumeTextureViewerComponent : public UPrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1456;
+	static inline constexpr uint64_t __MDKClassSize = 1472;
 
 public:
-	CMember(USparseVolumeTexture*)                     SparseVolumeTexturePreview                                  OFFSET(get<T>, {0x568, 8, 0, 0})
-	DMember(bool)                                      bAnimate                                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
-	DMember(bool)                                      bReversePlayback                                            OFFSET(get<bool>, {0x570, 1, 1, 1})
-	DMember(bool)                                      bBlockingStreamingRequests                                  OFFSET(get<bool>, {0x570, 1, 1, 2})
-	DMember(float)                                     AnimationFrame                                              OFFSET(get<float>, {0x574, 4, 0, 0})
-	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x578, 4, 0, 0})
-	DMember(float)                                     AnimationTime                                               OFFSET(get<float>, {0x57C, 4, 0, 0})
-	CMember(TEnumAsByte<ESparseVolumeTexturePreviewAttribute>) PreviewAttribute                                    OFFSET(get<T>, {0x580, 1, 0, 0})
-	DMember(int32_t)                                   MipLevel                                                    OFFSET(get<int32_t>, {0x584, 4, 0, 0})
-	DMember(float)                                     Extinction                                                  OFFSET(get<float>, {0x588, 4, 0, 0})
+	CMember(USparseVolumeTexture*)                     SparseVolumeTexturePreview                                  OFFSET(get<T>, {0x578, 8, 0, 0})
+	DMember(bool)                                      bAnimate                                                    OFFSET(get<bool>, {0x580, 1, 1, 0})
+	DMember(bool)                                      bReversePlayback                                            OFFSET(get<bool>, {0x580, 1, 1, 1})
+	DMember(bool)                                      bBlockingStreamingRequests                                  OFFSET(get<bool>, {0x580, 1, 1, 2})
+	DMember(float)                                     AnimationFrame                                              OFFSET(get<float>, {0x584, 4, 0, 0})
+	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x588, 4, 0, 0})
+	DMember(float)                                     AnimationTime                                               OFFSET(get<float>, {0x58C, 4, 0, 0})
+	CMember(TEnumAsByte<ESparseVolumeTexturePreviewAttribute>) PreviewAttribute                                    OFFSET(get<T>, {0x590, 1, 0, 0})
+	DMember(int32_t)                                   MipLevel                                                    OFFSET(get<int32_t>, {0x594, 4, 0, 0})
+	DMember(float)                                     Extinction                                                  OFFSET(get<float>, {0x598, 4, 0, 0})
 };
 
 /// Class /Script/Renderer.SparseVolumeTextureViewer

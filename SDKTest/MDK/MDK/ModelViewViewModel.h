@@ -42,7 +42,7 @@ public:
 
 	/// Functions
 	// Function /Script/ModelViewViewModel.MVVMGameSubsystem.GetViewModelCollection
-	// UMVVMViewModelCollectionObject* GetViewModelCollection();                                                                // [0x5ae6cc0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMVVMViewModelCollectionObject* GetViewModelCollection();                                                                // [0x596a4e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ModelViewViewModel.MVVMSubsystem
@@ -78,15 +78,26 @@ public:
 
 	/// Functions
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.RemoveViewModel
-	// bool RemoveViewModel(FMVVMViewModelContext Context);                                                                     // [0x6c06268] Final|Native|Public|BlueprintCallable 
+	// bool RemoveViewModel(FMVVMViewModelContext Context);                                                                     // [0x6c703c4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.RemoveAllViewModelInstance
-	// int32_t RemoveAllViewModelInstance(UMVVMViewModelBase* ViewModel);                                                       // [0x6c061c8] Final|Native|Public|BlueprintCallable 
+	// int32_t RemoveAllViewModelInstance(UMVVMViewModelBase* ViewModel);                                                       // [0x6c70324] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.FindViewModelInstance
-	// UMVVMViewModelBase* FindViewModelInstance(FMVVMViewModelContext Context);                                                // [0x6c04a44] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UMVVMViewModelBase* FindViewModelInstance(FMVVMViewModelContext Context);                                                // [0x6c6ea20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.FindFirstViewModelInstanceOfType
-	// UMVVMViewModelBase* FindFirstViewModelInstanceOfType(UClass*& ViewModelClass);                                           // [0x6c04970] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// UMVVMViewModelBase* FindFirstViewModelInstanceOfType(UClass*& ViewModelClass);                                           // [0x6c6e948] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.AddViewModelInstance
-	// bool AddViewModelInstance(FMVVMViewModelContext Context, UMVVMViewModelBase* ViewModel);                                 // [0x6c04594] Final|Native|Public|BlueprintCallable 
+	// bool AddViewModelInstance(FMVVMViewModelContext Context, UMVVMViewModelBase* ViewModel);                                 // [0x6c6e5c8] Final|Native|Public|BlueprintCallable 
+};
+
+/// Class /Script/ModelViewViewModel.MVVMInstancedViewModelGeneratedClass
+/// Size: 0x0060 (0x000368 - 0x0003C8)
+class UMVVMInstancedViewModelGeneratedClass : public UBlueprintGeneratedClass
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 968;
+
+public:
+	CMember(TArray<UFunction*>)                        OnRepFunctionToLink                                         OFFSET(get<T>, {0x368, 16, 0, 0})
 };
 
 /// Class /Script/ModelViewViewModel.MVVMViewModelBlueprintGeneratedClass
@@ -110,56 +121,57 @@ public:
 };
 
 /// Class /Script/ModelViewViewModel.MVVMView
-/// Size: 0x0030 (0x000028 - 0x000058)
+/// Size: 0x0050 (0x000028 - 0x000078)
 class UMVVMView : public UUserWidgetExtension
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
+	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(UMVVMViewClass*)                           ClassExtension                                              OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TArray<FMVVMViewSource>)                   Sources                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(bool)                                      bLogBinding                                                 OFFSET(get<bool>, {0x50, 1, 0, 0})
-	DMember(bool)                                      bConstructed                                                OFFSET(get<bool>, {0x51, 1, 0, 0})
-	DMember(bool)                                      bSourcesInitialized                                         OFFSET(get<bool>, {0x52, 1, 0, 0})
-	DMember(bool)                                      bBindingsInitialized                                        OFFSET(get<bool>, {0x53, 1, 0, 0})
-	DMember(bool)                                      bHasEveryTickBinding                                        OFFSET(get<bool>, {0x54, 1, 0, 0})
+	DMember(bool)                                      bLogBinding                                                 OFFSET(get<bool>, {0x70, 1, 0, 0})
+	DMember(bool)                                      bConstructed                                                OFFSET(get<bool>, {0x71, 1, 0, 0})
+	DMember(bool)                                      bSourcesInitialized                                         OFFSET(get<bool>, {0x72, 1, 0, 0})
+	DMember(bool)                                      bBindingsInitialized                                        OFFSET(get<bool>, {0x73, 1, 0, 0})
+	DMember(bool)                                      bHasEveryTickBinding                                        OFFSET(get<bool>, {0x74, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ModelViewViewModel.MVVMView.UninitializeSources
-	// void UninitializeSources();                                                                                              // [0x6c064d4] Final|Native|Public|BlueprintCallable 
+	// void UninitializeSources();                                                                                              // [0x6c706e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.UninitializeBindings
-	// void UninitializeBindings();                                                                                             // [0x6c06474] Final|Native|Public|BlueprintCallable 
+	// void UninitializeBindings();                                                                                             // [0x6c70680] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.SetViewModelByClass
-	// bool SetViewModelByClass(TScriptInterface<Class> NewValue);                                                              // [0x6c063d8] Final|Native|Public|BlueprintCallable 
+	// bool SetViewModelByClass(TScriptInterface<Class> NewValue);                                                              // [0x6c70520] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.SetViewModel
-	// bool SetViewModel(FName ViewModelName, TScriptInterface<Class> ViewModel);                                               // [0x22bfae0] Final|Native|Public|BlueprintCallable 
+	// bool SetViewModel(FName ViewModelName, TScriptInterface<Class> ViewModel);                                               // [0x14f95f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.InitializeSources
-	// void InitializeSources();                                                                                                // [0x6c04c64] Final|Native|Public|BlueprintCallable 
+	// void InitializeSources();                                                                                                // [0x6c6ec30] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.InitializeBindings
-	// void InitializeBindings();                                                                                               // [0x6c04c50] Final|Native|Public|BlueprintCallable 
+	// void InitializeBindings();                                                                                               // [0x6c6ec1c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ModelViewViewModel.MVVMView.GetViewModel
-	// TScriptInterface<Class> GetViewModel(FName ViewModelName);                                                               // [0x6c04bb8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TScriptInterface<Class> GetViewModel(FName ViewModelName);                                                               // [0x6c6eb80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMView.AreSourcesInitialized
-	// bool AreSourcesInitialized();                                                                                            // [0x6c04848] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool AreSourcesInitialized();                                                                                            // [0x6c6e820] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMView.AreBindingsInitialized
-	// bool AreBindingsInitialized();                                                                                           // [0x6c04834] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool AreBindingsInitialized();                                                                                           // [0x6c6e80c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/ModelViewViewModel.MVVMViewClass
-/// Size: 0x0088 (0x000028 - 0x0000B0)
+/// Size: 0x0098 (0x000028 - 0x0000C0)
 class UMVVMViewClass : public UWidgetBlueprintGeneratedClassExtension
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 	CMember(TArray<FMVVMViewClass_SourceCreator>)      SourceCreators                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FMVVMViewClass_CompiledBinding>)    CompiledBindings                                            OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              OFFSET(getStruct<T>, {0x48, 96, 0, 0})
-	DMember(bool)                                      bInitializeSourcesOnConstruct                               OFFSET(get<bool>, {0xAC, 1, 0, 0})
-	DMember(bool)                                      bInitializeBindingsOnConstruct                              OFFSET(get<bool>, {0xAD, 1, 0, 0})
+	CMember(TArray<FMVVMViewClass_CompiledEvent>)      CompiledEvents                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              OFFSET(getStruct<T>, {0x58, 96, 0, 0})
+	DMember(bool)                                      bInitializeSourcesOnConstruct                               OFFSET(get<bool>, {0xBC, 1, 0, 0})
+	DMember(bool)                                      bInitializeBindingsOnConstruct                              OFFSET(get<bool>, {0xBD, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMAvailableBinding
@@ -336,8 +348,9 @@ public:
 	SMember(FName)                                     SourceName                                                  OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   RegisteredCount                                             OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(bool)                                      bCreatedSource                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
-	DMember(bool)                                      bSetManually                                                OFFSET(get<bool>, {0x11, 1, 0, 0})
-	DMember(bool)                                      bAssignedToUserWidgetProperty                               OFFSET(get<bool>, {0x12, 1, 0, 0})
+	DMember(bool)                                      bBindingsInitialized                                        OFFSET(get<bool>, {0x11, 1, 0, 0})
+	DMember(bool)                                      bSetManually                                                OFFSET(get<bool>, {0x12, 1, 0, 0})
+	DMember(bool)                                      bAssignedToUserWidgetProperty                               OFFSET(get<bool>, {0x13, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewClass_SourceCreator
@@ -373,6 +386,20 @@ public:
 	CMember(EMVVMExecutionMode)                        ExecutionMode                                               OFFSET(get<T>, {0x16, 1, 0, 0})
 	DMember(int8_t)                                    EvaluateSourceCreatorIndex                                  OFFSET(get<int8_t>, {0x17, 1, 0, 0})
 	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0x18, 1, 0, 0})
+};
+
+/// Struct /Script/ModelViewViewModel.MVVMViewClass_CompiledEvent
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FMVVMViewClass_CompiledEvent : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	SMember(FMVVMVCompiledFieldPath)                   FieldPath                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FunctionName                                                OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Enum /Script/ModelViewViewModel.EMVVMExecutionMode

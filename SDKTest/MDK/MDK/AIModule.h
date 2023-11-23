@@ -24,7 +24,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
-	// void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult> MovementResult);                          // [0x6433e28] Final|RequiredAPI|Native|Public 
+	// void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult> MovementResult);                          // [0x640fcb8] Final|RequiredAPI|Native|Public 
 };
 
 /// Class /Script/AIModule.AIResourceInterface
@@ -125,13 +125,14 @@ public:
 };
 
 /// Class /Script/AIModule.AISenseConfig_Touch
-/// Size: 0x0000 (0x000048 - 0x000048)
+/// Size: 0x0008 (0x000048 - 0x000050)
 class UAISenseConfig_Touch : public UAISenseConfig
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 72;
+	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
+	SMember(FAISenseAffiliationFilter)                 DetectionByAffiliation                                      OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 };
 
 /// Class /Script/AIModule.AISenseEvent
@@ -227,11 +228,11 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.PawnAction.GetActionPriority
-	// TEnumAsByte<EAIRequestPriority> GetActionPriority();                                                                     // [0x6432cd0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+	// TEnumAsByte<EAIRequestPriority> GetActionPriority();                                                                     // [0x58c5dac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AIModule.PawnAction.Finish
-	// void Finish(TEnumAsByte<EPawnActionResult> WithResult);                                                                  // [0x6432c34] RequiredAPI|Native|Protected|BlueprintCallable 
+	// void Finish(TEnumAsByte<EPawnActionResult> WithResult);                                                                  // [0x640ec48] RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.PawnAction.CreateActionInstance
-	// UPawnAction* CreateActionInstance(UObject* WorldContextObject, UClass* ActionClass);                                     // [0x6432ab8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// UPawnAction* CreateActionInstance(UObject* WorldContextObject, UClass* ActionClass);                                     // [0x640eab4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.PawnActionsComponent
@@ -250,13 +251,13 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.PawnActionsComponent.K2_PushAction
-	// bool K2_PushAction(UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority> Priority, UObject* Instigator);               // [0x6433130] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// bool K2_PushAction(UPawnAction* NewAction, TEnumAsByte<EAIRequestPriority> Priority, UObject* Instigator);               // [0x640f0dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnActionsComponent.K2_PerformAction
-	// bool K2_PerformAction(APawn* Pawn, UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority);                       // [0x6432fec] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// bool K2_PerformAction(APawn* Pawn, UPawnAction* Action, TEnumAsByte<EAIRequestPriority> Priority);                       // [0x640efd4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnActionsComponent.K2_ForceAbortAction
-	// TEnumAsByte<EPawnActionAbortState> K2_ForceAbortAction(UPawnAction* ActionToAbort);                                      // [0x6432f60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TEnumAsByte<EPawnActionAbortState> K2_ForceAbortAction(UPawnAction* ActionToAbort);                                      // [0x640ef48] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnActionsComponent.K2_AbortAction
-	// TEnumAsByte<EPawnActionAbortState> K2_AbortAction(UPawnAction* ActionToAbort);                                           // [0x6432eac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TEnumAsByte<EPawnActionAbortState> K2_AbortAction(UPawnAction* ActionToAbort);                                           // [0x640ee94] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.PawnAction_BlueprintBase
@@ -354,49 +355,49 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AIController.UseBlackboard
-	// bool UseBlackboard(UBlackboardData* BlackboardAsset, UBlackboardComponent*& BlackboardComponent);                        // [0x64342b8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool UseBlackboard(UBlackboardData* BlackboardAsset, UBlackboardComponent*& BlackboardComponent);                        // [0x6410114] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.AIController.UnclaimTaskResource
-	// void UnclaimTaskResource(UClass* ResourceClass);                                                                         // [0x6434238] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void UnclaimTaskResource(UClass* ResourceClass);                                                                         // [0x6410080] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.SetPathFollowingComponent
-	// void SetPathFollowingComponent(UPathFollowingComponent* NewPFComponent);                                                 // [0x64341b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetPathFollowingComponent(UPathFollowingComponent* NewPFComponent);                                                 // [0x640fff4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.SetMoveBlockDetection
-	// void SetMoveBlockDetection(bool bEnable);                                                                                // [0x6434134] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetMoveBlockDetection(bool bEnable);                                                                                // [0x640ff70] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.RunBehaviorTree
-	// bool RunBehaviorTree(UBehaviorTree* BTAsset);                                                                            // [0x64340a0] RequiredAPI|Native|Public|BlueprintCallable 
+	// bool RunBehaviorTree(UBehaviorTree* BTAsset);                                                                            // [0x640fedc] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.OnUsingBlackBoard
-	// void OnUsingBlackBoard(UBlackboardComponent* BlackboardComp, UBlackboardData* BlackboardAsset);                          // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void OnUsingBlackBoard(UBlackboardComponent* BlackboardComp, UBlackboardData* BlackboardAsset);                          // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.AIController.OnGameplayTaskResourcesClaimed
-	// void OnGameplayTaskResourcesClaimed(FGameplayResourceSet NewlyClaimed, FGameplayResourceSet FreshlyReleased);            // [0x6433ba8] RequiredAPI|Native|Public 
+	// void OnGameplayTaskResourcesClaimed(FGameplayResourceSet NewlyClaimed, FGameplayResourceSet FreshlyReleased);            // [0x640fa90] RequiredAPI|Native|Public 
 	// Function /Script/AIModule.AIController.MoveToLocation
-	// TEnumAsByte<EPathFollowingRequestResult> MoveToLocation(FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, UClass* FilterClass, bool bAllowPartialPath); // [0x6433664] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// TEnumAsByte<EPathFollowingRequestResult> MoveToLocation(FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, UClass* FilterClass, bool bAllowPartialPath); // [0x640f614] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AIModule.AIController.MoveToActor
-	// TEnumAsByte<EPathFollowingRequestResult> MoveToActor(AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, UClass* FilterClass, bool bAllowPartialPath); // [0x6433434] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// TEnumAsByte<EPathFollowingRequestResult> MoveToActor(AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, UClass* FilterClass, bool bAllowPartialPath); // [0x640f3c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.K2_SetFocus
-	// void K2_SetFocus(AActor* NewFocus);                                                                                      // [0x64333ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void K2_SetFocus(AActor* NewFocus);                                                                                      // [0x640f33c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.K2_SetFocalPoint
-	// void K2_SetFocalPoint(FVector FP);                                                                                       // [0x6433238] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+	// void K2_SetFocalPoint(FVector FP);                                                                                       // [0x640f1e4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AIModule.AIController.K2_ClearFocus
-	// void K2_ClearFocus();                                                                                                    // [0x6432f44] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void K2_ClearFocus();                                                                                                    // [0x640ef2c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIController.HasPartialPath
-	// bool HasPartialPath();                                                                                                   // [0x6432e70] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasPartialPath();                                                                                                   // [0x640ee58] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetPathFollowingComponent
-	// UPathFollowingComponent* GetPathFollowingComponent();                                                                    // [0x6432e58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UPathFollowingComponent* GetPathFollowingComponent();                                                                    // [0x556d408] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetMoveStatus
-	// TEnumAsByte<EPathFollowingStatus> GetMoveStatus();                                                                       // [0x6432e38] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<EPathFollowingStatus> GetMoveStatus();                                                                       // [0x640ee38] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetImmediateMoveDestination
-	// FVector GetImmediateMoveDestination();                                                                                   // [0x6432e00] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetImmediateMoveDestination();                                                                                   // [0x640ee00] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetFocusActor
-	// AActor* GetFocusActor();                                                                                                 // [0x6432ddc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// AActor* GetFocusActor();                                                                                                 // [0x640eddc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetFocalPointOnActor
-	// FVector GetFocalPointOnActor(AActor* Actor);                                                                             // [0x6432d34] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetFocalPointOnActor(AActor* Actor);                                                                             // [0x640ed34] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetFocalPoint
-	// FVector GetFocalPoint();                                                                                                 // [0x6432cfc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetFocalPoint();                                                                                                 // [0x640ecfc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetDeprecatedActionsComponent
-	// UPawnActionsComponent* GetDeprecatedActionsComponent();                                                                  // [0x6432ce4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UPawnActionsComponent* GetDeprecatedActionsComponent();                                                                  // [0x640ece4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIController.GetAIPerceptionComponent
-	// UAIPerceptionComponent* GetAIPerceptionComponent();                                                                      // [0x6432cb8] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// UAIPerceptionComponent* GetAIPerceptionComponent();                                                                      // [0x640eccc] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AIModule.AIController.ClaimTaskResource
-	// void ClaimTaskResource(UClass* ResourceClass);                                                                           // [0x64329c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ClaimTaskResource(UClass* ResourceClass);                                                                           // [0x640ea20] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AIResource_Movement
@@ -465,9 +466,9 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISystem.AILoggingVerbose
-	// void AILoggingVerbose();                                                                                                 // [0x2dce03c] RequiredAPI|Exec|Native|Public 
+	// void AILoggingVerbose();                                                                                                 // [0x59adb70] RequiredAPI|Exec|Native|Public 
 	// Function /Script/AIModule.AISystem.AIIgnorePlayers
-	// void AIIgnorePlayers();                                                                                                  // [0x1dda2b8] RequiredAPI|Exec|Native|Public 
+	// void AIIgnorePlayers();                                                                                                  // [0x1db4370] RequiredAPI|Exec|Native|Public 
 };
 
 /// Class /Script/AIModule.BehaviorTree
@@ -498,15 +499,15 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BrainComponent.StopLogic
-	// void StopLogic(FString Reason);                                                                                          // [0x6499f30] RequiredAPI|Native|Public|BlueprintCallable 
+	// void StopLogic(FString Reason);                                                                                          // [0x6477f64] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.BrainComponent.StartLogic
-	// void StartLogic();                                                                                                       // [0x2c410f8] RequiredAPI|Native|Public|BlueprintCallable 
+	// void StartLogic();                                                                                                       // [0x5d4e118] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.BrainComponent.RestartLogic
-	// void RestartLogic();                                                                                                     // [0x6499194] RequiredAPI|Native|Public|BlueprintCallable 
+	// void RestartLogic();                                                                                                     // [0x64771e4] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.BrainComponent.IsRunning
-	// bool IsRunning();                                                                                                        // [0x6498aec] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsRunning();                                                                                                        // [0x6476b84] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BrainComponent.IsPaused
-	// bool IsPaused();                                                                                                         // [0x6498ac4] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPaused();                                                                                                         // [0x6476b5c] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.BehaviorTreeComponent
@@ -523,11 +524,11 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BehaviorTreeComponent.SetDynamicSubtree
-	// void SetDynamicSubtree(FGameplayTag InjectTag, UBehaviorTree* BehaviorAsset);                                            // [0x645d6e4] RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetDynamicSubtree(FGameplayTag InjectTag, UBehaviorTree* BehaviorAsset);                                            // [0x64390c8] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
-	// double GetTagCooldownEndTime(FGameplayTag CooldownTag);                                                                  // [0x645b350] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// double GetTagCooldownEndTime(FGameplayTag CooldownTag);                                                                  // [0x6436ec8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BehaviorTreeComponent.AddCooldownTagDuration
-	// void AddCooldownTagDuration(FGameplayTag CooldownTag, float CooldownDuration, bool bAddToExistingDuration);              // [0x6459930] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void AddCooldownTagDuration(FGameplayTag CooldownTag, float CooldownDuration, bool bAddToExistingDuration);              // [0x643556c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.BehaviorTreeManager
@@ -579,53 +580,53 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsVector
-	// void SetValueAsVector(FName& KeyName, FVector VectorValue);                                                              // [0x645eb90] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetValueAsVector(FName& KeyName, FVector VectorValue);                                                              // [0x643a328] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsString
-	// void SetValueAsString(FName& KeyName, FString StringValue);                                                              // [0x645e3fc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsString(FName& KeyName, FString StringValue);                                                              // [0x6439c60] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsRotator
-	// void SetValueAsRotator(FName& KeyName, FRotator VectorValue);                                                            // [0x645e244] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetValueAsRotator(FName& KeyName, FRotator VectorValue);                                                            // [0x6439abc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsObject
-	// void SetValueAsObject(FName& KeyName, UObject* ObjectValue);                                                             // [0x645e110] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsObject(FName& KeyName, UObject* ObjectValue);                                                             // [0x64399b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsName
-	// void SetValueAsName(FName& KeyName, FName NameValue);                                                                    // [0x645dfc8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsName(FName& KeyName, FName NameValue);                                                                    // [0x6439890] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsInt
-	// void SetValueAsInt(FName& KeyName, int32_t IntValue);                                                                    // [0x645de80] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsInt(FName& KeyName, int32_t IntValue);                                                                    // [0x6439770] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsFloat
-	// void SetValueAsFloat(FName& KeyName, float FloatValue);                                                                  // [0x645dd4c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsFloat(FName& KeyName, float FloatValue);                                                                  // [0x6439664] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsEnum
-	// void SetValueAsEnum(FName& KeyName, char EnumValue);                                                                     // [0x645dc04] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsEnum(FName& KeyName, char EnumValue);                                                                     // [0x6439544] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsClass
-	// void SetValueAsClass(FName& KeyName, UClass* ClassValue);                                                                // [0x645dab8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsClass(FName& KeyName, UClass* ClassValue);                                                                // [0x6439420] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.SetValueAsBool
-	// void SetValueAsBool(FName& KeyName, bool BoolValue);                                                                     // [0x645d960] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetValueAsBool(FName& KeyName, bool BoolValue);                                                                     // [0x64392f0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.BlackboardComponent.IsVectorValueSet
-	// bool IsVectorValueSet(FName& KeyName);                                                                                   // [0x645bbc0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool IsVectorValueSet(FName& KeyName);                                                                                   // [0x6437720] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsVector
-	// FVector GetValueAsVector(FName& KeyName);                                                                                // [0x645ba34] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetValueAsVector(FName& KeyName);                                                                                // [0x6437594] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsString
-	// FString GetValueAsString(FName& KeyName);                                                                                // [0x645b984] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FString GetValueAsString(FName& KeyName);                                                                                // [0x64374e4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsRotator
-	// FRotator GetValueAsRotator(FName& KeyName);                                                                              // [0x645b8d8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FRotator GetValueAsRotator(FName& KeyName);                                                                              // [0x6437438] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsObject
-	// UObject* GetValueAsObject(FName& KeyName);                                                                               // [0x645b840] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// UObject* GetValueAsObject(FName& KeyName);                                                                               // [0x64373a0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsName
-	// FName GetValueAsName(FName& KeyName);                                                                                    // [0x645b7b0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FName GetValueAsName(FName& KeyName);                                                                                    // [0x6437310] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsInt
-	// int32_t GetValueAsInt(FName& KeyName);                                                                                   // [0x645b718] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetValueAsInt(FName& KeyName);                                                                                   // [0x6437278] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsFloat
-	// float GetValueAsFloat(FName& KeyName);                                                                                   // [0x645b67c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// float GetValueAsFloat(FName& KeyName);                                                                                   // [0x64371dc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsEnum
-	// char GetValueAsEnum(FName& KeyName);                                                                                     // [0x645b5e4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// char GetValueAsEnum(FName& KeyName);                                                                                     // [0x6437144] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsClass
-	// UClass* GetValueAsClass(FName& KeyName);                                                                                 // [0x645b54c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// UClass* GetValueAsClass(FName& KeyName);                                                                                 // [0x64370ac] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetValueAsBool
-	// bool GetValueAsBool(FName& KeyName);                                                                                     // [0x645b4b4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool GetValueAsBool(FName& KeyName);                                                                                     // [0x6437014] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetRotationFromEntry
-	// bool GetRotationFromEntry(FName& KeyName, FRotator& ResultRotation);                                                     // [0x645b254] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetRotationFromEntry(FName& KeyName, FRotator& ResultRotation);                                                     // [0x6436dcc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.GetLocationFromEntry
-	// bool GetLocationFromEntry(FName& KeyName, FVector& ResultLocation);                                                      // [0x645b048] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool GetLocationFromEntry(FName& KeyName, FVector& ResultLocation);                                                      // [0x6436b84] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.ClearValue
-	// void ClearValue(FName& KeyName);                                                                                         // [0x6459dbc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void ClearValue(FName& KeyName);                                                                                         // [0x6435974] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.BlackboardData
@@ -928,33 +929,33 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
-	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveTick
-	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
-	// void ReceiveObserverDeactivatedAI(AAIController* OwnerController, APawn* ControlledPawn);                                // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveObserverDeactivatedAI(AAIController* OwnerController, APawn* ControlledPawn);                                // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
-	// void ReceiveObserverDeactivated(AActor* OwnerActor);                                                                     // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveObserverDeactivated(AActor* OwnerActor);                                                                     // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
-	// void ReceiveObserverActivatedAI(AAIController* OwnerController, APawn* ControlledPawn);                                  // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveObserverActivatedAI(AAIController* OwnerController, APawn* ControlledPawn);                                  // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
-	// void ReceiveObserverActivated(AActor* OwnerActor);                                                                       // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveObserverActivated(AActor* OwnerActor);                                                                       // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
-	// void ReceiveExecutionStartAI(AAIController* OwnerController, APawn* ControlledPawn);                                     // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecutionStartAI(AAIController* OwnerController, APawn* ControlledPawn);                                     // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
-	// void ReceiveExecutionStart(AActor* OwnerActor);                                                                          // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecutionStart(AActor* OwnerActor);                                                                          // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
-	// void ReceiveExecutionFinishAI(AAIController* OwnerController, APawn* ControlledPawn, TEnumAsByte<EBTNodeResult> NodeResult); // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecutionFinishAI(AAIController* OwnerController, APawn* ControlledPawn, TEnumAsByte<EBTNodeResult> NodeResult); // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
-	// void ReceiveExecutionFinish(AActor* OwnerActor, TEnumAsByte<EBTNodeResult> NodeResult);                                  // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecutionFinish(AActor* OwnerActor, TEnumAsByte<EBTNodeResult> NodeResult);                                  // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
-	// bool PerformConditionCheckAI(AAIController* OwnerController, APawn* ControlledPawn);                                     // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// bool PerformConditionCheckAI(AAIController* OwnerController, APawn* ControlledPawn);                                     // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
-	// bool PerformConditionCheck(AActor* OwnerActor);                                                                          // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// bool PerformConditionCheck(AActor* OwnerActor);                                                                          // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
-	// bool IsDecoratorObserverActive();                                                                                        // [0x645bb58] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsDecoratorObserverActive();                                                                                        // [0x64376b8] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
-	// bool IsDecoratorExecutionActive();                                                                                       // [0x645bae0] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsDecoratorExecutionActive();                                                                                       // [0x6437640] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.BTDecorator_CheckGameplayTagsOnActor
@@ -1174,23 +1175,23 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveTickAI
-	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveTick
-	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStartAI
-	// void ReceiveSearchStartAI(AAIController* OwnerController, APawn* ControlledPawn);                                        // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveSearchStartAI(AAIController* OwnerController, APawn* ControlledPawn);                                        // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveSearchStart
-	// void ReceiveSearchStart(AActor* OwnerActor);                                                                             // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveSearchStart(AActor* OwnerActor);                                                                             // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivationAI
-	// void ReceiveDeactivationAI(AAIController* OwnerController, APawn* ControlledPawn);                                       // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveDeactivationAI(AAIController* OwnerController, APawn* ControlledPawn);                                       // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveDeactivation
-	// void ReceiveDeactivation(AActor* OwnerActor);                                                                            // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveDeactivation(AActor* OwnerActor);                                                                            // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivationAI
-	// void ReceiveActivationAI(AAIController* OwnerController, APawn* ControlledPawn);                                         // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveActivationAI(AAIController* OwnerController, APawn* ControlledPawn);                                         // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.ReceiveActivation
-	// void ReceiveActivation(AActor* OwnerActor);                                                                              // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveActivation(AActor* OwnerActor);                                                                              // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.IsServiceActive
-	// bool IsServiceActive();                                                                                                  // [0x6498b14] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsServiceActive();                                                                                                  // [0x6476bac] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.BTService_DefaultFocus
@@ -1243,29 +1244,29 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId
-	// void SetFinishOnMessageWithId(FName MessageName, int32_t RequestID);                                                     // [0x64996b0] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void SetFinishOnMessageWithId(FName MessageName, int32_t RequestID);                                                     // [0x64776e8] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.BTTask_BlueprintBase.SetFinishOnMessage
-	// void SetFinishOnMessage(FName MessageName);                                                                              // [0x6499614] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void SetFinishOnMessage(FName MessageName);                                                                              // [0x647764c] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTickAI
-	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTickAI(AAIController* OwnerController, APawn* ControlledPawn, float DeltaSeconds);                           // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveTick
-	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveTick(AActor* OwnerActor, float DeltaSeconds);                                                                // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecuteAI
-	// void ReceiveExecuteAI(AAIController* OwnerController, APawn* ControlledPawn);                                            // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecuteAI(AAIController* OwnerController, APawn* ControlledPawn);                                            // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveExecute
-	// void ReceiveExecute(AActor* OwnerActor);                                                                                 // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveExecute(AActor* OwnerActor);                                                                                 // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbortAI
-	// void ReceiveAbortAI(AAIController* OwnerController, APawn* ControlledPawn);                                              // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveAbortAI(AAIController* OwnerController, APawn* ControlledPawn);                                              // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.ReceiveAbort
-	// void ReceiveAbort(AActor* OwnerActor);                                                                                   // [0x1d9241c] RequiredAPI|Event|Protected|BlueprintEvent 
+	// void ReceiveAbort(AActor* OwnerActor);                                                                                   // [0x101681c] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTTask_BlueprintBase.IsTaskExecuting
-	// bool IsTaskExecuting();                                                                                                  // [0x6498b88] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTaskExecuting();                                                                                                  // [0x6476c20] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BTTask_BlueprintBase.IsTaskAborting
-	// bool IsTaskAborting();                                                                                                   // [0x6498b6c] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTaskAborting();                                                                                                   // [0x6476c04] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BTTask_BlueprintBase.FinishExecute
-	// void FinishExecute(bool bSuccess);                                                                                       // [0x64983e8] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void FinishExecute(bool bSuccess);                                                                                       // [0x647639c] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.BTTask_BlueprintBase.FinishAbort
-	// void FinishAbort();                                                                                                      // [0x6498380] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+	// void FinishAbort();                                                                                                      // [0x6476334] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.BTTask_FinishWithResult
@@ -1632,19 +1633,19 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam
-	// void SetNamedParam(FName ParamName, float Value);                                                                        // [0x6499784] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetNamedParam(FName ParamName, float Value);                                                                        // [0x64777bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations
-	// TArray<FVector> GetResultsAsLocations();                                                                                 // [0x6498a84] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FVector> GetResultsAsLocations();                                                                                 // [0x6476b1c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors
-	// TArray<AActor*> GetResultsAsActors();                                                                                    // [0x6498a44] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<AActor*> GetResultsAsActors();                                                                                    // [0x6476adc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsLocations
-	// bool GetQueryResultsAsLocations(TArray<FVector>& ResultLocations);                                                       // [0x6498998] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// bool GetQueryResultsAsLocations(TArray<FVector>& ResultLocations);                                                       // [0x6476a30] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetQueryResultsAsActors
-	// bool GetQueryResultsAsActors(TArray<AActor*>& ResultActors);                                                             // [0x64988ec] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|Const 
+	// bool GetQueryResultsAsActors(TArray<AActor*>& ResultActors);                                                             // [0x6476948] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore
-	// float GetItemScore(int32_t ItemIndex);                                                                                   // [0x6498794] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetItemScore(int32_t ItemIndex);                                                                                   // [0x64767f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature
-	// void EQSQueryDoneSignature__DelegateSignature(UEnvQueryInstanceBlueprintWrapper* QueryInstance, TEnumAsByte<EEnvQueryStatus> QueryStatus); // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void EQSQueryDoneSignature__DelegateSignature(UEnvQueryInstanceBlueprintWrapper* QueryInstance, TEnumAsByte<EEnvQueryStatus> QueryStatus); // [0x101681c] MulticastDelegate|Public|Delegate 
 };
 
 /// Class /Script/AIModule.EnvQueryManager
@@ -1669,7 +1670,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.EnvQueryManager.RunEQSQuery
-	// UEnvQueryInstanceBlueprintWrapper* RunEQSQuery(UObject* WorldContextObject, UEnvQuery* QueryTemplate, UObject* Querier, TEnumAsByte<EEnvQueryRunMode> RunMode, UClass* WrapperClass); // [0x64991ac] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// UEnvQueryInstanceBlueprintWrapper* RunEQSQuery(UObject* WorldContextObject, UEnvQuery* QueryTemplate, UObject* Querier, TEnumAsByte<EEnvQueryRunMode> RunMode, UClass* WrapperClass); // [0x64771fc] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.EnvQueryOption
@@ -1714,11 +1715,11 @@ public:
 };
 
 /// Class /Script/AIModule.EQSRenderingComponent
-/// Size: 0x0030 (0x0005C0 - 0x0005F0)
+/// Size: 0x0030 (0x0005D0 - 0x000600)
 class UEQSRenderingComponent : public UDebugDrawComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1520;
+	static inline constexpr uint64_t __MDKClassSize = 1536;
 
 public:
 };
@@ -1775,15 +1776,15 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
-	// UObject* GetQuerier();                                                                                                   // [0x64988c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UObject* GetQuerier();                                                                                                   // [0x647691c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.DoItemGenerationFromActors
-	// void DoItemGenerationFromActors(TArray<AActor*>& ContextActors);                                                         // [0x1d9241c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent|Const 
+	// void DoItemGenerationFromActors(TArray<AActor*>& ContextActors);                                                         // [0x101681c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
-	// void DoItemGeneration(TArray<FVector>& ContextLocations);                                                                // [0x1d9241c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent|Const 
+	// void DoItemGeneration(TArray<FVector>& ContextLocations);                                                                // [0x101681c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
-	// void AddGeneratedVector(FVector GeneratedVector);                                                                        // [0x6497cec] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|Const 
+	// void AddGeneratedVector(FVector GeneratedVector);                                                                        // [0x6475d6c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|Const 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
-	// void AddGeneratedActor(AActor* GeneratedActor);                                                                          // [0x6497c6c] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// void AddGeneratedActor(AActor* GeneratedActor);                                                                          // [0x6475cec] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Composite
@@ -2142,13 +2143,13 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.PathFollowingComponent.OnNavDataRegistered
-	// void OnNavDataRegistered(ANavigationData* NavData);                                                                      // [0x64be8e8] Final|RequiredAPI|Native|Protected 
+	// void OnNavDataRegistered(ANavigationData* NavData);                                                                      // [0x649e0c8] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AIModule.PathFollowingComponent.OnActorBump
-	// void OnActorBump(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, FHitResult& Hit);                         // [0x64be66c] RequiredAPI|Native|Public|HasOutParms|HasDefaults 
+	// void OnActorBump(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, FHitResult& Hit);                         // [0x649de78] RequiredAPI|Native|Public|HasOutParms|HasDefaults 
 	// Function /Script/AIModule.PathFollowingComponent.GetPathDestination
-	// FVector GetPathDestination();                                                                                            // [0x64be394] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector GetPathDestination();                                                                                            // [0x649dae8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.PathFollowingComponent.GetPathActionType
-	// TEnumAsByte<EPathFollowingAction> GetPathActionType();                                                                   // [0x64be31c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TEnumAsByte<EPathFollowingAction> GetPathActionType();                                                                   // [0x649da70] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.CrowdFollowingComponent
@@ -2164,7 +2165,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.CrowdFollowingComponent.SuspendCrowdSteering
-	// void SuspendCrowdSteering(bool bSuspend);                                                                                // [0x64bee8c] RequiredAPI|Native|Public|BlueprintCallable 
+	// void SuspendCrowdSteering(bool bSuspend);                                                                                // [0x649e6f0] RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.CrowdManager
@@ -2227,15 +2228,15 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.NavLinkProxy.SetSmartLinkEnabled
-	// void SetSmartLinkEnabled(bool bEnabled);                                                                                 // [0x64bee08] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSmartLinkEnabled(bool bEnabled);                                                                                 // [0x649e66c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.NavLinkProxy.ResumePathFollowing
-	// void ResumePathFollowing(AActor* Agent);                                                                                 // [0x64beba4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResumePathFollowing(AActor* Agent);                                                                                 // [0x649e3e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.NavLinkProxy.ReceiveSmartLinkReached
-	// void ReceiveSmartLinkReached(AActor* Agent, FVector& Destination);                                                       // [0x1d9241c] RequiredAPI|Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
+	// void ReceiveSmartLinkReached(AActor* Agent, FVector& Destination);                                                       // [0x101681c] RequiredAPI|Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/AIModule.NavLinkProxy.IsSmartLinkEnabled
-	// bool IsSmartLinkEnabled();                                                                                               // [0x64be648] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsSmartLinkEnabled();                                                                                               // [0x649de54] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.NavLinkProxy.HasMovingAgents
-	// bool HasMovingAgents();                                                                                                  // [0x64be550] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasMovingAgents();                                                                                                  // [0x649dd48] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.NavLocalGridManager
@@ -2277,25 +2278,25 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionComponent.SetSenseEnabled
-	// void SetSenseEnabled(UClass* SenseClass, bool bEnable);                                                                  // [0x64bed40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSenseEnabled(UClass* SenseClass, bool bEnable);                                                                  // [0x649e580] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate
-	// void RequestStimuliListenerUpdate();                                                                                     // [0x64beb90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RequestStimuliListenerUpdate();                                                                                     // [0x649e3d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionComponent.OnOwnerEndPlay
-	// void OnOwnerEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                           // [0x64be9bc] Final|RequiredAPI|Native|Public 
+	// void OnOwnerEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                           // [0x649e1fc] Final|RequiredAPI|Native|Public 
 	// Function /Script/AIModule.AIPerceptionComponent.IsSenseEnabled
-	// bool IsSenseEnabled(UClass* SenseClass);                                                                                 // [0x64be5b8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsSenseEnabled(UClass* SenseClass);                                                                                 // [0x649ddb0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
-	// void GetPerceivedHostileActorsBySense(UClass* SenseToUse, TArray<AActor*>& OutActors);                                   // [0x64be46c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetPerceivedHostileActorsBySense(UClass* SenseToUse, TArray<AActor*>& OutActors);                                   // [0x649dc00] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIPerceptionComponent.GetPerceivedHostileActors
-	// void GetPerceivedHostileActors(TArray<AActor*>& OutActors);                                                              // [0x64be3cc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetPerceivedHostileActors(TArray<AActor*>& OutActors);                                                              // [0x649db20] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIPerceptionComponent.GetKnownPerceivedActors
-	// void GetKnownPerceivedActors(UClass* SenseToUse, TArray<AActor*>& OutActors);                                            // [0x64be238] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetKnownPerceivedActors(UClass* SenseToUse, TArray<AActor*>& OutActors);                                            // [0x649d934] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
-	// void GetCurrentlyPerceivedActors(UClass* SenseToUse, TArray<AActor*>& OutActors);                                        // [0x64be154] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetCurrentlyPerceivedActors(UClass* SenseToUse, TArray<AActor*>& OutActors);                                        // [0x649d7f8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AIPerceptionComponent.GetActorsPerception
-	// bool GetActorsPerception(AActor* Actor, FActorPerceptionBlueprintInfo& Info);                                            // [0x64bdf08] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool GetActorsPerception(AActor* Actor, FActorPerceptionBlueprintInfo& Info);                                            // [0x649d590] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionComponent.ForgetAll
-	// void ForgetAll();                                                                                                        // [0x64bdef4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ForgetAll();                                                                                                        // [0x649d57c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AIPerceptionListenerInterface
@@ -2322,13 +2323,13 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
-	// void UnregisterFromSense(UClass* SenseClass);                                                                            // [0x64cd22c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void UnregisterFromSense(UClass* SenseClass);                                                                            // [0x64ae754] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromPerceptionSystem
-	// void UnregisterFromPerceptionSystem();                                                                                   // [0x64cd218] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void UnregisterFromPerceptionSystem();                                                                                   // [0x64ae740] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterWithPerceptionSystem
-	// void RegisterWithPerceptionSystem();                                                                                     // [0x64cbec0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RegisterWithPerceptionSystem();                                                                                     // [0x64ad5ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
-	// void RegisterForSense(UClass* SenseClass);                                                                               // [0x64cbbe8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void RegisterForSense(UClass* SenseClass);                                                                               // [0x64ad264] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AIPerceptionSystem
@@ -2345,15 +2346,15 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AIPerceptionSystem.ReportPerceptionEvent
-	// void ReportPerceptionEvent(UObject* WorldContextObject, UAISenseEvent* PerceptionEvent);                                 // [0x64cc9f8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void ReportPerceptionEvent(UObject* WorldContextObject, UAISenseEvent* PerceptionEvent);                                 // [0x64adfa8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionSystem.ReportEvent
-	// void ReportEvent(UAISenseEvent* PerceptionEvent);                                                                        // [0x64cc35c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ReportEvent(UAISenseEvent* PerceptionEvent);                                                                        // [0x64ad9d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource
-	// bool RegisterPerceptionStimuliSource(UObject* WorldContextObject, UClass* Sense, AActor* Target);                        // [0x64cbcf4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// bool RegisterPerceptionStimuliSource(UObject* WorldContextObject, UClass* Sense, AActor* Target);                        // [0x64ad3b4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay
-	// void OnPerceptionStimuliSourceEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                         // [0x1af99e4] Final|RequiredAPI|Native|Protected 
+	// void OnPerceptionStimuliSourceEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                         // [0x64ad1a0] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AIModule.AIPerceptionSystem.GetSenseClassForStimulus
-	// UClass* GetSenseClassForStimulus(UObject* WorldContextObject, FAIStimulus& Stimulus);                                    // [0x64cba48] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UClass* GetSenseClassForStimulus(UObject* WorldContextObject, FAIStimulus& Stimulus);                                    // [0x64ad070] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AISense
@@ -2396,19 +2397,19 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Blueprint.OnUpdate
-	// float OnUpdate(TArray<UAISenseEvent*>& EventsToProcess);                                                                 // [0x1d9241c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent 
+	// float OnUpdate(TArray<UAISenseEvent*>& EventsToProcess);                                                                 // [0x101681c] RequiredAPI|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerUpdated
-	// void OnListenerUpdated(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                              // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnListenerUpdated(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                              // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerUnregistered
-	// void OnListenerUnregistered(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                         // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnListenerUnregistered(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                         // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AIModule.AISense_Blueprint.OnListenerRegistered
-	// void OnListenerRegistered(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                           // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnListenerRegistered(AActor* ActorListener, UAIPerceptionComponent* PerceptionComponent);                           // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AIModule.AISense_Blueprint.K2_OnNewPawn
-	// void K2_OnNewPawn(APawn* NewPawn);                                                                                       // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void K2_OnNewPawn(APawn* NewPawn);                                                                                       // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/AIModule.AISense_Blueprint.GetAllListenerComponents
-	// void GetAllListenerComponents(TArray<UAIPerceptionComponent*>& ListenerComponents);                                      // [0x64cb320] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetAllListenerComponents(TArray<UAIPerceptionComponent*>& ListenerComponents);                                      // [0x64ac9e4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AISense_Blueprint.GetAllListenerActors
-	// void GetAllListenerActors(TArray<AActor*>& ListenerActors);                                                              // [0x64cb284] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetAllListenerActors(TArray<AActor*>& ListenerActors);                                                              // [0x64ac908] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.AISense_Damage
@@ -2424,7 +2425,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Damage.ReportDamageEvent
-	// void ReportDamageEvent(UObject* WorldContextObject, AActor* DamagedActor, AActor* Instigator, float DamageAmount, FVector EventLocation, FVector HitLocation, FName tag); // [0x64cbed4] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// void ReportDamageEvent(UObject* WorldContextObject, AActor* DamagedActor, AActor* Instigator, float DamageAmount, FVector EventLocation, FVector HitLocation, FName tag); // [0x64ad5c0] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AISense_Hearing
@@ -2441,7 +2442,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Hearing.ReportNoiseEvent
-	// void ReportNoiseEvent(UObject* WorldContextObject, FVector NoiseLocation, float Loudness, AActor* Instigator, float MaxRange, FName tag); // [0x64cc41c] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// void ReportNoiseEvent(UObject* WorldContextObject, FVector NoiseLocation, float Loudness, AActor* Instigator, float MaxRange, FName tag); // [0x64ada90] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AISense_Prediction
@@ -2457,9 +2458,9 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Prediction.RequestPawnPredictionEvent
-	// void RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime);                         // [0x64cce90] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime);                         // [0x64ae3a8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AIModule.AISense_Prediction.RequestControllerPredictionEvent
-	// void RequestControllerPredictionEvent(AAIController* Requestor, AActor* PredictedActor, float PredictionTime);           // [0x64ccd98] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// void RequestControllerPredictionEvent(AAIController* Requestor, AActor* PredictedActor, float PredictionTime);           // [0x64ae2b0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AISense_Sight
@@ -2493,11 +2494,11 @@ public:
 };
 
 /// Class /Script/AIModule.AISense_Touch
-/// Size: 0x0010 (0x000078 - 0x000088)
+/// Size: 0x0060 (0x000078 - 0x0000D8)
 class UAISense_Touch : public UAISense
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 136;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
 	CMember(TArray<FAITouchEvent>)                     RegisteredEvents                                            OFFSET(get<T>, {0x78, 16, 0, 0})
@@ -2505,7 +2506,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Touch.ReportTouchEvent
-	// void ReportTouchEvent(UObject* WorldContextObject, AActor* TouchReceiver, AActor* OtherActor, FVector Location);         // [0x64ccb90] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// void ReportTouchEvent(UObject* WorldContextObject, AActor* TouchReceiver, AActor* OtherActor, FVector Location);         // [0x64ae0bc] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AISightTargetInterface
@@ -2543,19 +2544,19 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
-	// void SetSensingUpdatesEnabled(bool bEnabled);                                                                            // [0x64cd194] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void SetSensingUpdatesEnabled(bool bEnabled);                                                                            // [0x64ae6bc] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnSensingComponent.SetSensingInterval
-	// void SetSensingInterval(float NewSensingInterval);                                                                       // [0x64cd110] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void SetSensingInterval(float NewSensingInterval);                                                                       // [0x64ae638] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnSensingComponent.SetPeripheralVisionAngle
-	// void SetPeripheralVisionAngle(float NewPeripheralVisionAngle);                                                           // [0x64cd08c] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void SetPeripheralVisionAngle(float NewPeripheralVisionAngle);                                                           // [0x64ae5b4] RequiredAPI|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature
-	// void SeePawnDelegate__DelegateSignature(APawn* Pawn);                                                                    // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void SeePawnDelegate__DelegateSignature(APawn* Pawn);                                                                    // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature
-	// void HearNoiseDelegate__DelegateSignature(APawn* Instigator, FVector& Location, float Volume);                           // [0x1d9241c] MulticastDelegate|Public|Delegate|HasOutParms|HasDefaults 
+	// void HearNoiseDelegate__DelegateSignature(APawn* Instigator, FVector& Location, float Volume);                           // [0x101681c] MulticastDelegate|Public|Delegate|HasOutParms|HasDefaults 
 	// Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionCosine
-	// float GetPeripheralVisionCosine();                                                                                       // [0x64cba30] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPeripheralVisionCosine();                                                                                       // [0x64ad058] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionAngle
-	// float GetPeripheralVisionAngle();                                                                                        // [0x64cba18] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPeripheralVisionAngle();                                                                                        // [0x64ad040] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AIModule.AITask
@@ -2594,7 +2595,7 @@ public:
 
 	/// Functions
 	// Function /Script/AIModule.AITask_MoveTo.AIMoveTo
-	// UAITask_MoveTo* AIMoveTo(AAIController* Controller, FVector GoalLocation, AActor* GoalActor, float AcceptanceRadius, TEnumAsByte<EAIOptionFlag> StopOnOverlap, TEnumAsByte<EAIOptionFlag> AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuousGoalTracking, TEnumAsByte<EAIOptionFlag> ProjectGoalOnNavigation); // [0x64ca840] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// UAITask_MoveTo* AIMoveTo(AAIController* Controller, FVector GoalLocation, AActor* GoalActor, float AcceptanceRadius, TEnumAsByte<EAIOptionFlag> StopOnOverlap, TEnumAsByte<EAIOptionFlag> AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuousGoalTracking, TEnumAsByte<EAIOptionFlag> ProjectGoalOnNavigation); // [0x64ac014] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AIModule.AITask_RunEQS
@@ -3225,12 +3226,12 @@ public:
 };
 
 /// Struct /Script/AIModule.AITouchEvent
-/// Size: 0x0028 (0x000000 - 0x000028)
+/// Size: 0x0030 (0x000000 - 0x000030)
 class FAITouchEvent : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
+	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(AActor*)                                   TouchReceiver                                               OFFSET(get<T>, {0x18, 8, 0, 0})

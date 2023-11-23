@@ -22,11 +22,11 @@ public:
 };
 
 /// Class /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume
-/// Size: 0x01A8 (0x000330 - 0x0004D8)
+/// Size: 0x01B8 (0x000330 - 0x0004E8)
 class ALevelInstanceGameplayVolume : public AGameplayVolume
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1240;
+	static inline constexpr uint64_t __MDKClassSize = 1256;
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnLevelInstanceResolved                                     OFFSET(getStruct<T>, {0x338, 16, 0, 0})
@@ -52,57 +52,57 @@ public:
 
 	/// Functions
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetWantsLevelLoaded
-	// void SetWantsLevelLoaded(bool bInWantsLevelLoaded);                                                                      // [0x9c6bdb8] Final|Native|Public|BlueprintCallable 
+	// void SetWantsLevelLoaded(bool bInWantsLevelLoaded);                                                                      // [0xa528920] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetReadyForInstantiation
-	// void SetReadyForInstantiation(bool bReady);                                                                              // [0x9c6bd38] Final|Native|Protected|BlueprintCallable 
+	// void SetReadyForInstantiation(bool bReady);                                                                              // [0xa5288a0] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetLevelInstanceName
-	// void SetLevelInstanceName(FString InName);                                                                               // [0x9c6b684] Final|Native|Public|BlueprintCallable 
+	// void SetLevelInstanceName(FString InName);                                                                               // [0xa528284] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetLevelInstanceContentCollection
-	// void SetLevelInstanceContentCollection(TWeakObjectPtr<UFortCreativeActorCollection*> ContentCollection);                 // [0x9c6b590] Final|Native|Public|BlueprintCallable 
+	// void SetLevelInstanceContentCollection(TWeakObjectPtr<UFortCreativeActorCollection*> ContentCollection);                 // [0xa528190] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetLevelInstanceActorGuid
-	// void SetLevelInstanceActorGuid(FGuid InLevelInstanceActorGuid);                                                          // [0x9c6b428] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetLevelInstanceActorGuid(FGuid InLevelInstanceActorGuid);                                                          // [0xa52803c] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.SetEditMode
-	// void SetEditMode(bool bInEditMode);                                                                                      // [0x9c6b370] Final|Native|Public|BlueprintCallable 
+	// void SetEditMode(bool bInEditMode);                                                                                      // [0xa527f84] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.RemoveActorWhenEndPlay
-	// void RemoveActorWhenEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                   // [0x9c6b2ac] Final|Native|Protected 
+	// void RemoveActorWhenEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                   // [0xa527ec0] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.RemoveActorWhenDied
-	// void RemoveActorWhenDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x9c6abf8] Final|Native|Protected|HasDefaults 
+	// void RemoveActorWhenDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0xa5278c0] Final|Native|Protected|HasDefaults 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.OnVolumeChanged
-	// void OnVolumeChanged();                                                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnVolumeChanged();                                                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.OnRep_IsDisabled
-	// void OnRep_IsDisabled();                                                                                                 // [0x9c6abe4] Final|Native|Protected 
+	// void OnRep_IsDisabled();                                                                                                 // [0xa5278ac] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.OnRep_InstanceLoaded
-	// void OnRep_InstanceLoaded();                                                                                             // [0x9c6abe4] Final|Native|Protected 
+	// void OnRep_InstanceLoaded();                                                                                             // [0xa5278ac] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.OnRep_EditMode
-	// void OnRep_EditMode();                                                                                                   // [0x9c6abe4] Final|Native|Protected 
+	// void OnRep_EditMode();                                                                                                   // [0xa5278ac] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.OnMinigameStateChanged
-	// void OnMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState MinigameState);                                  // [0x9c6ab20] Final|Native|Protected 
+	// void OnMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState MinigameState);                                  // [0xa5277e8] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.LevelInstanceSizeChanged
-	// void LevelInstanceSizeChanged(AActor* InstigatorActor);                                                                  // [0x9c6aaa0] Final|Native|Protected 
+	// void LevelInstanceSizeChanged(AActor* InstigatorActor);                                                                  // [0xa527768] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.LevelInstanceNameChanged
-	// void LevelInstanceNameChanged(FString Name);                                                                             // [0x9c6a3ec] Final|Native|Protected 
+	// void LevelInstanceNameChanged(FString Name);                                                                             // [0xa52714c] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.LevelInstanceContentCollectionChanged
-	// void LevelInstanceContentCollectionChanged(AActor* InstigatorActor, TWeakObjectPtr<UFortCreativeActorCollection*> ContentCollection); // [0x9c6a2c0] Final|Native|Protected 
+	// void LevelInstanceContentCollectionChanged(AActor* InstigatorActor, TWeakObjectPtr<UFortCreativeActorCollection*> ContentCollection); // [0xa527020] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.LevelInstanceContentChanged
-	// void LevelInstanceContentChanged(AActor* InstigatorActor);                                                               // [0x9c6a240] Final|Native|Protected 
+	// void LevelInstanceContentChanged(AActor* InstigatorActor);                                                               // [0xa526fa0] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.LevelInstanceBeingDestroyed
-	// void LevelInstanceBeingDestroyed();                                                                                      // [0x9c6a22c] Final|Native|Protected 
+	// void LevelInstanceBeingDestroyed();                                                                                      // [0xa526f8c] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.IsPreviewActor
-	// bool IsPreviewActor();                                                                                                   // [0x9c6a208] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPreviewActor();                                                                                                   // [0xa526f68] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.IsInEditMode
-	// bool IsInEditMode();                                                                                                     // [0x9c6a1f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsInEditMode();                                                                                                     // [0xa526f50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.IsDisabled
-	// bool IsDisabled();                                                                                                       // [0x8f74cd4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsDisabled();                                                                                                       // [0xa526f38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.InstantiateFromLevelInstanceSaveActor
-	// void InstantiateFromLevelInstanceSaveActor();                                                                            // [0x9c6a1dc] Final|Native|Protected|BlueprintCallable 
+	// void InstantiateFromLevelInstanceSaveActor();                                                                            // [0xa526f24] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.HandleActorHealthChanged
-	// void HandleActorHealthChanged(AActor* Actor, float NewHealth);                                                           // [0x9c6a128] Final|Native|Protected 
+	// void HandleActorHealthChanged(AActor* Actor, float NewHealth);                                                           // [0xa526e70] Final|Native|Protected 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.GetLevelInstanceName
-	// FString GetLevelInstanceName();                                                                                          // [0x9c6a10c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FString GetLevelInstanceName();                                                                                          // [0xa526e54] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.CreateLevelInstanceSaveActor
-	// AFortLevelInstanceSaveActor* CreateLevelInstanceSaveActor();                                                             // [0x9c6a0e8] Final|Native|Public|BlueprintCallable 
+	// AFortLevelInstanceSaveActor* CreateLevelInstanceSaveActor();                                                             // [0xa526e30] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.CheckForOverlappingVolumes
-	// void CheckForOverlappingVolumes();                                                                                       // [0x9c6a0d4] Final|Native|Protected|BlueprintCallable 
+	// void CheckForOverlappingVolumes();                                                                                       // [0xa526e1c] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/CRDLevelInstanceRuntime.LevelInstanceItemListComponent

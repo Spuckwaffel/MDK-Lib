@@ -14,32 +14,12 @@
 /// dependency: SoundLibrary
 /// dependency: UMG
 
-/// Class /Game/Sounds/DefaultAppActivationSoundMixManager.DefaultAppActivationSoundMixManager_C
-/// Size: 0x0000 (0x000058 - 0x000058)
-class UDefaultAppActivationSoundMixManager_C : public UFortAppActivationSoundMixManager
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 88;
-
-public:
-};
-
 /// Class /Game/Sounds/Fort_Audio_Blueprints/Utilities/FunctionLibraries/AudioGameplay_FunctionLibrary.AudioGameplay_FunctionLibrary_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAudioGameplay_FunctionLibrary_C : public UBlueprintFunctionLibrary
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/Foley/BP_AnimPreviewFoleyComponent.BP_AnimPreviewFoleyComponent_C
-/// Size: 0x0000 (0x000138 - 0x000138)
-class UBP_AnimPreviewFoleyComponent_C : public USoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
 };
@@ -62,15 +42,35 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.PlaySoundCue
-	// void PlaySoundCue(USoundCue* SoundToPlay, UAudioComponent* AudioComponent, bool& Success);                               // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void PlaySoundCue(USoundCue* SoundToPlay, UAudioComponent* AudioComponent, bool& Success);                               // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.SetSourceEffectChainToApply
-	// void SetSourceEffectChainToApply(USoundEffectSourcePresetChain* SourceEffectChain);                                      // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void SetSourceEffectChainToApply(USoundEffectSourcePresetChain* SourceEffectChain);                                      // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.Internal Get Voice Sound Bank
-	// void Internal Get Voice Sound Bank(UFortTaggedSoundBank*& Sound Bank);                                                   // [0x1d9241c] Private|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// void Internal Get Voice Sound Bank(UFortTaggedSoundBank*& Sound Bank);                                                   // [0x101681c] Private|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.Deprecated Set Sound Bank
-	// void Deprecated Set Sound Bank(UFortTaggedSoundBank* SoundBank);                                                         // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void Deprecated Set Sound Bank(UFortTaggedSoundBank* SoundBank);                                                         // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.PlayVoiceLine
-	// void PlayVoiceLine(FGameplayTag& Gameplay Tag, UAudioComponent* AudioComponent, bool& Success);                          // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void PlayVoiceLine(FGameplayTag& Gameplay Tag, UAudioComponent* AudioComponent, bool& Success);                          // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/Foley/BP_AnimPreviewFoleyComponent.BP_AnimPreviewFoleyComponent_C
+/// Size: 0x0000 (0x000158 - 0x000158)
+class UBP_AnimPreviewFoleyComponent_C : public USoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 344;
+
+public:
+};
+
+/// Class /Game/Sounds/DefaultAppActivationSoundMixManager.DefaultAppActivationSoundMixManager_C
+/// Size: 0x0000 (0x000058 - 0x000058)
+class UDefaultAppActivationSoundMixManager_C : public UFortAppActivationSoundMixManager
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
 };
 
 /// Class /Game/Sounds/SoundLibrary/Contexts/Creatures/B_CreatureSoundLibraryContext.B_CreatureSoundLibraryContext_C
@@ -100,15 +100,15 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ActuallyPlaySound
-	// void ActuallyPlaySound();                                                                                                // [0x1d9241c] Private|BlueprintCallable|BlueprintEvent 
+	// void ActuallyPlaySound();                                                                                                // [0x101681c] Private|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.SetSurfaceType
-	// void SetSurfaceType(TEnumAsByte<EPhysicalSurface> SurfaceType, AActor* Actor);                                           // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void SetSurfaceType(TEnumAsByte<EPhysicalSurface> SurfaceType, AActor* Actor);                                           // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.PlaySound
-	// void PlaySound(FVector Location);                                                                                        // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void PlaySound(FVector Location);                                                                                        // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.Test Delay
-	// void Test Delay();                                                                                                       // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Test Delay();                                                                                                       // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ExecuteUbergraph_BP_SurfaceTypeSoundComponent
-	// void ExecuteUbergraph_BP_SurfaceTypeSoundComponent(int32_t EntryPoint);                                                  // [0x1d9241c] Final                
+	// void ExecuteUbergraph_BP_SurfaceTypeSoundComponent(int32_t EntryPoint);                                                  // [0x101681c] Final                
 };
 
 /// Class /Game/Sounds/Fort_GamePlay_Sounds/Explosives/Athena_Grenade_Base_WhipTracker.Athena_Grenade_Base_WhipTracker_C
@@ -141,21 +141,21 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Change Music
-	// void Change Music(USoundBase* New Music, double StartTime, FGameplayTag Event Tag);                                      // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Change Music(USoundBase* New Music, double StartTime, FGameplayTag Event Tag);                                      // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ListenToMusicPacks
-	// void ListenToMusicPacks();                                                                                               // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void ListenToMusicPacks();                                                                                               // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.OnMusicPackChanged
-	// void OnMusicPackChanged(UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);                            // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void OnMusicPackChanged(UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);                            // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.Lobby Music Override
-	// void Lobby Music Override(bool Lobby Music Activate, USoundBase* New Music);                                             // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Lobby Music Override(bool Lobby Music Activate, USoundBase* New Music);                                             // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.SetCanRetriggerNextMusicPack
-	// void SetCanRetriggerNextMusicPack(bool bCanRetriggerNextMusicPack);                                                      // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetCanRetriggerNextMusicPack(bool bCanRetriggerNextMusicPack);                                                      // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.PlayEquippedMusicPack
-	// void PlayEquippedMusicPack();                                                                                            // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void PlayEquippedMusicPack();                                                                                            // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.StartMusic
-	// void StartMusic();                                                                                                       // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void StartMusic();                                                                                                       // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ExecuteUbergraph_Fort_Entry_Music_Controller_BP
-	// void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32_t EntryPoint);                                                // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32_t EntryPoint);                                                // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C
@@ -184,21 +184,21 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.OnPaint
-	// void OnPaint(FPaintContext& Context);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// void OnPaint(FPaintContext& Context);                                                                                    // [0x101681c] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.calcWidgetSize
-	// void calcWidgetSize(FGeometry geom);                                                                                     // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void calcWidgetSize(FGeometry geom);                                                                                     // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.Set Value
-	// void Set Value(double Value);                                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void Set Value(double Value);                                                                                            // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.PreConstruct
-	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x101681c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.Construct
-	// void Construct();                                                                                                        // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// void Construct();                                                                                                        // [0x101681c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.Tick
-	// void Tick(FGeometry MyGeometry, float InDeltaTime);                                                                      // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// void Tick(FGeometry MyGeometry, float InDeltaTime);                                                                      // [0x101681c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.Initialize MPC
-	// void Initialize MPC(FName Parameter, UMaterialParameterCollection* Collection, int32_t VectorIndex);                     // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void Initialize MPC(FName Parameter, UMaterialParameterCollection* Collection, int32_t VectorIndex);                     // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.ExecuteUbergraph_WB_AudioAnalysis_FloatGraph
-	// void ExecuteUbergraph_WB_AudioAnalysis_FloatGraph(int32_t EntryPoint);                                                   // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_WB_AudioAnalysis_FloatGraph(int32_t EntryPoint);                                                   // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C
@@ -216,13 +216,13 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.AddScalarParameter
-	// void AddScalarParameter(FAudioAnalysisParameterScalar& Param);                                                           // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void AddScalarParameter(FAudioAnalysisParameterScalar& Param);                                                           // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.AddVectorParameter
-	// void AddVectorParameter(FAudioAnalysisParameterVector& Param);                                                           // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void AddVectorParameter(FAudioAnalysisParameterVector& Param);                                                           // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.ClearParameters
-	// void ClearParameters();                                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ClearParameters();                                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.ExecuteUbergraph_WB_AudioAnalysis_UI
-	// void ExecuteUbergraph_WB_AudioAnalysis_UI(int32_t EntryPoint);                                                           // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_WB_AudioAnalysis_UI(int32_t EntryPoint);                                                           // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C
@@ -242,21 +242,21 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.GetTextColor
-	// FSlateColor GetTextColor();                                                                                              // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// FSlateColor GetTextColor();                                                                                              // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.GetFormatText
-	// void GetFormatText(FText& Result);                                                                                       // [0x1d9241c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// void GetFormatText(FText& Result);                                                                                       // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.BP_OnEntryReleased
-	// void BP_OnEntryReleased();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnEntryReleased();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.BP_OnItemExpansionChanged
-	// void BP_OnItemExpansionChanged(bool bIsExpanded);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnItemExpansionChanged(bool bIsExpanded);                                                                        // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.BP_OnItemSelectionChanged
-	// void BP_OnItemSelectionChanged(bool bIsSelected);                                                                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_OnItemSelectionChanged(bool bIsSelected);                                                                        // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.Tick
-	// void Tick(FGeometry MyGeometry, float InDeltaTime);                                                                      // [0x1d9241c] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// void Tick(FGeometry MyGeometry, float InDeltaTime);                                                                      // [0x101681c] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.OnListItemObjectSet
-	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.ExecuteUbergraph_B_MusicEventInstanceWidget
-	// void ExecuteUbergraph_B_MusicEventInstanceWidget(int32_t EntryPoint);                                                    // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_B_MusicEventInstanceWidget(int32_t EntryPoint);                                                    // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C
@@ -277,17 +277,17 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.FilterInstances
-	// void FilterInstances();                                                                                                  // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void FilterInstances();                                                                                                  // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.SetEventInstances
-	// void SetEventInstances(TArray<UMusicEventInstance*>& Instances);                                                         // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void SetEventInstances(TArray<UMusicEventInstance*>& Instances);                                                         // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.SetMusicEventPos
-	// void SetMusicEventPos(double X, double Y);                                                                               // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetMusicEventPos(double X, double Y);                                                                               // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.SetMusicEventAssetFilter
-	// void SetMusicEventAssetFilter(FString Filter);                                                                           // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetMusicEventAssetFilter(FString Filter);                                                                           // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.SetMusicEventFontSize
-	// void SetMusicEventFontSize(int32_t Size);                                                                                // [0x1d9241c] BlueprintCallable|BlueprintEvent 
+	// void SetMusicEventFontSize(int32_t Size);                                                                                // [0x101681c] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.ExecuteUbergraph_B_MusicEventDebugWidget
-	// void ExecuteUbergraph_B_MusicEventDebugWidget(int32_t EntryPoint);                                                       // [0x1d9241c] Final|HasDefaults    
+	// void ExecuteUbergraph_B_MusicEventDebugWidget(int32_t EntryPoint);                                                       // [0x101681c] Final|HasDefaults    
 };
 
 /// Class /Game/Sounds/SoundLibrary/Contexts/Creatures/B_CreatureAnimSoundLibraryContext.B_CreatureAnimSoundLibraryContext_C
@@ -322,30 +322,30 @@ public:
 
 	/// Functions
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.OnWaterDepthSwitch
-	// void OnWaterDepthSwitch();                                                                                               // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void OnWaterDepthSwitch();                                                                                               // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.OnWaterUpdate
-	// void OnWaterUpdate();                                                                                                    // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void OnWaterUpdate();                                                                                                    // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.Movement Mode Change
-	// void Movement Mode Change(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode);  // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void Movement Mode Change(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode);  // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.OnExitWater
-	// void OnExitWater(AFortPlayerPawn* FortPlayerPawn, bool bPawnIsOutsideOfAllWaterBodies);                                  // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void OnExitWater(AFortPlayerPawn* FortPlayerPawn, bool bPawnIsOutsideOfAllWaterBodies);                                  // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.OnEnterWater
-	// void OnEnterWater(AFortPlayerPawn* FortPlayerPawn);                                                                      // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// void OnEnterWater(AFortPlayerPawn* FortPlayerPawn);                                                                      // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.GetWaterDepthValue
-	// float GetWaterDepthValue();                                                                                              // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// float GetWaterDepthValue();                                                                                              // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.PrintParameter
-	// void PrintParameter(FAudioParameterQueryData& Parameter, bool Condition);                                                // [0x1d9241c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// void PrintParameter(FAudioParameterQueryData& Parameter, bool Condition);                                                // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.OnViewTargetSet
-	// void OnViewTargetSet(AActor* Actor);                                                                                     // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnViewTargetSet(AActor* Actor);                                                                                     // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.ExecuteUbergraph_BP_AudioParameterComponent_Pawn
-	// void ExecuteUbergraph_BP_AudioParameterComponent_Pawn(int32_t EntryPoint);                                               // [0x1d9241c] Final                
+	// void ExecuteUbergraph_BP_AudioParameterComponent_Pawn(int32_t EntryPoint);                                               // [0x101681c] Final                
 };
 
-/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C
+/// Class /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryContext.BP_SkydiveSoundLibraryContext_C
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
-class UB_WeaponSoundLibraryContext_C : public USoundLibrarySimpleContext
+class UBP_SkydiveSoundLibraryContext_C : public UFortSkydiveSoundLibraryContext
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 176;
@@ -353,24 +353,30 @@ class UB_WeaponSoundLibraryContext_C : public USoundLibrarySimpleContext
 public:
 };
 
-/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C
-/// Size: 0x0004 (0x000188 - 0x00018C)
-class UB_WeaponSoundLibraryComponent_C : public UFortWeaponSoundLibraryComponent
+/// Class /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C
+/// Size: 0x0020 (0x0001B8 - 0x0001D8)
+class UBP_SkydiveSoundLibraryComponent_C : public UFortSkydiveSoundLibraryComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 396;
+	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(getStruct<T>, {0x188, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1B8, 8, 0, 0})
+	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x1C8, 16, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundPlayed
-	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundStopped
-	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.TryHandleFireEvent
-	// void TryHandleFireEvent(FGameplayTag Event, UAudioComponent* Component);                                                 // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnEventPlayed
+	// void OnEventPlayed(FGameplayTag InEventName);                                                                            // [0x101681c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundPlayed
+	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x101681c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundStopped
+	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x101681c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ExecuteUbergraph_BP_SkydiveSoundLibraryComponent
+	// void ExecuteUbergraph_BP_SkydiveSoundLibraryComponent(int32_t EntryPoint);                                               // [0x101681c] Final                
 };
 
 /// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryContext.BP_HitNotifySoundLibraryContext_C
@@ -384,69 +390,102 @@ public:
 };
 
 /// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent.BP_HitNotifySoundLibraryComponent_C
-/// Size: 0x0000 (0x000188 - 0x000188)
+/// Size: 0x0000 (0x0001A8 - 0x0001A8)
 class UBP_HitNotifySoundLibraryComponent_C : public UFortHitNotifySoundLibraryComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
+	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortPawn.BP_HitNotifySoundLibraryComponent_FortPawn_C
-/// Size: 0x0000 (0x000188 - 0x000188)
-class UBP_HitNotifySoundLibraryComponent_FortPawn_C : public UBP_HitNotifySoundLibraryComponent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C
-/// Size: 0x0020 (0x000198 - 0x0001B8)
-class UBP_SkydiveSoundLibraryComponent_C : public UFortSkydiveSoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 440;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x198, 8, 0, 0})
-	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(getStruct<T>, {0x1A0, 4, 0, 0})
-	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x1A8, 16, 0, 0})
-
-
-	/// Functions
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnEventPlayed
-	// void OnEventPlayed(FGameplayTag InEventName);                                                                            // [0x1d9241c] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundPlayed
-	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1d9241c] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundStopped
-	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1d9241c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ExecuteUbergraph_BP_SkydiveSoundLibraryComponent
-	// void ExecuteUbergraph_BP_SkydiveSoundLibraryComponent(int32_t EntryPoint);                                               // [0x1d9241c] Final                
 };
 
 /// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortAthenaVehicle.BP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C
-/// Size: 0x0000 (0x000188 - 0x000188)
+/// Size: 0x0000 (0x0001A8 - 0x0001A8)
 class UBP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C : public UBP_HitNotifySoundLibraryComponent_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
+	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
 };
 
-/// Class /Game/Sounds/Fort_Player/Interaction/SLC_InteractionPlayerDefault.SLC_InteractionPlayerDefault_C
-/// Size: 0x0000 (0x000138 - 0x000138)
-class USLC_InteractionPlayerDefault_C : public USoundLibraryComponent
+/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C
+/// Size: 0x0018 (0x0000B0 - 0x0000C8)
+class UB_WeaponSoundLibraryContext_C : public UFortWeaponSoundLibraryContext
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
+	DMember(bool)                                      bGatherSounds                                               OFFSET(get<bool>, {0xB0, 1, 0, 0})
+	CMember(TArray<USoundBase*>)                       GatheredSounds                                              OFFSET(get<T>, {0xB8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C.EnableSoundRetrieval
+	// void EnableSoundRetrieval();                                                                                             // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C.ClearRetrievedSounds
+	// void ClearRetrievedSounds();                                                                                             // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C.GetRetrievedSounds
+	// void GetRetrievedSounds(TArray<USoundBase*>& GatheredSounds);                                                            // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C.GetRootComponent
+	// void GetRootComponent(AActor* Actor, FGameplayTag EventTag, USceneComponent*& RootComponent);                            // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C.Play
+	// bool Play(FSoundLibraryContextEventInput& InEventData, TArray<UAudioComponent*>& OutComponents);                         // [0x101681c] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C
+/// Size: 0x0039 (0x000220 - 0x000259)
+class UB_WeaponSoundLibraryComponent_C : public UFortWeaponSoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 601;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x220, 8, 0, 0})
+	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(getStruct<T>, {0x228, 4, 0, 0})
+	CMember(UMetaSoundSource*)                         BaseGunfireMS                                               OFFSET(get<T>, {0x230, 8, 0, 0})
+	CMember(TArray<UMetaSoundPatch*>)                  ModMS                                                       OFFSET(get<T>, {0x238, 16, 0, 0})
+	CMember(USoundLibrary*)                            ModSoundLibrary                                             OFFSET(get<T>, {0x248, 8, 0, 0})
+	CMember(UObject*)                                  ModDistanceCurveBank                                        OFFSET(get<T>, {0x250, 8, 0, 0})
+	DMember(bool)                                      bSuppressorAtt                                              OFFSET(get<bool>, {0x258, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.ValidateModMetasounds
+	// void ValidateModMetasounds(UObject* 1pMetaSoundPatch, UObject* 3pMetaSoundPatch, bool& bShouldBuild);                    // [0x101681c] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.CheckIfSuppressor
+	// void CheckIfSuppressor(UMetaSoundBuilderBase* BuilderRef, FMetaSoundNodeHandle& BaseNodeHandle, FMetaSoundNodeHandle ModNodeHandle, UObject* ModRef); // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.ConnectInterfaceInputs
+	// void ConnectInterfaceInputs(UMetaSoundBuilderBase* BuilderRef, FMetaSoundNodeHandle& BaseWeaponNodeHandle, FName InputName); // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.ConnectNodesIO
+	// void ConnectNodesIO(UMetaSoundBuilderBase* BuilderRef, FName InputName, FName OutputName, FMetaSoundNodeHandle BaseNodeHandle, FMetaSoundNodeHandle ModNodeHandle); // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.AddConnectedGraphInput
+	// void AddConnectedGraphInput(FName InputName, FName DataType, UMetaSoundSourceBuilder* BuilderRef, FMetaSoundNodeHandle BaseWeaponNodeHandleRef); // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.CreateModSoundLibrary
+	// void CreateModSoundLibrary();                                                                                            // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.SetModMS
+	// void SetModMS();                                                                                                         // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.SetBaseMS
+	// void SetBaseMS();                                                                                                        // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.CreateModMetaSound
+	// void CreateModMetaSound();                                                                                               // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.GetSoundsFromEvent
+	// void GetSoundsFromEvent(FGameplayTag InEventName, TArray<USoundBase*>& Out Sounds);                                      // [0x101681c] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundPlayed
+	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x101681c] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundStopped
+	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x101681c] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.TryHandleFireEvent
+	// void TryHandleFireEvent(FGameplayTag Event, UAudioComponent* Component);                                                 // [0x101681c] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnModApplied
+	// void OnModApplied(UFortWeaponModAudioData* InModAudioData);                                                              // [0x101681c] Event|Protected|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnModRemoved
+	// void OnModRemoved(UFortWeaponModAudioData* InModAudioData);                                                              // [0x101681c] Event|Protected|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.ExecuteUbergraph_B_WeaponSoundLibraryComponent
+	// void ExecuteUbergraph_B_WeaponSoundLibraryComponent(int32_t EntryPoint);                                                 // [0x101681c] Final                
 };
 
 /// Struct /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/AudioParameterQueryData.AudioParameterQueryData

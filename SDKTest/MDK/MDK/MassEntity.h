@@ -20,16 +20,17 @@ public:
 };
 
 /// Class /Script/MassEntity.MassEntitySettings
-/// Size: 0x00E8 (0x000028 - 0x000110)
+/// Size: 0x00F0 (0x000028 - 0x000118)
 class UMassEntitySettings : public UMassModuleSettings
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 272;
+	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FString)                                   DumpDependencyGraphFileName                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
-	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      OFFSET(getStruct<T>, {0x38, 192, 0, 0})
-	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0xF8, 16, 0, 0})
+	DMember(int32_t)                                   ChunkMemorySize                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
+	SMember(FString)                                   DumpDependencyGraphFileName                                 OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      OFFSET(getStruct<T>, {0x40, 192, 0, 0})
+	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0x100, 16, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassEntitySubsystem
@@ -43,11 +44,11 @@ public:
 };
 
 /// Class /Script/MassEntity.MassProcessor
-/// Size: 0x0090 (0x000028 - 0x0000B8)
+/// Size: 0x0098 (0x000028 - 0x0000C0)
 class UMassProcessor : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 	DMember(int32_t)                                   ExecutionFlags                                              OFFSET(get<int32_t>, {0x28, 4, 0, 0})
@@ -58,15 +59,15 @@ public:
 };
 
 /// Class /Script/MassEntity.MassObserverProcessor
-/// Size: 0x0018 (0x0000B8 - 0x0000D0)
+/// Size: 0x0018 (0x0000C0 - 0x0000D8)
 class UMassObserverProcessor : public UMassProcessor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 208;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	DMember(bool)                                      bAutoRegisterWithObserverRegistry                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	CMember(UScriptStruct*)                            ObservedType                                                OFFSET(get<T>, {0xC0, 8, 0, 0})
+	DMember(bool)                                      bAutoRegisterWithObserverRegistry                           OFFSET(get<bool>, {0xC0, 1, 0, 0})
+	CMember(UScriptStruct*)                            ObservedType                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassObserverRegistry
@@ -82,15 +83,15 @@ public:
 };
 
 /// Class /Script/MassEntity.MassCompositeProcessor
-/// Size: 0x0038 (0x0000B8 - 0x0000F0)
+/// Size: 0x0038 (0x0000C0 - 0x0000F8)
 class UMassCompositeProcessor : public UMassProcessor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 240;
+	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FMassRuntimePipeline)                      ChildPipeline                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
-	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
+	SMember(FMassRuntimePipeline)                      ChildPipeline                                               OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassSettings

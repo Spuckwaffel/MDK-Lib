@@ -11,12 +11,22 @@
 /// dependency: Engine
 /// dependency: MetasoundFrontend
 
+/// Class /Script/MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UMetasoundFrontendLiteralBlueprintAccess : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/MetasoundEngine.MetasoundGeneratorHandle
-/// Size: 0x00C0 (0x000028 - 0x0000E8)
+/// Size: 0x0058 (0x000028 - 0x000080)
 class UMetasoundGeneratorHandle : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 232;
+	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 };
@@ -44,15 +54,15 @@ public:
 
 	/// Functions
 	// Function /Script/MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
-	// bool WatchOutput(UAudioComponent* AudioComponent, FName OutputName, FDelegateProperty& OnOutputValueChanged, FName AnalyzerName, FName AnalyzerOutputName); // [0x70f0838] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool WatchOutput(UAudioComponent* AudioComponent, FName OutputName, FDelegateProperty& OnOutputValueChanged, FName AnalyzerName, FName AnalyzerOutputName); // [0x6ecf0a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundSettings
-/// Size: 0x0048 (0x000030 - 0x000078)
+/// Size: 0x0058 (0x000030 - 0x000088)
 class UMetaSoundSettings : public UDeveloperSettings
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	DMember(bool)                                      bAutoUpdateEnabled                                          OFFSET(get<bool>, {0x30, 1, 0, 0})
@@ -60,7 +70,18 @@ public:
 	CMember(TArray<FDefaultMetaSoundAssetAutoUpdateSettings>) AutoUpdateAssetDenylist                              OFFSET(get<T>, {0x48, 16, 0, 0})
 	DMember(bool)                                      bAutoUpdateLogWarningOnDroppedConnection                    OFFSET(get<bool>, {0x58, 1, 0, 0})
 	CMember(TArray<FDirectoryPath>)                    DirectoriesToRegister                                       OFFSET(get<T>, {0x60, 16, 0, 0})
-	DMember(int32_t)                                   DenyListCacheChangeID                                       OFFSET(get<int32_t>, {0x70, 4, 0, 0})
+	CMember(TArray<FMetaSoundQualitySettings>)         QualitySettings                                             OFFSET(get<T>, {0x70, 16, 0, 0})
+	DMember(int32_t)                                   DenyListCacheChangeID                                       OFFSET(get<int32_t>, {0x80, 4, 0, 0})
+};
+
+/// Class /Script/MetasoundEngine.MetaSoundQuality
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UMetaSoundQuality : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
 };
 
 /// Class /Script/MetasoundEngine.MetasoundEditorGraphBase
@@ -74,18 +95,18 @@ public:
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundPatch
-/// Size: 0x0330 (0x000028 - 0x000358)
+/// Size: 0x0300 (0x000028 - 0x000328)
 class UMetaSoundPatch : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 856;
+	static inline constexpr uint64_t __MDKClassSize = 808;
 
 public:
-	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x98, 448, 0, 0})
-	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x258, 80, 0, 0})
-	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x2A8, 80, 0, 0})
-	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x2F8, 80, 0, 0})
-	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x348, 16, 0, 0})
+	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x60, 448, 0, 0})
+	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x220, 80, 0, 0})
+	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x270, 80, 0, 0})
+	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x2C0, 80, 0, 0})
+	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x310, 16, 0, 0})
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundAssetSubsystem
@@ -101,9 +122,9 @@ public:
 
 	/// Functions
 	// Function /Script/MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
-	// void UnregisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                 // [0x70f0714] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void UnregisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                 // [0x6eceedc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
-	// void RegisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                   // [0x70efcfc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RegisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                   // [0x6ece4bc] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundBuilderBase
@@ -114,111 +135,114 @@ class UMetaSoundBuilderBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMetaSoundFrontendDocumentBuilder)         Builder                                                     OFFSET(getStruct<T>, {0x28, 48, 0, 0})
-	DMember(bool)                                      bIsAttached                                                 OFFSET(get<bool>, {0x58, 1, 0, 0})
+	SMember(FMetaSoundFrontendDocumentBuilder)         Builder                                                     OFFSET(getStruct<T>, {0x28, 56, 0, 0})
 
 
 	/// Functions
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.SetNodeInputDefault
-	// void SetNodeInputDefault(FMetaSoundBuilderNodeInputHandle& NodeInputHandle, FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult& OutResult); // [0x70f0584] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetNodeInputDefault(FMetaSoundBuilderNodeInputHandle& NodeInputHandle, FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult& OutResult); // [0x6eced4c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDefault
-	// void SetGraphInputDefault(FName InputName, FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult& OutResult);      // [0x70f0420] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetGraphInputDefault(FName InputName, FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult& OutResult);      // [0x6ecebf4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.RemoveNodeInputDefault
-	// void RemoveNodeInputDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult);          // [0x70f0248] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveNodeInputDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult);          // [0x6ecea1c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.RemoveNode
-	// void RemoveNode(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult);                                   // [0x70f0154] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveNode(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult);                                   // [0x6ece928] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.RemoveInterface
-	// void RemoveInterface(FName InterfaceName, EMetaSoundBuilderResult& OutResult);                                           // [0x70f0084] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveInterface(FName InterfaceName, EMetaSoundBuilderResult& OutResult);                                           // [0x6ece858] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.RemoveGraphOutput
-	// void RemoveGraphOutput(FName Name, EMetaSoundBuilderResult& OutResult);                                                  // [0x70effa8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveGraphOutput(FName Name, EMetaSoundBuilderResult& OutResult);                                                  // [0x6ece77c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInput
-	// void RemoveGraphInput(FName Name, EMetaSoundBuilderResult& OutResult);                                                   // [0x70efecc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveGraphInput(FName Name, EMetaSoundBuilderResult& OutResult);                                                   // [0x6ece6a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.NodesAreConnected
-	// bool NodesAreConnected(FMetaSoundBuilderNodeOutputHandle& OutputHandle, FMetaSoundBuilderNodeInputHandle& InputHandle);  // [0x70efbc8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool NodesAreConnected(FMetaSoundBuilderNodeOutputHandle& OutputHandle, FMetaSoundBuilderNodeInputHandle& InputHandle);  // [0x6ece388] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.NodeOutputIsConnected
-	// bool NodeOutputIsConnected(FMetaSoundBuilderNodeOutputHandle& OutputHandle);                                             // [0x70efb00] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool NodeOutputIsConnected(FMetaSoundBuilderNodeOutputHandle& OutputHandle);                                             // [0x6ece2c0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.NodeInputIsConnected
-	// bool NodeInputIsConnected(FMetaSoundBuilderNodeInputHandle& InputHandle);                                                // [0x70efa58] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool NodeInputIsConnected(FMetaSoundBuilderNodeInputHandle& InputHandle);                                                // [0x6ece218] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.IsPreset
-	// bool IsPreset();                                                                                                         // [0x70ef8fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPreset();                                                                                                         // [0x6ece0bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.InterfaceIsDeclared
-	// bool InterfaceIsDeclared(FName InterfaceName);                                                                           // [0x70ef620] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool InterfaceIsDeclared(FName InterfaceName);                                                                           // [0x6ecdde0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetReferencedPresetAsset
-	// UObject* GetReferencedPresetAsset();                                                                                     // [0x70eedc8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UObject* GetReferencedPresetAsset();                                                                                     // [0x6ecdaa4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputIsConstructorPin
+	// bool GetNodeOutputIsConstructorPin(FMetaSoundBuilderNodeOutputHandle& OutputHandle);                                     // [0x6ecd938] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputData
-	// void GetNodeOutputData(FMetaSoundBuilderNodeOutputHandle& OutputHandle, FName& Name, FName& DataType, EMetaSoundBuilderResult& OutResult); // [0x70eec1c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetNodeOutputData(FMetaSoundBuilderNodeOutputHandle& OutputHandle, FName& Name, FName& DataType, EMetaSoundBuilderResult& OutResult); // [0x6ecd7a0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeInputIsConstructorPin
+	// bool GetNodeInputIsConstructorPin(FMetaSoundBuilderNodeInputHandle& InputHandle);                                        // [0x6ecd6f0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeInputDefault
-	// FMetasoundFrontendLiteral GetNodeInputDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x70eeaac] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral GetNodeInputDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecd580] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeInputData
-	// void GetNodeInputData(FMetaSoundBuilderNodeInputHandle& InputHandle, FName& Name, FName& DataType, EMetaSoundBuilderResult& OutResult); // [0x70ee900] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetNodeInputData(FMetaSoundBuilderNodeInputHandle& InputHandle, FName& Name, FName& DataType, EMetaSoundBuilderResult& OutResult); // [0x6ecd3e8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.GetNodeInputClassDefault
-	// FMetasoundFrontendLiteral GetNodeInputClassDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ee790] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral GetNodeInputClassDefault(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecd278] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputsByDataType
-	// TArray<FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult, FName DataType); // [0x70ee05c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult, FName DataType); // [0x6ecca14] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputs
-	// TArray<FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70edf50] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecc908] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputParent
-	// FMetaSoundNodeHandle FindNodeOutputParent(FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ed930] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle FindNodeOutputParent(FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecc310] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputByName
-	// FMetaSoundBuilderNodeOutputHandle FindNodeOutputByName(FMetaSoundNodeHandle& NodeHandle, FName OutputName, EMetaSoundBuilderResult& OutResult); // [0x70edd6c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundBuilderNodeOutputHandle FindNodeOutputByName(FMetaSoundNodeHandle& NodeHandle, FName OutputName, EMetaSoundBuilderResult& OutResult); // [0x6ecc734] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeInputsByDataType
-	// TArray<FMetaSoundBuilderNodeInputHandle> FindNodeInputsByDataType(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult, FName DataType); // [0x70edb58] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeInputHandle> FindNodeInputsByDataType(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult, FName DataType); // [0x6ecc538] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeInputs
-	// TArray<FMetaSoundBuilderNodeInputHandle> FindNodeInputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70eda4c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeInputHandle> FindNodeInputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecc42c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeInputParent
-	// FMetaSoundNodeHandle FindNodeInputParent(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ed930] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle FindNodeInputParent(FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecc310] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeInputByName
-	// FMetaSoundBuilderNodeInputHandle FindNodeInputByName(FMetaSoundNodeHandle& NodeHandle, FName InputName, EMetaSoundBuilderResult& OutResult); // [0x70ed74c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundBuilderNodeInputHandle FindNodeInputByName(FMetaSoundNodeHandle& NodeHandle, FName InputName, EMetaSoundBuilderResult& OutResult); // [0x6ecc13c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindNodeClassVersion
-	// FMetasoundFrontendVersion FindNodeClassVersion(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult);    // [0x70ed5fc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendVersion FindNodeClassVersion(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult);    // [0x6ecbfec] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindInterfaceOutputNodes
-	// TArray<FMetaSoundNodeHandle> FindInterfaceOutputNodes(FName InterfaceName, EMetaSoundBuilderResult& OutResult);          // [0x70ed514] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundNodeHandle> FindInterfaceOutputNodes(FName InterfaceName, EMetaSoundBuilderResult& OutResult);          // [0x6ecbf04] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindInterfaceInputNodes
-	// TArray<FMetaSoundNodeHandle> FindInterfaceInputNodes(FName InterfaceName, EMetaSoundBuilderResult& OutResult);           // [0x70ed42c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundNodeHandle> FindInterfaceInputNodes(FName InterfaceName, EMetaSoundBuilderResult& OutResult);           // [0x6ecbe1c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindGraphOutputNode
-	// FMetaSoundNodeHandle FindGraphOutputNode(FName OutputName, EMetaSoundBuilderResult& OutResult);                          // [0x70ed354] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle FindGraphOutputNode(FName OutputName, EMetaSoundBuilderResult& OutResult);                          // [0x6ecbd44] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.FindGraphInputNode
-	// FMetaSoundNodeHandle FindGraphInputNode(FName InputName, EMetaSoundBuilderResult& OutResult);                            // [0x70ed27c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle FindGraphInputNode(FName InputName, EMetaSoundBuilderResult& OutResult);                            // [0x6ecbc6c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.DisconnectNodesByInterfaceBindings
-	// void DisconnectNodesByInterfaceBindings(FMetaSoundNodeHandle& FromNodeHandle, FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70ecfd8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void DisconnectNodesByInterfaceBindings(FMetaSoundNodeHandle& FromNodeHandle, FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecb9cc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.DisconnectNodes
-	// void DisconnectNodes(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ece50] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void DisconnectNodes(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ecb878] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeOutput
-	// void DisconnectNodeOutput(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult& OutResult);      // [0x70ecd48] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void DisconnectNodeOutput(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult& OutResult);      // [0x6ecb770] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeInput
-	// void DisconnectNodeInput(FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult);         // [0x70ecc40] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void DisconnectNodeInput(FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult);         // [0x6ecb684] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConvertToPreset
-	// void ConvertToPreset(TScriptInterface<Class>& ReferencedNodeClass, EMetaSoundBuilderResult& OutResult);                  // [0x70eaa08] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConvertToPreset(TScriptInterface<Class>& ReferencedNodeClass, EMetaSoundBuilderResult& OutResult);                  // [0x6ec891c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConvertFromPreset
-	// void ConvertFromPreset(EMetaSoundBuilderResult& OutResult);                                                              // [0x70ea970] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConvertFromPreset(EMetaSoundBuilderResult& OutResult);                                                              // [0x6ec8884] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ContainsNodeOutput
-	// bool ContainsNodeOutput(FMetaSoundBuilderNodeOutputHandle& Output);                                                      // [0x70ea8bc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool ContainsNodeOutput(FMetaSoundBuilderNodeOutputHandle& Output);                                                      // [0x6ec87d0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ContainsNodeInput
-	// bool ContainsNodeInput(FMetaSoundBuilderNodeInputHandle& Input);                                                         // [0x70ea808] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool ContainsNodeInput(FMetaSoundBuilderNodeInputHandle& Input);                                                         // [0x6ec871c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ContainsNode
-	// bool ContainsNode(FMetaSoundNodeHandle& Node);                                                                           // [0x70ea768] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// bool ContainsNode(FMetaSoundNodeHandle& Node);                                                                           // [0x6ec867c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodesByInterfaceBindings
-	// void ConnectNodesByInterfaceBindings(FMetaSoundNodeHandle& FromNodeHandle, FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea61c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConnectNodesByInterfaceBindings(FMetaSoundNodeHandle& FromNodeHandle, FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec8538] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodes
-	// void ConnectNodes(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea4c8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConnectNodes(FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec83e4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputToGraphOutput
-	// void ConnectNodeOutputToGraphOutput(FName GraphOutputName, FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea290] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConnectNodeOutputToGraphOutput(FName GraphOutputName, FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec81ac] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputsToMatchingGraphInterfaceOutputs
-	// TArray<FMetaSoundBuilderNodeInputHandle> ConnectNodeOutputsToMatchingGraphInterfaceOutputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea3bc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeInputHandle> ConnectNodeOutputsToMatchingGraphInterfaceOutputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec82d8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputToGraphInput
-	// void ConnectNodeInputToGraphInput(FName GraphInputName, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea058] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ConnectNodeInputToGraphInput(FName GraphInputName, FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec7f74] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputsToMatchingGraphInterfaceInputs
-	// TArray<FMetaSoundBuilderNodeOutputHandle> ConnectNodeInputsToMatchingGraphInterfaceInputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x70ea184] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// TArray<FMetaSoundBuilderNodeOutputHandle> ConnectNodeInputsToMatchingGraphInterfaceInputs(FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult& OutResult); // [0x6ec80a0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddNodeByClassName
-	// FMetaSoundNodeHandle AddNodeByClassName(FMetasoundFrontendClassName& ClassName, int32_t MajorVersion, EMetaSoundBuilderResult& OutResult); // [0x70e9a3c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle AddNodeByClassName(FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult& OutResult, int32_t MajorVersion); // [0x6ec7aac] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddNode
-	// FMetaSoundNodeHandle AddNode(TScriptInterface<Class>& NodeClass, EMetaSoundBuilderResult& OutResult);                    // [0x70e9944] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundNodeHandle AddNode(TScriptInterface<Class>& NodeClass, EMetaSoundBuilderResult& OutResult);                    // [0x6ec79b4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddInterface
-	// void AddInterface(FName InterfaceName, EMetaSoundBuilderResult& OutResult);                                              // [0x70e9868] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddInterface(FName InterfaceName, EMetaSoundBuilderResult& OutResult);                                              // [0x6ec78d8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddGraphOutputNode
-	// FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorOutput); // [0x70e94a0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorOutput); // [0x6ec7554] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
-	// FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorInput); // [0x70e90d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorInput); // [0x6ec71d0] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundPatchBuilder
@@ -232,11 +256,11 @@ public:
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundSourceBuilder
-/// Size: 0x0008 (0x000060 - 0x000068)
+/// Size: 0x0000 (0x000060 - 0x000060)
 class UMetaSoundSourceBuilder : public UMetaSoundBuilderBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 104;
+	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 };
@@ -255,71 +279,74 @@ public:
 
 	/// Functions
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterSourceBuilder
-	// bool UnregisterSourceBuilder(FName BuilderName);                                                                         // [0x70f07ac] Final|Native|Public|BlueprintCallable 
+	// bool UnregisterSourceBuilder(FName BuilderName);                                                                         // [0x6ecf000] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterPatchBuilder
-	// bool UnregisterPatchBuilder(FName BuilderName);                                                                          // [0x70f07ac] Final|Native|Public|BlueprintCallable 
+	// bool UnregisterPatchBuilder(FName BuilderName);                                                                          // [0x6ecef74] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterBuilder
-	// bool UnregisterBuilder(FName BuilderName);                                                                               // [0x70f07ac] Final|Native|Public|BlueprintCallable 
+	// bool UnregisterBuilder(FName BuilderName);                                                                               // [0x6ecef74] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.RegisterSourceBuilder
-	// void RegisterSourceBuilder(FName BuilderName, UMetaSoundSourceBuilder* Builder);                                         // [0x70efd94] Final|Native|Public|BlueprintCallable 
+	// void RegisterSourceBuilder(FName BuilderName, UMetaSoundSourceBuilder* Builder);                                         // [0x6ece554] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.RegisterPatchBuilder
-	// void RegisterPatchBuilder(FName BuilderName, UMetaSoundPatchBuilder* Builder);                                           // [0x70efd94] Final|Native|Public|BlueprintCallable 
+	// void RegisterPatchBuilder(FName BuilderName, UMetaSoundPatchBuilder* Builder);                                           // [0x6ece554] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.RegisterBuilder
-	// void RegisterBuilder(FName BuilderName, UMetaSoundBuilderBase* Builder);                                                 // [0x70efd94] Final|Native|Public|BlueprintCallable 
+	// void RegisterBuilder(FName BuilderName, UMetaSoundBuilderBase* Builder);                                                 // [0x6ece554] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.IsInterfaceRegistered
-	// bool IsInterfaceRegistered(FName InInterfaceName);                                                                       // [0x70ef880] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsInterfaceRegistered(FName InInterfaceName);                                                                       // [0x6ece040] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.FindSourceBuilder
-	// UMetaSoundSourceBuilder* FindSourceBuilder(FName BuilderName);                                                           // [0x70ee320] Final|Native|Public|BlueprintCallable 
+	// UMetaSoundSourceBuilder* FindSourceBuilder(FName BuilderName);                                                           // [0x6ecccc0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.FindPatchBuilder
-	// UMetaSoundPatchBuilder* FindPatchBuilder(FName BuilderName);                                                             // [0x70ee270] Final|Native|Public|BlueprintCallable 
+	// UMetaSoundPatchBuilder* FindPatchBuilder(FName BuilderName);                                                             // [0x6eccc10] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilder
-	// UMetaSoundBuilderBase* FindBuilder(FName BuilderName);                                                                   // [0x70ed1f0] Final|Native|Public|BlueprintCallable 
+	// UMetaSoundBuilderBase* FindBuilder(FName BuilderName);                                                                   // [0x6ecbbe0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateStringMetaSoundLiteral(FString Value, FName& DataType);                                  // [0x70ec4fc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateStringMetaSoundLiteral(FString Value, FName& DataType);                                  // [0x6eca99c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringArrayMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateStringArrayMetaSoundLiteral(TArray<FString>& Value, FName& DataType);                    // [0x70ec3a8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateStringArrayMetaSoundLiteral(TArray<FString>& Value, FName& DataType);                    // [0x6eca758] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourcePresetBuilder
-	// UMetaSoundSourceBuilder* CreateSourcePresetBuilder(FName BuilderName, TScriptInterface<Class>& ReferencedSourceClass, EMetaSoundBuilderResult& OutResult); // [0x70ec274] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UMetaSoundSourceBuilder* CreateSourcePresetBuilder(FName BuilderName, TScriptInterface<Class>& ReferencedSourceClass, EMetaSoundBuilderResult& OutResult); // [0x6eca624] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourceBuilder
-	// UMetaSoundSourceBuilder* CreateSourceBuilder(FName BuilderName, FMetaSoundBuilderNodeOutputHandle& OnPlayNodeOutput, FMetaSoundBuilderNodeInputHandle& OnFinishedNodeInput, TArray<FMetaSoundBuilderNodeInputHandle>& AudioOutNodeInputs, EMetaSoundBuilderResult& OutResult, EMetaSoundOutputAudioFormat OutputFormat, bool bIsOneShot); // [0x70eb854] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UMetaSoundSourceBuilder* CreateSourceBuilder(FName BuilderName, FMetaSoundBuilderNodeOutputHandle& OnPlayNodeOutput, FMetaSoundBuilderNodeInputHandle& OnFinishedNodeInput, TArray<FMetaSoundBuilderNodeInputHandle>& AudioOutNodeInputs, EMetaSoundBuilderResult& OutResult, EMetaSoundOutputAudioFormat OutputFormat, bool bIsOneShot); // [0x6ec9cec] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchPresetBuilder
-	// UMetaSoundPatchBuilder* CreatePatchPresetBuilder(FName BuilderName, TScriptInterface<Class>& ReferencedPatchClass, EMetaSoundBuilderResult& OutResult); // [0x70eb718] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UMetaSoundPatchBuilder* CreatePatchPresetBuilder(FName BuilderName, TScriptInterface<Class>& ReferencedPatchClass, EMetaSoundBuilderResult& OutResult); // [0x6ec9bb0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchBuilder
-	// UMetaSoundPatchBuilder* CreatePatchBuilder(FName BuilderName, EMetaSoundBuilderResult& OutResult);                       // [0x70eb64c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UMetaSoundPatchBuilder* CreatePatchBuilder(FName BuilderName, EMetaSoundBuilderResult& OutResult);                       // [0x6ec9ae4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateObjectMetaSoundLiteral(UObject* Value);                                                  // [0x70eb574] Final|Native|Public|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateObjectMetaSoundLiteral(UObject* Value);                                                  // [0x6ec9a0c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectArrayMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateObjectArrayMetaSoundLiteral(TArray<UObject*>& Value);                                    // [0x70eb47c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateObjectArrayMetaSoundLiteral(TArray<UObject*>& Value);                                    // [0x6ec9914] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateMetaSoundLiteralFromParam
-	// FMetasoundFrontendLiteral CreateMetaSoundLiteralFromParam(FAudioParameter& Param);                                       // [0x70eb3b0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateMetaSoundLiteralFromParam(FAudioParameter& Param);                                       // [0x6ec9848] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateIntMetaSoundLiteral(int32_t Value, FName& DataType);                                     // [0x70eb130] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateIntMetaSoundLiteral(int32_t Value, FName& DataType);                                     // [0x6ec9524] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntArrayMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateIntArrayMetaSoundLiteral(TArray<int32_t>& Value, FName& DataType);                       // [0x70eafd8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateIntArrayMetaSoundLiteral(TArray<int32_t>& Value, FName& DataType);                       // [0x6ec92d4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateFloatMetaSoundLiteral(float Value, FName& DataType);                                     // [0x70eaed4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateFloatMetaSoundLiteral(float Value, FName& DataType);                                     // [0x6ec9128] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatArrayMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateFloatArrayMetaSoundLiteral(TArray<float>& Value, FName& DataType);                       // [0x70ead7c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateFloatArrayMetaSoundLiteral(TArray<float>& Value, FName& DataType);                       // [0x6ec8e60] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateBoolMetaSoundLiteral(bool Value, FName& DataType);                                       // [0x70eac4c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateBoolMetaSoundLiteral(bool Value, FName& DataType);                                       // [0x6ec8c58] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
-	// FMetasoundFrontendLiteral CreateBoolArrayMetaSoundLiteral(TArray<bool>& Value, FName& DataType);                         // [0x70eaaf4] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FMetasoundFrontendLiteral CreateBoolArrayMetaSoundLiteral(TArray<bool>& Value, FName& DataType);                         // [0x6ec8a08] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundSource
-/// Size: 0x0400 (0x000480 - 0x000880)
+/// Size: 0x0400 (0x000470 - 0x000870)
 class UMetaSoundSource : public USoundWaveProcedural
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2176;
+	static inline constexpr uint64_t __MDKClassSize = 2160;
 
 public:
-	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x4F0, 448, 0, 0})
-	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x6B0, 80, 0, 0})
-	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x700, 80, 0, 0})
-	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x750, 80, 0, 0})
-	CMember(EMetaSoundOutputAudioFormat)               OutputFormat                                                OFFSET(get<T>, {0x7A0, 1, 0, 0})
-	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x7A4, 16, 0, 0})
+	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x4A8, 448, 0, 0})
+	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x668, 80, 0, 0})
+	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x6B8, 80, 0, 0})
+	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x708, 80, 0, 0})
+	CMember(EMetaSoundOutputAudioFormat)               OutputFormat                                                OFFSET(get<T>, {0x758, 1, 0, 0})
+	SMember(FName)                                     QualitySetting                                              OFFSET(getStruct<T>, {0x75C, 4, 0, 0})
+	SMember(FPerPlatformFloat)                         BlockRateOverride                                           OFFSET(getStruct<T>, {0x760, 4, 0, 0})
+	SMember(FPerPlatformInt)                           SampleRateOverride                                          OFFSET(getStruct<T>, {0x764, 4, 0, 0})
+	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x768, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundOutput
@@ -343,6 +370,20 @@ class FDefaultMetaSoundAssetAutoUpdateSettings : public MDKBase
 
 public:
 	SMember(FSoftObjectPath)                           Metasound                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+};
+
+/// Struct /Script/MetasoundEngine.MetaSoundQualitySettings
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FMetaSoundQualitySettings : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
+	DMember(float)                                     BlockRate                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundAssetDirectory

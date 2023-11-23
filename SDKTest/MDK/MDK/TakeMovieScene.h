@@ -9,19 +9,19 @@
 /// dependency: MovieScene
 
 /// Class /Script/TakeMovieScene.MovieSceneTakeSection
-/// Size: 0x0620 (0x0000F0 - 0x000710)
+/// Size: 0x0640 (0x0000F0 - 0x000730)
 class UMovieSceneTakeSection : public UMovieSceneSection
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1808;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
-	SMember(FMovieSceneIntegerChannel)                 HoursCurve                                                  OFFSET(getStruct<T>, {0xF0, 256, 0, 0})
-	SMember(FMovieSceneIntegerChannel)                 MinutesCurve                                                OFFSET(getStruct<T>, {0x1F0, 256, 0, 0})
-	SMember(FMovieSceneIntegerChannel)                 SecondsCurve                                                OFFSET(getStruct<T>, {0x2F0, 256, 0, 0})
-	SMember(FMovieSceneIntegerChannel)                 FramesCurve                                                 OFFSET(getStruct<T>, {0x3F0, 256, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   SubFramesCurve                                              OFFSET(getStruct<T>, {0x4F0, 272, 0, 0})
-	SMember(FMovieSceneStringChannel)                  Slate                                                       OFFSET(getStruct<T>, {0x600, 272, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 HoursCurve                                                  OFFSET(getStruct<T>, {0xF0, 264, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 MinutesCurve                                                OFFSET(getStruct<T>, {0x1F8, 264, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 SecondsCurve                                                OFFSET(getStruct<T>, {0x300, 264, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 FramesCurve                                                 OFFSET(getStruct<T>, {0x408, 264, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   SubFramesCurve                                              OFFSET(getStruct<T>, {0x510, 272, 0, 0})
+	SMember(FMovieSceneStringChannel)                  Slate                                                       OFFSET(getStruct<T>, {0x620, 272, 0, 0})
 };
 
 /// Class /Script/TakeMovieScene.MovieSceneTakeSettings

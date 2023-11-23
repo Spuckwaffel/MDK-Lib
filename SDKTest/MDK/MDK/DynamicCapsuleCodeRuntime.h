@@ -24,19 +24,19 @@ public:
 
 	/// Functions
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.ServerRemoveDynamicCapsule
-	// void ServerRemoveDynamicCapsule(FGameplayTag tag);                                                                       // [0x9cf1bbc] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// void ServerRemoveDynamicCapsule(FGameplayTag tag);                                                                       // [0xa10955c] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.ServerApplyDynamicCapsule
-	// void ServerApplyDynamicCapsule(FGameplayTag tag, float CapsuleRadius, float CapsuleHalfHeight, double NewRelativeMeshHeight); // [0x9cf16ec] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+	// void ServerApplyDynamicCapsule(FGameplayTag tag, float CapsuleRadius, float CapsuleHalfHeight, double NewRelativeMeshHeight); // [0xa10913c] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.RemoveDynamicCapsule
-	// bool RemoveDynamicCapsule(FGameplayTag& tag);                                                                            // [0x9cf1654] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool RemoveDynamicCapsule(FGameplayTag& tag);                                                                            // [0xa109068] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.OnRep_ReplicatedCapsuleState
-	// void OnRep_ReplicatedCapsuleState();                                                                                     // [0x9cf1640] Final|Native|Private 
+	// void OnRep_ReplicatedCapsuleState();                                                                                     // [0xa109054] Final|Native|Private 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.OnRep_DynamicCapsuleEntryStack
-	// void OnRep_DynamicCapsuleEntryStack();                                                                                   // [0x9cf162c] Final|Native|Private 
+	// void OnRep_DynamicCapsuleEntryStack();                                                                                   // [0xa109040] Final|Native|Private 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.ApplyDynamicCapsuleWithLocationAdjust
-	// bool ApplyDynamicCapsuleWithLocationAdjust(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight, double NewRelativeMeshHeight); // [0x9cf139c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool ApplyDynamicCapsuleWithLocationAdjust(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight, double NewRelativeMeshHeight); // [0xa108de8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.ApplyDynamicCapsule
-	// bool ApplyDynamicCapsule(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight);                               // [0x9cf11c4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// bool ApplyDynamicCapsule(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight);                               // [0xa108c14] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/DynamicCapsuleCodeRuntime.AnimNotifyState_SetCapsuleSize

@@ -64,10 +64,17 @@ class MDKBase
 
 	MDKBase shadowCopy() const;
 public:
+
+	template<typename T = MDKBase>
+	static uint64_t getMDKClassSize()
+	{
+		return T::__MDKClassSize;
+	}
+
 	//initializer 
 	MDKBase();
 
-	
+
 
 	//only gets called by pointers or default types that are not structs
 	template<typename T>
@@ -99,7 +106,7 @@ public:
 	}
 
 	//we dont even do a single memcpy here, i would call this creating a spoof struct
-	template<typename T = MDKBase>
+	template<typename T>
 	T getStruct(__MDKMemberInfo b) const
 	{
 		T res = (T)shadowCopy();
@@ -292,15 +299,32 @@ public:
 
 	/// \brief gets the offset for the given member
 	/// \tparam classInstance class where the member resides in
-	/// \param instance instance of the class
 	/// \param memberFunction the member
 	/// \return the offset
 	template <typename classInstance = MDKBase>
-	static __MDKMemberInfo getOffset(const classInstance& instance, bool(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static __MDKMemberInfo getOffset(MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		__MDKMemberInfo b{};
 
-		(bool)(instance.*memberFunction)(&b);
+		classInstance c;
+
+		(MDKBase)(c.*memberFunction)(&b);
+
+		return b;
+	}
+
+	/// \brief gets the offset for the given member, use this on the DMembers
+	/// \tparam classInstance class where the member resides in
+	/// \param memberFunction the member
+	/// \return the offset
+	template <typename classInstance = MDKBase, typename T >
+	static __MDKMemberInfo getOffset(T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	{
+		__MDKMemberInfo b{};
+
+		classInstance c;
+
+		(T)(c.*memberFunction)(&b);
 
 		return b;
 	}
@@ -316,9 +340,7 @@ public:
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
 
-		classInstance c;
-
-		auto info = getOffset<classInstance>(c, memberFunction);
+		auto info = getOffset<classInstance>(memberFunction);
 
 		if (info.size <= 0)
 			return T();
@@ -354,8 +376,7 @@ public:
 	{
 		if (!instance.basePointer)
 			return;
-		__MDKMemberInfo b{};
-		(instance.*memberFunction)(&b);
+		auto b = getOffset<classInstance>(memberFunction);
 
 
 		uint64_t addr = (uint64_t)&value;

@@ -13,7 +13,7 @@ MDKBase MDKBase::shadowCopy() const
     b.valid = valid;
     b.onlyTemporary = onlyTemporary; // is ok no worries, we set to realOwner to false so block doesnt get freed
     b.realOwner = false;
-    
+
     return b;
 }
 

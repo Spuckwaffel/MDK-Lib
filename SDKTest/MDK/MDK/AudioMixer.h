@@ -45,14 +45,14 @@ public:
 };
 
 /// Class /Script/AudioMixer.SynthSound
-/// Size: 0x0020 (0x000480 - 0x0004A0)
+/// Size: 0x0020 (0x000470 - 0x000490)
 class USynthSound : public USoundWaveProcedural
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1184;
+	static inline constexpr uint64_t __MDKClassSize = 1168;
 
 public:
-	CMember(TWeakObjectPtr<USynthComponent*>)          OwningSynthComponent                                        OFFSET(get<T>, {0x480, 8, 0, 0})
+	CMember(TWeakObjectPtr<USynthComponent*>)          OwningSynthComponent                                        OFFSET(get<T>, {0x470, 8, 0, 0})
 };
 
 /// Class /Script/AudioMixer.SynthComponent
@@ -92,39 +92,39 @@ public:
 
 	/// Functions
 	// Function /Script/AudioMixer.SynthComponent.Stop
-	// void Stop();                                                                                                             // [0x37503c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Stop();                                                                                                             // [0x57d716c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.Start
-	// void Start();                                                                                                            // [0x1b7c4c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void Start();                                                                                                            // [0x57d6e38] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetVolumeMultiplier
-	// void SetVolumeMultiplier(float VolumeMultiplier);                                                                        // [0x1b7d980] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetVolumeMultiplier(float VolumeMultiplier);                                                                        // [0x57d6db8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetSubmixSend
-	// void SetSubmixSend(USoundSubmixBase* Submix, float SendLevel);                                                           // [0x5949ac0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSubmixSend(USoundSubmixBase* Submix, float SendLevel);                                                           // [0x57d67d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetSourceBusSendPreEffect
-	// void SetSourceBusSendPreEffect(USoundSourceBus* SoundSourceBus, float SourceBusSendLevel);                               // [0x59499f8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSourceBusSendPreEffect(USoundSourceBus* SoundSourceBus, float SourceBusSendLevel);                               // [0x57d670c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetSourceBusSendPostEffect
-	// void SetSourceBusSendPostEffect(USoundSourceBus* SoundSourceBus, float SourceBusSendLevel);                              // [0x5949930] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSourceBusSendPostEffect(USoundSourceBus* SoundSourceBus, float SourceBusSendLevel);                              // [0x57d6644] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetOutputToBusOnly
-	// void SetOutputToBusOnly(bool bInOutputToBusOnly);                                                                        // [0x5948c3c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetOutputToBusOnly(bool bInOutputToBusOnly);                                                                        // [0x57d59b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetModulationRouting
-	// void SetModulationRouting(TSet<USoundModulatorBase*>& Modulators, EModulationDestination Destination, EModulationRouting RoutingMethod); // [0x5948920] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetModulationRouting(TSet<USoundModulatorBase*>& Modulators, EModulationDestination Destination, EModulationRouting RoutingMethod); // [0x57d56c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetLowPassFilterFrequency
-	// void SetLowPassFilterFrequency(float InLowPassFilterFrequency);                                                          // [0x59485f4] RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetLowPassFilterFrequency(float InLowPassFilterFrequency);                                                          // [0x57d53ac] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetLowPassFilterEnabled
-	// void SetLowPassFilterEnabled(bool InLowPassFilterEnabled);                                                               // [0x5948570] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetLowPassFilterEnabled(bool InLowPassFilterEnabled);                                                               // [0x57d5328] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetAudioBusSendPreEffect
-	// void SetAudioBusSendPreEffect(UAudioBus* AudioBus, float AudioBusSendLevel);                                             // [0x5948128] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAudioBusSendPreEffect(UAudioBus* AudioBus, float AudioBusSendLevel);                                             // [0x57d4ef8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.SetAudioBusSendPostEffect
-	// void SetAudioBusSendPostEffect(UAudioBus* AudioBus, float AudioBusSendLevel);                                            // [0x5948060] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAudioBusSendPostEffect(UAudioBus* AudioBus, float AudioBusSendLevel);                                            // [0x57d4e30] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SynthComponent.IsPlaying
-	// bool IsPlaying();                                                                                                        // [0x350d310] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsPlaying();                                                                                                        // [0x57d4530] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioMixer.SynthComponent.GetModulators
-	// TSet<USoundModulatorBase*> GetModulators(EModulationDestination Destination);                                            // [0x594713c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+	// TSet<USoundModulatorBase*> GetModulators(EModulationDestination Destination);                                            // [0x57d3f54] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AudioMixer.SynthComponent.FadeOut
-	// void FadeOut(float FadeOutDuration, float FadeVolumeLevel, EAudioFaderCurve FadeCurve);                                  // [0x2ba2f40] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// void FadeOut(float FadeOutDuration, float FadeVolumeLevel, EAudioFaderCurve FadeCurve);                                  // [0x57d3318] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AudioMixer.SynthComponent.FadeIn
-	// void FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime, EAudioFaderCurve FadeCurve);                   // [0x31ea934] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// void FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime, EAudioFaderCurve FadeCurve);                   // [0x57d31d0] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AudioMixer.SynthComponent.AdjustVolume
-	// void AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, EAudioFaderCurve FadeCurve);                      // [0x5945c60] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+	// void AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, EAudioFaderCurve FadeCurve);                      // [0x57d28e0] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 };
 
 /// Class /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset
@@ -140,13 +140,13 @@ public:
 
 	/// Functions
 	// Function /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-	// void SetSettings(FSubmixEffectDynamicsProcessorSettings& Settings);                                                      // [0x5948f64] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetSettings(FSubmixEffectDynamicsProcessorSettings& Settings);                                                      // [0x57d5cc0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
-	// void SetExternalSubmix(USoundSubmix* Submix);                                                                            // [0x5948498] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetExternalSubmix(USoundSubmix* Submix);                                                                            // [0x57d5250] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset.SetAudioBus
-	// void SetAudioBus(UAudioBus* AudioBus);                                                                                   // [0x5947f80] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetAudioBus(UAudioBus* AudioBus);                                                                                   // [0x57d4d50] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
-	// void ResetKey();                                                                                                         // [0x5947b28] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void ResetKey();                                                                                                         // [0x57d4928] Final|RequiredAPI|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioMixer.SubmixEffectSubmixEQPreset
@@ -162,7 +162,7 @@ public:
 
 	/// Functions
 	// Function /Script/AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
-	// void SetSettings(FSubmixEffectSubmixEQSettings& InSettings);                                                             // [0x59490dc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetSettings(FSubmixEffectSubmixEQSettings& InSettings);                                                             // [0x57d5e98] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AudioMixer.SubmixEffectReverbPreset
@@ -178,9 +178,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
-	// void SetSettingsWithReverbEffect(UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);                         // [0x594979c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetSettingsWithReverbEffect(UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);                         // [0x57d64b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectReverbPreset.SetSettings
-	// void SetSettings(FSubmixEffectReverbSettings& InSettings);                                                               // [0x5948ffc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetSettings(FSubmixEffectReverbSettings& InSettings);                                                               // [0x57d5db8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/AudioMixer.AudioGenerator
@@ -316,7 +316,7 @@ class FSubmixEffectSubmixEQSettings : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	CMember(TArray<FSubmixEffectEQBand>)               EQBands                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FSubmixEffectEQBand>)               EqBands                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/AudioMixer.SubmixEffectReverbSettings
@@ -418,6 +418,18 @@ enum ESwapAudioOutputDeviceResultState : uint8_t
 	ESwapAudioOutputDeviceResultState__Success1                                      = 1,
 	ESwapAudioOutputDeviceResultState__None2                                         = 2,
 	ESwapAudioOutputDeviceResultState__ESwapAudioOutputDeviceResultState_MAX3        = 3
+};
+
+/// Enum /Script/AudioMixer.ERequiredSubmixes
+/// Size: 0x06
+enum ERequiredSubmixes : uint8_t
+{
+	ERequiredSubmixes__Main0                                                         = 0,
+	ERequiredSubmixes__BaseDefault1                                                  = 1,
+	ERequiredSubmixes__Reverb2                                                       = 2,
+	ERequiredSubmixes__EQ3                                                           = 3,
+	ERequiredSubmixes__Count4                                                        = 4,
+	ERequiredSubmixes__ERequiredSubmixes_MAX5                                        = 5
 };
 
 /// Enum /Script/AudioMixer.ESourceManagerRenderThreadPhase

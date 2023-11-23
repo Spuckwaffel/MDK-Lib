@@ -70,7 +70,7 @@ public:
 
 	/// Functions
 	// Function /Script/VerseFortniteInternal.FortBuildingSettingsComponentBase.OnRep_Settings
-	// void OnRep_Settings();                                                                                                   // [0x990ebdc] Final|Native|Private 
+	// void OnRep_Settings();                                                                                                   // [0x9dc5850] Final|Native|Private 
 };
 
 /// Class /Script/VerseFortniteInternal.FortPlayspaceComponentHelper

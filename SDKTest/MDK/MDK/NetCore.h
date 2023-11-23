@@ -146,7 +146,7 @@ enum ENetworkFailure : uint8_t
 };
 
 /// Enum /Script/NetCore.ENetCloseResult
-/// Size: 0x110
+/// Size: 0x112
 enum ENetCloseResult : uint8_t
 {
 	ENetCloseResult__NetDriverAlreadyExists0                                         = 0,
@@ -244,21 +244,23 @@ enum ENetCloseResult : uint8_t
 	ENetCloseResult__FieldHeaderBadRepIndex92                                        = 92,
 	ENetCloseResult__FieldHeaderPayloadBitsFail93                                    = 93,
 	ENetCloseResult__FieldPayloadFail94                                              = 94,
-	ENetCloseResult__BeaconControlFlowError95                                        = 95,
-	ENetCloseResult__BeaconUnableToParsePacket96                                     = 96,
-	ENetCloseResult__BeaconAuthenticationFailure97                                   = 97,
-	ENetCloseResult__BeaconLoginInvalidIdError98                                     = 98,
-	ENetCloseResult__BeaconLoginInvalidAuthHandlerError99                            = 99,
-	ENetCloseResult__BeaconAuthError100                                              = 100,
-	ENetCloseResult__BeaconSpawnClientWorldPackageNameError101                       = 101,
-	ENetCloseResult__BeaconSpawnExistingActorError102                                = 102,
-	ENetCloseResult__BeaconSpawnFailureError103                                      = 103,
-	ENetCloseResult__BeaconSpawnNetGUIDAckNoActor104                                 = 104,
-	ENetCloseResult__BeaconSpawnNetGUIDAckNoHost105                                  = 105,
-	ENetCloseResult__BeaconSpawnUnexpectedError106                                   = 106,
-	ENetCloseResult__FaultDisconnect107                                              = 107,
-	ENetCloseResult__NotRecoverable108                                               = 108,
-	ENetCloseResult__ENetCloseResult_MAX109                                          = 109
+	ENetCloseResult__ReplicationChannelCountMaxedOut95                               = 95,
+	ENetCloseResult__BeaconControlFlowError96                                        = 96,
+	ENetCloseResult__BeaconUnableToParsePacket97                                     = 97,
+	ENetCloseResult__BeaconAuthenticationFailure98                                   = 98,
+	ENetCloseResult__BeaconLoginInvalidIdError99                                     = 99,
+	ENetCloseResult__BeaconLoginInvalidAuthHandlerError100                           = 100,
+	ENetCloseResult__BeaconAuthError101                                              = 101,
+	ENetCloseResult__BeaconSpawnClientWorldPackageNameError102                       = 102,
+	ENetCloseResult__BeaconSpawnExistingActorError103                                = 103,
+	ENetCloseResult__BeaconSpawnFailureError104                                      = 104,
+	ENetCloseResult__BeaconSpawnNetGUIDAckNoActor105                                 = 105,
+	ENetCloseResult__BeaconSpawnNetGUIDAckNoHost106                                  = 106,
+	ENetCloseResult__BeaconSpawnUnexpectedError107                                   = 107,
+	ENetCloseResult__IrisProtocolMismatch108                                         = 108,
+	ENetCloseResult__FaultDisconnect109                                              = 109,
+	ENetCloseResult__NotRecoverable110                                               = 110,
+	ENetCloseResult__ENetCloseResult_MAX111                                          = 111
 };
 
 /// Enum /Script/NetCore.EFastArraySerializerDeltaFlags

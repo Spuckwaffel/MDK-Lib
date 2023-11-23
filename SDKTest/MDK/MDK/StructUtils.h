@@ -28,6 +28,18 @@ public:
 	CMember(TArray<FPropertyBagPropertyDesc>)          PropertyDescs                                               OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
 
+/// Struct /Script/StructUtils.InstancedPropertyBag
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FInstancedPropertyBag : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	SMember(FInstancedStruct)                          Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+};
+
 /// Struct /Script/StructUtils.InstancedStruct
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FInstancedStruct : public MDKBase
@@ -90,18 +102,6 @@ public:
 	SMember(FPropertyBagContainerTypes)                ContainerTypes                                              OFFSET(getStruct<T>, {0x1D, 3, 0, 0})
 };
 
-/// Struct /Script/StructUtils.InstancedPropertyBag
-/// Size: 0x0010 (0x000000 - 0x000010)
-class FInstancedPropertyBag : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
-
-public:
-	SMember(FInstancedStruct)                          Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
-};
-
 /// Struct /Script/StructUtils.PropertyBagMissingStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FPropertyBagMissingStruct : public MDKBase
@@ -136,7 +136,7 @@ public:
 };
 
 /// Enum /Script/StructUtils.EPropertyBagPropertyType
-/// Size: 0x18
+/// Size: 0x20
 enum EPropertyBagPropertyType : uint8_t
 {
 	EPropertyBagPropertyType__None0                                                  = 0,
@@ -155,8 +155,10 @@ enum EPropertyBagPropertyType : uint8_t
 	EPropertyBagPropertyType__SoftObject13                                           = 13,
 	EPropertyBagPropertyType__Class14                                                = 14,
 	EPropertyBagPropertyType__SoftClass15                                            = 15,
-	EPropertyBagPropertyType__Count16                                                = 16,
-	EPropertyBagPropertyType__EPropertyBagPropertyType_MAX17                         = 17
+	EPropertyBagPropertyType__UInt3216                                               = 16,
+	EPropertyBagPropertyType__UInt6417                                               = 17,
+	EPropertyBagPropertyType__Count18                                                = 18,
+	EPropertyBagPropertyType__EPropertyBagPropertyType_MAX19                         = 19
 };
 
 /// Enum /Script/StructUtils.EPropertyBagContainerType

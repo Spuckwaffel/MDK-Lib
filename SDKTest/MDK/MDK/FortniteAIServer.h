@@ -17,49 +17,96 @@
 /// dependency: StateTreeModule
 /// dependency: WorldConditions
 
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ApproachNearbyPawns
+/// Size: 0x0128 (0x0001A8 - 0x0002D0)
+class UFortAthenaAIBotEvaluator_ApproachNearbyPawns : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 720;
+
+public:
+	SMember(FScalableFloat)                            MaxApproaches                                               OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
+	SMember(FFortNearbyActorsPerceptionConfiguration)  PerceptionConfiguration                                     OFFSET(getStruct<T>, {0x1F0, 208, 0, 0})
+	SMember(FName)                                     EnableKeyName                                               OFFSET(getStruct<T>, {0x2C0, 4, 0, 0})
+};
+
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Harvest
-/// Size: 0x0070 (0x0001A8 - 0x000218)
+/// Size: 0x0148 (0x0001A8 - 0x0002F0)
 class UFortAthenaAIBotEvaluator_Harvest : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 752;
+
+public:
+	CMember(UClass*)                                   ProjectionNavigationQueryFilterClass                        OFFSET(get<T>, {0x1E8, 8, 0, 0})
+	CMember(UClass*)                                   ValidNavigationQueryFilterClassOverride                     OFFSET(get<T>, {0x1F0, 8, 0, 0})
+	SMember(FScalableFloat)                            MaximumTimeToHelpFromLastPlayerDamage                       OFFSET(getStruct<T>, {0x1F8, 40, 0, 0})
+	SMember(FScalableFloat)                            KeepTargetTimeOnWeaponTrigger                               OFFSET(getStruct<T>, {0x220, 40, 0, 0})
+	SMember(FScalableFloat)                            AmountOfTimesPlayerBuiltStructuresNeedToBeDamaged           OFFSET(getStruct<T>, {0x248, 40, 0, 0})
+	SMember(FScalableFloat)                            TimeToTrackDamagedActors                                    OFFSET(getStruct<T>, {0x270, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDistanceFromActorForFallbackNoHarvestBehaviour           OFFSET(getStruct<T>, {0x298, 40, 0, 0})
+	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(getStruct<T>, {0x2C0, 4, 0, 0})
+	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(getStruct<T>, {0x2C8, 4, 0, 0})
+	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(getStruct<T>, {0x2D0, 4, 0, 0})
+	SMember(FName)                                     FallbackBehaviorKeyName                                     OFFSET(getStruct<T>, {0x2D8, 4, 0, 0})
+	SMember(FName)                                     CannotDamageKeyName                                         OFFSET(getStruct<T>, {0x2E0, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeKeyName                                   OFFSET(getStruct<T>, {0x2E8, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Harvest.HandleUnconverted
+	// void HandleUnconverted(AFortPawn* UnconvertedPawn, EUnconvertReason UnconvertReason);                                    // [0x9bde4cc] Final|Native|Protected 
+	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Harvest.HandleConverted
+	// void HandleConverted(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                               // [0x9bde40c] Final|Native|Protected 
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_MoveAway
+/// Size: 0x0108 (0x0001A8 - 0x0002B0)
+class UFortAthenaAIBotEvaluator_MoveAway : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 688;
+
+public:
+	SMember(FScalableFloat)                            MaxSecondsToReactToBump                                     OFFSET(getStruct<T>, {0x218, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxSecondsToReactToBox                                      OFFSET(getStruct<T>, {0x240, 40, 0, 0})
+	SMember(FScalableFloat)                            MinSecondsBetweenInstantReactions                           OFFSET(getStruct<T>, {0x268, 40, 0, 0})
+	CMember(UEnvQuery*)                                FindAwayLocationFromPawnQueryTemplate                       OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(TEnumAsByte<EEnvQueryRunMode>)             FindAwayLocationFromPawnRunMode                             OFFSET(get<T>, {0x298, 1, 0, 0})
+	CMember(UEnvQuery*)                                FindAwayLocationFromBoxQueryTemplate                        OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(TEnumAsByte<EEnvQueryRunMode>)             FindAwayLocationFromBoxRunMode                              OFFSET(get<T>, {0x2A8, 1, 0, 0})
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Attack
+/// Size: 0x0018 (0x0001A8 - 0x0001C0)
+class UFortAthenaAIBotEvaluator_Attack : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 448;
+
+public:
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_TokenPosition
+/// Size: 0x0058 (0x0001C0 - 0x000218)
+class UFortAthenaAIBotEvaluator_TokenPosition : public UFortAthenaAIBotEvaluator_Attack
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	CMember(UClass*)                                   ProjectionNavigationQueryFilterClass                        OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	CMember(UClass*)                                   ValidNavigationQueryFilterClassOverride                     OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(FScalableFloat)                            MaximumTimeToHelpFromLastPlayerDamage                       OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
-	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(getStruct<T>, {0x200, 4, 0, 0})
-	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(getStruct<T>, {0x208, 4, 0, 0})
-	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(getStruct<T>, {0x210, 4, 0, 0})
-
-
-	/// Functions
-	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Harvest.HandleUnconverted
-	// void HandleUnconverted(AFortPawn* UnconvertedPawn, EUnconvertReason UnconvertReason);                                    // [0x971463c] Final|Native|Private 
-	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Harvest.HandleConverted
-	// void HandleConverted(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                               // [0x9714308] Final|Native|Private 
-};
-
-/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ImitatePlayerEmote
-/// Size: 0x0168 (0x0001A8 - 0x000310)
-class UFortAthenaAIBotEvaluator_ImitatePlayerEmote : public UFortAthenaAIBotEvaluator_Movement
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 784;
-
-public:
-	SMember(FScalableFloat)                            MinDistanceFromPlayerToPlayEmote                            OFFSET(getStruct<T>, {0x1E0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxImitationDuration                                        OFFSET(getStruct<T>, {0x208, 40, 0, 0})
-	SMember(FFortNearbyActorsPerceptionConfiguration)  PerceptionConfiguration                                     OFFSET(getStruct<T>, {0x230, 208, 0, 0})
-	SMember(FName)                                     ImitatePlayerEmoteTargetActorKeyName                        OFFSET(getStruct<T>, {0x300, 4, 0, 0})
-	SMember(FName)                                     ImitatePlayerEmoteShouldMoveKeyName                         OFFSET(getStruct<T>, {0x308, 4, 0, 0})
-
-
-	/// Functions
-	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ImitatePlayerEmote.HandlePawnStoppedEmote
-	// void HandlePawnStoppedEmote(UFortItemDefinition* MontageItemDef, AFortPawn* PawnEmoting);                                // [0x971448c] Final|Native|Protected 
-	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ImitatePlayerEmote.HandlePawnStartedEmote
-	// void HandlePawnStartedEmote(UFortItemDefinition* MontageItemDef, AFortPawn* PawnEmoting);                                // [0x97143c8] Final|Native|Protected 
+	CMember(TArray<FPositioningEQS>)                   EQSs                                                        OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	DMember(bool)                                      bAllowSamePositionSelection                                 OFFSET(get<bool>, {0x1E0, 1, 0, 0})
+	DMember(float)                                     TokenPositionCooldown                                       OFFSET(get<float>, {0x1E4, 4, 0, 0})
+	DMember(float)                                     TokenPositionCooldownVariation                              OFFSET(get<float>, {0x1E8, 4, 0, 0})
+	DMember(float)                                     NextPositionTimestamp                                       OFFSET(get<float>, {0x1EC, 4, 0, 0})
+	DMember(bool)                                      bHasCurrentDestination                                      OFFSET(get<bool>, {0x1F0, 1, 0, 0})
+	CMember(UFortAICombatTokenConsumerComponent*)      CachedTokenConsumerComponent                                OFFSET(get<T>, {0x200, 8, 0, 0})
+	CMember(TWeakObjectPtr<UFortAICombatTokenProviderComponent*>) CachedTokenProviderComponent                     OFFSET(get<T>, {0x208, 8, 0, 0})
+	DMember(int32_t)                                   RunningEQSRequestID                                         OFFSET(get<int32_t>, {0x210, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIEvaluator_AbovePhysicsObject
@@ -81,6 +128,19 @@ class UFortAthenaBTService_MovementStyle : public UBTService
 
 public:
 	CMember(TEnumAsByte<EFortMovementStyle>)           MovementStyle                                               OFFSET(get<T>, {0x70, 1, 0, 0})
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaBTService_TokenQuery
+/// Size: 0x0020 (0x000070 - 0x000090)
+class UFortAthenaBTService_TokenQuery : public UBTService
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	CMember(TArray<FEquippedItemTagAssociationData>)   EquippedItemTagAssociationDatas                             OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x84, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortBTWorldConditionSchema
@@ -121,6 +181,18 @@ public:
 	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 	SMember(FName)                                     WeaponTriggerMeleeKeyName                                   OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaBTTask_ReactToVerb
+/// Size: 0x0010 (0x000070 - 0x000080)
+class UFortAthenaBTTask_ReactToVerb : public UBTTaskNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 128;
+
+public:
+	SMember(FName)                                     ReactToVerbExecutionStatusKeyName                           OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     GameplayEffectReactionKeyName                               OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_VehicleSwitchSeat
@@ -198,6 +270,17 @@ class UFortInjectedBehaviorsComponent : public UFortGameStateComponent
 public:
 };
 
+/// Class /Script/FortniteAIServer.FortQueryContext_NearbyFactionMembers
+/// Size: 0x0028 (0x000028 - 0x000050)
+class UFortQueryContext_NearbyFactionMembers : public UEnvQueryContext
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+	SMember(FScalableFloat)                            NearbyFactionMemberDistance                                 OFFSET(getStruct<T>, {0x28, 40, 0, 0})
+};
+
 /// Class /Script/FortniteAIServer.FortQueryContext_PlayspaceVolume
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortQueryContext_PlayspaceVolume : public UEnvQueryContext
@@ -209,17 +292,18 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_GridInBox
-/// Size: 0x00B0 (0x000088 - 0x000138)
+/// Size: 0x00B8 (0x000088 - 0x000140)
 class UFortQueryGenerator_GridInBox : public UEnvQueryGenerator_ProjectedPoints
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
 	SMember(FAIDataProviderFloatValue)                 BoxWidth                                                    OFFSET(getStruct<T>, {0x88, 56, 0, 0})
 	SMember(FAIDataProviderFloatValue)                 BoxLength                                                   OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
 	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x130, 8, 0, 0})
+	CMember(UClass*)                                   BoxExtentsContext                                           OFFSET(get<T>, {0x138, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_GridInVolume
@@ -234,6 +318,23 @@ public:
 	CMember(UClass*)                                   GenerateInVolume                                            OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
+/// Class /Script/FortniteAIServer.FortQueryGenerator_PointsOutsideBox
+/// Size: 0x0128 (0x000088 - 0x0001B0)
+class UFortQueryGenerator_PointsOutsideBox : public UEnvQueryGenerator_ProjectedPoints
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 432;
+
+public:
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 NumberOfRingsAroundVolume                                   OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ExtraXExtent                                                OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ExtraYExtent                                                OFFSET(getStruct<T>, {0x130, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ExtraZExtent                                                OFFSET(getStruct<T>, {0x168, 56, 0, 0})
+	CMember(UClass*)                                   GenerateInBoxCenter                                         OFFSET(get<T>, {0x1A0, 8, 0, 0})
+	CMember(UClass*)                                   GenerateInBoxExtent                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
+};
+
 /// Class /Script/FortniteAIServer.FortWorldConditionTimeOfDayState
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UFortWorldConditionTimeOfDayState : public UObject
@@ -242,6 +343,17 @@ class UFortWorldConditionTimeOfDayState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
+};
+
+/// Class /Script/FortniteAIServer.TokenProviderQueryGenerator
+/// Size: 0x0048 (0x000050 - 0x000098)
+class UTokenProviderQueryGenerator : public UEnvQueryGenerator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 152;
+
+public:
+	SMember(FGameplayTagQuery)                         GameplayTagQuery                                            OFFSET(getStruct<T>, {0x50, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortGameFeatureAction_InjectAIEvaluators
@@ -698,9 +810,9 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortEQSPrevisActor.SetQueryTemplate
-	// void SetQueryTemplate(UEnvQuery* InPrevisQueryTemplate);                                                                 // [0x56bcb00] Final|Native|Public|BlueprintCallable 
+	// void SetQueryTemplate(UEnvQuery* InPrevisQueryTemplate);                                                                 // [0x551cb00] Final|Native|Public|BlueprintCallable 
 	// Function /Script/FortniteAIServer.FortEQSPrevisActor.PrepForPrevis
-	// void PrepForPrevis();                                                                                                    // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void PrepForPrevis();                                                                                                    // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/FortniteAIServer.FortQueryContext_AIPawnSpawnLocation
@@ -1613,14 +1725,15 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_DistanceToActorBound
-/// Size: 0x0008 (0x0001F8 - 0x000200)
+/// Size: 0x0010 (0x0001F8 - 0x000208)
 class UFortQueryTest_DistanceToActorBound : public UEnvQueryTest
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 512;
+	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
 	CMember(UClass*)                                   DistanceTo                                                  OFFSET(get<T>, {0x1F8, 8, 0, 0})
+	DMember(bool)                                      bUse2DDistance                                              OFFSET(get<bool>, {0x200, 1, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_DistanceToIndestructibleBuilding
@@ -2045,16 +2158,17 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_IsObstructed
-/// Size: 0x00A8 (0x0002E0 - 0x000388)
+/// Size: 0x00E0 (0x0002E0 - 0x0003C0)
 class UFortQueryTest_IsObstructed : public UEnvQueryTest_Trace
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
+	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
 	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationXWithItemLocationX                   OFFSET(getStruct<T>, {0x2E0, 56, 0, 0})
 	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationYWithItemLocationY                   OFFSET(getStruct<T>, {0x318, 56, 0, 0})
 	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationZWithItemLocationZ                   OFFSET(getStruct<T>, {0x350, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideItemLocationZWithContextLocationZ                   OFFSET(getStruct<T>, {0x388, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_IsObstructedOverlap
@@ -2105,17 +2219,18 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_OnFlatSurface
-/// Size: 0x0010 (0x0001F8 - 0x000208)
+/// Size: 0x0018 (0x0001F8 - 0x000210)
 class UFortQueryTest_OnFlatSurface : public UEnvQueryTest
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 520;
+	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1F8, 4, 0, 0})
 	DMember(float)                                     ToleranceZ                                                  OFFSET(get<float>, {0x1FC, 4, 0, 0})
 	DMember(float)                                     TraceOffsetUp                                               OFFSET(get<float>, {0x200, 4, 0, 0})
 	DMember(float)                                     TraceOffsetDown                                             OFFSET(get<float>, {0x204, 4, 0, 0})
+	DMember(uint32_t)                                  NumberOfIteration                                           OFFSET(get<uint32_t>, {0x208, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_OnFlatSurfaceNoNavMesh
@@ -2395,19 +2510,6 @@ public:
 	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
 };
 
-/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Attack
-/// Size: 0x0018 (0x0001A8 - 0x0001C0)
-class UFortAthenaAIBotEvaluator_Attack : public UFortAthenaAIBotEvaluator_Movement
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 448;
-
-public:
-	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
-};
-
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_AvoidThreat
 /// Size: 0x0028 (0x0001A8 - 0x0001D0)
 class UFortAthenaAIBotEvaluator_AvoidThreat : public UFortAthenaAIBotEvaluator_Movement
@@ -2464,7 +2566,21 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_CharacterLaunched.OnZiplineStateChanged
-	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x97743a0] Final|Native|Private 
+	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x9c54bf0] Final|Native|Private 
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ChoosePosition
+/// Size: 0x0088 (0x0001A8 - 0x000230)
+class UFortAthenaAIBotEvaluator_ChoosePosition : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 560;
+
+public:
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	CMember(UAthenaAIServiceZoneManager*)              CachedZoneManager                                           OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) AttackingSkillSet                                          OFFSET(get<T>, {0x1B8, 8, 0, 0})
+	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   AimingSkillSet                                              OFFSET(get<T>, {0x1C0, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Conversation
@@ -2486,15 +2602,15 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Conversation.OnPlayerPawnSpawned
-	// void OnPlayerPawnSpawned(AFortAthenaAIBotController* BotController, AFortPlayerPawnAthena* BotPawn);                     // [0x9774220] Final|Native|Private 
+	// void OnPlayerPawnSpawned(AFortAthenaAIBotController* BotController, AFortPlayerPawnAthena* BotPawn);                     // [0x9c54a70] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Converted
-/// Size: 0x0070 (0x0001A8 - 0x000218)
+/// Size: 0x0190 (0x0001A8 - 0x000338)
 class UFortAthenaAIBotEvaluator_Converted : public UFortAthenaAIBotEvaluator_Movement
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
+	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
 	SMember(FName)                                     ShouldMoveTowardsConverterName                              OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
@@ -2505,15 +2621,22 @@ public:
 	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
 	SMember(FVector)                                   TeleportLocationProjectionExtent                            OFFSET(getStruct<T>, {0x1C0, 24, 0, 0})
 	SMember(FVector)                                   MovingFromLosLocationProjectionExtent                       OFFSET(getStruct<T>, {0x1D8, 24, 0, 0})
-	CMember(AFortPawn*)                                ConverterPawn                                               OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	CMember(UFortAthenaAIRuntimeParameters_AIBotConvert*) CachedAIBotConvertParameters                             OFFSET(get<T>, {0x200, 8, 0, 0})
+	SMember(FScalableFloat)                            AmountOfTimesNonHostilePawnNeedsToBeDamagedForTargeting     OFFSET(getStruct<T>, {0x1F0, 40, 0, 0})
+	SMember(FScalableFloat)                            TimeToTrackDamagedActors                                    OFFSET(getStruct<T>, {0x218, 40, 0, 0})
+	SMember(FScalableFloat)                            NearbyPlayerDistanceForTeleportTowardsConverter             OFFSET(getStruct<T>, {0x240, 40, 0, 0})
+	SMember(FScalableFloat)                            PlayerFOVForNearbyPlayersVisibility                         OFFSET(getStruct<T>, {0x268, 40, 0, 0})
+	CMember(UEnvQuery*)                                TeleportToConverterQueryTemplate                            OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(TEnumAsByte<EEnvQueryRunMode>)             TeleportToConverterRunMode                                  OFFSET(get<T>, {0x298, 1, 0, 0})
+	CMember(TArray<FMimicConverterAbilityData>)        AbilitiesToMimic                                            OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	CMember(AFortPawn*)                                ConverterPawn                                               OFFSET(get<T>, {0x318, 8, 0, 0})
+	CMember(UFortAthenaAIRuntimeParameters_AIBotConvert*) CachedAIBotConvertParameters                             OFFSET(get<T>, {0x320, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Converted.OnUnconvertedEvent
-	// void OnUnconvertedEvent(AFortPawn* UnconvertedPawn, EUnconvertReason UnconvertReason);                                   // [0x97742e4] Final|Native|Protected 
+	// void OnUnconvertedEvent(AFortPawn* UnconvertedPawn, EUnconvertReason UnconvertReason);                                   // [0x9c54b34] Final|Native|Protected 
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Converted.OnConvertedEvent
-	// void OnConvertedEvent(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                              // [0x9774160] Final|Native|Protected 
+	// void OnConvertedEvent(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                              // [0x9c5478c] Final|Native|Protected 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_DanceOnKill
@@ -2580,7 +2703,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_DBNO.OnAllyPawnDBNOStateChanged
-	// void OnAllyPawnDBNOStateChanged(AFortPawn* InPlayer, bool bInIsDBNO);                                                    // [0x9792730] Final|Native|Private 
+	// void OnAllyPawnDBNOStateChanged(AFortPawn* InPlayer, bool bInIsDBNO);                                                    // [0x9c546c4] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_DefensiveBuilding
@@ -2639,7 +2762,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_EvasiveManeuvers.OnMoveCompleted
-	// void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult> MovementResult);                          // [0x97927f8] Final|Native|Public  
+	// void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult> MovementResult);                          // [0x9c5484c] Final|Native|Public  
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Flanking
@@ -2711,15 +2834,15 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Ground
-/// Size: 0x0088 (0x0000A8 - 0x000130)
+/// Size: 0x0090 (0x0000A8 - 0x000138)
 class UFortAthenaAIBotEvaluator_Ground : public UFortAthenaAIBotEvaluator
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 304;
+	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
 	SMember(FVector)                                   SurfaceTypeRaycastDir                                       OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
-	CMember(UFortAthenaAIRuntimeParameters_Behavior*)  CachedBehaviorRuntimeParameters                             OFFSET(get<T>, {0x128, 8, 0, 0})
+	CMember(UFortAthenaAIRuntimeParameters_Behavior*)  CachedBehaviorRuntimeParameters                             OFFSET(get<T>, {0x130, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_HandleFocusing
@@ -2772,7 +2895,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Heal.HandlePlayerHealthOrShieldChanged
-	// void HandlePlayerHealthOrShieldChanged();                                                                                // [0x979271c] Final|Native|Private 
+	// void HandlePlayerHealthOrShieldChanged();                                                                                // [0x9c546b0] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_HitAndRun
@@ -2797,14 +2920,16 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_HolsterWeapon
-/// Size: 0x0008 (0x0000A8 - 0x0000B0)
+/// Size: 0x0030 (0x0000A8 - 0x0000D8)
 class UFortAthenaAIBotEvaluator_HolsterWeapon : public UFortAthenaAIBotEvaluator
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	CMember(UFortAthenaAIRuntimeParameters_NPCBehavior*) CachedNPCBehaviorParameters                               OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(TArray<FName>)                             ExecutionStatusesToCheckedNames                             OFFSET(get<T>, {0xA8, 16, 0, 0})
+	CMember(UFortAthenaAIRuntimeParameters_NPCBehavior*) CachedNPCBehaviorParameters                               OFFSET(get<T>, {0xC8, 8, 0, 0})
+	CMember(UFortAthenaAIRuntimeParameters_AIBotConvert*) CachedConvertParameters                                  OFFSET(get<T>, {0xD0, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Investigate
@@ -2846,17 +2971,18 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_MeleeAttack
-/// Size: 0x0028 (0x0001C0 - 0x0001E8)
+/// Size: 0x0038 (0x0001C0 - 0x0001F8)
 class UFortAthenaAIBotEvaluator_MeleeAttack : public UFortAthenaAIBotEvaluator_Attack
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
+	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
 	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
 	SMember(FName)                                     ThrowableAttacksAllowedName                                 OFFSET(getStruct<T>, {0x1C8, 4, 0, 0})
 	SMember(FName)                                     TraversalBlockMeleeAttackName                               OFFSET(getStruct<T>, {0x1CC, 4, 0, 0})
-	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) AttackingSkillSet                                          OFFSET(get<T>, {0x1D8, 8, 0, 0})
+	SMember(FName)                                     CannotMeleeAttackReasonName                                 OFFSET(getStruct<T>, {0x1D0, 4, 0, 0})
+	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) AttackingSkillSet                                          OFFSET(get<T>, {0x1E8, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Observe
@@ -2892,11 +3018,11 @@ public:
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_PatrolAround
-/// Size: 0x0090 (0x0001A8 - 0x000238)
+/// Size: 0x0098 (0x0001A8 - 0x000240)
 class UFortAthenaAIBotEvaluator_PatrolAround : public UFortAthenaAIBotEvaluator_Movement
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 568;
+	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
 	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0x1A8, 72, 0, 0})
@@ -2906,7 +3032,8 @@ public:
 	SMember(FName)                                     PatrolExecutionStatusName                                   OFFSET(getStruct<T>, {0x200, 4, 0, 0})
 	SMember(FName)                                     PatrolMovementStateName                                     OFFSET(getStruct<T>, {0x204, 4, 0, 0})
 	SMember(FName)                                     BestTargetActorName                                         OFFSET(getStruct<T>, {0x208, 4, 0, 0})
-	CMember(AFortGameModeAthena*)                      CacheAthenaGameMode                                         OFFSET(get<T>, {0x210, 8, 0, 0})
+	SMember(FName)                                     EnableKeyName                                               OFFSET(getStruct<T>, {0x20C, 4, 0, 0})
+	CMember(AFortGameModeAthena*)                      CacheAthenaGameMode                                         OFFSET(get<T>, {0x218, 8, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_PlayEmote
@@ -2969,7 +3096,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_RangeAttack.FindShootingPosition_Async
-	// void FindShootingPosition_Async(int32_t RequestID, float DistanceFromTarget, float WeaponIdealAttackRange, FVector& TargetPosition); // [0x97925d8] Final|Native|Protected|HasOutParms|HasDefaults 
+	// void FindShootingPosition_Async(int32_t RequestID, float DistanceFromTarget, float WeaponIdealAttackRange, FVector& TargetPosition); // [0x9c733a8] Final|Native|Protected|HasOutParms|HasDefaults 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ReachBeacon
@@ -2984,6 +3111,34 @@ public:
 	SMember(FName)                                     ReachBeaconMovementStateKeyName                             OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
 	SMember(FName)                                     ReachBeaconTargetKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaBeaconComponent*>) CurrentBeacon                                             OFFSET(get<T>, {0x1BC, 8, 0, 0})
+};
+
+/// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ReactToVerb
+/// Size: 0x0208 (0x0001A8 - 0x0003B0)
+class UFortAthenaAIBotEvaluator_ReactToVerb : public UFortAthenaAIBotEvaluator_Movement
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 944;
+
+public:
+	CMember(UFortAthenaAIBotReactToVerbDigestedSkillSet*) CacheReactToVerbDigestedSkillSet                         OFFSET(get<T>, {0x200, 8, 0, 0})
+	CMember(UDataTable*)                               VerbReactions                                               OFFSET(get<T>, {0x208, 8, 0, 0})
+	SMember(FScalableFloat)                            MinDistanceFromPlayerToReact                                OFFSET(getStruct<T>, {0x210, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxReactionEmoteDuration                                    OFFSET(getStruct<T>, {0x238, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxReactionWaitTime                                         OFFSET(getStruct<T>, {0x260, 40, 0, 0})
+	SMember(FFortNearbyActorsPerceptionConfiguration)  PerceptionConfiguration                                     OFFSET(getStruct<T>, {0x290, 208, 0, 0})
+	DMember(bool)                                      bIsHighPriorityEvaluator                                    OFFSET(get<bool>, {0x360, 1, 0, 0})
+	SMember(FScalableFloat)                            ReactToEmotes                                               OFFSET(getStruct<T>, {0x368, 40, 0, 0})
+	SMember(FName)                                     ReactToVerbTargetActorKeyName                               OFFSET(getStruct<T>, {0x390, 4, 0, 0})
+	SMember(FName)                                     ReactToVerbShouldMoveKeyName                                OFFSET(getStruct<T>, {0x398, 4, 0, 0})
+	SMember(FName)                                     GameplayEffectReactionKeyName                               OFFSET(getStruct<T>, {0x3A0, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ReactToVerb.HandlePawnStoppedEmote
+	// void HandlePawnStoppedEmote(UFortItemDefinition* MontageItemDef, AFortPawn* PawnEmoting);                                // [0x5ead474] Final|Native|Protected 
+	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ReactToVerb.HandlePawnStartedEmote
+	// void HandlePawnStartedEmote(UFortItemDefinition* MontageItemDef, AFortPawn* PawnEmoting);                                // [0x5ead474] Final|Native|Protected 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_RecoverLineOfSight
@@ -3028,7 +3183,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Retreat.HandlePlayerHealthOrShieldChanged
-	// void HandlePlayerHealthOrShieldChanged();                                                                                // [0x97b605c] Final|Native|Protected 
+	// void HandlePlayerHealthOrShieldChanged();                                                                                // [0x9c73528] Final|Native|Protected 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Revive
@@ -3050,7 +3205,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Revive.OnCurrentTargetRevived
-	// void OnCurrentTargetRevived(AFortPlayerPawn* RevivedPawn);                                                               // [0x97b6188] Final|Native|Private 
+	// void OnCurrentTargetRevived(AFortPlayerPawn* RevivedPawn);                                                               // [0x9c73654] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SandTunnel
@@ -3071,9 +3226,9 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SandTunnel.OnBotControllerAlertLevelChanged
-	// void OnBotControllerAlertLevelChanged(AFortAthenaAIBotController* BotController, EAlertLevel OldAlertLevel, EAlertLevel NewAlertLevel); // [0x97b6084] Final|Native|Private 
+	// void OnBotControllerAlertLevelChanged(AFortAthenaAIBotController* BotController, EAlertLevel OldAlertLevel, EAlertLevel NewAlertLevel); // [0x9c73550] Final|Native|Private 
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SandTunnel.Jump
-	// void Jump();                                                                                                             // [0x97b6070] Final|Native|Protected 
+	// void Jump();                                                                                                             // [0x9c7353c] Final|Native|Protected 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SelectNextDynamicPOI
@@ -3095,9 +3250,9 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SelectNextDynamicPOI.OnSafeZonePhaseChanged
-	// void OnSafeZonePhaseChanged(FFortSafeZonePhaseUpdatedEvent& Event);                                                      // [0x97b6298] Final|Native|Private|HasOutParms 
+	// void OnSafeZonePhaseChanged(FFortSafeZonePhaseUpdatedEvent& Event);                                                      // [0x9c73760] Final|Native|Private|HasOutParms 
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SelectNextDynamicPOI.OnGamePhaseLogicReady
-	// void OnGamePhaseLogicReady(FFortBattleRoyaleGamePhaseLogicComponentReadyEvent& Event);                                   // [0x97b6208] Final|Native|Private|HasOutParms 
+	// void OnGamePhaseLogicReady(FFortBattleRoyaleGamePhaseLogicComponentReadyEvent& Event);                                   // [0x9c736d4] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SelectNextPOI
@@ -3237,7 +3392,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Storm.OnSafeZoneStateChanged
-	// void OnSafeZoneStateChanged(EFortSafeZoneState NewState);                                                                // [0x97b6328] Final|Native|Public  
+	// void OnSafeZoneStateChanged(EFortSafeZoneState NewState);                                                                // [0x9c910a4] Final|Native|Public  
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_TagQueryToBBKey
@@ -3394,7 +3549,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Zipline.OnZiplineStateChanged
-	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x97b63a8] Final|Native|Protected 
+	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x9c911dc] Final|Native|Protected 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIEvaluator_BlueprintBase
@@ -3412,13 +3567,13 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaAIEvaluator_BlueprintBase.OnExit
-	// void OnExit(UBehaviorTreeComponent* OwnerComp);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnExit(UBehaviorTreeComponent* OwnerComp);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteAIServer.FortAthenaAIEvaluator_BlueprintBase.OnEnter
-	// void OnEnter(UBehaviorTreeComponent* OwnerComp);                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEnter(UBehaviorTreeComponent* OwnerComp);                                                                         // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteAIServer.FortAthenaAIEvaluator_BlueprintBase.EvaluateStartingConditions
-	// bool EvaluateStartingConditions(UBehaviorTreeComponent* OwnerComp);                                                      // [0x97b5fc8] Native|Event|Protected|BlueprintEvent|Const 
+	// bool EvaluateStartingConditions(UBehaviorTreeComponent* OwnerComp);                                                      // [0x9c90f00] Native|Event|Protected|BlueprintEvent|Const 
 	// Function /Script/FortniteAIServer.FortAthenaAIEvaluator_BlueprintBase.EvaluateOngoingConditions
-	// bool EvaluateOngoingConditions(UBehaviorTreeComponent* OwnerComp);                                                       // [0x97b5f34] Native|Event|Protected|BlueprintEvent|Const 
+	// bool EvaluateOngoingConditions(UBehaviorTreeComponent* OwnerComp);                                                       // [0x9c90e6c] Native|Event|Protected|BlueprintEvent|Const 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIEvaluator_DormantUntilPhase
@@ -3701,7 +3856,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaBTService_ManageWeapon.ManageWeaponTargeting
-	// void ManageWeaponTargeting(UBehaviorTreeComponent* OwnerComp);                                                           // [0x97d34f4] Final|Native|Protected|Const 
+	// void ManageWeaponTargeting(UBehaviorTreeComponent* OwnerComp);                                                           // [0x9c90f94] Final|Native|Protected|Const 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_ManageVehicleWeapon
@@ -3835,7 +3990,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaBTService_Slide.OnStopSliding
-	// void OnStopSliding(AFortPlayerPawn* Pawn);                                                                               // [0x97d3604] Final|Native|Private 
+	// void OnStopSliding(AFortPlayerPawn* Pawn);                                                                               // [0x9c91124] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_SmartObject
@@ -4245,7 +4400,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaBTTask_Zipline.OnZiplineStateChanged
-	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x97d36bc] Final|Native|Public  
+	// void OnZiplineStateChanged(bool bIsZiplining, AFortPlayerPawn* FortPlayerPawn);                                          // [0x9cb6554] Final|Native|Public  
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaNpcEvaluator_Encampment
@@ -4434,9 +4589,9 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaPlayContextualAnimTaskInstanceData.OnNotifyBeginReceived
-	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x97e3474] Final|Native|Public|HasOutParms 
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x9cb6394] Final|Native|Public|HasOutParms 
 	// Function /Script/FortniteAIServer.FortAthenaPlayContextualAnimTaskInstanceData.OnMontageEnded
-	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x97e32e4] Final|Native|Public  
+	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x9cb6204] Final|Native|Public  
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaPlayInteractionStateTreeTask
@@ -4466,9 +4621,9 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaPlayInteractionStateTreeTask.OnNotifyBeginReceived
-	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x97e3554] Final|Native|Private|HasOutParms 
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x9cb6474] Final|Native|Private|HasOutParms 
 	// Function /Script/FortniteAIServer.FortAthenaPlayInteractionStateTreeTask.OnMontageEnded
-	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x97e33ac] Final|Native|Private 
+	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x9cb62cc] Final|Native|Private 
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaPlayMontageStateTreeTask
@@ -4493,9 +4648,45 @@ public:
 
 	/// Functions
 	// Function /Script/FortniteAIServer.FortAthenaPlayMontageStateTreeTask.HandleNotifyBeginReceived
-	// void HandleNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);             // [0x97e3204] Final|Native|Private|HasOutParms 
+	// void HandleNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);             // [0x9cb610c] Final|Native|Private|HasOutParms 
 	// Function /Script/FortniteAIServer.FortAthenaPlayMontageStateTreeTask.HandleMontageEnded
-	// void HandleMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                  // [0x97e313c] Final|Native|Private 
+	// void HandleMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                  // [0x9cb6044] Final|Native|Private 
+};
+
+/// Class /Script/FortniteAIServer.FortWorldConditionWorldState_State
+/// Size: 0x0020 (0x000028 - 0x000048)
+class UFortWorldConditionWorldState_State : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 72;
+
+public:
+};
+
+/// Struct /Script/FortniteAIServer.PositioningEQS
+/// Size: 0x0050 (0x000000 - 0x000050)
+class FPositioningEQS : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+	SMember(FGameplayTagQuery)                         ItemTagQuery                                                OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	CMember(UEnvQuery*)                                QueryTemplate                                               OFFSET(get<T>, {0x48, 8, 0, 0})
+};
+
+/// Struct /Script/FortniteAIServer.EquippedItemTagAssociationData
+/// Size: 0x0090 (0x000000 - 0x000090)
+class FEquippedItemTagAssociationData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	SMember(FGameplayTagQuery)                         ItemTagQuery                                                OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TokenSystemTagQuery                                         OFFSET(getStruct<T>, {0x48, 72, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaHandleSoftDisableGuardStateTreeTaskInstanceData
@@ -4780,6 +4971,30 @@ public:
 	DMember(int32_t)                                   ValidTimesOfDay                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
+/// Struct /Script/FortniteAIServer.FortWorldConditionWorldStatState
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FFortWorldConditionWorldStatState : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+};
+
+/// Struct /Script/FortniteAIServer.FortWorldConditionWorldStat
+/// Size: 0x0010 (0x000010 - 0x000020)
+class FFortWorldConditionWorldStat : public FWorldConditionCommonBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	CMember(UFortWorldStatDefinition*)                 WorldStatDefinition                                         OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(uint32_t)                                  Value                                                       OFFSET(get<uint32_t>, {0x18, 4, 0, 0})
+};
+
 /// Struct /Script/FortniteAIServer.GameFeatureFortAIEvaluatorEntry
 /// Size: 0x0048 (0x000000 - 0x000048)
 class FGameFeatureFortAIEvaluatorEntry : public MDKBase
@@ -4863,6 +5078,19 @@ public:
 	SMember(FAIDataProviderFloatValue)                 CurveDistanceScale                                          OFFSET(getStruct<T>, {0x60, 56, 0, 0})
 };
 
+/// Struct /Script/FortniteAIServer.MimicConverterAbilityData
+/// Size: 0x0068 (0x000000 - 0x000068)
+class FMimicConverterAbilityData : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 104;
+
+public:
+	SMember(FGameplayTagQuery)                         RequiredConverterAbilityTags                                OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     AbilitiesToApply                                            OFFSET(getStruct<T>, {0x48, 32, 0, 0})
+};
+
 /// Struct /Script/FortniteAIServer.FlankingLocationInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FFlankingLocationInfo : public MDKBase
@@ -4888,12 +5116,12 @@ public:
 };
 
 /// Struct /Script/FortniteAIServer.SmartObjectActivityResult
-/// Size: 0x0010 (0x000000 - 0x000010)
+/// Size: 0x0020 (0x000000 - 0x000020)
 class FSmartObjectActivityResult : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
+	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 };
@@ -5249,6 +5477,18 @@ public:
 	CMember(EFortAthenaStateTreeTaskFeatureExecutionMode) RemoveExecutionMode                                      OFFSET(get<T>, {0x24, 4, 0, 0})
 };
 
+/// Struct /Script/FortniteAIServer.FortWorldConditionWorldState
+/// Size: 0x0048 (0x000010 - 0x000058)
+class FFortWorldConditionWorldState : public FWorldConditionCommonBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 88;
+
+public:
+	SMember(FGameplayTagQuery)                         WorldStateQuery                                             OFFSET(getStruct<T>, {0x10, 72, 0, 0})
+};
+
 /// Enum /Script/FortniteAIServer.SwitchSeatType
 /// Size: 0x05
 enum SwitchSeatType : uint8_t
@@ -5379,6 +5619,18 @@ enum EFocusingBehavior : uint8_t
 	EFocusingBehavior__LookAtScanAroundOnly8                                         = 8,
 	EFocusingBehavior__Invalid9                                                      = 9,
 	EFocusingBehavior__EFocusingBehavior_MAX10                                       = 10
+};
+
+/// Enum /Script/FortniteAIServer.ECannotMeleeAttackReason
+/// Size: 0x06
+enum ECannotMeleeAttackReason : uint8_t
+{
+	ECannotMeleeAttackReason__None0                                                  = 0,
+	ECannotMeleeAttackReason__CooldownActive1                                        = 1,
+	ECannotMeleeAttackReason__Other2                                                 = 2,
+	ECannotMeleeAttackReason__AttackDestinationNotValid3                             = 3,
+	ECannotMeleeAttackReason__TargetOutsideLeash4                                    = 4,
+	ECannotMeleeAttackReason__ECannotMeleeAttackReason_MAX5                          = 5
 };
 
 /// Enum /Script/FortniteAIServer.EPathTestQueryType

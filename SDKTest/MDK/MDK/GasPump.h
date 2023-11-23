@@ -26,9 +26,9 @@ public:
 
 	/// Functions
 	// Function /Valet/GasPump/Valet_GasPumpIndicatorManagerV2.Valet_GasPumpIndicatorManagerV2_C.RemoveGasPump
-	// void RemoveGasPump(UB_GasPump_Valet_Component_C* Gas Pump);                                                              // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void RemoveGasPump(UB_GasPump_Valet_Component_C* Gas Pump);                                                              // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Valet/GasPump/Valet_GasPumpIndicatorManagerV2.Valet_GasPumpIndicatorManagerV2_C.AddGasPump
-	// void AddGasPump(UB_GasPump_Valet_Component_C* Gas Pump);                                                                 // [0x1d9241c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// void AddGasPump(UB_GasPump_Valet_Component_C* Gas Pump);                                                                 // [0x101681c] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
 };
 
 /// Class /Valet/GasPump/B_GasPump_Valet_Component.B_GasPump_Valet_Component_C
@@ -47,10 +47,10 @@ public:
 
 	/// Functions
 	// Function /Valet/GasPump/B_GasPump_Valet_Component.B_GasPump_Valet_Component_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveBeginPlay();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Valet/GasPump/B_GasPump_Valet_Component.B_GasPump_Valet_Component_C.ReceiveEndPlay
-	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Valet/GasPump/B_GasPump_Valet_Component.B_GasPump_Valet_Component_C.ExecuteUbergraph_B_GasPump_Valet_Component
-	// void ExecuteUbergraph_B_GasPump_Valet_Component(int32_t EntryPoint);                                                     // [0x1d9241c] Final                
+	// void ExecuteUbergraph_B_GasPump_Valet_Component(int32_t EntryPoint);                                                     // [0x101681c] Final                
 };
 

@@ -9,23 +9,23 @@
 /// dependency: Engine
 
 /// Class /Script/ACLPlugin.AnimationCompressionLibraryDatabase
-/// Size: 0x0140 (0x000028 - 0x000168)
+/// Size: 0x0100 (0x000028 - 0x000128)
 class UAnimationCompressionLibraryDatabase : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 360;
+	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
 	CMember(TArray<char>)                              CookedCompressedBytes                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<uint64_t>)                          CookedAnimSequenceMappings                                  OFFSET(get<T>, {0x38, 16, 0, 0})
-	DMember(uint32_t)                                  MaxStreamRequestSizeKB                                      OFFSET(get<uint32_t>, {0x160, 4, 0, 0})
+	DMember(uint32_t)                                  MaxStreamRequestSizeKB                                      OFFSET(get<uint32_t>, {0x120, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
-	// void SetVisualFidelity(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0xa4d3670] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void SetVisualFidelity(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0xac00998] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
-	// ACLVisualFidelity GetVisualFidelity(UAnimationCompressionLibraryDatabase* DatabaseAsset);                                // [0xa4d35f0] Final|Native|Static|Public|BlueprintCallable 
+	// ACLVisualFidelity GetVisualFidelity(UAnimationCompressionLibraryDatabase* DatabaseAsset);                                // [0xac00918] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase
@@ -80,11 +80,11 @@ public:
 };
 
 /// Class /Script/ACLPlugin.AnimCurveCompressionCodec_ACL
-/// Size: 0x0000 (0x000038 - 0x000038)
+/// Size: 0x0000 (0x000028 - 0x000028)
 class UAnimCurveCompressionCodec_ACL : public UAnimCurveCompressionCodec
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };

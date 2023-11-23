@@ -19,6 +19,16 @@ class UOptimusComponentBindingProvider : public UInterface
 public:
 };
 
+/// Class /Script/OptimusCore.OptimusComputeKernelDataInterface
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UOptimusComputeKernelDataInterface : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/OptimusCore.OptimusComputeKernelProvider
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UOptimusComputeKernelProvider : public UInterface
@@ -32,6 +42,16 @@ public:
 /// Class /Script/OptimusCore.OptimusDataInterfaceProvider
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UOptimusDataInterfaceProvider : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/OptimusCore.OptimusDeformerInstanceAccessor
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UOptimusDeformerInstanceAccessor : public UInterface
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
@@ -122,6 +142,26 @@ public:
 /// Class /Script/OptimusCore.OptimusPathResolver
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UOptimusPathResolver : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/OptimusCore.OptimusPersistentBufferProvider
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UOptimusPersistentBufferProvider : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/OptimusCore.OptimusPinMutabilityDefiner
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UOptimusPinMutabilityDefiner : public UInterface
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
@@ -298,25 +338,27 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusCustomComputeKernelDataInterface
-/// Size: 0x0018 (0x000028 - 0x000040)
+/// Size: 0x0030 (0x000028 - 0x000058)
 class UOptimusCustomComputeKernelDataInterface : public UComputeDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 64;
+	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentSourceBinding                                OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FString)                                   NumThreadsExpression                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentSourceBinding                                OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FString)                                   NumThreadsExpression                                        OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FOptimusConstantIdentifier)                ExecutionDomainConstantIdentifier                           OFFSET(getStruct<T>, {0x48, 12, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusCustomComputeKernelDataProvider
-/// Size: 0x0010 (0x000028 - 0x000038)
+/// Size: 0x0020 (0x000028 - 0x000048)
 class UOptimusCustomComputeKernelDataProvider : public UComputeDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
+	CMember(UOptimusDeformerInstance*)                 DeformerInstance                                            OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusDebugDrawDataInterface
@@ -376,16 +418,16 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusGraphDataProvider
-/// Size: 0x0028 (0x000028 - 0x000050)
+/// Size: 0x0030 (0x000028 - 0x000058)
 class UOptimusGraphDataProvider : public UComputeDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	CMember(UMeshComponent*)                           MeshComponent                                               OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(UOptimusDeformerInstance*)                 DeformerInstance                                            OFFSET(get<T>, {0x30, 8, 0, 0})
+	CMember(UMeshComponent*)                           MeshComponent                                               OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<FOptimusGraphVariableDescription>)  Variables                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	CMember(UOptimusDeformerInstance*)                 DeformerInstance                                            OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusHalfEdgeDataInterface
@@ -399,11 +441,11 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusHalfEdgeDataProvider
-/// Size: 0x0028 (0x000028 - 0x000050)
+/// Size: 0x0020 (0x000028 - 0x000048)
 class UOptimusHalfEdgeDataProvider : public UComputeDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(USkinnedMeshComponent*)                    SkinnedMesh                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
@@ -431,70 +473,88 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusRawBufferDataInterface
-/// Size: 0x0050 (0x000028 - 0x000078)
+/// Size: 0x0060 (0x000028 - 0x000088)
 class UOptimusRawBufferDataInterface : public UOptimusComputeDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x30, 64, 0, 0})
 	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentSourceBinding                                OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FOptimusConstantIdentifier)                DomainConstantIdentifier                                    OFFSET(getStruct<T>, {0x78, 12, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusTransientBufferDataInterface
-/// Size: 0x0000 (0x000078 - 0x000078)
+/// Size: 0x0008 (0x000088 - 0x000090)
 class UOptimusTransientBufferDataInterface : public UOptimusRawBufferDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 120;
+	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
+	DMember(bool)                                      bZeroInitForAtomicWrites                                    OFFSET(get<bool>, {0x88, 1, 0, 0})
+};
+
+/// Class /Script/OptimusCore.OptimusImplicitPersistentBufferDataInterface
+/// Size: 0x0008 (0x000088 - 0x000090)
+class UOptimusImplicitPersistentBufferDataInterface : public UOptimusRawBufferDataInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	DMember(bool)                                      bZeroInitForAtomicWrites                                    OFFSET(get<bool>, {0x88, 1, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusPersistentBufferDataInterface
-/// Size: 0x0008 (0x000078 - 0x000080)
+/// Size: 0x0008 (0x000088 - 0x000090)
 class UOptimusPersistentBufferDataInterface : public UOptimusRawBufferDataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
+	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusRawBufferDataProvider
-/// Size: 0x0058 (0x000028 - 0x000080)
+/// Size: 0x0078 (0x000028 - 0x0000A0)
 class UOptimusRawBufferDataProvider : public UComputeDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
+	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	CMember(TWeakObjectPtr<UActorComponent*>)          Component                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
-	CMember(TWeakObjectPtr<UOptimusComponentSource*>)  ComponentSource                                             OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x38, 64, 0, 0})
-	DMember(int32_t)                                   ElementStride                                               OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(int32_t)                                   RawStride                                                   OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusTransientBufferDataProvider
-/// Size: 0x0000 (0x000080 - 0x000080)
+/// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UOptimusTransientBufferDataProvider : public UOptimusRawBufferDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 128;
+	static inline constexpr uint64_t __MDKClassSize = 168;
+
+public:
+};
+
+/// Class /Script/OptimusCore.OptimusImplicitPersistentBufferDataProvider
+/// Size: 0x0020 (0x0000A0 - 0x0000C0)
+class UOptimusImplicitPersistentBufferDataProvider : public UOptimusRawBufferDataProvider
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 };
 
 /// Class /Script/OptimusCore.OptimusPersistentBufferDataProvider
-/// Size: 0x0018 (0x000080 - 0x000098)
+/// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class UOptimusPersistentBufferDataProvider : public UOptimusRawBufferDataProvider
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 152;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 };
@@ -623,35 +683,35 @@ public:
 
 	/// Functions
 	// Function /Script/OptimusCore.OptimusNode.SetGraphPosition
-	// bool SetGraphPosition(FVector2D& InPosition);                                                                            // [0x9e3070c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetGraphPosition(FVector2D& InPosition);                                                                            // [0xa68c36c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNode.GetNodeName
-	// FName GetNodeName();                                                                                                     // [0x9e2f75c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetNodeName();                                                                                                     // [0xa68af1c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNode.GetNodeCategory
-	// FName GetNodeCategory();                                                                                                 // [0x9e2f72c] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FName GetNodeCategory();                                                                                                 // [0xa68aeec] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNode.GetGraphPosition
-	// FVector2D GetGraphPosition();                                                                                            // [0x9e2f6d4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FVector2D GetGraphPosition();                                                                                            // [0xa68ae94] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNode.GetDisplayName
-	// FText GetDisplayName();                                                                                                  // [0x963a964] Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetDisplayName();                                                                                                  // [0x9acfa4c] Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/OptimusCore.OptimusNode_DataInterface
-/// Size: 0x0018 (0x000110 - 0x000128)
+/// Size: 0x0020 (0x000110 - 0x000130)
 class UOptimusNode_DataInterface : public UOptimusNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 296;
+	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	CMember(UClass*)                                   DataInterfaceClass                                          OFFSET(get<T>, {0x118, 8, 0, 0})
-	CMember(UOptimusComputeDataInterface*)             DataInterfaceData                                           OFFSET(get<T>, {0x120, 8, 0, 0})
+	CMember(UClass*)                                   DataInterfaceClass                                          OFFSET(get<T>, {0x120, 8, 0, 0})
+	CMember(UOptimusComputeDataInterface*)             DataInterfaceData                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_AnimAttributeDataInterface
-/// Size: 0x0000 (0x000128 - 0x000128)
+/// Size: 0x0000 (0x000130 - 0x000130)
 class UOptimusNode_AnimAttributeDataInterface : public UOptimusNode_DataInterface
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 296;
+	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 };
@@ -678,20 +738,20 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ComputeKernelFunctionGeneratorClass
-/// Size: 0x0048 (0x000200 - 0x000248)
+/// Size: 0x0060 (0x000200 - 0x000260)
 class UOptimusNode_ComputeKernelFunctionGeneratorClass : public UClass
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 584;
+	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
 	SMember(FName)                                     category                                                    OFFSET(getStruct<T>, {0x200, 4, 0, 0})
 	SMember(FName)                                     KernelName                                                  OFFSET(getStruct<T>, {0x204, 4, 0, 0})
-	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x208, 4, 0, 0})
-	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x20C, 12, 0, 0})
-	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x218, 16, 0, 0})
-	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FString)                                   ShaderSource                                                OFFSET(getStruct<T>, {0x238, 16, 0, 0})
+	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x208, 24, 0, 0})
+	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x220, 12, 0, 0})
+	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x230, 16, 0, 0})
+	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x240, 16, 0, 0})
+	SMember(FString)                                   ShaderSource                                                OFFSET(getStruct<T>, {0x250, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ComputeKernelFunction
@@ -716,35 +776,35 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ConstantValue
-/// Size: 0x0010 (0x000110 - 0x000120)
+/// Size: 0x0018 (0x000110 - 0x000128)
 class UOptimusNode_ConstantValue : public UOptimusNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 288;
+	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_CustomComputeKernel
-/// Size: 0x00C8 (0x000118 - 0x0001E0)
+/// Size: 0x00E0 (0x000118 - 0x0001F8)
 class UOptimusNode_CustomComputeKernel : public UOptimusNode_ComputeKernelBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 480;
+	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
 	SMember(FName)                                     category                                                    OFFSET(getStruct<T>, {0x138, 4, 0, 0})
 	SMember(FOptimusValidatedName)                     KernelName                                                  OFFSET(getStruct<T>, {0x13C, 4, 0, 0})
-	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x140, 4, 0, 0})
-	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x144, 12, 0, 0})
-	CMember(TArray<FOptimus_ShaderBinding>)            Parameters                                                  OFFSET(get<T>, {0x150, 16, 0, 0})
-	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x160, 16, 0, 0})
-	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FOptimusParameterBindingArray)             InputBindingArray                                           OFFSET(getStruct<T>, {0x180, 16, 0, 0})
-	SMember(FOptimusParameterBindingArray)             OutputBindingArray                                          OFFSET(getStruct<T>, {0x190, 16, 0, 0})
-	CMember(TArray<FOptimusSecondaryInputBindingsGroup>) SecondaryInputBindingGroups                               OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FOptimusShaderText)                        ShaderSource                                                OFFSET(getStruct<T>, {0x1C0, 32, 0, 0})
+	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x140, 24, 0, 0})
+	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x158, 12, 0, 0})
+	CMember(TArray<FOptimus_ShaderBinding>)            Parameters                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
+	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x178, 16, 0, 0})
+	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x188, 16, 0, 0})
+	SMember(FOptimusParameterBindingArray)             InputBindingArray                                           OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(FOptimusParameterBindingArray)             OutputBindingArray                                          OFFSET(getStruct<T>, {0x1A8, 16, 0, 0})
+	CMember(TArray<FOptimusSecondaryInputBindingsGroup>) SecondaryInputBindingGroups                               OFFSET(get<T>, {0x1B8, 16, 0, 0})
+	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	SMember(FOptimusShaderText)                        ShaderSource                                                OFFSET(getStruct<T>, {0x1D8, 32, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_FunctionReference
@@ -759,38 +819,38 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ResourceAccessorBase
-/// Size: 0x0070 (0x000110 - 0x000180)
+/// Size: 0x0078 (0x000110 - 0x000188)
 class UOptimusNode_ResourceAccessorBase : public UOptimusNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 384;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	CMember(TWeakObjectPtr<UOptimusResourceDescription*>) ResourceDesc                                             OFFSET(get<T>, {0x120, 8, 0, 0})
-	CMember(EOptimusBufferWriteType)                   WriteType                                                   OFFSET(get<T>, {0x128, 1, 0, 0})
-	SMember(FOptimusNode_ResourceAccessorBase_DuplicationInfo) DuplicationInfo                                     OFFSET(getStruct<T>, {0x130, 80, 0, 0})
+	CMember(TWeakObjectPtr<UOptimusResourceDescription*>) ResourceDesc                                             OFFSET(get<T>, {0x128, 8, 0, 0})
+	CMember(EOptimusBufferWriteType)                   WriteType                                                   OFFSET(get<T>, {0x130, 1, 0, 0})
+	SMember(FOptimusNode_ResourceAccessorBase_DuplicationInfo) DuplicationInfo                                     OFFSET(getStruct<T>, {0x138, 80, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_GetResource
-/// Size: 0x0000 (0x000180 - 0x000180)
+/// Size: 0x0000 (0x000188 - 0x000188)
 class UOptimusNode_GetResource : public UOptimusNode_ResourceAccessorBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 384;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_GetVariable
-/// Size: 0x0030 (0x000110 - 0x000140)
+/// Size: 0x0038 (0x000110 - 0x000148)
 class UOptimusNode_GetVariable : public UOptimusNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 320;
+	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	CMember(TWeakObjectPtr<UOptimusVariableDescription*>) VariableDesc                                             OFFSET(get<T>, {0x118, 8, 0, 0})
-	SMember(FOptimusNode_GetVariable_DuplicationInfo)  DuplicationInfo                                             OFFSET(getStruct<T>, {0x120, 32, 0, 0})
+	CMember(TWeakObjectPtr<UOptimusVariableDescription*>) VariableDesc                                             OFFSET(get<T>, {0x120, 8, 0, 0})
+	SMember(FOptimusNode_GetVariable_DuplicationInfo)  DuplicationInfo                                             OFFSET(getStruct<T>, {0x128, 32, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_GraphTerminal
@@ -806,21 +866,21 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_Resource
-/// Size: 0x0000 (0x000180 - 0x000180)
+/// Size: 0x0000 (0x000188 - 0x000188)
 class UOptimusNode_Resource : public UOptimusNode_ResourceAccessorBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 384;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 };
 
 /// Class /Script/OptimusCore.OptimusNode_SetResource
-/// Size: 0x0000 (0x000180 - 0x000180)
+/// Size: 0x0000 (0x000188 - 0x000188)
 class UOptimusNode_SetResource : public UOptimusNode_ResourceAccessorBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 384;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 };
@@ -906,30 +966,31 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusDeformer
-/// Size: 0x0100 (0x000028 - 0x000128)
+/// Size: 0x0110 (0x000028 - 0x000138)
 class UOptimusDeformer : public UMeshDeformer
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 296;
+	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
 	CMember(USkeletalMesh*)                            Mesh                                                        OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(TArray<FOptimusComputeGraphInfo>)          ComputeGraphs                                               OFFSET(get<T>, {0x50, 16, 0, 0})
-	CMember(UOptimusActionStack*)                      ActionStack                                                 OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(EOptimusDeformerStatus)                    Status                                                      OFFSET(get<T>, {0x68, 4, 0, 0})
-	CMember(TArray<UOptimusNodeGraph*>)                Graphs                                                      OFFSET(get<T>, {0x70, 16, 0, 0})
-	CMember(UOptimusComponentSourceBindingContainer*)  Bindings                                                    OFFSET(get<T>, {0x80, 8, 0, 0})
-	CMember(UOptimusVariableContainer*)                Variables                                                   OFFSET(get<T>, {0x88, 8, 0, 0})
-	CMember(UOptimusResourceContainer*)                Resources                                                   OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FOptimusConstantContainer)                 ConstantContainer                                           OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	CMember(UOptimusActionStack*)                      ActionStack                                                 OFFSET(get<T>, {0x70, 8, 0, 0})
+	CMember(EOptimusDeformerStatus)                    Status                                                      OFFSET(get<T>, {0x78, 4, 0, 0})
+	CMember(TArray<UOptimusNodeGraph*>)                Graphs                                                      OFFSET(get<T>, {0x80, 16, 0, 0})
+	CMember(UOptimusComponentSourceBindingContainer*)  Bindings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
+	CMember(UOptimusVariableContainer*)                Variables                                                   OFFSET(get<T>, {0x98, 8, 0, 0})
+	CMember(UOptimusResourceContainer*)                Resources                                                   OFFSET(get<T>, {0xA0, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/OptimusCore.OptimusDeformer.GetVariables
-	// TArray<UOptimusVariableDescription*> GetVariables();                                                                     // [0x9e2f7f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UOptimusVariableDescription*> GetVariables();                                                                     // [0xa68afb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusDeformer.GetResources
-	// TArray<UOptimusResourceDescription*> GetResources();                                                                     // [0x9e2f774] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UOptimusResourceDescription*> GetResources();                                                                     // [0xa68af34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusDeformer.GetComponentBindings
-	// TArray<UOptimusComponentSourceBinding*> GetComponentBindings();                                                          // [0x9e2f634] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UOptimusComponentSourceBinding*> GetComponentBindings();                                                          // [0xa68adf4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/OptimusCore.OptimusDeformerInstanceSettings
@@ -945,36 +1006,39 @@ public:
 };
 
 /// Class /Script/OptimusCore.OptimusDeformerInstance
-/// Size: 0x00B8 (0x000028 - 0x0000E0)
+/// Size: 0x0140 (0x000028 - 0x000168)
 class UOptimusDeformerInstance : public UMeshDeformerInstance
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 224;
+	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
 	CMember(TWeakObjectPtr<UMeshComponent*>)           MeshComponent                                               OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TWeakObjectPtr<UOptimusDeformerInstanceSettings*>) InstanceSettings                                    OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<FOptimusDeformerInstanceExecInfo>)  ComputeGraphExecInfos                                       OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(UOptimusVariableContainer*)                Variables                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    WeakBoundComponents                                         OFFSET(get<T>, {0x50, 16, 0, 0})
+	CMember(TArray<TWeakObjectPtr>)                    WeakComponentSources                                        OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FOptimusConstantContainer)                 ConstantContainer                                           OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetVectorVariable
-	// bool SetVectorVariable(FName InVariableName, FVector& InValue);                                                          // [0x9e30acc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetVectorVariable(FName InVariableName, FVector& InValue);                                                          // [0xa68c72c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetVector4Variable
-	// bool SetVector4Variable(FName InVariableName, FVector4& InValue);                                                        // [0x9e309e0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetVector4Variable(FName InVariableName, FVector4& InValue);                                                        // [0xa68c640] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetTransformVariable
-	// bool SetTransformVariable(FName InVariableName, FTransform& InValue);                                                    // [0x9e30888] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool SetTransformVariable(FName InVariableName, FTransform& InValue);                                                    // [0xa68c4e8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetIntVariable
-	// bool SetIntVariable(FName InVariableName, int32_t InValue);                                                              // [0x9e307b4] Final|Native|Public|BlueprintCallable 
+	// bool SetIntVariable(FName InVariableName, int32_t InValue);                                                              // [0xa68c414] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetFloatVariable
-	// bool SetFloatVariable(FName InVariableName, double InValue);                                                             // [0x9e30644] Final|Native|Public|BlueprintCallable 
+	// bool SetFloatVariable(FName InVariableName, double InValue);                                                             // [0xa68c2a4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.SetBoolVariable
-	// bool SetBoolVariable(FName InVariableName, bool InValue);                                                                // [0x9e3056c] Final|Native|Public|BlueprintCallable 
+	// bool SetBoolVariable(FName InVariableName, bool InValue);                                                                // [0xa68c1cc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.GetVariables
-	// TArray<UOptimusVariableDescription*> GetVariables();                                                                     // [0x9e2f810] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UOptimusVariableDescription*> GetVariables();                                                                     // [0xa68afd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
-	// bool EnqueueTriggerGraph(FName InTriggerGraphName);                                                                      // [0x9e2f4bc] Final|Native|Public|BlueprintCallable 
+	// bool EnqueueTriggerGraph(FName InTriggerGraphName);                                                                      // [0xa68ac78] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/OptimusCore.OptimusNodeGraph
@@ -993,67 +1057,67 @@ public:
 
 	/// Functions
 	// Function /Script/OptimusCore.OptimusNodeGraph.RenameGraph
-	// bool RenameGraph(UOptimusNodeGraph* InGraph, FString InNewName);                                                         // [0x9e2fe94] Final|Native|Public|BlueprintCallable 
+	// bool RenameGraph(UOptimusNodeGraph* InGraph, FString InNewName);                                                         // [0xa68bb98] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.RemoveNodes
-	// bool RemoveNodes(TArray<UOptimusNode*>& InNodes);                                                                        // [0x9e2fde8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// bool RemoveNodes(TArray<UOptimusNode*>& InNodes);                                                                        // [0xa68b578] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.RemoveNode
-	// bool RemoveNode(UOptimusNode* InNode);                                                                                   // [0x9e2fd28] Final|Native|Public|BlueprintCallable 
+	// bool RemoveNode(UOptimusNode* InNode);                                                                                   // [0xa68b4e8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.RemoveLink
-	// bool RemoveLink(UOptimusNodePin* InNodeOutputPin, UOptimusNodePin* InNodeInputPin);                                      // [0x9e2fc08] Final|Native|Public|BlueprintCallable 
+	// bool RemoveLink(UOptimusNodePin* InNodeOutputPin, UOptimusNodePin* InNodeInputPin);                                      // [0xa68b3c8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.RemoveAllLinks
-	// bool RemoveAllLinks(UOptimusNodePin* InNodePin);                                                                         // [0x9e2fb78] Final|Native|Public|BlueprintCallable 
+	// bool RemoveAllLinks(UOptimusNodePin* InNodePin);                                                                         // [0xa68b338] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.MoveGraph
-	// bool MoveGraph(UOptimusNodeGraph* InGraph, int32_t InInsertBefore);                                                      // [0x9e2fab4] Final|Native|Public|BlueprintCallable 
+	// bool MoveGraph(UOptimusNodeGraph* InGraph, int32_t InInsertBefore);                                                      // [0xa68b274] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsSubGraphReference
-	// bool IsSubGraphReference(UOptimusNode* InNode);                                                                          // [0x9e2fa1c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsSubGraphReference(UOptimusNode* InNode);                                                                          // [0xa68b1dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsKernelFunction
-	// bool IsKernelFunction(UOptimusNode* InNode);                                                                             // [0x9e2f990] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsKernelFunction(UOptimusNode* InNode);                                                                             // [0xa68b150] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsFunctionReference
-	// bool IsFunctionReference(UOptimusNode* InNode);                                                                          // [0x9e2f8f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsFunctionReference(UOptimusNode* InNode);                                                                          // [0xa68b0b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsFunctionGraph
-	// bool IsFunctionGraph();                                                                                                  // [0x9e2f8e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsFunctionGraph();                                                                                                  // [0xa68b0a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsExecutionGraph
-	// bool IsExecutionGraph();                                                                                                 // [0x9e2f8c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsExecutionGraph();                                                                                                 // [0xa68b088] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.IsCustomKernel
-	// bool IsCustomKernel(UOptimusNode* InNode);                                                                               // [0x9e2f830] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsCustomKernel(UOptimusNode* InNode);                                                                               // [0xa68aff0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.GetGraphType
-	// EOptimusNodeGraphType GetGraphType();                                                                                    // [0x597e460] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// EOptimusNodeGraphType GetGraphType();                                                                                    // [0x581c680] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.GetGraphs
-	// TArray<UOptimusNodeGraph*> GetGraphs();                                                                                  // [0x9e2f6ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<UOptimusNodeGraph*> GetGraphs();                                                                                  // [0xa68aeac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.GetGraphIndex
-	// int32_t GetGraphIndex();                                                                                                 // [0x9e2f6b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetGraphIndex();                                                                                                 // [0xa68ae70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNodeGraph.ExpandCollapsedNodes
-	// TArray<UOptimusNode*> ExpandCollapsedNodes(UOptimusNode* InFunctionNode);                                                // [0x9e2f594] Final|Native|Public|BlueprintCallable 
+	// TArray<UOptimusNode*> ExpandCollapsedNodes(UOptimusNode* InFunctionNode);                                                // [0xa68ad54] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.DuplicateNodes
-	// bool DuplicateNodes(TArray<UOptimusNode*>& InNodes, FVector2D& InPosition);                                              // [0x9e2ed9c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool DuplicateNodes(TArray<UOptimusNode*>& InNodes, FVector2D& InPosition);                                              // [0xa68a5fc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.DuplicateNode
-	// UOptimusNode* DuplicateNode(UOptimusNode* InNode, FVector2D& InPosition);                                                // [0x9e2ebe8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* DuplicateNode(UOptimusNode* InNode, FVector2D& InPosition);                                                // [0xa68a448] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.ConvertFunctionToCustomKernel
-	// UOptimusNode* ConvertFunctionToCustomKernel(UOptimusNode* InKernelFunction);                                             // [0x9e2eb58] Final|Native|Public|BlueprintCallable 
+	// UOptimusNode* ConvertFunctionToCustomKernel(UOptimusNode* InKernelFunction);                                             // [0xa68a3b8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.ConvertCustomKernelToFunction
-	// UOptimusNode* ConvertCustomKernelToFunction(UOptimusNode* InCustomKernel);                                               // [0x9e2eac8] Final|Native|Public|BlueprintCallable 
+	// UOptimusNode* ConvertCustomKernelToFunction(UOptimusNode* InCustomKernel);                                               // [0xa68a328] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.CollapseNodesToSubGraph
-	// UOptimusNode* CollapseNodesToSubGraph(TArray<UOptimusNode*>& InNodes);                                                   // [0x9e2ea1c] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UOptimusNode* CollapseNodesToSubGraph(TArray<UOptimusNode*>& InNodes);                                                   // [0xa689d04] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.CollapseNodesToFunction
-	// UOptimusNode* CollapseNodesToFunction(TArray<UOptimusNode*>& InNodes);                                                   // [0x9e2e990] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// UOptimusNode* CollapseNodesToFunction(TArray<UOptimusNode*>& InNodes);                                                   // [0xa6896fc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddVariableGetNode
-	// UOptimusNode* AddVariableGetNode(UOptimusVariableDescription* InVariableDesc, FVector2D& InPosition);                    // [0x9e2e888] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddVariableGetNode(UOptimusVariableDescription* InVariableDesc, FVector2D& InPosition);                    // [0xa6895d8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddValueNode
-	// UOptimusNode* AddValueNode(FOptimusDataTypeRef InDataTypeRef, FVector2D& InPosition);                                    // [0x9e2e69c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddValueNode(FOptimusDataTypeRef InDataTypeRef, FVector2D& InPosition);                                    // [0xa689424] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddResourceSetNode
-	// UOptimusNode* AddResourceSetNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                    // [0x9e2e594] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddResourceSetNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                    // [0xa689300] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddResourceNode
-	// UOptimusNode* AddResourceNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                       // [0x9e2e48c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddResourceNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                       // [0xa6891dc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddResourceGetNode
-	// UOptimusNode* AddResourceGetNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                    // [0x9e2e384] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddResourceGetNode(UOptimusResourceDescription* InResourceDesc, FVector2D& InPosition);                    // [0xa6890b8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddNode
-	// UOptimusNode* AddNode(UClass* InNodeClass, FVector2D& InPosition);                                                       // [0x9e2e290] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddNode(UClass* InNodeClass, FVector2D& InPosition);                                                       // [0xa688fb4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddLink
-	// bool AddLink(UOptimusNodePin* InNodeOutputPin, UOptimusNodePin* InNodeInputPin);                                         // [0x9e2e1cc] Final|Native|Public|BlueprintCallable 
+	// bool AddLink(UOptimusNodePin* InNodeOutputPin, UOptimusNodePin* InNodeInputPin);                                         // [0xa688ef0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddDataInterfaceNode
-	// UOptimusNode* AddDataInterfaceNode(UClass* InDataInterfaceClass, FVector2D& InPosition);                                 // [0x9e2e0f0] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddDataInterfaceNode(UClass* InDataInterfaceClass, FVector2D& InPosition);                                 // [0xa688e00] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddComponentBindingGetNode
-	// UOptimusNode* AddComponentBindingGetNode(UOptimusComponentSourceBinding* InComponentBinding, FVector2D& InPosition);     // [0x9e2e014] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// UOptimusNode* AddComponentBindingGetNode(UOptimusComponentSourceBinding* InComponentBinding, FVector2D& InPosition);     // [0xa688d24] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/OptimusCore.OptimusNodeSubGraph
@@ -1171,18 +1235,6 @@ public:
 	CMember(TArray<char>)                              ValueData                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
-/// Struct /Script/OptimusCore.OptimusExecutionDomain
-/// Size: 0x0004 (0x000000 - 0x000004)
-class FOptimusExecutionDomain : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 4;
-
-public:
-	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-};
-
 /// Struct /Script/OptimusCore.Optimus_ShaderBinding
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FOptimus_ShaderBinding : public MDKBase
@@ -1210,17 +1262,19 @@ public:
 };
 
 /// Struct /Script/OptimusCore.OptimusParameterBinding
-/// Size: 0x0050 (0x000000 - 0x000050)
+/// Size: 0x0058 (0x000000 - 0x000058)
 class FOptimusParameterBinding : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 80;
+	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	SMember(FOptimusValidatedName)                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x4, 12, 0, 0})
 	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x10, 64, 0, 0})
+	DMember(bool)                                      bSupportAtomicIfCompatibleDataType                          OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bSupportRead                                                OFFSET(get<bool>, {0x51, 1, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDataDomain
@@ -1261,6 +1315,88 @@ class FOptimusParameterBindingArray : public MDKBase
 
 public:
 	CMember(TArray<FOptimusParameterBinding>)          InnerArray                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusConstantIdentifier
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FOptimusConstantIdentifier : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	SMember(FName)                                     NodePath                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ConstantName                                                OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusConstantDefinition
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FOptimusConstantDefinition : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	SMember(FOptimusConstantIdentifier)                ReferencedConstant                                          OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FString)                                   Expression                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusConstant
+/// Size: 0x0038 (0x000000 - 0x000038)
+class FOptimusConstant : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+	SMember(FOptimusConstantIdentifier)                Identifier                                                  OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FOptimusConstantDefinition)                Definition                                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	DMember(int32_t)                                   ComponentBindingIndex                                       OFFSET(get<int32_t>, {0x30, 4, 0, 0})
+	CMember(EOptimusConstantType)                      Type                                                        OFFSET(get<T>, {0x34, 4, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusConstantIndex
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FOptimusConstantIndex : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 12;
+
+public:
+	DMember(int32_t)                                   KernelIndex                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
+	CMember(EOptimusConstantType)                      Type                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	DMember(int32_t)                                   ConstantIndex                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusKernelConstantContainer
+/// Size: 0x0070 (0x000000 - 0x000070)
+class FOptimusKernelConstantContainer : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	CMember(TArray<FOptimusConstant>)                  InputConstants                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FOptimusConstant>)                  OutputConstants                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	CMember(TMap<FName, int32_t>)                      GroupNameToBindingIndex                                     OFFSET(get<T>, {0x20, 80, 0, 0})
+};
+
+/// Struct /Script/OptimusCore.OptimusConstantContainer
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FOptimusConstantContainer : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(TArray<FOptimusKernelConstantContainer>)   KernelContainers                                            OFFSET(get<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusShaderText
@@ -1858,6 +1994,20 @@ public:
 	SMember(FName)                                     ComponentName                                               OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
+/// Struct /Script/OptimusCore.OptimusExecutionDomain
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FOptimusExecutionDomain : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	CMember(EOptimusExecutionDomainType)               Type                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FString)                                   Expression                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+};
+
 /// Struct /Script/OptimusCore.OptimusVariableMetaDataEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FOptimusVariableMetaDataEntry : public MDKBase
@@ -1869,6 +2019,15 @@ class FOptimusVariableMetaDataEntry : public MDKBase
 public:
 	SMember(FName)                                     Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+};
+
+/// Enum /Script/OptimusCore.EOptimusConstantType
+/// Size: 0x03
+enum EOptimusConstantType : uint8_t
+{
+	EOptimusConstantType__Input0                                                     = 0,
+	EOptimusConstantType__Output1                                                    = 1,
+	EOptimusConstantType__EOptimusConstantType_MAX2                                  = 2
 };
 
 /// Enum /Script/OptimusCore.EOptimusDiagnosticLevel
@@ -1953,6 +2112,15 @@ enum EOptimusDeformerStatus : uint8_t
 	EOptimusDeformerStatus__Modified2                                                = 2,
 	EOptimusDeformerStatus__HasErrors3                                               = 3,
 	EOptimusDeformerStatus__EOptimusDeformerStatus_MAX4                              = 4
+};
+
+/// Enum /Script/OptimusCore.EOptimusExecutionDomainType
+/// Size: 0x03
+enum EOptimusExecutionDomainType : uint8_t
+{
+	EOptimusExecutionDomainType__DomainName0                                         = 0,
+	EOptimusExecutionDomainType__Expression1                                         = 1,
+	EOptimusExecutionDomainType__EOptimusExecutionDomainType_MAX2                    = 2
 };
 
 /// Enum /Script/OptimusCore.EOptimusNodeGraphType

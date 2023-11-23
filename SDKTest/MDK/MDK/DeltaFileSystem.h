@@ -50,11 +50,11 @@ public:
 };
 
 /// Class /Script/DeltaFileSystem.DeltaFileSaveHandler
-/// Size: 0x00A8 (0x000028 - 0x0000D0)
+/// Size: 0x00C8 (0x000028 - 0x0000F0)
 class UDeltaFileSaveHandler : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 208;
+	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
 };
@@ -105,7 +105,7 @@ class FDeltaAction : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     ActorGUID                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     ActorGuid                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	SMember(FDateTime)                                 CommitTime                                                  OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 	DMember(uint32_t)                                  DataHash                                                    OFFSET(get<uint32_t>, {0x18, 4, 0, 0})
 };

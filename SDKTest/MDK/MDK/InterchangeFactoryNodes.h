@@ -48,6 +48,36 @@ class UInterchangeStandardCameraFactoryNode : public UInterchangeActorFactoryNod
 public:
 };
 
+/// Class /Script/InterchangeFactoryNodes.InterchangeDecalActorFactoryNode
+/// Size: 0x0030 (0x000170 - 0x0001A0)
+class UInterchangeDecalActorFactoryNode : public UInterchangeActorFactoryNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+};
+
+/// Class /Script/InterchangeFactoryNodes.InterchangeBaseMaterialFactoryNode
+/// Size: 0x0000 (0x000140 - 0x000140)
+class UInterchangeBaseMaterialFactoryNode : public UInterchangeFactoryBaseNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 320;
+
+public:
+};
+
+/// Class /Script/InterchangeFactoryNodes.InterchangeDecalMaterialFactoryNode
+/// Size: 0x0020 (0x000140 - 0x000160)
+class UInterchangeDecalMaterialFactoryNode : public UInterchangeBaseMaterialFactoryNode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 352;
+
+public:
+};
+
 /// Class /Script/InterchangeFactoryNodes.InterchangeBaseLightFactoryNode
 /// Size: 0x0040 (0x000170 - 0x0001B0)
 class UInterchangeBaseLightFactoryNode : public UInterchangeActorFactoryNode
@@ -228,16 +258,6 @@ class UInterchangeCommonPipelineDataFactoryNode : public UInterchangeFactoryBase
 public:
 };
 
-/// Class /Script/InterchangeFactoryNodes.InterchangeBaseMaterialFactoryNode
-/// Size: 0x0000 (0x000140 - 0x000140)
-class UInterchangeBaseMaterialFactoryNode : public UInterchangeFactoryBaseNode
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 320;
-
-public:
-};
-
 /// Class /Script/InterchangeFactoryNodes.InterchangeMaterialFactoryNode
 /// Size: 0x0070 (0x000140 - 0x0001B0)
 class UInterchangeMaterialFactoryNode : public UInterchangeBaseMaterialFactoryNode
@@ -319,11 +339,11 @@ public:
 };
 
 /// Class /Script/InterchangeFactoryNodes.InterchangeSkeletalMeshFactoryNode
-/// Size: 0x00C8 (0x0002B0 - 0x000378)
+/// Size: 0x00D8 (0x0002B0 - 0x000388)
 class UInterchangeSkeletalMeshFactoryNode : public UInterchangeMeshFactoryNode
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 888;
+	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
 };

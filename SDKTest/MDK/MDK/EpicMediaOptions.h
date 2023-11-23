@@ -7,12 +7,12 @@
 
 
 /// Struct /Script/EpicMediaOptions.EpicMediaOptions
-/// Size: 0x0108 (0x000000 - 0x000108)
+/// Size: 0x0110 (0x000000 - 0x000110)
 class FEpicMediaOptions : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 264;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	DMember(int32_t)                                   FrameRate                                                   OFFSET(get<int32_t>, {0x4, 4, 0, 0})
@@ -38,5 +38,7 @@ public:
 	CMember(TArray<FString>)                           VODHostNamesCNHF                                            OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<FString>)                           LiveHostNamesCNHF                                           OFFSET(get<T>, {0xE0, 16, 0, 0})
 	DMember(bool)                                      bUseQuicksilverEntryPoint                                   OFFSET(get<bool>, {0xF0, 1, 0, 0})
+	DMember(bool)                                      bUseSegmentCaching                                          OFFSET(get<bool>, {0x108, 1, 0, 0})
+	DMember(bool)                                      bForceSegmentCaching                                        OFFSET(get<bool>, {0x109, 1, 0, 0})
 };
 

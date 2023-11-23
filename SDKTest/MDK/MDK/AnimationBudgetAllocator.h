@@ -19,21 +19,21 @@ public:
 };
 
 /// Class /Script/AnimationBudgetAllocator.SkeletalMeshComponentBudgeted
-/// Size: 0x0030 (0x000F90 - 0x000FC0)
+/// Size: 0x0030 (0x000FA0 - 0x000FD0)
 class USkeletalMeshComponentBudgeted : public USkeletalMeshComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4032;
+	static inline constexpr uint64_t __MDKClassSize = 4048;
 
 public:
-	DMember(bool)                                      bAutoRegisterWithBudgetAllocator                            OFFSET(get<bool>, {0xFB0, 1, 1, 0})
-	DMember(bool)                                      bAutoCalculateSignificance                                  OFFSET(get<bool>, {0xFB0, 1, 1, 1})
-	DMember(bool)                                      bShouldUseActorRenderedFlag                                 OFFSET(get<bool>, {0xFB0, 1, 1, 2})
+	DMember(bool)                                      bAutoRegisterWithBudgetAllocator                            OFFSET(get<bool>, {0xFC0, 1, 1, 0})
+	DMember(bool)                                      bAutoCalculateSignificance                                  OFFSET(get<bool>, {0xFC0, 1, 1, 1})
+	DMember(bool)                                      bShouldUseActorRenderedFlag                                 OFFSET(get<bool>, {0xFC0, 1, 1, 2})
 
 
 	/// Functions
 	// Function /Script/AnimationBudgetAllocator.SkeletalMeshComponentBudgeted.SetAutoRegisterWithBudgetAllocator
-	// void SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator);                                        // [0x638cc08] Final|Native|Public|BlueprintCallable 
+	// void SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator);                                        // [0x63649d4] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/AnimationBudgetAllocator.AnimationBudgetAllocatorParameters

@@ -25,9 +25,9 @@ public:
 
 	/// Functions
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportSpawnerComponent.HandleWarmupCountdownEndTimeUpdated
-	// void HandleWarmupCountdownEndTimeUpdated(float NewEndTime);                                                              // [0x9d28d2c] Final|Native|Protected 
+	// void HandleWarmupCountdownEndTimeUpdated(float NewEndTime);                                                              // [0xa13dad0] Final|Native|Protected 
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportSpawnerComponent.HandleGamePhaseChanged
-	// void HandleGamePhaseChanged(FFortGamePhaseUpdatedEvent& Event);                                                          // [0x9d28ca0] Final|Native|Protected|HasOutParms 
+	// void HandleGamePhaseChanged(FFortGamePhaseUpdatedEvent& Event);                                                          // [0xa13da44] Final|Native|Protected|HasOutParms 
 };
 
 /// Class /Script/FallTeleportationRuntime.FortFallTeleportCheatManager
@@ -71,10 +71,10 @@ public:
 
 	/// Functions
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportComponentBase.UpdateLastGroundLocation
-	// void UpdateLastGroundLocation(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x9d28f4c] Final|Native|Protected 
+	// void UpdateLastGroundLocation(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0xa13dd30] Final|Native|Protected 
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportComponentBase.IsValidActorToTeleportOn
-	// bool IsValidActorToTeleportOn(AActor* ActorToTeleportOn);                                                                // [0x9d28e3c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsValidActorToTeleportOn(AActor* ActorToTeleportOn);                                                                // [0xa13dc20] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportComponentBase.IsTeleportLocationValid
-	// bool IsTeleportLocationValid(FVector& LocationToTest);                                                                   // [0x9d28da8] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTeleportLocationValid(FVector& LocationToTest);                                                                   // [0xa13db4c] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 };
 

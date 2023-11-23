@@ -120,6 +120,26 @@ class ULinkedAnimGraphLibrary : public UBlueprintFunctionLibrary
 public:
 };
 
+/// Class /Script/AnimGraphRuntime.MirrorAnimLibrary
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UMirrorAnimLibrary : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/AnimGraphRuntime.ModifyCurveAnimLibrary
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UModifyCurveAnimLibrary : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/AnimGraphRuntime.PlayMontageCallbackProxy
 /// Size: 0x0080 (0x000028 - 0x0000A8)
 class UPlayMontageCallbackProxy : public UObject
@@ -137,15 +157,15 @@ public:
 
 	/// Functions
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x579de00] Final|RequiredAPI|Native|Protected|HasOutParms 
+	// void OnNotifyEndReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                   // [0x5607438] Final|RequiredAPI|Native|Protected|HasOutParms 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x579dd20] Final|RequiredAPI|Native|Protected|HasOutParms 
+	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x2443ff4] Final|RequiredAPI|Native|Protected|HasOutParms 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-	// void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);                                                           // [0x579dc58] Final|RequiredAPI|Native|Protected 
+	// void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);                                                           // [0x5607370] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x579db90] Final|RequiredAPI|Native|Protected 
+	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x56072a8] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-	// UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(USkeletalMeshComponent* InSkeletalMeshComponent, UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, FName StartingSection); // [0x579a198] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+	// UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(USkeletalMeshComponent* InSkeletalMeshComponent, UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, FName StartingSection); // [0x2444188] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/AnimGraphRuntime.SequenceEvaluatorLibrary
@@ -885,7 +905,7 @@ class FAnimNode_RotateRootBone : public FAnimNode_Base
 
 public:
 	SMember(FPoseLink)                                 BasePose                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
-	DMember(float)                                     Pitch                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     pitch                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     Yaw                                                         OFFSET(get<float>, {0x24, 4, 0, 0})
 	SMember(FInputScaleBiasClamp)                      PitchScaleBiasClamp                                         OFFSET(getStruct<T>, {0x28, 48, 0, 0})
 	SMember(FInputScaleBiasClamp)                      YawScaleBiasClamp                                           OFFSET(getStruct<T>, {0x58, 48, 0, 0})
@@ -956,12 +976,12 @@ public:
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_SequenceEvaluator_Standalone
-/// Size: 0x0020 (0x000040 - 0x000060)
+/// Size: 0x0028 (0x000040 - 0x000068)
 class FAnimNode_SequenceEvaluator_Standalone : public FAnimNode_SequenceEvaluatorBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 96;
+	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
 	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0x40, 4, 0, 0})
@@ -970,10 +990,12 @@ public:
 	DMember(bool)                                      bIgnoreForRelevancyTest                                     OFFSET(get<bool>, {0x46, 1, 0, 0})
 	CMember(UAnimSequenceBase*)                        Sequence                                                    OFFSET(get<T>, {0x48, 8, 0, 0})
 	DMember(float)                                     ExplicitTime                                                OFFSET(get<float>, {0x50, 4, 0, 0})
-	DMember(bool)                                      bShouldLoop                                                 OFFSET(get<bool>, {0x54, 1, 0, 0})
-	DMember(bool)                                      bTeleportToExplicitTime                                     OFFSET(get<bool>, {0x55, 1, 0, 0})
-	CMember(TEnumAsByte<ESequenceEvalReinit>)          ReinitializationBehavior                                    OFFSET(get<T>, {0x56, 1, 0, 0})
-	DMember(float)                                     StartPosition                                               OFFSET(get<float>, {0x58, 4, 0, 0})
+	DMember(bool)                                      bUseExplicitFrame                                           OFFSET(get<bool>, {0x54, 1, 0, 0})
+	DMember(int32_t)                                   ExplicitFrame                                               OFFSET(get<int32_t>, {0x58, 4, 0, 0})
+	DMember(bool)                                      bShouldLoop                                                 OFFSET(get<bool>, {0x5C, 1, 0, 0})
+	DMember(bool)                                      bTeleportToExplicitTime                                     OFFSET(get<bool>, {0x5D, 1, 0, 0})
+	CMember(TEnumAsByte<ESequenceEvalReinit>)          ReinitializationBehavior                                    OFFSET(get<T>, {0x5E, 1, 0, 0})
+	DMember(float)                                     StartPosition                                               OFFSET(get<float>, {0x60, 4, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_Slot
@@ -1492,35 +1514,36 @@ public:
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_RigidBody
-/// Size: 0x0888 (0x0000C8 - 0x000950)
+/// Size: 0x0898 (0x0000C8 - 0x000960)
 class FAnimNode_RigidBody : public FAnimNode_SkeletalControlBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 2384;
+	static inline constexpr uint64_t __MDKClassSize = 2400;
 
 public:
 	CMember(UPhysicsAsset*)                            OverridePhysicsAsset                                        OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FVector)                                   OverrideWorldGravity                                        OFFSET(getStruct<T>, {0x1F8, 24, 0, 0})
-	SMember(FVector)                                   ExternalForce                                               OFFSET(getStruct<T>, {0x210, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearAccScale                                     OFFSET(getStruct<T>, {0x228, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearVelScale                                     OFFSET(getStruct<T>, {0x240, 24, 0, 0})
-	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              OFFSET(getStruct<T>, {0x258, 24, 0, 0})
-	SMember(FSimSpaceSettings)                         SimSpaceSettings                                            OFFSET(getStruct<T>, {0x270, 96, 0, 0})
-	DMember(float)                                     CachedBoundsScale                                           OFFSET(get<float>, {0x2D0, 4, 0, 0})
-	SMember(FBoneReference)                            BaseBoneRef                                                 OFFSET(getStruct<T>, {0x2D4, 12, 0, 0})
-	CMember(TEnumAsByte<ECollisionChannel>)            OverlapChannel                                              OFFSET(get<T>, {0x2E0, 1, 0, 0})
-	CMember(ESimulationSpace)                          SimulationSpace                                             OFFSET(get<T>, {0x2E1, 1, 0, 0})
-	DMember(bool)                                      bForceDisableCollisionBetweenConstraintBodies               OFFSET(get<bool>, {0x2E2, 1, 0, 0})
-	DMember(bool)                                      bUseExternalClothCollision                                  OFFSET(get<bool>, {0x2E3, 1, 0, 0})
-	DMember(bool)                                      bEnableWorldGeometry                                        OFFSET(get<bool>, {0x2E5, 1, 1, 0})
-	DMember(bool)                                      bOverrideWorldGravity                                       OFFSET(get<bool>, {0x2E5, 1, 1, 1})
-	DMember(bool)                                      bTransferBoneVelocities                                     OFFSET(get<bool>, {0x2E5, 1, 1, 2})
-	DMember(bool)                                      bFreezeIncomingPoseOnStart                                  OFFSET(get<bool>, {0x2E5, 1, 1, 3})
-	DMember(bool)                                      bClampLinearTranslationLimitToRefPose                       OFFSET(get<bool>, {0x2E5, 1, 1, 4})
-	DMember(float)                                     WorldSpaceMinimumScale                                      OFFSET(get<float>, {0x2E8, 4, 0, 0})
-	DMember(float)                                     EvaluationResetTime                                         OFFSET(get<float>, {0x2EC, 4, 0, 0})
-	CMember(ESimulationTiming)                         SimulationTiming                                            OFFSET(get<T>, {0x2F1, 1, 0, 0})
+	DMember(bool)                                      bDefaultToSkeletalMeshPhysicsAsset                          OFFSET(get<bool>, {0xD0, 1, 0, 0})
+	SMember(FVector)                                   OverrideWorldGravity                                        OFFSET(getStruct<T>, {0x208, 24, 0, 0})
+	SMember(FVector)                                   ExternalForce                                               OFFSET(getStruct<T>, {0x220, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearAccScale                                     OFFSET(getStruct<T>, {0x238, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearVelScale                                     OFFSET(getStruct<T>, {0x250, 24, 0, 0})
+	SMember(FVector)                                   ComponentAppliedLinearAccClamp                              OFFSET(getStruct<T>, {0x268, 24, 0, 0})
+	SMember(FSimSpaceSettings)                         SimSpaceSettings                                            OFFSET(getStruct<T>, {0x280, 96, 0, 0})
+	DMember(float)                                     CachedBoundsScale                                           OFFSET(get<float>, {0x2E0, 4, 0, 0})
+	SMember(FBoneReference)                            BaseBoneRef                                                 OFFSET(getStruct<T>, {0x2E4, 12, 0, 0})
+	CMember(TEnumAsByte<ECollisionChannel>)            OverlapChannel                                              OFFSET(get<T>, {0x2F0, 1, 0, 0})
+	CMember(ESimulationSpace)                          SimulationSpace                                             OFFSET(get<T>, {0x2F1, 1, 0, 0})
+	DMember(bool)                                      bForceDisableCollisionBetweenConstraintBodies               OFFSET(get<bool>, {0x2F2, 1, 0, 0})
+	DMember(bool)                                      bUseExternalClothCollision                                  OFFSET(get<bool>, {0x2F3, 1, 0, 0})
+	DMember(bool)                                      bEnableWorldGeometry                                        OFFSET(get<bool>, {0x2F5, 1, 1, 0})
+	DMember(bool)                                      bOverrideWorldGravity                                       OFFSET(get<bool>, {0x2F5, 1, 1, 1})
+	DMember(bool)                                      bTransferBoneVelocities                                     OFFSET(get<bool>, {0x2F5, 1, 1, 2})
+	DMember(bool)                                      bFreezeIncomingPoseOnStart                                  OFFSET(get<bool>, {0x2F5, 1, 1, 3})
+	DMember(bool)                                      bClampLinearTranslationLimitToRefPose                       OFFSET(get<bool>, {0x2F5, 1, 1, 4})
+	DMember(float)                                     WorldSpaceMinimumScale                                      OFFSET(get<float>, {0x2F8, 4, 0, 0})
+	DMember(float)                                     EvaluationResetTime                                         OFFSET(get<float>, {0x2FC, 4, 0, 0})
+	CMember(ESimulationTiming)                         SimulationTiming                                            OFFSET(get<T>, {0x301, 1, 0, 0})
 };
 
 /// Struct /Script/AnimGraphRuntime.AnimNode_ScaleChainLength
@@ -1744,6 +1767,28 @@ public:
 /// Struct /Script/AnimGraphRuntime.LinkedAnimGraphReference
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FLinkedAnimGraphReference : public FAnimNodeReference
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+};
+
+/// Struct /Script/AnimGraphRuntime.MirrorAnimNodeReference
+/// Size: 0x0000 (0x000010 - 0x000010)
+class FMirrorAnimNodeReference : public FAnimNodeReference
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+};
+
+/// Struct /Script/AnimGraphRuntime.ModifyCurveAnimNodeReference
+/// Size: 0x0000 (0x000010 - 0x000010)
+class FModifyCurveAnimNodeReference : public FAnimNodeReference
 { 
 	friend MDKHandler;
 	friend MDKBase;

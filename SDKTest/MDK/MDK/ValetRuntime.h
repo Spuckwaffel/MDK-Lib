@@ -68,33 +68,33 @@ public:
 };
 
 /// Class /Script/ValetRuntime.DagwoodNetworkPhysicsComponent
-/// Size: 0x0DB0 (0x0000A0 - 0x000E50)
+/// Size: 0x0DC0 (0x0000A0 - 0x000E60)
 class UDagwoodNetworkPhysicsComponent : public UActorComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3664;
+	static inline constexpr uint64_t __MDKClassSize = 3680;
 
 public:
 	SMember(FNetworkPhysicsState)                      NetworkPhysicsState                                         OFFSET(getStruct<T>, {0xA0, 144, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnGeneratedLocalInputCmd                                    OFFSET(getStruct<T>, {0x130, 16, 0, 0})
-	SMember(FDagwoodManagedState)                      ReplicatedManagedState                                      OFFSET(getStruct<T>, {0x140, 1112, 0, 0})
-	SMember(FDagwoodManagedState)                      InManagedState                                              OFFSET(getStruct<T>, {0x598, 1112, 0, 0})
-	SMember(FDagwoodManagedState)                      OutManagedState                                             OFFSET(getStruct<T>, {0x9F0, 1112, 0, 0})
+	SMember(FDagwoodManagedState)                      ReplicatedManagedState                                      OFFSET(getStruct<T>, {0x140, 1120, 0, 0})
+	SMember(FDagwoodManagedState)                      InManagedState                                              OFFSET(getStruct<T>, {0x5A0, 1120, 0, 0})
+	SMember(FDagwoodManagedState)                      OutManagedState                                             OFFSET(getStruct<T>, {0xA00, 1120, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.SetState_GT
-	// void SetState_GT(FDagwoodInPersistent& In);                                                                              // [0x99b42c0] Final|Native|Public|HasOutParms 
+	// void SetState_GT(FDagwoodInPersistent& In);                                                                              // [0x9e7c028] Final|Native|Public|HasOutParms 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.SetPendingInputCmd
-	// void SetPendingInputCmd(FFortDagwoodCmd& In);                                                                            // [0x99b3eac] Final|Native|Public|HasOutParms 
+	// void SetPendingInputCmd(FFortDagwoodCmd& In);                                                                            // [0x9e7bc14] Final|Native|Public|HasOutParms 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.OnGeneratedLocalInputCmd__DelegateSignature
-	// void OnGeneratedLocalInputCmd__DelegateSignature();                                                                      // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void OnGeneratedLocalInputCmd__DelegateSignature();                                                                      // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_PT
-	// FDagwoodState_PT GetState_PT();                                                                                          // [0x99b3450] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FDagwoodState_PT GetState_PT();                                                                                          // [0x9e7a9e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.GetState_GT
-	// FDagwoodInPersistent GetState_GT();                                                                                      // [0x99b33e4] Final|Native|Public|Const 
+	// FDagwoodInPersistent GetState_GT();                                                                                      // [0x9e7a974] Final|Native|Public|Const 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.GetPendingInputCmd
-	// FFortDagwoodCmd GetPendingInputCmd();                                                                                    // [0x99b33b0] Final|Native|Public|Const 
+	// FFortDagwoodCmd GetPendingInputCmd();                                                                                    // [0x9e7a940] Final|Native|Public|Const 
 };
 
 /// Class /Script/ValetRuntime.NetworkPhysicsManager
@@ -121,32 +121,32 @@ public:
 
 	/// Functions
 	// Function /Script/ValetRuntime.FortAthenaMutator_OverrideValetVehicleParameters.OnPlaylistLoaded
-	// void OnPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContainerTags);                                 // [0x7bafb98] Final|Native|Public|HasOutParms 
+	// void OnPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContainerTags);                                 // [0x7dd3094] Final|Native|Public|HasOutParms 
 };
 
 /// Class /Script/ValetRuntime.FortCameraMode_Dagwood
-/// Size: 0x0040 (0x001B70 - 0x001BB0)
+/// Size: 0x0040 (0x001BB0 - 0x001BF0)
 class UFortCameraMode_Dagwood : public UFortCameraMode_AthenaVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7088;
+	static inline constexpr uint64_t __MDKClassSize = 7152;
 
 public:
-	DMember(float)                                     HorizontalCameraSpaceOffsetWhileTurning                     OFFSET(get<float>, {0x1B68, 4, 0, 0})
-	DMember(float)                                     SteeringAngleForMaxHorizontalOffset                         OFFSET(get<float>, {0x1B6C, 4, 0, 0})
-	DMember(float)                                     InAirVerticalOffset                                         OFFSET(get<float>, {0x1B70, 4, 0, 0})
-	DMember(float)                                     AirOffsetDampFactor                                         OFFSET(get<float>, {0x1B74, 4, 0, 0})
-	DMember(float)                                     SpeedAlphaDampFactor                                        OFFSET(get<float>, {0x1B78, 4, 0, 0})
-	DMember(float)                                     TimeInAirRequiredForVertOffset                              OFFSET(get<float>, {0x1B7C, 4, 0, 0})
-	DMember(float)                                     VehicleBasePitch                                            OFFSET(get<float>, {0x1B80, 4, 0, 0})
-	DMember(float)                                     HorizOffsetInterpSpeed                                      OFFSET(get<float>, {0x1B84, 4, 0, 0})
-	DMember(float)                                     HorizOffsetInterpSpeedRecovery                              OFFSET(get<float>, {0x1B88, 4, 0, 0})
-	DMember(float)                                     CurrentSpeedAlpha                                           OFFSET(get<float>, {0x1B8C, 4, 0, 0})
-	DMember(float)                                     CurrentVerticalOffset                                       OFFSET(get<float>, {0x1B90, 4, 0, 0})
-	DMember(float)                                     CurrentHorizontalOffset                                     OFFSET(get<float>, {0x1B94, 4, 0, 0})
-	DMember(float)                                     TimeInAir                                                   OFFSET(get<float>, {0x1B98, 4, 0, 0})
-	DMember(float)                                     PreviousSpeed                                               OFFSET(get<float>, {0x1B9C, 4, 0, 0})
-	DMember(float)                                     AppliedPitch                                                OFFSET(get<float>, {0x1BA0, 4, 0, 0})
+	DMember(float)                                     HorizontalCameraSpaceOffsetWhileTurning                     OFFSET(get<float>, {0x1BA8, 4, 0, 0})
+	DMember(float)                                     SteeringAngleForMaxHorizontalOffset                         OFFSET(get<float>, {0x1BAC, 4, 0, 0})
+	DMember(float)                                     InAirVerticalOffset                                         OFFSET(get<float>, {0x1BB0, 4, 0, 0})
+	DMember(float)                                     AirOffsetDampFactor                                         OFFSET(get<float>, {0x1BB4, 4, 0, 0})
+	DMember(float)                                     SpeedAlphaDampFactor                                        OFFSET(get<float>, {0x1BB8, 4, 0, 0})
+	DMember(float)                                     TimeInAirRequiredForVertOffset                              OFFSET(get<float>, {0x1BBC, 4, 0, 0})
+	DMember(float)                                     VehicleBasePitch                                            OFFSET(get<float>, {0x1BC0, 4, 0, 0})
+	DMember(float)                                     HorizOffsetInterpSpeed                                      OFFSET(get<float>, {0x1BC4, 4, 0, 0})
+	DMember(float)                                     HorizOffsetInterpSpeedRecovery                              OFFSET(get<float>, {0x1BC8, 4, 0, 0})
+	DMember(float)                                     CurrentSpeedAlpha                                           OFFSET(get<float>, {0x1BCC, 4, 0, 0})
+	DMember(float)                                     CurrentVerticalOffset                                       OFFSET(get<float>, {0x1BD0, 4, 0, 0})
+	DMember(float)                                     CurrentHorizontalOffset                                     OFFSET(get<float>, {0x1BD4, 4, 0, 0})
+	DMember(float)                                     TimeInAir                                                   OFFSET(get<float>, {0x1BD8, 4, 0, 0})
+	DMember(float)                                     PreviousSpeed                                               OFFSET(get<float>, {0x1BDC, 4, 0, 0})
+	DMember(float)                                     AppliedPitch                                                OFFSET(get<float>, {0x1BE0, 4, 0, 0})
 };
 
 /// Class /Script/ValetRuntime.FortContextualTutorial_VehicleValetLowFuel
@@ -170,217 +170,217 @@ public:
 };
 
 /// Class /Script/ValetRuntime.FortDagwoodVehicle
-/// Size: 0x0650 (0x001BF0 - 0x002240)
+/// Size: 0x0650 (0x001C30 - 0x002280)
 class AFortDagwoodVehicle : public AFortAthenaSKMotorVehicle
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 8768;
+	static inline constexpr uint64_t __MDKClassSize = 8832;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStartHandbrakeDelegate                                    OFFSET(getStruct<T>, {0x1BF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStopHandbrakeDelegate                                     OFFSET(getStruct<T>, {0x1C00, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartHandBrakeCatchupForceDelegate                        OFFSET(getStruct<T>, {0x1C10, 16, 0, 0})
-	CMember(UClass*)                                   HardLandingCameraShake                                      OFFSET(get<T>, {0x1C20, 8, 0, 0})
-	CMember(UClass*)                                   DriverCamShakeClass                                         OFFSET(get<T>, {0x1C28, 8, 0, 0})
-	CMember(UClass*)                                   HandBrakeCamShakeClass                                      OFFSET(get<T>, {0x1C30, 8, 0, 0})
-	CMember(EVehicleClass)                             VehicleClass                                                OFFSET(get<T>, {0x1C38, 1, 0, 0})
-	DMember(float)                                     FadeDelay                                                   OFFSET(get<float>, {0x1C3C, 4, 0, 0})
-	DMember(float)                                     FadeDuration                                                OFFSET(get<float>, {0x1C40, 4, 0, 0})
-	DMember(float)                                     MinBrakeForceForSkid                                        OFFSET(get<float>, {0x1C44, 4, 0, 0})
-	DMember(float)                                     MinForwardSpeedForSkid                                      OFFSET(get<float>, {0x1C48, 4, 0, 0})
-	SMember(FGameplayTag)                              SpeedLinesCueTag                                            OFFSET(getStruct<T>, {0x1C4C, 4, 0, 0})
-	DMember(float)                                     FadeStartTime                                               OFFSET(get<float>, {0x1C50, 4, 0, 0})
-	CMember(UDagwoodNetworkPhysicsComponent*)          NetworkPhysicsComponent                                     OFFSET(get<T>, {0x1C58, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTireModHealthChanged                                      OFFSET(getStruct<T>, {0x1CD8, 16, 0, 0})
-	DMember(float)                                     RechargeableBoostPercent                                    OFFSET(get<float>, {0x1CE8, 4, 0, 0})
-	CMember(UFortSplatterSourceComponent*)             SplatterSourceComp                                          OFFSET(get<T>, {0x1CF0, 8, 0, 0})
-	DMember(bool)                                      bEnableNativizedTick                                        OFFSET(get<bool>, {0x1CF8, 1, 0, 0})
-	CMember(TArray<FName>)                             PassengerLeanSockets                                        OFFSET(get<T>, {0x1D00, 16, 0, 0})
-	CMember(TArray<FVector>)                           PassngerLeanRelativeOffsets                                 OFFSET(get<T>, {0x1D10, 16, 0, 0})
-	CMember(UClass*)                                   PassengerCameraModeClass                                    OFFSET(get<T>, {0x1D20, 8, 0, 0})
-	CMember(UClass*)                                   PassengerCameraModeClass_ADS                                OFFSET(get<T>, {0x1D28, 8, 0, 0})
-	CMember(TArray<FName>)                             WheelSocketNames                                            OFFSET(get<T>, {0x1D30, 16, 0, 0})
-	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x1D40, 8, 0, 0})
-	CMember(TArray<int32_t>)                           RearShocks                                                  OFFSET(get<T>, {0x1D48, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     OffroadEnvironmentDamageTags                                OFFSET(getStruct<T>, {0x1D58, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     FireDamageTags                                              OFFSET(getStruct<T>, {0x1D78, 32, 0, 0})
-	SMember(FVector)                                   NativeWheelScaleRear                                        OFFSET(getStruct<T>, {0x1D98, 24, 0, 0})
-	SMember(FVector)                                   NativeWheelScaleFront                                       OFFSET(getStruct<T>, {0x1DB0, 24, 0, 0})
-	SMember(FVector)                                   NativeTireScaleRear                                         OFFSET(getStruct<T>, {0x1DC8, 24, 0, 0})
-	SMember(FVector)                                   NativeTireScaleFront                                        OFFSET(getStruct<T>, {0x1DE0, 24, 0, 0})
-	DMember(bool)                                      bTireSmokeActive                                            OFFSET(get<bool>, {0x1DF8, 1, 0, 0})
-	DMember(bool)                                      bBoostFailed                                                OFFSET(get<bool>, {0x1DF9, 1, 0, 0})
-	DMember(bool)                                      bCanBoostPitch                                              OFFSET(get<bool>, {0x1DFA, 1, 0, 0})
-	DMember(uint64_t)                                  AccelForceFeedbackHandle                                    OFFSET(get<uint64_t>, {0x1E00, 8, 0, 0})
-	DMember(uint64_t)                                  SkidForceFeedbackHandle                                     OFFSET(get<uint64_t>, {0x1E08, 8, 0, 0})
-	DMember(uint64_t)                                  BrakeForceFeedbackHandle                                    OFFSET(get<uint64_t>, {0x1E10, 8, 0, 0})
-	DMember(uint64_t)                                  HandBrakeForceFeedbackHandle                                OFFSET(get<uint64_t>, {0x1E18, 8, 0, 0})
-	DMember(bool)                                      bSpeedLinesActive                                           OFFSET(get<bool>, {0x1E20, 1, 0, 0})
-	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x1E40, 112, 0, 0})
-	CMember(TArray<FAttachedWheel>)                    ServerRepWheelData                                          OFFSET(get<T>, {0x1EB0, 16, 0, 0})
-	SMember(FVector)                                   FlipYawForwardTargetDirection                               OFFSET(getStruct<T>, {0x1F10, 24, 0, 0})
-	SMember(FVector)                                   FlipYawOriginalForward                                      OFFSET(getStruct<T>, {0x1F28, 24, 0, 0})
-	CMember(ETireLocations)                            LastPoppedTire                                              OFFSET(get<T>, {0x1F40, 1, 0, 0})
-	DMember(float)                                     RoadTopSpeedMultiplier                                      OFFSET(get<float>, {0x1F44, 4, 0, 0})
-	DMember(float)                                     CurrentBumpiness                                            OFFSET(get<float>, {0x1F48, 4, 0, 0})
-	DMember(float)                                     CurrentForwardAcceleration                                  OFFSET(get<float>, {0x1F4C, 4, 0, 0})
-	DMember(float)                                     PreviousTurnAlpha                                           OFFSET(get<float>, {0x1F50, 4, 0, 0})
-	DMember(float)                                     CurrentCameraAssistStrength                                 OFFSET(get<float>, {0x1F54, 4, 0, 0})
-	DMember(float)                                     LostGripTime                                                OFFSET(get<float>, {0x1F58, 4, 0, 0})
-	DMember(float)                                     LostGripRightAlpha                                          OFFSET(get<float>, {0x1F5C, 4, 0, 0})
-	DMember(float)                                     HandbrakeTime                                               OFFSET(get<float>, {0x1F60, 4, 0, 0})
-	DMember(float)                                     HandbrakeStartTime                                          OFFSET(get<float>, {0x1F64, 4, 0, 0})
-	DMember(float)                                     HandbrakeEndTime                                            OFFSET(get<float>, {0x1F68, 4, 0, 0})
-	DMember(float)                                     FlipYawMult                                                 OFFSET(get<float>, {0x1F6C, 4, 0, 0})
-	DMember(float)                                     FlipTimer                                                   OFFSET(get<float>, {0x1F70, 4, 0, 0})
-	DMember(float)                                     FlipExplodeTimer                                            OFFSET(get<float>, {0x1F74, 4, 0, 0})
-	DMember(float)                                     FlipPushForceTimer                                          OFFSET(get<float>, {0x1F78, 4, 0, 0})
-	DMember(float)                                     FlipAirTimer                                                OFFSET(get<float>, {0x1F7C, 4, 0, 0})
-	DMember(float)                                     FlipLanding                                                 OFFSET(get<float>, {0x1F80, 4, 0, 0})
-	DMember(float)                                     FlipStartTime                                               OFFSET(get<float>, {0x1F84, 4, 0, 0})
-	DMember(float)                                     LastFlipDamageTime                                          OFFSET(get<float>, {0x1F88, 4, 0, 0})
-	DMember(float)                                     PreFlipControlLossTimer                                     OFFSET(get<float>, {0x1F8C, 4, 0, 0})
-	DMember(bool)                                      bDidCinematicFlip                                           OFFSET(get<bool>, {0x1F90, 1, 0, 0})
-	DMember(bool)                                      bCanCinematicFlip                                           OFFSET(get<bool>, {0x1F91, 1, 0, 0})
-	DMember(bool)                                      bInPopTireVeer                                              OFFSET(get<bool>, {0x1F92, 1, 0, 0})
-	DMember(bool)                                      bInFlipRecovery                                             OFFSET(get<bool>, {0x1F93, 1, 0, 0})
-	DMember(bool)                                      bExplodeAfterFlip                                           OFFSET(get<bool>, {0x1F94, 1, 0, 0})
-	DMember(bool)                                      bLostGrip                                                   OFFSET(get<bool>, {0x1F95, 1, 0, 0})
-	DMember(bool)                                      bApplyHandbrakeCatchupForce                                 OFFSET(get<bool>, {0x1F96, 1, 0, 0})
-	DMember(bool)                                      bDidHandbrakeCatchup                                        OFFSET(get<bool>, {0x1F97, 1, 0, 0})
-	DMember(bool)                                      bInFlipRoll                                                 OFFSET(get<bool>, {0x1F98, 1, 0, 0})
-	DMember(bool)                                      bInFlipYaw                                                  OFFSET(get<bool>, {0x1F99, 1, 0, 0})
-	DMember(bool)                                      bInFlipPitch                                                OFFSET(get<bool>, {0x1F9A, 1, 0, 0})
-	DMember(bool)                                      bFlipDidLeaveGround                                         OFFSET(get<bool>, {0x1F9B, 1, 0, 0})
-	DMember(bool)                                      bBreakBuildingsIfBlockingLeaningPassenger                   OFFSET(get<bool>, {0x1F9C, 1, 0, 0})
-	DMember(float)                                     LeanBreakTimeAccumulator                                    OFFSET(get<float>, {0x1FA0, 4, 0, 0})
-	DMember(float)                                     LeanBreakCheckInterval                                      OFFSET(get<float>, {0x1FA4, 4, 0, 0})
-	CMember(TArray<FName>)                             SeatToWindowShapeNames                                      OFFSET(get<T>, {0x1FA8, 16, 0, 0})
-	CMember(ULegacyCameraShake*)                       OffroadCameraShakeInstance                                  OFFSET(get<T>, {0x1FB8, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x1FC0, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       AccelCameraShakeInstance                                    OFFSET(get<T>, {0x1FC8, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       HandBrakeCameraShakeInstance                                OFFSET(get<T>, {0x1FD0, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NativeComp_RoadAndExhaust                                   OFFSET(get<T>, {0x1FD8, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NativeComp_TireSkid                                         OFFSET(get<T>, {0x1FE0, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NativeComp_Damage                                           OFFSET(get<T>, {0x1FE8, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        NativeComp_SpeedLines                                       OFFSET(get<T>, {0x1FF0, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           NativeSys_TireExhaust                                       OFFSET(get<T>, {0x1FF8, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           NativeSys_SpeedLines                                        OFFSET(get<T>, {0x2000, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           NativeSys_TireSkid                                          OFFSET(get<T>, {0x2008, 8, 0, 0})
-	CMember(TArray<TEnumAsByte>)                       RoadAndExhaustSurfaceTypeArrayForFX                         OFFSET(get<T>, {0x2010, 16, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(getStruct<T>, {0x2020, 4, 0, 0})
-	SMember(FName)                                     BrakeLightsName                                             OFFSET(getStruct<T>, {0x2024, 4, 0, 0})
-	CMember(TArray<ETireStates>)                       FakeTireStates                                              OFFSET(get<T>, {0x2040, 16, 0, 0})
-	CMember(EPoppedTireReactionStates)                 ActivePoppedTireReaction                                    OFFSET(get<T>, {0x2050, 1, 0, 0})
-	CMember(EPoppedTireReactionStates)                 ReplicatedPoppedTireReaction                                OFFSET(get<T>, {0x2051, 1, 0, 0})
-	CMember(TWeakObjectPtr<AFortValetAudioController*>) ValetAudio                                                 OFFSET(get<T>, {0x2054, 8, 0, 0})
-	CMember(TArray<UStaticMeshComponent*>)             TireMeshes                                                  OFFSET(get<T>, {0x2060, 16, 0, 0})
-	CMember(TArray<UStaticMeshComponent*>)             FakeTireMeshes                                              OFFSET(get<T>, {0x2070, 16, 0, 0})
-	DMember(bool)                                      bIsInoperable                                               OFFSET(get<bool>, {0x2084, 1, 0, 0})
-	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x2088, 4, 0, 0})
-	SMember(FRandomStream)                             RandStream                                                  OFFSET(getStruct<T>, {0x208C, 8, 0, 0})
-	DMember(bool)                                      bHasTraction                                                OFFSET(get<bool>, {0x2094, 1, 0, 0})
-	DMember(bool)                                      bStartHandBrakeCatchupForce                                 OFFSET(get<bool>, {0x2095, 1, 0, 0})
-	DMember(bool)                                      bSelfDestructEnabled                                        OFFSET(get<bool>, {0x21A0, 1, 1, 0})
-	DMember(bool)                                      bClientUsesSelfDestructTimer                                OFFSET(get<bool>, {0x21A0, 1, 1, 1})
-	CMember(UStaticMesh*)                              TireBootMesh                                                OFFSET(get<T>, {0x21A8, 8, 0, 0})
-	CMember(TMap<int32_t, FDagwoodActionDefForUI>)     MapSelfDestructActionDefForUI                               OFFSET(get<T>, {0x21B0, 80, 0, 0})
-	DMember(float)                                     MinimumTimeBetweenSelfDestructPromptChanges                 OFFSET(get<float>, {0x2200, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartHandbrakeDelegate                                    OFFSET(getStruct<T>, {0x1C30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStopHandbrakeDelegate                                     OFFSET(getStruct<T>, {0x1C40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartHandBrakeCatchupForceDelegate                        OFFSET(getStruct<T>, {0x1C50, 16, 0, 0})
+	CMember(UClass*)                                   HardLandingCameraShake                                      OFFSET(get<T>, {0x1C60, 8, 0, 0})
+	CMember(UClass*)                                   DriverCamShakeClass                                         OFFSET(get<T>, {0x1C68, 8, 0, 0})
+	CMember(UClass*)                                   HandBrakeCamShakeClass                                      OFFSET(get<T>, {0x1C70, 8, 0, 0})
+	CMember(EVehicleClass)                             VehicleClass                                                OFFSET(get<T>, {0x1C78, 1, 0, 0})
+	DMember(float)                                     FadeDelay                                                   OFFSET(get<float>, {0x1C7C, 4, 0, 0})
+	DMember(float)                                     FadeDuration                                                OFFSET(get<float>, {0x1C80, 4, 0, 0})
+	DMember(float)                                     MinBrakeForceForSkid                                        OFFSET(get<float>, {0x1C84, 4, 0, 0})
+	DMember(float)                                     MinForwardSpeedForSkid                                      OFFSET(get<float>, {0x1C88, 4, 0, 0})
+	SMember(FGameplayTag)                              SpeedLinesCueTag                                            OFFSET(getStruct<T>, {0x1C8C, 4, 0, 0})
+	DMember(float)                                     FadeStartTime                                               OFFSET(get<float>, {0x1C90, 4, 0, 0})
+	CMember(UDagwoodNetworkPhysicsComponent*)          NetworkPhysicsComponent                                     OFFSET(get<T>, {0x1C98, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTireModHealthChanged                                      OFFSET(getStruct<T>, {0x1D18, 16, 0, 0})
+	DMember(float)                                     RechargeableBoostPercent                                    OFFSET(get<float>, {0x1D28, 4, 0, 0})
+	CMember(UFortSplatterSourceComponent*)             SplatterSourceComp                                          OFFSET(get<T>, {0x1D30, 8, 0, 0})
+	DMember(bool)                                      bEnableNativizedTick                                        OFFSET(get<bool>, {0x1D38, 1, 0, 0})
+	CMember(TArray<FName>)                             PassengerLeanSockets                                        OFFSET(get<T>, {0x1D40, 16, 0, 0})
+	CMember(TArray<FVector>)                           PassngerLeanRelativeOffsets                                 OFFSET(get<T>, {0x1D50, 16, 0, 0})
+	CMember(UClass*)                                   PassengerCameraModeClass                                    OFFSET(get<T>, {0x1D60, 8, 0, 0})
+	CMember(UClass*)                                   PassengerCameraModeClass_ADS                                OFFSET(get<T>, {0x1D68, 8, 0, 0})
+	CMember(TArray<FName>)                             WheelSocketNames                                            OFFSET(get<T>, {0x1D70, 16, 0, 0})
+	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x1D80, 8, 0, 0})
+	CMember(TArray<int32_t>)                           RearShocks                                                  OFFSET(get<T>, {0x1D88, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     OffroadEnvironmentDamageTags                                OFFSET(getStruct<T>, {0x1D98, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FireDamageTags                                              OFFSET(getStruct<T>, {0x1DB8, 32, 0, 0})
+	SMember(FVector)                                   NativeWheelScaleRear                                        OFFSET(getStruct<T>, {0x1DD8, 24, 0, 0})
+	SMember(FVector)                                   NativeWheelScaleFront                                       OFFSET(getStruct<T>, {0x1DF0, 24, 0, 0})
+	SMember(FVector)                                   NativeTireScaleRear                                         OFFSET(getStruct<T>, {0x1E08, 24, 0, 0})
+	SMember(FVector)                                   NativeTireScaleFront                                        OFFSET(getStruct<T>, {0x1E20, 24, 0, 0})
+	DMember(bool)                                      bTireSmokeActive                                            OFFSET(get<bool>, {0x1E38, 1, 0, 0})
+	DMember(bool)                                      bBoostFailed                                                OFFSET(get<bool>, {0x1E39, 1, 0, 0})
+	DMember(bool)                                      bCanBoostPitch                                              OFFSET(get<bool>, {0x1E3A, 1, 0, 0})
+	DMember(uint64_t)                                  AccelForceFeedbackHandle                                    OFFSET(get<uint64_t>, {0x1E40, 8, 0, 0})
+	DMember(uint64_t)                                  SkidForceFeedbackHandle                                     OFFSET(get<uint64_t>, {0x1E48, 8, 0, 0})
+	DMember(uint64_t)                                  BrakeForceFeedbackHandle                                    OFFSET(get<uint64_t>, {0x1E50, 8, 0, 0})
+	DMember(uint64_t)                                  HandBrakeForceFeedbackHandle                                OFFSET(get<uint64_t>, {0x1E58, 8, 0, 0})
+	DMember(bool)                                      bSpeedLinesActive                                           OFFSET(get<bool>, {0x1E60, 1, 0, 0})
+	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x1E80, 112, 0, 0})
+	CMember(TArray<FAttachedWheel>)                    ServerRepWheelData                                          OFFSET(get<T>, {0x1EF0, 16, 0, 0})
+	SMember(FVector)                                   FlipYawForwardTargetDirection                               OFFSET(getStruct<T>, {0x1F50, 24, 0, 0})
+	SMember(FVector)                                   FlipYawOriginalForward                                      OFFSET(getStruct<T>, {0x1F68, 24, 0, 0})
+	CMember(ETireLocations)                            LastPoppedTire                                              OFFSET(get<T>, {0x1F80, 1, 0, 0})
+	DMember(float)                                     RoadTopSpeedMultiplier                                      OFFSET(get<float>, {0x1F84, 4, 0, 0})
+	DMember(float)                                     CurrentBumpiness                                            OFFSET(get<float>, {0x1F88, 4, 0, 0})
+	DMember(float)                                     CurrentForwardAcceleration                                  OFFSET(get<float>, {0x1F8C, 4, 0, 0})
+	DMember(float)                                     PreviousTurnAlpha                                           OFFSET(get<float>, {0x1F90, 4, 0, 0})
+	DMember(float)                                     CurrentCameraAssistStrength                                 OFFSET(get<float>, {0x1F94, 4, 0, 0})
+	DMember(float)                                     LostGripTime                                                OFFSET(get<float>, {0x1F98, 4, 0, 0})
+	DMember(float)                                     LostGripRightAlpha                                          OFFSET(get<float>, {0x1F9C, 4, 0, 0})
+	DMember(float)                                     HandbrakeTime                                               OFFSET(get<float>, {0x1FA0, 4, 0, 0})
+	DMember(float)                                     HandbrakeStartTime                                          OFFSET(get<float>, {0x1FA4, 4, 0, 0})
+	DMember(float)                                     HandbrakeEndTime                                            OFFSET(get<float>, {0x1FA8, 4, 0, 0})
+	DMember(float)                                     FlipYawMult                                                 OFFSET(get<float>, {0x1FAC, 4, 0, 0})
+	DMember(float)                                     FlipTimer                                                   OFFSET(get<float>, {0x1FB0, 4, 0, 0})
+	DMember(float)                                     FlipExplodeTimer                                            OFFSET(get<float>, {0x1FB4, 4, 0, 0})
+	DMember(float)                                     FlipPushForceTimer                                          OFFSET(get<float>, {0x1FB8, 4, 0, 0})
+	DMember(float)                                     FlipAirTimer                                                OFFSET(get<float>, {0x1FBC, 4, 0, 0})
+	DMember(float)                                     FlipLanding                                                 OFFSET(get<float>, {0x1FC0, 4, 0, 0})
+	DMember(float)                                     FlipStartTime                                               OFFSET(get<float>, {0x1FC4, 4, 0, 0})
+	DMember(float)                                     LastFlipDamageTime                                          OFFSET(get<float>, {0x1FC8, 4, 0, 0})
+	DMember(float)                                     PreFlipControlLossTimer                                     OFFSET(get<float>, {0x1FCC, 4, 0, 0})
+	DMember(bool)                                      bDidCinematicFlip                                           OFFSET(get<bool>, {0x1FD0, 1, 0, 0})
+	DMember(bool)                                      bCanCinematicFlip                                           OFFSET(get<bool>, {0x1FD1, 1, 0, 0})
+	DMember(bool)                                      bInPopTireVeer                                              OFFSET(get<bool>, {0x1FD2, 1, 0, 0})
+	DMember(bool)                                      bInFlipRecovery                                             OFFSET(get<bool>, {0x1FD3, 1, 0, 0})
+	DMember(bool)                                      bExplodeAfterFlip                                           OFFSET(get<bool>, {0x1FD4, 1, 0, 0})
+	DMember(bool)                                      bLostGrip                                                   OFFSET(get<bool>, {0x1FD5, 1, 0, 0})
+	DMember(bool)                                      bApplyHandbrakeCatchupForce                                 OFFSET(get<bool>, {0x1FD6, 1, 0, 0})
+	DMember(bool)                                      bDidHandbrakeCatchup                                        OFFSET(get<bool>, {0x1FD7, 1, 0, 0})
+	DMember(bool)                                      bInFlipRoll                                                 OFFSET(get<bool>, {0x1FD8, 1, 0, 0})
+	DMember(bool)                                      bInFlipYaw                                                  OFFSET(get<bool>, {0x1FD9, 1, 0, 0})
+	DMember(bool)                                      bInFlipPitch                                                OFFSET(get<bool>, {0x1FDA, 1, 0, 0})
+	DMember(bool)                                      bFlipDidLeaveGround                                         OFFSET(get<bool>, {0x1FDB, 1, 0, 0})
+	DMember(bool)                                      bBreakBuildingsIfBlockingLeaningPassenger                   OFFSET(get<bool>, {0x1FDC, 1, 0, 0})
+	DMember(float)                                     LeanBreakTimeAccumulator                                    OFFSET(get<float>, {0x1FE0, 4, 0, 0})
+	DMember(float)                                     LeanBreakCheckInterval                                      OFFSET(get<float>, {0x1FE4, 4, 0, 0})
+	CMember(TArray<FName>)                             SeatToWindowShapeNames                                      OFFSET(get<T>, {0x1FE8, 16, 0, 0})
+	CMember(ULegacyCameraShake*)                       OffroadCameraShakeInstance                                  OFFSET(get<T>, {0x1FF8, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       DriverCameraShakeInstance                                   OFFSET(get<T>, {0x2000, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       AccelCameraShakeInstance                                    OFFSET(get<T>, {0x2008, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       HandBrakeCameraShakeInstance                                OFFSET(get<T>, {0x2010, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NativeComp_RoadAndExhaust                                   OFFSET(get<T>, {0x2018, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NativeComp_TireSkid                                         OFFSET(get<T>, {0x2020, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NativeComp_Damage                                           OFFSET(get<T>, {0x2028, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        NativeComp_SpeedLines                                       OFFSET(get<T>, {0x2030, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           NativeSys_TireExhaust                                       OFFSET(get<T>, {0x2038, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           NativeSys_SpeedLines                                        OFFSET(get<T>, {0x2040, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           NativeSys_TireSkid                                          OFFSET(get<T>, {0x2048, 8, 0, 0})
+	CMember(TArray<TEnumAsByte>)                       RoadAndExhaustSurfaceTypeArrayForFX                         OFFSET(get<T>, {0x2050, 16, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(getStruct<T>, {0x2060, 4, 0, 0})
+	SMember(FName)                                     BrakeLightsName                                             OFFSET(getStruct<T>, {0x2064, 4, 0, 0})
+	CMember(TArray<ETireStates>)                       FakeTireStates                                              OFFSET(get<T>, {0x2080, 16, 0, 0})
+	CMember(EPoppedTireReactionStates)                 ActivePoppedTireReaction                                    OFFSET(get<T>, {0x2090, 1, 0, 0})
+	CMember(EPoppedTireReactionStates)                 ReplicatedPoppedTireReaction                                OFFSET(get<T>, {0x2091, 1, 0, 0})
+	CMember(TWeakObjectPtr<AFortValetAudioController*>) ValetAudio                                                 OFFSET(get<T>, {0x2094, 8, 0, 0})
+	CMember(TArray<UStaticMeshComponent*>)             TireMeshes                                                  OFFSET(get<T>, {0x20A0, 16, 0, 0})
+	CMember(TArray<UStaticMeshComponent*>)             FakeTireMeshes                                              OFFSET(get<T>, {0x20B0, 16, 0, 0})
+	DMember(bool)                                      bIsInoperable                                               OFFSET(get<bool>, {0x20C4, 1, 0, 0})
+	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x20C8, 4, 0, 0})
+	SMember(FRandomStream)                             RandStream                                                  OFFSET(getStruct<T>, {0x20CC, 8, 0, 0})
+	DMember(bool)                                      bHasTraction                                                OFFSET(get<bool>, {0x20D4, 1, 0, 0})
+	DMember(bool)                                      bStartHandBrakeCatchupForce                                 OFFSET(get<bool>, {0x20D5, 1, 0, 0})
+	DMember(bool)                                      bSelfDestructEnabled                                        OFFSET(get<bool>, {0x21E0, 1, 1, 0})
+	DMember(bool)                                      bClientUsesSelfDestructTimer                                OFFSET(get<bool>, {0x21E0, 1, 1, 1})
+	CMember(UStaticMesh*)                              TireBootMesh                                                OFFSET(get<T>, {0x21E8, 8, 0, 0})
+	CMember(TMap<int32_t, FDagwoodActionDefForUI>)     MapSelfDestructActionDefForUI                               OFFSET(get<T>, {0x21F0, 80, 0, 0})
+	DMember(float)                                     MinimumTimeBetweenSelfDestructPromptChanges                 OFFSET(get<float>, {0x2240, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.StartFade
-	// void StartFade();                                                                                                        // [0x99b4488] Final|Native|Public|BlueprintCallable 
+	// void StartFade();                                                                                                        // [0x9e7c1f0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetValetAudioController
-	// void SetValetAudioController(AFortValetAudioController* ValetAudio);                                                     // [0x99b4388] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetValetAudioController(AFortValetAudioController* ValetAudio);                                                     // [0x9e7c0f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetRuntimeSpringsInfoOnServer
-	// void SetRuntimeSpringsInfoOnServer(FRuntimeSpringsInfo& SpringsInfo);                                                    // [0x99b4224] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SetRuntimeSpringsInfoOnServer(FRuntimeSpringsInfo& SpringsInfo);                                                    // [0x9e7bf8c] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetRuntimeGravityOnServer
-	// void SetRuntimeGravityOnServer(float GravMult);                                                                          // [0x99b4194] Final|Native|Protected|BlueprintCallable 
+	// void SetRuntimeGravityOnServer(float GravMult);                                                                          // [0x9e7befc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetRuntimeFuelInfoOnServer
-	// void SetRuntimeFuelInfoOnServer(FRuntimeFuelInfo& FuelInfo);                                                             // [0x99b40e4] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SetRuntimeFuelInfoOnServer(FRuntimeFuelInfo& FuelInfo);                                                             // [0x9e7be4c] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetRuntimeDriveInfoOnServer
-	// void SetRuntimeDriveInfoOnServer(float MaxIncline, float MaxTilt);                                                       // [0x99b4008] Final|Native|Protected|BlueprintCallable 
+	// void SetRuntimeDriveInfoOnServer(float MaxIncline, float MaxTilt);                                                       // [0x9e7bd70] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetRuntimeBoostInfoOnServer
-	// void SetRuntimeBoostInfoOnServer(FRuntimeBoostInfo& BoostInfo);                                                          // [0x99b3f54] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SetRuntimeBoostInfoOnServer(FRuntimeBoostInfo& BoostInfo);                                                          // [0x9e7bcbc] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SetDamageInfoOnServer
-	// void SetDamageInfoOnServer(bool bInDamageFriendlyVehicles, bool bInDamageOtherVehicles, bool bInDamageOwnVehicle, bool bInDamageAllowedFromOtherVehicle); // [0x99b3d44] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
+	// void SetDamageInfoOnServer(bool bInDamageFriendlyVehicles, bool bInDamageOtherVehicles, bool bInDamageOwnVehicle, bool bInDamageAllowedFromOtherVehicle); // [0x9e7baac] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.ServerSetFadeDuration
-	// void ServerSetFadeDuration(float NewFadeDuration);                                                                       // [0x5a9f240] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void ServerSetFadeDuration(float NewFadeDuration);                                                                       // [0x5935bf0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.ServerSelfDestructActivated
-	// void ServerSelfDestructActivated();                                                                                      // [0x87f22d0] Net|NetReliableNative|Event|Public|NetServer 
+	// void ServerSelfDestructActivated();                                                                                      // [0x9e7ba94] Net|NetReliableNative|Event|Public|NetServer 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.SelfDestructCleanup
-	// void SelfDestructCleanup();                                                                                              // [0x99b3d30] Final|Native|Public  
+	// void SelfDestructCleanup();                                                                                              // [0x9e7ba80] Final|Native|Public  
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnTickAudioFade
-	// void OnTickAudioFade(float FadeParam);                                                                                   // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnTickAudioFade(float FadeParam);                                                                                   // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnTickAudioController
-	// void OnTickAudioController(float DeltaTime);                                                                             // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnTickAudioController(float DeltaTime);                                                                             // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnStopHandbrake
-	// void OnStopHandbrake();                                                                                                  // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnStopHandbrake();                                                                                                  // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnStartHandbrake
-	// void OnStartHandbrake();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnStartHandbrake();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnServerAltInteract
-	// void OnServerAltInteract(AFortPawn* Pawn);                                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnServerAltInteract(AFortPawn* Pawn);                                                                               // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_ServerRepWheelData
-	// void OnRep_ServerRepWheelData(TArray<FAttachedWheel>& PrevWheelData);                                                    // [0x1909b14] Final|Native|Private|HasOutParms 
+	// void OnRep_ServerRepWheelData(TArray<FAttachedWheel>& PrevWheelData);                                                    // [0x9e7b6ec] Final|Native|Private|HasOutParms 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_RandSeed
-	// void OnRep_RandSeed();                                                                                                   // [0x2dfdd20] Final|Native|Private 
+	// void OnRep_RandSeed();                                                                                                   // [0x9e7b6c4] Final|Native|Private 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_PoppedTireReaction
-	// void OnRep_PoppedTireReaction();                                                                                         // [0x99b3a2c] Final|Native|Private 
+	// void OnRep_PoppedTireReaction();                                                                                         // [0x9e7b6a8] Final|Native|Private 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_IsInoperable
-	// void OnRep_IsInoperable();                                                                                               // [0x99b3a18] Final|Native|Private 
+	// void OnRep_IsInoperable();                                                                                               // [0x9e7b694] Final|Native|Private 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_FakeTires
-	// void OnRep_FakeTires(TArray<ETireStates>& PrevTireStates);                                                               // [0x2d82fa0] Final|Native|Private|HasOutParms 
+	// void OnRep_FakeTires(TArray<ETireStates>& PrevTireStates);                                                               // [0x9e7b5f8] Final|Native|Private|HasOutParms 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnRep_DagwoodRuntimeModifiers
-	// void OnRep_DagwoodRuntimeModifiers(FDagwoodRuntimeModifiers& PrevMods);                                                  // [0x24818e8] Final|Native|Private|HasOutParms 
+	// void OnRep_DagwoodRuntimeModifiers(FDagwoodRuntimeModifiers& PrevMods);                                                  // [0x9e7afa8] Final|Native|Private|HasOutParms 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnInoperableChanged
-	// void OnInoperableChanged(bool bInoperable);                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnInoperableChanged(bool bInoperable);                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStopped
-	// void OnHoldSelfDestructStopped(AFortPawn* DriverPawn);                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnHoldSelfDestructStopped(AFortPawn* DriverPawn);                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnHoldSelfDestructStarted
-	// void OnHoldSelfDestructStarted(AFortPawn* DriverPawn, float ExitDuration);                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnHoldSelfDestructStarted(AFortPawn* DriverPawn, float ExitDuration);                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnFlipImpactDamage
-	// void OnFlipImpactDamage();                                                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnFlipImpactDamage();                                                                                               // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnDestroyedPropFromCollision
-	// void OnDestroyedPropFromCollision(ABuildingActor* BuildingHitActor);                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnDestroyedPropFromCollision(ABuildingActor* BuildingHitActor);                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnClientBeginAltInteract
-	// void OnClientBeginAltInteract(AFortPawn* Pawn);                                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnClientBeginAltInteract(AFortPawn* Pawn);                                                                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnBoostReady
-	// void OnBoostReady();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnBoostReady();                                                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.OnBoostFailed
-	// void OnBoostFailed();                                                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnBoostFailed();                                                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.NativeCalculateAccelRumbleIntensity
-	// float NativeCalculateAccelRumbleIntensity(float MaxIntensity);                                                           // [0x99b398c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float NativeCalculateAccelRumbleIntensity(float MaxIntensity);                                                           // [0x9e7af1c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.MakeOperable
-	// void MakeOperable(bool bAddGas);                                                                                         // [0x56ae764] Final|Native|Public|BlueprintCallable 
+	// void MakeOperable(bool bAddGas);                                                                                         // [0x550d6d4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.MakeInoperable
-	// void MakeInoperable();                                                                                                   // [0x99b396c] Native|Public|BlueprintCallable 
+	// void MakeInoperable();                                                                                                   // [0x9e7aefc] Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.IsTireSkidding
-	// bool IsTireSkidding(float MinSpeedForSkid, float AngleForSkid, float SpeedForPeelout, float SpeedForBraking);            // [0x99b3828] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTireSkidding(float MinSpeedForSkid, float AngleForSkid, float SpeedForPeelout, float SpeedForBraking);            // [0x9e7adb8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.IsOnLandscape
-	// bool IsOnLandscape();                                                                                                    // [0x99b3810] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsOnLandscape();                                                                                                    // [0x9e7ada0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.IsNativeBPTickEnabled
-	// bool IsNativeBPTickEnabled();                                                                                            // [0x2c6cedc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsNativeBPTickEnabled();                                                                                            // [0x3075ae8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.HandleCurrentPlaylistLoaded
-	// void HandleCurrentPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContextTags);                        // [0x99b3618] Final|Native|Protected|HasOutParms 
+	// void HandleCurrentPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContextTags);                        // [0x9e7aba8] Final|Native|Protected|HasOutParms 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.GetTireSurface
-	// ETireSurfaces GetTireSurface(ETireLocations TireIndex);                                                                  // [0x99b358c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ETireSurfaces GetTireSurface(ETireLocations TireIndex);                                                                  // [0x9e7ab1c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.GetTireHealthPercent
-	// float GetTireHealthPercent(ETireLocations TireIndex);                                                                    // [0x99b34f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetTireHealthPercent(ETireLocations TireIndex);                                                                    // [0x9e7aa84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.GetMiddleAxleForwardAdjust
-	// float GetMiddleAxleForwardAdjust();                                                                                      // [0x2953164] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetMiddleAxleForwardAdjust();                                                                                      // [0x9e7a918] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.GetCurrentDagwoodRuntimeProperties
-	// FDagwoodRuntimeModifiers GetCurrentDagwoodRuntimeProperties();                                                           // [0x99b3394] Final|Native|Protected|BlueprintCallable 
+	// FDagwoodRuntimeModifiers GetCurrentDagwoodRuntimeProperties();                                                           // [0x9e7a8fc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.GetBumpiness
-	// float GetBumpiness();                                                                                                    // [0x99b337c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetBumpiness();                                                                                                    // [0x9e7a8e4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.ForwardOrReverseInputPressed
-	// bool ForwardOrReverseInputPressed();                                                                                     // [0x99b3358] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ForwardOrReverseInputPressed();                                                                                     // [0x9e7a8c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.CleanupLoopingPooledFX
-	// void CleanupLoopingPooledFX();                                                                                           // [0x88bdc94] Native|Event|Public|BlueprintCallable|BlueprintEvent 
+	// void CleanupLoopingPooledFX();                                                                                           // [0x9e7a8a8] Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.ApplyRuntimeModifiers
-	// void ApplyRuntimeModifiers();                                                                                            // [0x99b3244] Final|Native|Private 
+	// void ApplyRuntimeModifiers();                                                                                            // [0x9e7a794] Final|Native|Private 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.AddRuntimeGearsInfoOnServer
-	// void AddRuntimeGearsInfoOnServer(FRuntimeGearInfo& GearInfo);                                                            // [0x99b31b0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void AddRuntimeGearsInfoOnServer(FRuntimeGearInfo& GearInfo);                                                            // [0x9e7a700] Final|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/ValetRuntime.FortDagwoodVehicleAnimInstance
@@ -548,13 +548,13 @@ public:
 
 	/// Functions
 	// Function /Script/ValetRuntime.FortDagwoodVehicleManager.UpdatePropReplacement
-	// void UpdatePropReplacement();                                                                                            // [0x2cf4738] Final|Native|Public  
+	// void UpdatePropReplacement();                                                                                            // [0x2b7b1c8] Final|Native|Public  
 	// Function /Script/ValetRuntime.FortDagwoodVehicleManager.OnVehicleSpawnsUpdated
-	// void OnVehicleSpawnsUpdated(UFortVehicleItemDefinition* VehicleItemDef, TArray<AActor*>& SpawnedVehicles, int32_t NewVehicleCount); // [0x99b3b9c] Final|Native|Public|HasOutParms 
+	// void OnVehicleSpawnsUpdated(UFortVehicleItemDefinition* VehicleItemDef, TArray<AActor*>& SpawnedVehicles, int32_t NewVehicleCount); // [0x9e7b8d8] Final|Native|Public|HasOutParms 
 	// Function /Script/ValetRuntime.FortDagwoodVehicleManager.OnVehicleSpawned
-	// void OnVehicleSpawned(AFortAthenaVehicle* Vehicle);                                                                      // [0x99b3b20] Final|Native|Public  
+	// void OnVehicleSpawned(AFortAthenaVehicle* Vehicle);                                                                      // [0x9e7b85c] Final|Native|Public  
 	// Function /Script/ValetRuntime.FortDagwoodVehicleManager.CustomHandleActorStreamedInEditor
-	// void CustomHandleActorStreamedInEditor(AActor* SourceActor);                                                             // [0x56bcb00] Final|Native|Public  
+	// void CustomHandleActorStreamedInEditor(AActor* SourceActor);                                                             // [0x551cb00] Final|Native|Public  
 };
 
 /// Class /Script/ValetRuntime.FortValetAudioController
@@ -628,26 +628,26 @@ public:
 
 	/// Functions
 	// Function /Script/ValetRuntime.FortValetAudioController.Update_Native
-	// void Update_Native();                                                                                                    // [0x99b44b8] Final|Native|Public|BlueprintCallable 
+	// void Update_Native();                                                                                                    // [0x9e7c220] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortValetAudioController.OnTireModApplied
-	// void OnTireModApplied(FTireInfo& AppliedTireMod);                                                                        // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void OnTireModApplied(FTireInfo& AppliedTireMod);                                                                        // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/ValetRuntime.FortValetAudioController.OnSuspensionCollision_Native
-	// void OnSuspensionCollision_Native(bool& OutResult, float& OutMagnitude);                                                 // [0x99b3a48] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void OnSuspensionCollision_Native(bool& OutResult, float& OutMagnitude);                                                 // [0x9e7b784] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortValetAudioController.CacheValetVehicle
-	// void CacheValetVehicle(AFortDagwoodVehicle* InVehicle);                                                                  // [0x99b3258] Final|Native|Public|BlueprintCallable 
+	// void CacheValetVehicle(AFortDagwoodVehicle* InVehicle);                                                                  // [0x9e7a7a8] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/ValetRuntime.FortValetGameFeatureData
-/// Size: 0x0078 (0x000498 - 0x000510)
+/// Size: 0x0078 (0x0004A0 - 0x000518)
 class UFortValetGameFeatureData : public UFortGameFeatureData
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1296;
+	static inline constexpr uint64_t __MDKClassSize = 1304;
 
 public:
-	CMember(TMap<TWeakObjectPtr, FVehiclePropReplacementData>) PropReplacements                                    OFFSET(get<T>, {0x498, 80, 0, 0})
-	CMember(TWeakObjectPtr<UClass*>)                   VehicleSpawnerClass                                         OFFSET(get<T>, {0x4E8, 32, 0, 0})
-	CMember(ESpawnActorCollisionHandlingMethod)        SpawnActorCollisionHandlingMethod                           OFFSET(get<T>, {0x508, 1, 0, 0})
+	CMember(TMap<TWeakObjectPtr, FVehiclePropReplacementData>) PropReplacements                                    OFFSET(get<T>, {0x4A0, 80, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   VehicleSpawnerClass                                         OFFSET(get<T>, {0x4F0, 32, 0, 0})
+	CMember(ESpawnActorCollisionHandlingMethod)        SpawnActorCollisionHandlingMethod                           OFFSET(get<T>, {0x510, 1, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.FortDagwoodCmd
@@ -668,16 +668,16 @@ public:
 };
 
 /// Struct /Script/ValetRuntime.DagwoodInPersistent
-/// Size: 0x00C0 (0x000188 - 0x000248)
+/// Size: 0x00C0 (0x000190 - 0x000250)
 class FDagwoodInPersistent : public FFortVehicleInPersistent
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 584;
+	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x188, 8, 0, 0})
-	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x190, 112, 0, 0})
+	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x190, 8, 0, 0})
+	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x198, 112, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.DagwoodRuntimeModifiers
@@ -804,20 +804,20 @@ public:
 };
 
 /// Struct /Script/ValetRuntime.DagwoodManagedState
-/// Size: 0x0458 (0x000000 - 0x000458)
+/// Size: 0x0460 (0x000000 - 0x000460)
 class FDagwoodManagedState : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 1112;
+	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
 	DMember(int32_t)                                   Frame                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	SMember(FFortDagwoodCmd)                           InputCmd                                                    OFFSET(getStruct<T>, {0x8, 48, 0, 0})
-	SMember(FDagwoodInPersistent)                      GT_State                                                    OFFSET(getStruct<T>, {0x38, 584, 0, 0})
-	SMember(FDagwoodState_PT)                          PT_State                                                    OFFSET(getStruct<T>, {0x280, 440, 0, 0})
-	CMember(APlayerController*)                        PC                                                          OFFSET(get<T>, {0x438, 8, 0, 0})
-	CMember(TArray<FDagwoodFutureClientInput>)         FutureInputs                                                OFFSET(get<T>, {0x448, 16, 0, 0})
+	SMember(FDagwoodInPersistent)                      GT_State                                                    OFFSET(getStruct<T>, {0x38, 592, 0, 0})
+	SMember(FDagwoodState_PT)                          PT_State                                                    OFFSET(getStruct<T>, {0x288, 440, 0, 0})
+	CMember(APlayerController*)                        PC                                                          OFFSET(get<T>, {0x440, 8, 0, 0})
+	CMember(TArray<FDagwoodFutureClientInput>)         FutureInputs                                                OFFSET(get<T>, {0x450, 16, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.DagwoodFutureClientInput

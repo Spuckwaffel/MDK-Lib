@@ -7,6 +7,27 @@
 
 /// dependency: CoreUObject
 
+/// Class /Script/AudioExtensions.AudioPropertiesBindings
+/// Size: 0x0050 (0x000028 - 0x000078)
+class UAudioPropertiesBindings : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 120;
+
+public:
+	CMember(TMap<FName, FName>)                        ObjectPropertyToSheetPropertyMap                            OFFSET(get<T>, {0x28, 80, 0, 0})
+};
+
+/// Class /Script/AudioExtensions.AudioPropertiesSheetAssetBase
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UAudioPropertiesSheetAssetBase : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/AudioExtensions.SpatializationPluginSourceSettingsBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USpatializationPluginSourceSettingsBase : public UObject
@@ -40,6 +61,16 @@ public:
 /// Class /Script/AudioExtensions.ReverbPluginSourceSettingsBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UReverbPluginSourceSettingsBase : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/AudioExtensions.AudioPropertySheetBaseAsset
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UAudioPropertySheetBaseAsset : public UObject
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
@@ -172,6 +203,30 @@ public:
 	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
+/// Struct /Script/AudioExtensions.SoundWaveCloudStreamingPlatformProjectSettings
+/// Size: 0x0001 (0x000000 - 0x000001)
+class FSoundWaveCloudStreamingPlatformProjectSettings : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+	CMember(ESoundWaveCloudStreamingPlatformProjectEnableType) EnablementSetting                                   OFFSET(get<T>, {0x0, 1, 0, 0})
+};
+
+/// Struct /Script/AudioExtensions.SoundWaveCloudStreamingPlatformSettings
+/// Size: 0x0001 (0x000000 - 0x000001)
+class FSoundWaveCloudStreamingPlatformSettings : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+	CMember(ESoundWaveCloudStreamingPlatformEnableType) EnablementSetting                                          OFFSET(get<T>, {0x0, 1, 0, 0})
+};
+
 /// Struct /Script/AudioExtensions.AudioParameter
 /// Size: 0x0090 (0x000000 - 0x000090)
 class FAudioParameter : public MDKBase
@@ -194,6 +249,25 @@ public:
 	CMember(TArray<FString>)                           ArrayStringParam                                            OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(EAudioParameterType)                       ParamType                                                   OFFSET(get<T>, {0x78, 1, 0, 0})
 	SMember(FName)                                     TypeName                                                    OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+};
+
+/// Enum /Script/AudioExtensions.ESoundWaveCloudStreamingPlatformProjectEnableType
+/// Size: 0x03
+enum ESoundWaveCloudStreamingPlatformProjectEnableType : uint8_t
+{
+	ESoundWaveCloudStreamingPlatformProjectEnableType__Enabled0                      = 0,
+	ESoundWaveCloudStreamingPlatformProjectEnableType__Disabled1                     = 1,
+	ESoundWaveCloudStreamingPlatformProjectEnableType__ESoundWaveCloudStreamingPlatformProjectEnableType_MAX2 = 2
+};
+
+/// Enum /Script/AudioExtensions.ESoundWaveCloudStreamingPlatformEnableType
+/// Size: 0x04
+enum ESoundWaveCloudStreamingPlatformEnableType : uint8_t
+{
+	ESoundWaveCloudStreamingPlatformEnableType__Inherited0                           = 0,
+	ESoundWaveCloudStreamingPlatformEnableType__Disabled1                            = 1,
+	ESoundWaveCloudStreamingPlatformEnableType__SWC_MultipleValues2                  = 2,
+	ESoundWaveCloudStreamingPlatformEnableType__ESoundWaveCloudStreamingPlatformEnableType_MAX3 = 3
 };
 
 /// Enum /Script/AudioExtensions.EAudioParameterType

@@ -304,15 +304,132 @@ class FTypedElementPackageLoadedPathColumn : public FTypedElementDataStorageColu
 public:
 };
 
-/// Struct /Script/TypedElementFramework.TypedElementSelectionColumn
+/// Struct /Script/TypedElementFramework.SCCInChangelistTag
 /// Size: 0x0000 (0x000001 - 0x000001)
-class FTypedElementSelectionColumn : public FTypedElementDataStorageColumn
+class FSCCInChangelistTag : public FTypedElementDataStorageTag
 { 
 	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
+};
+
+/// Struct /Script/TypedElementFramework.SCCStagedTag
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FSCCStagedTag : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.SCCLockedTag
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FSCCLockedTag : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.SCCExternallyEditedTag
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FSCCExternallyEditedTag : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.SCCStatusColumn
+/// Size: 0x0003 (0x000001 - 0x000004)
+class FSCCStatusColumn : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 4;
+
+public:
+	CMember(ESCCModification)                          Modification                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.SCCRevisionId
+/// Size: 0x0014 (0x000000 - 0x000014)
+class FSCCRevisionId : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 20;
+
+public:
+	DMember(uint32_t)                                  ID                                                          OFFSET(get<uint32_t>, {0x0, 20, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.SCCRevisionIdColumn
+/// Size: 0x0013 (0x000001 - 0x000014)
+class FSCCRevisionIdColumn : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 20;
+
+public:
+	SMember(FSCCRevisionId)                            RevisionId                                                  OFFSET(getStruct<T>, {0x0, 20, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.SCCExternalRevisionIdColumn
+/// Size: 0x0013 (0x000001 - 0x000014)
+class FSCCExternalRevisionIdColumn : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 20;
+
+public:
+	SMember(FSCCRevisionId)                            RevisionId                                                  OFFSET(getStruct<T>, {0x0, 20, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.SCCUserInfo
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FSCCUserInfo : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.SCCExternallyLockedColumn
+/// Size: 0x000F (0x000001 - 0x000010)
+class FSCCExternallyLockedColumn : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	SMember(FSCCUserInfo)                              LockedBy                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+};
+
+/// Struct /Script/TypedElementFramework.TypedElementSelectionColumn
+/// Size: 0x0003 (0x000001 - 0x000004)
+class FTypedElementSelectionColumn : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 4;
+
+public:
+	SMember(FName)                                     SelectionSet                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/TypedElementFramework.TypedElementSlateWidgetReferenceColumn
@@ -329,6 +446,127 @@ public:
 /// Struct /Script/TypedElementFramework.TypedElementSlateWidgetReferenceDeletesRowTag
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementSlateWidgetReferenceDeletesRowTag : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnA
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnA : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnB
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnB : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnC
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnC : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnD
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnD : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnE
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnE : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnF
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnF : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestColumnG
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestColumnG : public FTypedElementDataStorageColumn
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestTagColumnA
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestTagColumnA : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestTagColumnB
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestTagColumnB : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestTagColumnC
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestTagColumnC : public FTypedElementDataStorageTag
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1;
+
+public:
+};
+
+/// Struct /Script/TypedElementFramework.TestTagColumnD
+/// Size: 0x0000 (0x000001 - 0x000001)
+class FTestTagColumnD : public FTypedElementDataStorageTag
 { 
 	friend MDKHandler;
 	friend MDKBase;
@@ -440,5 +678,16 @@ class FTypedElementViewportColorColumn : public FTypedElementDataStorageColumn
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
 public:
+};
+
+/// Enum /Script/TypedElementFramework.ESCCModification
+/// Size: 0x05
+enum ESCCModification : uint8_t
+{
+	ESCCModification__Modified0                                                      = 0,
+	ESCCModification__Added1                                                         = 1,
+	ESCCModification__Removed2                                                       = 2,
+	ESCCModification__Conflicted3                                                    = 3,
+	ESCCModification__ESCCModification_MAX4                                          = 4
 };
 

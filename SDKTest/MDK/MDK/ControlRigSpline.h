@@ -78,29 +78,29 @@ public:
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_SetSplinePoints
-/// Size: 0x0030 (0x000160 - 0x000190)
+/// Size: 0x0030 (0x000180 - 0x0001B0)
 class FRigUnit_SetSplinePoints : public FRigUnitMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 400;
+	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_SetSplineTransforms
-/// Size: 0x0030 (0x000160 - 0x000190)
+/// Size: 0x0030 (0x000180 - 0x0001B0)
 class FRigUnit_SetSplineTransforms : public FRigUnitMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 400;
+	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_PositionFromControlRigSpline
@@ -164,18 +164,18 @@ public:
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_DrawControlRigSpline
-/// Size: 0x0030 (0x000160 - 0x000190)
+/// Size: 0x0030 (0x000180 - 0x0001B0)
 class FRigUnit_DrawControlRigSpline : public FRigUnitMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 400;
+	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x160, 24, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x178, 16, 0, 0})
-	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x188, 4, 0, 0})
-	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x18C, 4, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x180, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x1A8, 4, 0, 0})
+	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x1AC, 4, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_GetLengthControlRigSpline
@@ -206,55 +206,55 @@ public:
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_FitChainToSplineCurve
-/// Size: 0x01D0 (0x000160 - 0x000330)
+/// Size: 0x01D0 (0x000180 - 0x000350)
 class FRigUnit_FitChainToSplineCurve : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 816;
+	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x188, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x18C, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x194, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x198, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1B0, 24, 0, 0})
-	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(getStruct<T>, {0x1C8, 24, 0, 0})
-	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x1F0, 1, 0, 0})
-	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1F4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(getStruct<T>, {0x200, 144, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(getStruct<T>, {0x290, 152, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1AC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1B0, 4, 0, 0})
+	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x1B4, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x1B8, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1D0, 24, 0, 0})
+	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(getStruct<T>, {0x1E8, 24, 0, 0})
+	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x200, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x210, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x214, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x218, 1, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(getStruct<T>, {0x220, 144, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(getStruct<T>, {0x2B0, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_FitChainToSplineCurveItemArray
-/// Size: 0x01D0 (0x000160 - 0x000330)
+/// Size: 0x01D0 (0x000180 - 0x000350)
 class FRigUnit_FitChainToSplineCurveItemArray : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 816;
+	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x188, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x18C, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x190, 4, 0, 0})
-	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x194, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x198, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1B0, 24, 0, 0})
-	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(getStruct<T>, {0x1C8, 24, 0, 0})
-	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x1F0, 1, 0, 0})
-	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x1F4, 4, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(getStruct<T>, {0x200, 144, 0, 0})
-	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(getStruct<T>, {0x290, 152, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1AC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1B0, 4, 0, 0})
+	DMember(int32_t)                                   SamplingPrecision                                           OFFSET(get<int32_t>, {0x1B4, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x1B8, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1D0, 24, 0, 0})
+	SMember(FVector)                                   PoleVectorPosition                                          OFFSET(getStruct<T>, {0x1E8, 24, 0, 0})
+	CMember(TArray<FRigUnit_FitChainToCurve_Rotation>) Rotations                                                   OFFSET(get<T>, {0x200, 16, 0, 0})
+	CMember(ERigVMAnimEasingType)                      RotationEaseType                                            OFFSET(get<T>, {0x210, 1, 0, 0})
+	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x214, 4, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x218, 1, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_DebugSettings)    DebugSettings                                               OFFSET(getStruct<T>, {0x220, 144, 0, 0})
+	SMember(FRigUnit_FitChainToCurve_WorkData)         WorkData                                                    OFFSET(getStruct<T>, {0x2B0, 152, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_SplineConstraint_WorkData
@@ -273,49 +273,49 @@ public:
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_SplineConstraint
-/// Size: 0x00B0 (0x000160 - 0x000210)
+/// Size: 0x00B0 (0x000180 - 0x000230)
 class FRigUnit_SplineConstraint : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 528;
+	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
-	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x188, 1, 0, 0})
-	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x18C, 4, 0, 0})
-	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x190, 4, 0, 0})
-	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x198, 24, 0, 0})
-	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1B0, 24, 0, 0})
-	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1C8, 1, 0, 0})
-	SMember(FRigUnit_SplineConstraint_WorkData)        WorkData                                                    OFFSET(getStruct<T>, {0x1D0, 56, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	CMember(EControlRigCurveAlignment)                 Alignment                                                   OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x1AC, 4, 0, 0})
+	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x1B0, 4, 0, 0})
+	SMember(FVector)                                   PrimaryAxis                                                 OFFSET(getStruct<T>, {0x1B8, 24, 0, 0})
+	SMember(FVector)                                   SecondaryAxis                                               OFFSET(getStruct<T>, {0x1D0, 24, 0, 0})
+	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1E8, 1, 0, 0})
+	SMember(FRigUnit_SplineConstraint_WorkData)        WorkData                                                    OFFSET(getStruct<T>, {0x1F0, 56, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_FitSplineCurveToChain
-/// Size: 0x0030 (0x000160 - 0x000190)
+/// Size: 0x0030 (0x000180 - 0x0001B0)
 class FRigUnit_FitSplineCurveToChain : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 400;
+	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	SMember(FRigElementKeyCollection)                  Items                                                       OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_FitSplineCurveToChainItemArray
-/// Size: 0x0030 (0x000160 - 0x000190)
+/// Size: 0x0030 (0x000180 - 0x0001B0)
 class FRigUnit_FitSplineCurveToChainItemArray : public FRigUnit_HighlevelBaseMutable
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 400;
+	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	CMember(TArray<FRigElementKey>)                    Items                                                       OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FControlRigSpline)                         Spline                                                      OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/ControlRigSpline.RigUnit_ClosestParameterFromControlRigSpline

@@ -49,6 +49,16 @@ class UInterchangeActorFactory : public UInterchangeFactoryBase
 public:
 };
 
+/// Class /Script/InterchangeImport.InterchangeDecalActorFactory
+/// Size: 0x0000 (0x000030 - 0x000030)
+class UInterchangeDecalActorFactory : public UInterchangeActorFactory
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
 /// Class /Script/InterchangeImport.InterchangeLightActorFactory
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UInterchangeLightActorFactory : public UInterchangeActorFactory
@@ -731,6 +741,16 @@ public:
 /// Class /Script/InterchangeImport.InterchangeJPGTranslator
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UInterchangeJPGTranslator : public UInterchangeTranslatorBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+};
+
+/// Class /Script/InterchangeImport.InterchangeOOJPGTranslator
+/// Size: 0x0008 (0x000038 - 0x000040)
+class UInterchangeOOJPGTranslator : public UInterchangeTranslatorBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 64;

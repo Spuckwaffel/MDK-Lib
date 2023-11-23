@@ -152,12 +152,12 @@ public:
 };
 
 /// Struct /Script/AnimationWarpingRuntime.AnimNode_OrientationWarping
-/// Size: 0x00D0 (0x0000C8 - 0x000198)
+/// Size: 0x00C0 (0x0000C8 - 0x000188)
 class FAnimNode_OrientationWarping : public FAnimNode_SkeletalControlBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 408;
+	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
 	CMember(EWarpingEvaluationMode)                    Mode                                                        OFFSET(get<T>, {0xC8, 1, 0, 0})
@@ -171,9 +171,8 @@ public:
 	CMember(TEnumAsByte<EAxis>)                        RotationAxis                                                OFFSET(get<T>, {0x110, 1, 0, 0})
 	DMember(float)                                     DistributedBoneOrientationAlpha                             OFFSET(get<float>, {0x114, 4, 0, 0})
 	DMember(float)                                     RotationInterpSpeed                                         OFFSET(get<float>, {0x118, 4, 0, 0})
-	DMember(float)                                     WarpingAlpha                                                OFFSET(get<float>, {0x11C, 4, 0, 0})
-	DMember(float)                                     OffsetAlpha                                                 OFFSET(get<float>, {0x120, 4, 0, 0})
-	DMember(float)                                     MaxOffsetAngle                                              OFFSET(get<float>, {0x124, 4, 0, 0})
+	DMember(float)                                     MaxCorrectionRateDegrees                                    OFFSET(get<float>, {0x11C, 4, 0, 0})
+	DMember(bool)                                      bCounterCompenstateInterpolationByRootMotion                OFFSET(get<bool>, {0x120, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationWarpingRuntime.SlopeWarpingFootDefinition

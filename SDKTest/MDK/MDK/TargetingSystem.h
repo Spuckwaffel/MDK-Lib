@@ -23,9 +23,9 @@ public:
 
 	/// Functions
 	// Function /Script/TargetingSystem.AbilityTask_PerformTargeting.PerformTargetingRequest
-	// UAbilityTask_PerformTargeting* PerformTargetingRequest(UGameplayAbility* OwningAbility, UTargetingPreset* InTargetingPreset, bool bAllowAsync); // [0x6bf6ce0] Final|Native|Static|Public|BlueprintCallable 
+	// UAbilityTask_PerformTargeting* PerformTargetingRequest(UGameplayAbility* OwningAbility, UTargetingPreset* InTargetingPreset, bool bAllowAsync); // [0x6c57c14] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TargetingSystem.AbilityTask_PerformTargeting.PerformFilteringRequest
-	// UAbilityTask_PerformTargeting* PerformFilteringRequest(UGameplayAbility* OwningAbility, UTargetingPreset* TargetingPreset, TArray<AActor*> InTargets, bool bAllowAsync); // [0x6bf6874] Final|Native|Static|Public|BlueprintCallable 
+	// UAbilityTask_PerformTargeting* PerformFilteringRequest(UGameplayAbility* OwningAbility, UTargetingPreset* TargetingPreset, TArray<AActor*> InTargets, bool bAllowAsync); // [0x6c57788] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/TargetingSystem.AsyncAction_PerformTargeting
@@ -46,11 +46,11 @@ public:
 
 	/// Functions
 	// Function /Script/TargetingSystem.AsyncAction_PerformTargeting.PerformTargetingRequest
-	// UAsyncAction_PerformTargeting* PerformTargetingRequest(AActor* SourceActor, UTargetingPreset* TargetingPreset, bool bUseAsyncTargeting); // [0x6bf6df4] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_PerformTargeting* PerformTargetingRequest(AActor* SourceActor, UTargetingPreset* TargetingPreset, bool bUseAsyncTargeting); // [0x6c57d44] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TargetingSystem.AsyncAction_PerformTargeting.PerformFilteringRequest
-	// UAsyncAction_PerformTargeting* PerformFilteringRequest(AActor* SourceActor, UTargetingPreset* TargetingPreset, bool bUseAsyncTargeting, TArray<AActor*> InTargets); // [0x6bf6a2c] Final|Native|Static|Public|BlueprintCallable 
+	// UAsyncAction_PerformTargeting* PerformFilteringRequest(AActor* SourceActor, UTargetingPreset* TargetingPreset, bool bUseAsyncTargeting, TArray<AActor*> InTargets); // [0x6c57950] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TargetingSystem.AsyncAction_PerformTargeting.GetTargetingHandle
-	// FTargetingRequestHandle GetTargetingHandle();                                                                            // [0x6bf6000] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FTargetingRequestHandle GetTargetingHandle();                                                                            // [0x6c56c48] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/TargetingSystem.TargetingTask
@@ -69,6 +69,47 @@ class UTargetingFilterTask_BasicFilterTemplate : public UTargetingTask
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/TargetingSystem.SimpleTargetingFilterTask
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimpleTargetingFilterTask : public UTargetingFilterTask_BasicFilterTemplate
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/TargetingSystem.SimpleTargetingSelectionTask
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimpleTargetingSelectionTask : public UTargetingTask
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/TargetingSystem.TargetingSortTask_Base
+/// Size: 0x0008 (0x000028 - 0x000030)
+class UTargetingSortTask_Base : public UTargetingTask
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+	DMember(bool)                                      bAscending                                                  OFFSET(get<bool>, {0x28, 1, 1, 0})
+};
+
+/// Class /Script/TargetingSystem.SimpleTargetingSortTask
+/// Size: 0x0000 (0x000030 - 0x000030)
+class USimpleTargetingSortTask : public UTargetingSortTask_Base
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 };
@@ -120,11 +161,11 @@ public:
 
 	/// Functions
 	// Function /Script/TargetingSystem.TargetingSelectionTask_AOE.GetSourceRotation
-	// FQuat GetSourceRotation(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6bf5eb0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FQuat GetSourceRotation(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6c56af8] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_AOE.GetSourceOffset
-	// FVector GetSourceOffset(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6bf5d50] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FVector GetSourceOffset(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6c56998] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
-	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bf5bf0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6c56838] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 };
 
 /// Class /Script/TargetingSystem.TargetingSelectionTask_SourceActor
@@ -159,28 +200,17 @@ public:
 
 	/// Functions
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetTraceLength
-	// float GetTraceLength(FTargetingRequestHandle& TargetingHandle);                                                          // [0x6bf660c] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// float GetTraceLength(FTargetingRequestHandle& TargetingHandle);                                                          // [0x6c574d0] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetTraceDirection
-	// FVector GetTraceDirection(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bf655c] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FVector GetTraceDirection(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6c57420] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceRadius
-	// float GetSweptTraceRadius(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bf5f60] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// float GetSweptTraceRadius(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6c56ba8] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetSourceOffset
-	// FVector GetSourceOffset(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6bf5e00] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FVector GetSourceOffset(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6c56a48] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetSourceLocation
-	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bf5ca0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6c568e8] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetAdditionalActorsToIgnore
-	// void GetAdditionalActorsToIgnore(FTargetingRequestHandle& TargetingHandle, TArray<AActor*>& OutAdditionalActorsToIgnore); // [0x6bf5af0] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
-};
-
-/// Class /Script/TargetingSystem.TargetingSortTask_Base
-/// Size: 0x0008 (0x000028 - 0x000030)
-class UTargetingSortTask_Base : public UTargetingTask
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
-
-public:
-	DMember(bool)                                      bAscending                                                  OFFSET(get<bool>, {0x28, 1, 1, 0})
+	// void GetAdditionalActorsToIgnore(FTargetingRequestHandle& TargetingHandle, TArray<AActor*>& OutAdditionalActorsToIgnore); // [0x6c566fc] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
 };
 
 /// Class /Script/TargetingSystem.TargetingSubsystem
@@ -196,19 +226,19 @@ public:
 
 	/// Functions
 	// Function /Script/TargetingSystem.TargetingSubsystem.StartAsyncTargetingRequest
-	// FTargetingRequestHandle StartAsyncTargetingRequest(UTargetingPreset* TargetingPreset, FTargetingSourceContext& InSourceContext, FDelegateProperty CompletionDynamicDelegate); // [0x6bf70b0] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// FTargetingRequestHandle StartAsyncTargetingRequest(UTargetingPreset* TargetingPreset, FTargetingSourceContext& InSourceContext, FDelegateProperty CompletionDynamicDelegate); // [0x6c58010] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TargetingSystem.TargetingSubsystem.RemoveAsyncTargetingRequestWithHandle
-	// void RemoveAsyncTargetingRequestWithHandle(FTargetingRequestHandle& TargetingHandle);                                    // [0x6bf7024] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+	// void RemoveAsyncTargetingRequestWithHandle(FTargetingRequestHandle& TargetingHandle);                                    // [0x6c57f84] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TargetingSystem.TargetingSubsystem.OverrideCollisionQueryTaskData
-	// void OverrideCollisionQueryTaskData(FTargetingRequestHandle TargetingHandle, FCollisionQueryTaskData& CollisionQueryDataOverride); // [0x6bf66ac] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void OverrideCollisionQueryTaskData(FTargetingRequestHandle TargetingHandle, FCollisionQueryTaskData& CollisionQueryDataOverride); // [0x6c57570] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/TargetingSystem.TargetingSubsystem.GetTargetingSourceContext
-	// FTargetingSourceContext GetTargetingSourceContext(FTargetingRequestHandle TargetingHandle);                              // [0x6bf63a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FTargetingSourceContext GetTargetingSourceContext(FTargetingRequestHandle TargetingHandle);                              // [0x6c5723c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TargetingSystem.TargetingSubsystem.GetTargetingResultsActors
-	// void GetTargetingResultsActors(FTargetingRequestHandle TargetingHandle, TArray<AActor*>& Targets);                       // [0x6bf61dc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetTargetingResultsActors(FTargetingRequestHandle TargetingHandle, TArray<AActor*>& Targets);                       // [0x6c56ffc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TargetingSystem.TargetingSubsystem.GetTargetingResults
-	// void GetTargetingResults(FTargetingRequestHandle TargetingHandle, TArray<FHitResult>& OutTargets);                       // [0x6bf6014] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetTargetingResults(FTargetingRequestHandle TargetingHandle, TArray<FHitResult>& OutTargets);                       // [0x6c56c5c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TargetingSystem.TargetingSubsystem.ExecuteTargetingRequest
-	// void ExecuteTargetingRequest(UTargetingPreset* TargetingPreset, FTargetingSourceContext& InSourceContext, FDelegateProperty CompletionDynamicDelegate); // [0x6bf57ec] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void ExecuteTargetingRequest(UTargetingPreset* TargetingPreset, FTargetingSourceContext& InSourceContext, FDelegateProperty CompletionDynamicDelegate); // [0x6c56414] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/TargetingSystem.TargetingFilterTask_SortByDistance
@@ -257,15 +287,16 @@ public:
 };
 
 /// Struct /Script/TargetingSystem.TargetingDefaultResultData
-/// Size: 0x00E8 (0x000000 - 0x0000E8)
+/// Size: 0x00F0 (0x000000 - 0x0000F0)
 class FTargetingDefaultResultData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 232;
+	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FHitResult)                                HitResult                                                   OFFSET(getStruct<T>, {0x0, 224, 0, 0})
+	SMember(FHitResult)                                HitResult                                                   OFFSET(getStruct<T>, {0x0, 232, 0, 0})
+	DMember(float)                                     Score                                                       OFFSET(get<float>, {0xE8, 4, 0, 0})
 };
 
 /// Struct /Script/TargetingSystem.TargetingDefaultResultsSet
@@ -297,15 +328,15 @@ public:
 };
 
 /// Struct /Script/TargetingSystem.TargetingRequestData
-/// Size: 0x0028 (0x000000 - 0x000028)
+/// Size: 0x0030 (0x000000 - 0x000030)
 class FTargetingRequestData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
+	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FDelegateProperty)                         TargetingRequestDynamicDelegate                             OFFSET(getStruct<T>, {0x18, 12, 0, 0})
+	SMember(FDelegateProperty)                         TargetingRequestDynamicDelegate                             OFFSET(getStruct<T>, {0x20, 12, 0, 0})
 };
 
 /// Struct /Script/TargetingSystem.TargetingAsyncTaskData

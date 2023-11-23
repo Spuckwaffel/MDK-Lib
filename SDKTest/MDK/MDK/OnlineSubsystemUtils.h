@@ -34,9 +34,9 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
-	// UAchievementQueryCallbackProxy* CacheAchievements(UObject* WorldContextObject, APlayerController* PlayerController);     // [0x60cc254] Final|Native|Static|Public|BlueprintCallable 
+	// UAchievementQueryCallbackProxy* CacheAchievements(UObject* WorldContextObject, APlayerController* PlayerController);     // [0x5f98aac] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
-	// UAchievementQueryCallbackProxy* CacheAchievementDescriptions(UObject* WorldContextObject, APlayerController* PlayerController); // [0x60cc0f8] Final|Native|Static|Public|BlueprintCallable 
+	// UAchievementQueryCallbackProxy* CacheAchievementDescriptions(UObject* WorldContextObject, APlayerController* PlayerController); // [0x5f98950] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy
@@ -53,7 +53,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
-	// UAchievementWriteCallbackProxy* WriteAchievementProgress(UObject* WorldContextObject, APlayerController* PlayerController, FName AchievementName, float Progress, int32_t UserTag); // [0x60d0cb8] Final|Native|Static|Public|BlueprintCallable 
+	// UAchievementWriteCallbackProxy* WriteAchievementProgress(UObject* WorldContextObject, APlayerController* PlayerController, FName AchievementName, float Progress, int32_t UserTag); // [0x5f9d7f4] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.ConnectionCallbackProxy
@@ -70,7 +70,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
-	// UConnectionCallbackProxy* ConnectToService(UObject* WorldContextObject, APlayerController* PlayerController);            // [0x60cc3b0] Final|Native|Static|Public|BlueprintCallable 
+	// UConnectionCallbackProxy* ConnectToService(UObject* WorldContextObject, APlayerController* PlayerController);            // [0x5f98c08] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy
@@ -87,7 +87,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
-	// UCreateSessionCallbackProxy* CreateSession(UObject* WorldContextObject, APlayerController* PlayerController, int32_t PublicConnections, bool bUseLAN); // [0x60ceac0] Final|Native|Static|Public|BlueprintCallable 
+	// UCreateSessionCallbackProxy* CreateSession(UObject* WorldContextObject, APlayerController* PlayerController, int32_t PublicConnections, bool bUseLAN); // [0x5f9b0fc] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy
@@ -104,7 +104,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
-	// UDestroySessionCallbackProxy* DestroySession(UObject* WorldContextObject, APlayerController* PlayerController);          // [0x60ceca4] Final|Native|Static|Public|BlueprintCallable 
+	// UDestroySessionCallbackProxy* DestroySession(UObject* WorldContextObject, APlayerController* PlayerController);          // [0x5f9b2e0] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndMatchCallbackProxy
@@ -121,7 +121,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
-	// UEndMatchCallbackProxy* EndMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, FString MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome); // [0x60cedfc] Final|Native|Static|Public|BlueprintCallable 
+	// UEndMatchCallbackProxy* EndMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, FString MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome); // [0x5f9b438] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.EndTurnCallbackProxy
@@ -138,7 +138,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
-	// UEndTurnCallbackProxy* EndTurn(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TScriptInterface<Class> TurnBasedMatchInterface); // [0x60cf5c4] Final|Native|Static|Public|BlueprintCallable 
+	// UEndTurnCallbackProxy* EndTurn(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TScriptInterface<Class> TurnBasedMatchInterface); // [0x5f9be44] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy
@@ -155,15 +155,15 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
-	// FString GetServerName(FBlueprintSessionResult& Result);                                                                  // [0x60d0884] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// FString GetServerName(FBlueprintSessionResult& Result);                                                                  // [0x5f9d3c0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
-	// int32_t GetPingInMs(FBlueprintSessionResult& Result);                                                                    // [0x60d07c0] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// int32_t GetPingInMs(FBlueprintSessionResult& Result);                                                                    // [0x5f9d2fc] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
-	// int32_t GetMaxPlayers(FBlueprintSessionResult& Result);                                                                  // [0x60d06fc] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// int32_t GetMaxPlayers(FBlueprintSessionResult& Result);                                                                  // [0x5f9d238] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
-	// int32_t GetCurrentPlayers(FBlueprintSessionResult& Result);                                                              // [0x60d0634] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+	// int32_t GetCurrentPlayers(FBlueprintSessionResult& Result);                                                              // [0x5f9d170] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
-	// UFindSessionsCallbackProxy* FindSessions(UObject* WorldContextObject, APlayerController* PlayerController, int32_t MaxResults, bool bUseLAN); // [0x60cfd30] Final|Native|Static|Public|BlueprintCallable 
+	// UFindSessionsCallbackProxy* FindSessions(UObject* WorldContextObject, APlayerController* PlayerController, int32_t MaxResults, bool bUseLAN); // [0x5f9c5d4] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
@@ -180,7 +180,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
-	// UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches); // [0x60cff14] Final|Native|Static|Public|BlueprintCallable 
+	// UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches); // [0x5f9c7b8] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
@@ -197,11 +197,11 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
-	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseUnprocessedPurchases(APlayerController* PlayerController); // [0x60ce738] Final|Native|Static|Public|BlueprintCallable 
+	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseUnprocessedPurchases(APlayerController* PlayerController); // [0x5f9ad74] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned
-	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseQueryOwned(APlayerController* PlayerController);          // [0x60ce1d4] Final|Native|Static|Public|BlueprintCallable 
+	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseQueryOwned(APlayerController* PlayerController);          // [0x5f9a824] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
-	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchase(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x60cc718] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchase(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x5f98f70] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy
@@ -218,7 +218,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy.CreateProxyObjectForInAppPurchaseCheckout
-	// UInAppPurchaseCheckoutCallbackProxy* CreateProxyObjectForInAppPurchaseCheckout(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x60cce18] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UInAppPurchaseCheckoutCallbackProxy* CreateProxyObjectForInAppPurchaseCheckout(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x5f995cc] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseFinalizeProxy
@@ -245,7 +245,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
-	// UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(APlayerController* PlayerController, TArray<FString>& ProductIdentifiers); // [0x60cdf1c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(APlayerController* PlayerController, TArray<FString>& ProductIdentifiers); // [0x5f9a56c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy
@@ -262,11 +262,11 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseRestoreOwnedProducts
-	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseRestoreOwnedProducts(APlayerController* PlayerController); // [0x60ce694] Final|Native|Static|Public|BlueprintCallable 
+	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseRestoreOwnedProducts(APlayerController* PlayerController); // [0x5f9acd0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseQueryOwnedProducts
-	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseQueryOwnedProducts(APlayerController* PlayerController); // [0x60ce448] Final|Native|Static|Public|BlueprintCallable 
+	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseQueryOwnedProducts(APlayerController* PlayerController); // [0x5f9aa98] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseGetKnownReceipts
-	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseGetKnownReceipts(APlayerController* PlayerController); // [0x60cdd2c] Final|Native|Static|Public|BlueprintCallable 
+	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseGetKnownReceipts(APlayerController* PlayerController); // [0x5f9a37c] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
@@ -283,7 +283,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
-	// UInAppPurchaseRestoreCallbackProxy2* CreateProxyObjectForInAppPurchaseRestore(TArray<FInAppPurchaseProductRequest2>& ConsumableProductFlags, APlayerController* PlayerController); // [0x60ce4ec] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UInAppPurchaseRestoreCallbackProxy2* CreateProxyObjectForInAppPurchaseRestore(TArray<FInAppPurchaseProductRequest2>& ConsumableProductFlags, APlayerController* PlayerController); // [0x5f9ab3c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.IpConnection
@@ -332,7 +332,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-	// UJoinSessionCallbackProxy* JoinSession(UObject* WorldContextObject, APlayerController* PlayerController, FBlueprintSessionResult& SearchResult); // [0x60d0964] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// UJoinSessionCallbackProxy* JoinSession(UObject* WorldContextObject, APlayerController* PlayerController, FBlueprintSessionResult& SearchResult); // [0x5f9d4a0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary
@@ -359,7 +359,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-	// ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(APlayerController* PlayerController, FName SessionName);       // [0x60cc508] Final|Native|Static|Public|BlueprintCallable 
+	// ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(APlayerController* PlayerController, FName SessionName);       // [0x5f98d60] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
@@ -376,7 +376,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-	// ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(APlayerController* PlayerController, FName StatName);       // [0x60ce9e0] Final|Native|Static|Public|BlueprintCallable 
+	// ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(APlayerController* PlayerController, FName StatName);       // [0x5f9b01c] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.LogoutCallbackProxy
@@ -393,7 +393,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-	// ULogoutCallbackProxy* Logout(UObject* WorldContextObject, APlayerController* PlayerController);                          // [0x60d0b60] Final|Native|Static|Public|BlueprintCallable 
+	// ULogoutCallbackProxy* Logout(UObject* WorldContextObject, APlayerController* PlayerController);                          // [0x5f9d69c] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeacon
@@ -424,7 +424,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
-	// void ClientOnConnected();                                                                                                // [0x149a7f4] Final|Net|NetReliableNative|Event|Private|NetClient 
+	// void ClientOnConnected();                                                                                                // [0x1d09150] Final|Net|NetReliableNative|Event|Private|NetClient 
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHost
@@ -519,23 +519,23 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-	// void ServerUpdateReservationRequest(FString SessionId, FPartyReservation ReservationUpdate);                             // [0x60ef3fc] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerUpdateReservationRequest(FString SessionId, FPartyReservation ReservationUpdate);                             // [0x5fba8bc] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-	// void ServerReservationRequest(FString SessionId, FPartyReservation Reservation);                                         // [0x60eefc0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerReservationRequest(FString SessionId, FPartyReservation Reservation);                                         // [0x5fba4b0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
-	// void ServerRemoveMemberFromReservationRequest(FString SessionId, FPartyReservation ReservationUpdate);                   // [0x60eed90] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerRemoveMemberFromReservationRequest(FString SessionId, FPartyReservation ReservationUpdate);                   // [0x5fba298] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-	// void ServerCancelReservationRequest(FUniqueNetIdRepl PartyLeader);                                                       // [0x60eeb7c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerCancelReservationRequest(FUniqueNetIdRepl PartyLeader);                                                       // [0x5fba0a0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ServerAddOrUpdateReservationRequest
-	// void ServerAddOrUpdateReservationRequest(FString SessionId, FPartyReservation Reservation);                              // [0x60ee94c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerAddOrUpdateReservationRequest(FString SessionId, FPartyReservation Reservation);                              // [0x5fb9e88] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-	// void ClientSendReservationUpdates(int32_t NumRemainingReservations);                                                     // [0x60ec36c] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSendReservationUpdates(int32_t NumRemainingReservations);                                                     // [0x5fb8110] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-	// void ClientSendReservationFull();                                                                                        // [0x60ec354] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSendReservationFull();                                                                                        // [0x5fb80f8] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-	// void ClientReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                                // [0x60ec24c] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                                // [0x5fb7ff0] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-	// void ClientCancelReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                          // [0x60ec144] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientCancelReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                          // [0x5fb7ee8] Net|NetReliableNative|Event|Public|NetClient 
 };
 
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconHost
@@ -591,7 +591,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-	// UQuitMatchCallbackProxy* QuitMatch(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int32_t TurnTimeoutInSeconds); // [0x60ee0c4] Final|Native|Static|Public|BlueprintCallable 
+	// UQuitMatchCallbackProxy* QuitMatch(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int32_t TurnTimeoutInSeconds); // [0x5fb96a4] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy
@@ -608,7 +608,7 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-	// UShowLoginUICallbackProxy* ShowExternalLoginUI(UObject* WorldContextObject, APlayerController* InPlayerController);      // [0x60ef62c] Final|Native|Static|Public|BlueprintCallable 
+	// UShowLoginUICallbackProxy* ShowExternalLoginUI(UObject* WorldContextObject, APlayerController* InPlayerController);      // [0x5fbaad4] Final|Native|Static|Public|BlueprintCallable 
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconClient
@@ -628,17 +628,17 @@ public:
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
-	// void ServerReservationRequest(FString SessionId, FSpectatorReservation Reservation);                                     // [0x60ef1f0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerReservationRequest(FString SessionId, FSpectatorReservation Reservation);                                     // [0x5fba6c8] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
-	// void ServerCancelReservationRequest(FUniqueNetIdRepl Spectator);                                                         // [0x60eeb7c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerCancelReservationRequest(FUniqueNetIdRepl Spectator);                                                         // [0x5fba0a0] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
-	// void ClientSendReservationUpdates(int32_t NumRemainingReservations);                                                     // [0x60ec3f0] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSendReservationUpdates(int32_t NumRemainingReservations);                                                     // [0x5fb8194] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
-	// void ClientSendReservationFull();                                                                                        // [0x17f674c] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientSendReservationFull();                                                                                        // [0x1d5a2e8] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
-	// void ClientReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                            // [0x60ec2d0] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                            // [0x5fb8074] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
-	// void ClientCancelReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                      // [0x60ec1c8] Net|NetReliableNative|Event|Public|NetClient 
+	// void ClientCancelReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                      // [0x5fb7f6c] Net|NetReliableNative|Event|Public|NetClient 
 };
 
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconHost

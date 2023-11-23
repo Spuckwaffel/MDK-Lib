@@ -7,6 +7,18 @@
 
 /// dependency: CoreUObject
 
+/// Class /Script/OnlineSubsystemMcp.IARCLocaleMappingUtil
+/// Size: 0x0020 (0x000028 - 0x000048)
+class UIARCLocaleMappingUtil : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 72;
+
+public:
+	CMember(TArray<FOnlineIARCLocaleMapping>)          LocaleMappings                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   DefaultLocale                                               OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+};
+
 /// Class /Script/OnlineSubsystemMcp.OnlineISOConversionUtil
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UOnlineISOConversionUtil : public UObject
@@ -17,6 +29,19 @@ class UOnlineISOConversionUtil : public UObject
 public:
 	CMember(TArray<FOnlineISOLanguageInfo>)            Languages                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FOnlineISORegionInfo>)              Regions                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+};
+
+/// Struct /Script/OnlineSubsystemMcp.OnlineIARCLocaleMapping
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FOnlineIARCLocaleMapping : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	SMember(FString)                                   LanguageId                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   IARCLocaleId                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineDiscoveryModeSetDef

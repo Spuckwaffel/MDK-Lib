@@ -9,11 +9,11 @@
 /// dependency: Engine
 
 /// Class /Script/CosmeticsEarlyQRP.CosmeticsEarlyQRPComponent
-/// Size: 0x0090 (0x0000A0 - 0x000130)
+/// Size: 0x00C0 (0x0000A0 - 0x000160)
 class UCosmeticsEarlyQRPComponent : public UActorComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 304;
+	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
 };

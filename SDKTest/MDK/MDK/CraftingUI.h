@@ -13,11 +13,11 @@
 /// dependency: UMG
 
 /// Class /Script/CraftingUI.FortCraftingListItem
-/// Size: 0x00F0 (0x000028 - 0x000118)
+/// Size: 0x0110 (0x000028 - 0x000138)
 class UFortCraftingListItem : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 280;
+	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
 };
@@ -65,13 +65,13 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingUI.AthenaQuickBarSlotCraftingIndicator.OnIsCraftableItemChanged
-	// void OnIsCraftableItemChanged(bool bIsCraftableItem);                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnIsCraftableItemChanged(bool bIsCraftableItem);                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.AthenaQuickBarSlotCraftingIndicator.OnIngredientChanged
-	// void OnIngredientChanged(bool bCanCraftNow);                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnIngredientChanged(bool bCanCraftNow);                                                                             // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.AthenaQuickBarSlotCraftingIndicator.OnCanCraftNowChanged
-	// void OnCanCraftNowChanged(bool bCanCraftNow);                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCanCraftNowChanged(bool bCanCraftNow);                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.AthenaQuickBarSlotCraftingIndicator.HandleWeaponEquipped
-	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0x9ad55f0] Final|Native|Private 
+	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0xa00cd20] Final|Native|Private 
 };
 
 /// Class /Script/CraftingUI.FortCookingScreen
@@ -118,7 +118,7 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingIngredientWidget.OnIngredientWidgetUpdated
-	// void OnIngredientWidgetUpdated(int32_t NumAvailable, int32_t NumRequired, bool bIsPrimaryIngredient, bool bIsLastIngredient); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnIngredientWidgetUpdated(int32_t NumAvailable, int32_t NumRequired, bool bIsPrimaryIngredient, bool bIsLastIngredient); // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/CraftingUI.FortCraftingItemInfoWidget
@@ -142,7 +142,7 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingItemInfoWidget.OnItemRaritySet
-	// void OnItemRaritySet(EFortRarity Rarity, FFortRarityItemData RarityItemData);                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnItemRaritySet(EFortRarity Rarity, FFortRarityItemData RarityItemData);                                            // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/CraftingUI.FortCraftingListEntry
@@ -159,30 +159,31 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingListEntry.OnCraftingListItemSet
-	// void OnCraftingListItemSet();                                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCraftingListItemSet();                                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/CraftingUI.FortCraftingTab
-/// Size: 0x0140 (0x000400 - 0x000540)
+/// Size: 0x0160 (0x000400 - 0x000560)
 class UFortCraftingTab : public UCommonActivatableWidget
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1344;
+	static inline constexpr uint64_t __MDKClassSize = 1376;
 
 public:
 	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x408, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x410, 240, 0, 0})
-	SMember(FGameplayTagContainer)                     PrimaryIngredientTags                                       OFFSET(getStruct<T>, {0x500, 32, 0, 0})
-	CMember(UFortCraftingItemInfoWidget*)              CraftingItemInfo                                            OFFSET(get<T>, {0x520, 8, 0, 0})
-	CMember(UCommonListView*)                          ListView_Recipes                                            OFFSET(get<T>, {0x528, 8, 0, 0})
-	CMember(UAthenaQuickbarEditorBase*)                QuickbarEditor                                              OFFSET(get<T>, {0x530, 8, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x410, 272, 0, 0})
+	SMember(FGameplayTagContainer)                     PrimaryIngredientTags                                       OFFSET(getStruct<T>, {0x520, 32, 0, 0})
+	CMember(UFortCraftingItemInfoWidget*)              CraftingItemInfo                                            OFFSET(get<T>, {0x540, 8, 0, 0})
+	CMember(UCommonListView*)                          ListView_Recipes                                            OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UAthenaQuickbarEditorBase*)                QuickbarEditor                                              OFFSET(get<T>, {0x550, 8, 0, 0})
+	CMember(UAthenaInventoryItemInfo*)                 ItemInfoWidget                                              OFFSET(get<T>, {0x558, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingTab.OnFormulaListUpdated
-	// void OnFormulaListUpdated(int32_t NumFormulas);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnFormulaListUpdated(int32_t NumFormulas);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.FortCraftingTab.HandleInventoryItemSelected
-	// void HandleInventoryItemSelected(UFortItem* Item);                                                                       // [0x9ad54ac] Final|Native|Private 
+	// void HandleInventoryItemSelected(UFortItem* Item);                                                                       // [0xa00cbdc] Final|Native|Private 
 };
 
 /// Class /Script/CraftingUI.FortPotContentsPopup
@@ -201,7 +202,7 @@ public:
 
 	/// Functions
 	// Function /Script/CraftingUI.FortPotContentsPopup.SetOwningCraftingObject
-	// void SetOwningCraftingObject(ACraftingObjectBGA* InCraftingObject);                                                      // [0x9ad56ac] Final|Native|Public|BlueprintCallable 
+	// void SetOwningCraftingObject(ACraftingObjectBGA* InCraftingObject);                                                      // [0xa00cddc] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/CraftingUI.FortPotContentsTile

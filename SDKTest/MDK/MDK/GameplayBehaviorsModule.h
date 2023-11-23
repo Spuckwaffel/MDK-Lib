@@ -73,25 +73,25 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_TriggerBehavior
-	// void K2_TriggerBehavior(AActor* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                      // [0x74c88f8] Final|Native|Public|BlueprintCallable 
+	// void K2_TriggerBehavior(AActor* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                      // [0x76a39d0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnTriggeredPawn
-	// void K2_OnTriggeredPawn(APawn* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                       // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnTriggeredPawn(APawn* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                       // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnTriggeredCharacter
-	// void K2_OnTriggeredCharacter(ACharacter* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);             // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnTriggeredCharacter(ACharacter* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);             // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnTriggered
-	// void K2_OnTriggered(AActor* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnTriggered(AActor* Avatar, UGameplayBehaviorConfig* Config, AActor* SmartObjectOwner);                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnFinishedPawn
-	// void K2_OnFinishedPawn(APawn* Avatar, bool bWasInterrupted);                                                             // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnFinishedPawn(APawn* Avatar, bool bWasInterrupted);                                                             // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnFinishedCharacter
-	// void K2_OnFinishedCharacter(ACharacter* Avatar, bool bWasInterrupted);                                                   // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnFinishedCharacter(ACharacter* Avatar, bool bWasInterrupted);                                                   // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_OnFinished
-	// void K2_OnFinished(AActor* Avatar, bool bWasInterrupted);                                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void K2_OnFinished(AActor* Avatar, bool bWasInterrupted);                                                                // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_GetNextActorIndexInSequence
-	// int32_t K2_GetNextActorIndexInSequence(int32_t CurrentIndex);                                                            // [0x74c8848] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t K2_GetNextActorIndexInSequence(int32_t CurrentIndex);                                                            // [0x76a3920] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_EndBehavior
-	// void K2_EndBehavior(AActor* Avatar);                                                                                     // [0x74c87c4] Final|Native|Public|BlueprintCallable 
+	// void K2_EndBehavior(AActor* Avatar);                                                                                     // [0x76a389c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_AbortBehavior
-	// void K2_AbortBehavior(AActor* Avatar);                                                                                   // [0x74c8740] Final|Native|Public|BlueprintCallable 
+	// void K2_AbortBehavior(AActor* Avatar);                                                                                   // [0x76a3818] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/GameplayBehaviorsModule.GameplayBehavior_BehaviorTree
@@ -165,7 +165,7 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior_AnimationBased.OnMontageFinished
-	// void OnMontageFinished(UAnimMontage* Montage, bool bInterrupted, AActor* InAvatar);                                      // [0x74c8a04] Final|Native|Protected 
+	// void OnMontageFinished(UAnimMontage* Montage, bool bInterrupted, AActor* InAvatar);                                      // [0x76a3adc] Final|Native|Protected 
 };
 
 /// Struct /Script/GameplayBehaviorsModule.AgentGameplayBehaviors

@@ -94,7 +94,7 @@ class USoundControlBus : public USoundModulatorBase
 
 public:
 	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   Address                                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   address                                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TArray<USoundModulationGenerator*>)        Generators                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(USoundModulationParameter*)                Parameter                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
 };
@@ -113,17 +113,17 @@ public:
 
 	/// Functions
 	// Function /Script/AudioModulation.SoundControlBusMix.SoloMix
-	// void SoloMix();                                                                                                          // [0x7159560] Final|Native|Protected 
+	// void SoloMix();                                                                                                          // [0x732ba80] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.SaveMixToProfile
-	// void SaveMixToProfile();                                                                                                 // [0x7159548] Final|Native|Protected 
+	// void SaveMixToProfile();                                                                                                 // [0x732b9d8] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.LoadMixFromProfile
-	// void LoadMixFromProfile();                                                                                               // [0x715941c] Final|Native|Protected 
+	// void LoadMixFromProfile();                                                                                               // [0x732b8ac] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.DeactivateMix
-	// void DeactivateMix();                                                                                                    // [0x7158968] Final|Native|Protected 
+	// void DeactivateMix();                                                                                                    // [0x732b3bc] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.DeactivateAllMixes
-	// void DeactivateAllMixes();                                                                                               // [0x71586c8] Final|Native|Protected 
+	// void DeactivateAllMixes();                                                                                               // [0x732b11c] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.ActivateMix
-	// void ActivateMix();                                                                                                      // [0x71573fc] Final|Native|Protected 
+	// void ActivateMix();                                                                                                      // [0x732a314] Final|Native|Protected 
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameter
@@ -223,6 +223,18 @@ public:
 	DMember(float)                                     MinVolume                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
+/// Class /Script/AudioModulation.SoundModulationParameterAdditive
+/// Size: 0x0008 (0x000038 - 0x000040)
+class USoundModulationParameterAdditive : public USoundModulationParameter
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+	DMember(float)                                     UnitMin                                                     OFFSET(get<float>, {0x38, 4, 0, 0})
+	DMember(float)                                     UnitMax                                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
+};
+
 /// Class /Script/AudioModulation.SoundModulationPatch
 /// Size: 0x0020 (0x000030 - 0x000050)
 class USoundModulationPatch : public USoundModulatorBase
@@ -232,6 +244,28 @@ class USoundModulationPatch : public USoundModulatorBase
 
 public:
 	SMember(FSoundControlModulationPatch)              PatchSettings                                               OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+};
+
+/// Class /Script/AudioModulation.SoundModulationWatcher
+/// Size: 0x0018 (0x000028 - 0x000040)
+class USoundModulationWatcher : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 64;
+
+public:
+	CMember(USoundModulatorBase*)                      Modulator                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Script/AudioModulation.SoundModulationWatcher.SetModulator
+	// bool SetModulator(USoundModulatorBase* InModulator);                                                                     // [0x732b9f0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioModulation.SoundModulationWatcher.GetValue
+	// float GetValue();                                                                                                        // [0x732b694] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioModulation.SoundModulationWatcher.GetModulator
+	// USoundModulatorBase* GetModulator();                                                                                     // [0x732b458] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/AudioModulation.SoundModulationWatcher.ClearModulator
+	// bool ClearModulator();                                                                                                   // [0x732a4fc] Final|Native|Public|BlueprintCallable 
 };
 
 /// Struct /Script/AudioModulation.SoundModulationADEnvelopeParams

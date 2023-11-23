@@ -89,7 +89,7 @@ class FQosPingServerInfo : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Address                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   address                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   Port                                                        OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 

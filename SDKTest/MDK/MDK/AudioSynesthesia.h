@@ -72,9 +72,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
-	// void GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);               // [0x9977b38] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);               // [0x9e336b8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
-	// void GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);                         // [0x9977664] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>& OutConstantQ);                         // [0x9e33130] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessSettings
@@ -94,18 +94,18 @@ public:
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessAnalyzer
-/// Size: 0x0048 (0x000090 - 0x0000D8)
+/// Size: 0x0048 (0x0000A0 - 0x0000E8)
 class ULoudnessAnalyzer : public UAudioAnalyzer
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 216;
+	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	CMember(ULoudnessSettings*)                        Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    OFFSET(getStruct<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	CMember(ULoudnessSettings*)                        Settings                                                    OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRTSettings
@@ -136,13 +136,13 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime
-	// void GetNormalizedLoudnessAtTime(float InSeconds, float& OutLoudness);                                                   // [0x9977f38] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedLoudnessAtTime(float InSeconds, float& OutLoudness);                                                   // [0x9e33b6c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime
-	// void GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                         // [0x9977c60] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                         // [0x9e3381c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime
-	// void GetLoudnessAtTime(float InSeconds, float& OutLoudness);                                                             // [0x9977a64] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetLoudnessAtTime(float InSeconds, float& OutLoudness);                                                             // [0x9e335e4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
-	// void GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                                   // [0x997778c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float& OutLoudness);                                   // [0x9e33294] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.MeterSettings
@@ -162,18 +162,18 @@ public:
 };
 
 /// Class /Script/AudioSynesthesia.MeterAnalyzer
-/// Size: 0x00A8 (0x000090 - 0x000138)
+/// Size: 0x00A8 (0x0000A0 - 0x000148)
 class UMeterAnalyzer : public UAudioAnalyzer
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
+	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	CMember(UMeterSettings*)                           Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       OFFSET(getStruct<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              OFFSET(getStruct<T>, {0x110, 16, 0, 0})
+	CMember(UMeterSettings*)                           Settings                                                    OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              OFFSET(getStruct<T>, {0x120, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.OnsetNRTSettings
@@ -204,9 +204,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
-	// void GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x9977d64] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x9e33920] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
-	// void GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x9977890] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>& OutOnsetTimestamps, TArray<float>& OutOnsetStrengths); // [0x9e33398] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
@@ -225,23 +225,23 @@ public:
 };
 
 /// Class /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer
-/// Size: 0x0058 (0x000090 - 0x0000E8)
+/// Size: 0x0058 (0x0000A0 - 0x0000F8)
 class USynesthesiaSpectrumAnalyzer : public UAudioAnalyzer
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 232;
+	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	CMember(USynesthesiaSpectrumAnalysisSettings*)     Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           OFFSET(getStruct<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	CMember(USynesthesiaSpectrumAnalysisSettings*)     Settings                                                    OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
-	// int32_t GetNumCenterFrequencies();                                                                                       // [0x997800c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetNumCenterFrequencies();                                                                                       // [0x9e33c40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
-	// void GetCenterFrequencies(float InSampleRate, TArray<float>& OutCenterFrequencies);                                      // [0x9977580] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void GetCenterFrequencies(float InSampleRate, TArray<float>& OutCenterFrequencies);                                      // [0x9e3300c] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Struct /Script/AudioSynesthesia.LoudnessResults

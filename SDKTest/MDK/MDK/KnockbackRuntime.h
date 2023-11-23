@@ -32,36 +32,36 @@ public:
 
 	/// Functions
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.SetPlayersShouldBreakThroughStructures
-	// void SetPlayersShouldBreakThroughStructures(bool bActive, AFortPlayerPawn* PlayerPawn);                                  // [0x9dba978] Final|Native|Public|BlueprintCallable 
+	// void SetPlayersShouldBreakThroughStructures(bool bActive, AFortPlayerPawn* PlayerPawn);                                  // [0xa1bb8e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.HandleBlockedCharacterMovement
-	// void HandleBlockedCharacterMovement(FHitResult& InOutImpact, AFortPawn* FortPawn);                                       // [0x9dba79c] Final|Native|Private|HasOutParms 
+	// void HandleBlockedCharacterMovement(FHitResult& InOutImpact, AFortPawn* FortPawn);                                       // [0xa1bb730] Final|Native|Private|HasOutParms 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.GetPercentDamageMediumMaxThreshold
-	// float GetPercentDamageMediumMaxThreshold();                                                                              // [0x9dba768] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPercentDamageMediumMaxThreshold();                                                                              // [0xa1bb6fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.GetPercentDamageLowMaxThreshold
-	// float GetPercentDamageLowMaxThreshold();                                                                                 // [0x9dba734] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetPercentDamageLowMaxThreshold();                                                                                 // [0xa1bb6c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.GetKnockbackMultiplierInitialValue
-	// float GetKnockbackMultiplierInitialValue();                                                                              // [0x7d95194] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// float GetKnockbackMultiplierInitialValue();                                                                              // [0xa1bb6b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.GetAllPlayersKnockbackData
-	// TArray<FKnockbackMutatorData> GetAllPlayersKnockbackData();                                                              // [0x9dba088] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// TArray<FKnockbackMutatorData> GetAllPlayersKnockbackData();                                                              // [0xa1bb0a8] Final|Native|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/KnockbackRuntime.FortGameplayAbility_KnockbackMutator
-/// Size: 0x0010 (0x000B28 - 0x000B38)
+/// Size: 0x0010 (0x000B60 - 0x000B70)
 class UFortGameplayAbility_KnockbackMutator : public UFortGameplayAbility
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2872;
+	static inline constexpr uint64_t __MDKClassSize = 2928;
 
 public:
-	CMember(AFortAthenaMutator_Knockback*)             CachedMutator                                               OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(UClass*)                                   MutatorClassToGet                                           OFFSET(get<T>, {0xB30, 8, 0, 0})
+	CMember(AFortAthenaMutator_Knockback*)             CachedMutator                                               OFFSET(get<T>, {0xB60, 8, 0, 0})
+	CMember(UClass*)                                   MutatorClassToGet                                           OFFSET(get<T>, {0xB68, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Script/KnockbackRuntime.FortGameplayAbility_KnockbackMutator.SaveKnockbackData
-	// void SaveKnockbackData(FKnockbackMutatorData& InKnockbackData);                                                          // [0x9dba8fc] Final|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SaveKnockbackData(FKnockbackMutatorData& InKnockbackData);                                                          // [0xa1bb868] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/KnockbackRuntime.FortGameplayAbility_KnockbackMutator.GetCachedMutator
-	// AFortAthenaMutator_Knockback* GetCachedMutator();                                                                        // [0x9dba710] Final|Native|Protected|BlueprintCallable|BlueprintPure 
+	// AFortAthenaMutator_Knockback* GetCachedMutator();                                                                        // [0xa1bb68c] Final|Native|Protected|BlueprintCallable|BlueprintPure 
 };
 
 /// Struct /Script/KnockbackRuntime.KnockbackMutatorData

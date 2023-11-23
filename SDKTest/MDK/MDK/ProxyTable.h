@@ -68,15 +68,15 @@ public:
 };
 
 /// Struct /Script/ProxyTable.ProxyTableContextProperty
-/// Size: 0x0018 (0x000008 - 0x000020)
+/// Size: 0x0028 (0x000008 - 0x000030)
 class FProxyTableContextProperty : public FChooserParameterProxyTableBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 32;
+	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FChooserPropertyBinding)                   Binding                                                     OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/ProxyTable.LookupProxy
@@ -88,7 +88,7 @@ class FLookupProxy : public FObjectChooserBase
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	CMember(UProxyAsset*)                              Proxy                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UProxyAsset*)                              proxy                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 	SMember(FInstancedStruct)                          ProxyTable                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
@@ -101,21 +101,21 @@ class FLookupProxyWithOverrideTable : public FObjectChooserBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	CMember(UProxyAsset*)                              Proxy                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(UProxyAsset*)                              proxy                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 	CMember(UProxyTable*)                              OverrideProxyTable                                          OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/ProxyTable.ProxyStructOutput
-/// Size: 0x0028 (0x000000 - 0x000028)
+/// Size: 0x0038 (0x000000 - 0x000038)
 class FProxyStructOutput : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 40;
+	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FChooserStructPropertyBinding)             Binding                                                     OFFSET(getStruct<T>, {0x0, 24, 0, 0})
-	SMember(FInstancedStruct)                          Value                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FChooserStructPropertyBinding)             Binding                                                     OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FInstancedStruct)                          Value                                                       OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/ProxyTable.ProxyEntry
@@ -127,7 +127,7 @@ class FProxyEntry : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	CMember(UProxyAsset*)                              Proxy                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UProxyAsset*)                              proxy                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	SMember(FName)                                     Key                                                         OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	SMember(FInstancedStruct)                          ValueStruct                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FProxyStructOutput>)                OutputStructData                                            OFFSET(get<T>, {0x20, 16, 0, 0})

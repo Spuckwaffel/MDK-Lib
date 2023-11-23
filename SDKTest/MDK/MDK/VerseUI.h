@@ -10,16 +10,6 @@
 /// dependency: EntityActor
 /// dependency: EntityCore
 
-/// Class /Script/VerseUI.VerseWidgetViewmodel
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVerseWidgetViewmodel : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
 /// Class /Script/VerseUI.VersePlayerUIEntityComponent
 /// Size: 0x0008 (0x0000D0 - 0x0000D8)
 class UVersePlayerUIEntityComponent : public UEntityActorPlayerComponent

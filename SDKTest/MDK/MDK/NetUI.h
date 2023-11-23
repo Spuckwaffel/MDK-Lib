@@ -26,21 +26,21 @@ public:
 
 	/// Functions
 	// Function /Script/NetUI.BadNetworkIndicator.UpdateDisplay
-	// void UpdateDisplay();                                                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void UpdateDisplay();                                                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/NetUI.BadNetworkIndicator.ShouldDisplay
-	// bool ShouldDisplay();                                                                                                    // [0xa38b508] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldDisplay();                                                                                                    // [0xaaa3ba8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.HasSeverePing
-	// bool HasSeverePing();                                                                                                    // [0xa38b4e4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasSeverePing();                                                                                                    // [0xaaa3b84] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.HasSeverePacketLoss
-	// bool HasSeverePacketLoss();                                                                                              // [0xa38b4c0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasSeverePacketLoss();                                                                                              // [0xaaa3b60] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.HasBadPing
-	// bool HasBadPing();                                                                                                       // [0xa38b49c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasBadPing();                                                                                                       // [0xaaa3b3c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.HasBadPacketLoss
-	// bool HasBadPacketLoss();                                                                                                 // [0xa38b478] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasBadPacketLoss();                                                                                                 // [0xaaa3b18] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.GetPing
-	// float GetPing();                                                                                                         // [0xa38b450] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetPing();                                                                                                         // [0xaaa3af0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.GetPacketLoss
-	// float GetPacketLoss();                                                                                                   // [0xa38b428] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// float GetPacketLoss();                                                                                                   // [0xaaa3ac8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/NetUI.NetDebugWidget
@@ -62,9 +62,9 @@ public:
 
 	/// Functions
 	// Function /Script/NetUI.NetDebugWidget.StopTimer
-	// void StopTimer();                                                                                                        // [0x33f69a4] Final|Native|Protected|BlueprintCallable 
+	// void StopTimer();                                                                                                        // [0xaaa3be0] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/NetUI.NetDebugWidget.StartTimer
-	// void StartTimer();                                                                                                       // [0xa38b52c] Final|Native|Protected|BlueprintCallable 
+	// void StartTimer();                                                                                                       // [0xaaa3bcc] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/NetUI.NetGraph

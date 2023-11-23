@@ -34,14 +34,14 @@ public:
 };
 
 /// Class /Script/SidewaysCodeRuntime.PlayspaceComponent_SidewaysDimension
-/// Size: 0x00B0 (0x0000F8 - 0x0001A8)
+/// Size: 0x00E0 (0x0000F8 - 0x0001D8)
 class UPlayspaceComponent_SidewaysDimension : public UFortPlayspaceComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 424;
+	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	CMember(UAthenaAIServiceLoot*)                     CachedAIServiceLoot                                         OFFSET(get<T>, {0x1A0, 8, 0, 0})
+	CMember(UAthenaAIServiceLoot*)                     CachedAIServiceLoot                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
 };
 
 /// Class /Script/SidewaysCodeRuntime.PlayspaceComponent_SidewaysEncounter
@@ -69,15 +69,15 @@ public:
 
 	/// Functions
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.SetSidewaysState
-	// void SetSidewaysState(ESidewaysState NewState, ASidewaysPlayspace* NewSidewaysPlayspace);                                // [0x9af05ec] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+	// void SetSidewaysState(ESidewaysState NewState, ASidewaysPlayspace* NewSidewaysPlayspace);                                // [0xa01fa7c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.OnRep_SidewaysState
-	// void OnRep_SidewaysState(ESidewaysState LastSidewaysState);                                                              // [0x9af0510] Final|Native|Protected 
+	// void OnRep_SidewaysState(ESidewaysState LastSidewaysState);                                                              // [0xa01f98c] Final|Native|Protected 
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.OnRep_SidewaysPlayspace
-	// void OnRep_SidewaysPlayspace(ASidewaysPlayspace* NewSidewaysPlayspace);                                                  // [0x5e4cfa0] Final|Native|Protected 
+	// void OnRep_SidewaysPlayspace(ASidewaysPlayspace* NewSidewaysPlayspace);                                                  // [0x5cf078c] Final|Native|Protected 
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.HandleSidewaysStateChanged
-	// void HandleSidewaysStateChanged(ASidewaysPlayspace* NewSidewaysPlayspace, ESidewaysState OldState, ESidewaysState NewState); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HandleSidewaysStateChanged(ASidewaysPlayspace* NewSidewaysPlayspace, ESidewaysState OldState, ESidewaysState NewState); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.GetSidewaysState
-	// ESidewaysState GetSidewaysState();                                                                                       // [0x7599ca0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// ESidewaysState GetSidewaysState();                                                                                       // [0x77a44bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/SidewaysCodeRuntime.SidewaysStateComponent_Player
@@ -121,11 +121,11 @@ public:
 };
 
 /// Class /Script/SidewaysCodeRuntime.SidewaysPlayspace
-/// Size: 0x0000 (0x000698 - 0x000698)
+/// Size: 0x0000 (0x0006C0 - 0x0006C0)
 class ASidewaysPlayspace : public AFortPlayspace
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1688;
+	static inline constexpr uint64_t __MDKClassSize = 1728;
 
 public:
 };

@@ -22,6 +22,26 @@ public:
 	CMember(UObject*)                                  OuterPrivate                                                OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
+/// Class /Script/CoreUObject.Interface
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UInterface : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/CoreUObject.EditorPathObjectInterface
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UEditorPathObjectInterface : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/CoreUObject.GCObjectReferencer
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UGCObjectReferencer : public UObject
@@ -135,16 +155,6 @@ class UDynamicClass : public UClass
 public:
 };
 
-/// Class /Script/CoreUObject.PackageMap
-/// Size: 0x00B8 (0x000028 - 0x0000E0)
-class UPackageMap : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 224;
-
-public:
-};
-
 /// Class /Script/CoreUObject.Enum
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UEnum : public UField
@@ -155,22 +165,56 @@ class UEnum : public UField
 public:
 };
 
+/// Class /Script/CoreUObject.EnumCookedMetaData
+/// Size: 0x0050 (0x000028 - 0x000078)
+class UEnumCookedMetaData : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 120;
+
+public:
+	SMember(FObjectCookedMetaDataStore)                EnumMetaData                                                OFFSET(getStruct<T>, {0x28, 80, 0, 0})
+};
+
+/// Class /Script/CoreUObject.StructCookedMetaData
+/// Size: 0x00A0 (0x000028 - 0x0000C8)
+class UStructCookedMetaData : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+	SMember(FStructCookedMetaDataStore)                StructMetaData                                              OFFSET(getStruct<T>, {0x28, 160, 0, 0})
+};
+
+/// Class /Script/CoreUObject.ClassCookedMetaData
+/// Size: 0x00F0 (0x000028 - 0x000118)
+class UClassCookedMetaData : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 280;
+
+public:
+	SMember(FStructCookedMetaDataStore)                ClassMetaData                                               OFFSET(getStruct<T>, {0x28, 160, 0, 0})
+	CMember(TMap<FName, FStructCookedMetaDataStore>)   FunctionsMetaData                                           OFFSET(get<T>, {0xC8, 80, 0, 0})
+};
+
+/// Class /Script/CoreUObject.PackageMap
+/// Size: 0x00B8 (0x000028 - 0x0000E0)
+class UPackageMap : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 224;
+
+public:
+};
+
 /// Class /Script/CoreUObject.ObjectReachabilityStressData
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UObjectReachabilityStressData : public UObject
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Script/CoreUObject.Interface
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UInterface : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };
@@ -1839,7 +1883,7 @@ class FRotator : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
 	DMember(double)                                    Yaw                                                         OFFSET(get<double>, {0x8, 8, 0, 0})
 	DMember(double)                                    Roll                                                        OFFSET(get<double>, {0x10, 8, 0, 0})
 };
@@ -1853,7 +1897,7 @@ class FRotator3d : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	DMember(double)                                    Pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
+	DMember(double)                                    pitch                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
 	DMember(double)                                    Yaw                                                         OFFSET(get<double>, {0x8, 8, 0, 0})
 	DMember(double)                                    Roll                                                        OFFSET(get<double>, {0x10, 8, 0, 0})
 };
@@ -1867,7 +1911,7 @@ class FRotator3f : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	DMember(float)                                     Pitch                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     pitch                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     Yaw                                                         OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     Roll                                                        OFFSET(get<float>, {0x8, 4, 0, 0})
 };
@@ -2242,6 +2286,43 @@ public:
 	DMember(float)                                     W                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
+/// Struct /Script/CoreUObject.ObjectCookedMetaDataStore
+/// Size: 0x0050 (0x000000 - 0x000050)
+class FObjectCookedMetaDataStore : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+	CMember(TMap<FName, FString>)                      ObjectMetaData                                              OFFSET(get<T>, {0x0, 80, 0, 0})
+};
+
+/// Struct /Script/CoreUObject.FieldCookedMetaDataStore
+/// Size: 0x0050 (0x000000 - 0x000050)
+class FFieldCookedMetaDataStore : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+	CMember(TMap<FName, FString>)                      FieldMetaData                                               OFFSET(get<T>, {0x0, 80, 0, 0})
+};
+
+/// Struct /Script/CoreUObject.StructCookedMetaDataStore
+/// Size: 0x00A0 (0x000000 - 0x0000A0)
+class FStructCookedMetaDataStore : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 160;
+
+public:
+	SMember(FObjectCookedMetaDataStore)                ObjectMetaData                                              OFFSET(getStruct<T>, {0x0, 80, 0, 0})
+	CMember(TMap<FName, FFieldCookedMetaDataStore>)    PropertiesMetaData                                          OFFSET(get<T>, {0x50, 80, 0, 0})
+};
+
 /// Enum /Script/CoreUObject.EAutomationEventType
 /// Size: 0x04
 enum EAutomationEventType : uint8_t
@@ -2500,7 +2581,7 @@ enum EMouseCursor : uint8_t
 };
 
 /// Enum /Script/CoreUObject.EUnit
-/// Size: 0x55
+/// Size: 0x57
 enum EUnit : uint8_t
 {
 	EUnit__Micrometers0                                                              = 0,
@@ -2519,45 +2600,47 @@ enum EUnit : uint8_t
 	EUnit__MetersPerSecond13                                                         = 13,
 	EUnit__KilometersPerHour14                                                       = 14,
 	EUnit__MilesPerHour15                                                            = 15,
-	EUnit__Celsius16                                                                 = 16,
-	EUnit__Farenheit17                                                               = 17,
-	EUnit__Kelvin18                                                                  = 18,
-	EUnit__Micrograms19                                                              = 19,
-	EUnit__Milligrams20                                                              = 20,
-	EUnit__Grams21                                                                   = 21,
-	EUnit__Kilograms22                                                               = 22,
-	EUnit__MetricTons23                                                              = 23,
-	EUnit__Ounces24                                                                  = 24,
-	EUnit__Pounds25                                                                  = 25,
-	EUnit__Stones26                                                                  = 26,
-	EUnit__Newtons27                                                                 = 27,
-	EUnit__PoundsForce28                                                             = 28,
-	EUnit__KilogramsForce29                                                          = 29,
-	EUnit__KilogramCentimetersPerSecondSquared30                                     = 30,
-	EUnit__NewtonMeters31                                                            = 31,
-	EUnit__KilogramCentimetersSquaredPerSecondSquared32                              = 32,
-	EUnit__Hertz33                                                                   = 33,
-	EUnit__Kilohertz34                                                               = 34,
-	EUnit__Megahertz35                                                               = 35,
-	EUnit__Gigahertz36                                                               = 36,
-	EUnit__RevolutionsPerMinute37                                                    = 37,
-	EUnit__Bytes38                                                                   = 38,
-	EUnit__Kilobytes39                                                               = 39,
-	EUnit__Megabytes40                                                               = 40,
-	EUnit__Gigabytes41                                                               = 41,
-	EUnit__Terabytes42                                                               = 42,
-	EUnit__Lumens43                                                                  = 43,
-	EUnit__Milliseconds44                                                            = 50,
-	EUnit__Seconds45                                                                 = 51,
-	EUnit__Minutes46                                                                 = 52,
-	EUnit__Hours47                                                                   = 53,
-	EUnit__Days48                                                                    = 54,
-	EUnit__Months49                                                                  = 55,
-	EUnit__Years50                                                                   = 56,
-	EUnit__Multiplier51                                                              = 59,
-	EUnit__Percentage52                                                              = 58,
-	EUnit__Unspecified53                                                             = 64,
-	EUnit__EUnit_MAX54                                                               = 65
+	EUnit__DegreesPerSecond16                                                        = 16,
+	EUnit__RadiansPerSecond17                                                        = 17,
+	EUnit__Celsius18                                                                 = 18,
+	EUnit__Farenheit19                                                               = 19,
+	EUnit__Kelvin20                                                                  = 20,
+	EUnit__Micrograms21                                                              = 21,
+	EUnit__Milligrams22                                                              = 22,
+	EUnit__Grams23                                                                   = 23,
+	EUnit__Kilograms24                                                               = 24,
+	EUnit__MetricTons25                                                              = 25,
+	EUnit__Ounces26                                                                  = 26,
+	EUnit__Pounds27                                                                  = 27,
+	EUnit__Stones28                                                                  = 28,
+	EUnit__Newtons29                                                                 = 33,
+	EUnit__PoundsForce30                                                             = 34,
+	EUnit__KilogramsForce31                                                          = 35,
+	EUnit__KilogramCentimetersPerSecondSquared32                                     = 36,
+	EUnit__NewtonMeters33                                                            = 37,
+	EUnit__KilogramCentimetersSquaredPerSecondSquared34                              = 38,
+	EUnit__Hertz35                                                                   = 39,
+	EUnit__Kilohertz36                                                               = 40,
+	EUnit__Megahertz37                                                               = 41,
+	EUnit__Gigahertz38                                                               = 42,
+	EUnit__RevolutionsPerMinute39                                                    = 43,
+	EUnit__Bytes40                                                                   = 44,
+	EUnit__Kilobytes41                                                               = 45,
+	EUnit__Megabytes42                                                               = 46,
+	EUnit__Gigabytes43                                                               = 47,
+	EUnit__Terabytes44                                                               = 48,
+	EUnit__Lumens45                                                                  = 49,
+	EUnit__Milliseconds46                                                            = 56,
+	EUnit__Seconds47                                                                 = 57,
+	EUnit__Minutes48                                                                 = 58,
+	EUnit__Hours49                                                                   = 59,
+	EUnit__Days50                                                                    = 60,
+	EUnit__Months51                                                                  = 61,
+	EUnit__Years52                                                                   = 62,
+	EUnit__Multiplier53                                                              = 65,
+	EUnit__Percentage54                                                              = 64,
+	EUnit__Unspecified55                                                             = 70,
+	EUnit__EUnit_MAX56                                                               = 71
 };
 
 /// Enum /Script/CoreUObject.EPropertyAccessChangeNotifyMode

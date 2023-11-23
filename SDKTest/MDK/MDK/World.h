@@ -39,6 +39,46 @@ class UMissionGen_AthenaSquad_C : public UFortMissionGenerator
 public:
 };
 
+/// Class /Game/World/MissionGens/Athena/MissionGen_Athena_Tutorial.MissionGen_Athena_Tutorial_C
+/// Size: 0x0000 (0x000830 - 0x000830)
+class UMissionGen_Athena_Tutorial_C : public UFortMissionGenerator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2096;
+
+public:
+};
+
+/// Class /Game/World/MissionGens/Habanero/MissionGen_NoBuildBR_Habanero_Solo.MissionGen_NoBuildBR_Habanero_Solo_C
+/// Size: 0x0000 (0x000830 - 0x000830)
+class UMissionGen_NoBuildBR_Habanero_Solo_C : public UFortMissionGenerator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2096;
+
+public:
+};
+
+/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Solo.MissionGen_Habanero_Solo_C
+/// Size: 0x0000 (0x000830 - 0x000830)
+class UMissionGen_Habanero_Solo_C : public UFortMissionGenerator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2096;
+
+public:
+};
+
+/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Squad.MissionGen_Habanero_Squad_C
+/// Size: 0x0000 (0x000830 - 0x000830)
+class UMissionGen_Habanero_Squad_C : public UFortMissionGenerator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2096;
+
+public:
+};
+
 /// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Duo.MissionGen_Habanero_Duo_C
 /// Size: 0x0000 (0x000830 - 0x000830)
 class UMissionGen_Habanero_Duo_C : public UFortMissionGenerator
@@ -69,16 +109,6 @@ class UMissionGen_NoBuildBR_Habanero_Trio_C : public UFortMissionGenerator
 public:
 };
 
-/// Class /Game/World/MissionGens/Habanero/MissionGen_NoBuildBR_Habanero_Duo.MissionGen_NoBuildBR_Habanero_Duo_C
-/// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_NoBuildBR_Habanero_Duo_C : public UFortMissionGenerator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2096;
-
-public:
-};
-
 /// Class /Game/World/MissionGens/Habanero/MissionGen_NoBuildBR_Habanero_Squad.MissionGen_NoBuildBR_Habanero_Squad_C
 /// Size: 0x0000 (0x000830 - 0x000830)
 class UMissionGen_NoBuildBR_Habanero_Squad_C : public UFortMissionGenerator
@@ -89,39 +119,9 @@ class UMissionGen_NoBuildBR_Habanero_Squad_C : public UFortMissionGenerator
 public:
 };
 
-/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Solo.MissionGen_Habanero_Solo_C
+/// Class /Game/World/MissionGens/Habanero/MissionGen_NoBuildBR_Habanero_Duo.MissionGen_NoBuildBR_Habanero_Duo_C
 /// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_Habanero_Solo_C : public UFortMissionGenerator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2096;
-
-public:
-};
-
-/// Class /Game/World/MissionGens/Habanero/MissionGen_NoBuildBR_Habanero_Solo.MissionGen_NoBuildBR_Habanero_Solo_C
-/// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_NoBuildBR_Habanero_Solo_C : public UFortMissionGenerator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2096;
-
-public:
-};
-
-/// Class /Game/World/MissionGens/Habanero/MissionGen_Habanero_Squad.MissionGen_Habanero_Squad_C
-/// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_Habanero_Squad_C : public UFortMissionGenerator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2096;
-
-public:
-};
-
-/// Class /Game/World/MissionGens/Athena/MissionGen_Athena_Tutorial.MissionGen_Athena_Tutorial_C
-/// Size: 0x0000 (0x000830 - 0x000830)
-class UMissionGen_Athena_Tutorial_C : public UFortMissionGenerator
+class UMissionGen_NoBuildBR_Habanero_Duo_C : public UFortMissionGenerator
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2096;

@@ -11,55 +11,55 @@
 /// dependency: GameplayAbilities
 
 /// Class /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility
-/// Size: 0x0080 (0x000B28 - 0x000BA8)
+/// Size: 0x0080 (0x000B60 - 0x000BE0)
 class UCreativeVideoPlayerFullscreenGameplayAbility : public UFortGameplayAbility
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2984;
+	static inline constexpr uint64_t __MDKClassSize = 3040;
 
 public:
-	CMember(UClass*)                                   NoCollisionGameplayEffectClass                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(UClass*)                                   NoDamageGameplayEffectClass                                 OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(TArray<UClass*>)                           AnimationStateGameplayEffectClasses                         OFFSET(get<T>, {0xB38, 16, 0, 0})
-	CMember(UClass*)                                   FullscreenWidgetClass                                       OFFSET(get<T>, {0xB48, 8, 0, 0})
-	CMember(ECreativeVideoPlayerFullscreenEffects)     FullscreenEffects                                           OFFSET(get<T>, {0xB50, 1, 0, 0})
-	DMember(bool)                                      bPromptToConfirmFullscreen                                  OFFSET(get<bool>, {0xB51, 1, 0, 0})
-	DMember(bool)                                      bIsDismissable                                              OFFSET(get<bool>, {0xB52, 1, 0, 0})
-	CMember(UFortInputComponent*)                      OverrideMovementInputComponent                              OFFSET(get<T>, {0xB58, 8, 0, 0})
-	CMember(UFortInputComponent*)                      SelectFullscreenModeInputComponent                          OFFSET(get<T>, {0xB60, 8, 0, 0})
-	CMember(TArray<FActiveGameplayEffectHandle>)       ActiveGameplayEffects                                       OFFSET(get<T>, {0xB68, 16, 0, 0})
-	CMember(ECreativeVideoPlayerFullscreenEffects)     RequestedFullscreenEffects                                  OFFSET(get<T>, {0xB78, 1, 0, 0})
-	CMember(UUserWidget*)                              VideoPlayerWidget                                           OFFSET(get<T>, {0xB80, 8, 0, 0})
-	CMember(UMediaTexture*)                            ExtMediaTextureCached                                       OFFSET(get<T>, {0xB88, 8, 0, 0})
-	CMember(USoundSourceBus*)                          ExtSourceBusCached                                          OFFSET(get<T>, {0xB90, 8, 0, 0})
-	CMember(UMediaSoundComponent*)                     ExtMediaSoundComponentCached                                OFFSET(get<T>, {0xB98, 8, 0, 0})
-	DMember(bool)                                      bExtComponentsSet                                           OFFSET(get<bool>, {0xBA0, 1, 0, 0})
-	DMember(bool)                                      bActivatedFullscreen                                        OFFSET(get<bool>, {0xBA1, 1, 0, 0})
+	CMember(UClass*)                                   NoCollisionGameplayEffectClass                              OFFSET(get<T>, {0xB60, 8, 0, 0})
+	CMember(UClass*)                                   NoDamageGameplayEffectClass                                 OFFSET(get<T>, {0xB68, 8, 0, 0})
+	CMember(TArray<UClass*>)                           AnimationStateGameplayEffectClasses                         OFFSET(get<T>, {0xB70, 16, 0, 0})
+	CMember(UClass*)                                   FullscreenWidgetClass                                       OFFSET(get<T>, {0xB80, 8, 0, 0})
+	CMember(ECreativeVideoPlayerFullscreenEffects)     FullscreenEffects                                           OFFSET(get<T>, {0xB88, 1, 0, 0})
+	DMember(bool)                                      bPromptToConfirmFullscreen                                  OFFSET(get<bool>, {0xB89, 1, 0, 0})
+	DMember(bool)                                      bIsDismissable                                              OFFSET(get<bool>, {0xB8A, 1, 0, 0})
+	CMember(UFortInputComponent*)                      OverrideMovementInputComponent                              OFFSET(get<T>, {0xB90, 8, 0, 0})
+	CMember(UFortInputComponent*)                      SelectFullscreenModeInputComponent                          OFFSET(get<T>, {0xB98, 8, 0, 0})
+	CMember(TArray<FActiveGameplayEffectHandle>)       ActiveGameplayEffects                                       OFFSET(get<T>, {0xBA0, 16, 0, 0})
+	CMember(ECreativeVideoPlayerFullscreenEffects)     RequestedFullscreenEffects                                  OFFSET(get<T>, {0xBB0, 1, 0, 0})
+	CMember(UUserWidget*)                              VideoPlayerWidget                                           OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	CMember(UMediaTexture*)                            ExtMediaTextureCached                                       OFFSET(get<T>, {0xBC0, 8, 0, 0})
+	CMember(USoundSourceBus*)                          ExtSourceBusCached                                          OFFSET(get<T>, {0xBC8, 8, 0, 0})
+	CMember(UMediaSoundComponent*)                     ExtMediaSoundComponentCached                                OFFSET(get<T>, {0xBD0, 8, 0, 0})
+	DMember(bool)                                      bExtComponentsSet                                           OFFSET(get<bool>, {0xBD8, 1, 0, 0})
+	DMember(bool)                                      bActivatedFullscreen                                        OFFSET(get<bool>, {0xBD9, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.SetExternalComponents
-	// void SetExternalComponents(UMediaTexture* ExtMediaTexture, USoundSourceBus* ExtSourceBus, UMediaSoundComponent* ExtMediaSoundComponent); // [0x9c04a10] Final|Native|Public|BlueprintCallable 
+	// void SetExternalComponents(UMediaTexture* ExtMediaTexture, USoundSourceBus* ExtSourceBus, UMediaSoundComponent* ExtMediaSoundComponent); // [0xa358884] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ServerLeaveFullscreenMode
-	// void ServerLeaveFullscreenMode();                                                                                        // [0x766dba8] Final|Net|NetReliableNative|Event|Private|NetServer 
+	// void ServerLeaveFullscreenMode();                                                                                        // [0x789ea74] Final|Net|NetReliableNative|Event|Private|NetServer 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ServerEnterFullscreenMode
-	// void ServerEnterFullscreenMode();                                                                                        // [0x882a9b8] Final|Net|NetReliableNative|Event|Private|NetServer 
+	// void ServerEnterFullscreenMode();                                                                                        // [0x8bb56f8] Final|Net|NetReliableNative|Event|Private|NetServer 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.OnFullscreenUIEnds
-	// void OnFullscreenUIEnds();                                                                                               // [0x9c049fc] Final|Native|Private 
+	// void OnFullscreenUIEnds();                                                                                               // [0xa358870] Final|Native|Private 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.HandleEnterFullscreenActionReleased
-	// void HandleEnterFullscreenActionReleased();                                                                              // [0x9c049e8] Final|Native|Private 
+	// void HandleEnterFullscreenActionReleased();                                                                              // [0xa35885c] Final|Native|Private 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.HandleEnterFullscreenActionPressed
-	// void HandleEnterFullscreenActionPressed();                                                                               // [0x2cf4738] Final|Native|Private 
+	// void HandleEnterFullscreenActionPressed();                                                                               // [0x2b7b1c8] Final|Native|Private 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ExitFullscreenState
-	// void ExitFullscreenState();                                                                                              // [0x9c049bc] Final|Native|Public|BlueprintCallable 
+	// void ExitFullscreenState();                                                                                              // [0xa358830] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.EnterFullscreenStateWithOptions
-	// void EnterFullscreenStateWithOptions(FCreativeVideoPlayerFullscreenOptions Options);                                     // [0x9c0485c] Final|Native|Public|BlueprintCallable 
+	// void EnterFullscreenStateWithOptions(FCreativeVideoPlayerFullscreenOptions Options);                                     // [0xa3586f0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.EnterFullscreenState
-	// void EnterFullscreenState();                                                                                             // [0x9c04830] Final|Native|Public|BlueprintCallable 
+	// void EnterFullscreenState();                                                                                             // [0xa3586c4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ClientTransitionToFullscreenVideo
-	// void ClientTransitionToFullscreenVideo();                                                                                // [0x766dbc0] Final|Net|NetReliableNative|Event|Private|NetClient 
+	// void ClientTransitionToFullscreenVideo();                                                                                // [0x789ea8c] Final|Net|NetReliableNative|Event|Private|NetClient 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ClientLeaveFullscreenVideo
-	// void ClientLeaveFullscreenVideo();                                                                                       // [0x766dac8] Final|Net|NetReliableNative|Event|Private|NetClient 
+	// void ClientLeaveFullscreenVideo();                                                                                       // [0x789e994] Final|Net|NetReliableNative|Event|Private|NetClient 
 };
 
 /// Class /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFunctionLibrary

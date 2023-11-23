@@ -5,52 +5,50 @@
 *                                                       *
 ********************************************************/
 
+/// dependency: ContextualTraversalRuntime
 /// dependency: CoreUObject
 /// dependency: Engine
 /// dependency: FortniteGame
 /// dependency: ModularGameplay
 
 /// Class /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle
-/// Size: 0x0078 (0x000048 - 0x0000C0)
-class UFortMovementMode_ExtLogicHurdle : public UFortMovementMode_BaseExtLogic
+/// Size: 0x0048 (0x000110 - 0x000158)
+class UFortMovementMode_ExtLogicHurdle : public UFortMovementMode_ExtLogicTraversalBase
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 192;
+	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FName)                                     MontageStartSectionName                                     OFFSET(getStruct<T>, {0x60, 4, 0, 0})
-	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FGameplayTag)                              CameraModeTag                                               OFFSET(getStruct<T>, {0x70, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HurdleTag                                                   OFFSET(getStruct<T>, {0x78, 32, 0, 0})
-	SMember(FGameplayTag)                              HurdleStartedTag                                            OFFSET(getStruct<T>, {0x98, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HurdleFinishedTag                                           OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     HurdleTag                                                   OFFSET(getStruct<T>, {0x110, 32, 0, 0})
+	SMember(FGameplayTag)                              HurdleStartedTag                                            OFFSET(getStruct<T>, {0x130, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     HurdleFinishedTag                                           OFFSET(getStruct<T>, {0x138, 32, 0, 0})
 
 
 	/// Functions
 	// Function /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle.IsContextualActionPrototypeActive
-	// bool IsContextualActionPrototypeActive();                                                                                // [0x9fe7a14] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsContextualActionPrototypeActive();                                                                                // [0xa2ea0b0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle.BP_GetAnimationMontageInformation
-	// void BP_GetAnimationMontageInformation(FSynchedActionInfo SynchedActionInfo, EHurdleType Type, UAnimMontage*& AnimMontage, FName& StartSectionName, FName& MontageMiddleSectionName); // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void BP_GetAnimationMontageInformation(FSynchedActionInfo SynchedActionInfo, EHurdleType Type, bool bIsNarrowOpening, bool bIsCrouched, UAnimMontage*& AnimMontage, FName& StartSectionName, FName& MontageMiddleSectionName); // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/VaultingCodeRuntime.HurdleCameraMode
-/// Size: 0x0200 (0x001B50 - 0x001D50)
+/// Size: 0x0200 (0x001B90 - 0x001D90)
 class UHurdleCameraMode : public UFortCameraMode_ThirdPerson
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7504;
+	static inline constexpr uint64_t __MDKClassSize = 7568;
 
 public:
-	SMember(FVector)                                   StartCameraOriginInterpSpeed                                OFFSET(getStruct<T>, {0x1B50, 24, 0, 0})
-	SMember(FVector)                                   ApexCameraOriginInterpSpeed                                 OFFSET(getStruct<T>, {0x1B68, 24, 0, 0})
-	SMember(FVector)                                   EndCameraOriginInterpSpeed                                  OFFSET(getStruct<T>, {0x1B80, 24, 0, 0})
-	DMember(float)                                     ConstantSpeedCameraTrackInterpolationExponent               OFFSET(get<float>, {0x1B98, 4, 0, 0})
-	DMember(float)                                     CameraOriginVerticalThreshold                               OFFSET(get<float>, {0x1B9C, 4, 0, 0})
-	DMember(float)                                     FallingVerticalInterpSpeed                                  OFFSET(get<float>, {0x1BA0, 4, 0, 0})
-	DMember(float)                                     FallSpeedThreshold                                          OFFSET(get<float>, {0x1BA4, 4, 0, 0})
-	DMember(float)                                     NonSprintFOV                                                OFFSET(get<float>, {0x1BA8, 4, 0, 0})
-	DMember(bool)                                      bOverrideSpectatorCamera                                    OFFSET(get<bool>, {0x1BAC, 1, 0, 0})
-	SMember(FHurdleTargetingData)                      HurdleTargetingData                                         OFFSET(getStruct<T>, {0x1BB0, 304, 0, 0})
+	SMember(FVector)                                   StartCameraOriginInterpSpeed                                OFFSET(getStruct<T>, {0x1B90, 24, 0, 0})
+	SMember(FVector)                                   ApexCameraOriginInterpSpeed                                 OFFSET(getStruct<T>, {0x1BA8, 24, 0, 0})
+	SMember(FVector)                                   EndCameraOriginInterpSpeed                                  OFFSET(getStruct<T>, {0x1BC0, 24, 0, 0})
+	DMember(float)                                     ConstantSpeedCameraTrackInterpolationExponent               OFFSET(get<float>, {0x1BD8, 4, 0, 0})
+	DMember(float)                                     CameraOriginVerticalThreshold                               OFFSET(get<float>, {0x1BDC, 4, 0, 0})
+	DMember(float)                                     FallingVerticalInterpSpeed                                  OFFSET(get<float>, {0x1BE0, 4, 0, 0})
+	DMember(float)                                     FallSpeedThreshold                                          OFFSET(get<float>, {0x1BE4, 4, 0, 0})
+	DMember(float)                                     NonSprintFOV                                                OFFSET(get<float>, {0x1BE8, 4, 0, 0})
+	DMember(bool)                                      bOverrideSpectatorCamera                                    OFFSET(get<bool>, {0x1BEC, 1, 0, 0})
+	SMember(FHurdleTargetingData)                      HurdleTargetingData                                         OFFSET(getStruct<T>, {0x1BF0, 304, 0, 0})
 };
 
 /// Class /Script/VaultingCodeRuntime.HurdleComponent
@@ -74,41 +72,41 @@ public:
 
 	/// Functions
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.UnregisterMutatorUpdatedDelegate
-	// void UnregisterMutatorUpdatedDelegate();                                                                                 // [0x99f4f64] Final|Native|Protected 
+	// void UnregisterMutatorUpdatedDelegate();                                                                                 // [0x9f1a314] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.ShouldShowHurdleIndicator
-	// bool ShouldShowHurdleIndicator();                                                                                        // [0x9fe8374] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldShowHurdleIndicator();                                                                                        // [0xa2ea9a0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.ServerStartHurdle
-	// void ServerStartHurdle(FReplicatedHurdleTargetingData InReplicatedTargetingData, double ClientLastTeleportTime);         // [0x9fe8034] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerStartHurdle(FReplicatedHurdleTargetingData InReplicatedTargetingData, double ClientLastTeleportTime);         // [0xa2ea6bc] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.RegisterMutatorUpdatedDelegate
-	// void RegisterMutatorUpdatedDelegate(APawn* AffectedPawn);                                                                // [0x9fe7e30] Final|Native|Protected 
+	// void RegisterMutatorUpdatedDelegate(APawn* AffectedPawn);                                                                // [0xa2ea4b8] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnRep_ReplicatedLastTeleportTime
-	// void OnRep_ReplicatedLastTeleportTime();                                                                                 // [0x9fe7bbc] Final|Native|Protected 
+	// void OnRep_ReplicatedLastTeleportTime();                                                                                 // [0xa2ea258] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnRep_ReplicatedHurdleState
-	// void OnRep_ReplicatedHurdleState();                                                                                      // [0x9fe7b94] Final|Native|Protected 
+	// void OnRep_ReplicatedHurdleState();                                                                                      // [0xa2ea230] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnPlayerStatePawnSet
-	// void OnPlayerStatePawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                         // [0x9fe7a9c] Final|Native|Protected 
+	// void OnPlayerStatePawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                         // [0xa2ea138] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.OnMutatorUpdated
-	// void OnMutatorUpdated();                                                                                                 // [0x9fe7a88] Final|Native|Protected 
+	// void OnMutatorUpdated();                                                                                                 // [0xa2ea124] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.IsContextualActionPrototypeActive
-	// bool IsContextualActionPrototypeActive();                                                                                // [0x9fe7a64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsContextualActionPrototypeActive();                                                                                // [0xa2ea100] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleTargetingDataValid
-	// void HandleTargetingDataValid(FHurdleTargetingData& TargetingData);                                                      // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void HandleTargetingDataValid(FHurdleTargetingData& TargetingData);                                                      // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleTargetingDataInvalid
-	// void HandleTargetingDataInvalid();                                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HandleTargetingDataInvalid();                                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerTeleported
-	// void HandleOwnerTeleported(AFortPawn* TeleportedOwner);                                                                  // [0x9fe7994] Final|Native|Protected 
+	// void HandleOwnerTeleported(AFortPawn* TeleportedOwner);                                                                  // [0xa2ea030] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerMovementModeChanged
-	// void HandleOwnerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x9fe788c] Final|Native|Protected 
+	// void HandleOwnerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0xa2e9f28] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.HandleOwnerJumpInput
-	// void HandleOwnerJumpInput(bool bPressed);                                                                                // [0x9fe780c] Final|Native|Protected 
+	// void HandleOwnerJumpInput(bool bPressed);                                                                                // [0xa2e9ea8] Final|Native|Protected 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleSpringJump
-	// void BP_HandleSpringJump();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_HandleSpringJump();                                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleHurdleStarted
-	// void BP_HandleHurdleStarted(FHurdleTargetingData& TargetingData, FSynchedActionInfo& SynchedActionInfo);                 // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_HandleHurdleStarted(FHurdleTargetingData& TargetingData, FSynchedActionInfo& SynchedActionInfo);                 // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_HandleHurdleEnded
-	// void BP_HandleHurdleEnded();                                                                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_HandleHurdleEnded();                                                                                             // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_CanStartHurdle
-	// void BP_CanStartHurdle(bool& OutCanStartHurdle);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// void BP_CanStartHurdle(bool& OutCanStartHurdle);                                                                         // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent|Const 
 };
 
 /// Class /Script/VaultingCodeRuntime.HurdleLibrary
@@ -122,39 +120,25 @@ public:
 };
 
 /// Struct /Script/VaultingCodeRuntime.FortMovementMode_HurdleRuntimeData
-/// Size: 0x0080 (0x000010 - 0x000090)
-class FFortMovementMode_HurdleRuntimeData : public FFortMovementMode_BaseExtRuntimeData
+/// Size: 0x0000 (0x0000D0 - 0x0000D0)
+class FFortMovementMode_HurdleRuntimeData : public FFortMovementMode_TraversalBaseRuntimeData
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 144;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	CMember(UAnimMontage*)                             HurdleMontage                                               OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     MontageStartSectionName                                     OFFSET(getStruct<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     MontageMiddleSectionName                                    OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
-	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  OFFSET(getStruct<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.FortMovementMode_HurdleCreationData
-/// Size: 0x00D8 (0x000008 - 0x0000E0)
-class FFortMovementMode_HurdleCreationData : public FFortMovementMode_BaseExtCreationData
+/// Size: 0x0000 (0x000130 - 0x000130)
+class FFortMovementMode_HurdleCreationData : public FFortMovementMode_TraversalBaseCreationData
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 224;
+	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FSynchedActionInfo)                        SynchedActionInfo                                           OFFSET(getStruct<T>, {0x8, 48, 0, 0})
-	CMember(EHurdleType)                               Type                                                        OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FSynchedActionWarpPointInfo_Replicated)    SynchedActionWarpPointInfo                                  OFFSET(getStruct<T>, {0x40, 80, 0, 0})
-	SMember(FVector)                                   TargetLocation                                              OFFSET(getStruct<T>, {0x90, 24, 0, 0})
-	SMember(FRotator)                                  TargetRotation                                              OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
-	CMember(TWeakObjectPtr<AActor*>)                   RefActor                                                    OFFSET(get<T>, {0xC0, 8, 0, 0})
-	CMember(TWeakObjectPtr<UActorComponent*>)          RefActorComponent                                           OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FName)                                     RefActorBoneName                                            OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
-	CMember(EFortSynchedActionEndMovementMode)         EndMovementMode                                             OFFSET(get<T>, {0xD4, 1, 0, 0})
 };
 
 /// Struct /Script/VaultingCodeRuntime.HurdleInputConfig
@@ -273,7 +257,7 @@ public:
 	SMember(FVector)                                   TargetLocation                                              OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
 	SMember(FVector)                                   TargetNormal                                                OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   TargetActor                                                 OFFSET(get<T>, {0x100, 8, 0, 0})
-	CMember(TWeakObjectPtr<UActorComponent*>)          TargetActorComponent                                        OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      TargetActorComponent                                        OFFSET(get<T>, {0x108, 8, 0, 0})
 	SMember(FVector)                                   TargetActorComponentLocation                                OFFSET(getStruct<T>, {0x110, 24, 0, 0})
 	SMember(FName)                                     TargetActorBoneName                                         OFFSET(getStruct<T>, {0x128, 4, 0, 0})
 };

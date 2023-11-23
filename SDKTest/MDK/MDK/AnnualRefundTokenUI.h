@@ -31,7 +31,7 @@ public:
 
 	/// Functions
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryEntryBase.UpdateItemList
-	// void UpdateItemList(TArray<UFortCosmeticItemCard*>& ItemCards);                                                          // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void UpdateItemList(TArray<UFortCosmeticItemCard*>& ItemCards);                                                          // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortPurchaseHistoryEntry
@@ -56,7 +56,7 @@ public:
 
 	/// Functions
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryBundleEntry.SetExpandButtonText
-	// void SetExpandButtonText(int32_t NumPurchases);                                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void SetExpandButtonText(int32_t NumPurchases);                                                                          // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortPurchaseHistoryListView
@@ -93,22 +93,22 @@ public:
 
 	/// Functions
 	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnUpdatePendingState
-	// void OnUpdatePendingState(bool bIsPending);                                                                              // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnUpdatePendingState(bool bIsPending);                                                                              // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnUpdateAvailableState
-	// void OnUpdateAvailableState(bool bIsAvailable);                                                                          // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnUpdateAvailableState(bool bIsAvailable);                                                                          // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortAnnualRefundTicket.OnPlayLockingAnimation
-	// void OnPlayLockingAnimation();                                                                                           // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPlayLockingAnimation();                                                                                           // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortAnnualRefundTokenData
-/// Size: 0x0020 (0x000498 - 0x0004B8)
+/// Size: 0x0020 (0x0004A0 - 0x0004C0)
 class UFortAnnualRefundTokenData : public UFortGameFeatureData
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1208;
+	static inline constexpr uint64_t __MDKClassSize = 1216;
 
 public:
-	CMember(TWeakObjectPtr<UClass*>)                   PurchaseHistoryScreenClass                                  OFFSET(get<T>, {0x498, 32, 0, 0})
+	CMember(TWeakObjectPtr<UClass*>)                   PurchaseHistoryScreenClass                                  OFFSET(get<T>, {0x4A0, 32, 0, 0})
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen
@@ -145,15 +145,15 @@ public:
 
 	/// Functions
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnPopulateView
-	// void OnPopulateView();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPopulateView();                                                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnNoPurchasesAvailable
-	// void OnNoPurchasesAvailable();                                                                                           // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnNoPurchasesAvailable();                                                                                           // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnEndRefundSubmission
-	// void OnEndRefundSubmission();                                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEndRefundSubmission();                                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.OnBeginRefundSubmission
-	// void OnBeginRefundSubmission();                                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnBeginRefundSubmission();                                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortPurchaseHistoryScreen.BP_IsShowingPurchases
-	// bool BP_IsShowingPurchases();                                                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// bool BP_IsShowingPurchases();                                                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/AnnualRefundTokenUI.FortRefundConfirmation
@@ -177,9 +177,9 @@ public:
 
 	/// Functions
 	// Function /Script/AnnualRefundTokenUI.FortRefundConfirmation.BP_UpdateRefundType
-	// void BP_UpdateRefundType(EFortPurchaseHistoryRefundType RefundType, bool bBundledRefund);                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_UpdateRefundType(EFortPurchaseHistoryRefundType RefundType, bool bBundledRefund);                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/AnnualRefundTokenUI.FortRefundConfirmation.BP_UpdateItemsList
-	// void BP_UpdateItemsList(TArray<UFortItemDefinition*>& SelectedItemDefs, int32_t TotalMtxPaid);                           // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_UpdateItemsList(TArray<UFortItemDefinition*>& SelectedItemDefs, int32_t TotalMtxPaid);                           // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 };
 
 /// Struct /Script/AnnualRefundTokenUI.PurchaseHistoryBundleEntry

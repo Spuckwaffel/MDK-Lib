@@ -20,9 +20,9 @@ public:
 
 	/// Functions
 	// Function /Script/LiveLinkAnimationCore.LiveLinkInstance.SetSubject
-	// void SetSubject(FLiveLinkSubjectName SubjectName);                                                                       // [0xa1965b8] Final|Native|Public|BlueprintCallable 
+	// void SetSubject(FLiveLinkSubjectName SubjectName);                                                                       // [0xa8bb5bc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLinkAnimationCore.LiveLinkInstance.SetRetargetAsset
-	// void SetRetargetAsset(UClass* RetargetAsset);                                                                            // [0xa1964f8] Final|Native|Public|BlueprintCallable 
+	// void SetRetargetAsset(UClass* RetargetAsset);                                                                            // [0xa8bb4dc] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/LiveLinkAnimationCore.LiveLinkRetargetAsset

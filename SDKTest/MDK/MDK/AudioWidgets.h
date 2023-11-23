@@ -20,7 +20,7 @@ public:
 	CMember(TArray<FMeterChannelInfo>)                 MeterChannelInfo                                            OFFSET(get<T>, {0x178, 16, 0, 0})
 	SMember(FDelegateProperty)                         MeterChannelInfoDelegate                                    OFFSET(getStruct<T>, {0x188, 12, 0, 0})
 	SMember(FAudioMeterStyle)                          WidgetStyle                                                 OFFSET(getStruct<T>, {0x1A0, 1152, 0, 0})
-	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x620, 1, 0, 0})
+	CMember(TEnumAsByte<EOrientation>)                 orientation                                                 OFFSET(get<T>, {0x620, 1, 0, 0})
 	SMember(FLinearColor)                              BackgroundColor                                             OFFSET(getStruct<T>, {0x624, 16, 0, 0})
 	SMember(FLinearColor)                              MeterBackgroundColor                                        OFFSET(getStruct<T>, {0x634, 16, 0, 0})
 	SMember(FLinearColor)                              MeterValueColor                                             OFFSET(getStruct<T>, {0x644, 16, 0, 0})
@@ -32,25 +32,56 @@ public:
 
 	/// Functions
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterValueColor
-	// void SetMeterValueColor(FLinearColor InValue);                                                                           // [0x9b7d208] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterValueColor(FLinearColor InValue);                                                                           // [0x9eca90c] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterScaleLabelColor
-	// void SetMeterScaleLabelColor(FLinearColor InValue);                                                                      // [0x9b7d0ac] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterScaleLabelColor(FLinearColor InValue);                                                                      // [0x9eca7c8] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterScaleColor
-	// void SetMeterScaleColor(FLinearColor InValue);                                                                           // [0x9b7cf50] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterScaleColor(FLinearColor InValue);                                                                           // [0x9eca684] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterPeakColor
-	// void SetMeterPeakColor(FLinearColor InValue);                                                                            // [0x9b7cdf4] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterPeakColor(FLinearColor InValue);                                                                            // [0x9eca540] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterClippingColor
-	// void SetMeterClippingColor(FLinearColor InValue);                                                                        // [0x9b7cc98] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterClippingColor(FLinearColor InValue);                                                                        // [0x9eca3fc] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterChannelInfo
-	// void SetMeterChannelInfo(TArray<FMeterChannelInfo>& InMeterChannelInfo);                                                 // [0x9b7c5cc] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void SetMeterChannelInfo(TArray<FMeterChannelInfo>& InMeterChannelInfo);                                                 // [0x9ec9dd8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetMeterBackgroundColor
-	// void SetMeterBackgroundColor(FLinearColor InValue);                                                                      // [0x9b7c470] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetMeterBackgroundColor(FLinearColor InValue);                                                                      // [0x9ec9c94] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.SetBackgroundColor
-	// void SetBackgroundColor(FLinearColor InValue);                                                                           // [0x9b7c054] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetBackgroundColor(FLinearColor InValue);                                                                           // [0x9ec98c0] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioMeter.GetMeterChannelInfo__DelegateSignature
-	// TArray<FMeterChannelInfo> GetMeterChannelInfo__DelegateSignature();                                                      // [0x1d9241c] Public|Delegate      
+	// TArray<FMeterChannelInfo> GetMeterChannelInfo__DelegateSignature();                                                      // [0x101681c] Public|Delegate      
 	// Function /Script/AudioWidgets.AudioMeter.GetMeterChannelInfo
-	// TArray<FMeterChannelInfo> GetMeterChannelInfo();                                                                         // [0x9b7b7ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FMeterChannelInfo> GetMeterChannelInfo();                                                                         // [0x9ec90f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
+/// Class /Script/AudioWidgets.AudioOscilloscope
+/// Size: 0x04E8 (0x000178 - 0x000660)
+class UAudioOscilloscope : public UWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1632;
+
+public:
+	SMember(FAudioOscilloscopePanelStyle)              OscilloscopeStyle                                           OFFSET(getStruct<T>, {0x180, 1136, 0, 0})
+	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x5F0, 8, 0, 0})
+	DMember(float)                                     TimeWindowMs                                                OFFSET(get<float>, {0x5F8, 4, 0, 0})
+	DMember(float)                                     AnalysisPeriodMs                                            OFFSET(get<float>, {0x5FC, 4, 0, 0})
+	DMember(bool)                                      bShowTimeGrid                                               OFFSET(get<bool>, {0x600, 1, 0, 0})
+	CMember(EXAxisLabelsUnit)                          TimeGridLabelsUnit                                          OFFSET(get<T>, {0x601, 1, 0, 0})
+	DMember(bool)                                      bShowAmplitudeGrid                                          OFFSET(get<bool>, {0x602, 1, 0, 0})
+	DMember(bool)                                      bShowAmplitudeLabels                                        OFFSET(get<bool>, {0x603, 1, 0, 0})
+	CMember(EYAxisLabelsUnit)                          AmplitudeGridLabelsUnit                                     OFFSET(get<T>, {0x604, 1, 0, 0})
+	DMember(bool)                                      bShowTriggerThresholdLine                                   OFFSET(get<bool>, {0x605, 1, 0, 0})
+	DMember(float)                                     TriggerThreshold                                            OFFSET(get<float>, {0x608, 4, 0, 0})
+	CMember(EAudioPanelLayoutType)                     PanelLayoutType                                             OFFSET(get<T>, {0x60C, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Script/AudioWidgets.AudioOscilloscope.StopProcessing
+	// void StopProcessing();                                                                                                   // [0x9ecbcf0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWidgets.AudioOscilloscope.StartProcessing
+	// void StartProcessing();                                                                                                  // [0x9ecbca0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWidgets.AudioOscilloscope.GetOscilloscopeAudioSamples__DelegateSignature
+	// TArray<float> GetOscilloscopeAudioSamples__DelegateSignature();                                                          // [0x101681c] Public|Delegate      
 };
 
 /// Class /Script/AudioWidgets.AudioRadialSlider
@@ -81,35 +112,35 @@ public:
 
 	/// Functions
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetWidgetLayout
-	// void SetWidgetLayout(TEnumAsByte<EAudioRadialSliderLayout> InLayout);                                                    // [0x9b7e600] Final|Native|Public|BlueprintCallable 
+	// void SetWidgetLayout(TEnumAsByte<EAudioRadialSliderLayout> InLayout);                                                    // [0x9ecbc1c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetValueTextReadOnly
-	// void SetValueTextReadOnly(bool bIsReadOnly);                                                                             // [0x9b7e384] Final|Native|Public|BlueprintCallable 
+	// void SetValueTextReadOnly(bool bIsReadOnly);                                                                             // [0x9ecb9b8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetUnitsTextReadOnly
-	// void SetUnitsTextReadOnly(bool bIsReadOnly);                                                                             // [0x9b7e26c] Final|Native|Public|BlueprintCallable 
+	// void SetUnitsTextReadOnly(bool bIsReadOnly);                                                                             // [0x9ecb8a0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetUnitsText
-	// void SetUnitsText(FText Units);                                                                                          // [0x9b7e134] Final|Native|Public|BlueprintCallable 
+	// void SetUnitsText(FText Units);                                                                                          // [0x9ecb768] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetTextLabelBackgroundColor
-	// void SetTextLabelBackgroundColor(FSlateColor InColor);                                                                   // [0x9b7de4c] Final|Native|Public|BlueprintCallable 
+	// void SetTextLabelBackgroundColor(FSlateColor InColor);                                                                   // [0x9ecb4a8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetSliderThickness
-	// void SetSliderThickness(float InThickness);                                                                              // [0x9b7dc68] Final|Native|Public|BlueprintCallable 
+	// void SetSliderThickness(float InThickness);                                                                              // [0x9ecb2dc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetSliderProgressColor
-	// void SetSliderProgressColor(FLinearColor InValue);                                                                       // [0x9b7db0c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderProgressColor(FLinearColor InValue);                                                                       // [0x9ecb198] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetSliderBarColor
-	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9b7d854] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9ecaf10] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetShowUnitsText
-	// void SetShowUnitsText(bool bShowUnitsText);                                                                              // [0x9b7d5e0] Final|Native|Public|BlueprintCallable 
+	// void SetShowUnitsText(bool bShowUnitsText);                                                                              // [0x9ecacb4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetShowLabelOnlyOnHover
-	// void SetShowLabelOnlyOnHover(bool bShowLabelOnlyOnHover);                                                                // [0x9b7d4c0] Final|Native|Public|BlueprintCallable 
+	// void SetShowLabelOnlyOnHover(bool bShowLabelOnlyOnHover);                                                                // [0x9ecab94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetOutputRange
-	// void SetOutputRange(FVector2D InOutputRange);                                                                            // [0x9b7d364] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetOutputRange(FVector2D InOutputRange);                                                                            // [0x9ecaa50] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetHandStartEndRatio
-	// void SetHandStartEndRatio(FVector2D InHandStartEndRatio);                                                                // [0x9b7c30c] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetHandStartEndRatio(FVector2D InHandStartEndRatio);                                                                // [0x9ec9b48] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.SetCenterBackgroundColor
-	// void SetCenterBackgroundColor(FLinearColor InValue);                                                                     // [0x9b7c1b0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetCenterBackgroundColor(FLinearColor InValue);                                                                     // [0x9ec9a04] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.GetSliderValue
-	// float GetSliderValue(float OutputValue);                                                                                 // [0x9b7bfbc] Final|Native|Public|BlueprintCallable 
+	// float GetSliderValue(float OutputValue);                                                                                 // [0x9ec9828] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.GetOutputValue
-	// float GetOutputValue(float InSliderValue);                                                                               // [0x9b7be8c] Final|Native|Public|BlueprintCallable 
+	// float GetOutputValue(float InSliderValue);                                                                               // [0x9ec96f8] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioWidgets.AudioVolumeRadialSlider
@@ -157,37 +188,37 @@ public:
 	SMember(FDelegateProperty)                         SliderThumbColorDelegate                                    OFFSET(getStruct<T>, {0x20C, 12, 0, 0})
 	SMember(FLinearColor)                              WidgetBackgroundColor                                       OFFSET(getStruct<T>, {0x218, 16, 0, 0})
 	SMember(FDelegateProperty)                         WidgetBackgroundColorDelegate                               OFFSET(getStruct<T>, {0x228, 12, 0, 0})
-	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x234, 1, 0, 0})
+	CMember(TEnumAsByte<EOrientation>)                 orientation                                                 OFFSET(get<T>, {0x234, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(getStruct<T>, {0x238, 16, 0, 0})
 
 
 	/// Functions
 	// Function /Script/AudioWidgets.AudioSliderBase.SetWidgetBackgroundColor
-	// void SetWidgetBackgroundColor(FLinearColor InValue);                                                                     // [0x9b7e4a4] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetWidgetBackgroundColor(FLinearColor InValue);                                                                     // [0x9ecbad8] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetValueTextReadOnly
-	// void SetValueTextReadOnly(bool bIsReadOnly);                                                                             // [0x9b7e414] Final|Native|Public|BlueprintCallable 
+	// void SetValueTextReadOnly(bool bIsReadOnly);                                                                             // [0x9ecba48] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetUnitsTextReadOnly
-	// void SetUnitsTextReadOnly(bool bIsReadOnly);                                                                             // [0x9b7e2f8] Final|Native|Public|BlueprintCallable 
+	// void SetUnitsTextReadOnly(bool bIsReadOnly);                                                                             // [0x9ecb92c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetUnitsText
-	// void SetUnitsText(FText Units);                                                                                          // [0x9b7e1d0] Final|Native|Public|BlueprintCallable 
+	// void SetUnitsText(FText Units);                                                                                          // [0x9ecb804] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetTextLabelBackgroundColor
-	// void SetTextLabelBackgroundColor(FSlateColor InColor);                                                                   // [0x9b7dfc0] Final|Native|Public|BlueprintCallable 
+	// void SetTextLabelBackgroundColor(FSlateColor InColor);                                                                   // [0x9ecb608] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetSliderThumbColor
-	// void SetSliderThumbColor(FLinearColor InValue);                                                                          // [0x9b7dcf0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderThumbColor(FLinearColor InValue);                                                                          // [0x9ecb364] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetSliderBarColor
-	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9b7d9b0] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderBarColor(FLinearColor InValue);                                                                            // [0x9ecb054] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetSliderBackgroundColor
-	// void SetSliderBackgroundColor(FLinearColor InValue);                                                                     // [0x9b7d6f8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void SetSliderBackgroundColor(FLinearColor InValue);                                                                     // [0x9ecadcc] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetShowUnitsText
-	// void SetShowUnitsText(bool bShowUnitsText);                                                                              // [0x9b7d66c] Final|Native|Public|BlueprintCallable 
+	// void SetShowUnitsText(bool bShowUnitsText);                                                                              // [0x9ecad40] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.SetShowLabelOnlyOnHover
-	// void SetShowLabelOnlyOnHover(bool bShowLabelOnlyOnHover);                                                                // [0x9b7d550] Final|Native|Public|BlueprintCallable 
+	// void SetShowLabelOnlyOnHover(bool bShowLabelOnlyOnHover);                                                                // [0x9ecac24] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.GetSliderValue
-	// float GetSliderValue(float OutputValue);                                                                                 // [0x9b7b75c] Final|Native|Public|BlueprintCallable 
+	// float GetSliderValue(float OutputValue);                                                                                 // [0x9ec9060] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.GetOutputValue
-	// float GetOutputValue(float InSliderValue);                                                                               // [0x9b7bf24] Final|Native|Public|BlueprintCallable 
+	// float GetOutputValue(float InSliderValue);                                                                               // [0x9ec9790] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.GetLinValue
-	// float GetLinValue(float OutputValue);                                                                                    // [0x9b7b75c] Final|Native|Public|BlueprintCallable 
+	// float GetLinValue(float OutputValue);                                                                                    // [0x9ec9060] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioWidgets.AudioSlider
@@ -221,6 +252,32 @@ class UAudioFrequencySlider : public UAudioSliderBase
 
 public:
 	SMember(FVector2D)                                 OutputRange                                                 OFFSET(getStruct<T>, {0x930, 16, 0, 0})
+};
+
+/// Class /Script/AudioWidgets.AudioVectorscope
+/// Size: 0x0218 (0x000178 - 0x000390)
+class UAudioVectorscope : public UWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 912;
+
+public:
+	SMember(FAudioVectorscopePanelStyle)               VectorscopeStyle                                            OFFSET(getStruct<T>, {0x180, 416, 0, 0})
+	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x320, 8, 0, 0})
+	DMember(bool)                                      bShowGrid                                                   OFFSET(get<bool>, {0x328, 1, 0, 0})
+	DMember(int32_t)                                   GridDivisions                                               OFFSET(get<int32_t>, {0x32C, 4, 0, 0})
+	DMember(float)                                     DisplayPersistenceMs                                        OFFSET(get<float>, {0x330, 4, 0, 0})
+	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x334, 4, 0, 0})
+	CMember(EAudioPanelLayoutType)                     PanelLayoutType                                             OFFSET(get<T>, {0x338, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Script/AudioWidgets.AudioVectorscope.StopProcessing
+	// void StopProcessing();                                                                                                   // [0x9ecbd18] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWidgets.AudioVectorscope.StartProcessing
+	// void StartProcessing();                                                                                                  // [0x9ecbcc8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioWidgets.AudioVectorscope.GetVectorscopeAudioSamples__DelegateSignature
+	// TArray<float> GetVectorscopeAudioSamples__DelegateSignature();                                                           // [0x101681c] Public|Delegate      
 };
 
 /// Struct /Script/AudioWidgets.MeterChannelInfo
@@ -263,6 +320,122 @@ public:
 	DMember(float)                                     ScaleHashHeight                                             OFFSET(get<float>, {0x414, 4, 0, 0})
 	DMember(int32_t)                                   DecibelsPerHash                                             OFFSET(get<int32_t>, {0x418, 4, 0, 0})
 	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x420, 88, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.AudioOscilloscopePanelStyle
+/// Size: 0x0468 (0x000008 - 0x000470)
+class FAudioOscilloscopePanelStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1136;
+
+public:
+	SMember(FFixedSampleSequenceRulerStyle)            TimeRulerStyle                                              OFFSET(getStruct<T>, {0x10, 592, 0, 0})
+	SMember(FSampledSequenceValueGridOverlayStyle)     ValueGridStyle                                              OFFSET(getStruct<T>, {0x260, 152, 0, 0})
+	SMember(FSampledSequenceViewerStyle)               WaveViewerStyle                                             OFFSET(getStruct<T>, {0x300, 336, 0, 0})
+	SMember(FTriggerThresholdLineStyle)                TriggerThresholdLineStyle                                   OFFSET(getStruct<T>, {0x450, 24, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.TriggerThresholdLineStyle
+/// Size: 0x0010 (0x000008 - 0x000018)
+class FTriggerThresholdLineStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	SMember(FLinearColor)                              LineColor                                                   OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.SampledSequenceViewerStyle
+/// Size: 0x0148 (0x000008 - 0x000150)
+class FSampledSequenceViewerStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 336;
+
+public:
+	SMember(FSlateColor)                               SequenceColor                                               OFFSET(getStruct<T>, {0x8, 20, 0, 0})
+	DMember(float)                                     SequenceLineThickness                                       OFFSET(get<float>, {0x1C, 4, 0, 0})
+	SMember(FSlateColor)                               MajorGridLineColor                                          OFFSET(getStruct<T>, {0x20, 20, 0, 0})
+	SMember(FSlateColor)                               MinorGridLineColor                                          OFFSET(getStruct<T>, {0x34, 20, 0, 0})
+	SMember(FSlateColor)                               ZeroCrossingLineColor                                       OFFSET(getStruct<T>, {0x48, 20, 0, 0})
+	DMember(float)                                     ZeroCrossingLineThickness                                   OFFSET(get<float>, {0x5C, 4, 0, 0})
+	DMember(float)                                     SampleMarkersSize                                           OFFSET(get<float>, {0x60, 4, 0, 0})
+	SMember(FSlateColor)                               SequenceBackgroundColor                                     OFFSET(getStruct<T>, {0x64, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x80, 192, 0, 0})
+	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x140, 4, 0, 0})
+	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x144, 4, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.SampledSequenceValueGridOverlayStyle
+/// Size: 0x0090 (0x000008 - 0x000098)
+class FSampledSequenceValueGridOverlayStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 152;
+
+public:
+	SMember(FSlateColor)                               GridColor                                                   OFFSET(getStruct<T>, {0x8, 20, 0, 0})
+	DMember(float)                                     GridThickness                                               OFFSET(get<float>, {0x1C, 4, 0, 0})
+	SMember(FSlateColor)                               LabelTextColor                                              OFFSET(getStruct<T>, {0x20, 20, 0, 0})
+	SMember(FSlateFontInfo)                            LabelTextFont                                               OFFSET(getStruct<T>, {0x38, 88, 0, 0})
+	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x90, 4, 0, 0})
+	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x94, 4, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.FixedSampleSequenceRulerStyle
+/// Size: 0x0248 (0x000008 - 0x000250)
+class FFixedSampleSequenceRulerStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 592;
+
+public:
+	DMember(float)                                     HandleWidth                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
+	SMember(FSlateColor)                               HandleColor                                                 OFFSET(getStruct<T>, {0xC, 20, 0, 0})
+	SMember(FSlateBrush)                               HandleBrush                                                 OFFSET(getStruct<T>, {0x20, 192, 0, 0})
+	SMember(FSlateColor)                               TicksColor                                                  OFFSET(getStruct<T>, {0xE0, 20, 0, 0})
+	SMember(FSlateColor)                               TicksTextColor                                              OFFSET(getStruct<T>, {0xF4, 20, 0, 0})
+	SMember(FSlateFontInfo)                            TicksTextFont                                               OFFSET(getStruct<T>, {0x108, 88, 0, 0})
+	DMember(float)                                     TicksTextOffset                                             OFFSET(get<float>, {0x160, 4, 0, 0})
+	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(getStruct<T>, {0x164, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x180, 192, 0, 0})
+	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x240, 4, 0, 0})
+	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x244, 4, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.AudioVectorscopePanelStyle
+/// Size: 0x0198 (0x000008 - 0x0001A0)
+class FAudioVectorscopePanelStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 416;
+
+public:
+	SMember(FSampledSequenceValueGridOverlayStyle)     ValueGridStyle                                              OFFSET(getStruct<T>, {0x8, 152, 0, 0})
+	SMember(FSampledSequenceVectorViewerStyle)         VectorViewerStyle                                           OFFSET(getStruct<T>, {0xA0, 256, 0, 0})
+};
+
+/// Struct /Script/AudioWidgets.SampledSequenceVectorViewerStyle
+/// Size: 0x00F8 (0x000008 - 0x000100)
+class FSampledSequenceVectorViewerStyle : public FSlateWidgetStyle
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 256;
+
+public:
+	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(getStruct<T>, {0x8, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x20, 192, 0, 0})
+	SMember(FLinearColor)                              LineColor                                                   OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
+	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0xF0, 4, 0, 0})
 };
 
 /// Struct /Script/AudioWidgets.AudioTextBoxStyle
@@ -315,28 +488,6 @@ public:
 	DMember(float)                                     DefaultSliderRadius                                         OFFSET(get<float>, {0x140, 4, 0, 0})
 };
 
-/// Struct /Script/AudioWidgets.SampledSequenceViewerStyle
-/// Size: 0x0148 (0x000008 - 0x000150)
-class FSampledSequenceViewerStyle : public FSlateWidgetStyle
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 336;
-
-public:
-	SMember(FSlateColor)                               SequenceColor                                               OFFSET(getStruct<T>, {0x8, 20, 0, 0})
-	DMember(float)                                     SequenceLineThickness                                       OFFSET(get<float>, {0x1C, 4, 0, 0})
-	SMember(FSlateColor)                               MajorGridLineColor                                          OFFSET(getStruct<T>, {0x20, 20, 0, 0})
-	SMember(FSlateColor)                               MinorGridLineColor                                          OFFSET(getStruct<T>, {0x34, 20, 0, 0})
-	SMember(FSlateColor)                               ZeroCrossingLineColor                                       OFFSET(getStruct<T>, {0x48, 20, 0, 0})
-	DMember(float)                                     ZeroCrossingLineThickness                                   OFFSET(get<float>, {0x5C, 4, 0, 0})
-	DMember(float)                                     SampleMarkersSize                                           OFFSET(get<float>, {0x60, 4, 0, 0})
-	SMember(FSlateColor)                               SequenceBackgroundColor                                     OFFSET(getStruct<T>, {0x64, 20, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x80, 192, 0, 0})
-	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x140, 4, 0, 0})
-	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x144, 4, 0, 0})
-};
-
 /// Struct /Script/AudioWidgets.PlayheadOverlayStyle
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FPlayheadOverlayStyle : public FSlateWidgetStyle
@@ -352,43 +503,41 @@ public:
 	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 
-/// Struct /Script/AudioWidgets.FixedSampleSequenceRulerStyle
-/// Size: 0x0248 (0x000008 - 0x000250)
-class FFixedSampleSequenceRulerStyle : public FSlateWidgetStyle
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 592;
-
-public:
-	DMember(float)                                     HandleWidth                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FSlateColor)                               HandleColor                                                 OFFSET(getStruct<T>, {0xC, 20, 0, 0})
-	SMember(FSlateBrush)                               HandleBrush                                                 OFFSET(getStruct<T>, {0x20, 192, 0, 0})
-	SMember(FSlateColor)                               TicksColor                                                  OFFSET(getStruct<T>, {0xE0, 20, 0, 0})
-	SMember(FSlateColor)                               TicksTextColor                                              OFFSET(getStruct<T>, {0xF4, 20, 0, 0})
-	SMember(FSlateFontInfo)                            TicksTextFont                                               OFFSET(getStruct<T>, {0x108, 88, 0, 0})
-	DMember(float)                                     TicksTextOffset                                             OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(getStruct<T>, {0x164, 20, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x180, 192, 0, 0})
-	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x240, 4, 0, 0})
-	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x244, 4, 0, 0})
+/// Enum /Script/AudioWidgets.EAudioPanelLayoutType
+/// Size: 0x03
+enum EAudioPanelLayoutType : uint8_t
+{
+	EAudioPanelLayoutType__Basic0                                                    = 0,
+	EAudioPanelLayoutType__Advanced1                                                 = 1,
+	EAudioPanelLayoutType__EAudioPanelLayoutType_MAX2                                = 2
 };
 
-/// Struct /Script/AudioWidgets.SampledSequenceValueGridOverlayStyle
-/// Size: 0x0090 (0x000008 - 0x000098)
-class FSampledSequenceValueGridOverlayStyle : public FSlateWidgetStyle
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 152;
+/// Enum /Script/AudioWidgets.EYAxisLabelsUnit
+/// Size: 0x03
+enum EYAxisLabelsUnit : uint8_t
+{
+	EYAxisLabelsUnit__Linear0                                                        = 0,
+	EYAxisLabelsUnit__Db1                                                            = 1,
+	EYAxisLabelsUnit__EYAxisLabelsUnit_MAX2                                          = 2
+};
 
-public:
-	SMember(FSlateColor)                               GridColor                                                   OFFSET(getStruct<T>, {0x8, 20, 0, 0})
-	DMember(float)                                     GridThickness                                               OFFSET(get<float>, {0x1C, 4, 0, 0})
-	SMember(FSlateColor)                               LabelTextColor                                              OFFSET(getStruct<T>, {0x20, 20, 0, 0})
-	SMember(FSlateFontInfo)                            LabelTextFont                                               OFFSET(getStruct<T>, {0x38, 88, 0, 0})
-	DMember(float)                                     DesiredWidth                                                OFFSET(get<float>, {0x90, 4, 0, 0})
-	DMember(float)                                     DesiredHeight                                               OFFSET(get<float>, {0x94, 4, 0, 0})
+/// Enum /Script/AudioWidgets.EXAxisLabelsUnit
+/// Size: 0x03
+enum EXAxisLabelsUnit : uint8_t
+{
+	EXAxisLabelsUnit__Samples0                                                       = 0,
+	EXAxisLabelsUnit__Seconds1                                                       = 1,
+	EXAxisLabelsUnit__EXAxisLabelsUnit_MAX2                                          = 2
+};
+
+/// Enum /Script/AudioWidgets.EAudioOscilloscopeTriggerMode
+/// Size: 0x04
+enum EAudioOscilloscopeTriggerMode : uint8_t
+{
+	EAudioOscilloscopeTriggerMode__None0                                             = 0,
+	EAudioOscilloscopeTriggerMode__Rising1                                           = 1,
+	EAudioOscilloscopeTriggerMode__Falling2                                          = 2,
+	EAudioOscilloscopeTriggerMode__EAudioOscilloscopeTriggerMode_MAX3                = 3
 };
 
 /// Enum /Script/AudioWidgets.EAudioRadialSliderLayout

@@ -23,9 +23,9 @@ public:
 
 	/// Functions
 	// Function /Script/SrirachaRanchUI.FortMobileActionButtonBehavior_ToggleRadio.HandleRadioStopped
-	// void HandleRadioStopped(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x99bade8] Final|Native|Private 
+	// void HandleRadioStopped(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x9ed0200] Final|Native|Private 
 	// Function /Script/SrirachaRanchUI.FortMobileActionButtonBehavior_ToggleRadio.HandleRadioPlaying
-	// void HandleRadioPlaying(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x99bac28] Final|Native|Private 
+	// void HandleRadioPlaying(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x9ed0054] Final|Native|Private 
 };
 
 /// Class /Script/SrirachaRanchUI.RadioPlayerWidgetBase
@@ -42,30 +42,30 @@ public:
 
 	/// Functions
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.SetControllable
-	// void SetControllable(bool bCanControl);                                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void SetControllable(bool bCanControl);                                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnSourcePlaying
-	// void OnSourcePlaying(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                                 // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSourcePlaying(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                                 // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnSourceFinished
-	// void OnSourceFinished(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSourceFinished(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnRadioStopped
-	// void OnRadioStopped(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation LastSource);                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnRadioStopped(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation LastSource);                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnMetadataChanged
-	// void OnMetadataChanged(FFortMediaInBandMetadata MediaMetadata);                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnMetadataChanged(FFortMediaInBandMetadata MediaMetadata);                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnLoadingNewSource
-	// void OnLoadingNewSource(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnLoadingNewSource(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnFailedToOpenSource
-	// void OnFailedToOpenSource(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnFailedToOpenSource(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                            // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.OnControllerGainedNewFortPawn
-	// void OnControllerGainedNewFortPawn(AFortPawn* FortPawn);                                                                 // [0x99bb1e0] Final|Native|Protected 
+	// void OnControllerGainedNewFortPawn(AFortPawn* FortPawn);                                                                 // [0x9ed05e4] Final|Native|Protected 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.NativeExitedVehicle
-	// void NativeExitedVehicle();                                                                                              // [0x99bb1cc] Final|Native|Protected 
+	// void NativeExitedVehicle();                                                                                              // [0x9ed05d0] Final|Native|Protected 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.NativeEnteredVehicle
-	// void NativeEnteredVehicle();                                                                                             // [0x99bb1b8] Final|Native|Protected 
+	// void NativeEnteredVehicle();                                                                                             // [0x9ed05bc] Final|Native|Protected 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.IsMetadataEmpty
-	// bool IsMetadataEmpty(FFortMediaInBandMetadata& MediaMetadata);                                                           // [0x99bb0c0] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool IsMetadataEmpty(FFortMediaInBandMetadata& MediaMetadata);                                                           // [0x9ed04c4] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.HaveToChangeSongInfo
-	// bool HaveToChangeSongInfo(FFortMediaInBandMetadata& MediaMetadata);                                                      // [0x99bafa8] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure 
+	// bool HaveToChangeSongInfo(FFortMediaInBandMetadata& MediaMetadata);                                                      // [0x9ed03ac] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.GetRadioStatusOnScreenTime
-	// float GetRadioStatusOnScreenTime();                                                                                      // [0x99babf8] Final|Native|Protected|BlueprintCallable|BlueprintPure 
+	// float GetRadioStatusOnScreenTime();                                                                                      // [0x9ed0024] Final|Native|Protected|BlueprintCallable|BlueprintPure 
 };
 

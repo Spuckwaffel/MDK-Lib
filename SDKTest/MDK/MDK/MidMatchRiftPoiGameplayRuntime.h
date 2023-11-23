@@ -36,7 +36,7 @@ public:
 
 	/// Functions
 	// Function /Script/MidMatchRiftPoiGameplayRuntime.MidMatchRiftPoiManagerActor.SetDynamicLandBrush
-	// void SetDynamicLandBrush(FSlateBrush& LandIcon);                                                                         // [0x2ec5358] Final|BlueprintCosmetic|Native|Protected|HasOutParms|BlueprintCallable 
+	// void SetDynamicLandBrush(FSlateBrush& LandIcon);                                                                         // [0xa1c7808] Final|BlueprintCosmetic|Native|Protected|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MidMatchRiftPoiGameplayRuntime.MidmatchRiftPoiSpawnIndicator
@@ -55,8 +55,8 @@ public:
 
 	/// Functions
 	// Function /Script/MidMatchRiftPoiGameplayRuntime.MidmatchRiftPoiSpawnIndicator.TeleportVehicleActor
-	// void TeleportVehicleActor(AActor* VehicleActor, FVector& TeleportLocation);                                              // [0x78677e8] Final|BlueprintAuthorityOnly|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// void TeleportVehicleActor(AActor* VehicleActor, FVector& TeleportLocation);                                              // [0x8802f6c] Final|BlueprintAuthorityOnly|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MidMatchRiftPoiGameplayRuntime.MidmatchRiftPoiSpawnIndicator.IsActorInDataLayerInstance
-	// bool IsActorInDataLayerInstance(AActor* Actor, UDataLayerInstance* DataLayerInstance);                                   // [0x8cf247c] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsActorInDataLayerInstance(AActor* Actor, UDataLayerInstance* DataLayerInstance);                                   // [0x90ce234] Final|BlueprintAuthorityOnly|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 };
 

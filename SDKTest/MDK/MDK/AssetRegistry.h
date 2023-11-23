@@ -28,11 +28,11 @@ public:
 };
 
 /// Class /Script/AssetRegistry.AssetRegistryImpl
-/// Size: 0x0D50 (0x000028 - 0x000D78)
+/// Size: 0x0E20 (0x000028 - 0x000E48)
 class UAssetRegistryImpl : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3448;
+	static inline constexpr uint64_t __MDKClassSize = 3656;
 
 public:
 };

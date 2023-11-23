@@ -12,28 +12,28 @@
 /// dependency: MLDeformerFramework
 
 /// Class /Script/MLDeformerRuntime.FortMLDeformerComponent
-/// Size: 0x0020 (0x0000E8 - 0x000108)
+/// Size: 0x0020 (0x0000E0 - 0x000100)
 class UFortMLDeformerComponent : public UMLDeformerComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 264;
+	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	CMember(UMLDeformerAsset*)                         RequestedMLDeformerAsset                                    OFFSET(get<T>, {0xE8, 8, 0, 0})
-	CMember(UMeshDeformer*)                            RequestedMeshDeformerAsset                                  OFFSET(get<T>, {0xF0, 8, 0, 0})
+	CMember(UMLDeformerAsset*)                         RequestedMLDeformerAsset                                    OFFSET(get<T>, {0xE0, 8, 0, 0})
+	CMember(UMeshDeformer*)                            RequestedMeshDeformerAsset                                  OFFSET(get<T>, {0xE8, 8, 0, 0})
 };
 
 /// Class /Script/MLDeformerRuntime.MLDeformerGameFeatureData
-/// Size: 0x0008 (0x000498 - 0x0004A0)
+/// Size: 0x0008 (0x0004A0 - 0x0004A8)
 class UMLDeformerGameFeatureData : public UFortGameFeatureData
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1184;
+	static inline constexpr uint64_t __MDKClassSize = 1192;
 
 public:
-	DMember(bool)                                      bDisableWhenOwnerIsNotViewTarget                            OFFSET(get<bool>, {0x498, 1, 0, 0})
-	DMember(bool)                                      bShouldRampUpWeightWhenEnabled                              OFFSET(get<bool>, {0x499, 1, 0, 0})
-	DMember(float)                                     WeightIncreasePerSecond                                     OFFSET(get<float>, {0x49C, 4, 0, 0})
+	DMember(bool)                                      bDisableWhenOwnerIsNotViewTarget                            OFFSET(get<bool>, {0x4A0, 1, 0, 0})
+	DMember(bool)                                      bShouldRampUpWeightWhenEnabled                              OFFSET(get<bool>, {0x4A1, 1, 0, 0})
+	DMember(float)                                     WeightIncreasePerSecond                                     OFFSET(get<float>, {0x4A4, 4, 0, 0})
 };
 
 /// Class /Script/MLDeformerRuntime.MLDeformerAssetMapping

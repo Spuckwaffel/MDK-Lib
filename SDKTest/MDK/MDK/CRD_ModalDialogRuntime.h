@@ -24,15 +24,15 @@ public:
 
 	/// Functions
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.OnResponseAnimationFinished__DelegateSignature
-	// void OnResponseAnimationFinished__DelegateSignature();                                                                   // [0x1d9241c] MulticastDelegate|Public|Delegate 
+	// void OnResponseAnimationFinished__DelegateSignature();                                                                   // [0x101681c] MulticastDelegate|Public|Delegate 
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.HasResponseAnimation
-	// bool HasResponseAnimation();                                                                                             // [0x9c6ca64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasResponseAnimation();                                                                                             // [0xa52b320] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.HandleResponseAnimationFinished
-	// void HandleResponseAnimationFinished();                                                                                  // [0x91fd9dc] Final|Native|Private 
+	// void HandleResponseAnimationFinished();                                                                                  // [0xa52b30c] Final|Native|Private 
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.AttemptToPlayResponseAnimation
-	// void AttemptToPlayResponseAnimation();                                                                                   // [0x9c6ca24] Final|Native|Public|BlueprintCallable 
+	// void AttemptToPlayResponseAnimation();                                                                                   // [0xa52b2cc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.AttemptToPlayOpenAnimation
-	// void AttemptToPlayOpenAnimation();                                                                                       // [0x9c6c9e4] Final|Native|Public|BlueprintCallable 
+	// void AttemptToPlayOpenAnimation();                                                                                       // [0xa52b28c] Final|Native|Public|BlueprintCallable 
 };
 
 /// Enum /Script/CRD_ModalDialogRuntime.ECreativeModalBackActionBoundButtonOption

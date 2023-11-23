@@ -77,7 +77,7 @@ public:
 	SMember(FString)                                   URL                                                         OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	SMember(FString)                                   RelUrl                                                      OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	SMember(FString)                                   Data                                                        OFFSET(getStruct<T>, {0x40, 16, 0, 0})
-	DMember(double)                                    Duration                                                    OFFSET(get<double>, {0x50, 8, 0, 0})
+	DMember(double)                                    duration                                                    OFFSET(get<double>, {0x50, 8, 0, 0})
 	DMember(double)                                    FPS                                                         OFFSET(get<double>, {0x58, 8, 0, 0})
 	CMember(TArray<FEpicMediaImageDataExt>)            Images                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<FEpicMediaAudioOnlyPeriodDataExt>)  AudioOnlyPeriods                                            OFFSET(get<T>, {0x70, 16, 0, 0})
@@ -162,13 +162,30 @@ public:
 	SMember(FEpicMediaAudioMetadataDataExt)            MetadataData                                                OFFSET(getStruct<T>, {0x80, 176, 0, 0})
 };
 
+/// Struct /Script/EpicMediaUtilities.EpicMediaExtraMetadataExt
+/// Size: 0x0048 (0x000000 - 0x000048)
+class FEpicMediaExtraMetadataExt : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 72;
+
+public:
+	SMember(FString)                                   AssetId                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	CMember(TArray<FString>)                           BaseURLs                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   BaseURL                                                     OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	DMember(int64_t)                                   Version                                                     OFFSET(get<int64_t>, {0x30, 8, 0, 0})
+	DMember(int64_t)                                   ExpiresAt                                                   OFFSET(get<int64_t>, {0x38, 8, 0, 0})
+	DMember(bool)                                      bSupportsCaching                                            OFFSET(get<bool>, {0x40, 1, 0, 0})
+};
+
 /// Struct /Script/EpicMediaUtilities.EpicMediaMetadataExt
-/// Size: 0x0290 (0x000000 - 0x000290)
+/// Size: 0x02D8 (0x000000 - 0x0002D8)
 class FEpicMediaMetadataExt : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 656;
+	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
 	CMember(TArray<FEpicMediaPlaylistExt>)             Playlists                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
@@ -188,5 +205,6 @@ public:
 	SMember(FEpicMediaRegionLockExt)                   RegionLockData                                              OFFSET(getStruct<T>, {0xA0, 168, 0, 0})
 	SMember(FEpicMediaAudioMetadataExt)                AudioMetadata                                               OFFSET(getStruct<T>, {0x148, 304, 0, 0})
 	DMember(bool)                                      bQuicksilverEP                                              OFFSET(get<bool>, {0x278, 1, 0, 0})
+	SMember(FEpicMediaExtraMetadataExt)                ExtraMetadata                                               OFFSET(getStruct<T>, {0x280, 72, 0, 0})
 };
 

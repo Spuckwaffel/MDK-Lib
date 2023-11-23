@@ -21,19 +21,19 @@ public:
 
 	/// Functions
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnWarpUpdate
-	// void OnWarpUpdate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                            // [0x1d9241c] Event|Public|BlueprintEvent|Const 
+	// void OnWarpUpdate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                            // [0x101681c] Event|Public|BlueprintEvent|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnWarpEnd
-	// void OnWarpEnd(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                               // [0x1d9241c] Event|Public|BlueprintEvent|Const 
+	// void OnWarpEnd(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                               // [0x101681c] Event|Public|BlueprintEvent|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnWarpBegin
-	// void OnWarpBegin(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                             // [0x1d9241c] Event|Public|BlueprintEvent|Const 
+	// void OnWarpBegin(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);                             // [0x101681c] Event|Public|BlueprintEvent|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierUpdate
-	// void OnRootMotionModifierUpdate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);              // [0x723cee4] Final|Native|Public|Const 
+	// void OnRootMotionModifierUpdate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);              // [0x70a0ad0] Final|Native|Public|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierDeactivate
-	// void OnRootMotionModifierDeactivate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);          // [0x723ce20] Final|Native|Public|Const 
+	// void OnRootMotionModifierDeactivate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);          // [0x70a0a0c] Final|Native|Public|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierActivate
-	// void OnRootMotionModifierActivate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);            // [0x723cd5c] Final|Native|Public|Const 
+	// void OnRootMotionModifierActivate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);            // [0x70a0948] Final|Native|Public|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.AddRootMotionModifier
-	// URootMotionModifier* AddRootMotionModifier(UMotionWarpingComponent* MotionWarpingComp, UAnimSequenceBase* Animation, float StartTime, float EndTime); // [0x723a9f4] Native|Event|Public|BlueprintEvent|Const 
+	// URootMotionModifier* AddRootMotionModifier(UMotionWarpingComponent* MotionWarpingComp, UAnimSequenceBase* Animation, float StartTime, float EndTime); // [0x709e84c] Native|Event|Public|BlueprintEvent|Const 
 };
 
 /// Class /Script/MotionWarping.MotionWarpingUtilities
@@ -63,19 +63,21 @@ public:
 
 	/// Functions
 	// Function /Script/MotionWarping.MotionWarpingComponent.RemoveWarpTarget
-	// int32_t RemoveWarpTarget(FName WarpTargetName);                                                                          // [0x723cfa8] Final|Native|Public|BlueprintCallable 
+	// int32_t RemoveWarpTarget(FName WarpTargetName);                                                                          // [0x70a0bb8] Final|Native|Public|BlueprintCallable 
+	// Function /Script/MotionWarping.MotionWarpingComponent.RemoveAllWarpTargets
+	// int32_t RemoveAllWarpTargets();                                                                                          // [0x70a0b94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.DisableAllRootMotionModifiers
-	// void DisableAllRootMotionModifiers();                                                                                    // [0x723bc14] Final|Native|Public|BlueprintCallable 
+	// void DisableAllRootMotionModifiers();                                                                                    // [0x709f8e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromTransform
-	// void AddOrUpdateWarpTargetFromTransform(FName WarpTargetName, FTransform TargetTransform);                               // [0x723a7c8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void AddOrUpdateWarpTargetFromTransform(FName WarpTargetName, FTransform TargetTransform);                               // [0x709e634] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocationAndRotation
-	// void AddOrUpdateWarpTargetFromLocationAndRotation(FName WarpTargetName, FVector TargetLocation, FRotator TargetRotation); // [0x723a4e8] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void AddOrUpdateWarpTargetFromLocationAndRotation(FName WarpTargetName, FVector TargetLocation, FRotator TargetRotation); // [0x709e3a8] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocation
-	// void AddOrUpdateWarpTargetFromLocation(FName WarpTargetName, FVector TargetLocation);                                    // [0x723a340] Final|Native|Public|HasDefaults|BlueprintCallable 
+	// void AddOrUpdateWarpTargetFromLocation(FName WarpTargetName, FVector TargetLocation);                                    // [0x709e210] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromComponent
-	// void AddOrUpdateWarpTargetFromComponent(FName WarpTargetName, USceneComponent* Component, FName BoneName, bool bFollowComponent); // [0x7239d88] Final|Native|Public|BlueprintCallable 
+	// void AddOrUpdateWarpTargetFromComponent(FName WarpTargetName, USceneComponent* Component, FName BoneName, bool bFollowComponent); // [0x709deb4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTarget
-	// void AddOrUpdateWarpTarget(FMotionWarpingTarget& WarpTarget);                                                            // [0x7239cb8] Final|Native|Public|HasOutParms|BlueprintCallable 
+	// void AddOrUpdateWarpTarget(FMotionWarpingTarget& WarpTarget);                                                            // [0x709dde4] Final|Native|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/MotionWarping.RootMotionModifier
@@ -147,7 +149,7 @@ public:
 
 	/// Functions
 	// Function /Script/MotionWarping.RootMotionModifier_Scale.AddRootMotionModifierScale
-	// URootMotionModifier_Scale* AddRootMotionModifierScale(UMotionWarpingComponent* InMotionWarpingComp, UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, FVector InScale); // [0x723ab3c] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+	// URootMotionModifier_Scale* AddRootMotionModifierScale(UMotionWarpingComponent* InMotionWarpingComp, UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, FVector InScale); // [0x709e994] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/MotionWarping.RootMotionModifier_AdjustmentBlendWarp

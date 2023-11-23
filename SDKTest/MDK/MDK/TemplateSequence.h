@@ -54,11 +54,11 @@ public:
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSequencePlayer
-/// Size: 0x0370 (0x000028 - 0x000398)
+/// Size: 0x0378 (0x000028 - 0x0003A0)
 class UCameraAnimationSequencePlayer : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 920;
+	static inline constexpr uint64_t __MDKClassSize = 928;
 
 public:
 	CMember(UObject*)                                  BoundObjectOverride                                         OFFSET(get<T>, {0x298, 8, 0, 0})
@@ -87,11 +87,11 @@ public:
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationEntitySystemLinker
-/// Size: 0x0000 (0x000738 - 0x000738)
+/// Size: 0x0000 (0x000740 - 0x000740)
 class UCameraAnimationEntitySystemLinker : public UMovieSceneEntitySystemLinker
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1848;
+	static inline constexpr uint64_t __MDKClassSize = 1856;
 
 public:
 };
@@ -168,38 +168,38 @@ public:
 };
 
 /// Class /Script/TemplateSequence.TemplateSequenceActor
-/// Size: 0x0058 (0x000290 - 0x0002E8)
+/// Size: 0x0060 (0x000290 - 0x0002F0)
 class ATemplateSequenceActor : public AActor
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 744;
+	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x298, 32, 0, 0})
-	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(getStruct<T>, {0x2C0, 24, 0, 0})
-	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(getStruct<T>, {0x2D8, 12, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x298, 40, 0, 0})
+	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(getStruct<T>, {0x2C8, 24, 0, 0})
+	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(getStruct<T>, {0x2E0, 12, 0, 0})
 
 
 	/// Functions
 	// Function /Script/TemplateSequence.TemplateSequenceActor.SetSequence
-	// void SetSequence(UTemplateSequence* InSequence);                                                                         // [0x6ca6c74] Final|Native|Public|BlueprintCallable 
+	// void SetSequence(UTemplateSequence* InSequence);                                                                         // [0x6d1c99c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.SetBinding
-	// void SetBinding(AActor* Actor, bool bOverridesDefault);                                                                  // [0x6ca6adc] Final|Native|Public|BlueprintCallable 
+	// void SetBinding(AActor* Actor, bool bOverridesDefault);                                                                  // [0x6d1c804] Final|Native|Public|BlueprintCallable 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.LoadSequence
-	// UTemplateSequence* LoadSequence();                                                                                       // [0x6ca6ab8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UTemplateSequence* LoadSequence();                                                                                       // [0x6d1c7e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequencePlayer
-	// UTemplateSequencePlayer* GetSequencePlayer();                                                                            // [0x6ca6a8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UTemplateSequencePlayer* GetSequencePlayer();                                                                            // [0x6d1c794] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
-	// UTemplateSequence* GetSequence();                                                                                        // [0x6ca6a68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// UTemplateSequence* GetSequence();                                                                                        // [0x6d1c770] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/TemplateSequence.TemplateSequencePlayer
-/// Size: 0x0008 (0x0004C8 - 0x0004D0)
+/// Size: 0x0008 (0x0004D0 - 0x0004D8)
 class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1232;
+	static inline constexpr uint64_t __MDKClassSize = 1240;
 
 public:
 };

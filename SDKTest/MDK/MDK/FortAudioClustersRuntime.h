@@ -46,7 +46,7 @@ public:
 
 	/// Functions
 	// Function /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioCluster.HandleRegisteredActorDeath
-	// void HandleRegisteredActorDeath(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x2a01470] Final|Native|Private|HasOutParms|HasDefaults 
+	// void HandleRegisteredActorDeath(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1b13588] Final|Native|Private|HasOutParms|HasDefaults 
 };
 
 /// Class /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioClusterConfigMaps

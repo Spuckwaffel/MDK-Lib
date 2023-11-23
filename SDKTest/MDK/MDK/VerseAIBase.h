@@ -44,15 +44,15 @@ public:
 
 	/// Functions
 	// Function /Script/VerseAIBase.AIBehaviorScriptComponent.GetBehaviorScript
-	// UAIBehaviorScript* GetBehaviorScript();                                                                                  // [0x91590a4] Final|Native|Public|BlueprintCallable 
+	// UAIBehaviorScript* GetBehaviorScript();                                                                                  // [0x953b3d4] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/VerseAIBase.AIPerceptionComponentBase
-/// Size: 0x0038 (0x000070 - 0x0000A8)
+/// Size: 0x0060 (0x000070 - 0x0000D0)
 class UAIPerceptionComponentBase : public UAIComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 168;
+	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
 };

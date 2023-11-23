@@ -62,7 +62,7 @@ public:
 	SMember(FRichCurve)                                CurveCustom                                                 OFFSET(getStruct<T>, {0x8, 128, 0, 0})
 	CMember(UCurveFloat*)                              CurveShared                                                 OFFSET(get<T>, {0x88, 8, 0, 0})
 	SMember(FWaveTableData)                            TableData                                                   OFFSET(getStruct<T>, {0x90, 32, 0, 0})
-	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xB0, 4, 0, 0})
+	DMember(float)                                     duration                                                    OFFSET(get<float>, {0xB0, 4, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableSettings

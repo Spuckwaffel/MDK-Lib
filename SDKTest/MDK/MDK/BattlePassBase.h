@@ -23,6 +23,60 @@ class UBattlePassSubPageInterface : public UInterface
 public:
 };
 
+/// Class /Script/BattlePassBase.FortBattlePassCustomSkinPageTab
+/// Size: 0x0228 (0x000400 - 0x000628)
+class UFortBattlePassCustomSkinPageTab : public UCommonActivatableWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1576;
+
+public:
+	CMember(UScrollBox*)                               ScrollBox_Categories                                        OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	CMember(UBattlePassEnabledInputData*)              EquipEnabledData                                            OFFSET(get<T>, {0x5B8, 8, 0, 0})
+	CMember(UCommonVisibilitySwitcher*)                VisibilitySwitcher_Content                                  OFFSET(get<T>, {0x5C8, 8, 0, 0})
+	CMember(TArray<FBattlePassCharaterRewardTabInfo>)  TabInfos                                                    OFFSET(get<T>, {0x5D0, 16, 0, 0})
+	CMember(UDynamicEntryBox*)                         ListView_PrimaryTabs                                        OFFSET(get<T>, {0x5E0, 8, 0, 0})
+	CMember(TArray<FBattlePassCharaterRewardTabInfo>)  ActiveTabInfos                                              OFFSET(get<T>, {0x5E8, 16, 0, 0})
+	CMember(UClass*)                                   CustomizationRowClass                                       OFFSET(get<T>, {0x5F8, 8, 0, 0})
+	SMember(FDataTableRowHandle)                       NextTabInputAction                                          OFFSET(getStruct<T>, {0x600, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PreviousTabInputAction                                      OFFSET(getStruct<T>, {0x610, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/BattlePassBase.FortBattlePassCustomSkinPageTab.EnableTabActions
+	// void EnableTabActions();                                                                                                 // [0x9f06f60] Final|Native|Protected|BlueprintCallable 
+};
+
+/// Class /Script/BattlePassBase.FortBattlePassCustomSkinTab
+/// Size: 0x0020 (0x001490 - 0x0014B0)
+class UFortBattlePassCustomSkinTab : public UCommonButtonBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5296;
+
+public:
+	CMember(UCommonLazyImage*)                         LazyImage_Icon                                              OFFSET(get<T>, {0x1490, 8, 0, 0})
+	SMember(FVector2D)                                 ImageSize_Mobile                                            OFFSET(getStruct<T>, {0x1498, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/BattlePassBase.FortBattlePassCustomSkinTab.SetIcon
+	// void SetIcon(TWeakObjectPtr<UObject*> LazyObject);                                                                       // [0x9f082f4] Final|Native|Public|BlueprintCallable 
+	// Function /Script/BattlePassBase.FortBattlePassCustomSkinTab.BP_ShowBang
+	// void BP_ShowBang(bool bShow);                                                                                            // [0x101681c] Event|Public|BlueprintEvent 
+};
+
+/// Class /Script/BattlePassBase.FortBattlePassSkinCategoriesTile
+/// Size: 0x0008 (0x000400 - 0x000408)
+class UFortBattlePassSkinCategoriesTile : public UCommonActivatableWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1032;
+
+public:
+	CMember(UDynamicEntryBox*)                         FortDynamicEntryBox_Categories                              OFFSET(get<T>, {0x400, 8, 0, 0})
+};
+
 /// Class /Script/BattlePassBase.BattlePassLandingPageBase
 /// Size: 0x0150 (0x000400 - 0x000550)
 class UBattlePassLandingPageBase : public UCommonActivatableWidget
@@ -62,17 +116,17 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.OnSubscriptionTextureLoaded
-	// void OnSubscriptionTextureLoaded(UTexture2D* Texture);                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSubscriptionTextureLoaded(UTexture2D* Texture);                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.OnSubscriptionOwnershipUpdated
-	// void OnSubscriptionOwnershipUpdated(bool bOwnsSubsciption);                                                              // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnSubscriptionOwnershipUpdated(bool bOwnsSubsciption);                                                              // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.OnShowDisplayDetails
-	// void OnShowDisplayDetails();                                                                                             // [0x1d9241c] RequiredAPI|Event|Public|BlueprintEvent 
+	// void OnShowDisplayDetails();                                                                                             // [0x101681c] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.OnSetTileImageMaterial
-	// void OnSetTileImageMaterial(UMaterialInstance* Material);                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetTileImageMaterial(UMaterialInstance* Material);                                                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.OnDisplayDetailsUpdated
-	// void OnDisplayDetailsUpdated(FBattlePassLandingPageButtonDisplayDetails& NewDisplayDetails);                             // [0x1d9241c] Event|Public|HasOutParms|BlueprintEvent 
+	// void OnDisplayDetailsUpdated(FBattlePassLandingPageButtonDisplayDetails& NewDisplayDetails);                             // [0x101681c] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.GetBattlePassDisplayDetails
-	// FBattlePassLandingPageButtonDisplayDetails GetBattlePassDisplayDetails();                                                // [0x258ec68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FBattlePassLandingPageButtonDisplayDetails GetBattlePassDisplayDetails();                                                // [0x1af2a8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/BattlePassBase.BattlePassRewardPageBase
@@ -115,15 +169,15 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.SetPreviewedTile
-	// void SetPreviewedTile(int32_t Index);                                                                                    // [0x99e7aac] Final|Native|Public|BlueprintCallable 
+	// void SetPreviewedTile(int32_t Index);                                                                                    // [0x9f083e8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.OnOwnedTilesUpdated
-	// void OnOwnedTilesUpdated(int32_t CurrentlyOwnedRewards, int32_t TotalRewards, float CategoryProgress);                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnOwnedTilesUpdated(int32_t CurrentlyOwnedRewards, int32_t TotalRewards, float CategoryProgress);                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.OnLockedStateChanged
-	// void OnLockedStateChanged(bool bCategoryLocked);                                                                         // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnLockedStateChanged(bool bCategoryLocked);                                                                         // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.OnLockedProgressUpdated
-	// void OnLockedProgressUpdated(int32_t CurrentlyOwnedBeforeCategory, int32_t TotalRewardsBeforeCategory, float LockedProgress); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnLockedProgressUpdated(int32_t CurrentlyOwnedBeforeCategory, int32_t TotalRewardsBeforeCategory, float LockedProgress); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.FocusTile
-	// void FocusTile(int32_t Index);                                                                                           // [0x99e65cc] Final|Native|Public|BlueprintCallable 
+	// void FocusTile(int32_t Index);                                                                                           // [0x9f06f74] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassCustomSkinPageBase
@@ -162,13 +216,13 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassBulkBuyPageBase.OnRewardCountChanged
-	// void OnRewardCountChanged(int32_t Count);                                                                                // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnRewardCountChanged(int32_t Count);                                                                                // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassBulkBuyPageBase.OnPageRangeChanged
-	// void OnPageRangeChanged(int32_t FromPage, int32_t ToPage);                                                               // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPageRangeChanged(int32_t FromPage, int32_t ToPage);                                                               // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassBulkBuyPageBase.OnCostChanged
-	// void OnCostChanged(int32_t Cost);                                                                                        // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnCostChanged(int32_t Cost);                                                                                        // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassBulkBuyPageBase.HandleUserScrolled
-	// void HandleUserScrolled(float ScrollAmount);                                                                             // [0x99e78a4] Final|Native|Protected 
+	// void HandleUserScrolled(float ScrollAmount);                                                                             // [0x9f080ec] Final|Native|Protected 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassCheckBoxButton
@@ -196,17 +250,17 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassContext.GetSeasonalCurrencies
-	// TArray<FSeasonCurrencyMcpData> GetSeasonalCurrencies();                                                                  // [0x99e6814] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// TArray<FSeasonCurrencyMcpData> GetSeasonalCurrencies();                                                                  // [0x9f071bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.GetLevelPurchaseDisclaimerText
-	// FText GetLevelPurchaseDisclaimerText();                                                                                  // [0x99e6760] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetLevelPurchaseDisclaimerText();                                                                                  // [0x9f07108] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.GetDefaultDisclaimerText
-	// FText GetDefaultDisclaimerText();                                                                                        // [0x2a3abd0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetDefaultDisclaimerText();                                                                                        // [0x2569078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.GetCurrentSeasonNumberAsText
-	// FText GetCurrentSeasonNumberAsText(bool bFullText);                                                                      // [0x23f1b44] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetCurrentSeasonNumberAsText(bool bFullText);                                                                      // [0x30b1ba0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.GetCurrentChapterAsText
-	// FText GetCurrentChapterAsText(bool bFullText);                                                                           // [0x99e6684] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FText GetCurrentChapterAsText(bool bFullText);                                                                           // [0x9f0702c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.CanPurchaseBattlePassLevel
-	// bool CanPurchaseBattlePassLevel();                                                                                       // [0x99e65a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool CanPurchaseBattlePassLevel();                                                                                       // [0x9f06f3c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassResourcesWidgetBase
@@ -223,9 +277,9 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassResourcesWidgetBase.ShowResourcesInfoModal
-	// void ShowResourcesInfoModal();                                                                                           // [0x99e7ddc] Final|Native|Protected|BlueprintCallable 
+	// void ShowResourcesInfoModal();                                                                                           // [0x9f08718] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassResourcesWidgetBase.OnShowMoreInfo
-	// void OnShowMoreInfo(bool bShouldShowMoreInfo);                                                                           // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnShowMoreInfo(bool bShouldShowMoreInfo);                                                                           // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassCurrencyPanel
@@ -257,7 +311,7 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassDynamicIcon.OnBattlePassInfoUpdated
-	// void OnBattlePassInfoUpdated(bool bOwnsBattlePass);                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent|Const 
+	// void OnBattlePassInfoUpdated(bool bOwnsBattlePass);                                                                      // [0x101681c] Event|Protected|BlueprintEvent|Const 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassLevelCount
@@ -317,21 +371,21 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.OnUpdatePageUnlockText
-	// void OnUpdatePageUnlockText(FText& PageUnlockText);                                                                      // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnUpdatePageUnlockText(FText& PageUnlockText);                                                                      // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.OnTotalPriceChanged
-	// void OnTotalPriceChanged(int32_t NewPrice);                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnTotalPriceChanged(int32_t NewPrice);                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.OnPurchaseAmountChanged
-	// void OnPurchaseAmountChanged(int32_t NewAmount, int32_t LevelsLeft);                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnPurchaseAmountChanged(int32_t NewAmount, int32_t LevelsLeft);                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.OnOfferUnavailable
-	// void OnOfferUnavailable();                                                                                               // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnOfferUnavailable();                                                                                               // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.OnAmountChangeButtonClicked
-	// void OnAmountChangeButtonClicked();                                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnAmountChangeButtonClicked();                                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.IsReloadMtxEnabled
-	// bool IsReloadMtxEnabled();                                                                                               // [0x99e7a20] Final|Native|Protected|BlueprintCallable 
+	// bool IsReloadMtxEnabled();                                                                                               // [0x9f08268] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.HandlePurchaseMultiComplete
-	// void HandlePurchaseMultiComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, TArray<FString>& OfferIdList); // [0x99e7160] Final|Native|Private|HasOutParms 
+	// void HandlePurchaseMultiComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, TArray<FString>& OfferIdList); // [0x9f07a4c] Final|Native|Private|HasOutParms 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.HandlePurchaseComplete
-	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString OfferId);                 // [0x99e693c] Final|Native|Private|HasOutParms 
+	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString OfferId);                 // [0x9f072e4] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassResourceCounter
@@ -367,9 +421,9 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassRewardGrid.OnPageUnselected
-	// void OnPageUnselected();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPageUnselected();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassRewardGrid.OnPageSelected
-	// void OnPageSelected();                                                                                                   // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPageSelected();                                                                                                   // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassRewardGridHeader
@@ -401,9 +455,9 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassRewardTrack.OnPageUnselected
-	// void OnPageUnselected();                                                                                                 // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPageUnselected();                                                                                                 // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassRewardTrack.OnPageSelected
-	// void OnPageSelected();                                                                                                   // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPageSelected();                                                                                                   // [0x101681c] Event|Public|BlueprintEvent 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassTileBase
@@ -425,31 +479,31 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.SetState
-	// void SetState(BattlePassTileAvailabilityStates NewState);                                                                // [0x99e7c28] Final|Native|Protected|BlueprintCallable 
+	// void SetState(BattlePassTileAvailabilityStates NewState);                                                                // [0x9f08564] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.SetSize
-	// void SetSize(EPageItemTileSize TileSize, FVector2D& CellSpacing);                                                        // [0x99e7b58] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetSize(EPageItemTileSize TileSize, FVector2D& CellSpacing);                                                        // [0x9f08494] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnStateChanged
-	// void OnStateChanged(BattlePassTileAvailabilityStates NewState);                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnStateChanged(BattlePassTileAvailabilityStates NewState);                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnSizeChanged
-	// void OnSizeChanged(FVector2D& NewSize);                                                                                  // [0x1d9241c] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
+	// void OnSizeChanged(FVector2D& NewSize);                                                                                  // [0x101681c] Event|Protected|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnSetTileColors
-	// void OnSetTileColors();                                                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetTileColors();                                                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnSetRequiresBattlePass
-	// void OnSetRequiresBattlePass(bool bRequiresBP);                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetRequiresBattlePass(bool bRequiresBP);                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnRevealed
-	// void OnRevealed();                                                                                                       // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnRevealed();                                                                                                       // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.OnPeeked
-	// void OnPeeked();                                                                                                         // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPeeked();                                                                                                         // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.IsOwned
-	// bool IsOwned();                                                                                                          // [0x99e7a04] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsOwned();                                                                                                          // [0x9f0824c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.IsLocked
-	// bool IsLocked();                                                                                                         // [0x99e79e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsLocked();                                                                                                         // [0x9f08230] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.IsAvailable
-	// bool IsAvailable();                                                                                                      // [0x99e79cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsAvailable();                                                                                                      // [0x9f08214] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.GetState
-	// BattlePassTileAvailabilityStates GetState();                                                                             // [0x99e6924] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// BattlePassTileAvailabilityStates GetState();                                                                             // [0x9f072cc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.AreAnyGrantedItemsEquipped
-	// bool AreAnyGrantedItemsEquipped();                                                                                       // [0x99e657c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool AreAnyGrantedItemsEquipped();                                                                                       // [0x9f06f10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassTile
@@ -467,29 +521,29 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnUnpreviewed
-	// void OnUnpreviewed();                                                                                                    // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnUnpreviewed();                                                                                                    // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnUnhighlighted
-	// void OnUnhighlighted();                                                                                                  // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnUnhighlighted();                                                                                                  // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnTilePreviewCycled
-	// void OnTilePreviewCycled();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnTilePreviewCycled();                                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnSetTrack
-	// void OnSetTrack(bool bIsFreeTrack, bool bOwnsBattlePass);                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetTrack(bool bIsFreeTrack, bool bOwnsBattlePass);                                                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnSetCurrencyAndPrice
-	// void OnSetCurrencyAndPrice(EBattlePassCurrencyType Currency, int32_t Price);                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSetCurrencyAndPrice(EBattlePassCurrencyType Currency, int32_t Price);                                             // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnPreviewed
-	// void OnPreviewed();                                                                                                      // [0x1d9241c] Event|Public|BlueprintEvent 
+	// void OnPreviewed();                                                                                                      // [0x101681c] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnLockedStateUpdated
-	// void OnLockedStateUpdated(bool OwnsBattlePass, bool ParentUnlocked, bool HasRemainingPrerequisites, bool bIsDelayed);    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnLockedStateUpdated(bool OwnsBattlePass, bool ParentUnlocked, bool HasRemainingPrerequisites, bool bIsDelayed);    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnLockedProgressUpdated
-	// void OnLockedProgressUpdated(float Progress, int32_t CurrentlyOwnedRewards, int32_t NeededRewards);                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnLockedProgressUpdated(float Progress, int32_t CurrentlyOwnedRewards, int32_t NeededRewards);                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnHighlighted
-	// void OnHighlighted();                                                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnHighlighted();                                                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.OnAffordabilityChanged
-	// void OnAffordabilityChanged(bool bHasEnougCurrency);                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnAffordabilityChanged(bool bHasEnougCurrency);                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTile.IsAffordable
-	// bool IsAffordable();                                                                                                     // [0x99e7944] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsAffordable();                                                                                                     // [0x9f0818c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTile.HasPrerequisites
-	// bool HasPrerequisites();                                                                                                 // [0x99e7920] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool HasPrerequisites();                                                                                                 // [0x9f08168] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 };
 
 /// Class /Script/BattlePassBase.FortBattlePassTutorialTooltip
@@ -505,13 +559,13 @@ public:
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassTutorialTooltip.ShowTooltip
-	// void ShowTooltip();                                                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ShowTooltip();                                                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassTutorialTooltip.SetTooltipEnabled
-	// void SetTooltipEnabled(bool bEnable);                                                                                    // [0x99e7d5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+	// void SetTooltipEnabled(bool bEnable);                                                                                    // [0x9f08698] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassTutorialTooltip.SetText
-	// void SetText(FText Text);                                                                                                // [0x99e7cac] Final|Native|Public|BlueprintCallable 
+	// void SetText(FText Text);                                                                                                // [0x9f085e8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassTutorialTooltip.HideTooltip
-	// void HideTooltip();                                                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HideTooltip();                                                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 };
 
 /// Class /Script/BattlePassBase.RebootRallyQuestPanel
@@ -544,6 +598,19 @@ class FBattlePassCoverPageParams : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
+};
+
+/// Struct /Script/BattlePassBase.BattlePassCharaterRewardTabInfo
+/// Size: 0x0028 (0x000000 - 0x000028)
+class FBattlePassCharaterRewardTabInfo : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+	CMember(TWeakObjectPtr<UObject*>)                  TabIcon                                                     OFFSET(get<T>, {0x0, 32, 0, 0})
+	DMember(int32_t)                                   TabCategoryCounter                                          OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/BattlePassBase.BattlePassLandingPageButtonTexts

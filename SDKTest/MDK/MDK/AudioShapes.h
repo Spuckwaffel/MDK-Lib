@@ -28,19 +28,19 @@ public:
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeComponent.UpdateAudioShape
-	// void UpdateAudioShape(TArray<APlayerController*>& InLocalControllers);                                                   // [0x6cb0b00] Final|Native|Public|HasOutParms 
+	// void UpdateAudioShape(TArray<APlayerController*>& InLocalControllers);                                                   // [0x6ed4920] Final|Native|Public|HasOutParms 
 	// Function /Script/AudioShapes.AudioShapeComponent.Enable
-	// void Enable();                                                                                                           // [0x2c410f8] Native|Protected|BlueprintCallable 
+	// void Enable();                                                                                                           // [0x5d4e118] Native|Protected|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeComponent.Disable
-	// void Disable();                                                                                                          // [0x6499194] Native|Protected|BlueprintCallable 
+	// void Disable();                                                                                                          // [0x64771e4] Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/AudioShapes.AudioShapePrimitiveComponent
-/// Size: 0x0088 (0x000140 - 0x0001C8)
+/// Size: 0x00C0 (0x000140 - 0x000200)
 class UAudioShapePrimitiveComponent : public UAudioShapeComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 456;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
 	CMember(USoundBase*)                               SoundOnEdge                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
@@ -53,104 +53,101 @@ public:
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapePrimitiveComponent.GetIsPlayerInside
-	// bool GetIsPlayerInside();                                                                                                // [0x6cb0620] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool GetIsPlayerInside();                                                                                                // [0x6ed43c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioShapes.AudioShapePrimitiveComponent.GetInsideAudioComponent
-	// UAudioComponent* GetInsideAudioComponent();                                                                              // [0x6cb05cc] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// UAudioComponent* GetInsideAudioComponent();                                                                              // [0x6ed4374] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AudioShapes.AudioShapePrimitiveComponent.GetEdgeAudioComponent
-	// UAudioComponent* GetEdgeAudioComponent();                                                                                // [0x6cb0578] Final|Native|Public|BlueprintCallable|BlueprintPure 
+	// UAudioComponent* GetEdgeAudioComponent();                                                                                // [0x6ed4320] Final|Native|Public|BlueprintCallable|BlueprintPure 
 };
 
 /// Class /Script/AudioShapes.AudioShapeBoxComponent
-/// Size: 0x0068 (0x0001C8 - 0x000230)
+/// Size: 0x0060 (0x000200 - 0x000260)
 class UAudioShapeBoxComponent : public UAudioShapePrimitiveComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 608;
+
+public:
+	SMember(FTransform)                                BoxTransform                                                OFFSET(getStruct<T>, {0x200, 96, 0, 0})
+
+
+	/// Functions
+	// Function /Script/AudioShapes.AudioShapeBoxComponent.SetBoxTransform
+	// void SetBoxTransform(FTransform& InTransform);                                                                           // [0x6ed4528] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
+/// Class /Script/AudioShapes.AudioShapeCylinderComponent
+/// Size: 0x0000 (0x000200 - 0x000200)
+class UAudioShapeCylinderComponent : public UAudioShapePrimitiveComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 512;
+
+public:
+
+
+	/// Functions
+	// Function /Script/AudioShapes.AudioShapeCylinderComponent.SetRadius
+	// void SetRadius(float InRadius);                                                                                          // [0x6ed47c0] Final|Native|Public|BlueprintCallable 
+	// Function /Script/AudioShapes.AudioShapeCylinderComponent.SetHalfHeight
+	// void SetHalfHeight(float InHalfHeight);                                                                                  // [0x6ed4734] Final|Native|Public|BlueprintCallable 
+};
+
+/// Class /Script/AudioShapes.AudioShapeLineComponent
+/// Size: 0x0030 (0x000200 - 0x000230)
+class UAudioShapeLineComponent : public UAudioShapePrimitiveComponent
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FTransform)                                BoxTransform                                                OFFSET(getStruct<T>, {0x1D0, 96, 0, 0})
-
-
-	/// Functions
-	// Function /Script/AudioShapes.AudioShapeBoxComponent.SetBoxTransform
-	// void SetBoxTransform(FTransform& InTransform);                                                                           // [0x6cb0780] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
-};
-
-/// Class /Script/AudioShapes.AudioShapeCylinderComponent
-/// Size: 0x0008 (0x0001C8 - 0x0001D0)
-class UAudioShapeCylinderComponent : public UAudioShapePrimitiveComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 464;
-
-public:
-	DMember(float)                                     HalfHeight                                                  OFFSET(get<float>, {0x1C8, 4, 0, 0})
-	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1CC, 4, 0, 0})
-
-
-	/// Functions
-	// Function /Script/AudioShapes.AudioShapeCylinderComponent.SetRadius
-	// void SetRadius(float InRadius);                                                                                          // [0x6cb09dc] Final|Native|Public|BlueprintCallable 
-	// Function /Script/AudioShapes.AudioShapeCylinderComponent.SetHalfHeight
-	// void SetHalfHeight(float InHalfHeight);                                                                                  // [0x6cb0950] Final|Native|Public|BlueprintCallable 
-};
-
-/// Class /Script/AudioShapes.AudioShapeLineComponent
-/// Size: 0x0030 (0x0001C8 - 0x0001F8)
-class UAudioShapeLineComponent : public UAudioShapePrimitiveComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 504;
-
-public:
-	SMember(FVector)                                   StartPoint                                                  OFFSET(getStruct<T>, {0x1C8, 24, 0, 0})
-	SMember(FVector)                                   EndPoint                                                    OFFSET(getStruct<T>, {0x1E0, 24, 0, 0})
+	SMember(FVector)                                   StartPoint                                                  OFFSET(getStruct<T>, {0x1F8, 24, 0, 0})
+	SMember(FVector)                                   EndPoint                                                    OFFSET(getStruct<T>, {0x210, 24, 0, 0})
 
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeLineComponent.SetStartPoint
-	// void SetStartPoint(FVector& InStartPoint);                                                                               // [0x6cb0a68] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetStartPoint(FVector& InStartPoint);                                                                               // [0x6ed484c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeLineComponent.SetEndPoint
-	// void SetEndPoint(FVector& InEndPoint);                                                                                   // [0x6cb08b8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// void SetEndPoint(FVector& InEndPoint);                                                                                   // [0x6ed4660] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AudioShapes.AudioShapeLineListComponent
-/// Size: 0x0018 (0x0001C8 - 0x0001E0)
+/// Size: 0x0010 (0x000200 - 0x000210)
 class UAudioShapeLineListComponent : public UAudioShapePrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 480;
+	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	CMember(TArray<FVector>)                           PointList                                                   OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	DMember(bool)                                      bClosedLoop                                                 OFFSET(get<bool>, {0x1D8, 1, 0, 0})
+	CMember(TArray<FVector>)                           PointList                                                   OFFSET(get<T>, {0x1F8, 16, 0, 0})
+	DMember(bool)                                      bClosedLoop                                                 OFFSET(get<bool>, {0x208, 1, 0, 0})
 
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeLineListComponent.UpdatePoint
-	// bool UpdatePoint(int32_t InIndex, FVector& InPoint);                                                                     // [0x6cb0b9c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// bool UpdatePoint(int32_t InIndex, FVector& InPoint);                                                                     // [0x6ed49bc] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeLineListComponent.RemovePoint
-	// bool RemovePoint(int32_t InIndex);                                                                                       // [0x6cb06dc] Final|Native|Public|BlueprintCallable 
+	// bool RemovePoint(int32_t InIndex);                                                                                       // [0x6ed4484] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeLineListComponent.GetPoints
-	// void GetPoints(TArray<FVector>& OutPoints);                                                                              // [0x6cb063c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// void GetPoints(TArray<FVector>& OutPoints);                                                                              // [0x6ed43e4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioShapes.AudioShapeLineListComponent.AddPoint
-	// int32_t AddPoint(FVector& InPoint);                                                                                      // [0x6cb04a4] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// int32_t AddPoint(FVector& InPoint);                                                                                      // [0x6ed4210] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 };
 
 /// Class /Script/AudioShapes.AudioShapeSphereComponent
-/// Size: 0x0008 (0x0001C8 - 0x0001D0)
+/// Size: 0x0000 (0x000200 - 0x000200)
 class UAudioShapeSphereComponent : public UAudioShapePrimitiveComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 464;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1C8, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeSphereComponent.SetRadius
-	// void SetRadius(float InRadius);                                                                                          // [0x6cb0950] Final|Native|Public|BlueprintCallable 
+	// void SetRadius(float InRadius);                                                                                          // [0x6ed4734] Final|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioShapes.AudioShapeSubsystem

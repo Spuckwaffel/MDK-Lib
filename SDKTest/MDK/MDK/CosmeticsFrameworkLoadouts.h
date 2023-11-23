@@ -8,6 +8,36 @@
 /// dependency: CoreUObject
 /// dependency: Engine
 
+/// Class /Script/CosmeticsFrameworkLoadouts.BasicCosmeticLoadoutContext
+/// Size: 0x0008 (0x000028 - 0x000030)
+class UBasicCosmeticLoadoutContext : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
+/// Class /Script/CosmeticsFrameworkLoadouts.CosmeticCustomizableItemDefinition
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UCosmeticCustomizableItemDefinition : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutContext
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UCosmeticLoadoutContext : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutItemDefinition
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCosmeticLoadoutItemDefinition : public UInterface
@@ -45,13 +75,53 @@ public:
 
 	/// Functions
 	// Function /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotTemplate.GetSlotTag
-	// FGameplayTag GetSlotTag();                                                                                               // [0x597e460] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FGameplayTag GetSlotTag();                                                                                               // [0x581c680] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotTemplate.GetRequirements
-	// FCosmeticLoadoutSlotRequirements GetRequirements();                                                                      // [0x754ab3c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FCosmeticLoadoutSlotRequirements GetRequirements();                                                                      // [0x77361dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotTemplate.GetMetaTags
-	// FGameplayTagContainer GetMetaTags();                                                                                     // [0x754ab20] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// FGameplayTagContainer GetMetaTags();                                                                                     // [0x77361c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotTemplate.GetDefaultCosmeticItemId
-	// FPrimaryAssetId GetDefaultCosmeticItemId();                                                                              // [0x597b908] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// FPrimaryAssetId GetDefaultCosmeticItemId();                                                                              // [0x5819da4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
+/// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticLoadout
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FCosmeticLoadout : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(TArray<FCosmeticLoadoutSlot>)              Slots                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+};
+
+/// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlot
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FCosmeticLoadoutSlot : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	CMember(UCosmeticLoadoutSlotTemplate*)             SlotTemplate                                                OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UObject*)                                  EquippedItemDefinitionObject                                OFFSET(get<T>, {0x8, 8, 0, 0})
+	CMember(TArray<FCosmeticCustomizationInfo>)        CustomizationInfo                                           OFFSET(get<T>, {0x10, 16, 0, 0})
+};
+
+/// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticCustomizationInfo
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FCosmeticCustomizationInfo : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	SMember(FGameplayTag)                              ChannelTag                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariantTag                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FString)                                   AdditionalData                                              OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticBackendLoadout
@@ -82,20 +152,6 @@ public:
 	CMember(TArray<FCosmeticCustomizationInfo>)        CustomizationInfo                                           OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
-/// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticCustomizationInfo
-/// Size: 0x0018 (0x000000 - 0x000018)
-class FCosmeticCustomizationInfo : public MDKBase
-{ 
-	friend MDKHandler;
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 24;
-
-public:
-	SMember(FGameplayTag)                              ChannelTag                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              VariantTag                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
-	SMember(FString)                                   AdditionalData                                              OFFSET(getStruct<T>, {0x8, 16, 0, 0})
-};
-
 /// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotRequirements
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FCosmeticLoadoutSlotRequirements : public MDKBase
@@ -107,6 +163,6 @@ class FCosmeticLoadoutSlotRequirements : public MDKBase
 public:
 	SMember(FGameplayTagContainer)                     RequiredTags                                                OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	SMember(FGameplayTagContainer)                     DeniedTags                                                  OFFSET(getStruct<T>, {0x20, 32, 0, 0})
-	CMember(TArray<TWeakObjectPtr>)                    AllowedItemClasses                                          OFFSET(get<T>, {0x40, 16, 0, 0})
+	CMember(TArray<FPrimaryAssetType>)                 AllowedItemTypes                                            OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 

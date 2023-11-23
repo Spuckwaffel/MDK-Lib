@@ -24,20 +24,20 @@ public:
 
 	/// Functions
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.OnSidewaysStateChanged
-	// void OnSidewaysStateChanged(USidewaysStateComponent* SidewaysStateComponent, ASidewaysPlayspace* NewPlayspace, ESidewaysState OldState, ESidewaysState NewState); // [0x9b3c6d4] Final|Native|Protected 
+	// void OnSidewaysStateChanged(USidewaysStateComponent* SidewaysStateComponent, ASidewaysPlayspace* NewPlayspace, ESidewaysState OldState, ESidewaysState NewState); // [0xa069760] Final|Native|Protected 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.OnParamUpdated
-	// void OnParamUpdated(FGameplayTag& UpdatedParam);                                                                         // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnParamUpdated(FGameplayTag& UpdatedParam);                                                                         // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.OnExitSideways
-	// void OnExitSideways();                                                                                                   // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnExitSideways();                                                                                                   // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.OnEnterSideways
-	// void OnEnterSideways(ASidewaysPlayspace* Playspace);                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEnterSideways(ASidewaysPlayspace* Playspace);                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.IsValidPlayspace
-	// bool IsValidPlayspace(ASidewaysPlayspace* Playspace);                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent|Const 
+	// bool IsValidPlayspace(ASidewaysPlayspace* Playspace);                                                                    // [0x101681c] Event|Protected|BlueprintEvent|Const 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.InitializeVariables
-	// void InitializeVariables();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void InitializeVariables();                                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.HandleFortPawnChanged
-	// void HandleFortPawnChanged(AFortPawn* PossessedPawn);                                                                    // [0x9b3c654] Final|Native|Protected 
+	// void HandleFortPawnChanged(AFortPawn* PossessedPawn);                                                                    // [0xa0696e0] Final|Native|Protected 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.ConfigureUIFromPlayspace
-	// void ConfigureUIFromPlayspace(ASidewaysPlayspace* Playspace);                                                            // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void ConfigureUIFromPlayspace(ASidewaysPlayspace* Playspace);                                                            // [0x101681c] Event|Protected|BlueprintEvent 
 };
 

@@ -84,6 +84,16 @@ public:
 	CMember(UContentBundleDescriptor*)                 ContentBundleDescriptor                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
+/// Class /Script/GameFeatures.GameFeatureAction_AudioActionBase
+/// Size: 0x0010 (0x000028 - 0x000038)
+class UGameFeatureAction_AudioActionBase : public UGameFeatureAction
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Script/GameFeatures.GameFeatureAction_DataRegistry
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UGameFeatureAction_DataRegistry : public UGameFeatureAction
@@ -122,15 +132,15 @@ public:
 
 	/// Functions
 	// Function /Script/GameFeatures.GameFeatureData.GetPluginName
-	// void GetPluginName(UGameFeatureData* GFD, FString& PluginName);                                                          // [0x6374108] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+	// void GetPluginName(UGameFeatureData* GFD, FString& PluginName);                                                          // [0x6345f10] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 };
 
 /// Class /Script/GameFeatures.GameFeaturePluginStateMachine
-/// Size: 0x01C0 (0x000028 - 0x0001E8)
+/// Size: 0x01D8 (0x000028 - 0x000200)
 class UGameFeaturePluginStateMachine : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
+	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
 	SMember(FGameFeaturePluginStateMachineProperties)  StateProperties                                             OFFSET(getStruct<T>, {0x30, 200, 0, 0})
@@ -239,13 +249,13 @@ class FGameFeaturePluginIdentifier : public MDKBase
 public:
 };
 
-/// Struct /Script/GameFeatures.InstallBundlePluginProtocolMetaData
-/// Size: 0x0020 (0x000000 - 0x000020)
-class FInstallBundlePluginProtocolMetaData : public MDKBase
+/// Struct /Script/GameFeatures.InstallBundlePluginProtocolOptions
+/// Size: 0x000C (0x000000 - 0x00000C)
+class FInstallBundlePluginProtocolOptions : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 32;
+	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 };

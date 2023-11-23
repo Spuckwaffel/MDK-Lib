@@ -27,23 +27,23 @@ public:
 
 	/// Functions
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetViewPoint
-	// void ServerSetViewPoint(FVector InViewLocation, FVector InViewDirection);                                                // [0x639abb0] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|HasDefaults|NetValidate 
+	// void ServerSetViewPoint(FVector InViewLocation, FVector InViewDirection);                                                // [0x6372c94] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|HasDefaults|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetEnabled
-	// void ServerSetEnabled(bool bEnable);                                                                                     // [0x639ab00] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSetEnabled(bool bEnable);                                                                                     // [0x6372be4] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetDebugActor
-	// void ServerSetDebugActor(AActor* Actor, bool bSelectInEditor);                                                           // [0x639aa08] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSetDebugActor(AActor* Actor, bool bSelectInEditor);                                                           // [0x6372aec] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetCategoryEnabled
-	// void ServerSetCategoryEnabled(int32_t CategoryID, bool bEnable);                                                         // [0x639a910] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSetCategoryEnabled(int32_t CategoryID, bool bEnable);                                                         // [0x63729f4] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendExtensionInputEvent
-	// void ServerSendExtensionInputEvent(int32_t ExtensionId, int32_t HandlerId);                                              // [0x639a828] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSendExtensionInputEvent(int32_t ExtensionId, int32_t HandlerId);                                              // [0x637290c] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendCategoryInputEvent
-	// void ServerSendCategoryInputEvent(int32_t CategoryID, int32_t HandlerId);                                                // [0x639a740] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerSendCategoryInputEvent(int32_t CategoryID, int32_t HandlerId);                                                // [0x6372824] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerResetViewPoint
-	// void ServerResetViewPoint();                                                                                             // [0x639a6f4] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerResetViewPoint();                                                                                             // [0x63727d8] RequiredAPI|Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.OnRep_ReplicatedData
-	// void OnRep_ReplicatedData();                                                                                             // [0x639a6b4] Final|RequiredAPI|Native|Protected 
+	// void OnRep_ReplicatedData();                                                                                             // [0x63727a4] Final|RequiredAPI|Native|Protected 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ClientDataPackPacket
-	// void ClientDataPackPacket(FGameplayDebuggerDataPackRPCParams Params);                                                    // [0x639a530] RequiredAPI|Net|NetReliableNative|Event|Protected|NetClient 
+	// void ClientDataPackPacket(FGameplayDebuggerDataPackRPCParams Params);                                                    // [0x6372638] RequiredAPI|Net|NetReliableNative|Event|Protected|NetClient 
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerConfig
@@ -117,11 +117,11 @@ public:
 };
 
 /// Class /Script/GameplayDebugger.GameplayDebuggerRenderingComponent
-/// Size: 0x0060 (0x0005C0 - 0x000620)
+/// Size: 0x0060 (0x0005D0 - 0x000630)
 class UGameplayDebuggerRenderingComponent : public UDebugDrawComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1568;
+	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
 };

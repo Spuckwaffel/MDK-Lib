@@ -24,15 +24,15 @@ public:
 
 	/// Functions
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.OpenWidget
-	// void OpenWidget(UFortAccoladeItemDefinition* AccoladeDef, int32_t XpValue, FText& DisplayName, TWeakObjectPtr<UTexture2D*>& AccoladeLargePreviewImageOverride, FText& SimulatedName, FText& SimulatedText, EFortSimulatedXPSize SimulatedXpSize); // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OpenWidget(UFortAccoladeItemDefinition* AccoladeDef, int32_t XpValue, FText& DisplayName, TWeakObjectPtr<UTexture2D*>& AccoladeLargePreviewImageOverride, FText& SimulatedName, FText& SimulatedText, EFortSimulatedXPSize SimulatedXpSize); // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.OnStompedByOtherWidget
-	// void OnStompedByOtherWidget();                                                                                           // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnStompedByOtherWidget();                                                                                           // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.OnEventAdded
-	// void OnEventAdded();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEventAdded();                                                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.HasMoreXPEvents
-	// bool HasMoreXPEvents();                                                                                                  // [0x9e74370] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool HasMoreXPEvents();                                                                                                  // [0xa5a9d30] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.CloseWidget
-	// void CloseWidget();                                                                                                      // [0xa049820] Final|Native|Protected|BlueprintCallable 
+	// void CloseWidget();                                                                                                      // [0xa5a9bbc] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/XpEverywhereUI.XpEverywhereBar
@@ -49,13 +49,13 @@ public:
 
 	/// Functions
 	// Function /Script/XpEverywhereUI.XpEverywhereBar.OnXpBarUpdated
-	// void OnXpBarUpdated(int32_t ShownXP, int32_t ShownLevel, int32_t NewDesiredXP, int32_t NewDesiredLevel, int32_t NewRemainingRestXP); // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnXpBarUpdated(int32_t ShownXP, int32_t ShownLevel, int32_t NewDesiredXP, int32_t NewDesiredLevel, int32_t NewRemainingRestXP); // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/XpEverywhereUI.XpEverywhereBar.OnXpBarInitialized
-	// void OnXpBarInitialized(int32_t CurrentXP, int32_t CurrentLevel, int32_t CurrentRemainingRestXP);                        // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnXpBarInitialized(int32_t CurrentXP, int32_t CurrentLevel, int32_t CurrentRemainingRestXP);                        // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/XpEverywhereUI.XpEverywhereBar.GetTotalXpRequiredForLevel
-	// int32_t GetTotalXpRequiredForLevel(int32_t InLevel);                                                                     // [0xa0498e0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// int32_t GetTotalXpRequiredForLevel(int32_t InLevel);                                                                     // [0xa5a9c7c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/XpEverywhereUI.XpEverywhereBar.DoneUpdatingXpBar
-	// void DoneUpdatingXpBar();                                                                                                // [0xa0498b8] Final|Native|Protected|BlueprintCallable 
+	// void DoneUpdatingXpBar();                                                                                                // [0xa5a9c54] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/XpEverywhereUI.XpEverywhereLevelUpWidget
@@ -97,7 +97,7 @@ public:
 
 	/// Functions
 	// Function /Script/XpEverywhereUI.XpEverywhereRewardWidget.HandleNotificationUpdateFinished
-	// void HandleNotificationUpdateFinished();                                                                                 // [0xa04996c] Final|Native|Protected 
+	// void HandleNotificationUpdateFinished();                                                                                 // [0xa5a9d08] Final|Native|Protected 
 };
 
 /// Class /Script/XpEverywhereUI.XpEverywhereUIComponent

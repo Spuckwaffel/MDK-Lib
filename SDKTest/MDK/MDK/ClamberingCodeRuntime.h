@@ -5,10 +5,96 @@
 *                                                       *
 ********************************************************/
 
+/// dependency: ContextualTraversalRuntime
 /// dependency: CoreUObject
 /// dependency: Engine
 /// dependency: FortniteGame
 /// dependency: ModularGameplay
+
+/// Class /Script/ClamberingCodeRuntime.FortMovementMode_ExtClambering
+/// Size: 0x0060 (0x000110 - 0x000170)
+class UFortMovementMode_ExtClambering : public UFortMovementMode_ExtLogicTraversalBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 368;
+
+public:
+	CMember(UClass*)                                   LedgeLaunchCameraMode                                       OFFSET(get<T>, {0x110, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ClamberingTag                                               OFFSET(getStruct<T>, {0x118, 32, 0, 0})
+	SMember(FGameplayTag)                              ClamberingStartedTag                                        OFFSET(getStruct<T>, {0x138, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     ClamberingFinishedTag                                       OFFSET(getStruct<T>, {0x140, 32, 0, 0})
+	CMember(UCameraShakeBase*)                         CameraShake                                                 OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FName)                                     LedgeLaunchSyncPointName                                    OFFSET(getStruct<T>, {0x168, 4, 0, 0})
+	DMember(float)                                     LedgeLaunchSyncPointInterpSpeed                             OFFSET(get<float>, {0x16C, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Script/ClamberingCodeRuntime.FortMovementMode_ExtClambering.IsContextualActionPrototypeActive
+	// bool IsContextualActionPrototypeActive();                                                                                // [0x9f19be8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClamberingCodeRuntime.FortMovementMode_ExtClambering.BP_GetClamberLocation
+	// FVector BP_GetClamberLocation();                                                                                         // [0x2372760] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+	// Function /Script/ClamberingCodeRuntime.FortMovementMode_ExtClambering.BP_GetAnimationMontageInformation
+	// void BP_GetAnimationMontageInformation(FSynchedActionInfo& BaseSynchedActionInfo, bool bIsLedgeLaunch, bool bHasFutureLedge, FVector& FutureLedgeWarpPoint, UAnimMontage*& AnimMontage, FName& StartSectionName, FName& MontageMiddleSectionName); // [0x101681c] Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
+};
+
+/// Class /Script/ClamberingCodeRuntime.InstancedLedgeActor
+/// Size: 0x0000 (0x0002E8 - 0x0002E8)
+class AInstancedLedgeActor : public AFortStaticMeshActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 744;
+
+public:
+};
+
+/// Class /Script/ClamberingCodeRuntime.LedgeLaunchWorldSubsystem
+/// Size: 0x00F0 (0x000030 - 0x000120)
+class ULedgeLaunchWorldSubsystem : public UWorldSubsystem
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 288;
+
+public:
+	CMember(TWeakObjectPtr<UPBWLedgeConfigurationData*>) ConfigurationData                                         OFFSET(get<T>, {0x30, 32, 0, 0})
+	CMember(UPBWLedgeConfigurationData*)               CachedConfigurationData                                     OFFSET(get<T>, {0x50, 8, 0, 0})
+	CMember(TMap<UClass*, FLedgeLaunchConfigEntry>)    CachedLedgeLaunchMap                                        OFFSET(get<T>, {0x58, 80, 0, 0})
+};
+
+/// Class /Script/ClamberingCodeRuntime.LedgeMeshComponent
+/// Size: 0x0000 (0x000640 - 0x000640)
+class ULedgeMeshComponent : public UStaticMeshComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1600;
+
+public:
+};
+
+/// Class /Script/ClamberingCodeRuntime.PBWLedgeConfigurationData
+/// Size: 0x0140 (0x000030 - 0x000170)
+class UPBWLedgeConfigurationData : public UDataAsset
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 368;
+
+public:
+	CMember(TMap<EPlayerBuiltWallType, TWeakObjectPtr>) MetalWalls                                                 OFFSET(get<T>, {0x30, 80, 0, 0})
+	CMember(TMap<EPlayerBuiltWallType, TWeakObjectPtr>) StoneWalls                                                 OFFSET(get<T>, {0x80, 80, 0, 0})
+	CMember(TMap<EPlayerBuiltWallType, TWeakObjectPtr>) WoodWalls                                                  OFFSET(get<T>, {0xD0, 80, 0, 0})
+	CMember(TMap<EPlayerBuiltWallType, FLedgeLaunchConfigEntry>) Transforms                                        OFFSET(get<T>, {0x120, 80, 0, 0})
+};
+
+/// Class /Script/ClamberingCodeRuntime.PBWLedgeMeshComponent
+/// Size: 0x0020 (0x000640 - 0x000660)
+class UPBWLedgeMeshComponent : public ULedgeMeshComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1632;
+
+public:
+	DMember(bool)                                      bIsFrontFace                                                OFFSET(get<bool>, {0x638, 1, 0, 0})
+	SMember(FVector)                                   LocalOffset                                                 OFFSET(getStruct<T>, {0x640, 24, 0, 0})
+};
 
 /// Class /Script/ClamberingCodeRuntime.ClamberingAnalytics
 /// Size: 0x0000 (0x000028 - 0x000028)
@@ -21,118 +107,119 @@ public:
 };
 
 /// Class /Script/ClamberingCodeRuntime.ClamberingComponent
-/// Size: 0x0B18 (0x0000A8 - 0x000BC0)
+/// Size: 0x0CA0 (0x0000A8 - 0x000D48)
 class UClamberingComponent : public UFortPawnOverrideComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3008;
+	static inline constexpr uint64_t __MDKClassSize = 3400;
 
 public:
 	CMember(EClamberingState)                          LocalClamberingState                                        OFFSET(get<T>, {0xB0, 1, 0, 0})
 	CMember(EClamberingState)                          ReplicatedClamberingState                                   OFFSET(get<T>, {0xB1, 1, 0, 0})
-	SMember(FClamberingTargetingData)                  LockedTargetingData                                         OFFSET(getStruct<T>, {0xB8, 208, 0, 0})
-	SMember(FReplicatedClamberingTargetingData_SimClient) ReplicatedTargetingData                                  OFFSET(getStruct<T>, {0x188, 56, 0, 0})
-	SMember(FScalableFloat)                            ClamberingEnabled                                           OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
-	SMember(FScalableFloat)                            ClamberIndicatorEnabled                                     OFFSET(getStruct<T>, {0x1F0, 40, 0, 0})
-	SMember(FScalableFloat)                            ClamberStartMaxFallingDamageFraction                        OFFSET(getStruct<T>, {0x218, 40, 0, 0})
-	DMember(bool)                                      bPerformTargetingWhileWalking                               OFFSET(get<bool>, {0x240, 1, 0, 0})
-	DMember(bool)                                      bPerformTargetingWhileSwimming                              OFFSET(get<bool>, {0x241, 1, 0, 0})
-	SMember(FScalableFloat)                            ServerFailDelay                                             OFFSET(getStruct<T>, {0x248, 40, 0, 0})
-	SMember(FScalableFloat)                            ServerValidatePlayerMaxDistance                             OFFSET(getStruct<T>, {0x270, 40, 0, 0})
-	SMember(FClamberingInputConfig)                    InputConfig                                                 OFFSET(getStruct<T>, {0x298, 528, 0, 0})
-	SMember(FClamberingTargetingConfig_Ledge)          TargetingConfig_Ledge                                       OFFSET(getStruct<T>, {0x4A8, 888, 0, 0})
-	SMember(FClamberingInputConfig_CachedValues)       InputConfigCachedValues                                     OFFSET(getStruct<T>, {0x820, 56, 0, 0})
-	SMember(FClamberingTargetingConfig_Ledge_CachedContextualValues) TargetingConfig_Ledge_CachedContextualValues  OFFSET(getStruct<T>, {0x858, 96, 0, 0})
-	SMember(FClamberingMovementConfig_Ledge)           MoveConfig_Ledge                                            OFFSET(getStruct<T>, {0x8B8, 80, 0, 0})
-	SMember(FScalableFloat)                            ClamberSyncTargetLedgeOffset                                OFFSET(getStruct<T>, {0x908, 40, 0, 0})
-	SMember(FScalableFloat)                            ClamberingMaxAnalyticsEvents                                OFFSET(getStruct<T>, {0x930, 40, 0, 0})
-	SMember(FScalableFloat)                            SynchedActionFailDelay                                      OFFSET(getStruct<T>, {0x958, 40, 0, 0})
-	CMember(UDataTable*)                               ClamberingAnimations                                        OFFSET(get<T>, {0x980, 8, 0, 0})
-	CMember(UDataTable*)                               PrototypeClamberingAnimations                               OFFSET(get<T>, {0x988, 8, 0, 0})
-	DMember(double)                                    LastTeleportTime                                            OFFSET(get<double>, {0x990, 8, 0, 0})
-	DMember(bool)                                      bTutorialModeEnabled                                        OFFSET(get<bool>, {0x998, 1, 0, 0})
-	SMember(FClamberingTargetingData)                  LocalTargetingData                                          OFFSET(getStruct<T>, {0x9A0, 208, 0, 0})
-	SMember(FClamberingTargetingData)                  ParallelTargetingData                                       OFFSET(getStruct<T>, {0xA70, 208, 0, 0})
-	DMember(float)                                     QueuedInputTimer                                            OFFSET(get<float>, {0xB40, 4, 0, 0})
-	DMember(float)                                     InputEnabledTimer                                           OFFSET(get<float>, {0xB44, 4, 0, 0})
-	DMember(bool)                                      bJumpInputPressed                                           OFFSET(get<bool>, {0xB48, 1, 0, 0})
-	DMember(float)                                     JumpHeldInAirTime                                           OFFSET(get<float>, {0xB4C, 4, 0, 0})
-	SMember(FGameplayTag)                              Tag_DisableClambering                                       OFFSET(getStruct<T>, {0xBB8, 4, 0, 0})
+	SMember(FClamberingTargetingData)                  LockedTargetingData                                         OFFSET(getStruct<T>, {0xB8, 232, 0, 0})
+	SMember(FReplicatedClamberingTargetingData_SimClient) ReplicatedTargetingData                                  OFFSET(getStruct<T>, {0x1A0, 56, 0, 0})
+	SMember(FScalableFloat)                            ClamberingEnabled                                           OFFSET(getStruct<T>, {0x1E0, 40, 0, 0})
+	SMember(FScalableFloat)                            ClamberIndicatorEnabled                                     OFFSET(getStruct<T>, {0x208, 40, 0, 0})
+	SMember(FScalableFloat)                            ClamberStartMaxFallingDamageFraction                        OFFSET(getStruct<T>, {0x230, 40, 0, 0})
+	DMember(bool)                                      bPerformTargetingWhileWalking                               OFFSET(get<bool>, {0x258, 1, 0, 0})
+	DMember(bool)                                      bPerformTargetingWhileSwimming                              OFFSET(get<bool>, {0x259, 1, 0, 0})
+	SMember(FScalableFloat)                            ServerFailDelay                                             OFFSET(getStruct<T>, {0x260, 40, 0, 0})
+	SMember(FScalableFloat)                            ServerValidatePlayerMaxDistance                             OFFSET(getStruct<T>, {0x288, 40, 0, 0})
+	SMember(FClamberingInputConfig)                    InputConfig                                                 OFFSET(getStruct<T>, {0x2B0, 728, 0, 0})
+	SMember(FClamberingTargetingConfig_Ledge)          TargetingConfig_Ledge                                       OFFSET(getStruct<T>, {0x588, 968, 0, 0})
+	SMember(FClamberingInputConfig_CachedValues)       InputConfigCachedValues                                     OFFSET(getStruct<T>, {0x950, 80, 0, 0})
+	SMember(FClamberingTargetingConfig_Ledge_CachedContextualValues) TargetingConfig_Ledge_CachedContextualValues  OFFSET(getStruct<T>, {0x9A0, 104, 0, 0})
+	SMember(FClamberingMovementConfig_Ledge)           MoveConfig_Ledge                                            OFFSET(getStruct<T>, {0xA08, 80, 0, 0})
+	SMember(FScalableFloat)                            ClamberSyncTargetLedgeOffset                                OFFSET(getStruct<T>, {0xA58, 40, 0, 0})
+	SMember(FScalableFloat)                            ClamberingMaxAnalyticsEvents                                OFFSET(getStruct<T>, {0xA80, 40, 0, 0})
+	SMember(FScalableFloat)                            SynchedActionFailDelay                                      OFFSET(getStruct<T>, {0xAA8, 40, 0, 0})
+	CMember(UDataTable*)                               ClamberingAnimations                                        OFFSET(get<T>, {0xAD0, 8, 0, 0})
+	CMember(UDataTable*)                               PrototypeClamberingAnimations                               OFFSET(get<T>, {0xAD8, 8, 0, 0})
+	CMember(UClass*)                                   MovementModeExtension                                       OFFSET(get<T>, {0xAE0, 8, 0, 0})
+	DMember(double)                                    LastTeleportTime                                            OFFSET(get<double>, {0xAE8, 8, 0, 0})
+	DMember(bool)                                      bTutorialModeEnabled                                        OFFSET(get<bool>, {0xAF0, 1, 0, 0})
+	SMember(FClamberingTargetingData)                  LocalTargetingData                                          OFFSET(getStruct<T>, {0xAF8, 232, 0, 0})
+	SMember(FClamberingTargetingData)                  ParallelTargetingData                                       OFFSET(getStruct<T>, {0xBE0, 232, 0, 0})
+	DMember(float)                                     QueuedInputTimer                                            OFFSET(get<float>, {0xCC8, 4, 0, 0})
+	DMember(float)                                     InputEnabledTimer                                           OFFSET(get<float>, {0xCCC, 4, 0, 0})
+	DMember(bool)                                      bJumpInputPressed                                           OFFSET(get<bool>, {0xCD0, 1, 0, 0})
+	DMember(float)                                     JumpHeldInAirTime                                           OFFSET(get<float>, {0xCD4, 4, 0, 0})
+	SMember(FGameplayTag)                              Tag_DisableClambering                                       OFFSET(getStruct<T>, {0xD40, 4, 0, 0})
 
 
 	/// Functions
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.UnregisterMutatorUpdatedDelegate
-	// void UnregisterMutatorUpdatedDelegate();                                                                                 // [0x99f4f64] Final|Native|Protected 
+	// void UnregisterMutatorUpdatedDelegate();                                                                                 // [0x9f1a314] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.ShouldShowClamberIndicator
-	// bool ShouldShowClamberIndicator();                                                                                       // [0x99f4f40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool ShouldShowClamberIndicator();                                                                                       // [0x9f1a2f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.SetTutorialModeEnabled
-	// void SetTutorialModeEnabled(bool bEnabled);                                                                              // [0x99f4ec0] Final|Native|Public|BlueprintCallable 
+	// void SetTutorialModeEnabled(bool bEnabled);                                                                              // [0x9f1a270] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.ServerStartClambering
-	// void ServerStartClambering(FReplicatedClamberingTargetingData InReplicatedTargetingData, double ClientLastTeleportTime); // [0x99f4b6c] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
+	// void ServerStartClambering(FReplicatedClamberingTargetingData InReplicatedTargetingData, double ClientLastTeleportTime); // [0x9f19fd4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.RegisterMutatorUpdatedDelegate
-	// void RegisterMutatorUpdatedDelegate(APawn* AffectedPawn);                                                                // [0x99f4968] Final|Native|Protected 
+	// void RegisterMutatorUpdatedDelegate(APawn* AffectedPawn);                                                                // [0x9f19e04] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.OnRep_ReplicatedTargetingData
-	// void OnRep_ReplicatedTargetingData();                                                                                    // [0x2360ef4] Final|Native|Protected 
+	// void OnRep_ReplicatedTargetingData();                                                                                    // [0x9f19d0c] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.OnRep_ReplicatedLastTeleportTime
-	// void OnRep_ReplicatedLastTeleportTime();                                                                                 // [0x25b2b28] Final|Native|Protected 
+	// void OnRep_ReplicatedLastTeleportTime();                                                                                 // [0x18af9f8] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.OnRep_ReplicatedClamberingState
-	// void OnRep_ReplicatedClamberingState();                                                                                  // [0x25b37ec] Final|Native|Protected 
+	// void OnRep_ReplicatedClamberingState();                                                                                  // [0x2b0a8d0] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.OnPlayerStatePawnSet
-	// void OnPlayerStatePawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                         // [0x25b3f10] Final|Native|Protected 
+	// void OnPlayerStatePawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                         // [0x2d0dac0] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.OnMutatorUpdated
-	// void OnMutatorUpdated();                                                                                                 // [0x99f4870] Final|Native|Protected 
+	// void OnMutatorUpdated();                                                                                                 // [0x9f19cf8] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.NetMulticast_ClamberingLedgeFailed
-	// void NetMulticast_ClamberingLedgeFailed(EClamberingFailedReason FailedReason, EClamberingState FailedState);             // [0x25b2070] Net|NetReliableNative|Event|NetMulticast|Protected 
+	// void NetMulticast_ClamberingLedgeFailed(EClamberingFailedReason FailedReason, EClamberingState FailedState);             // [0x9f19c30] Net|NetReliableNative|Event|NetMulticast|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.IsTutorialModeEnabled
-	// bool IsTutorialModeEnabled();                                                                                            // [0x99f484c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsTutorialModeEnabled();                                                                                            // [0x9f19c0c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.IsClamberingEnabled
-	// bool IsClamberingEnabled();                                                                                              // [0x99f4828] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+	// bool IsClamberingEnabled();                                                                                              // [0x9f19bc4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.IsAutoClamberingEnabled
-	// bool IsAutoClamberingEnabled();                                                                                          // [0x99f4804] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+	// bool IsAutoClamberingEnabled();                                                                                          // [0x9f19ba0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleTargetingDataValid
-	// void HandleTargetingDataValid(FClamberingTargetingData& TargetingData);                                                  // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void HandleTargetingDataValid(FClamberingTargetingData& TargetingData);                                                  // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleTargetingDataInvalid
-	// void HandleTargetingDataInvalid();                                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HandleTargetingDataInvalid();                                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleTargetActorHealthChanged
-	// void HandleTargetActorHealthChanged();                                                                                   // [0x99f47f0] Final|Native|Protected 
+	// void HandleTargetActorHealthChanged();                                                                                   // [0x9f19b8c] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleTargetActorDestroyed
-	// void HandleTargetActorDestroyed(AActor* Actor);                                                                          // [0x99f4770] Final|Native|Protected 
+	// void HandleTargetActorDestroyed(AActor* Actor);                                                                          // [0x9f19b0c] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerTeleported
-	// void HandleOwnerTeleported(AFortPawn* TeleportedOwner);                                                                  // [0x33f0ec0] Final|Native|Protected|BlueprintCallable 
+	// void HandleOwnerTeleported(AFortPawn* TeleportedOwner);                                                                  // [0x2d3fdd8] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerMovementModeChanged
-	// void HandleOwnerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x17cbb3c] Final|Native|Protected 
+	// void HandleOwnerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x1678f80] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerJumpInput
-	// void HandleOwnerJumpInput(bool bPressed);                                                                                // [0x99f46f0] Final|Native|Protected 
+	// void HandleOwnerJumpInput(bool bPressed);                                                                                // [0x9f19a8c] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerDied
-	// void HandleOwnerDied(AFortPawn* DeadPawn);                                                                               // [0x99f4670] Final|Native|Protected 
+	// void HandleOwnerDied(AFortPawn* DeadPawn);                                                                               // [0x9f19a0c] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerDBNO
-	// void HandleOwnerDBNO();                                                                                                  // [0x25b3498] Final|Native|Protected 
+	// void HandleOwnerDBNO();                                                                                                  // [0x18afa98] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerASCInvalidated
-	// void HandleOwnerASCInvalidated();                                                                                        // [0x25b34c0] Final|Native|Protected 
+	// void HandleOwnerASCInvalidated();                                                                                        // [0x18afac0] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleOwnerASCInitialized
-	// void HandleOwnerASCInitialized(UFortAbilitySystemComponent* AbilitySystemComponent, AFortPlayerPawn* AffectedPawn);      // [0x2b1dc74] Final|Native|Protected 
+	// void HandleOwnerASCInitialized(UFortAbilitySystemComponent* AbilitySystemComponent, AFortPlayerPawn* AffectedPawn);      // [0x18473ec] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleClamberingTargetOutOfActivationRange
-	// void HandleClamberingTargetOutOfActivationRange();                                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HandleClamberingTargetOutOfActivationRange();                                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.HandleClamberingTargetInActivationRange
-	// void HandleClamberingTargetInActivationRange();                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void HandleClamberingTargetInActivationRange();                                                                          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.GetAnimMontage
-	// UAnimMontage* GetAnimMontage(float& OutPlayRate);                                                                        // [0x99f45d4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// UAnimMontage* GetAnimMontage(float& OutPlayRate);                                                                        // [0x9f19970] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.DrawDebugHUD
-	// void DrawDebugHUD(AHUD* HUD, UCanvas* Canvas);                                                                           // [0x5fec7d0] Final|Native|Protected 
+	// void DrawDebugHUD(AHUD* HUD, UCanvas* Canvas);                                                                           // [0x5ead474] Final|Native|Protected 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_TutorialModeEnabled
-	// void BP_TutorialModeEnabled();                                                                                           // [0x1d9241c] Event|Protected|BlueprintEvent|Const 
+	// void BP_TutorialModeEnabled();                                                                                           // [0x101681c] Event|Protected|BlueprintEvent|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_TutorialModeDisabled
-	// void BP_TutorialModeDisabled();                                                                                          // [0x1d9241c] Event|Protected|BlueprintEvent|Const 
+	// void BP_TutorialModeDisabled();                                                                                          // [0x101681c] Event|Protected|BlueprintEvent|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_IsValidTargetActor
-	// void BP_IsValidTargetActor(AActor* TargetActor, bool& bIsValidTargetActor);                                              // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// void BP_IsValidTargetActor(AActor* TargetActor, bool& bIsValidTargetActor);                                              // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_HandleSynchedActionStarted
-	// void BP_HandleSynchedActionStarted(FSynchedActionInfo& SynchedActionInfo);                                               // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void BP_HandleSynchedActionStarted(FSynchedActionInfo& SynchedActionInfo);                                               // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_HandleClamberingStateChanged
-	// void BP_HandleClamberingStateChanged(EClamberingState OldClamberingState, EClamberingState NewClamberingState);          // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void BP_HandleClamberingStateChanged(EClamberingState OldClamberingState, EClamberingState NewClamberingState);          // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_CanStartTargeting
-	// void BP_CanStartTargeting(bool& bCanStartTargeting);                                                                     // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// void BP_CanStartTargeting(bool& bCanStartTargeting);                                                                     // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_CanStartClambering
-	// void BP_CanStartClambering(bool& bCanStartClambering);                                                                   // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent|Const 
+	// void BP_CanStartClambering(bool& bCanStartClambering);                                                                   // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent|Const 
 };
 
 /// Class /Script/ClamberingCodeRuntime.ClamberingLibrary
@@ -145,13 +232,50 @@ class UClamberingLibrary : public UBlueprintFunctionLibrary
 public:
 };
 
+/// Struct /Script/ClamberingCodeRuntime.FortMovementMode_ClamberingRuntimeData
+/// Size: 0x00B0 (0x0000D0 - 0x000180)
+class FFortMovementMode_ClamberingRuntimeData : public FFortMovementMode_TraversalBaseRuntimeData
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 384;
+
+public:
+};
+
+/// Struct /Script/ClamberingCodeRuntime.FortMovementMode_ClamberingCreationData
+/// Size: 0x00B0 (0x000130 - 0x0001E0)
+class FFortMovementMode_ClamberingCreationData : public FFortMovementMode_TraversalBaseCreationData
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 480;
+
+public:
+	SMember(FSynchedActionWarpPointInfo_Replicated)    LedgeLaunchWarpPointInfo                                    OFFSET(getStruct<T>, {0x130, 160, 0, 0})
+	DMember(bool)                                      bCanStandOnLedge                                            OFFSET(get<bool>, {0x1D0, 1, 0, 0})
+	DMember(bool)                                      bHasFixedLedgeLaunchWarpPoint                               OFFSET(get<bool>, {0x1D1, 1, 0, 0})
+};
+
+/// Struct /Script/ClamberingCodeRuntime.LedgeLaunchConfigEntry
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FLedgeLaunchConfigEntry : public MDKBase
+{ 
+	friend MDKHandler;
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(TArray<FTransform>)                        LedgeTransforms                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+};
+
 /// Struct /Script/ClamberingCodeRuntime.ClamberingInputConfig
-/// Size: 0x0210 (0x000000 - 0x000210)
+/// Size: 0x02D8 (0x000000 - 0x0002D8)
 class FClamberingInputConfig : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 528;
+	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
 	SMember(FScalableFloat)                            ClamberActivationHorizontalRange                            OFFSET(getStruct<T>, {0x0, 40, 0, 0})
@@ -168,15 +292,20 @@ public:
 	SMember(FScalableFloat)                            TargetInvalidateDistance                                    OFFSET(getStruct<T>, {0x198, 40, 0, 0})
 	SMember(FScalableFloat)                            TargetAimInvalidateAngle                                    OFFSET(getStruct<T>, {0x1C0, 40, 0, 0})
 	SMember(FScalableFloat)                            TargetActorMovementInvalidateDistance                       OFFSET(getStruct<T>, {0x1E8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDirectionalLedgeLaunchAngle                              OFFSET(getStruct<T>, {0x210, 40, 0, 0})
+	SMember(FScalableFloat)                            PBWLedgeLaunchMaxHorizontalTranslation                      OFFSET(getStruct<T>, {0x238, 40, 0, 0})
+	SMember(FScalableFloat)                            DefaultLedgeLaunchVerticalTranslation                       OFFSET(getStruct<T>, {0x260, 40, 0, 0})
+	SMember(FScalableFloat)                            PBWLedgeLaunchVerticalTranslation                           OFFSET(getStruct<T>, {0x288, 40, 0, 0})
+	SMember(FScalableFloat)                            PBWNextLedgeLaunchVerticalTranslation                       OFFSET(getStruct<T>, {0x2B0, 40, 0, 0})
 };
 
 /// Struct /Script/ClamberingCodeRuntime.ClamberingTargetingConfig_Ledge
-/// Size: 0x0378 (0x000000 - 0x000378)
+/// Size: 0x03C8 (0x000000 - 0x0003C8)
 class FClamberingTargetingConfig_Ledge : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 888;
+	static inline constexpr uint64_t __MDKClassSize = 968;
 
 public:
 	SMember(FScalableFloat)                            ForwardCastDistance                                         OFFSET(getStruct<T>, {0x0, 40, 0, 0})
@@ -202,26 +331,28 @@ public:
 	SMember(FFortReleaseVersion)                       ContextualActionPrototypeVersion                            OFFSET(getStruct<T>, {0x320, 4, 0, 0})
 	SMember(FScalableFloat)                            MinimumLedgeDepth                                           OFFSET(getStruct<T>, {0x328, 40, 0, 0})
 	SMember(FScalableFloat)                            DownwardSweepOffset                                         OFFSET(getStruct<T>, {0x350, 40, 0, 0})
+	SMember(FScalableFloat)                            FutureLedgeLaunchMaxVerticalDetectionRange                  OFFSET(getStruct<T>, {0x378, 40, 0, 0})
+	SMember(FScalableFloat)                            FutureLedgeLaunchMaxHorizontalDetectionRange                OFFSET(getStruct<T>, {0x3A0, 40, 0, 0})
 };
 
 /// Struct /Script/ClamberingCodeRuntime.ClamberingInputConfig_CachedValues
-/// Size: 0x0038 (0x000000 - 0x000038)
+/// Size: 0x0050 (0x000000 - 0x000050)
 class FClamberingInputConfig_CachedValues : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 56;
+	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 };
 
 /// Struct /Script/ClamberingCodeRuntime.ClamberingTargetingConfig_Ledge_CachedContextualValues
-/// Size: 0x0060 (0x000000 - 0x000060)
+/// Size: 0x0068 (0x000000 - 0x000068)
 class FClamberingTargetingConfig_Ledge_CachedContextualValues : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 96;
+	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
 };
@@ -326,12 +457,12 @@ public:
 };
 
 /// Struct /Script/ClamberingCodeRuntime.ClamberingTargetingData
-/// Size: 0x00D0 (0x000000 - 0x0000D0)
+/// Size: 0x00E8 (0x000000 - 0x0000E8)
 class FClamberingTargetingData : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 208;
+	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
 	CMember(EClamberingType)                           Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
@@ -345,9 +476,11 @@ public:
 	SMember(FVector)                                   TargetLocation                                              OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 	SMember(FVector)                                   TargetNormal                                                OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0xA0, 8, 0, 0})
-	CMember(UActorComponent*)                          TargetActorComponent                                        OFFSET(get<T>, {0xA8, 8, 0, 0})
+	CMember(UPrimitiveComponent*)                      TargetActorComponent                                        OFFSET(get<T>, {0xA8, 8, 0, 0})
 	SMember(FVector)                                   TargetActorComponentLocation                                OFFSET(getStruct<T>, {0xB0, 24, 0, 0})
 	SMember(FName)                                     TargetActorBoneName                                         OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
+	DMember(bool)                                      bHasNextLedgeLaunchTarget                                   OFFSET(get<bool>, {0xCC, 1, 0, 0})
+	SMember(FVector)                                   NextLedgeLaunchWarpPoint                                    OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
 };
 
 /// Struct /Script/ClamberingCodeRuntime.ReplicatedClamberingTargetingData
@@ -368,7 +501,7 @@ public:
 	DMember(uint16_t)                                  TargetNormalYawQuantized                                    OFFSET(get<uint16_t>, {0x58, 2, 0, 0})
 	DMember(uint16_t)                                  TargetNormalPitchQuantized                                  OFFSET(get<uint16_t>, {0x5A, 2, 0, 0})
 	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x60, 8, 0, 0})
-	CMember(UActorComponent*)                          TargetActorComponent                                        OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UPrimitiveComponent*)                      TargetActorComponent                                        OFFSET(get<T>, {0x68, 8, 0, 0})
 	SMember(FName)                                     TargetActorBoneName                                         OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	DMember(int8_t)                                    AnimationIndex                                              OFFSET(get<int8_t>, {0x74, 1, 0, 0})
 };
@@ -386,7 +519,7 @@ public:
 	DMember(uint16_t)                                  WallNormalYawQuantized                                      OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
 	SMember(FVector_NetQuantize100)                    TargetLocation                                              OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x20, 8, 0, 0})
-	CMember(UActorComponent*)                          TargetActorComponent                                        OFFSET(get<T>, {0x28, 8, 0, 0})
+	CMember(UPrimitiveComponent*)                      TargetActorComponent                                        OFFSET(get<T>, {0x28, 8, 0, 0})
 	SMember(FName)                                     TargetActorBoneName                                         OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(int8_t)                                    AnimationIndex                                              OFFSET(get<int8_t>, {0x34, 1, 0, 0})
 };
@@ -400,7 +533,7 @@ class FClamberingMovementConfig_Ledge : public MDKBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FScalableFloat)                            Duration                                                    OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            duration                                                    OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 	SMember(FScalableFloat)                            BlockCheckTickRate                                          OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 };
 
@@ -431,6 +564,23 @@ public:
 	CMember(UAnimMontage*)                             Montage                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(float)                                     MinClamberHeight                                            OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bLedgeLaunch                                                OFFSET(get<bool>, {0x14, 1, 0, 0})
+};
+
+/// Enum /Script/ClamberingCodeRuntime.EPlayerBuiltWallType
+/// Size: 0x11
+enum EPlayerBuiltWallType : uint8_t
+{
+	EPlayerBuiltWallType__Solid0                                                     = 0,
+	EPlayerBuiltWallType__Windows1                                                   = 1,
+	EPlayerBuiltWallType__WindowC2                                                   = 2,
+	EPlayerBuiltWallType__WindowSide3                                                = 3,
+	EPlayerBuiltWallType__DoorC4                                                     = 4,
+	EPlayerBuiltWallType__DoorS5                                                     = 5,
+	EPlayerBuiltWallType__DoorSide6                                                  = 6,
+	EPlayerBuiltWallType__Archway7                                                   = 7,
+	EPlayerBuiltWallType__ArchwayLarge8                                              = 8,
+	EPlayerBuiltWallType__ArchwayLargeSupport9                                       = 9,
+	EPlayerBuiltWallType__EPlayerBuiltWallType_MAX10                                 = 10
 };
 
 /// Enum /Script/ClamberingCodeRuntime.EClamberingType

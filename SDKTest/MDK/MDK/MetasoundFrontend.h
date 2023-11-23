@@ -541,15 +541,15 @@ public:
 };
 
 /// Struct /Script/MetasoundFrontend.MetaSoundFrontendDocumentBuilder
-/// Size: 0x0030 (0x000000 - 0x000030)
+/// Size: 0x0038 (0x000000 - 0x000038)
 class FMetaSoundFrontendDocumentBuilder : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 48;
+	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	CMember(TScriptInterface<Class>)                   DocumentInterface                                           OFFSET(get<T>, {0x0, 16, 0, 0})
+	CMember(TScriptInterface<Class>)                   DocumentInterface                                           OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/MetasoundFrontend.ESetParamResult

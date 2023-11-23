@@ -27,22 +27,22 @@ public:
 
 	/// Functions
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnSprintingTagCountChanged
-	// void OnSprintingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSprintingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnSlidingTagCountChanged
-	// void OnSlidingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                       // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnSlidingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                       // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnExitedMud
-	// void OnExitedMud();                                                                                                      // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnExitedMud();                                                                                                      // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnEnteredMud
-	// void OnEnteredMud();                                                                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnEnteredMud();                                                                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnCurieFireTagCountChanged
-	// void OnCurieFireTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                     // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCurieFireTagCountChanged(FGameplayTag tag, int32_t NewCount);                                                     // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnCreatureSprintingTagCountChanged
-	// void OnCreatureSprintingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                             // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnCreatureSprintingTagCountChanged(FGameplayTag tag, int32_t NewCount);                                             // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.OnAttachedParentCoveredInMud
-	// void OnAttachedParentCoveredInMud(FGameplayEventData& Payload);                                                          // [0x1d9241c] Event|Protected|HasOutParms|BlueprintEvent 
+	// void OnAttachedParentCoveredInMud(FGameplayEventData& Payload);                                                          // [0x101681c] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.HandleSurfaceTypeChanged
-	// void HandleSurfaceTypeChanged(AActor* SurfaceActor, TEnumAsByte<EPhysicalSurface> CurrentSurfaceType, TEnumAsByte<EPhysicalSurface> PrevSurfaceType); // [0x26d2274] Final|Native|Private 
+	// void HandleSurfaceTypeChanged(AActor* SurfaceActor, TEnumAsByte<EPhysicalSurface> CurrentSurfaceType, TEnumAsByte<EPhysicalSurface> PrevSurfaceType); // [0xa06d4f8] Final|Native|Private 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.HandleASCInitialized
-	// void HandleASCInitialized(UFortAbilitySystemComponent* AbilitySystemComponent, AFortPlayerPawn* AffectedPawn);           // [0x2b7be2c] Final|Native|Private 
+	// void HandleASCInitialized(UFortAbilitySystemComponent* AbilitySystemComponent, AFortPlayerPawn* AffectedPawn);           // [0xa06d42c] Final|Native|Private 
 };
 

@@ -23,9 +23,9 @@ public:
 
 	/// Functions
 	// Function /Script/POIBannerUI.POIBannerToastSocialAvatar.SetSocialAvatarTexture
-	// void SetSocialAvatarTexture(TWeakObjectPtr<UTexture2D*> AvatarTexture);                                                  // [0x9d5e570] Final|Native|Protected|BlueprintCallable 
+	// void SetSocialAvatarTexture(TWeakObjectPtr<UTexture2D*> AvatarTexture);                                                  // [0xa16e0c8] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/POIBannerUI.POIBannerToastSocialAvatar.SetSocialAvatar
-	// void SetSocialAvatar(AFortPlayerState* PlayerState);                                                                     // [0x9d5e3a8] Final|Native|Protected|BlueprintCallable 
+	// void SetSocialAvatar(AFortPlayerState* PlayerState);                                                                     // [0xa16df00] Final|Native|Protected|BlueprintCallable 
 };
 
 /// Class /Script/POIBannerUI.POIBannerToastWidgetBase
@@ -41,14 +41,14 @@ public:
 
 	/// Functions
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.OnStompFailed
-	// void OnStompFailed();                                                                                                    // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnStompFailed();                                                                                                    // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.OnStompedByOtherWidget
-	// void OnStompedByOtherWidget();                                                                                           // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void OnStompedByOtherWidget();                                                                                           // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.K2_OnBecomeInactive
-	// void K2_OnBecomeInactive();                                                                                              // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void K2_OnBecomeInactive();                                                                                              // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.K2_OnBecomeActive
-	// void K2_OnBecomeActive();                                                                                                // [0x1d9241c] Event|Protected|BlueprintEvent 
+	// void K2_OnBecomeActive();                                                                                                // [0x101681c] Event|Protected|BlueprintEvent 
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.GetLocationTextFromTag
-	// FText GetLocationTextFromTag(FGameplayTag& LocationTag);                                                                 // [0x9d5e2b4] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+	// FText GetLocationTextFromTag(FGameplayTag& LocationTag);                                                                 // [0xa16ddc8] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 };
 

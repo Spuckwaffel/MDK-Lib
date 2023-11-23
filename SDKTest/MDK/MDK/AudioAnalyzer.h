@@ -29,11 +29,11 @@ public:
 };
 
 /// Class /Script/AudioAnalyzer.AudioAnalyzer
-/// Size: 0x0068 (0x000028 - 0x000090)
+/// Size: 0x0078 (0x000028 - 0x0000A0)
 class UAudioAnalyzer : public UObject
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 144;
+	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
 	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
@@ -42,9 +42,9 @@ public:
 
 	/// Functions
 	// Function /Script/AudioAnalyzer.AudioAnalyzer.StopAnalyzing
-	// void StopAnalyzing(UObject* WorldContextObject);                                                                         // [0x9971d34] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// void StopAnalyzing(UObject* WorldContextObject);                                                                         // [0x9e2d7dc] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
 	// Function /Script/AudioAnalyzer.AudioAnalyzer.StartAnalyzing
-	// void StartAnalyzing(UObject* WorldContextObject, UAudioBus* AudioBusToAnalyze);                                          // [0x9971910] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
+	// void StartAnalyzing(UObject* WorldContextObject, UAudioBus* AudioBusToAnalyze);                                          // [0x9e2d384] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
 };
 
 /// Class /Script/AudioAnalyzer.AudioAnalyzerNRTSettings

@@ -43,6 +43,13 @@ public:
 	SMember(FMulticastSparseDelegate)                  OnConstraintAdded_BP                                        OFFSET(getStruct<T>, {0x28, 1, 0, 0})
 	SMember(FMulticastSparseDelegate)                  OnConstraintRemoved_BP                                      OFFSET(getStruct<T>, {0x29, 1, 0, 0})
 	CMember(TArray<UTickableConstraint*>)              Constraints                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Script/Constraints.ConstraintsManager.OnConstraintRemoved__DelegateSignature
+	// void OnConstraintRemoved__DelegateSignature(UConstraintsManager* Mananger, UTickableConstraint* Constraint, bool bDoNotCompensate); // [0x101681c] MulticastDelegate|Public|Delegate 
+	// Function /Script/Constraints.ConstraintsManager.OnConstraintAdded__DelegateSignature
+	// void OnConstraintAdded__DelegateSignature(UConstraintsManager* Mananger, UTickableConstraint* Constraint);               // [0x101681c] MulticastDelegate|Public|Delegate 
 };
 
 /// Class /Script/Constraints.ConstraintsScriptingLibrary
@@ -155,28 +162,28 @@ public:
 };
 
 /// Struct /Script/Constraints.MovieSceneConstraintChannel
-/// Size: 0x0000 (0x000100 - 0x000100)
+/// Size: 0x0000 (0x000108 - 0x000108)
 class FMovieSceneConstraintChannel : public FMovieSceneBoolChannel
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 256;
+	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
 };
 
 /// Struct /Script/Constraints.ConstraintAndActiveChannel
-/// Size: 0x0128 (0x000000 - 0x000128)
+/// Size: 0x0130 (0x000000 - 0x000130)
 class FConstraintAndActiveChannel : public MDKBase
 { 
 	friend MDKHandler;
 	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 296;
+	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	CMember(TWeakObjectPtr<UTickableConstraint*>)      Constraint                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FMovieSceneConstraintChannel)              ActiveChannel                                               OFFSET(getStruct<T>, {0x20, 256, 0, 0})
-	CMember(UTickableConstraint*)                      ConstraintCopyToSpawn                                       OFFSET(get<T>, {0x120, 8, 0, 0})
+	SMember(FMovieSceneConstraintChannel)              ActiveChannel                                               OFFSET(getStruct<T>, {0x20, 264, 0, 0})
+	CMember(UTickableConstraint*)                      ConstraintCopyToSpawn                                       OFFSET(get<T>, {0x128, 8, 0, 0})
 };
 
 /// Struct /Script/Constraints.ConstraintTickFunction

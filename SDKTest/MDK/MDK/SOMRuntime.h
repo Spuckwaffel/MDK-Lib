@@ -52,16 +52,16 @@ public:
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_Slot
-/// Size: 0x0020 (0x000620 - 0x000640)
+/// Size: 0x0010 (0x000640 - 0x000650)
 class UFortScriptedObjectMovement_Slot : public UStaticMeshComponent
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1600;
+	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	CMember(UFortScriptedObjectMovement_SlotDefinition*) SlotDefinition                                            OFFSET(get<T>, {0x620, 8, 0, 0})
-	DMember(int32_t)                                   ObjectRemoveOrder                                           OFFSET(get<int32_t>, {0x628, 4, 0, 0})
-	CMember(AFortScriptedObjectMovement_MovableObjectBase*) SlottedObject                                          OFFSET(get<T>, {0x630, 8, 0, 0})
+	CMember(UFortScriptedObjectMovement_SlotDefinition*) SlotDefinition                                            OFFSET(get<T>, {0x638, 8, 0, 0})
+	DMember(int32_t)                                   ObjectRemoveOrder                                           OFFSET(get<int32_t>, {0x640, 4, 0, 0})
+	CMember(AFortScriptedObjectMovement_MovableObjectBase*) SlottedObject                                          OFFSET(get<T>, {0x648, 8, 0, 0})
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_Structure
@@ -92,7 +92,7 @@ public:
 
 	/// Functions
 	// Function /Script/SOMRuntime.FortGameStateComponent_ScriptedObjectMovementManager.HandleCurrentPlaylistReady
-	// void HandleCurrentPlaylistReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x9b0edd4] Final|Native|Private|HasOutParms 
+	// void HandleCurrentPlaylistReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0xa03d9d8] Final|Native|Private|HasOutParms 
 };
 
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase
@@ -117,41 +117,41 @@ public:
 
 	/// Functions
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.SetCanEverAffectNavigation
-	// void SetCanEverAffectNavigation(bool bCanEverAffectNavigation, UActorComponent* TargetActorComponent);                   // [0x9b0f050] Final|Native|Public|BlueprintCallable 
+	// void SetCanEverAffectNavigation(bool bCanEverAffectNavigation, UActorComponent* TargetActorComponent);                   // [0xa03dc54] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.OnRep_CurrentStepData
-	// void OnRep_CurrentStepData();                                                                                            // [0x9b0f03c] Final|Native|Private 
+	// void OnRep_CurrentStepData();                                                                                            // [0xa03dc40] Final|Native|Private 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.NotifyStaticPathStepComplete
-	// void NotifyStaticPathStepComplete(bool bReachedBeginPlaySkipStep);                                                       // [0x9b0efbc] Final|Native|Public|BlueprintCallable 
+	// void NotifyStaticPathStepComplete(bool bReachedBeginPlaySkipStep);                                                       // [0xa03dbc0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.HandleSlotDefinitionSlotted
-	// void HandleSlotDefinitionSlotted(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition);                            // [0x9b0ef04] Native|Event|Public|BlueprintEvent 
+	// void HandleSlotDefinitionSlotted(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition);                            // [0xa03db08] Native|Event|Public|BlueprintEvent 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetStaticPathZOffsetHeight
-	// float GetStaticPathZOffsetHeight();                                                                                      // [0x9b0cf48] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// float GetStaticPathZOffsetHeight();                                                                                      // [0xa03bea0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetStaticPathTravelingBounds
-	// void GetStaticPathTravelingBounds(FVector& OutBoxExtent);                                                                // [0x9b0cebc] Native|Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// void GetStaticPathTravelingBounds(FVector& OutBoxExtent);                                                                // [0xa03bdd8] Native|Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.GetScriptedObjectStaticMeshComponent
-	// UStaticMeshComponent* GetScriptedObjectStaticMeshComponent();                                                            // [0x9b0ce94] Native|Event|Public|BlueprintEvent 
+	// UStaticMeshComponent* GetScriptedObjectStaticMeshComponent();                                                            // [0xa03bdb0] Native|Event|Public|BlueprintEvent 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_TryJumpToStartStep
-	// void Editor_TryJumpToStartStep();                                                                                        // [0x9b0ce6c] Final|Native|Public  
+	// void Editor_TryJumpToStartStep();                                                                                        // [0xa03bd88] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_ResetObject
-	// void Editor_ResetObject();                                                                                               // [0x9b0cdfc] Final|Native|Public  
+	// void Editor_ResetObject();                                                                                               // [0xa03bd04] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_PreviousStep
-	// void Editor_PreviousStep();                                                                                              // [0x2cf4738] Final|Native|Public  
+	// void Editor_PreviousStep();                                                                                              // [0x2b7b1c8] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_NextStep
-	// void Editor_NextStep();                                                                                                  // [0x2cf4738] Final|Native|Public  
+	// void Editor_NextStep();                                                                                                  // [0x2b7b1c8] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_DebugLogStaticPathTravelIndex
-	// void Editor_DebugLogStaticPathTravelIndex();                                                                             // [0x9b0cde8] Final|Native|Public  
+	// void Editor_DebugLogStaticPathTravelIndex();                                                                             // [0xa03bcf0] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Editor_ClearResetObjectLocation
-	// void Editor_ClearResetObjectLocation();                                                                                  // [0x9b0cdc4] Final|Native|Public  
+	// void Editor_ClearResetObjectLocation();                                                                                  // [0xa03bccc] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.ConfigureStaticMeshToSlotDefinition
-	// void ConfigureStaticMeshToSlotDefinition(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition, UStaticMeshComponent* StaticMeshComponent); // [0x9b0ccf0] Final|Native|Public|BlueprintCallable 
+	// void ConfigureStaticMeshToSlotDefinition(UFortScriptedObjectMovement_SlotDefinition* SlotDefinition, UStaticMeshComponent* StaticMeshComponent); // [0xa03bbf8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.CheatDrawKeyframes
-	// void CheatDrawKeyframes();                                                                                               // [0x2cf4738] Final|Native|Public  
+	// void CheatDrawKeyframes();                                                                                               // [0x2b7b1c8] Final|Native|Public  
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.Cheat_NetMulticast_SendDebugTimerInfo
-	// void Cheat_NetMulticast_SendDebugTimerInfo(float ServerTimeWhenQueryInvoked, float RemainingTime);                       // [0x9b0cc28] Net|NetReliableNative|Event|NetMulticast|Public 
+	// void Cheat_NetMulticast_SendDebugTimerInfo(float ServerTimeWhenQueryInvoked, float RemainingTime);                       // [0xa03bb30] Net|NetReliableNative|Event|NetMulticast|Public 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.BlockOverlappingStaticPathSteps
-	// bool BlockOverlappingStaticPathSteps();                                                                                  // [0x9b0cc00] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// bool BlockOverlappingStaticPathSteps();                                                                                  // [0xa03bb08] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.BeginMovingToStaticPathNode
-	// void BeginMovingToStaticPathNode(FScriptedObjectMovement_StaticPathStepData& StepData);                                  // [0x9b0cb40] Native|Event|Public|HasOutParms|BlueprintEvent 
+	// void BeginMovingToStaticPathNode(FScriptedObjectMovement_StaticPathStepData& StepData);                                  // [0xa03ba48] Native|Event|Public|HasOutParms|BlueprintEvent 
 };
 
 /// Class /Script/SOMRuntime.ScriptedObjectMovement_CalendarCheatDefinition
@@ -187,17 +187,17 @@ public:
 
 	/// Functions
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.UnlockAllPathsFromBeingRegenerated
-	// void UnlockAllPathsFromBeingRegenerated();                                                                               // [0x9b0f114] Final|Native|Public  
+	// void UnlockAllPathsFromBeingRegenerated();                                                                               // [0xa03dd18] Final|Native|Public  
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.LockAllPathNodesFromBeingRegenerated
-	// void LockAllPathNodesFromBeingRegenerated();                                                                             // [0x9b0ef88] Final|Native|Public  
+	// void LockAllPathNodesFromBeingRegenerated();                                                                             // [0xa03db8c] Final|Native|Public  
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventUpdated
-	// void HandleCalendarEventUpdated(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x9b0e3b4] Native|Protected|HasDefaults 
+	// void HandleCalendarEventUpdated(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0xa03d0d4] Native|Protected|HasDefaults 
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventEnded
-	// void HandleCalendarEventEnded(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x9b0d994] Native|Protected|HasDefaults 
+	// void HandleCalendarEventEnded(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0xa03c7d0] Native|Protected|HasDefaults 
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.HandleCalendarEventActive
-	// void HandleCalendarEventActive(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x9b0cf74] Native|Protected|HasDefaults 
+	// void HandleCalendarEventActive(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0xa03becc] Native|Protected|HasDefaults 
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.GeneratePathData
-	// void GeneratePathData();                                                                                                 // [0x9b0ce80] Final|Native|Public  
+	// void GeneratePathData();                                                                                                 // [0xa03bd9c] Final|Native|Public  
 };
 
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_AStarGraphWrapper
