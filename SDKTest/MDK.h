@@ -114,7 +114,7 @@ public:
 			return res;
 
 		//keep a baseOffset but rest still same logic
-		res.baseOffset = b.offset;
+		res.baseOffset = b.offset + res.baseOffset;
 		return res;
 	}
 
