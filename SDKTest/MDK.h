@@ -226,12 +226,16 @@ class MDKHandler
 
 	//internal cast to function which is just a memcpy. a memcpy is needed instead of a c style cast due to compiler
 	//at the end of the day it will still be casted in assembly
-	template<typename T>
+	template<typename T = MDKBase>
 	static T castTo(MDKBase& base)
 	{
+		//copy the onlyTemporary state and set onlyTemp to false, if we leave it onlyTemporary, it will free our allocated memory
+		bool temp = base.onlyTemporary;
+		base.onlyTemporary = false;
 		T cast;
 		//copy over default values
 		memcpy(&cast, &base, sizeof(MDKBase));
+		cast.onlyTemporary = temp;
 		return cast;
 	}
 
