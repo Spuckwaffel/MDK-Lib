@@ -106,12 +106,27 @@ int main()
         auto weapon = MDKHandler::get<AFortWeapon, AActor>(weaponPtr);
 
 
-        auto pool = world.PSCPool<FWorldPSCPool>();
+        // example of casting to a regular struct
+        // wanna cast it to your own struct or any struct that is not from MDK?
 
-        MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+        struct _FVectorCopy
+        {
+            double x;
+            double y;
+            double z;
+        };
+
+        //get the MDKClass 
+        const auto _velocity = acknowlededPawn.PreviousVelocityXY<FVector>();
+
+        //now cast it using dataCast
+        const auto velocity = MDKHandler::dataCast<_FVectorCopy>(_velocity);
+
+        printf("velocity: x: %.f y: %.f z: %.f\n", velocity.x, velocity.y, velocity.z);
+
 
         // example of writing
-        /*
+
         auto pool = world.PSCPool<FWorldPSCPool>();
         auto member = pool.WorldParticleSystemPools<int>();
         // you call this function, in the template you define the Class, specify the datatype
@@ -146,7 +161,6 @@ int main()
 
         //dont do this with too large structs, it could corrupt other possible data in race conditions!
         //and dont do it with classes, use small simple structs. If you write to classes, use the normal write
-        */
 
         getchar();
     }

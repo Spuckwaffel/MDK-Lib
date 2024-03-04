@@ -174,9 +174,15 @@ class MDKHandler
 	//current counter of the frame. -1 = init
 	static inline int frameSkipCounter = -1;
 
-	//gets the base class and performs checks if its valid and rereads memory if needed.
-	//A valid blockpointer is indeed valid, if we would alloc it here there could be memory leaks.
-	//Adjusts the Timstamp automatically if data is too old
+	/**
+	 * \brief gets the base class and performs checks if its valid and rereads memory if needed.
+	 * A valid blockpointer is or should be always valid, if we would alloc it here there could be memory leaks.
+	 * Adjusts the Timstamp automatically if data is too old
+	 * \tparam T upper class, included
+	 * \tparam X lower class, excluded. Leave empty if we need the entire class
+	 * \param base the base we perform the check on
+	 * \return if the size or adjustment was successful
+	 */
 	template<typename T, typename X = MDKBase>
 	static bool checkSizeandTS(MDKBase& base)
 	{
@@ -404,7 +410,14 @@ public:
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}
 
-	// silently writes the memory only into our memory, so no changes are made in the game memory. Use writebulk afterwards to write all the silend writes to game memory
+	/**
+	 * \brief  silently writes the memory only into our memory, so no changes are made in the game memory. You MUST use writeBulk afterwards to write all the silent writes to game memory
+	 * \tparam classInstance the class type
+	 * \tparam x the type of the write (bool, float, etc)
+	 * \param instance the instance we write to
+	 * \param memberFunction the member we write to, use &<classname>::<membername>, e.g &UGameInstance::LocalPlayers
+	 * \param value the value we write
+	 */
 	template <typename classInstance = MDKBase, typename x>
 	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
@@ -434,7 +447,11 @@ public:
 		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}
 
-	// writes all silent writes into the games memory. Dont use on large classes, rather use this on structs like FVector etc.
+	/**
+	 * \brief writes all silent writes into the games memory. Don't use on large classes, rather use this on structs like FVector etc. This will overwrite the entire class in the game.
+	 * \tparam classInstance class type
+	 * \param base the instance we write to
+	 */
 	template <typename classInstance = MDKBase>
 	static void writeBulk(const classInstance& base)
 	{
@@ -443,5 +460,25 @@ public:
 
 		//write the entire class
 		Memory::write(base.basePointer + base.baseOffset, (uint64_t)base.block.blockPointer + base.baseOffset, classInstance::__MDKClassSize);
+	}
+
+	/**
+	 * \brief cast a MDKClasses data to any struct, this is used for compatibility of custom structs that are not defined.
+	 * Check boundaries, this function can throw an exception if the base class is too small for the cast or out of bounds
+	 * \tparam T the struct we cast to
+	 * \param base the class instance we copy the bytes from
+	 * \return the struct with the data filled from the class
+	 */
+	template<typename T>
+	static T dataCast(const MDKBase base)
+	{
+		T cast;
+		if(base)
+		{
+			//get the data directly from the blockpointer
+			memcpy(&cast, reinterpret_cast<void*>((uint64_t)base.block.blockPointer + base.baseOffset), sizeof(T));
+		}
+
+		return cast;
 	}
 };
