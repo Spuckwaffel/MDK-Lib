@@ -97,6 +97,27 @@ int main()
         //get the acknowledged pawn
         auto acknowlededPawn = MDKHandler::get<APlayerPawn_Athena_Generic_C>(acknowledgedPawnPtr);
 
+        auto rootComp = acknowlededPawn.RootComponent<USceneComponent*>();
+
+        struct _FVectorCopy
+        {
+            double x;
+            double y;
+            double z;
+        };
+
+        //types of reading single items of a class that you used readsingle on:
+
+        //use the classic readSingle
+        const _FVectorCopy loc = MDKHandler::readSingle<USceneComponent, _FVectorCopy>(rootComp, &USceneComponent::RelativeLocation);
+        printf("loc: %.f %.f %.f\n", loc.x, loc.y, loc.z);
+
+        //or use your memory. read, but i would prefer the readsingle
+        const auto off = MDKHandler::getOffset<USceneComponent>(&USceneComponent::RelativeLocation);
+        const auto loc2 = Memory::read<_FVectorCopy>(rootComp + off.offset);
+        printf("loc2: %.f %.f %.f\n", loc2.x, loc2.y, loc2.z);
+        //auto parent = MDKHandler::readSingle<USceneComponent, USceneComponent*>(rootComp, &USceneComponent::AttachParent);
+
         const auto weaponPtr = acknowlededPawn.CurrentWeapon<AFortWeapon*>();
 
         if (!weaponPtr)
@@ -109,12 +130,7 @@ int main()
         // example of casting to a regular struct
         // wanna cast it to your own struct or any struct that is not from MDK?
 
-        struct _FVectorCopy
-        {
-            double x;
-            double y;
-            double z;
-        };
+
 
         //get the MDKClass 
         const auto _velocity = acknowlededPawn.PreviousVelocityXY<FVector>();

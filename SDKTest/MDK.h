@@ -346,7 +346,7 @@ public:
 	/// \param memberFunction the member
 	/// \return the member converted to T
 	template < typename classInstance = MDKBase, typename T>
-	static T readSingle(classInstance*& pointerToClass, bool(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static T readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
 
