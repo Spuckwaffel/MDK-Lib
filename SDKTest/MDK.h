@@ -352,6 +352,13 @@ public:
 
 		auto info = getOffset<classInstance>(memberFunction);
 
+		if constexpr (std::is_base_of_v<MDKBase, T> && !std::is_pointer_v<T>)
+		{
+			return MDKHandler::get<T>(up + info.offset);
+		}
+
+		
+
 		if (info.size <= 0)
 			return T();
 
