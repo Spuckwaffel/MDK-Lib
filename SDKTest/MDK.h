@@ -346,7 +346,7 @@ public:
 	/// \param memberFunction the member
 	/// \return the member converted to T
 	template < typename classInstance = MDKBase, typename T>
-	static T readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static T readSingle(classInstance*& pointerToClass, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
 
@@ -382,7 +382,7 @@ public:
 	/// \param value the value
 	/// \return the member converted to T
 	template <typename classInstance = MDKBase, typename x>
-	static void write(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
+	static void write(const classInstance& instance, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer)
 			return;
@@ -419,7 +419,7 @@ public:
 	 * \param value the value we write
 	 */
 	template <typename classInstance = MDKBase, typename x>
-	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
+	static void writeSilent(const classInstance& instance, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer || !instance.block.blockPointer)
 			return;

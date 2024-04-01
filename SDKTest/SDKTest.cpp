@@ -149,7 +149,7 @@ int main()
         // as param you specify your object where the write should be, the member (dont forget the &)
         // and then the value
 
-        MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+        MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools, 4555);
 
         //or
 
@@ -168,9 +168,9 @@ int main()
         // MDKHandler::writeSilent<FVector, float>(vec, &FVector::X<float>, 456.f);
         // MDKHandler::writeSilent<FVector, float>(vec, &FVector::X<float>, 789.f);
 
-        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
-        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 283);
-        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 444);
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools, 4555);
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools, 283);
+        MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools, 444);
 
         // and then write the entire bulk. DONT FORGET!
         MDKHandler::writeBulk(pool);
