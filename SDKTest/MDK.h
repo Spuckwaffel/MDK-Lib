@@ -358,7 +358,8 @@ public:
 	/// \param memberFunction the member
 	/// \return the member converted to T
 	template < typename classInstance = MDKBase, typename T>
-	static T readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	std::enable_if_t<!std::is_base_of_v<MDKBase, T>  || (std::is_base_of_v<MDKBase, T> && std::is_pointer_v <T>), T>
+	static readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
 
@@ -385,6 +386,30 @@ public:
 		}
 
 		return res;
+	}
+
+	/// \brief reads only that member of the class, no caching
+	/// \tparam classInstance class where the member resides in
+	/// \tparam T type of the member
+	/// \param pointerToClass the pointer to the class we want to read the member from
+	/// \param memberFunction the member
+	/// \return the member converted to T
+	template < typename classInstance = MDKBase, typename T>
+	std::enable_if_t<std::is_class_v<T> && std::is_base_of_v<MDKBase, T> && !std::is_pointer_v <T>, T>
+		static readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	{
+		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
+
+		const __MDKMemberInfo info = getOffset<classInstance>(memberFunction);
+
+		if (info.size <= 0)
+			return T();
+
+		if (sizeof(T) != info.size)
+			return T();
+
+
+		return MDKHandler::get<T>(up + info.offset, false);
 	}
 
 	/// \brief writes memory directly to the game
