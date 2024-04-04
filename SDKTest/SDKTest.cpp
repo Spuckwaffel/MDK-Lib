@@ -109,16 +109,33 @@ int main()
         //types of reading single items of a class that you used readsingle on:
 
         //use the classic readSingle
-        const _FVectorCopy loc = MDKHandler::readSingle<USceneComponent, _FVectorCopy>(rootComp, &USceneComponent::RelativeLocation);
-        printf("loc: %.f %.f %.f\n", loc.x, loc.y, loc.z);
+        const auto locationSingleMDKClass = MDKHandler::readSingle<USceneComponent, FVector>(rootComp, &USceneComponent::RelativeLocation);
+        printf("loc: %.f %.f %.f\n", locationSingleMDKClass.X(), locationSingleMDKClass.Y(), locationSingleMDKClass.Z());
 
-        //or use your memory. read, but i would prefer the readsingle
-        const auto off = MDKHandler::getOffset<USceneComponent>(&USceneComponent::RelativeLocation);
-        const auto loc2 = Memory::read<_FVectorCopy>(rootComp + off.offset);
-        printf("loc2: %.f %.f %.f\n", loc2.x, loc2.y, loc2.z);
-        //auto parent = MDKHandler::readSingle<USceneComponent, USceneComponent*>(rootComp, &USceneComponent::AttachParent);
+        //or dont use a SDK struct
+        const _FVectorCopy locationSingleCustomClass = MDKHandler::readSingle<USceneComponent, _FVectorCopy>(rootComp, &USceneComponent::RelativeLocation);
+        printf("loc: %.f %.f %.f\n", locationSingleCustomClass.x, locationSingleCustomClass.y, locationSingleCustomClass.z);
+
+        //works on all datatypes
+        const auto componentToWorldUpdated = MDKHandler::readSingle<USceneComponent, bool>(rootComp, &USceneComponent::bComponentToWorldUpdated);
+
+        printf("componentToWorldUpdated: %dn", componentToWorldUpdated);
+
+        //wanna get the offset so you can read it on ur way?
+
+        //get the offset
+        const auto locationOffset = MDKHandler::getOffset<USceneComponent>(&USceneComponent::RelativeLocation);
+
+        const auto locationvViaMemory = Memory::read<_FVectorCopy>(rootComp + locationOffset.offset);
+        printf("loc: %.f %.f %.f\n", locationvViaMemory.x, locationvViaMemory.y, locationvViaMemory.z);
+
+        const auto componentToWorldUpdatedOffset = MDKHandler::getOffset<USceneComponent>(&USceneComponent::bComponentToWorldUpdated);
+        printf("componentToWorldUpdatedOffset: %.d\n", componentToWorldUpdatedOffset.offset);
+
 
         const auto weaponPtr = acknowlededPawn.CurrentWeapon<AFortWeapon*>();
+
+        auto character = (ACharacter*)rootComp;
 
         if (!weaponPtr)
             continue;
@@ -140,6 +157,8 @@ int main()
 
         printf("velocity: x: %.f y: %.f z: %.f\n", velocity.x, velocity.y, velocity.z);
 
+        printf("velocity: x: %.f y: %.f z: %.f\n", _velocity.X(), _velocity.X(), _velocity.X());
+
 
         // example of writing
 
@@ -150,6 +169,12 @@ int main()
         // and then the value
 
         MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools, 4555);
+
+        auto pCharacterMovement = MDKHandler::readSingle<ACharacter, UCharacterMovementComponent*>(character, &ACharacter::CharacterMovement);
+
+        auto CharacterMovement = MDKHandler::get<UCharacterMovementComponent, UObject>(pCharacterMovement);
+
+        MDKHandler::write<UCharacterMovementComponent, float>(CharacterMovement, &UCharacterMovementComponent::GravityScale, 0.0f);
 
         //or
 

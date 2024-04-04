@@ -60,9 +60,11 @@ class MDKBase
 	bool onlyTemporary = false;
 
 	//only for temporary objects and especially for structs that make copies of the real class
-	bool realOwner = true;
+	bool realOwner = false;
 
 	MDKBase shadowCopy() const;
+
+	
 public:
 
 	template<typename T = MDKBase>
@@ -107,7 +109,8 @@ public:
 
 	//we dont even do a single memcpy here, i would call this creating a spoof struct
 	template<typename T>
-	T getStruct(__MDKMemberInfo b) const
+	std::enable_if_t<std::is_class_v<T> && std::is_base_of_v<MDKBase, T>, T>
+	getStruct(__MDKMemberInfo b) const
 	{
 		T res = (T)shadowCopy();
 		if (!valid || T::__MDKClassSize != b.size || block.upperBound < b.offset + b.size)
@@ -115,6 +118,14 @@ public:
 
 		//keep a baseOffset but rest still same logic
 		res.baseOffset = b.offset + res.baseOffset;
+		return res;
+	}
+
+	template<typename T>
+	std::enable_if_t<!std::is_class_v<T>|| !std::is_base_of_v<MDKBase, T>, T>
+	getStruct(__MDKMemberInfo b) const
+	{
+		T res; // Default constructed
 		return res;
 	}
 
@@ -284,6 +295,7 @@ public:
 		if (!b.block.blockPointer)
 			return T();
 		b.valid = true;
+		b.realOwner = true;
 		b.block.lowerBound = X::__MDKClassSize;
 		if (!checkSizeandTS<T, X>(b))
 			return T();
@@ -312,7 +324,7 @@ public:
 	/// \param memberFunction the member
 	/// \return the offset
 	template <typename classInstance = MDKBase>
-	static __MDKMemberInfo getOffset(MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static constexpr __MDKMemberInfo getOffset(MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		__MDKMemberInfo b{};
 
@@ -328,7 +340,7 @@ public:
 	/// \param memberFunction the member
 	/// \return the offset
 	template <typename classInstance = MDKBase, typename T >
-	static __MDKMemberInfo getOffset(T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static constexpr __MDKMemberInfo getOffset(T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		__MDKMemberInfo b{};
 
@@ -346,18 +358,11 @@ public:
 	/// \param memberFunction the member
 	/// \return the member converted to T
 	template < typename classInstance = MDKBase, typename T>
-	static T readSingle(classInstance*& pointerToClass, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const)
+	static T readSingle(classInstance*& pointerToClass, T(classInstance::* memberFunction)(__MDKMemberInfo*) const)
 	{
 		const uint64_t up = reinterpret_cast<uint64_t>(pointerToClass);
 
-		auto info = getOffset<classInstance>(memberFunction);
-
-		if constexpr (std::is_base_of_v<MDKBase, T> && !std::is_pointer_v<T>)
-		{
-			return MDKHandler::get<T>(up + info.offset);
-		}
-
-		
+		const __MDKMemberInfo info = getOffset<classInstance>(memberFunction);
 
 		if (info.size <= 0)
 			return T();
@@ -389,11 +394,11 @@ public:
 	/// \param value the value
 	/// \return the member converted to T
 	template <typename classInstance = MDKBase, typename x>
-	static void write(const classInstance& instance, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
+	static void write(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer)
 			return;
-		auto b = getOffset<classInstance>(memberFunction);
+		const __MDKMemberInfo b = getOffset<classInstance>(memberFunction);
 
 
 		uint64_t addr = (uint64_t)&value;
@@ -426,12 +431,11 @@ public:
 	 * \param value the value we write
 	 */
 	template <typename classInstance = MDKBase, typename x>
-	static void writeSilent(const classInstance& instance, MDKBase(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
+	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(__MDKMemberInfo*) const, x value)
 	{
 		if (!instance.basePointer || !instance.block.blockPointer)
 			return;
-		__MDKMemberInfo b{};
-		(instance.*memberFunction)(&b);
+		const __MDKMemberInfo b = getOffset<classInstance>(memberFunction);
 
 
 		uint64_t addr = (uint64_t)&value;
